@@ -1,0 +1,3810 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>
+      Fachdeutsch — Tiếng Đức Ngành Trợ Lý Nha Khoa (ZFA) | VietDe Hub
+    </title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='14'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Crect width='64' height='21.34' y='0' fill='%23111827'/%3E%3Crect width='64' height='21.34' y='21.33' fill='%23DC2626'/%3E%3Crect width='64' height='21.34' y='42.66' fill='%23FACC15'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: #f1f5f9;
+        color: #0f172a;
+        min-height: 100dvh;
+        padding-bottom: calc(76px + var(--safe-bottom));
+      }
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 40px;
+        }
+      }
+      .bottom-nav-safe {
+        padding-bottom: calc(6px + var(--safe-bottom));
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+      @keyframes pulseRing {
+        0% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45);
+        }
+        70% {
+          box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        }
+      }
+      .btn-playing {
+        background-color: #ef4444 !important;
+        color: #ffffff !important;
+        border-color: #ef4444 !important;
+        animation: pulseRing 1.4s infinite;
+      }
+      @keyframes sheetSlideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .animate-sheet-up {
+        animation: sheetSlideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes popoverFade {
+        from {
+          opacity: 0;
+          transform: translateY(-6px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-popover {
+        animation: popoverFade 0.18s ease-out;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-cyan-200 selection:text-slate-900">
+    <!-- =====================================================================
+       ADAPTIVE STICKY TOP BAR (Back to Hub + Compact Mobile + 1-Row Desktop)
+       ===================================================================== -->
+    <header
+      class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-3 sm:px-6 h-14 flex items-center justify-between gap-2"
+      >
+        <!-- Left: Back to Hub + Brand + Desktop Navigation Tabs -->
+        <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
+          <a
+            href="index.html"
+            id="backHomeBtn"
+            title="Trang chủ / Home"
+            class="h-9 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center gap-1 shrink-0 transition"
+          >
+            <span>←</span>
+            <span id="backHomeText" class="hidden sm:inline">Trang chủ</span>
+          </a>
+
+          <div class="flex items-center gap-2 min-w-0">
+            <div
+              class="w-8 h-8 rounded-lg bg-cyan-500 text-slate-950 flex items-center justify-center font-extrabold shadow-inner shrink-0"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"
+                />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span
+                  id="brandTitle"
+                  class="font-bold text-sm sm:text-base tracking-tight truncate"
+                  >Trợ Lý Nha Khoa</span
+                >
+                <span
+                  class="hidden xl:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30"
+                  >ZFA</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Single-Row Navigation Tabs (Hidden on Mobile) -->
+          <nav
+            id="desktopNav"
+            class="hidden md:flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-slate-700/70"
+            aria-label="Primary Navigation"
+          ></nav>
+        </div>
+
+        <!-- Right: Voice Settings Trigger Pill + VI/EN Switch -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0 relative">
+          <button
+            id="voiceTriggerBtn"
+            type="button"
+            onclick="toggleVoiceDrawer()"
+            class="h-9 px-2.5 sm:px-3 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 border border-slate-700 text-xs font-medium text-slate-100 flex items-center gap-1.5 transition cursor-pointer"
+          >
+            <span class="text-amber-400">🎙</span>
+            <span
+              id="voicePillLabel"
+              class="max-w-[105px] sm:max-w-[160px] lg:max-w-[210px] truncate"
+              >Piper Chuẩn Đức • 1.0x</span
+            >
+            <svg
+              class="w-3.5 h-3.5 text-slate-400 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <!-- Language Switcher VI | EN -->
+          <div
+            class="h-9 bg-slate-800 p-0.5 rounded-xl border border-slate-700 flex items-center"
+            role="group"
+            aria-label="Language Switch"
+          >
+            <button
+              id="langBtnVi"
+              type="button"
+              onclick="setLanguage('vi')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              VI
+            </button>
+            <button
+              id="langBtnEn"
+              type="button"
+              onclick="setLanguage('en')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              EN
+            </button>
+          </div>
+
+          <!-- DESKTOP POPOVER: Voice & Speed Controls -->
+          <div
+            id="desktopVoicePopover"
+            class="hidden md:hidden absolute right-0 top-12 w-80 bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200 p-4 z-50 animate-popover"
+          >
+            <div
+              class="flex items-center justify-between pb-2.5 mb-3 border-b border-slate-100"
+            >
+              <span
+                id="popoverTitle"
+                class="text-xs font-bold uppercase tracking-wider text-slate-500"
+                >Cài đặt Giọng đọc & Tốc độ</span
+              >
+              <button
+                type="button"
+                onclick="closeVoiceDrawer()"
+                class="w-7 h-7 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+            <div id="desktopVoiceForm"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subtle Non-Blocking Audio Fallback / Status Banner -->
+    <div
+      id="statusToast"
+      class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-50 max-w-[92vw] sm:max-w-md bg-slate-900/95 text-white text-xs px-3.5 py-2 rounded-full shadow-lg border border-slate-700 flex items-center gap-2"
+    >
+      <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+      <span id="statusToastText" class="truncate"></span>
+    </div>
+
+    <!-- =====================================================================
+       MAIN CONTENT AREA
+       ===================================================================== -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6">
+      <!-- TAB 1: VOCABULARY -->
+      <section id="section-vocab" class="space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 space-y-3"
+        >
+          <div class="relative">
+            <svg
+              class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z"
+              />
+            </svg>
+            <input
+              id="vocabSearchInput"
+              type="search"
+              oninput="handleVocabSearch(this.value)"
+              placeholder="Tìm từ tiếng Đức, nghĩa tiếng Việt..."
+              class="w-full h-11 pl-10 pr-9 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
+            />
+            <button
+              id="clearSearchBtn"
+              type="button"
+              onclick="clearVocabSearch()"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-xs items-center justify-center hover:bg-slate-300 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div
+            id="vocabCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5"
+          ></div>
+        </div>
+
+        <div
+          id="vocabGrid"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"
+        ></div>
+      </section>
+
+      <!-- TAB 2: DENTAL PHRASES -->
+      <section id="section-phrases" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80"
+        >
+          <div
+            id="phraseCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar"
+          ></div>
+        </div>
+        <div
+          id="phrasesList"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3"
+        ></div>
+      </section>
+
+      <!-- TAB 3: DIALOGUES -->
+      <section id="section-dialogues" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3.5 sm:p-5 shadow-sm border border-slate-200/80 space-y-4"
+        >
+          <div
+            id="dialogueTabs"
+            class="flex items-center gap-2 overflow-x-auto no-scrollbar"
+          ></div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100"
+          >
+            <div>
+              <label
+                id="workerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Trợ lý Nha khoa (Đức)</label
+              >
+              <select
+                id="workerVoiceSelect"
+                onchange="updateDialogueVoice('worker', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+            <div>
+              <label
+                id="partnerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Bệnh nhân / Bác sĩ / Đồng nghiệp</label
+              >
+              <select
+                id="partnerVoiceSelect"
+                onchange="updateDialogueVoice('partner', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="dialogueContainer"
+          class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200/80"
+        ></div>
+      </section>
+
+      <!-- TAB 4: FLASHCARDS -->
+      <section
+        id="section-flashcards"
+        class="hidden space-y-4 max-w-2xl mx-auto"
+      >
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 flex flex-wrap items-center justify-between gap-2"
+        >
+          <select
+            id="fcCategorySelect"
+            onchange="setFlashcardCategory(this.value)"
+            class="h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></select>
+          <div class="flex items-center gap-2">
+            <span
+              id="fcCounter"
+              class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-2 rounded-xl"
+              >1 / 82</span
+            >
+            <button
+              id="fcShuffleBtn"
+              type="button"
+              onclick="shuffleFlashcards()"
+              class="h-10 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <span>🔀</span>
+              <span id="fcShuffleText">Trộn thẻ</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="flashcardStage" class="perspective-1000"></div>
+
+        <div class="flex items-center justify-between gap-2">
+          <button
+            type="button"
+            onclick="prevFlashcard()"
+            class="h-11 px-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>←</span>
+            <span id="fcPrevText">Trước</span>
+          </button>
+
+          <button
+            id="fcMasterBtn"
+            type="button"
+            onclick="toggleFlashcardMastered()"
+            class="h-11 px-4 rounded-xl border text-xs sm:text-sm font-semibold shadow-sm flex items-center gap-1.5 transition cursor-pointer"
+          ></button>
+
+          <button
+            type="button"
+            onclick="nextFlashcard()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-sm font-semibold text-white shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span id="fcNextText">Tiếp</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <p
+          id="fcShortcutHint"
+          class="hidden md:block text-center text-xs text-slate-400"
+        >
+          Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe
+          ví dụ)
+        </p>
+      </section>
+
+      <!-- PRACTICAL DENTAL NOTES CARD (FROM GOOGLE DOC) -->
+      <section
+        id="section-dental-notes"
+        class="mt-6 bg-white rounded-2xl p-4 sm:p-6 shadow-xs border border-slate-200/80"
+      >
+        <h2
+          id="notesHeading"
+          class="text-base sm:text-lg font-extrabold text-slate-900 mb-3"
+        ></h2>
+        <ul
+          id="notesList"
+          class="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed"
+        ></ul>
+      </section>
+    </main>
+
+    <!-- MOBILE BOTTOM NAVIGATION BAR -->
+    <nav
+      id="mobileBottomNav"
+      class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-[0_-4px_16px_rgba(15,23,42,0.06)] bottom-nav-safe"
+      aria-label="Mobile Navigation"
+    >
+      <div id="mobileNavGrid" class="grid grid-cols-4 h-14"></div>
+    </nav>
+
+    <!-- MOBILE BOTTOM SHEET: VOICE & SPEED SETTINGS -->
+    <div
+      id="mobileVoiceBackdrop"
+      onclick="closeVoiceDrawer()"
+      class="hidden md:hidden fixed inset-0 z-50 bg-slate-950/50 backdrop-blur-xs transition-opacity"
+    ></div>
+    <div
+      id="mobileVoiceSheet"
+      class="hidden md:hidden fixed inset-x-0 bottom-0 z-50 bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 p-5 pb-[calc(20px+var(--safe-bottom))] animate-sheet-up"
+    >
+      <div class="w-10 h-1.5 rounded-full bg-slate-300 mx-auto mb-4"></div>
+      <div class="flex items-center justify-between mb-3">
+        <h3 id="sheetTitle" class="text-base font-bold text-slate-900">
+          Cài đặt Giọng đọc & Tốc độ
+        </h3>
+        <button
+          type="button"
+          onclick="closeVoiceDrawer()"
+          class="w-9 h-9 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold"
+        >
+          ✕
+        </button>
+      </div>
+      <div id="mobileVoiceForm"></div>
+    </div>
+
+    <script>
+      // =========================================================================
+      // 0. AUDIO FOLDER PREFIX FOR DENTAL ASSISTANT (ZFA) MODULE
+      // =========================================================================
+      const AUDIO_BASE_PATH = "audio/trolynhakhoa";
+
+      // =========================================================================
+      // 1. VOICE CATALOG (4 VOICES: PIPER OFFLINE + EDGE NEURAL) & I18N
+      // =========================================================================
+      const VOICE_CATALOG = [
+        {
+          id: "piper_hochdeutsch",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Chuẩn Đức (High)",
+          label_en: "Piper Thorsten — Standard German (High)",
+          short_vi: "Piper Chuẩn Đức",
+          short_en: "Piper Standard",
+        },
+        {
+          id: "piper_rostock",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Miền Bắc / Rostock",
+          label_en: "Piper Thorsten — Northern / Rostock",
+          short_vi: "Piper Rostock",
+          short_en: "Piper Rostock",
+        },
+        {
+          id: "edge_hochdeutsch",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Chuẩn Đức (Nữ Katja)",
+          label_en: "Edge Neural — Standard German (Female Katja)",
+          short_vi: "Edge Katja",
+          short_en: "Edge Katja",
+        },
+        {
+          id: "edge_rostock",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Miền Bắc (Nam Conrad)",
+          label_en: "Edge Neural — Northern German (Male Conrad)",
+          short_vi: "Edge Conrad",
+          short_en: "Edge Conrad",
+        },
+      ];
+
+      function sanitizeVoiceId(savedId, fallbackId) {
+        return VOICE_CATALOG.some((v) => v.id === savedId)
+          ? savedId
+          : fallbackId;
+      }
+
+      const I18N = {
+        vi: {
+          pageTitle:
+            "Fachdeutsch — Tiếng Đức Ngành Trợ Lý Nha Khoa (ZFA) | VietDe Hub",
+          backHomeText: "Trang chủ",
+          brandTitle: "Trợ Lý Nha Khoa",
+          nav_vocab_desktop: "1. Từ vựng",
+          nav_phrases_desktop: "2. Mẫu câu nha khoa",
+          nav_dialogues_desktop: "3. Hội thoại",
+          nav_flashcards_desktop: "4. Thẻ Flashcard",
+          nav_vocab_mobile: "Từ vựng",
+          nav_phrases_mobile: "Mẫu câu",
+          nav_dialogues_mobile: "Hội thoại",
+          nav_flashcards_mobile: "Thẻ nhớ",
+          voiceSettingsTitle: "Cài đặt Giọng đọc & Tốc độ",
+          selectVoiceLabel: "Chọn giọng đọc mặc định (4 giọng)",
+          previewVoiceBtn: "Nghe thử giọng",
+          stopPreviewBtn: "Dừng nghe thử",
+          speedLabel: "Tốc độ phát âm",
+          speedSlow: "Chậm 0.75x",
+          speedNormal: "Chuẩn 1.0x",
+          speedFast: "Nhanh 1.25x",
+          searchPlaceholder: "Tìm từ tiếng Đức, nghĩa tiếng Việt...",
+          cat_all: "Tất cả",
+          cat_1_1: "1.1 Giải phẫu, Bệnh lý & Điều trị",
+          cat_1_2: "1.2 Ghế nha & Dụng cụ nha khoa",
+          cat_1_3: "1.3 Vô trùng, Khử khuẩn & RKI",
+          cat_1_4: "1.4 Lễ tân, Bảo hiểm & Thanh toán",
+          cat_1_5: "1.5 Động từ & Tính từ nha khoa",
+          relatedPrefix: "Từ liên quan:",
+          noResults: "Không tìm thấy từ vựng phù hợp.",
+          pcat_all: "Tất cả mẫu câu",
+          pcat_2_1: "2.1 Lễ tân & Đặt lịch hẹn",
+          pcat_2_2: "2.2 Trên ghế nha & Trấn an",
+          pcat_2_3: "2.3 Hỗ trợ ghế nha & Dụng cụ",
+          pcat_2_4: "2.4 Vô trùng & Phối hợp phòng khám",
+          workerVoiceLabel: "Giọng Trợ lý Nha khoa (Đức)",
+          partnerVoiceLabel: "Giọng Bệnh nhân / Bác sĩ / Đồng nghiệp",
+          playFullDialogue: "Nghe cả hội thoại",
+          stopFullDialogue: "Dừng hội thoại",
+          fcAllCategories: "Tất cả chủ đề",
+          fcShuffle: "Trộn thẻ",
+          fcPrev: "Trước",
+          fcNext: "Tiếp",
+          fcFrontHint: "Chạm thẻ để xem nghĩa & ví dụ",
+          fcBackHint: "Chạm thẻ để quay lại mặt trước",
+          fcWordBtn: "Nghe từ",
+          fcExBtn: "Nghe ví dụ",
+          fcMastered: "Đã thuộc",
+          fcMarkMastered: "Đánh dấu đã thuộc",
+          fcShortcutHint:
+            "Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe ví dụ)",
+          fallbackNotice: "Đang dùng giọng dự phòng Piper Offline cho câu này.",
+          notesHeading: "Ghi chú Thực tế Phòng khám Nha khoa tại Đức (ZFA)",
+          notes: [
+            '<strong>Hệ thống đánh số răng FDI (Zahnschema):</strong> Tại Đức luôn đọc từng chữ số riêng lẻ theo chuẩn quốc tế FDI — ví dụ răng 11 đọc là <em>"eins-eins"</em> (không đọc là "elf"), răng 36 đọc là <em>"drei-sechs"</em>, răng 48 đọc là <em>"vier-acht"</em>.',
+            "<strong>Sổ khám định kỳ & Bảo hiểm (Bonusheft & HKP):</strong> Bệnh nhân có bảo hiểm công (GKV) đi khám răng định kỳ hằng năm (từ 18 tuổi trở lên: 1 lần/năm; trẻ em 6–17 tuổi: 2 lần/năm) và đóng dấu vào <em>Bonusheft</em> liên tục 5 năm hoặc 10 năm sẽ được BHYT tăng mức hỗ trợ tài chính khi làm răng giả.",
+            "<strong>Quy chuẩn vô trùng RKI (Hygiene & Sterilisation):</strong> Phòng vô trùng (<em>Steriraum</em>) bắt buộc chia một chiều từ vùng bẩn (<em>unreine Seite</em>) sang vùng sạch (<em>reine Seite</em>); mọi dụng cụ phẫu thuật/nhổ răng (kritisch B) đều phải được đóng gói túi ép và lưu hồ sơ mẻ hấp (<em>Chargendokumentation</em>).",
+          ],
+        },
+        en: {
+          pageTitle:
+            "Fachdeutsch — Dental Assistant (Zahnmedizinische Fachangestellte - ZFA) | VietDe Hub",
+          backHomeText: "Home",
+          brandTitle: "Dental Assistant (ZFA)",
+          nav_vocab_desktop: "1. Vocabulary",
+          nav_phrases_desktop: "2. Dental Phrases",
+          nav_dialogues_desktop: "3. Dialogues",
+          nav_flashcards_desktop: "4. Flashcards",
+          nav_vocab_mobile: "Vocab",
+          nav_phrases_mobile: "Phrases",
+          nav_dialogues_mobile: "Dialogues",
+          nav_flashcards_mobile: "Cards",
+          voiceSettingsTitle: "Voice & Playback Speed",
+          selectVoiceLabel: "Default AI Voice (4 Voices)",
+          previewVoiceBtn: "Preview Voice",
+          stopPreviewBtn: "Stop Preview",
+          speedLabel: "Playback Speed",
+          speedSlow: "Slow 0.75x",
+          speedNormal: "Normal 1.0x",
+          speedFast: "Fast 1.25x",
+          searchPlaceholder: "Search German words, English meanings...",
+          cat_all: "All",
+          cat_1_1: "1.1 Anatomy, Findings & Treatments",
+          cat_1_2: "1.2 Dental Chair & Instruments",
+          cat_1_3: "1.3 Hygiene, Sterilization & RKI",
+          cat_1_4: "1.4 Reception, Insurance & Billing",
+          cat_1_5: "1.5 Dental Verbs & Adjectives",
+          relatedPrefix: "Related words:",
+          noResults: "No matching vocabulary found.",
+          pcat_all: "All Phrases",
+          pcat_2_1: "2.1 Reception & Appointments",
+          pcat_2_2: "2.2 Chairside & Reassurance",
+          pcat_2_3: "2.3 Chairside Assist & Instruments",
+          pcat_2_4: "2.4 Sterilization & Practice Team",
+          workerVoiceLabel: "Dental Assistant Voice (Duc)",
+          partnerVoiceLabel: "Patient / Dentist / Colleague Voice",
+          playFullDialogue: "Play Full Dialogue",
+          stopFullDialogue: "Stop Dialogue",
+          fcAllCategories: "All Categories",
+          fcShuffle: "Shuffle",
+          fcPrev: "Previous",
+          fcNext: "Next",
+          fcFrontHint: "Tap card to reveal meaning & example",
+          fcBackHint: "Tap card to flip back",
+          fcWordBtn: "Speak Word",
+          fcExBtn: "Speak Example",
+          fcMastered: "Mastered",
+          fcMarkMastered: "Mark as Mastered",
+          fcShortcutHint:
+            "Shortcuts: Space (Flip) • ← / → (Navigate) • S (Word) • E (Example)",
+          fallbackNotice: "Using offline Piper fallback voice for this line.",
+          notesHeading: "Practical Dental Practice Notes in Germany (ZFA)",
+          notes: [
+            '<strong>FDI Tooth Numbering (Zahnschema):</strong> In Germany, individual digits are spoken under the FDI system—for example, tooth 11 is spoken as <em>"eins-eins"</em> (not "elf"), tooth 36 as <em>"drei-sechs"</em>, and tooth 48 as <em>"vier-acht"</em>.',
+            "<strong>Check-Up Booklet & Insurance (Bonusheft & HKP):</strong> Patients with statutory health insurance (GKV) who attend annual check-ups and have their <em>Bonusheft</em> stamped consistently for 5 or 10 years receive a higher insurance subsidy for dental prosthetics.",
+            "<strong>RKI Reprocessing Rules (Hygiene & Sterilisation):</strong> The sterilization room (<em>Steriraum</em>) must maintain a clear flow from the unclean side (<em>unreine Seite</em>) to the clean side (<em>reine Seite</em>); surgical/extraction instruments (kritisch B) require sealed pouches and full batch documentation (<em>Chargendokumentation</em>).",
+          ],
+        },
+      };
+
+      // =========================================================================
+      // 2. COMPLETE BILINGUAL DATASET (82 VOCAB, 36 PHRASES, 6 DIALOGUES)
+      // =========================================================================
+      const VOCAB_DATA = [
+        {
+          id: 1,
+          cat: "1.1",
+          de: "der Zahn (-e)",
+          ipa: "/deːɐ̯ tsaːn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Răng",
+          en: "Tooth",
+          rel_vi:
+            "der Backenzahn (dt: răng hàm), der Schneidezahn (dt: răng cửa), der Weisheitszahn (dt: răng khôn)",
+          rel_en:
+            "der Backenzahn (n: molar), der Schneidezahn (n: incisor), der Weisheitszahn (n: wisdom tooth)",
+          ex_de:
+            "Welcher Zahn tut Ihnen genau weh, oben rechts oder unten links?",
+          ex_vi:
+            "Chính xác thì chiếc răng nào làm anh/chị đau, hàm trên bên phải hay hàm dưới bên trái ạ?",
+          ex_en: "Which exact tooth hurts you, upper right or lower left?",
+        },
+        {
+          id: 2,
+          cat: "1.1",
+          de: "das Zahnfleisch",
+          ipa: "/das ˈtsaːnˌflaɪʃ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Nướu răng / Lợi",
+          en: "Gums / gingiva",
+          rel_vi:
+            "das Zahnfleischbluten (dt: chảy máu chân răng), entzündet (tt: bị viêm)",
+          rel_en:
+            "das Zahnfleischbluten (n: gum bleeding), entzündet (adj: inflamed)",
+          ex_de:
+            "Das Zahnfleisch ist leicht gerötet und blutet beim Zähneputzen.",
+          ex_vi: "Nướu răng hơi đỏ và bị chảy máu khi đánh răng.",
+          ex_en:
+            "The gums are slightly reddened and bleed when brushing teeth.",
+        },
+        {
+          id: 3,
+          cat: "1.1",
+          de: "der Oberkiefer (-)",
+          ipa: "/deːɐ̯ ˈoːbɐˌkiːfɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Hàm trên (xương hàm trên)",
+          en: "Upper jaw / maxilla",
+          rel_vi: "der Unterkiefer (dt: hàm dưới), der Kiefer (dt: xương hàm)",
+          rel_en:
+            "der Unterkiefer (n: lower jaw/mandible), der Kiefer (n: jaw)",
+          ex_de:
+            "Wir machen heute eine Röntgenaufnahme vom Oberkiefer und Unterkiefer.",
+          ex_vi: "Hôm nay chúng ta chụp X-quang cả hàm trên và hàm dưới.",
+          ex_en: "Today we are taking an X-ray of the upper and lower jaws.",
+        },
+        {
+          id: 4,
+          cat: "1.1",
+          de: "das Zahnschema (FDI-Schema)",
+          ipa: "/das ˈtsaːnˌʃeːma/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Sơ đồ đánh số răng quốc tế FDI (dùng phổ biến tại Đức: 11–48)",
+          en: "FDI tooth numbering chart (standard in Germany: 11–48)",
+          rel_vi: "der Quadrant (dt: cung hàm 1–4)",
+          rel_en: "der Quadrant (n: jaw quadrant 1–4)",
+          ex_de: "Laut Zahnschema hat Zahn 36 eine tiefe Karies.",
+          ex_vi: "Theo sơ đồ răng, răng số 36 bị sâu răng sâu.",
+          ex_en: "According to the tooth chart, tooth 36 has deep decay.",
+        },
+        {
+          id: 5,
+          cat: "1.1",
+          de: "die Karies",
+          ipa: "/diː ˈkaːʁi̯ɛs/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Sâu răng",
+          en: "Dental caries / tooth decay / cavity",
+          rel_vi:
+            "das Loch (dt: lỗ sâu răng), bohren (đt: khoan làm sạch sâu răng)",
+          rel_en: "das Loch (n: cavity/hole), bohren (v: to drill)",
+          ex_de:
+            "Die Zahnärztin entfernt zuerst die Karies und legt dann eine Füllung.",
+          ex_vi:
+            "Nữ bác sĩ nha khoa làm sạch lỗ sâu trước rồi sau đó mới trám răng.",
+          ex_en:
+            "The dentist removes the decay first and then places a filling.",
+        },
+        {
+          id: 6,
+          cat: "1.1",
+          de: "die Füllung (-en)",
+          ipa: "/diː ˈfʏlʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Miếng trám răng / Trám răng",
+          en: "Dental filling / restoration",
+          rel_vi:
+            "füllen (đt: trám bít), die Kunststofffüllung (dt: trám thẩm mỹ Composite)",
+          rel_en:
+            "füllen (v: to fill), die Kunststofffüllung (n: composite resin filling)",
+          ex_de:
+            "Wir härten die Kunststofffüllung mit der Polymerisationslampe aus.",
+          ex_vi: "Chúng ta chiếu đèn làm cứng miếng trám Composite.",
+          ex_en: "We cure the composite filling with the curing light.",
+        },
+        {
+          id: 7,
+          cat: "1.1",
+          de: "die Wurzelkanalbehandlung (-en)",
+          ipa: "/diː ˈvʊʁtsl̩kanaːlbəˌhandlʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Điều trị tủy răng / Chữa tủy nội nha",
+          en: "Root canal treatment / endodontic therapy",
+          rel_vi:
+            "die Zahnwurzel (dt: chân răng), der Nerv (dt: tủy/dây thần kinh răng)",
+          rel_en:
+            "die Zahnwurzel (n: tooth root), der Nerv (n: dental nerve/pulp)",
+          ex_de:
+            "Bei einer starken Entzündung des Nervs ist eine Wurzelkanalbehandlung nötig.",
+          ex_vi: "Khi tủy răng bị viêm nặng thì cần phải điều trị tủy.",
+          ex_en:
+            "If the nerve is severely inflamed, root canal treatment is necessary.",
+        },
+        {
+          id: 8,
+          cat: "1.1",
+          de: "die Zahnextraktion (-en)",
+          ipa: "/diː ˈtsaːnʔɛkstʁakˌtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nhổ răng",
+          en: "Tooth extraction",
+          rel_vi:
+            "ziehen (đt: nhổ răng), die Zange (dt: kìm nhổ răng), der Hebel (dt: cây nạy răng)",
+          rel_en:
+            "ziehen (v: to pull/extract), die Zange (n: extraction forceps), der Hebel (n: dental elevator)",
+          ex_de:
+            "Nach der Zahnextraktion soll der Patient dreißig Minuten auf den Tupfer beißen.",
+          ex_vi:
+            "Sau khi nhổ răng, người bệnh nên cắn chặt bông gòn trong 30 phút.",
+          ex_en:
+            "After tooth extraction, the patient should bite on the gauze pad for thirty minutes.",
+        },
+        {
+          id: 9,
+          cat: "1.1",
+          de: "die örtliche Betäubung",
+          ipa: "/diː ˈœʁtlɪçə bəˈtɔʏ̯bʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Gây tê tại chỗ",
+          en: "Local anesthesia",
+          rel_vi:
+            "betäuben (đt: gây tê), die Lokalanästhesie (dt: gây tê cục bộ)",
+          rel_en:
+            "betäuben (v: to numb/anesthetize), die Lokalanästhesie (n: local anesthesia)",
+          ex_de:
+            "Vor der Behandlung gibt der Zahnarzt eine örtliche Betäubung.",
+          ex_vi: "Trước khi điều trị, bác sĩ nha khoa tiêm gây tê tại chỗ.",
+          ex_en:
+            "Before treatment, the dentist administers a local anesthetic.",
+        },
+        {
+          id: 10,
+          cat: "1.1",
+          de: "die Professionelle Zahnreinigung (PZR)",
+          ipa: "/diː pʁofɛsi̯oˈnɛlə ˈtsaːnˌʁaɪnɪɡʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Cạo vôi răng & vệ sinh răng chuyên sâu",
+          en: "Professional dental cleaning (PZR)",
+          rel_vi:
+            "der Zahnstein (dt: cao răng/vôi răng), polieren (đt: đánh bóng răng)",
+          rel_en: "der Zahnstein (n: tartar/calculus), polieren (v: to polish)",
+          ex_de:
+            "Bei der PZR entfernen wir Zahnstein und Verfärbungen schonend.",
+          ex_vi:
+            "Khi làm sạch răng chuyên sâu PZR, chúng tôi loại bỏ vôi răng và vết ố một cách nhẹ nhàng.",
+          ex_en:
+            "During professional cleaning, we gently remove tartar and surface stains.",
+        },
+        {
+          id: 11,
+          cat: "1.1",
+          de: "die Prophylaxe",
+          ipa: "/diː pʁofyˈlaksə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nha khoa dự phòng (khám định kỳ, lấy cao răng, bôi fluor)",
+          en: "Preventive dentistry / prophylaxis",
+          rel_vi:
+            "vorbeugen (đt: phòng ngừa), fluoridieren (đt: bôi vecni fluor)",
+          rel_en:
+            "vorbeugen (v: to prevent), fluoridieren (v: to apply fluoride)",
+          ex_de: "Regelmäßige Prophylaxe schützt vor Karies und Parodontitis.",
+          ex_vi:
+            "Chăm sóc dự phòng định kỳ giúp bảo vệ khỏi sâu răng và viêm nha chu.",
+          ex_en:
+            "Regular prophylaxis protects against cavities and periodontitis.",
+        },
+        {
+          id: 12,
+          cat: "1.1",
+          de: "die Parodontitis",
+          ipa: "/diː paʁodɔnˈtiːtɪs/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bệnh viêm nha chu",
+          en: "Periodontitis / gum disease",
+          rel_vi: "die Zahnfleischtasche (dt: túi nha chu)",
+          rel_en: "die Zahnfleischtasche (n: periodontal pocket)",
+          ex_de:
+            "Bei Parodontitis messen wir die Tiefe der Zahnfleischtaschen.",
+          ex_vi:
+            "Với bệnh viêm nha chu chúng tôi đo độ sâu của các túi nha chu.",
+          ex_en:
+            "In periodontitis, we measure the depth of the periodontal pockets.",
+        },
+        {
+          id: 13,
+          cat: "1.1",
+          de: "der Zahnersatz",
+          ipa: "/deːɐ̯ ˈtsaːnʔɛɐ̯ˌzats/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Phục hình răng giả (mão sứ, cầu răng, hàm giả, Implant)",
+          en: "Dental prosthesis / dentures / crowns & bridges",
+          rel_vi:
+            "die Krone (dt: mão răng), die Brücke (dt: cầu răng), das Implantat (dt: trụ Implant)",
+          rel_en:
+            "die Krone (n: crown), die Brücke (n: bridge), das Implantat (n: dental implant)",
+          ex_de:
+            "Das Dentallabor fertigt die Krone passgenau nach dem Abdruck an.",
+          ex_vi: "Phòng labo chế tác mão răng vừa khít theo dấu răng.",
+          ex_en:
+            "The dental lab fabricates the crown to fit precisely based on the impression.",
+        },
+        {
+          id: 14,
+          cat: "1.1",
+          de: "der Zahnabdruck (-e)",
+          ipa: "/deːɐ̯ ˈtsaːnʔapˌdʁʊk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Lấy dấu hàm răng",
+          en: "Dental impression",
+          rel_vi:
+            "die Abformung (dt: mẫu dấu hàm), der Abformlöffel (dt: thìa lấy dấu), der Intraoralscanner (dt: máy quét dấu kỹ thuật số)",
+          rel_en:
+            "die Abformung (n: impression taking), der Abformlöffel (n: impression tray), der Intraoralscanner (n: intraoral scanner)",
+          ex_de:
+            "Wir nehmen heute einen Abdruck vom Oberkiefer für die Schiene.",
+          ex_vi: "Hôm nay chúng ta lấy dấu hàm trên để làm máng nhai.",
+          ex_en:
+            "Today we are taking an impression of the upper jaw for the splint.",
+        },
+        {
+          id: 15,
+          cat: "1.1",
+          de: "die Aufbissschiene (-n)",
+          ipa: "/diː ˈaʊfbɪsˌʃiːnə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Máng chống nghiến răng / Máng nhai điều trị khớp thái dương hàm",
+          en: "Occlusal splint / night guard",
+          rel_vi:
+            "die Knirscherschiene (dt: máng chống nghiến), knirschen (đt: nghiến răng khi ngủ)",
+          rel_en:
+            "die Knirscherschiene (n: bruxism guard), knirschen (v: to grind teeth)",
+          ex_de:
+            "Tragen Sie die Aufbissschiene bitte jede Nacht zum Schutz der Zähne.",
+          ex_vi:
+            "Anh/Chị vui lòng đeo máng chống nghiến mỗi đêm để bảo vệ răng nhé.",
+          ex_en:
+            "Please wear the occlusal splint every night to protect your teeth.",
+        },
+        {
+          id: 16,
+          cat: "1.1",
+          de: "die Zahnspange (-n)",
+          ipa: "/diː ˈtsaːnˌʃpaŋə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Niềng răng / Khí cụ chỉnh nha",
+          en: "Orthodontic braces / retainer",
+          rel_vi:
+            "die Kieferorthopädie (dt: chỉnh nha), der Drahtbogen (dt: dây cung chỉnh nha)",
+          rel_en:
+            "die Kieferorthopädie (n: orthodontics), der Drahtbogen (n: archwire)",
+          ex_de: "Viele Jugendliche tragen eine feste Zahnspange.",
+          ex_vi: "Nhiều thanh thiếu niên đeo niềng răng cố định.",
+          ex_en: "Many teenagers wear fixed braces.",
+        },
+        {
+          id: 17,
+          cat: "1.1",
+          de: "die Röntgenaufnahme (-n)",
+          ipa: "/diː ˈʁœntɡn̩ʔaʊfˌnaːmə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Phim chụp X-quang răng",
+          en: "Dental X-ray / radiograph",
+          rel_vi:
+            "das Röntgen (dt: chụp X-quang), die Bleischürze (dt: tạp dề chì), das OPG (dt: phim toàn cảnh Panorama)",
+          rel_en:
+            "das Röntgen (n: X-ray imaging), die Bleischürze (n: lead apron), das OPG (n: panoramic X-ray)",
+          ex_de: "Bitte legen Sie vor dem Röntgen Schmuck und Brille ab.",
+          ex_vi:
+            "Vui lòng tháo trang sức và kính mắt ra trước khi chụp X-quang.",
+          ex_en: "Please remove jewelry and glasses before the X-ray.",
+        },
+        {
+          id: 18,
+          cat: "1.1",
+          de: "der Schmerzpatient (-en)",
+          ipa: "/deːɐ̯ ˈʃmɛʁtsˌpatsi̯ɛnt/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bệnh nhân đau răng cấp tính",
+          en: "Emergency / acute pain dental patient",
+          rel_vi:
+            "der Notdienst (dt: trực cấp cứu nha khoa), akut (tt: cấp tính), geschwollen (tt: bị sưng)",
+          rel_en:
+            "der Notdienst (n: emergency dental duty), akut (adj: acute), geschwollen (adj: swollen)",
+          ex_de:
+            "Schmerzpatienten bekommen bei uns noch am selben Tag einen Termin.",
+          ex_vi:
+            "Bệnh nhân đau răng cấp tính được sắp xếp lịch khám ngay trong ngày tại phòng khám chúng tôi.",
+          ex_en:
+            "Acute pain patients get an appointment on the same day at our practice.",
+        },
+        {
+          id: 19,
+          cat: "1.2",
+          de: "der Behandlungsstuhl (-e)",
+          ipa: "/deːɐ̯ bəˈhandlʊŋsˌʃtuːl/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Ghế máy nha khoa",
+          en: "Dental treatment chair",
+          rel_vi:
+            "die Einheit (dt: ghế máy nha khoa), hochfahren (đt: nâng ghế lên), zurückstellen (đt: ngả ghế ra sau)",
+          rel_en:
+            "die Einheit (n: dental unit), hochfahren (v: to raise chair), zurückstellen (v: to recline chair)",
+          ex_de:
+            "Bitte nehmen Sie auf dem Behandlungsstuhl Platz, ich fahre ihn gleich nach hinten.",
+          ex_vi:
+            "Mời anh/chị ngồi lên ghế nha khoa, tôi sẽ ngả ghế ra sau ngay bây giờ.",
+          ex_en:
+            "Please take a seat in the dental chair; I'll recline it back shortly.",
+        },
+        {
+          id: 20,
+          cat: "1.2",
+          de: "das Tray (-s)",
+          ipa: "/das tʁeː/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Khay dụng cụ nha khoa đã tiệt trùng",
+          en: "Sterile instrument tray",
+          rel_vi:
+            "die Instrumentenkassette (dt: hộp khay dụng cụ), vorbereiten (đt: chuẩn bị sẵn khay)",
+          rel_en:
+            "die Instrumentenkassette (n: instrument cassette), vorbereiten (v: to prepare)",
+          ex_de: "Bereite bitte das Grundbesteck-Tray für Zimmer 2 vor.",
+          ex_vi:
+            "Vui lòng chuẩn bị sẵn khay dụng cụ khám cơ bản cho phòng số 2.",
+          ex_en: "Please prepare the basic exam instrument tray for Room 2.",
+        },
+        {
+          id: 21,
+          cat: "1.2",
+          de: "der Mundspiegel (-)",
+          ipa: "/deːɐ̯ ˈmʊntˌʃpiːɡl̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Gương nha khoa soi miệng",
+          en: "Dental mouth mirror",
+          rel_vi: "der Spiegel (dt: gương soi)",
+          rel_en: "der Spiegel (n: mirror)",
+          ex_de: "Zum Grundbesteck gehören Mundspiegel, Sonde und Pinzette.",
+          ex_vi: "Bộ dụng cụ cơ bản gồm gương nha khoa, thám trâm và kẹp gắp.",
+          ex_en:
+            "The basic exam kit includes a mouth mirror, probe, and tweezers.",
+        },
+        {
+          id: 22,
+          cat: "1.2",
+          de: "die Sonde (-n)",
+          ipa: "/diː ˈzɔndə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Cây thám trâm khám răng",
+          en: "Dental explorer / probe",
+          rel_vi:
+            "die Parodontalsonde (dt: cây đo túi nha chu), abtasten (đt: thăm dò bề mặt răng)",
+          rel_en:
+            "die Parodontalsonde (n: periodontal probe), abtasten (v: to probe/palpate)",
+          ex_de:
+            "Mit der Sonde prüft die Zahnärztin die Zahnoberfläche auf Karies.",
+          ex_vi:
+            "Bác sĩ dùng thám trâm kiểm tra bề mặt răng xem có lỗ sâu không.",
+          ex_en:
+            "The dentist checks the tooth surface for decay with the probe.",
+        },
+        {
+          id: 23,
+          cat: "1.2",
+          de: "die Pinzette (-n)",
+          ipa: "/diː pɪnˈtsɛtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kẹp gắp nha khoa (gắp bông gòn, vật liệu)",
+          en: "Dental cotton pliers / tweezers",
+          rel_vi: "greifen (đt: kẹp/gắp)",
+          rel_en: "greifen (v: to grasp/pick up)",
+          ex_de: "Reiche bitte eine Watterolle mit der Pinzette an.",
+          ex_vi: "Vui lòng dùng kẹp gắp đưa một cuộn bông gòn.",
+          ex_en: "Please pass a cotton roll using the tweezers.",
+        },
+        {
+          id: 24,
+          cat: "1.2",
+          de: "der Sauger (-)",
+          ipa: "/deːɐ̯ ˈzaʊɡɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Ống hút nước bọt & hút phẫu thuật trên ghế nha",
+          en: "Dental suction / saliva ejector / aspirator tip",
+          rel_vi:
+            "der Speichelsauger (dt: ống hút nước bọt), absaugen (đt: hút sạch nước/nước bọt)",
+          rel_en:
+            "der Speichelsauger (n: saliva ejector), absaugen (v: to suction/aspirate)",
+          ex_de:
+            "Bei der Stuhlassistenz hält die ZFA den großen und kleinen Sauger.",
+          ex_vi:
+            "Khi hỗ trợ trên ghế nha, trợ lý nha khoa giữ ống hút lớn và ống hút nước bọt nhỏ.",
+          ex_en:
+            "During chairside assistance, the dental assistant holds the large and small suction tips.",
+        },
+        {
+          id: 25,
+          cat: "1.2",
+          de: "die Multifunktionsspritze",
+          ipa: "/diː mʊltifʊŋkˈtsi̯oːnsˌʃpʁɪtsə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tay xịt hơi – nước đa năng trên ghế nha",
+          en: "Air-water syringe (3-way syringe)",
+          rel_vi: "trocknen (đt: thổi khô), spülen (đt: xịt rửa)",
+          rel_en: "trocknen (v: to dry with air), spülen (v: to spray/rinse)",
+          ex_de:
+            "Trockne den Zahn kurz mit Luft aus der Multifunktionsspritze.",
+          ex_vi: "Thổi khô chiếc răng một chút bằng hơi từ tay xịt đa năng.",
+          ex_en: "Dry the tooth briefly with air from the air-water syringe.",
+        },
+        {
+          id: 26,
+          cat: "1.2",
+          de: "das Winkelstück (-e)",
+          ipa: "/das ˈvɪŋkl̩ˌʃtʏk/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Tay khoan chậm (khuỷu)",
+          en: "Contra-angle handpiece (slow-speed)",
+          rel_vi:
+            "die Turbine (dt: tay khoan siêu tốc), der Bohrer (dt: mũi khoan nha khoa)",
+          rel_en:
+            "die Turbine (n: high-speed turbine handpiece), der Bohrer (n: dental bur)",
+          ex_de:
+            "Spanne den passenden Diamantbohrer in das rote Winkelstück ein.",
+          ex_vi: "Hãy lắp mũi khoan kim cương phù hợp vào tay khoan khuỷu đỏ.",
+          ex_en:
+            "Insert the appropriate diamond bur into the red contra-angle handpiece.",
+        },
+        {
+          id: 27,
+          cat: "1.2",
+          de: "der Ultraschallscaler (-)",
+          ipa: "/deːɐ̯ ˈʊltʁaʃalˌskeːlɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Máy lấy cao răng bằng sóng siêu âm",
+          en: "Ultrasonic scaler",
+          rel_vi: "entfernen (đt: loại bỏ mảng bám/vôi răng)",
+          rel_en: "entfernen (v: to remove calculus/plaque)",
+          ex_de:
+            "Mit dem Ultraschallscaler entfernen wir groben Zahnstein schmerzarm.",
+          ex_vi:
+            "Bằng máy siêu âm chúng tôi lấy sạch mảng vôi răng lớn ít gây đau.",
+          ex_en:
+            "With the ultrasonic scaler, we remove heavy tartar with minimal discomfort.",
+        },
+        {
+          id: 28,
+          cat: "1.2",
+          de: "die Polymerisationslampe (-n)",
+          ipa: "/diː polymɛʁizaˈtsi̯oːnsˌlampə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Đèn quang trùng hợp (chiếu đèn làm đông cứng chất trám)",
+          en: "Dental curing light",
+          rel_vi: "die Schutzbrille (dt: kính cam chống chói tia đèn)",
+          rel_en:
+            "die Schutzbrille (n: protective orange filter shield/glasses)",
+          ex_de:
+            "Halte die Polymerisationslampe zwanzig Sekunden ruhig über die Füllung.",
+          ex_vi:
+            "Giữ đèn quang trùng hợp ổn định 20 giây phía trên miếng trám.",
+          ex_en:
+            "Hold the curing light steady over the filling for twenty seconds.",
+        },
+        {
+          id: 29,
+          cat: "1.2",
+          de: "die Watterolle (-n)",
+          ipa: "/diː ˈvatəˌʁɔlə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Cuộn bông gòn cách ly nước bọt",
+          en: "Cotton roll",
+          rel_vi:
+            "der Tupfer (dt: miếng gạc/bông cầm máu), trockenlegen (đt: cách ly làm khô vùng răng)",
+          rel_en:
+            "der Tupfer (n: gauze/cotton pellet), trockenlegen (v: to isolate and keep dry)",
+          ex_de:
+            "Lege links und rechts Watterollen ein, um den Zahn trocken zu halten.",
+          ex_vi: "Đặt cuộn bông gòn bên trái và phải để giữ cho răng khô ráo.",
+          ex_en:
+            "Place cotton rolls on the left and right to keep the tooth dry.",
+        },
+        {
+          id: 30,
+          cat: "1.2",
+          de: "der Kofferdam",
+          ipa: "/deːɐ̯ ˈkɔfɐˌdam/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Đê cao su cách ly răng tuyệt đối khi chữa tủy hoặc trám",
+          en: "Rubber dam / dental dam",
+          rel_vi: "die Kofferdamklammer (dt: móc giữ đê cao su)",
+          rel_en: "die Kofferdamklammer (n: rubber dam clamp)",
+          ex_de: "Bei der Wurzelkanalbehandlung legen wir einen Kofferdam an.",
+          ex_vi: "Khi điều trị tủy răng chúng ta đặt đê cao su cách ly.",
+          ex_en: "During root canal treatment, we place a rubber dam.",
+        },
+        {
+          id: 31,
+          cat: "1.2",
+          de: "der Spatel (-)",
+          ipa: "/deːɐ̯ ˈʃpaːtl̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Cây bay trộn chất trám / Cây nhồi chất trám nha khoa",
+          en: "Dental spatula / composite placement instrument",
+          rel_vi:
+            "der Heidemannspatel (dt: bay nhồi chất trám), anmischen (đt: trộn vật liệu trám)",
+          rel_en:
+            "der Heidemannspatel (n: Heidemann filling instrument), anmischen (v: to mix material)",
+          ex_de: "Mische den Zement auf dem Block mit dem Spatel glatt an.",
+          ex_vi:
+            "Trộn xi-măng nha khoa trên tập giấy trộn cho mịn bằng bay trộn.",
+          ex_en: "Mix the cement smooth on the mixing pad with the spatula.",
+        },
+        {
+          id: 32,
+          cat: "1.2",
+          de: "die Matrize (-n)",
+          ipa: "/diː maˈtʁiːtsə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khuôn trám răng",
+          en: "Dental matrix band",
+          rel_vi:
+            "der Keil (dt: chêm gỗ cố định kẽ răng), der Kontaktpunkt (dt: điểm tiếp xúc giữa hai răng)",
+          rel_en:
+            "der Keil (n: interdental wedge), der Kontaktpunkt (n: contact point)",
+          ex_de:
+            "Für die seitliche Füllung legen wir eine Matrize und einen Holzkeil an.",
+          ex_vi: "Để trám mặt bên răng chúng ta đặt khuôn trám và chêm gỗ.",
+          ex_en:
+            "For the side filling, we place a matrix band and a wooden wedge.",
+        },
+        {
+          id: 33,
+          cat: "1.2",
+          de: "die Extraktionszange (-n)",
+          ipa: "/diː ɛkstʁakˈtsi̯oːnsˌtsaŋə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kìm nhổ răng",
+          en: "Tooth extraction forceps",
+          rel_vi: "der Hebel (dt: cây nạy chân răng)",
+          rel_en: "der Hebel (n: dental elevator)",
+          ex_de:
+            "Lege die sterilen Extraktionszangen und Hebel auf das Chirurgie-Tray.",
+          ex_vi: "Đặt kìm nhổ răng và cây nạy vô trùng lên khay phẫu thuật.",
+          ex_en:
+            "Place the sterile extraction forceps and elevators on the surgical tray.",
+        },
+        {
+          id: 34,
+          cat: "1.2",
+          de: "der Mundschutz",
+          ipa: "/deːɐ̯ ˈmʊntˌʃʊts/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Khẩu trang y tế",
+          en: "Surgical face mask",
+          rel_vi:
+            "die Schutzbrille (dt: kính bảo hộ chống bắn dịch), der Spritzschutz (dt: tấm chắn giọt bắn)",
+          rel_en:
+            "die Schutzbrille (n: protective eyewear), der Spritzschutz (n: splash shield)",
+          ex_de:
+            "Bei der Behandlung tragen Zahnarzt und ZFA immer Mundschutz und Schutzbrille.",
+          ex_vi:
+            "Khi điều trị, bác sĩ và trợ lý nha khoa luôn đeo khẩu trang và kính bảo hộ.",
+          ex_en:
+            "During treatment, the dentist and dental assistant always wear a face mask and safety glasses.",
+        },
+        {
+          id: 35,
+          cat: "1.2",
+          de: "das Mundspülglas (-er)",
+          ipa: "/das ˈmʊntʃpyːlˌɡlaːs/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Cốc nước súc miệng trên ghế nha",
+          en: "Dental rinse cup",
+          rel_vi: "der Speibecken (dt: bồn nhổ), ausspülen (đt: súc miệng)",
+          rel_en:
+            "der Speibecken (n: spittoon bowl), ausspülen (v: to rinse mouth)",
+          ex_de: "Bitte spülen Sie einmal kräftig mit Wasser aus.",
+          ex_vi: "Anh/Chị vui lòng súc miệng một ngụm nước nhé.",
+          ex_en: "Please rinse your mouth well with water.",
+        },
+        {
+          id: 36,
+          cat: "1.2",
+          de: "die Serviette (-n)",
+          ipa: "/diː zɛʁˈvi̯ɛtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khăn giấy yếm choàng ngực bệnh nhân",
+          en: "Patient bib / napkin",
+          rel_vi: "die Serviettenkette (dt: dây kẹp khăn yếm)",
+          rel_en: "die Serviettenkette (n: napkin chain/clip)",
+          ex_de:
+            "Ich lege Ihnen kurz eine Serviette um, damit Ihre Kleidung sauber bleibt.",
+          ex_vi:
+            "Tôi choàng một chiếc khăn yếm để giữ quần áo anh/chị luôn sạch sẽ nhé.",
+          ex_en:
+            "I'll put a bib around you briefly so your clothes stay clean.",
+        },
+        {
+          id: 37,
+          cat: "1.3",
+          de: "die Instrumentenaufbereitung",
+          ipa: "/diː ɪnstʁuˈmɛntn̩ˌʔaʊfbəʁaɪtʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Quy trình xử lý & tiệt trùng lại dụng cụ nha khoa (theo chuẩn RKI tại Đức)",
+          en: "Instrument reprocessing / sterilization workflow (RKI standard)",
+          rel_vi:
+            "aufbereiten (đt: xử lý tiệt trùng), der Steriraum (dt: phòng vô trùng)",
+          rel_en:
+            "aufbereiten (v: to reprocess), der Steriraum (n: sterilization room)",
+          ex_de:
+            "Die Instrumentenaufbereitung folgt einem strengen Hygieneplan.",
+          ex_vi:
+            "Quy trình xử lý dụng cụ tuân theo kế hoạch vệ sinh nghiêm ngặt.",
+          ex_en: "Instrument reprocessing follows a strict hygiene plan.",
+        },
+        {
+          id: 38,
+          cat: "1.3",
+          de: "der Sterilisationsraum (Steriraum)",
+          ipa: "/deːɐ̯ ʃteʁilizaˈtsi̯oːnsˌʁaʊm/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Phòng tiệt trùng dụng cụ (chia rõ vùng bẩn & vùng sạch)",
+          en: "Sterilization room (divided into dirty and clean zones)",
+          rel_vi:
+            "die unreine Seite (dt: khu vực bẩn), die reine Seite (dt: khu vực sạch)",
+          rel_en:
+            "die unreine Seite (n: dirty/unclean side), die reine Seite (n: clean side)",
+          ex_de:
+            "Im Steriraum trennen wir strikt zwischen unreiner und reiner Seite.",
+          ex_vi:
+            "Trong phòng vô trùng chúng ta phân tách nghiêm ngặt giữa khu vực bẩn và khu vực sạch.",
+          ex_en:
+            "In the sterilization room, we strictly separate the unclean and clean sides.",
+        },
+        {
+          id: 39,
+          cat: "1.3",
+          de: "der Thermodesinfektor (-en) (RDG)",
+          ipa: "/deːɐ̯ ˈtɛʁmodesɪnˌfɛktoːɐ̯/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Máy rửa & khử khuẩn dụng cụ bằng nhiệt tự động",
+          en: "Washer-disinfector (thermal disinfector)",
+          rel_vi: "reinigen (đt: làm sạch), desinfizieren (đt: khử khuẩn)",
+          rel_en: "reinigen (v: to clean), desinfizieren (v: to disinfect)",
+          ex_de:
+            "Nach der Behandlung kommen die Instrumente zuerst in den Thermodesinfektor.",
+          ex_vi:
+            "Sau khi điều trị, dụng cụ được đưa vào máy rửa khử khuẩn nhiệt trước tiên.",
+          ex_en:
+            "After treatment, instruments go into the washer-disinfector first.",
+        },
+        {
+          id: 40,
+          cat: "1.3",
+          de: "das Ultraschallbad (-er)",
+          ipa: "/das ˈʊltʁaʃalˌbaːt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Bể rửa dụng cụ bằng sóng siêu âm",
+          en: "Ultrasonic cleaning bath",
+          rel_vi: "vorreinigen (đt: làm sạch sơ bộ)",
+          rel_en: "vorreinigen (v: to pre-clean)",
+          ex_de: "Feine Bohrer reinigen wir im Ultraschallbad.",
+          ex_vi: "Các mũi khoan nhỏ được làm sạch trong bể siêu âm.",
+          ex_en: "Fine burs are cleaned in the ultrasonic bath.",
+        },
+        {
+          id: 41,
+          cat: "1.3",
+          de: "der Autoklav (-en)",
+          ipa: "/deːɐ̯ aʊtoˈklaːf/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Nồi hấp tiệt trùng hơi nước áp suất cao",
+          en: "Steam autoclave / sterilizer",
+          rel_vi:
+            "der Dampfsterilisator (dt: nồi hấp tiệt trùng), sterilisieren (đt: hấp tiệt trùng), steril (tt: vô trùng)",
+          rel_en:
+            "der Dampfsterilisator (n: steam sterilizer), sterilisieren (v: to sterilize), steril (adj: sterile)",
+          ex_de:
+            "Chirurgische Instrumente werden im Autoklav bei 134 Grad sterilisiert.",
+          ex_vi:
+            "Dụng cụ phẫu thuật được hấp tiệt trùng trong nồi hấp ở 134 độ C.",
+          ex_en:
+            "Surgical instruments are sterilized in the autoclave at 134 degrees.",
+        },
+        {
+          id: 42,
+          cat: "1.3",
+          de: "die Sterilisationsfolie (-n)",
+          ipa: "/diː ʃteʁilizaˈtsi̯oːnsˌfoːliə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Túi ép tiệt trùng dụng cụ",
+          en: "Sterilization pouch / reel packaging",
+          rel_vi:
+            "das Einschweißgerät (dt: máy hàn ép túi vô trùng), einschweißen (đt: hàn kín túi tiệt trùng)",
+          rel_en:
+            "das Einschweißgerät (n: heat sealing machine), einschweißen (v: to heat-seal)",
+          ex_de:
+            "Wir verpacken die Instrumente einzeln in Sterilisationsfolie und verschweißen sie.",
+          ex_vi:
+            "Chúng tôi đóng gói từng dụng cụ vào túi tiệt trùng và hàn kín lại.",
+          ex_en:
+            "We pack instruments individually in sterilization pouches and seal them.",
+        },
+        {
+          id: 43,
+          cat: "1.3",
+          de: "der Indikatorstreifen (-)",
+          ipa: "/deːɐ̯ ɪndiˈkaːtoːɐ̯ˌʃtʁaɪfn̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Que chỉ thị màu kiểm tra đạt chuẩn tiệt trùng",
+          en: "Sterilization indicator strip",
+          rel_vi: "die Chargenkontrolle (dt: kiểm soát mẻ hấp)",
+          rel_en: "die Chargenkontrolle (n: batch/cycle control)",
+          ex_de:
+            "Prüfe nach dem Sterilisieren den Farbumschlag am Indikatorstreifen.",
+          ex_vi:
+            "Sau khi hấp tiệt trùng hãy kiểm tra sự đổi màu trên que chỉ thị.",
+          ex_en:
+            "After sterilization, check the color change on the indicator strip.",
+        },
+        {
+          id: 44,
+          cat: "1.3",
+          de: "das Verfallsdatum",
+          ipa: "/das fɛɐ̯ˈfalsˌdaːtʊm/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Hạn sử dụng vô trùng ghi trên túi dụng cụ",
+          en: "Expiration / shelf-life date",
+          rel_vi:
+            "die Lagerdauer (dt: thời gian lưu trữ tối đa), beschriften (đt: ghi nhãn ngày hấp & hạn dùng)",
+          rel_en:
+            "die Lagerdauer (n: storage duration), beschriften (v: to label)",
+          ex_de:
+            "Auf jeder Sterilverpackung stehen Sterilisationsdatum und Verfallsdatum.",
+          ex_vi:
+            "Trên mỗi túi dụng cụ vô trùng đều ghi ngày hấp và hạn sử dụng.",
+          ex_en:
+            "Every sterile package shows the sterilization date and expiration date.",
+        },
+        {
+          id: 45,
+          cat: "1.3",
+          de: "die Wischdesinfektion",
+          ipa: "/diː ˈvɪʃdesɪnfɛkˌtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Lau khử khuẩn bề mặt ghế nha và tay nắm sau mỗi bệnh nhân",
+          en: "Surface wipe disinfection",
+          rel_vi:
+            "das Desinfektionstuch (dt: khăn lau khử khuẩn), die Einwirkzeit (dt: thời gian chờ thuốc phát huy tác dụng)",
+          rel_en:
+            "das Desinfektionstuch (n: disinfectant wipe), die Einwirkzeit (n: contact/exposure time)",
+          ex_de:
+            "Nach jedem Patienten machen wir eine Wischdesinfektion am Behandlungsstuhl.",
+          ex_vi: "Sau mỗi bệnh nhân chúng tôi lau khử khuẩn ghế điều trị.",
+          ex_en:
+            "After every patient, we perform wipe disinfection on the treatment chair.",
+        },
+        {
+          id: 46,
+          cat: "1.3",
+          de: "die Einwirkzeit (-en)",
+          ipa: "/diː ˈaɪnvɪʁkˌtsaɪt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thời gian tiếp xúc tối thiểu của dung dịch khử khuẩn",
+          en: "Disinfectant contact / dwell time",
+          rel_vi: "einwirken lassen (đt: để thuốc ngấm đủ thời gian)",
+          rel_en: "einwirken lassen (v: to allow contact time)",
+          ex_de:
+            "Beachte auf dem Etikett die genaue Einwirkzeit des Desinfektionsmittels.",
+          ex_vi:
+            "Hãy chú ý thời gian tiếp xúc chính xác của dung dịch khử khuẩn ghi trên nhãn.",
+          ex_en:
+            "Follow the exact contact time of the disinfectant shown on the label.",
+        },
+        {
+          id: 47,
+          cat: "1.3",
+          de: "die Händedesinfektion",
+          ipa: "/diː ˈhɛndədesɪnfɛkˌtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Sát khuẩn tay bằng dung dịch cồn y tế",
+          en: "Hand disinfection / hand hygiene",
+          rel_vi: "der Spender (dt: bình nhấn dung dịch)",
+          rel_en: "der Spender (n: dispenser)",
+          ex_de:
+            "Desinfiziere die Hände dreißig Sekunden lang vor dem Anziehen der Handschuhe.",
+          ex_vi: "Sát khuẩn tay trong 30 giây trước khi đeo găng tay y tế.",
+          ex_en:
+            "Disinfect your hands for thirty seconds before putting on gloves.",
+        },
+        {
+          id: 48,
+          cat: "1.3",
+          de: "die Einmalhandschuhe (Pl.)",
+          ipa: "/diː ˈaɪnmaːlˌhantʃuːə/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Găng tay y tế dùng một lần",
+          en: "Disposable examination gloves",
+          rel_vi: "sterile Handschuhe (dt: găng tay phẫu thuật vô trùng)",
+          rel_en: "sterile Handschuhe (n: sterile surgical gloves)",
+          ex_de:
+            "Bei chirurgischen Eingriffen ziehen wir sterile Handschuhe an.",
+          ex_vi:
+            "Khi thực hiện thủ thuật phẫu thuật chúng ta đeo găng tay vô trùng.",
+          ex_en: "For surgical procedures, we put on sterile gloves.",
+        },
+        {
+          id: 49,
+          cat: "1.3",
+          de: "der Kanülenabwurf",
+          ipa: "/deːɐ̯ kaˈnyːlənˌʔapvʊʁf/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Hộp cứng hủy kim tiêm & vật sắc nhọn chống đâm thủng",
+          en: "Sharps disposal container",
+          rel_vi:
+            "der Stichschutzbehälter (dt: hộp chống đâm thủng), die Kanüle (dt: kim tiêm), die Nadelstichverletzung (dt: tổn thương do kim đâm)",
+          rel_en:
+            "der Stichschutzbehälter (n: puncture-proof container), die Kanüle (n: needle), die Nadelstichverletzung (n: needlestick injury)",
+          ex_de:
+            "Gebrauchte Kanülen gehören sofort ohne Zurückstecken in den Kanülenabwurf.",
+          ex_vi:
+            "Kim tiêm đã dùng phải bỏ ngay vào hộp hủy kim mà không đậy nắp lại.",
+          ex_en:
+            "Used needles go straight into the sharps container without recapping.",
+        },
+        {
+          id: 50,
+          cat: "1.3",
+          de: "die Absauganlage (-n)",
+          ipa: "/diː ˈapzaʊkʔanˌlaːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hệ thống ống hút trên ghế nha (cần súc rửa khử khuẩn cuối ngày)",
+          en: "Dental suction / evacuation system",
+          rel_vi: "durchspülen (đt: súc rửa đường ống)",
+          rel_en: "durchspülen (v: to flush/rinse through)",
+          ex_de:
+            "Abends spülen wir die Absauganlage mit Spezialreiniger durch.",
+          ex_vi:
+            "Buổi tối chúng tôi súc rửa hệ thống ống hút bằng dung dịch vệ sinh chuyên dụng.",
+          ex_en:
+            "In the evening, we flush the suction system with specialized cleaner.",
+        },
+        {
+          id: 51,
+          cat: "1.3",
+          de: "die Bleischürze (-n)",
+          ipa: "/diː ˈblaɪˌʃʏʁtsə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tạp dề chì bảo hộ bức xạ X-quang",
+          en: "Lead radiation protection apron",
+          rel_vi:
+            "der Röntgenschutz (dt: bảo hộ bức xạ X-quang), der Kontrollbereich (dt: khu vực kiểm soát tia X)",
+          rel_en:
+            "der Röntgenschutz (n: radiation protection), der Kontrollbereich (n: controlled X-ray area)",
+          ex_de:
+            "Lege dem Patienten vor der Röntgenaufnahme die Bleischürze an.",
+          ex_vi: "Đeo tạp dề chì cho bệnh nhân trước khi chụp X-quang.",
+          ex_en: "Put the lead apron on the patient before taking the X-ray.",
+        },
+        {
+          id: 52,
+          cat: "1.3",
+          de: "die Dokumentation",
+          ipa: "/diː dɔkumɛntaˈtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Ghi chép hồ sơ tiệt trùng & theo dõi điều trị",
+          en: "Documentation / compliance log",
+          rel_vi:
+            "das Röntgenbuch (dt: sổ theo dõi chụp X-quang), freigeben (đt: ký xác nhận đạt chuẩn)",
+          rel_en:
+            "das Röntgenbuch (n: X-ray logbook), freigeben (v: to release/approve)",
+          ex_de:
+            "Jede Charge im Autoklav wird lückenlos dokumentiert und freigegeben.",
+          ex_vi:
+            "Mỗi mẻ hấp trong nồi hấp đều được ghi chép đầy đủ và ký xác nhận đạt chuẩn.",
+          ex_en:
+            "Every autoclave batch is documented without gaps and released.",
+        },
+        {
+          id: 53,
+          cat: "1.4",
+          de: "die Zahnarztpraxis (-en)",
+          ipa: "/diː ˈtsaːnʔaːɐ̯tstˌpʁaksɪs/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Phòng khám nha khoa",
+          en: "Dental practice / dental clinic",
+          rel_vi:
+            "der Empfang (dt: quầy lễ tân), das Wartezimmer (dt: phòng chờ)",
+          rel_en:
+            "der Empfang (n: front desk/reception), das Wartezimmer (n: waiting room)",
+          ex_de: "Herzlich willkommen in unserer Zahnarztpraxis!",
+          ex_vi:
+            "Chào mừng quý khách đến với phòng khám nha khoa của chúng tôi!",
+          ex_en: "Welcome to our dental practice!",
+        },
+        {
+          id: 54,
+          cat: "1.4",
+          de: "die Gesundheitskarte (-n)",
+          ipa: "/diː ɡəˈzʊnthaɪtsˌkaʁtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thẻ bảo hiểm y tế điện tử (eGK)",
+          en: "Electronic health insurance card",
+          rel_vi:
+            "die Chipkarte (dt: thẻ bảo hiểm), einlesen (đt: quẹt đọc thẻ vào hệ thống)",
+          rel_en:
+            "die Chipkarte (n: insurance chip card), einlesen (v: to read card into system)",
+          ex_de:
+            "Haben Sie Ihre Gesundheitskarte für dieses Quartal schon dabei?",
+          ex_vi: "Anh/Chị có mang theo thẻ bảo hiểm y tế cho quý này chưa ạ?",
+          ex_en:
+            "Do you have your health insurance card for this quarter with you?",
+        },
+        {
+          id: 55,
+          cat: "1.4",
+          de: "das Bonusheft (-e)",
+          ipa: "/das ˈboːnʊsˌhɛft/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Sổ theo dõi khám răng định kỳ (giúp người bệnh tại Đức được BHYT hỗ trợ thêm 20–30% chi phí làm răng giả)",
+          en: "Dental check-up bonus booklet (increases statutory insurance subsidy for prosthetics)",
+          rel_vi: "abstempeln (đt: đóng dấu xác nhận khám định kỳ)",
+          rel_en: "abstempeln (v: to stamp check-up entry)",
+          ex_de:
+            "Denken Sie bitte an Ihr Bonusheft, damit wir den Stempel für dieses Jahr eintragen.",
+          ex_vi:
+            "Anh/Chị nhớ mang theo sổ khám định kỳ để phòng khám đóng dấu cho năm nay nhé.",
+          ex_en:
+            "Please remember your bonus booklet so we can add the stamp for this year.",
+        },
+        {
+          id: 56,
+          cat: "1.4",
+          de: "der Heil- und Kostenplan (HKP)",
+          ipa: "/deːɐ̯ ˈhaɪl ʊnt ˈkɔstn̩ˌplaːn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bảng kế hoạch điều trị & dự toán chi phí (gửi hãng BHYT duyệt trước khi làm răng sứ / cầu răng)",
+          en: "Treatment and cost plan (submitted to health insurer before prosthetic work)",
+          rel_vi: "genehmigen (đt: phê duyệt chi trả)",
+          rel_en: "genehmigen (v: to approve/authorize)",
+          ex_de:
+            "Den Heil- und Kostenplan reichen Sie bitte vorab bei Ihrer Krankenkasse ein.",
+          ex_vi:
+            "Anh/Chị vui lòng nộp trước kế hoạch điều trị và dự toán chi phí này cho hãng bảo hiểm y tế nhé.",
+          ex_en:
+            "Please submit the treatment and cost plan to your health insurer in advance.",
+        },
+        {
+          id: 57,
+          cat: "1.4",
+          de: "die Zuzahlung (-en)",
+          ipa: "/diː ˈtsuːˌtsaːlʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khoản đồng chi trả / Phần chi phí bệnh nhân tự đóng thêm",
+          en: "Patient co-payment / out-of-pocket share",
+          rel_vi:
+            "der Eigenanteil (dt: phần tự chi trả), die Kassenleistung (dt: hạng mục BHYT chi trả), die Privatleistung (dt: dịch vụ tự chi trả)",
+          rel_en:
+            "der Eigenanteil (n: own share), die Kassenleistung (n: statutory covered service), die Privatleistung (n: private/self-pay service)",
+          ex_de:
+            "Bei einer Kunststofffüllung im Seitenzahnbereich fällt eine kleine Zuzahlung an.",
+          ex_vi:
+            "Với miếng trám thẩm mỹ ở răng hàm sẽ có một khoản phụ thu nhỏ.",
+          ex_en:
+            "A small co-payment applies for a composite filling on a back tooth.",
+        },
+        {
+          id: 58,
+          cat: "1.4",
+          de: "die Rechnung (-en)",
+          ipa: "/diː ˈʁɛçnʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hóa đơn thanh toán nha khoa",
+          en: "Invoice / bill",
+          rel_vi:
+            "die Abrechnung (dt: công tác tính chi phí nha khoa BEMA/GOZ), abrechnen (đt: tính tiền/quyết toán)",
+          rel_en:
+            "die Abrechnung (n: dental billing), abrechnen (v: to bill/settle)",
+          ex_de:
+            "Die Rechnung für die Professionelle Zahnreinigung bekommen Sie per Post.",
+          ex_vi:
+            "Hóa đơn dịch vụ lấy cao răng chuyên sâu sẽ được gửi cho anh/chị qua bưu điện.",
+          ex_en:
+            "You will receive the invoice for the professional dental cleaning by mail.",
+        },
+        {
+          id: 59,
+          cat: "1.4",
+          de: "die Überweisung (-en)",
+          ipa: "/diː yːbɐˈvaɪzʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Giấy giới thiệu chuyển tuyến chuyên khoa (phẫu thuật hàm mặt MKG hoặc chỉnh nha)",
+          en: "Specialist referral slip",
+          rel_vi: "der Kieferchirurg (dt: bác sĩ phẫu thuật hàm mặt)",
+          rel_en: "der Kieferchirurg (n: oral/maxillofacial surgeon)",
+          ex_de:
+            "Für die Weisheitszahn-OP beim Kieferchirurgen gebe ich Ihnen eine Überweisung mit.",
+          ex_vi:
+            "Để nhổ răng khôn bên bác sĩ phẫu thuật hàm mặt, tôi gửi kèm giấy giới thiệu cho anh/chị.",
+          ex_en:
+            "I'll give you a referral for the wisdom tooth surgery with the oral surgeon.",
+        },
+        {
+          id: 60,
+          cat: "1.4",
+          de: "der Anamnesebogen (-)",
+          ipa: "/deːɐ̯ anamˈneːzəˌboːɡn̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Phiếu khai tiền sử bệnh lý & dị ứng (dành cho bệnh nhân mới)",
+          en: "Medical history & allergy questionnaire",
+          rel_vi: "ausfüllen (đt: điền thông tin), die Allergie (dt: dị ứng)",
+          rel_en: "ausfüllen (v: to fill out), die Allergie (n: allergy)",
+          ex_de:
+            "Bitte füllen Sie diesen Anamnesebogen im Wartezimmer in Ruhe aus.",
+          ex_vi:
+            "Anh/Chị vui lòng điền phiếu khai tiền sử sức khỏe này ở phòng chờ nhé.",
+          ex_en:
+            "Please fill out this medical history form at your leisure in the waiting room.",
+        },
+        {
+          id: 61,
+          cat: "1.4",
+          de: "die Einverständniserklärung (-en)",
+          ipa: "/diː ˈaɪnfɛɐ̯ʃtɛntnɪsʔɛɐ̯ˌklɛːʁʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Phiếu đồng ý thực hiện thủ thuật / phẫu thuật",
+          en: "Informed consent form",
+          rel_vi: "unterschreiben (đt: ký xác nhận)",
+          rel_en: "unterschreiben (v: to sign)",
+          ex_de:
+            "Bitte unterschreiben Sie die Einverständniserklärung nach der Aufklärung durch den Arzt.",
+          ex_vi:
+            "Vui lòng ký vào phiếu đồng ý điều trị sau khi được bác sĩ tư vấn giải thích.",
+          ex_en: "Please sign the consent form after the doctor's explanation.",
+        },
+        {
+          id: 62,
+          cat: "1.4",
+          de: "das Rezept (-e)",
+          ipa: "/das ʁeˈtsɛpt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Đơn thuốc (thuốc giảm đau, kháng sinh, nước súc miệng)",
+          en: "Prescription",
+          rel_vi: "die Apotheke (dt: hiệu thuốc)",
+          rel_en: "die Apotheke (n: pharmacy)",
+          ex_de:
+            "Hier ist Ihr Rezept für das Schmerzmittel und die medizinische Mundspülung.",
+          ex_vi:
+            "Đây là đơn thuốc giảm đau và nước súc miệng y tế của anh/chị.",
+          ex_en:
+            "Here is your prescription for the painkiller and medical mouthwash.",
+        },
+        {
+          id: 63,
+          cat: "1.4",
+          de: "die Arbeitsunfähigkeitsbescheinigung (AU)",
+          ipa: "/diː ˈaʁbaɪtsʔʊnfɛːɪçkaɪtsbəˌʃaɪnɪɡʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Giấy chứng nhận nghỉ ốm sau tiểu phẫu nha khoa",
+          en: "Certificate of incapacity for work (sick note)",
+          rel_vi: "krankschreiben (đt: cấp giấy nghỉ ốm)",
+          rel_en: "krankschreiben (v: to issue a sick note)",
+          ex_de:
+            "Nach der Operation schreibt Sie der Zahnarzt für zwei Tage krank.",
+          ex_vi:
+            "Sau ca tiểu phẫu, bác sĩ nha khoa sẽ cấp giấy nghỉ ốm cho anh/chị hai ngày.",
+          ex_en:
+            "After the procedure, the dentist writes you a sick note for two days.",
+        },
+        {
+          id: 64,
+          cat: "1.4",
+          de: "der Kontrolltermin (-e)",
+          ipa: "/deːɐ̯ kɔnˈtʁɔltɛʁˌmiːn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Lịch hẹn tái khám kiểm tra",
+          en: "Follow-up / check-up appointment",
+          rel_vi:
+            "die Nachkontrolle (dt: khám kiểm tra lại), vereinbaren (đt: đặt lịch hẹn)",
+          rel_en:
+            "die Nachkontrolle (n: follow-up check), vereinbaren (v: to schedule/book)",
+          ex_de:
+            "Wir vereinbaren gleich einen Kontrolltermin in einer Woche zum Fädenziehen.",
+          ex_vi:
+            "Chúng ta đặt luôn lịch hẹn tái khám sau một tuần để cắt chỉ nhé.",
+          ex_en:
+            "We'll book a follow-up appointment in one week for suture removal right away.",
+        },
+        {
+          id: 65,
+          cat: "1.4",
+          de: "der Recall",
+          ipa: "/deːɐ̯ ˈʁiːkɔːl/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Hệ thống nhắc lịch khám định kỳ 6 tháng/lần",
+          en: "Recall / periodic check-up reminder system",
+          rel_vi:
+            "die Erinnerung (dt: lời nhắc), halbjährlich (tt: định kỳ 6 tháng)",
+          rel_en:
+            "die Erinnerung (n: reminder), halbjährlich (adj: semi-annual / every 6 months)",
+          ex_de:
+            "Möchten Sie in unseren halbjährlichen Recall aufgenommen werden?",
+          ex_vi:
+            "Anh/Chị có muốn đăng ký dịch vụ nhắc lịch khám định kỳ 6 tháng một lần không ạ?",
+          ex_en: "Would you like to be added to our six-month recall system?",
+        },
+        {
+          id: 66,
+          cat: "1.4",
+          de: "die Verspätung (-en)",
+          ipa: "/diː fɛɐ̯ˈʃpɛːtʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Sự đến trễ giờ hẹn",
+          en: "Delay / arriving late",
+          rel_vi: "absagen (đt: hủy hẹn), verschieben (đt: dời lịch hẹn)",
+          rel_en:
+            "absagen (v: to cancel an appointment), verschieben (v: to reschedule)",
+          ex_de:
+            "Falls Sie den Termin nicht wahrnehmen können, sagen Sie bitte 24 Stunden vorher ab.",
+          ex_vi:
+            "Nếu không thể đến đúng hẹn, vui lòng báo hủy trước 24 tiếng giúp phòng khám.",
+          ex_en:
+            "If you cannot keep the appointment, please cancel at least 24 hours in advance.",
+        },
+        {
+          id: 67,
+          cat: "1.4",
+          de: "das Wartezimmer (-)",
+          ipa: "/das ˈvaʁtəˌtsɪmɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Phòng chờ khám bệnh",
+          en: "Waiting room",
+          rel_vi: "aufrufen (đt: gọi tên bệnh nhân vào phòng khám)",
+          rel_en: "aufrufen (v: to call a patient in)",
+          ex_de:
+            "Bitte nehmen Sie noch kurz im Wartezimmer Platz, wir rufen Sie gleich auf.",
+          ex_vi:
+            "Mời anh/chị ngồi chờ một lát ở phòng chờ, chúng tôi sẽ gọi tên ngay ạ.",
+          ex_en:
+            "Please take a seat in the waiting room briefly; we'll call you right in.",
+        },
+        {
+          id: 68,
+          cat: "1.4",
+          de: "das Behandlungszimmer (-)",
+          ipa: "/das bəˈhandlʊŋsˌtsɪmɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Phòng điều trị nha khoa",
+          en: "Treatment room / dental operatory",
+          rel_vi: "vorbereiten (đt: chuẩn bị phòng điều trị)",
+          rel_en: "vorbereiten (v: to prepare the room)",
+          ex_de:
+            "Das Behandlungszimmer 1 ist frisch desinfiziert und bereit für den nächsten Patienten.",
+          ex_vi:
+            "Phòng điều trị số 1 đã được khử khuẩn sạch sẽ và sẵn sàng cho bệnh nhân tiếp theo.",
+          ex_en:
+            "Treatment room 1 is freshly disinfected and ready for the next patient.",
+        },
+        {
+          id: 69,
+          cat: "1.5",
+          de: "assistieren",
+          ipa: "/asɪsˈtiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Hỗ trợ bác sĩ trực tiếp trên ghế nha (Stuhlassistenz)",
+          en: "To assist the dentist chairside",
+          rel_vi: "die Assistenz (dt: sự hỗ trợ điều trị)",
+          rel_en: "die Assistenz (n: clinical assistance)",
+          ex_de:
+            "Die ZFA assistiert dem Zahnarzt während der gesamten Füllungstherapie.",
+          ex_vi:
+            "Trợ lý nha khoa hỗ trợ bác sĩ trong suốt quá trình trám răng.",
+          ex_en:
+            "The dental assistant assists the dentist throughout the filling procedure.",
+        },
+        {
+          id: 70,
+          cat: "1.5",
+          de: "absaugen",
+          ipa: "/ˈapˌzaʊɡn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Hút nước bọt, nước làm mát và máu trong khoang miệng",
+          en: "To suction / aspirate saliva and coolant",
+          rel_vi: "der Sauger (dt: ống hút)",
+          rel_en: "der Sauger (n: suction tip)",
+          ex_de: "Bitte sauge das Kühlwasser beim Bohren kontinuierlich ab.",
+          ex_vi:
+            "Vui lòng hút liên tục nước làm mát trong lúc bác sĩ khoan răng.",
+          ex_en:
+            "Please suction the cooling water continuously during drilling.",
+        },
+        {
+          id: 71,
+          cat: "1.5",
+          de: "anreichen",
+          ipa: "/ˈanˌʁaɪçn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Chuyền / đưa dụng cụ đúng kỹ thuật cho bác sĩ",
+          en: "To hand over / pass instruments",
+          rel_vi: "reichen (đt: đưa/chuyền)",
+          rel_en: "reichen (v: to hand/pass)",
+          ex_de:
+            "Reiche der Zahnärztin bitte den Mundspiegel und die Sonde an.",
+          ex_vi: "Hãy đưa gương nha khoa và cây thám trâm cho nữ bác sĩ.",
+          ex_en: "Please pass the mouth mirror and probe to the dentist.",
+        },
+        {
+          id: 72,
+          cat: "1.5",
+          de: "anmischen",
+          ipa: "/ˈanˌmɪʃn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Trộn vật liệu nha khoa (xi-măng, chất lấy dấu)",
+          en: "To mix dental materials (cement, impression paste)",
+          rel_vi: "die Mischung (dt: hỗn hợp trộn)",
+          rel_en: "die Mischung (n: mixture)",
+          ex_de: "Mische das Abdruckmaterial schnell und blasenfrei an.",
+          ex_vi: "Trộn vật liệu lấy dấu thật nhanh và không để có bọt khí.",
+          ex_en: "Mix the impression material quickly and bubble-free.",
+        },
+        {
+          id: 73,
+          cat: "1.5",
+          de: "ausspülen",
+          ipa: "/ˈaʊsˌʃpyːlən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Súc miệng",
+          en: "To rinse out one's mouth",
+          rel_vi:
+            "spülen (đt: xịt rửa), die Spüllösung (dt: dung dịch bơm rửa)",
+          rel_en:
+            "spülen (v: to flush/rinse), die Spüllösung (n: rinsing solution)",
+          ex_de: "Jetzt können Sie gerne einmal den Mund ausspülen.",
+          ex_vi: "Bây giờ anh/chị có thể súc miệng một chút ạ.",
+          ex_en: "You are welcome to rinse your mouth now.",
+        },
+        {
+          id: 74,
+          cat: "1.5",
+          de: "abformen",
+          ipa: "/ˈapˌfɔʁmən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Lấy dấu cung hàm",
+          en: "To take a dental impression",
+          rel_vi: "die Abformung (dt: mẫu dấu hàm)",
+          rel_en: "die Abformung (n: impression)",
+          ex_de: "Wir formen den Unterkiefer für die neue Krone ab.",
+          ex_vi: "Chúng ta lấy dấu hàm dưới để làm mão răng mới.",
+          ex_en:
+            "We are taking an impression of the lower jaw for the new crown.",
+        },
+        {
+          id: 75,
+          cat: "1.5",
+          de: "einschweißen",
+          ipa: "/ˈaɪnˌʃvaɪsn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Hàn ép túi đựng dụng cụ trước khi hấp tiệt trùng",
+          en: "To heat-seal in a sterilization pouch",
+          rel_vi: "die Folie (dt: túi ép vô trùng)",
+          rel_en: "die Folie (n: sterilization foil/pouch)",
+          ex_de:
+            "Kontrolliere die Schweißnaht nach dem Einschweißen auf Dichtheit.",
+          ex_vi: "Kiểm tra đường hàn ép túi xem đã kín khít chưa.",
+          ex_en: "Check the heat seal for tightness after sealing.",
+        },
+        {
+          id: 76,
+          cat: "1.5",
+          de: "sterilisieren",
+          ipa: "/ʃteʁiliˈziːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Hấp tiệt trùng dụng cụ",
+          en: "To sterilize",
+          rel_vi: "die Sterilisation (dt: sự tiệt trùng)",
+          rel_en: "die Sterilisation (n: sterilization)",
+          ex_de:
+            "Alle kritischen Instrumente müssen nach der Reinigung sterilisiert werden.",
+          ex_vi:
+            "Tất cả dụng cụ thiết yếu đều phải được hấp tiệt trùng sau khi làm sạch.",
+          ex_en: "All critical instruments must be sterilized after cleaning.",
+        },
+        {
+          id: 77,
+          cat: "1.5",
+          de: "aufklären",
+          ipa: "/ˈaʊfˌklɛːʁən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Tư vấn, giải thích rõ quy trình điều trị & rủi ro cho bệnh nhân",
+          en: "To inform and explain treatment procedures/risks",
+          rel_vi: "die Aufklärung (dt: sự giải thích tư vấn)",
+          rel_en: "die Aufklärung (n: patient information/counseling)",
+          ex_de:
+            "Der Arzt klärt den Patienten ausführlich über die Behandlung auf.",
+          ex_vi:
+            "Bác sĩ tư vấn giải thích cặn kẽ cho người bệnh về quá trình điều trị.",
+          ex_en: "The doctor explains the treatment to the patient in detail.",
+        },
+        {
+          id: 78,
+          cat: "1.5",
+          de: "beruhigen",
+          ipa: "/bəˈʁuːɪɡn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Trấn an bệnh nhân (đặc biệt với người sợ khám răng / Angstpatienten)",
+          en: "To calm / reassure",
+          rel_vi: "der Angstpatient (dt: bệnh nhân sợ nha khoa)",
+          rel_en: "der Angstpatient (n: anxious dental patient)",
+          ex_de:
+            "Bei Angstpatienten sprechen wir besonders ruhig und einfühlsam.",
+          ex_vi:
+            "Với bệnh nhân sợ khám răng chúng tôi nói chuyện đặc biệt nhẹ nhàng và thấu cảm.",
+          ex_en:
+            "With anxious patients, we speak especially calmly and empathetically.",
+        },
+        {
+          id: 79,
+          cat: "1.5",
+          de: "steril",
+          ipa: "/ʃteˈʁiːl/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Vô trùng tuyệt đối",
+          en: "Sterile",
+          rel_vi: "unsteril (tt: không vô trùng)",
+          rel_en: "unsteril (adj: non-sterile)",
+          ex_de: "Öffne die sterile Verpackung erst direkt vor dem Eingriff.",
+          ex_vi:
+            "Chỉ mở túi dụng cụ vô trùng ngay trước khi bắt đầu thủ thuật.",
+          ex_en: "Open the sterile package only right before the procedure.",
+        },
+        {
+          id: 80,
+          cat: "1.5",
+          de: "schmerzfrei / schmerzarm",
+          ipa: "/ˈʃmɛʁtsˌfʁaɪ/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Không đau / Ít gây đau",
+          en: "Pain-free / low-pain",
+          rel_vi: "der Schmerz (dt: cơn đau)",
+          rel_en: "der Schmerz (n: pain)",
+          ex_de:
+            "Dank moderner Betäubung verläuft die Behandlung fast schmerzfrei.",
+          ex_vi:
+            "Nhờ thuốc tê hiện đại, quá trình điều trị diễn ra gần như không đau.",
+          ex_en: "Thanks to modern anesthesia, treatment is almost pain-free.",
+        },
+        {
+          id: 81,
+          cat: "1.5",
+          de: "vorsichtig / behutsam",
+          ipa: "/ˈfoːɐ̯zɪçtɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Cẩn thận / Nhẹ nhàng, êm ái",
+          en: "Careful / gentle",
+          rel_vi: "die Vorsicht (dt: sự cẩn trọng)",
+          rel_en: "die Vorsicht (n: caution/care)",
+          ex_de:
+            "Bitte halten Sie den Sauger vorsichtig, ohne das Zahnfleisch zu drücken.",
+          ex_vi: "Vui lòng giữ ống hút nhẹ nhàng, không tỳ mạnh vào nướu răng.",
+          ex_en: "Please hold the suction gently without pressing on the gums.",
+        },
+        {
+          id: 82,
+          cat: "1.5",
+          de: "empfindlich",
+          ipa: "/ɛmˈpfɪntlɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Ê buốt / Nhạy cảm (răng nhạy cảm với nóng lạnh)",
+          en: "Sensitive (e.g., teeth sensitive to cold)",
+          rel_vi: "die Empfindlichkeit (dt: sự ê buốt/nhạy cảm)",
+          rel_en: "die Empfindlichkeit (n: sensitivity)",
+          ex_de: "Meine Zähne sind beim kalten Wasser sehr empfindlich.",
+          ex_vi: "Răng của tôi rất ê buốt khi gặp nước lạnh.",
+          ex_en: "My teeth are very sensitive to cold water.",
+        },
+      ];
+
+      const PHRASES_DATA = [
+        {
+          id: 1,
+          cat: "2.1",
+          de: "Guten Morgen, herzlich willkommen in unserer Zahnarztpraxis! Wie kann ich Ihnen helfen?",
+          vi: "Chào buổi sáng, chào mừng quý khách đến với phòng khám nha khoa! Tôi có thể giúp gì cho anh/chị?",
+          en: "Good morning, welcome to our dental practice! How can I help you?",
+        },
+        {
+          id: 2,
+          cat: "2.1",
+          de: "Haben Sie einen Termin vereinbart oder kommen Sie mit akuten Zahnschmerzen?",
+          vi: "Anh/Chị đã đặt lịch hẹn trước hay đến khám vì đau răng cấp tính ạ?",
+          en: "Do you have an appointment or are you coming in with acute toothache?",
+        },
+        {
+          id: 3,
+          cat: "2.1",
+          de: "Darf ich bitte Ihre Gesundheitskarte und Ihr Bonusheft einlesen?",
+          vi: "Cho tôi xin thẻ bảo hiểm y tế và sổ khám định kỳ của anh/chị để quét vào hệ thống nhé?",
+          en: "May I please scan your health insurance card and your bonus booklet?",
+        },
+        {
+          id: 4,
+          cat: "2.1",
+          de: "Da Sie zum ersten Mal bei uns sind, füllen Sie bitte diesen Anamnesebogen aus.",
+          vi: "Vì đây là lần đầu anh/chị đến phòng khám, vui lòng điền phiếu khai tiền sử sức khỏe này nhé.",
+          en: "Since this is your first time with us, please fill out this medical history form.",
+        },
+        {
+          id: 5,
+          cat: "2.1",
+          de: "Haben Sie Allergien gegen bestimmte Medikamente oder Betäubungsmittel?",
+          vi: "Anh/Chị có bị dị ứng với loại thuốc hay thuốc tê nào không ạ?",
+          en: "Do you have allergies to any specific medications or anesthetics?",
+        },
+        {
+          id: 6,
+          cat: "2.1",
+          de: "Bitte nehmen Sie kurz im Wartezimmer Platz, wir rufen Sie gleich auf.",
+          vi: "Mời anh/chị ngồi chờ một lát trong phòng chờ, chúng tôi sẽ gọi tên ngay ạ.",
+          en: "Please take a seat in the waiting room briefly; we'll call you right in.",
+        },
+        {
+          id: 7,
+          cat: "2.1",
+          de: "Wann passt Ihnen ein Kontrolltermin in sechs Monaten, eher vormittags oder nachmittags?",
+          vi: "Lịch hẹn khám định kỳ sau 6 tháng thì khung giờ nào thuận tiện cho anh/chị, buổi sáng hay buổi chiều ạ?",
+          en: "When does a check-up appointment in six months suit you—mornings or afternoons?",
+        },
+        {
+          id: 8,
+          cat: "2.1",
+          de: "Bitte sagen Sie mindestens 24 Stunden vorher Bescheid, falls Sie den Termin verschieben müssen.",
+          vi: "Vui lòng báo trước ít nhất 24 tiếng nếu anh/chị cần dời lịch hẹn nhé.",
+          en: "Please let us know at least 24 hours in advance if you need to reschedule.",
+        },
+        {
+          id: 9,
+          cat: "2.1",
+          de: "Hier ist Ihr Heil- und Kostenplan für die Krankenkasse sowie Ihr Rezept.",
+          vi: "Đây là kế hoạch điều trị và dự toán chi phí để nộp bảo hiểm y tế cùng đơn thuốc của anh/chị.",
+          en: "Here is your treatment and cost plan for your health insurer as well as your prescription.",
+        },
+        {
+          id: 10,
+          cat: "2.2",
+          de: "Guten Tag, mein Name ist Đức. Bitte nehmen Sie hier auf dem Behandlungsstuhl Platz.",
+          vi: "Xin chào, tên tôi là Đức. Mời anh/chị ngồi lên ghế điều trị nha khoa ở đây ạ.",
+          en: "Good day, my name is Đức. Please take a seat here in the dental chair.",
+        },
+        {
+          id: 11,
+          cat: "2.2",
+          de: "Ich lege Ihnen eine Serviette um, damit Ihre Kleidung geschützt bleibt.",
+          vi: "Tôi choàng khăn yếm để bảo vệ quần áo của anh/chị nhé.",
+          en: "I'll put a bib around you so your clothes stay protected.",
+        },
+        {
+          id: 12,
+          cat: "2.2",
+          de: "Ich fahre den Stuhl jetzt langsam nach hinten. Sagen Sie Bescheid, wenn es unbequem ist.",
+          vi: "Bây giờ tôi ngả ghế ra sau từ từ nhé. Anh/Chị hãy báo nếu thấy chưa thoải mái.",
+          en: "I'm reclining the chair back slowly now. Let me know if it's uncomfortable.",
+        },
+        {
+          id: 13,
+          cat: "2.2",
+          de: "Bitte öffnen Sie den Mund einmal weit, die Zahnärztin schaut sich das kurz an.",
+          vi: "Anh/Chị vui lòng há miệng to một chút, nữ bác sĩ sẽ kiểm tra nhanh ạ.",
+          en: "Please open your mouth wide; the dentist will take a quick look.",
+        },
+        {
+          id: 14,
+          cat: "2.2",
+          de: "Wenn es während der Behandlung wehtut oder unangenehm ist, heben Sie bitte einfach die linke Hand.",
+          vi: "Nếu trong lúc điều trị thấy đau hoặc khó chịu, anh/chị chỉ cần giơ tay trái lên báo hiệu nhé.",
+          en: "If it hurts or feels uncomfortable during treatment, please just raise your left hand.",
+        },
+        {
+          id: 15,
+          cat: "2.2",
+          de: "Bitte einmal kurz schließen und schlucken, ich sauge gleich ab.",
+          vi: "Anh/Chị khép miệng nuốt nước bọt một chút nhé, tôi sẽ hút ngay đây.",
+          en: "Please close and swallow briefly; I'll suction right away.",
+        },
+        {
+          id: 16,
+          cat: "2.2",
+          de: "Jetzt können Sie gerne einmal mit Wasser ausspülen.",
+          vi: "Bây giờ anh/chị có thể súc miệng một ngụm nước ạ.",
+          en: "You are welcome to rinse your mouth with water now.",
+        },
+        {
+          id: 17,
+          cat: "2.2",
+          de: "Die örtliche Betäubung hält noch etwa zwei Stunden an. Bitte essen Sie erst, wenn das Gefühl wieder da ist.",
+          vi: "Thuốc tê tại chỗ sẽ còn tác dụng khoảng hai tiếng nữa. Anh/Chị vui lòng chỉ ăn sau khi đã hết cảm giác tê nhé.",
+          en: "The local anesthetic lasts about two more hours. Please wait to eat until feeling returns.",
+        },
+        {
+          id: 18,
+          cat: "2.2",
+          de: "Bitte beißen Sie noch dreißig Minuten fest auf den Tupfer, damit die Blutung stoppt.",
+          vi: "Anh/Chị vui lòng cắn chặt miếng gạc thêm 30 phút nữa để cầm máu hoàn toàn nhé.",
+          en: "Please bite firmly on the gauze pad for thirty more minutes so the bleeding stops.",
+        },
+        {
+          id: 19,
+          cat: "2.3",
+          de: "Das Behandlungszimmer 1 ist vorbereitet, das Grundbesteck-Tray liegt bereit.",
+          vi: "Phòng điều trị số 1 đã chuẩn bị xong, khay dụng cụ cơ bản đã sẵn sàng.",
+          en: "Treatment room 1 is ready; the basic exam tray is prepared.",
+        },
+        {
+          id: 20,
+          cat: "2.3",
+          de: "Soll ich schon die Betäubungsspritze und das Oberflächenanästhetikum vorbereiten?",
+          vi: "Tôi có cần chuẩn bị sẵn ống tiêm tê và thuốc tê bôi bề mặt không ạ?",
+          en: "Should I prepare the anesthetic syringe and topical numbing gel already?",
+        },
+        {
+          id: 21,
+          cat: "2.3",
+          de: "Welchen Bohrer und welches Winkelstück brauchen Sie für die Präparation?",
+          vi: "Bác sĩ cần mũi khoan nào và tay khoan khuỷu nào cho bước mài sửa soạn ạ?",
+          en: "Which bur and contra-angle handpiece do you need for the preparation?",
+        },
+        {
+          id: 22,
+          cat: "2.3",
+          de: "Ich lege jetzt die Watterollen ein und trockne den Zahn mit Luft.",
+          vi: "Tôi đặt cuộn bông gòn cách ly và thổi khô chiếc răng bằng hơi ngay đây.",
+          en: "I'm placing the cotton rolls and drying the tooth with air now.",
+        },
+        {
+          id: 23,
+          cat: "2.3",
+          de: "Soll ich die Kunststofffüllung jetzt zwanzig Sekunden mit der Lampe aushärten?",
+          vi: "Tôi chiếu đèn quang trùng hợp làm cứng miếng trám 20 giây ngay bây giờ chứ ạ?",
+          en: "Should I cure the composite filling with the light for twenty seconds now?",
+        },
+        {
+          id: 24,
+          cat: "2.3",
+          de: "Ich mische das Abformmaterial an und reiche Ihnen den Abformlöffel an.",
+          vi: "Tôi trộn vật liệu lấy dấu và đưa thìa lấy dấu cho bác sĩ ngay đây.",
+          en: "I'm mixing the impression material and handing you the impression tray.",
+        },
+        {
+          id: 25,
+          cat: "2.3",
+          de: "Wir machen jetzt eine Röntgenaufnahme vom Zahn 46. Bitte legen Sie die Bleischürze an.",
+          vi: "Chúng ta sẽ chụp X-quang chiếc răng số 46. Vui lòng đeo tạp dề chì cho bệnh nhân.",
+          en: "We are taking an X-ray of tooth 46 now. Please put the lead apron on the patient.",
+        },
+        {
+          id: 26,
+          cat: "2.3",
+          de: "Soll ich den Patienten danach noch für die Professionelle Zahnreinigung aufklären?",
+          vi: "Sau đó tôi có cần tư vấn thêm cho bệnh nhân về dịch vụ cạo vôi răng chuyên sâu không ạ?",
+          en: "Should I also counsel the patient on professional dental cleaning afterward?",
+        },
+        {
+          id: 27,
+          cat: "2.3",
+          de: "Ich habe alle Leistungen und den Befund bereits in der Patientenkartei eingetragen.",
+          vi: "Tôi đã nhập đầy đủ các thủ thuật và chẩn đoán vào hồ sơ bệnh nhân rồi ạ.",
+          en: "I have already entered all procedures and findings in the patient chart.",
+        },
+        {
+          id: 28,
+          cat: "2.4",
+          de: "Ich mache jetzt die Wischdesinfektion am Behandlungsstuhl und lasse sie einwirken.",
+          vi: "Bây giờ tôi lau khử khuẩn ghế điều trị và chờ đủ thời gian thuốc phát huy tác dụng.",
+          en: "I'm doing wipe disinfection on the treatment chair now and letting it take effect.",
+        },
+        {
+          id: 29,
+          cat: "2.4",
+          de: "Ich bringe die gebrauchten Instrumente im geschlossenen Behälter in den Steriraum.",
+          vi: "Tôi mang dụng cụ đã sử dụng trong hộp kín vào phòng vô trùng đây.",
+          en: "I'm taking the used instruments in a closed container to the sterilization room.",
+        },
+        {
+          id: 30,
+          cat: "2.4",
+          de: "Der Thermodesinfektor ist fertig, ich kontrolliere jetzt die Instrumente auf Sauberkeit.",
+          vi: "Máy rửa khử khuẩn nhiệt đã chạy xong, tôi đang kiểm tra độ sạch của dụng cụ.",
+          en: "The washer-disinfector is finished; I'm checking the instruments for cleanliness now.",
+        },
+        {
+          id: 31,
+          cat: "2.4",
+          de: "Ich verpacke die chirurgischen Zangen in Sterilisationsfolie und starte den Autoklav.",
+          vi: "Tôi đóng gói các kìm phẫu thuật vào túi ép tiệt trùng và khởi động nồi hấp.",
+          en: "I'm packaging the surgical forceps in sterilization pouches and starting the autoclave.",
+        },
+        {
+          id: 32,
+          cat: "2.4",
+          de: "Die Chargenkontrolle im Autoklav war erfolgreich, alle Indikatorstreifen sind verfärbt.",
+          vi: "Kiểm tra mẻ hấp trong nồi hấp đã đạt chuẩn, toàn bộ que chỉ thị đều đổi màu đúng quy định.",
+          en: "The autoclave batch check was successful; all indicator strips changed color properly.",
+        },
+        {
+          id: 33,
+          cat: "2.4",
+          de: "Bitte entsorge die gebrauchte Kanüle sofort sicher im Kanülenabwurf.",
+          vi: "Vui lòng bỏ ngay kim tiêm đã dùng vào hộp cứng hủy kim an toàn.",
+          en: "Please dispose of the used needle safely in the sharps container right away.",
+        },
+        {
+          id: 34,
+          cat: "2.4",
+          de: "Uns fehlen im Behandlungszimmer 2 noch Einmalhandschuhe in Größe S und Watterollen.",
+          vi: "Ở phòng điều trị số 2 chúng ta đang thiếu găng tay y tế cỡ S và cuộn bông gòn.",
+          en: "In treatment room 2, we are still short on size-S disposable gloves and cotton rolls.",
+        },
+        {
+          id: 35,
+          cat: "2.4",
+          de: "Am Abend spülen wir alle Absauganlagen gründlich durch und schalten die Geräte aus.",
+          vi: "Cuối ngày chúng ta súc rửa kỹ toàn bộ hệ thống ống hút và tắt các thiết bị.",
+          en: "In the evening, we flush all suction systems thoroughly and turn off the units.",
+        },
+        {
+          id: 36,
+          cat: "2.4",
+          de: "Vielen Dank für die tolle Zusammenarbeit heute! Schönen Feierabend!",
+          vi: "Cảm ơn mọi người đã phối hợp rất ăn ý hôm nay! Chúc tan ca vui vẻ!",
+          en: "Thank you for the great teamwork today! Have a nice evening!",
+        },
+      ];
+
+      const DIALOGUES_DATA = [
+        {
+          id: 1,
+          tab_vi: "Hội thoại 1: Lễ tân & Đau cấp",
+          tab_en: "Dialogue 1: Reception & Pain",
+          title_vi:
+            "Hội thoại 1: Đón tiếp bệnh nhân đau răng cấp tính tại quầy lễ tân (Am Empfang)",
+          title_en:
+            "Dialogue 1: Welcoming an Acute Toothache Patient at Reception (Am Empfang)",
+          context_vi:
+            "Buổi sáng tại quầy lễ tân phòng khám nha khoa ở Đức, bệnh nhân đến khám vì đau răng và được trợ lý nha khoa (Đức) tiếp đón.",
+          context_en:
+            "Morning at the reception desk of a dental practice in Germany: a patient arrives with toothache and is greeted by dental assistant Đức.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Guten Morgen, herzlich willkommen in unserer Zahnarztpraxis! Wie kann ich Ihnen helfen?",
+              vi: "Chào buổi sáng, chào mừng quý khách đến với phòng khám nha khoa! Tôi có thể giúp gì cho anh ạ?",
+              en: "Good morning, welcome to our dental practice! How can I help you?",
+            },
+            {
+              role: "partner",
+              name_vi: "Patient (Bệnh nhân)",
+              name_en: "Patient",
+              de: "Guten Morgen! Ich habe seit gestern Abend starke Zahnschmerzen unten rechts und brauche dringend einen Termin.",
+              vi: "Chào buổi sáng! Từ tối qua tôi bị đau răng dữ dội ở hàm dưới bên phải và cần khám gấp ạ.",
+              en: "Good morning! Since last night I've had severe toothache in the lower right and urgently need an appointment.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Das tut mir leid. Schmerzpatienten nehmen wir selbstverständlich heute noch dran. Haben Sie Ihre Gesundheitskarte dabei?",
+              vi: "Tôi rất tiếc khi nghe vậy. Bệnh nhân đau cấp tính tất nhiên sẽ được khám ngay hôm nay. Anh có mang theo thẻ bảo hiểm y tế không ạ?",
+              en: "I'm sorry to hear that. Of course we see acute pain patients today. Do you have your health insurance card with you?",
+            },
+            {
+              role: "partner",
+              name_vi: "Patient (Bệnh nhân)",
+              name_en: "Patient",
+              de: "Ja, hier ist meine Chipkarte. Ich war aber noch nie in Ihrer Praxis.",
+              vi: "Có, đây là thẻ bảo hiểm của tôi. Nhưng trước đây tôi chưa từng khám ở phòng khám mình.",
+              en: "Yes, here is my insurance card. However, I've never been to your practice before.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Kein Problem! Ich lese Ihre Karte kurz ein. Bitte füllen Sie diesen Anamnesebogen aus, besonders zu Allergien und Medikamenten, und nehmen Sie im Wartezimmer Platz.",
+              vi: "Không vấn đề gì ạ! Tôi quẹt thẻ của anh vào hệ thống ngay đây. Anh vui lòng điền phiếu khai tiền sử sức khỏe này, đặc biệt phần dị ứng và thuốc đang dùng, rồi ngồi chờ ở phòng chờ nhé.",
+              en: "No problem! I'll scan your card briefly. Please fill out this medical history form, especially regarding allergies and medications, and take a seat in the waiting room.",
+            },
+            {
+              role: "partner",
+              name_vi: "Patient (Bệnh nhân)",
+              name_en: "Patient",
+              de: "Vielen Dank für die schnelle Hilfe!",
+              vi: "Cảm ơn anh rất nhiều vì đã hỗ trợ nhanh chóng!",
+              en: "Thank you very much for the quick help!",
+            },
+          ],
+        },
+        {
+          id: 2,
+          tab_vi: "Hội thoại 2: Ghế nha & Trám răng",
+          tab_en: "Dialogue 2: Chairside & Filling",
+          title_vi:
+            "Hội thoại 2: Chuẩn bị bệnh nhân trên ghế nha & Hỗ trợ tiêm tê / trám răng (Stuhlassistenz)",
+          title_en:
+            "Dialogue 2: Preparing the Patient in the Chair & Assisting with Anesthesia / Filling",
+          context_vi:
+            "Trong phòng điều trị số 1, Đức mời bệnh nhân ngồi lên ghế nha khoa và hỗ trợ nữ bác sĩ (Zahnärztin) điều trị sâu răng.",
+          context_en:
+            "In treatment room 1, Đức seats the patient in the dental chair and assists the dentist (Zahnärztin) with a cavity filling.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Guten Tag, Herr Weber! Bitte nehmen Sie auf dem Behandlungsstuhl Platz. Ich lege Ihnen kurz eine Serviette um.",
+              vi: "Xin chào ông Weber! Mời ông ngồi lên ghế điều trị nha khoa. Tôi choàng một chiếc khăn yếm cho ông nhé.",
+              en: "Good day, Mr. Weber! Please take a seat in the dental chair. I'll put a bib around you briefly.",
+            },
+            {
+              role: "partner",
+              name_vi: "Herr Weber (Bệnh nhân)",
+              name_en: "Mr. Weber (Patient)",
+              de: "Danke schön. Wird heute gebohrt? Ich bin immer etwas nervös beim Zahnarzt.",
+              vi: "Cảm ơn anh. Hôm nay có phải khoan răng không? Tôi luôn hơi hồi hộp khi đi nha khoa.",
+              en: "Thank you. Will there be drilling today? I'm always a bit nervous at the dentist.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Keine Sorge, die Zahnärztin gibt Ihnen vorher eine örtliche Betäubung, damit die Behandlung ganz schmerzfrei ist.",
+              vi: "Ông đừng lo, nữ bác sĩ sẽ tiêm tê tại chỗ trước để quá trình điều trị hoàn toàn không đau ạ.",
+              en: "Don't worry, the dentist will give you a local anesthetic beforehand so the treatment is completely pain-free.",
+            },
+            {
+              role: "partner",
+              name_vi: "Zahnärztin (Nữ bác sĩ)",
+              name_en: "Zahnärztin (Dentist)",
+              de: "Guten Tag, Herr Weber! Ich betäube jetzt Zahn 36. Đức, bitte bereite das Füllungstray und die Polymerisationslampe vor.",
+              vi: "Xin chào ông Weber! Tôi sẽ gây tê răng số 36 ngay bây giờ. Đức ơi, vui lòng chuẩn bị sẵn khay dụng cụ trám răng và đèn quang trùng hợp nhé.",
+              en: "Good day, Mr. Weber! I'm numbing tooth 36 now. Đức, please prepare the filling tray and the curing light.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Alles liegt schon bereit, Frau Doktor. Ich halte den Sauger bereit und lege gleich die Watterollen ein.",
+              vi: "Mọi thứ đã sẵn sàng rồi thưa bác sĩ. Em cầm sẵn ống hút và sẽ đặt cuộn bông gòn cách ly ngay ạ.",
+              en: "Everything is already set out, Doctor. I'll keep the suction ready and place the cotton rolls right away.",
+            },
+            {
+              role: "partner",
+              name_vi: "Zahnärztin (Nữ bác sĩ)",
+              name_en: "Zahnärztin (Dentist)",
+              de: "Sehr gut! Wenn es unangenehm wird, heben Sie bitte einfach die linke Hand, Herr Weber.",
+              vi: "Rất tốt! Nếu thấy khó chịu, ông chỉ cần giơ tay trái lên báo hiệu nhé ông Weber.",
+              en: "Very good! If it becomes uncomfortable, please just raise your left hand, Mr. Weber.",
+            },
+          ],
+        },
+        {
+          id: 3,
+          tab_vi: "Hội thoại 3: Sau nhổ răng",
+          tab_en: "Dialogue 3: Post-Extraction",
+          title_vi:
+            "Hội thoại 3: Hướng dẫn sau nhổ răng & Dặn dò chăm sóc tại nhà (Nach der Extraktion)",
+          title_en:
+            "Dialogue 3: Post-Extraction Instructions & Home Care Advice",
+          context_vi:
+            "Sau khi bác sĩ nhổ xong một chiếc răng hàm, Đức hướng dẫn bệnh nhân cách cầm máu, ăn uống và đưa đơn thuốc cùng giấy nghỉ ốm.",
+          context_en:
+            "After the dentist extracts a molar, Đức guides the patient on bleeding control, eating, and provides a prescription and sick note.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "So, Herr Weber, Sie haben es geschafft! Bitte beißen Sie noch dreißig Minuten fest auf diesen Tupfer, damit die Wunde gut abheilt.",
+              vi: "Xong rồi ông Weber, ông đã hoàn thành rồi ạ! Ông vui lòng cắn chặt miếng gạc này thêm 30 phút nữa để vết thương cầm máu và lành tốt nhé.",
+              en: "Alright, Mr. Weber, you made it! Please bite firmly on this gauze pad for thirty more minutes so the wound heals well.",
+            },
+            {
+              role: "partner",
+              name_vi: "Herr Weber (Bệnh nhân)",
+              name_en: "Mr. Weber (Patient)",
+              de: "Alles klar. Wann darf ich wieder etwas essen oder Kaffee trinken?",
+              vi: "Tôi rõ rồi. Khi nào tôi được ăn uống hoặc uống cà phê lại ạ?",
+              en: "All clear. When can I eat again or drink coffee?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Bitte essen Sie erst, wenn die Betäubung komplett nachgelassen hat, sonst beißen Sie sich leicht auf die Lippe. Trinken Sie heute bitte keinen heißen Kaffee und rauchen Sie nicht.",
+              vi: "Ông vui lòng chỉ ăn sau khi thuốc tê đã tan hoàn toàn, nếu không sẽ dễ cắn nhầm vào môi. Hôm nay ông đừng uống cà phê nóng và không hút thuốc nhé.",
+              en: "Please only eat after the numbness has worn off completely, or you could easily bite your lip. Don't drink hot coffee today and don't smoke.",
+            },
+            {
+              role: "partner",
+              name_vi: "Herr Weber (Bệnh nhân)",
+              name_en: "Mr. Weber (Patient)",
+              de: "Verstanden. Bekomme ich ein Rezept für Schmerztabletten?",
+              vi: "Tôi hiểu rồi. Tôi có được kê đơn thuốc giảm đau không ạ?",
+              en: "Understood. Will I get a prescription for pain tablets?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Ja, hier ist Ihr Rezept für die Apotheke sowie die Arbeitsunfähigkeitsbescheinigung für zwei Tage. Am Empfang vereinbaren wir noch einen Kontrolltermin für nächste Woche.",
+              vi: "Dạ có, đây là đơn thuốc để ông ra hiệu thuốc mua cùng giấy chứng nhận nghỉ ốm trong hai ngày. Ở quầy lễ tân chúng ta sẽ đặt thêm lịch hẹn tái khám cho tuần tới nhé.",
+              en: "Yes, here is your prescription for the pharmacy as well as your certificate of incapacity for work for two days. At reception, we'll also book a check-up for next week.",
+            },
+          ],
+        },
+        {
+          id: 4,
+          tab_vi: "Hội thoại 4: Lấy cao răng PZR",
+          tab_en: "Dialogue 4: Dental Cleaning PZR",
+          title_vi:
+            "Hội thoại 4: Lấy cao răng & Vệ sinh răng chuyên sâu (Professionelle Zahnreinigung - PZR)",
+          title_en:
+            "Dialogue 4: Professional Dental Cleaning & Preventive Advice (PZR)",
+          context_vi:
+            "Đức thực hiện hoặc hỗ trợ buổi vệ sinh răng chuyên sâu (PZR) và hướng dẫn bệnh nhân chăm sóc răng miệng hằng ngày.",
+          context_en:
+            "Đức carries out or assists with a professional dental cleaning (PZR) and advises the patient on daily oral care.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Guten Morgen, Frau Schmidt! Heute machen wir die Professionelle Zahnreinigung. Haben Sie empfindliche Zähne beim kalten Wasser?",
+              vi: "Chào buổi sáng bà Schmidt! Hôm nay chúng ta làm sạch răng chuyên sâu PZR. Răng bà có bị ê buốt khi gặp nước lạnh không ạ?",
+              en: "Good morning, Mrs. Schmidt! Today we're doing the professional dental cleaning. Are your teeth sensitive to cold water?",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Schmidt (Bệnh nhân)",
+              name_en: "Mrs. Schmidt (Patient)",
+              de: "Ja, unten vorne sind meine Zähne manchmal etwas empfindlich.",
+              vi: "Có, mấy răng cửa hàm dưới của tôi đôi khi hơi ê buốt.",
+              en: "Yes, my lower front teeth are sometimes a bit sensitive.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Danke für den Hinweis, dann arbeite ich dort besonders vorsichtig mit dem Ultraschallscaler. Bitte setzen Sie diese Schutzbrille auf.",
+              vi: "Cảm ơn bà đã báo trước, vậy ở vùng đó tôi sẽ thao tác thật nhẹ nhàng với máy siêu âm. Bà vui lòng đeo chiếc kính bảo hộ này nhé.",
+              en: "Thanks for the heads-up; I'll work especially gently there with the ultrasonic scaler. Please put on these safety glasses.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Schmidt (Bệnh nhân)",
+              name_en: "Mrs. Schmidt (Patient)",
+              de: "Gerne. Wie oft empfehlen Sie die PZR?",
+              vi: "Vâng ạ. Anh khuyên nên làm sạch răng chuyên sâu bao lâu một lần?",
+              en: "Gladly. How often do you recommend professional cleaning?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Idealerweise zweimal im Jahr zusammen mit der Kontrolluntersuchung. Am Ende polieren wir die Zähne glatt und tragen ein Fluoridgel zum Schutz auf.",
+              vi: "Lý tưởng nhất là hai lần mỗi năm kết hợp cùng khám định kỳ. Cuối buổi chúng ta sẽ đánh bóng nhẵn răng và bôi gel fluor để bảo vệ men răng ạ.",
+              en: "Ideally twice a year together with the check-up. At the end, we polish the teeth smooth and apply a fluoride gel for protection.",
+            },
+          ],
+        },
+        {
+          id: 5,
+          tab_vi: "Hội thoại 5: Chụp X-quang răng",
+          tab_en: "Dialogue 5: Dental X-Ray",
+          title_vi:
+            "Hội thoại 5: Chụp X-quang răng & Quy tắc an toàn bức xạ (Röntgenaufnahme)",
+          title_en: "Dialogue 5: Dental X-Ray Imaging & Radiation Safety Rules",
+          context_vi:
+            "Bác sĩ chỉ định chụp phim toàn cảnh (OPG) và Đức hướng dẫn bệnh nhân thực hiện đúng quy trình an toàn tia X.",
+          context_en:
+            "The dentist orders a panoramic X-ray (OPG) and Đức guides the patient through radiation safety steps.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Frau Bauer, für die Planung der neuen Brücke machen wir jetzt eine Röntgenaufnahme im Röntgenraum.",
+              vi: "Bà Bauer ơi, để lên kế hoạch làm cầu răng mới, bây giờ chúng ta chụp một phim X-quang trong phòng X-quang nhé.",
+              en: "Mrs. Bauer, to plan the new bridge, we're taking an X-ray in the X-ray room now.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Bauer (Bệnh nhân)",
+              name_en: "Mrs. Bauer (Patient)",
+              de: "Muss ich dafür meine Ohrringe und meine Kette abnehmen?",
+              vi: "Tôi có phải tháo bông tai và dây chuyền ra không anh?",
+              en: "Do I have to take off my earrings and necklace for that?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Ja, bitte legen Sie alle Metallteile, Schmuck und Ihre Brille hier in die Schale. Danach lege ich Ihnen die Bleischürze zum Schutz an.",
+              vi: "Dạ có, bà vui lòng tháo toàn bộ đồ kim loại, trang sức và kính mắt đặt vào khay ở đây ạ. Sau đó tôi sẽ đeo tạp dề chì bảo vệ cho bà.",
+              en: "Yes, please place all metal items, jewelry, and your glasses in the tray here. Then I'll put the lead apron on you for protection.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Bauer (Bệnh nhân)",
+              name_en: "Mrs. Bauer (Patient)",
+              de: "Wie lange dauert die Aufnahme?",
+              vi: "Chụp phim mất bao lâu vậy anh?",
+              en: "How long does the scan take?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Nur etwa zwölf Sekunden. Bitte beißen Sie vorne leicht in die Kerbe, halten Sie die Zunge an den Gaumen und bewegen Sie sich kurz nicht.",
+              vi: "Chỉ khoảng 12 giây thôi ạ. Bà vui lòng cắn nhẹ răng cửa vào rãnh định vị, đặt lưỡi chạm vòm miệng và giữ yên trong giây lát nhé.",
+              en: "Only about twelve seconds. Please bite gently into the notch in front, rest your tongue against the palate, and hold still briefly.",
+            },
+          ],
+        },
+        {
+          id: 6,
+          tab_vi: "Hội thoại 6: Phòng vô trùng Steri",
+          tab_en: "Dialogue 6: Sterilization Room",
+          title_vi:
+            "Hội thoại 6: Quy trình vô trùng dụng cụ trong phòng Steri (Instrumentenaufbereitung)",
+          title_en:
+            "Dialogue 6: Instrument Reprocessing in the Sterilization Room (Steriraum)",
+          context_vi:
+            "Tại phòng vô trùng (Steriraum), Đức và đồng nghiệp kiểm tra quy trình làm sạch và hấp tiệt trùng dụng cụ phẫu thuật theo chuẩn RKI.",
+          context_en:
+            "In the sterilization room (Steriraum), Đức and a colleague review cleaning and steam sterilization of surgical instruments per RKI standards.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp ZFA)",
+              name_en: "Colleague (ZFA)",
+              de: "Đức, ich habe die benutzten Trays aus Zimmer 1 und 2 auf die unreine Seite im Steriraum gebracht.",
+              vi: "Đức ơi, mình đã mang các khay dụng cụ đã dùng từ phòng 1 và phòng 2 sang khu vực bẩn trong phòng vô trùng rồi nhé.",
+              en: "Đức, I brought the used trays from Rooms 1 and 2 to the unclean side in the sterilization room.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Super, danke! Ich mache kurz die Händedesinfektion, ziehe feste Handschuhe an und lade den Thermodesinfektor.",
+              vi: "Tuyệt quá, cảm ơn bạn! Mình sát khuẩn tay nhanh, đeo găng tay dày và xếp dụng cụ vào máy rửa khử khuẩn nhiệt ngay.",
+              en: "Great, thanks! I'll quickly disinfect my hands, put on sturdy gloves, and load the washer-disinfector.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp ZFA)",
+              name_en: "Colleague (ZFA)",
+              de: "Die Extraktionszangen von vorhin sind schon aus dem Thermodesinfektor gekommen und trocken.",
+              vi: "Mấy cây kìm nhổ răng lúc nãy đã chạy xong trong máy rửa khử khuẩn nhiệt và khô ráo rồi đấy.",
+              en: "The extraction forceps from earlier have already come out of the washer-disinfector and are dry.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Alles klar! Auf der reinen Seite prüfe ich sie jetzt auf Sauberkeit, schweiße sie in Sterilisationsfolie ein und starte den Autoklav bei 134 Grad.",
+              vi: "Rõ rồi! Ở khu vực sạch mình sẽ kiểm tra độ sạch của chúng, hàn ép vào túi tiệt trùng và khởi động nồi hấp ở 134 độ C.",
+              en: "All clear! On the clean side, I'll check them for cleanliness now, seal them in sterilization pouches, and start the autoclave at 134 degrees.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp ZFA)",
+              name_en: "Colleague (ZFA)",
+              de: "Vergiss nicht, danach den Indikatorstreifen zu prüfen und die Charge im System freizugeben.",
+              vi: "Đừng quên kiểm tra que chỉ thị màu sau khi hấp xong và ký xác nhận mẻ hấp trên hệ thống nhé.",
+              en: "Don't forget to check the indicator strip afterward and release the batch in the system.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (ZFA)",
+              name_en: "Đức (ZFA)",
+              de: "Mache ich sofort! So bleibt unsere Hygiene immer zu 100 Prozent sicher.",
+              vi: "Mình làm ngay đây! Như vậy quy trình vệ sinh của phòng khám luôn an toàn 100%.",
+              en: "I'll do that right away! That keeps our hygiene 100 percent safe.",
+            },
+          ],
+        },
+      ];
+
+      // =========================================================================
+      // 3. APPLICATION STATE & PERSISTENCE (localStorage)
+      // =========================================================================
+      const state = {
+        lang: localStorage.getItem("fd_lang") || "vi",
+        activeTab: "vocab",
+        globalVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_globalVoice"),
+          "piper_hochdeutsch",
+        ),
+        workerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_workerVoice"),
+          "piper_hochdeutsch",
+        ),
+        partnerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_partnerVoice"),
+          "piper_rostock",
+        ),
+        speed: parseFloat(localStorage.getItem("fd_speed")) || 1.0,
+        vocabCategory: "all",
+        vocabQuery: "",
+        phraseCategory: "all",
+        activeDialogueId: 1,
+        fcCategory: "all",
+        fcDeck: [...VOCAB_DATA],
+        fcIndex: 0,
+        fcFlipped: false,
+        masteredIds: JSON.parse(
+          localStorage.getItem("fd_mastered_trolynhakhoa") || "[]",
+        ),
+        voiceDrawerOpen: false,
+      };
+
+      const audioCtrl = {
+        element: null,
+        activeBtnId: null,
+        isFullDialoguePlaying: false,
+        dialogueStopFlag: false,
+        toastTimer: null,
+      };
+
+      function t(key) {
+        return (
+          (I18N[state.lang] && I18N[state.lang][key]) || I18N.vi[key] || key
+        );
+      }
+
+      function getVoiceObj(voiceId) {
+        return VOICE_CATALOG.find((v) => v.id === voiceId) || VOICE_CATALOG[0];
+      }
+
+      function showToast(msg) {
+        const box = document.getElementById("statusToast");
+        const txt = document.getElementById("statusToastText");
+        if (!box || !txt) return;
+        txt.textContent = msg;
+        box.classList.remove("hidden");
+        clearTimeout(audioCtrl.toastTimer);
+        audioCtrl.toastTimer = setTimeout(() => {
+          box.classList.add("hidden");
+        }, 3000);
+      }
+
+      // =========================================================================
+      // 4. AUDIO ENGINE WITH FALLBACK (audio/trolynhakhoa/<voice>/<file>)
+      // =========================================================================
+      function syncPlayingButtonUI() {
+        document.querySelectorAll("[data-audio-btn]").forEach((btn) => {
+          const id = btn.getAttribute("data-audio-btn");
+          const isCurrent = audioCtrl.activeBtnId === id;
+          const iconPlay = btn.querySelector(".icon-play");
+          const iconStop = btn.querySelector(".icon-stop");
+          if (isCurrent) {
+            btn.classList.add("btn-playing");
+            if (iconPlay) iconPlay.classList.add("hidden");
+            if (iconStop) iconStop.classList.remove("hidden");
+          } else {
+            btn.classList.remove("btn-playing");
+            if (iconPlay) iconPlay.classList.remove("hidden");
+            if (iconStop) iconStop.classList.add("hidden");
+          }
+        });
+
+        const fullBtn = document.getElementById("playFullDialogueBtn");
+        if (fullBtn) {
+          if (audioCtrl.isFullDialoguePlaying) {
+            fullBtn.classList.add("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>■</span> <span>${t("stopFullDialogue")}</span>`;
+          } else {
+            fullBtn.classList.remove("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.add("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>▶</span> <span>${t("playFullDialogue")}</span>`;
+          }
+        }
+
+        document.querySelectorAll("[data-preview-btn]").forEach((btn) => {
+          const isPrev = audioCtrl.activeBtnId === "preview_sample";
+          if (isPrev) {
+            btn.classList.add("bg-red-600", "text-white");
+            btn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            btn.innerHTML = `<span>■</span> <span>${t("stopPreviewBtn")}</span>`;
+          } else {
+            btn.classList.remove("bg-red-600");
+            btn.classList.add("bg-blue-600", "hover:bg-blue-700", "text-white");
+            btn.innerHTML = `<span>🔊</span> <span>${t("previewVoiceBtn")}</span>`;
+          }
+        });
+      }
+
+      function stopAllAudio(resetDialogue = true) {
+        if (resetDialogue) {
+          audioCtrl.dialogueStopFlag = true;
+          audioCtrl.isFullDialoguePlaying = false;
+        }
+        if (audioCtrl.element) {
+          audioCtrl.element.pause();
+          audioCtrl.element.src = "";
+          audioCtrl.element = null;
+        }
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+        }
+        audioCtrl.activeBtnId = null;
+        document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+          el.classList.remove(
+            "dialogue-line-active",
+            "ring-2",
+            "ring-blue-500",
+            "bg-blue-50/70",
+          );
+        });
+        syncPlayingButtonUI();
+      }
+
+      function playAudioWithFallback(
+        fileName,
+        fallbackText,
+        voiceId,
+        btnId,
+        onEndedCallback = null,
+      ) {
+        if (audioCtrl.activeBtnId === btnId) {
+          stopAllAudio(true);
+          return;
+        }
+
+        stopAllAudio(false);
+        audioCtrl.activeBtnId = btnId;
+        syncPlayingButtonUI();
+
+        const chain = [voiceId, "piper_hochdeutsch", "edge_hochdeutsch"].filter(
+          (v, idx, arr) => v && arr.indexOf(v) === idx,
+        );
+        let attemptIdx = 0;
+
+        const finishPlayback = () => {
+          audioCtrl.activeBtnId = null;
+          audioCtrl.element = null;
+          syncPlayingButtonUI();
+          if (onEndedCallback) onEndedCallback();
+        };
+
+        const tryNextSource = () => {
+          if (attemptIdx >= chain.length) {
+            if ("speechSynthesis" in window && fallbackText) {
+              const utter = new SpeechSynthesisUtterance(fallbackText);
+              utter.lang = "de-DE";
+              utter.rate = state.speed;
+              utter.onend = finishPlayback;
+              utter.onerror = finishPlayback;
+              window.speechSynthesis.speak(utter);
+            } else {
+              finishPlayback();
+            }
+            return;
+          }
+
+          const currentVoice = chain[attemptIdx];
+          const src = `${AUDIO_BASE_PATH}/${currentVoice}/${fileName}`;
+          const audio = new Audio(src);
+          audio.playbackRate = state.speed;
+          audioCtrl.element = audio;
+
+          audio.onended = finishPlayback;
+          audio.onerror = () => {
+            if (attemptIdx === 0 && currentVoice !== "piper_hochdeutsch") {
+              showToast(t("fallbackNotice"));
+            }
+            attemptIdx++;
+            tryNextSource();
+          };
+
+          audio.play().catch(() => {
+            attemptIdx++;
+            tryNextSource();
+          });
+        };
+
+        tryNextSource();
+      }
+
+      async function toggleFullDialogue() {
+        if (audioCtrl.isFullDialoguePlaying) {
+          stopAllAudio(true);
+          return;
+        }
+        const dlg = DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId);
+        if (!dlg) return;
+
+        stopAllAudio(true);
+        audioCtrl.isFullDialoguePlaying = true;
+        audioCtrl.dialogueStopFlag = false;
+        syncPlayingButtonUI();
+
+        for (let i = 0; i < dlg.lines.length; i++) {
+          if (audioCtrl.dialogueStopFlag) break;
+          const line = dlg.lines[i];
+          const lineNum = i + 1;
+          const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+          const voice =
+            line.role === "worker" ? state.workerVoice : state.partnerVoice;
+
+          document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+            el.classList.remove(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+          });
+          const rowEl = document.getElementById(`row_${btnId}`);
+          if (rowEl) {
+            rowEl.classList.add(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+            rowEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+
+          await new Promise((resolve) => {
+            playAudioWithFallback(
+              `dialog_${dlg.id}_line_${lineNum}.mp3`,
+              line.de,
+              voice,
+              btnId,
+              resolve,
+            );
+          });
+
+          if (!audioCtrl.dialogueStopFlag && i < dlg.lines.length - 1) {
+            await new Promise((r) => setTimeout(r, 350));
+          }
+        }
+
+        stopAllAudio(true);
+      }
+
+      // =========================================================================
+      // 5. VOICE DRAWER / POPOVER CONTROLS
+      // =========================================================================
+      function buildVoiceOptionsHTML(selectedId) {
+        const groups = {};
+        VOICE_CATALOG.forEach((v) => {
+          const g = state.lang === "en" ? v.group_en : v.group_vi;
+          if (!groups[g]) groups[g] = [];
+          groups[g].push(v);
+        });
+        return Object.entries(groups)
+          .map(
+            ([groupLabel, items]) => `
+        <optgroup label="${groupLabel}">
+          ${items
+            .map(
+              (v) => `
+            <option value="${v.id}" ${v.id === selectedId ? "selected" : ""}>
+              ${state.lang === "en" ? v.label_en : v.label_vi}
+            </option>
+          `,
+            )
+            .join("")}
+        </optgroup>
+      `,
+          )
+          .join("");
+      }
+
+      function renderVoiceForms() {
+        const formHTML = `
+        <div class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("selectVoiceLabel")}</label>
+            <select onchange="setGlobalVoice(this.value)"
+              class="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              ${buildVoiceOptionsHTML(state.globalVoice)}
+            </select>
+          </div>
+
+          <button type="button" data-preview-btn onclick="playAudioWithFallback('sample.mp3', 'Guten Tag, herzlich willkommen in unserer Zahnarztpraxis!', state.globalVoice, 'preview_sample')"
+            class="w-full h-10 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer">
+            <span>🔊</span> <span>${t("previewVoiceBtn")}</span>
+          </button>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("speedLabel")}</label>
+            <div class="grid grid-cols-3 gap-1.5 bg-slate-100 p-1 rounded-xl">
+              ${[
+                { val: 0.75, label: t("speedSlow") },
+                { val: 1.0, label: t("speedNormal") },
+                { val: 1.25, label: t("speedFast") },
+              ]
+                .map(
+                  (sp) => `
+                <button type="button" onclick="setPlaybackSpeed(${sp.val})"
+                  class="h-9 rounded-lg text-xs font-bold transition cursor-pointer ${state.speed === sp.val ? "bg-amber-500 text-slate-950 shadow-xs" : "text-slate-600 hover:text-slate-900"}">
+                  ${sp.label}
+                </button>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+        </div>
+      `;
+
+        const dForm = document.getElementById("desktopVoiceForm");
+        const mForm = document.getElementById("mobileVoiceForm");
+        if (dForm) dForm.innerHTML = formHTML;
+        if (mForm) mForm.innerHTML = formHTML;
+
+        const vObj = getVoiceObj(state.globalVoice);
+        const shortName = state.lang === "en" ? vObj.short_en : vObj.short_vi;
+        const pill = document.getElementById("voicePillLabel");
+        if (pill) pill.textContent = `${shortName} • ${state.speed}x`;
+
+        const wSel = document.getElementById("workerVoiceSelect");
+        const pSel = document.getElementById("partnerVoiceSelect");
+        if (wSel) wSel.innerHTML = buildVoiceOptionsHTML(state.workerVoice);
+        if (pSel) pSel.innerHTML = buildVoiceOptionsHTML(state.partnerVoice);
+
+        syncPlayingButtonUI();
+      }
+
+      function toggleVoiceDrawer() {
+        state.voiceDrawerOpen = !state.voiceDrawerOpen;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+
+        if (state.voiceDrawerOpen) {
+          renderVoiceForms();
+          popover.classList.remove("md:hidden");
+          popover.classList.add("md:block");
+          sheet.classList.remove("hidden");
+          backdrop.classList.remove("hidden");
+        } else {
+          closeVoiceDrawer();
+        }
+      }
+
+      function closeVoiceDrawer() {
+        state.voiceDrawerOpen = false;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+        popover.classList.add("md:hidden");
+        popover.classList.remove("md:block");
+        sheet.classList.add("hidden");
+        backdrop.classList.add("hidden");
+      }
+
+      document.addEventListener("click", (e) => {
+        if (!state.voiceDrawerOpen) return;
+        const popover = document.getElementById("desktopVoicePopover");
+        const trigger = document.getElementById("voiceTriggerBtn");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        if (
+          !popover.contains(e.target) &&
+          !trigger.contains(e.target) &&
+          !sheet.contains(e.target)
+        ) {
+          closeVoiceDrawer();
+        }
+      });
+
+      function setGlobalVoice(voiceId) {
+        state.globalVoice = voiceId;
+        localStorage.setItem("fd_globalVoice", voiceId);
+        renderVoiceForms();
+      }
+
+      function updateDialogueVoice(role, voiceId) {
+        if (role === "worker") {
+          state.workerVoice = voiceId;
+          localStorage.setItem("fd_workerVoice", voiceId);
+        } else {
+          state.partnerVoice = voiceId;
+          localStorage.setItem("fd_partnerVoice", voiceId);
+        }
+      }
+
+      function setPlaybackSpeed(newSpeed) {
+        state.speed = newSpeed;
+        localStorage.setItem("fd_speed", String(newSpeed));
+        if (audioCtrl.element) {
+          audioCtrl.element.playbackRate = newSpeed;
+        }
+        renderVoiceForms();
+      }
+
+      // =========================================================================
+      // 6. SMART NORMALIZATION & RENDERERS (100% VI <-> EN)
+      // =========================================================================
+      function normalizeSearch(str) {
+        return (str || "")
+          .toLowerCase()
+          .replace(/ä/g, "a")
+          .replace(/ö/g, "o")
+          .replace(/ü/g, "u")
+          .replace(/ß/g, "ss")
+          .normalize("NFD")
+          .replace(/[̀-ͯ]/g, "")
+          .replace(/đ/g, "d");
+      }
+
+      function renderNavigation() {
+        const tabs = [
+          {
+            id: "vocab",
+            dLabel: `${t("nav_vocab_desktop")} (${VOCAB_DATA.length})`,
+            mLabel: t("nav_vocab_mobile"),
+            icon: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25",
+          },
+          {
+            id: "phrases",
+            dLabel: `${t("nav_phrases_desktop")} (${PHRASES_DATA.length})`,
+            mLabel: t("nav_phrases_mobile"),
+            icon: "M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z",
+          },
+          {
+            id: "dialogues",
+            dLabel: `${t("nav_dialogues_desktop")} (${DIALOGUES_DATA.length})`,
+            mLabel: t("nav_dialogues_mobile"),
+            icon: "M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155",
+          },
+          {
+            id: "flashcards",
+            dLabel: t("nav_flashcards_desktop"),
+            mLabel: t("nav_flashcards_mobile"),
+            icon: "M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3",
+          },
+        ];
+
+        document.getElementById("desktopNav").innerHTML = tabs
+          .map(
+            (tab) => `
+        <button type="button" onclick="switchTab('${tab.id}')"
+          class="px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${state.activeTab === tab.id ? "bg-white text-slate-900 shadow-xs" : "text-slate-300 hover:text-white hover:bg-slate-700/60"}">
+          ${tab.dLabel}
+        </button>
+      `,
+          )
+          .join("");
+
+        document.getElementById("mobileNavGrid").innerHTML = tabs
+          .map((tab) => {
+            const active = state.activeTab === tab.id;
+            return `
+          <button type="button" onclick="switchTab('${tab.id}')"
+            class="flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition cursor-pointer ${active ? "text-blue-600" : "text-slate-500 hover:text-slate-800"}">
+            <svg class="w-5 h-5 ${active ? "stroke-[2.3]" : "stroke-[1.8]"}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="${tab.icon}" />
+            </svg>
+            <span>${tab.mLabel}</span>
+          </button>
+        `;
+          })
+          .join("");
+      }
+
+      function switchTab(tabId) {
+        state.activeTab = tabId;
+        ["vocab", "phrases", "dialogues", "flashcards"].forEach((id) => {
+          const el = document.getElementById(`section-${id}`);
+          if (el) el.classList.toggle("hidden", id !== tabId);
+        });
+        renderNavigation();
+        if (tabId === "flashcards") renderFlashcard();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function speakBtnHTML(btnId, sizeClass = "w-11 h-11") {
+        return `
+        <button type="button" data-audio-btn="${btnId}"
+          class="${sizeClass} shrink-0 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200/80 flex items-center justify-center transition cursor-pointer active:scale-95"
+          aria-label="Play audio">
+          <svg class="icon-play w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+          </svg>
+          <span class="icon-stop hidden text-xs font-extrabold">■</span>
+        </button>
+      `;
+      }
+
+      function renderVocab() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("cat_all")} (${VOCAB_DATA.length})` },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+
+        document.getElementById("vocabCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setVocabCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.vocabCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const q = normalizeSearch(state.vocabQuery);
+        const filtered = VOCAB_DATA.filter((item) => {
+          const matchCat =
+            state.vocabCategory === "all" || item.cat === state.vocabCategory;
+          if (!matchCat) return false;
+          if (!q) return true;
+          const haystack = normalizeSearch(
+            `${item.de} ${item.vi} ${item.en} ${item.rel_vi} ${item.rel_en} ${item.ex_de} ${item.ex_vi} ${item.ex_en}`,
+          );
+          return haystack.includes(q);
+        });
+
+        const grid = document.getElementById("vocabGrid");
+        if (filtered.length === 0) {
+          grid.innerHTML = `<div class="col-span-full bg-white rounded-2xl p-8 text-center text-sm text-slate-500 border border-slate-200">${t("noResults")}</div>`;
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map((item) => {
+            const typeStr = state.lang === "en" ? item.type_en : item.type_vi;
+            const meaningStr = state.lang === "en" ? item.en : item.vi;
+            const relStr = state.lang === "en" ? item.rel_en : item.rel_vi;
+            const exTrans = state.lang === "en" ? item.ex_en : item.ex_vi;
+            const wordBtnId = `vocab_${item.id}_word`;
+            const exBtnId = `vocab_${item.id}_ex`;
+
+            return `
+          <article class="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex flex-col justify-between gap-3.5">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">${item.de}</h2>
+                    <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-100">${typeStr}</span>
+                  </div>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">${item.ipa}</p>
+                  <p class="text-sm sm:text-base font-bold text-emerald-700 mt-1.5">${meaningStr}</p>
+                </div>
+                <div onclick="playAudioWithFallback('vocab_${item.id}_word.mp3', '${item.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="mt-2.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                <span class="font-semibold text-slate-700">${t("relatedPrefix")}</span> ${relStr}
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-cyan-50/70 border border-cyan-200/60 flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <p class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">${item.ex_de}</p>
+                <p class="text-xs text-slate-600 italic mt-0.5 leading-snug">${exTrans}</p>
+              </div>
+              <div onclick="playAudioWithFallback('vocab_${item.id}_ex.mp3', '${item.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')">
+                ${speakBtnHTML(exBtnId, "w-11 h-11 bg-cyan-100/80 hover:bg-cyan-200/80 text-cyan-900 border-cyan-200")}
+              </div>
+            </div>
+          </article>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setVocabCategory(cat) {
+        state.vocabCategory = cat;
+        renderVocab();
+      }
+
+      function handleVocabSearch(val) {
+        state.vocabQuery = val;
+        const clearBtn = document.getElementById("clearSearchBtn");
+        if (clearBtn) {
+          clearBtn.classList.toggle("hidden", !val);
+          clearBtn.classList.toggle("flex", Boolean(val));
+        }
+        renderVocab();
+      }
+
+      function clearVocabSearch() {
+        const input = document.getElementById("vocabSearchInput");
+        if (input) input.value = "";
+        handleVocabSearch("");
+      }
+
+      function renderPhrases() {
+        const countPCat = (cat) =>
+          PHRASES_DATA.filter((p) => p.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("pcat_all")} (${PHRASES_DATA.length})` },
+          { id: "2.1", label: `${t("pcat_2_1")} (${countPCat("2.1")})` },
+          { id: "2.2", label: `${t("pcat_2_2")} (${countPCat("2.2")})` },
+          { id: "2.3", label: `${t("pcat_2_3")} (${countPCat("2.3")})` },
+          { id: "2.4", label: `${t("pcat_2_4")} (${countPCat("2.4")})` },
+        ];
+
+        document.getElementById("phraseCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setPhraseCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.phraseCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const filtered = PHRASES_DATA.filter(
+          (p) =>
+            state.phraseCategory === "all" || p.cat === state.phraseCategory,
+        );
+        document.getElementById("phrasesList").innerHTML = filtered
+          .map((p) => {
+            const trans = state.lang === "en" ? p.en : p.vi;
+            const btnId = `phrase_${p.id}`;
+            return `
+          <div class="bg-white rounded-2xl p-4 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex items-center justify-between gap-3.5">
+            <div class="min-w-0">
+              <span class="inline-block text-[11px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md mb-1">${p.cat}</span>
+              <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${p.de}</p>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">${trans}</p>
+            </div>
+            <div onclick="playAudioWithFallback('phrase_${p.id}.mp3', '${p.de.replace(/'/g, "\'")}', state.globalVoice, '${btnId}')">
+              ${speakBtnHTML(btnId, "w-11 h-11")}
+            </div>
+          </div>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setPhraseCategory(cat) {
+        state.phraseCategory = cat;
+        renderPhrases();
+      }
+
+      function renderDialogues() {
+        document.getElementById("dialogueTabs").innerHTML = DIALOGUES_DATA.map(
+          (d) => {
+            const label = state.lang === "en" ? d.tab_en : d.tab_vi;
+            const active = d.id === state.activeDialogueId;
+            return `
+          <button type="button" onclick="selectDialogue(${d.id})"
+            class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition cursor-pointer ${active ? "bg-slate-900 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+            ${label}
+          </button>
+        `;
+          },
+        ).join("");
+
+        const dlg =
+          DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId) ||
+          DIALOGUES_DATA[0];
+        const title = state.lang === "en" ? dlg.title_en : dlg.title_vi;
+        const context = state.lang === "en" ? dlg.context_en : dlg.context_vi;
+
+        document.getElementById("dialogueContainer").innerHTML = `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-slate-900">${title}</h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">${context}</p>
+          </div>
+          <button id="playFullDialogueBtn" type="button" onclick="toggleFullDialogue()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 shadow-xs transition cursor-pointer">
+            <span>▶</span> <span>${t("playFullDialogue")}</span>
+          </button>
+        </div>
+
+        <div class="space-y-3">
+          ${dlg.lines
+            .map((line, idx) => {
+              const lineNum = idx + 1;
+              const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+              const speakerName =
+                state.lang === "en" ? line.name_en : line.name_vi;
+              const lineTrans = state.lang === "en" ? line.en : line.vi;
+              const isWorker = line.role === "worker";
+              const voiceForLine = isWorker
+                ? state.workerVoice
+                : state.partnerVoice;
+
+              return `
+              <div id="row_${btnId}" class="p-3.5 sm:p-4 rounded-2xl border transition flex items-start justify-between gap-3 ${isWorker ? "bg-slate-50/90 border-slate-200/80" : "bg-cyan-50/50 border-cyan-200/60"}">
+                <div class="min-w-0">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold mb-1 ${isWorker ? "bg-blue-100 text-blue-800" : "bg-cyan-100 text-cyan-900"}">
+                    ${speakerName}
+                  </span>
+                  <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${line.de}</p>
+                  <p class="text-xs sm:text-sm text-slate-600 mt-1">${lineTrans}</p>
+                </div>
+                <div onclick="playAudioWithFallback('dialog_${dlg.id}_line_${lineNum}.mp3', '${line.de.replace(/'/g, "\'")}', '${voiceForLine}', '${btnId}')">
+                  ${speakBtnHTML(btnId, "w-11 h-11")}
+                </div>
+              </div>
+            `;
+            })
+            .join("")}
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function selectDialogue(id) {
+        stopAllAudio(true);
+        state.activeDialogueId = id;
+        renderDialogues();
+      }
+
+      function renderFlashcardControls() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cardUnit = state.lang === "en" ? "cards" : "thẻ";
+        const opts = [
+          {
+            id: "all",
+            label: `${t("fcAllCategories")} (${VOCAB_DATA.length} ${cardUnit})`,
+          },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+        document.getElementById("fcCategorySelect").innerHTML = opts
+          .map(
+            (o) => `
+        <option value="${o.id}" ${o.id === state.fcCategory ? "selected" : ""}>${o.label}</option>
+      `,
+          )
+          .join("");
+      }
+
+      function renderFlashcard() {
+        renderFlashcardControls();
+        if (state.fcDeck.length === 0) state.fcDeck = [...VOCAB_DATA];
+        if (state.fcIndex >= state.fcDeck.length) state.fcIndex = 0;
+
+        const card = state.fcDeck[state.fcIndex];
+        const typeStr = state.lang === "en" ? card.type_en : card.type_vi;
+        const meaningStr = state.lang === "en" ? card.en : card.vi;
+        const relStr = state.lang === "en" ? card.rel_en : card.rel_vi;
+        const exTrans = state.lang === "en" ? card.ex_en : card.ex_vi;
+        const isMastered = state.masteredIds.includes(card.id);
+
+        document.getElementById("fcCounter").textContent =
+          `${state.fcIndex + 1} / ${state.fcDeck.length}`;
+
+        const masterBtn = document.getElementById("fcMasterBtn");
+        if (isMastered) {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-bold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>✓</span> <span>${t("fcMastered")}</span>`;
+        } else {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-semibold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>○</span> <span>${t("fcMarkMastered")}</span>`;
+        }
+
+        const wordBtnId = `fc_word_${card.id}`;
+        const exBtnId = `fc_ex_${card.id}`;
+
+        document.getElementById("flashcardStage").innerHTML = `
+        <div onclick="flipFlashcard()" class="relative w-full min-h-[310px] sm:min-h-[340px] cursor-pointer select-none">
+          <div class="w-full min-h-[310px] sm:min-h-[340px] transform-style-3d ${state.fcFlipped ? "rotate-y-180" : ""}">
+            
+            <!-- FRONT -->
+            <div class="absolute inset-0 backface-hidden bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 flex flex-col items-center justify-between text-center">
+              <div class="w-full flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-cyan-50 text-cyan-800">${typeStr}</span>
+                <div onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="my-auto py-4">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${card.de}</h2>
+                <p class="text-sm font-mono text-slate-400 mt-2">${card.ipa}</p>
+              </div>
+
+              <p class="text-xs font-medium text-slate-400">${t("fcFrontHint")}</p>
+            </div>
+
+            <!-- BACK -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-800 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <p class="text-xs font-semibold text-amber-400 uppercase tracking-wider">${card.de}</p>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-1">${meaningStr}</h3>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')"
+                    class="h-10 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shrink-0 cursor-pointer">
+                    <span>🔊</span> <span>${t("fcWordBtn")}</span>
+                  </button>
+                </div>
+
+                <p class="text-xs text-slate-300 bg-slate-800/80 p-3 rounded-xl mt-3 leading-relaxed">
+                  <span class="font-semibold text-amber-300">${t("relatedPrefix")}</span> ${relStr}
+                </p>
+
+                <div class="mt-3 p-3.5 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="text-xs sm:text-sm font-semibold text-white leading-snug">${card.ex_de}</p>
+                    <p class="text-xs text-slate-300 italic mt-1">${exTrans}</p>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_ex.mp3', '${card.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')"
+                    class="w-11 h-11 shrink-0 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center justify-center font-bold cursor-pointer">
+                    🔊
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-center text-xs text-slate-400 mt-3">${t("fcBackHint")}</p>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function flipFlashcard() {
+        state.fcFlipped = !state.fcFlipped;
+        renderFlashcard();
+      }
+
+      function nextFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex = (state.fcIndex + 1) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function prevFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex =
+          (state.fcIndex - 1 + state.fcDeck.length) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function setFlashcardCategory(cat) {
+        state.fcCategory = cat;
+        state.fcFlipped = false;
+        state.fcIndex = 0;
+        state.fcDeck =
+          cat === "all"
+            ? [...VOCAB_DATA]
+            : VOCAB_DATA.filter((v) => v.cat === cat);
+        renderFlashcard();
+      }
+
+      function shuffleFlashcards() {
+        for (let i = state.fcDeck.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [state.fcDeck[i], state.fcDeck[j]] = [
+            state.fcDeck[j],
+            state.fcDeck[i],
+          ];
+        }
+        state.fcIndex = 0;
+        state.fcFlipped = false;
+        renderFlashcard();
+      }
+
+      function toggleFlashcardMastered() {
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+        const idx = state.masteredIds.indexOf(card.id);
+        if (idx >= 0) {
+          state.masteredIds.splice(idx, 1);
+        } else {
+          state.masteredIds.push(card.id);
+        }
+        localStorage.setItem(
+          "fd_mastered_trolynhakhoa",
+          JSON.stringify(state.masteredIds),
+        );
+        renderFlashcard();
+      }
+
+      function renderDentalNotes() {
+        document.getElementById("notesHeading").textContent = t("notesHeading");
+        const items = t("notes") || [];
+        document.getElementById("notesList").innerHTML = items
+          .map(
+            (n) => `
+        <li class="p-3 rounded-xl bg-slate-50 border border-slate-100">${n}</li>
+      `,
+          )
+          .join("");
+      }
+
+      // =========================================================================
+      // 7. LANGUAGE SWITCHER (100% UI + CONTENT LOCALIZATION)
+      // =========================================================================
+      function setLanguage(lang) {
+        state.lang = lang;
+        localStorage.setItem("fd_lang", lang);
+        document.documentElement.lang = lang;
+        document.title = t("pageTitle");
+
+        const viBtn = document.getElementById("langBtnVi");
+        const enBtn = document.getElementById("langBtnEn");
+        if (lang === "vi") {
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        } else {
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        }
+
+        document.getElementById("backHomeText").textContent = t("backHomeText");
+        document.getElementById("brandTitle").textContent = t("brandTitle");
+        document.getElementById("popoverTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("sheetTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("vocabSearchInput").placeholder =
+          t("searchPlaceholder");
+        document.getElementById("workerVoiceLabel").textContent =
+          t("workerVoiceLabel");
+        document.getElementById("partnerVoiceLabel").textContent =
+          t("partnerVoiceLabel");
+        document.getElementById("fcShuffleText").textContent = t("fcShuffle");
+        document.getElementById("fcPrevText").textContent = t("fcPrev");
+        document.getElementById("fcNextText").textContent = t("fcNext");
+        document.getElementById("fcShortcutHint").textContent =
+          t("fcShortcutHint");
+
+        renderNavigation();
+        renderVoiceForms();
+        renderVocab();
+        renderPhrases();
+        renderDialogues();
+        renderFlashcard();
+        renderDentalNotes();
+      }
+
+      // =========================================================================
+      // 8. KEYBOARD SHORTCUTS
+      // =========================================================================
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && state.voiceDrawerOpen) {
+          closeVoiceDrawer();
+          return;
+        }
+        if (
+          ["INPUT", "SELECT", "TEXTAREA"].includes(
+            document.activeElement.tagName,
+          )
+        )
+          return;
+        if (state.activeTab !== "flashcards") return;
+
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+
+        if (e.code === "Space") {
+          e.preventDefault();
+          flipFlashcard();
+        } else if (e.key === "ArrowRight") {
+          nextFlashcard();
+        } else if (e.key === "ArrowLeft") {
+          prevFlashcard();
+        } else if (e.key.toLowerCase() === "s") {
+          playAudioWithFallback(
+            `vocab_${card.id}_word.mp3`,
+            card.de,
+            state.globalVoice,
+            `fc_word_${card.id}`,
+          );
+        } else if (e.key.toLowerCase() === "e") {
+          playAudioWithFallback(
+            `vocab_${card.id}_ex.mp3`,
+            card.ex_de,
+            state.globalVoice,
+            `fc_ex_${card.id}`,
+          );
+        }
+      });
+
+      // =========================================================================
+      // 9. INITIALIZE APP
+      // =========================================================================
+      setLanguage(state.lang);
+    </script>
+  </body>
+</html>
