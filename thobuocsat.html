@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Fachdeutsch — Tiếng Đức Kỹ Thuật Viên Cốt Thép (Thợ buộc sắt) | BG Wind GmbH</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f1f5f9;
+      color: #0f172a;
+      min-height: 100dvh;
+      padding-bottom: calc(76px + var(--safe-bottom));
+    }
+    @media (min-width: 768px) {
+      body {
+        padding-bottom: 40px;
+      }
+    }
+    .bottom-nav-safe {
+      padding-bottom: calc(6px + var(--safe-bottom));
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .transform-style-3d {
+      transform-style: preserve-3d;
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+    @keyframes pulseRing {
+      0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45); }
+      70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+    .btn-playing {
+      background-color: #ef4444 !important;
+      color: #ffffff !important;
+      border-color: #ef4444 !important;
+      animation: pulseRing 1.4s infinite;
+    }
+    @keyframes sheetSlideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    .animate-sheet-up {
+      animation: sheetSlideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes popoverFade {
+      from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .animate-popover {
+      animation: popoverFade 0.18s ease-out;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-blue-200 selection:text-slate-900">
+
+  <!-- =====================================================================
+       ADAPTIVE STICKY TOP BAR (Back to Hub + Compact Mobile + 1-Row Desktop)
+       ===================================================================== -->
+  <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-sm">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 h-14 flex items-center justify-between gap-2">
+      
+      <!-- Left: Back to Hub + Brand + Desktop Navigation Tabs -->
+      <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
+        <a href="index.html" id="backHomeBtn" title="Trang chủ / Home"
+          class="h-9 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center gap-1 shrink-0 transition">
+          <span>←</span>
+          <span id="backHomeText" class="hidden sm:inline">Trang chủ</span>
+        </a>
+
+        <div class="flex items-center gap-2 min-w-0">
+          <div class="w-8 h-8 rounded-lg bg-blue-500 text-white flex items-center justify-center font-extrabold shadow-inner shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <div class="flex items-center gap-1.5">
+              <span id="brandTitle" class="font-bold text-sm sm:text-base tracking-tight truncate">Ngành Cốt Thép</span>
+              <span class="hidden xl:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30">BG Wind GmbH</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop Single-Row Navigation Tabs (Hidden on Mobile) -->
+        <nav id="desktopNav" class="hidden md:flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-slate-700/70" aria-label="Primary Navigation">
+        </nav>
+      </div>
+
+      <!-- Right: Voice Settings Trigger Pill + VI/EN Switch -->
+      <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0 relative">
+        <button id="voiceTriggerBtn" type="button" onclick="toggleVoiceDrawer()"
+          class="h-9 px-2.5 sm:px-3 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 border border-slate-700 text-xs font-medium text-slate-100 flex items-center gap-1.5 transition cursor-pointer">
+          <span class="text-amber-400">🎙</span>
+          <span id="voicePillLabel" class="max-w-[105px] sm:max-w-[160px] lg:max-w-[210px] truncate">Piper Chuẩn Đức • 1.0x</span>
+          <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Language Switcher VI | EN -->
+        <div class="h-9 bg-slate-800 p-0.5 rounded-xl border border-slate-700 flex items-center" role="group" aria-label="Language Switch">
+          <button id="langBtnVi" type="button" onclick="setLanguage('vi')"
+            class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer">VI</button>
+          <button id="langBtnEn" type="button" onclick="setLanguage('en')"
+            class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer">EN</button>
+        </div>
+
+        <!-- DESKTOP POPOVER: Voice & Speed Controls -->
+        <div id="desktopVoicePopover" class="hidden md:hidden absolute right-0 top-12 w-80 bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200 p-4 z-50 animate-popover">
+          <div class="flex items-center justify-between pb-2.5 mb-3 border-b border-slate-100">
+            <span id="popoverTitle" class="text-xs font-bold uppercase tracking-wider text-slate-500">Cài đặt Giọng đọc & Tốc độ</span>
+            <button type="button" onclick="closeVoiceDrawer()" class="w-7 h-7 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 cursor-pointer">✕</button>
+          </div>
+          <div id="desktopVoiceForm"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Subtle Non-Blocking Audio Fallback / Status Banner -->
+  <div id="statusToast" class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-50 max-w-[92vw] sm:max-w-md bg-slate-900/95 text-white text-xs px-3.5 py-2 rounded-full shadow-lg border border-slate-700 flex items-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+    <span id="statusToastText" class="truncate"></span>
+  </div>
+
+  <!-- =====================================================================
+       MAIN CONTENT AREA
+       ===================================================================== -->
+  <main class="max-w-7xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6">
+    
+    <!-- TAB 1: VOCABULARY -->
+    <section id="section-vocab" class="space-y-4">
+      <div class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 space-y-3">
+        <div class="relative">
+          <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z" />
+          </svg>
+          <input id="vocabSearchInput" type="search" oninput="handleVocabSearch(this.value)"
+            placeholder="Tìm từ tiếng Đức, nghĩa tiếng Việt..."
+            class="w-full h-11 pl-10 pr-9 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" />
+          <button id="clearSearchBtn" type="button" onclick="clearVocabSearch()" class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-xs items-center justify-center hover:bg-slate-300 cursor-pointer">✕</button>
+        </div>
+
+        <div id="vocabCategoryPills" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5"></div>
+      </div>
+
+      <div id="vocabGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"></div>
+    </section>
+
+    <!-- TAB 2: WORKSHOP PHRASES -->
+    <section id="section-phrases" class="hidden space-y-4">
+      <div class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80">
+        <div id="phraseCategoryPills" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar"></div>
+      </div>
+      <div id="phrasesList" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+    </section>
+
+    <!-- TAB 3: DIALOGUES -->
+    <section id="section-dialogues" class="hidden space-y-4">
+      <div class="bg-white rounded-2xl p-3.5 sm:p-5 shadow-sm border border-slate-200/80 space-y-4">
+        <div id="dialogueTabs" class="flex items-center gap-2 overflow-x-auto no-scrollbar"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100">
+          <div>
+            <label id="workerVoiceLabel" class="block text-xs font-semibold text-slate-600 mb-1">Giọng Kỹ thuật viên (Đức)</label>
+            <select id="workerVoiceSelect" onchange="updateDialogueVoice('worker', this.value)"
+              class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </select>
+          </div>
+          <div>
+            <label id="partnerVoiceLabel" class="block text-xs font-semibold text-slate-600 mb-1">Giọng Tổ trưởng / Đồng nghiệp</label>
+            <select id="partnerVoiceSelect" onchange="updateDialogueVoice('partner', this.value)"
+              class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div id="dialogueContainer" class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200/80"></div>
+    </section>
+
+    <!-- TAB 4: FLASHCARDS -->
+    <section id="section-flashcards" class="hidden space-y-4 max-w-2xl mx-auto">
+      <div class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 flex flex-wrap items-center justify-between gap-2">
+        <select id="fcCategorySelect" onchange="setFlashcardCategory(this.value)"
+          class="h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </select>
+        <div class="flex items-center gap-2">
+          <span id="fcCounter" class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-2 rounded-xl">1 / 56</span>
+          <button id="fcShuffleBtn" type="button" onclick="shuffleFlashcards()"
+            class="h-10 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer">
+            <span>🔀</span>
+            <span id="fcShuffleText">Trộn thẻ</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="flashcardStage" class="perspective-1000"></div>
+
+      <div class="flex items-center justify-between gap-2">
+        <button type="button" onclick="prevFlashcard()"
+          class="h-11 px-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-1.5 cursor-pointer">
+          <span>←</span>
+          <span id="fcPrevText">Trước</span>
+        </button>
+
+        <button id="fcMasterBtn" type="button" onclick="toggleFlashcardMastered()"
+          class="h-11 px-4 rounded-xl border text-xs sm:text-sm font-semibold shadow-sm flex items-center gap-1.5 transition cursor-pointer">
+        </button>
+
+        <button type="button" onclick="nextFlashcard()"
+          class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-sm font-semibold text-white shadow-sm flex items-center gap-1.5 cursor-pointer">
+          <span id="fcNextText">Tiếp</span>
+          <span>→</span>
+        </button>
+      </div>
+
+      <p id="fcShortcutHint" class="hidden md:block text-center text-xs text-slate-400">
+        Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe ví dụ)
+      </p>
+    </section>
+
+  </main>
+
+  <!-- MOBILE BOTTOM NAVIGATION BAR -->
+  <nav id="mobileBottomNav" class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-[0_-4px_16px_rgba(15,23,42,0.06)] bottom-nav-safe" aria-label="Mobile Navigation">
+    <div id="mobileNavGrid" class="grid grid-cols-4 h-14"></div>
+  </nav>
+
+  <!-- MOBILE BOTTOM SHEET: VOICE & SPEED SETTINGS -->
+  <div id="mobileVoiceBackdrop" onclick="closeVoiceDrawer()" class="hidden md:hidden fixed inset-0 z-50 bg-slate-950/50 backdrop-blur-xs transition-opacity"></div>
+  <div id="mobileVoiceSheet" class="hidden md:hidden fixed inset-x-0 bottom-0 z-50 bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 p-5 pb-[calc(20px+var(--safe-bottom))] animate-sheet-up">
+    <div class="w-10 h-1.5 rounded-full bg-slate-300 mx-auto mb-4"></div>
+    <div class="flex items-center justify-between mb-3">
+      <h3 id="sheetTitle" class="text-base font-bold text-slate-900">Cài đặt Giọng đọc & Tốc độ</h3>
+      <button type="button" onclick="closeVoiceDrawer()" class="w-9 h-9 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold">✕</button>
+    </div>
+    <div id="mobileVoiceForm"></div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // 0. AUDIO FOLDER PREFIX FOR REBAR / STEEL FIXING MODULE
+    // =========================================================================
+    const AUDIO_BASE_PATH = 'audio/thobuocsat';
+
+    // =========================================================================
+    // 1. VOICE CATALOG (4 VOICES: PIPER OFFLINE + EDGE NEURAL) & I18N
+    // =========================================================================
+    const VOICE_CATALOG = [
+      {
+        id: 'piper_hochdeutsch',
+        group_vi: '1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)',
+        group_en: '1. Piper Thorsten Offline (Native German — Default)',
+        label_vi: 'Piper Thorsten — Chuẩn Đức (High)',
+        label_en: 'Piper Thorsten — Standard German (High)',
+        short_vi: 'Piper Chuẩn Đức',
+        short_en: 'Piper Standard'
+      },
+      {
+        id: 'piper_rostock',
+        group_vi: '1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)',
+        group_en: '1. Piper Thorsten Offline (Native German — Default)',
+        label_vi: 'Piper Thorsten — Miền Bắc / Rostock',
+        label_en: 'Piper Thorsten — Northern / Rostock',
+        short_vi: 'Piper Rostock',
+        short_en: 'Piper Rostock'
+      },
+      {
+        id: 'edge_hochdeutsch',
+        group_vi: '2. Microsoft Edge Neural TTS (Tự nhiên)',
+        group_en: '2. Microsoft Edge Neural TTS (Natural)',
+        label_vi: 'Edge Neural — Chuẩn Đức (Nữ Katja)',
+        label_en: 'Edge Neural — Standard German (Female Katja)',
+        short_vi: 'Edge Katja',
+        short_en: 'Edge Katja'
+      },
+      {
+        id: 'edge_rostock',
+        group_vi: '2. Microsoft Edge Neural TTS (Tự nhiên)',
+        group_en: '2. Microsoft Edge Neural TTS (Natural)',
+        label_vi: 'Edge Neural — Miền Bắc (Nam Conrad)',
+        label_en: 'Edge Neural — Northern German (Male Conrad)',
+        short_vi: 'Edge Conrad',
+        short_en: 'Edge Conrad'
+      }
+    ];
+
+    function sanitizeVoiceId(savedId, fallbackId) {
+      return VOICE_CATALOG.some(v => v.id === savedId) ? savedId : fallbackId;
+    }
+
+    const I18N = {
+      vi: {
+        backHomeText: 'Trang chủ',
+        brandTitle: 'Ngành Cốt Thép',
+        nav_vocab_desktop: '1. Từ vựng (56)',
+        nav_phrases_desktop: '2. Mẫu câu công trường (29)',
+        nav_dialogues_desktop: '3. Hội thoại (4)',
+        nav_flashcards_desktop: '4. Thẻ Flashcard',
+        nav_vocab_mobile: 'Từ vựng',
+        nav_phrases_mobile: 'Mẫu câu',
+        nav_dialogues_mobile: 'Hội thoại',
+        nav_flashcards_mobile: 'Thẻ nhớ',
+        voiceSettingsTitle: 'Cài đặt Giọng đọc & Tốc độ',
+        selectVoiceLabel: 'Chọn giọng đọc mặc định (4 giọng)',
+        previewVoiceBtn: 'Nghe thử giọng',
+        stopPreviewBtn: 'Dừng nghe thử',
+        speedLabel: 'Tốc độ phát âm',
+        speedSlow: 'Chậm 0.75x',
+        speedNormal: 'Chuẩn 1.0x',
+        speedFast: 'Nhanh 1.25x',
+        searchPlaceholder: 'Tìm từ tiếng Đức, nghĩa tiếng Việt...',
+        cat_all: 'Tất cả (56)',
+        cat_1_1: '1.1 Vật liệu & Chân đế Tuabin (16)',
+        cat_1_2: '1.2 Dụng cụ, Máy & Bản vẽ (17)',
+        cat_1_3: '1.3 Đồ bảo hộ & An toàn (9)',
+        cat_1_4: '1.4 Động từ & Tính từ (14)',
+        relatedPrefix: 'Từ liên quan:',
+        noResults: 'Không tìm thấy từ vựng phù hợp.',
+        pcat_all: 'Tất cả mẫu câu (29)',
+        pcat_2_1: '2.1 Nhận việc & Bản vẽ (9)',
+        pcat_2_2: '2.2 Gia công & Tiến độ (7)',
+        pcat_2_3: '2.3 Kiểm tra & An toàn (7)',
+        pcat_2_4: '2.4 Giao tiếp công trường (6)',
+        workerVoiceLabel: 'Giọng Kỹ thuật viên (Đức)',
+        partnerVoiceLabel: 'Giọng Tổ trưởng / Đồng nghiệp',
+        playFullDialogue: 'Nghe cả hội thoại',
+        stopFullDialogue: 'Dừng hội thoại',
+        fcAllCategories: 'Tất cả chủ đề (56 thẻ)',
+        fcShuffle: 'Trộn thẻ',
+        fcPrev: 'Trước',
+        fcNext: 'Tiếp',
+        fcFrontHint: 'Chạm thẻ để xem nghĩa & ví dụ',
+        fcBackHint: 'Chạm thẻ để quay lại mặt trước',
+        fcWordBtn: 'Nghe từ',
+        fcExBtn: 'Nghe ví dụ',
+        fcMastered: 'Đã thuộc',
+        fcMarkMastered: 'Đánh dấu đã thuộc',
+        fcShortcutHint: 'Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe ví dụ)',
+        fallbackNotice: 'Đang dùng giọng dự phòng Piper Offline cho câu này.'
+      },
+      en: {
+        backHomeText: 'Home',
+        brandTitle: 'Rebar & Steel Fixing',
+        nav_vocab_desktop: '1. Vocabulary (56)',
+        nav_phrases_desktop: '2. Site Phrases (29)',
+        nav_dialogues_desktop: '3. Dialogues (4)',
+        nav_flashcards_desktop: '4. Flashcards',
+        nav_vocab_mobile: 'Vocab',
+        nav_phrases_mobile: 'Phrases',
+        nav_dialogues_mobile: 'Dialogues',
+        nav_flashcards_mobile: 'Cards',
+        voiceSettingsTitle: 'Voice & Playback Speed',
+        selectVoiceLabel: 'Default AI Voice (4 Voices)',
+        previewVoiceBtn: 'Preview Voice',
+        stopPreviewBtn: 'Stop Preview',
+        speedLabel: 'Playback Speed',
+        speedSlow: 'Slow 0.75x',
+        speedNormal: 'Normal 1.0x',
+        speedFast: 'Fast 1.25x',
+        searchPlaceholder: 'Search German words, English meanings...',
+        cat_all: 'All (56)',
+        cat_1_1: '1.1 Rebar & Turbine Foundations (16)',
+        cat_1_2: '1.2 Tools, Machines & Plans (17)',
+        cat_1_3: '1.3 PPE & Site Safety (9)',
+        cat_1_4: '1.4 Verbs & Adjectives (14)',
+        relatedPrefix: 'Related words:',
+        noResults: 'No matching vocabulary found.',
+        pcat_all: 'All Phrases (29)',
+        pcat_2_1: '2.1 Tasks & Blueprints (9)',
+        pcat_2_2: '2.2 Bending, Tying & Progress (7)',
+        pcat_2_3: '2.3 Inspection & Safety (7)',
+        pcat_2_4: '2.4 Daily Site Talk (6)',
+        workerVoiceLabel: 'Technician Voice (Duc)',
+        partnerVoiceLabel: 'Foreman / Colleague Voice',
+        playFullDialogue: 'Play Full Dialogue',
+        stopFullDialogue: 'Stop Dialogue',
+        fcAllCategories: 'All Categories (56 cards)',
+        fcShuffle: 'Shuffle',
+        fcPrev: 'Previous',
+        fcNext: 'Next',
+        fcFrontHint: 'Tap card to reveal meaning & example',
+        fcBackHint: 'Tap card to flip back',
+        fcWordBtn: 'Speak Word',
+        fcExBtn: 'Speak Example',
+        fcMastered: 'Mastered',
+        fcMarkMastered: 'Mark as Mastered',
+        fcShortcutHint: 'Shortcuts: Space (Flip) • ← / → (Navigate) • S (Word) • E (Example)',
+        fallbackNotice: 'Using offline Piper fallback voice for this line.'
+      }
+    };
+
+    // =========================================================================
+    // 2. COMPLETE BILINGUAL DATASET (56 VOCAB, 29 PHRASES, 4 DIALOGUES)
+    // =========================================================================
+    const VOCAB_DATA = [
+      // 1.1 Rebar Materials & Wind Turbine Foundations (16)
+      { id: 1, cat: '1.1', de: 'der Bewehrungsstahl (-e) / der Betonstahl', ipa: '/deːɐ̯ bəˈveːʁʊŋsˌʃtaːl/ / /deːɐ̯ beˈtɔŋˌʃtaːl/', type_vi: 'Danh từ (m.)', type_en: 'Noun (m.)', vi: 'Thép cốt bê tông / Thép xây dựng', en: 'Reinforcing steel / Rebar', rel_vi: 'die Bewehrung (dt: cốt thép), bewehren (đt: gia cường cốt thép)', rel_en: 'die Bewehrung (n: reinforcement), bewehren (v: to reinforce)', ex_de: 'Wir verlegen heute den Bewehrungsstahl für das Windkraft-Fundament.', ex_vi: 'Hôm nay chúng ta đặt thép cốt bê tông cho chân đế tuabin điện gió.', ex_en: 'Today we are laying the reinforcing steel for the wind turbine foundation.' },
+      { id: 2, cat: '1.1', de: 'der Rundstahl (-e) / der Stabstahl', ipa: '/deːɐ̯ ˈʁʊntˌʃtaːl/ / /deːɐ̯ ˈʃtaːpˌʃtaːl/', type_vi: 'Danh từ (m.)', type_en: 'Noun (m.)', vi: 'Thép thanh tròn (trơn hoặc có gân)', en: 'Round steel bar / Deformed rebar', rel_vi: 'der Stab (dt: thanh), rund (tt: tròn), gerippt (tt: có gân)', rel_en: 'der Stab (n: bar/rod), rund (adj: round), gerippt (adj: ribbed/deformed)', ex_de: 'Für den äußeren Ring brauchen wir gerippten Rundstahl mit 25 Millimeter Durchmesser.', ex_vi: 'Đối với vòng ngoài, chúng ta cần thép thanh có gân đường kính 25 mm.', ex_en: 'For the outer ring, we need ribbed round steel bars with a 25 mm diameter.' },
+      { id: 3, cat: '1.1', de: 'die Bewehrungsmatte (-n) / die Baustahlmatte', ipa: '/diː bəˈveːʁʊŋsˌmatə/ / /diː ˈbaʊʃtaːlˌmatə/', type_vi: 'Danh từ (f.)', type_en: 'Noun (f.)', vi: 'Lưới thép hàn / Vỉ thép', en: 'Welded wire mesh / Rebar mat', rel_vi: 'die Matte (dt: tấm lưới), verschweißen (đt: hàn chập)', rel_en: 'die Matte (n: mat/mesh), verschweißen (v: to weld together)', ex_de: 'Hebe die Bewehrungsmatte mit dem Kran auf die untere Lage.', ex_vi: 'Hãy cẩu tấm lưới thép đặt lên lớp dưới.', ex_en: 'Lift the rebar mesh onto the bottom layer using the crane.' },
+      { id: 4, cat: '1.1', de: 'der Bindedraht / der Rödeldraht (-e)', ipa: '/deːɐ̯ ˈbɪndəˌdʁaːt/ / /deːɐ̯ ˈʁøːdl̩ˌdʁaːt/', type_vi: 'Danh từ (m.)', type_en: 'Noun (m.)', vi: 'Dây kẽm buộc sắt', en: 'Tying wire / Rebar tie wire', rel_vi: 'binden (đt: buộc), rödeln (đt: xoắn/buộc thép), der Draht (dt: dây thép)', rel_en: 'binden (v: to tie), rödeln (v: to twist/tie rebar), der Draht (n: wire)', ex_de: 'Nimm eine neue Rolle Bindedraht aus dem Lager.', ex_vi: 'Hãy lấy một cuộn dây kẽm buộc sắt mới từ trong kho.', ex_en: 'Get a new roll of tying wire from the warehouse.' },
+      { id: 5, cat: '1.1', de: 'der Bewehrungskorb (-e)', ipa: '/deːɐ̯ bəˈveːʁʊŋsˌkɔʁp/', type_vi: 'Danh từ (m.)', type_en: 'Noun (m.)', vi: 'Lồng cốt thép', en: 'Reinforcement cage / Rebar cage', rel_vi: 'der Korb (dt: lồng/giỏ), vorfertigen (đt: gia công sẵn)', rel_en: 'der Korb (n: cage/basket), vorfertigen (v: to prefabricate)', ex_de: 'Der Bewehrungskorb für den Turmsockel wird im Werk vorgefertigt.', ex_vi: 'Lồng cốt thép cho bệ tháp được gia công sẵn tại xưởng.', ex_en: 'The reinforcement cage for the tower pedestal is prefabricated in the plant.' },
+      { id: 6, cat: '1.1', de: 'der Bügel (-) / der Steckbügel', ipa: '/deːɐ̯ ˈbyːɡl̩/ / /deːɐ̯ ˈʃtɛkˌbyːɡl̩/', type_vi: 'Danh từ (m.)', type_en: 'Noun (m.)', vi: 'Đai thép / Thép đai chữ U', en: 'Stirrup / U-bar tie', rel_vi: 'bügeln (đt: uốn đai), umfassen (đt: ôm trọn)', rel_en: 'bügeln (v: to bend stirrups), umfassen (v: to enclose/wrap around)', ex_de: 'Setze die Bügel alle 15 Zentimeter um die Längsstäbe.', ex_vi: 'Hãy đặt các đai thép cách nhau 15 cm ôm quanh các thanh thép dọc.', ex_en: 'Place the stirrups every 15 centimeters around the longitudinal bars.' },
+      { id: 7, cat: '1.1', de: 'der Abstandhalter (-) / die Drunterleiste (-n)', ipa: '/deːɐ̯ ˈapʃtantˌhaltɐ/ / /diː ˈdʁʊntɐˌlaɪstə/', type_vi: 'Danh từ (m./f.)', type_en: 'Noun (m./f.)', vi: 'Con kê bê tông / Thanh kê tạo lớp bảo vệ', en: 'Concrete spacer / Bar chair', rel_vi: 'der Abstand (dt: khoảng cách), halten (đt: giữ)', rel_en: 'der Abstand (n: distance/spacing), halten (v: to hold)', ex_de: 'Lege genügend Abstandhalter unter die untere Bewehrungslage.', ex_vi: 'Hãy đặt đủ con kê bê tông dưới lớp cốt thép đáy.', ex_en: 'Place enough spacers underneath the bottom reinforcement layer.' },
+      { id: 8, cat: '1.1', de: 'das Fundament (-e) / das Turmfundament', ipa: '/das fʊndaˈmɛnt/ / /das ˈtʊʁmfʊndaˌmɛnt/', type_vi: 'Danh từ (n.)', type_en: 'Noun (n.)', vi: 'Móng / Chân đế trụ tuabin điện gió', en: 'Foundation / Wind turbine tower foundation', rel_vi: 'die Fundamentplatte (dt: bản móng), fundamentieren (đt: làm móng)', rel_en: 'die Fundamentplatte (n: foundation slab), fundamentieren (v: to lay foundations)', ex_de: 'Das Fundament einer Windkraftanlage braucht sehr viel Stahl und Beton.', ex_vi: 'Chân đế của một trụ điện gió cần rất nhiều thép và bê tông.', ex_en: 'The foundation of a wind turbine requires a great deal of steel and concrete.' },
+      { id: 9, cat: '1.1', de: 'der Ankerring (-e) / der Einbauteil (-e)', ipa: '/deːɐ̯ ˈaŋkɐˌʁɪŋ/ / /deːɐ̯ ˈaɪnbaʊˌtaɪl/', type_vi: 'Danh từ (m./n.)', type_en: 'Noun (m./n.)', vi: 'Vòng bu-lông neo / Chi tiết đặt sẵn trong móng', en: 'Anchor bolt cage ring / Embedded component', rel_vi: 'verankern (đt: neo giữ), einbauen (đt: lắp đặt vào)', rel_en: 'verankern (v: to anchor), einbauen (v: to install/embed)', ex_de: 'Achte beim Flechten genau auf die Position vom Ankerring.', ex_vi: 'Khi buộc sắt hãy chú ý chính xác vị trí của vòng neo chân tháp.', ex_en: 'Pay close attention to the position of the anchor ring while tying rebar.' },
+      { id: 10, cat: '1.1', de: 'die Bewehrungslage (-n) / die Obere & Untere Lage', ipa: '/diː bəˈveːʁʊŋsˌlaːɡə/', type_vi: 'Danh từ (f.)', type_en: 'Noun (f.)', vi: 'Lớp cốt thép (lớp trên / lớp dưới)', en: 'Reinforcement layer (top & bottom layer)', rel_vi: 'die Lage (dt: lớp/tầng), verlegen (đt: lắp đặt/rải)', rel_en: 'die Lage (n: layer), verlegen (v: to lay/install)', ex_de: 'Die untere Bewehrungslage ist fertig, jetzt bauen wir die Abstandskörbe ein.', ex_vi: 'Lớp cốt thép dưới đã xong, giờ chúng ta lắp các giá đỡ tạo khoảng cách.', ex_en: 'The bottom reinforcement layer is finished; now we are installing the spacer cages.' },
+      { id: 11, cat: '1.1', de: 'der Übergreifungsstoß (-e) / die Überlappung', ipa: '/deːɐ̯ ˈyːbɐɡʁaɪfʊŋsˌʃtoːs/ / /diː yːbɐˈlapʊŋ/', type_vi: 'Danh từ (m./f.)', type_en: 'Noun (m./f.)', vi: 'Đoạn nối chồng cốt thép', en: 'Lap splice / Rebar overlap length', rel_vi: 'überlappen (đt: chồng lên nhau), stoßen (đt: nối tiếp)', rel_en: 'überlappen (v: to overlap), stoßen (v: to splice/butt)', ex_de: 'Der Übergreifungsstoß muss mindestens 80 Zentimeter lang sein.', ex_vi: 'Đoạn nối chồng cốt thép phải dài ít nhất 80 cm.', ex_en: 'The lap splice must be at least 80 centimeters long.' },
+      { id: 12, cat: '1.1', de: 'die Betondeckung (-en)', ipa: '/diː beˈtɔŋˌdɛkʊŋ/', type_vi: 'Danh từ (f.)', type_en: 'Noun (f.)', vi: 'Lớp bê tông bảo vệ cốt thép', en: 'Concrete cover', rel_vi: 'der Beton (dt: bê tông), decken (đt: che phủ)', rel_en: 'der Beton (n: concrete), decken (v: to cover)', ex_de: 'Wir müssen eine Betondeckung von 50 Millimetern einhalten.', ex_vi: 'Chúng ta phải đảm bảo lớp bê tông bảo vệ dày 50 mm.', ex_en: 'We must maintain a concrete cover of 50 millimeters.' },
+      { id: 13, cat: '1.1', de: 'der Durchmesser (-) (Ø)', ipa: '/deːɐ̯ ˈdʊʁçˌmɛsɐ/', type_vi: 'Danh từ (m.)', type_en: 'Noun (m.)', vi: 'Đường kính thanh thép (ký hiệu Ø)', en: 'Bar diameter (symbol Ø)', rel_vi: 'messen (đt: đo), dick (tt: dày/to)', rel_en: 'messen (v: to measure), dick (adj: thick)', ex_de: 'Diese Eisen haben einen Durchmesser von 28 Millimetern.', ex_vi: 'Những thanh sắt này có đường kính 28 mm.', ex_en: 'These bars have a diameter of 28 millimeters.' },
+      { id: 14, cat: '1.1', de: 'die Bewehrungsliste (-n) / die Stahlliste', ipa: '/diː bəˈveːʁʊŋsˌlɪstə/ / /diː ˈʃtaːlˌlɪstə/', type_vi: 'Danh từ (f.)', type_en: 'Noun (f.)', vi: 'Bảng thống kê cốt thép', en: 'Bar bending schedule / Rebar list', rel_vi: 'die Liste (dt: danh sách), auflisten (đt: liệt kê)', rel_en: 'die Liste (n: list), auflisten (v: to list)', ex_de: 'Prüfe die Stückzahl und Länge der Stäbe in der Bewehrungsliste.', ex_vi: 'Hãy kiểm tra số lượng và chiều dài các thanh thép trong bảng thống kê cốt thép.', ex_en: 'Check the quantity and length of the bars in the rebar schedule.' },
+      { id: 15, cat: '1.1', de: 'die Positionsnummer (-n) (Pos.-Nr.)', ipa: '/diː poziˈtsi̯oːnsˌnʊmɐ/', type_vi: 'Danh từ (f.)', type_en: 'Noun (f.)', vi: 'Số hiệu thanh thép trên bản vẽ', en: 'Bar mark / Position number', rel_vi: 'die Position (dt: vị trí/mã hiệu), die Nummer (dt: số)', rel_en: 'die Position (n: position/mark), die Nummer (n: number)', ex_de: 'Suche bitte die Stäbe mit der Positionsnummer 14 auf dem Lagerplatz.', ex_vi: 'Hãy tìm các thanh thép có mã hiệu số 14 ở bãi tập kết.', ex_en: 'Please find the bars with position number 14 in the storage yard.' },
+      { id: 16, cat: '1.1', de: 'die Sauberkeitsschicht (-en)', ipa: '/diː ˈzaʊbɐkaɪtsˌʃɪçt/', type_vi: 'Danh từ (f.)', type_en: 'Noun (f.)', vi: 'Lớp bê tông lót đáy móng', en: 'Blinding concrete layer / Lean concrete base', rel_vi: 'sauber (tt: sạch), die Schicht (dt: lớp)', rel_en: 'sauber (adj: clean), die Schicht (n: layer)', ex_de: 'Die Sauberkeitsschicht ist sauber, wir können mit dem Einmessen beginnen.', ex_vi: 'Lớp bê tông lót đã sạch sẽ, chúng ta có thể bắt đầu đo đạc lấy dấu.', ex_en: 'The blinding concrete layer is clean; we can start marking out measurements.' },
+
+      // 1.2 Tools, Machines & Blueprints (17)
+      { id: 17, cat: '1.2', de: 'die Monierzange (-n) / die Flechterzange', ipa: '/diː moˈniːɐ̯ˌtsaŋə/ / /diː ˈflɛçtɐˌtsaŋə/', type_vi: 'Danh từ (f.)', type_en: 'Noun (f.)', vi: 'Kìm buộc sắt (kìm mỏ quạ thợ sắt)', en: 'Concreters’ nippers / Rebar tying pliers', rel_vi: 'monieren (đt: lắp cốt thép), die Zange (dt: cái kìm)', rel_en: 'monieren (v: to fix rebar), die Zange (n: pliers/tongs)', ex_de: 'Mit einer scharfen Monierzange geht das Flechten viel schneller.', ex_vi: 'Dùng một chiếc kìm buộc sắt sắc bén thì việc buộc nhanh hơn nhiều.', ex_en: 'Tying rebar goes much faster with sharp concreters’ nippers.' },
+      { id: 18, cat: '1.2', de: 'der Drillapparat (-e) / der Drillhaken', ipa: '/deːɐ̯ ˈdʁɪlʔapaˌʁaːt/ / /deːɐ̯ ˈdʁɪlˌhaːkn̩/', type_vi: 'Danh từ (m.)', type_en: 'Noun (m.)', vi: 'Dụng cụ rút / xoắn dây thép buộc (móc rút)', en: 'Automatic wire twister / Rebar tie twister', rel_vi: 'drillen (đt: xoắn), der Haken (dt: cái móc)', rel_en: 'drillen (v: to twist), der Haken (n: hook)', ex_de: 'Für Ösendraht benutzen wir einen automatischen Drillapparat.', ex_vi: 'Đối với dây buộc có khuyên sẵn, chúng ta dùng cây rút xoắn tự động.', ex_en: 'We use an automatic wire twister for loop-end tie wire.' },
+      { id: 19, cat: '1.2', de: 'der Bindedrahtabroller (-) / die Drahthaspel', ipa: '/deːɐ̯ ˈbɪndədʁaːtˌapʁɔlɐ/ / /diː ˈdʁaːtˌhaspl̩/', type_vi: 'Danh từ (m./f.)', type_en: 'Noun (m./f.)', vi: 'Hộp đeo cuộn dây kẽm bên hông', en: 'Tie wire reel / Belt wire dispenser', rel_vi: 'abrollen (đt: xả cuộn), die Haspel (dt: guồng quấn)', rel_en: 'abrollen (v: to unroll), die Haspel (n: reel/spool)', ex_de: 'Hänge den Bindedrahtabroller fest an deinen Gürtel.', ex_vi: 'Hãy đeo hộp xả cuộn dây kẽm chắc chắn vào thắt lưng của bạn.', ex_en: 'Attach the tie wire reel firmly to your belt.' },
+      { id: 20, cat: '1.2', de: 'der Bolzenschneider (-)', ipa: '/deːɐ̯ ˈbɔltsn̩ˌʃnaɪdɐ/', type_vi: 'Danh từ (m.)', type_en: 'Noun (m.)', vi: 'Kìm cộng lực cắt sắt', en: 'Bolt cutter', rel_vi: 'schneiden (đt: cắt), der Bolzen (dt: chốt/thanh)', rel_en: 'schneiden (v: to cut), der Bolzen (n: bolt/pin)', ex_de: 'Schneide den überstehenden Draht mit dem Bolzenschneider ab.', ex_vi: 'Hãy cắt phần dây thép thừa bằng kìm cộng lực.', ex_en: 'Cut off the protruding wire with the bolt cutter.' },
+      { id: 21, cat: '1.2', de: 'die Biegemaschine (-n) / der Biegetisch', ipa: '/diː ˈbiːɡəmaˌʃiːnə/ / /deːɐ̯ ˈbiːɡəˌtɪʃ/', type_vi: 'Danh từ (f./m.)', type_en: 'Noun (f./m.)', vi: 'Máy uốn sắt / Bàn uốn cốt thép', en: 'Rebar bending machine / Bending table', rel_vi: 'biegen (đt: uốn cong), die Biegung (dt: góc uốn)', rel_en: 'biegen (v: to bend), die Biegung (n: bend)', ex_de: 'Wir biegen die Haken an der Biegemaschine auf 135 Grad.', ex_vi: 'Chúng ta uốn các đầu móc trên máy uốn sắt theo góc 135 độ.', ex_en: 'We bend the hooks on the bending machine to 135 degrees.' },
+      { id: 22, cat: '1.2', de: 'die Schneidemaschine (-n) / die Stahlschere', ipa: '/diː ˈʃnaɪdəmaˌʃiːnə/ / /diː ˈʃtaːlˌʃeːʁə/', type_vi: 'Danh từ (f.)', type_en: 'Noun (f.)', vi: 'Máy cắt sắt thủy lực / Máy cắt cốt thép', en: 'Rebar cutting machine / Hydraulic bar shear', rel_vi: 'schneiden (đt: cắt), die Schere (dt: kéo/lưỡi cắt)', rel_en: 'schneiden (v: to cut), die Schere (n: shears)', ex_de: 'Stelle die Länge an der Schneidemaschine auf 4,50 Meter ein.', ex_vi: 'Hãy chỉnh chiều dài trên máy cắt sắt ở mức 4,50 mét.', ex_en: 'Set the length on the rebar cutting machine to 4.50 meters.' },
+      { id: 23, cat: '1.2', de: 'der Trennschleifer (-) / die Flex', ipa: '/deːɐ̯ ˈtʁɛnˌʃlaɪfɐ/ / /diː flɛks/', type_vi: 'Danh từ (m./f.)', type_en: 'Noun (m./f.)', vi: 'Máy cắt cầm tay (máy mài góc)', en: 'Angle grinder / Cut-off grinder', rel_vi: 'trennen (đt: cắt đứt), schleifen (đt: mài)', rel_en: 'trennen (v: to cut off), schleifen (v: to grind)', ex_de: 'Kürze das Eisen vorsichtig mit der Flex.', ex_vi: 'Hãy cắt ngắn thanh sắt cẩn thận bằng máy cắt cầm tay.', ex_en: 'Shorten the rebar carefully with the angle grinder.' },
+      { id: 24, cat: '1.2', de: 'der Biegeschlüssel (-) / das Biegeeisen', ipa: '/deːɐ̯ ˈbiːɡəˌʃlʏsl̩/ / /das ˈbiːɡəˌaɪzn̩/', type_vi: 'Danh từ (m./n.)', type_en: 'Noun (m./n.)', vi: 'Chìa uốn sắt thủ công (cây bẻ sắt)', en: 'Manual rebar bending wrench / Hickey bar', rel_vi: 'biegen (đt: uốn), der Schlüssel (dt: chìa vặn)', rel_en: 'biegen (v: to bend), der Schlüssel (n: wrench/key)', ex_de: 'Kleine Korrekturen machen wir direkt vor Ort mit dem Biegeschlüssel.', ex_vi: 'Những chỉnh sửa nhỏ chúng ta làm trực tiếp tại chỗ bằng cây bẻ sắt.', ex_en: 'We make minor adjustments right on site using the bending wrench.' },
+      { id: 25, cat: '1.2', de: 'der Bewehrungsplan (-e) / der Verlegeplan', ipa: '/deːɐ̯ bəˈveːʁʊŋsˌplaːn/ / /deːɐ̯ fɛɐ̯ˈleːɡəˌplaːn/', type_vi: 'Danh từ (m.)', type_en: 'Noun (m.)', vi: 'Bản vẽ bố trí cốt thép', en: 'Reinforcement drawing / Rebar placement plan', rel_vi: 'der Plan (dt: bản vẽ), planen (đt: lập kế hoạch)', rel_en: 'der Plan (n: drawing/plan), planen (v: to plan)', ex_de: 'Schau bitte zuerst genau in den Bewehrungsplan.', ex_vi: 'Trước tiên hãy xem kỹ vào bản vẽ bố trí cốt thép.', ex_en: 'Please look closely at the reinforcement plan first.' },
+      { id: 26, cat: '1.2', de: 'der Grundriss (-e) / die Draufsicht', ipa: '/deːɐ̯ ˈɡʁʊntˌʁɪs/ / /diː ˈdʁaʊfˌzɪçt/', type_vi: 'Danh từ (m./f.)', type_en: 'Noun (m./f.)', vi: 'Bản vẽ mặt bằng / Hình chiếu bằng', en: 'Floor plan / Top view', rel_vi: 'der Riss (dt: hình vẽ kỹ thuật), die Sicht (dt: góc nhìn)', rel_en: 'der Riss (n: technical projection), die Sicht (n: view)', ex_de: 'Im Grundriss siehst du den runden Durchmesser vom Turmfundament.', ex_vi: 'Trên bản vẽ mặt bằng bạn sẽ thấy đường kính tròn của chân đế tuabin.', ex_en: 'In the plan view, you see the circular diameter of the tower foundation.' },
+      { id: 27, cat: '1.2', de: 'der Schnitt (-e) / die Schnittzeichnung', ipa: '/deːɐ̯ ʃnɪt/ / /diː ˈʃnɪtˌtsaɪçnʊŋ/', type_vi: 'Danh từ (m./f.)', type_en: 'Noun (m./f.)', vi: 'Mặt cắt kỹ thuật trên bản vẽ', en: 'Cross-section / Sectional drawing', rel_vi: 'schneiden (đt: cắt), die Zeichnung (dt: bản vẽ)', rel_en: 'schneiden (v: to cut/section), die Zeichnung (n: drawing)', ex_de: 'In Schnitt A-A erkennt man die Höhe der oberen Bewehrung.', ex_vi: 'Ở mặt cắt A-A người ta thấy được cao độ của lớp cốt thép trên.', ex_en: 'In Section A-A, you can see the elevation of the top reinforcement.' },
+      { id: 28, cat: '1.2', de: 'der Maßstab (-e)', ipa: '/deːɐ̯ ˈmaːsˌʃtaːp/', type_vi: 'Danh từ (m.)', type_en: 'Noun (m.)', vi: 'Tỷ lệ bản vẽ (ví dụ 1:50, 1:20)', en: 'Drawing scale (e.g., 1:50, 1:20)', rel_vi: 'das Maß (dt: kích thước), messen (đt: đo)', rel_en: 'das Maß (n: dimension), messen (v: to measure)', ex_de: 'Der Bewehrungsplan ist im Maßstab 1 zu 50 gezeichnet.', ex_vi: 'Bản vẽ cốt thép được vẽ theo tỷ lệ 1:50.', ex_en: 'The reinforcement drawing is drawn at a scale of 1 to 50.' },
+      { id: 29, cat: '1.2', de: 'das Achsmaß (-e) / der Stababstand', ipa: '/das ˈaksˌmaːs/ / /deːɐ̯ ˈʃtaːpˌapʃtant/', type_vi: 'Danh từ (n./m.)', type_en: 'Noun (n./m.)', vi: 'Khoảng cách tim các thanh thép (bước thép)', en: 'Center-to-center spacing / Bar spacing', rel_vi: 'die Achse (dt: trục/tim), der Abstand (dt: khoảng cách)', rel_en: 'die Achse (n: axis/centerline), der Abstand (n: spacing/distance)', ex_de: 'Der Stababstand beträgt laut Plan genau 150 Millimeter.', ex_vi: 'Bước thép theo bản vẽ là chính xác 150 mm.', ex_en: 'According to the drawing, the bar spacing is exactly 150 millimeters.' },
+      { id: 30, cat: '1.2', de: 'der Zollstock (-e) / das Maßband (-er)', ipa: '/deːɐ̯ ˈtsɔlˌʃtɔk/ / /das ˈmaːsˌbant/', type_vi: 'Danh từ (m./n.)', type_en: 'Noun (m./n.)', vi: 'Thước gấp / Thước dây cuộn', en: 'Folding ruler / Tape measure', rel_vi: 'messen (đt: đo), das Band (dt: dải thước)', rel_en: 'messen (v: to measure), das Band (n: tape)', ex_de: 'Miss den Abstand mit dem Zollstock genau nach.', ex_vi: 'Hãy đo kiểm tra lại khoảng cách bằng thước gấp cho chính xác.', ex_en: 'Double-check the spacing accurately with the folding ruler.' },
+      { id: 31, cat: '1.2', de: 'die Schlagschnur (-e) / der Markierungsstift', ipa: '/diː ˈʃlaːkˌʃnuːɐ̯/ / /deːɐ̯ maʁˈkiːʁʊŋsˌʃtɪft/', type_vi: 'Danh từ (f./m.)', type_en: 'Noun (f./m.)', vi: 'Dây bật mực lấy dấu / Bút đánh dấu công nghiệp', en: 'Chalk line / Industrial marker', rel_vi: 'schlagen (đt: bật/đánh), markieren (đt: đánh dấu)', rel_en: 'schlagen (v: to snap/strike), markieren (v: to mark)', ex_de: 'Wir markieren die Achsen mit der Schlagschnur auf dem Beton.', ex_vi: 'Chúng ta đánh dấu các đường trục bằng dây bật mực trên nền bê tông.', ex_en: 'We mark the axes on the concrete using the chalk line.' },
+      { id: 32, cat: '1.2', de: 'der Kran (-e) / die Anschlagkette (-n)', ipa: '/deːɐ̯ kʁaːn/ / /diː ˈanʃlaːkˌkɛtə/', type_vi: 'Danh từ (m./f.)', type_en: 'Noun (m./f.)', vi: 'Cần cẩu / Dây xích cẩu hàng', en: 'Crane / Lifting sling chain', rel_vi: 'anschlagen (đt: móc cáp cẩu), die Kette (dt: dây xích)', rel_en: 'anschlagen (v: to sling/rig), die Kette (n: chain)', ex_de: 'Hänge das Stahlbündel sicher in die Anschlagkette ein.', ex_vi: 'Hãy móc bó thép chắc chắn vào dây xích cẩu.', ex_en: 'Hook the steel bundle securely into the lifting chain.' },
+      { id: 33, cat: '1.2', de: 'die Schalung (-en)', ipa: '/diː ˈʃaːlʊŋ/', type_vi: 'Danh từ (f.)', type_en: 'Noun (f.)', vi: 'Cốp pha / Ván khuôn đổ bê tông', en: 'Formwork / Concrete shuttering', rel_vi: 'einschalen (đt: lắp cốp pha), ausschalen (đt: tháo cốp pha)', rel_en: 'einschalen (v: to set up formwork), ausschalen (v: to strip formwork)', ex_de: 'Zwischen Bewehrung und Schalung muss genug Platz für die Abstandhalter sein.', ex_vi: 'Giữa cốt thép và cốp pha phải có đủ khoảng hở cho con kê.', ex_en: 'There must be enough clearance between the rebar and the formwork for the spacers.' },
+
+      // 1.3 PPE & Construction Site Safety (9)
+      { id: 34, cat: '1.3', de: 'der Schutzhelm (-e) mit Kinnriemen', ipa: '/deːɐ̯ ˈʃʊtsˌhɛlm/', type_vi: 'Danh từ (m.)', type_en: 'Noun (m.)', vi: 'Mũ bảo hộ lao động có quai cài cằm', en: 'Safety helmet with chin strap', rel_vi: 'schützen (đt: bảo vệ), der Helm (dt: mũ), der Riemen (dt: dây quai)', rel_en: 'schützen (v: to protect), der Helm (n: helmet), der Riemen (n: strap)', ex_de: 'Trage unter dem Kran immer deinen Schutzhelm mit geschlossenem Kinnriemen.', ex_vi: 'Dưới tầm cần cẩu, luôn đội mũ bảo hộ có cài chặt quai cằm.', ex_en: 'Always wear your safety helmet with the chin strap fastened under the crane.' },
+      { id: 35, cat: '1.3', de: 'die Sicherheitsschuhe (Pl.) (S3)', ipa: '/diː ˈzɪçɐhaɪtsˌʃuːə/', type_vi: 'Danh từ (Pl.)', type_en: 'Noun (Pl.)', vi: 'Giày bảo hộ chống đinh & mũi thép chuẩn S3', en: 'S3 puncture-resistant safety boots', rel_vi: 'die Sicherheit (dt: sự an toàn), durchtrittsicher (tt: chống đâm xuyên)', rel_en: 'die Sicherheit (n: safety), durchtrittsicher (adj: puncture-resistant)', ex_de: 'Auf der Baustelle sind Sicherheitsschuhe der Klasse S3 Pflicht.', ex_vi: 'Trên công trường bắt buộc phải mang giày bảo hộ đạt chuẩn S3.', ex_en: 'Class S3 safety shoes are mandatory on the construction site.' },
+      { id: 36, cat: '1.3', de: 'die Arbeitshandschuhe (Pl.) / die Flechterhandschuhe', ipa: '/diː ˈaʁbaɪtsˌhantʃuːə/', type_vi: 'Danh từ (Pl.)', type_en: 'Noun (Pl.)', vi: 'Găng tay bảo hộ thợ buộc sắt', en: 'Heavy-duty rebar tying work gloves', rel_vi: 'der Handschuh (dt: găng tay), greifen (đt: cầm nắm)', rel_en: 'der Handschuh (n: glove), greifen (v: to grip)', ex_de: 'Zieh dir feste Arbeitshandschuhe an, damit du dich nicht am Draht schneidest.', ex_vi: 'Hãy đeo găng tay bảo hộ dày dặn để không bị dây thép cắt vào tay.', ex_en: 'Put on sturdy work gloves so you do not cut yourself on the wire.' },
+      { id: 37, cat: '1.3', de: 'die Schutzbrille (-n)', ipa: '/diː ˈʃʊtsˌbʁɪlə/', type_vi: 'Danh từ (f.)', type_en: 'Noun (f.)', vi: 'Kính bảo hộ (chống tia lửa & mạt sắt)', en: 'Safety glasses / Protective goggles', rel_vi: 'die Brille (dt: kính)', rel_en: 'die Brille (n: glasses)', ex_de: 'Beim Schneiden mit der Flex musst du unbedingt eine Schutzbrille tragen.', ex_vi: 'Khi cắt sắt bằng máy cắt cầm tay, bạn nhất định phải đeo kính bảo hộ.', ex_en: 'You must always wear safety glasses when cutting with the angle grinder.' },
+      { id: 38, cat: '1.3', de: 'die Warnweste (-n) / die Warnschutzkleidung', ipa: '/diː ˈvaʁnˌvɛstə/', type_vi: 'Danh từ (f.)', type_en: 'Noun (f.)', vi: 'Áo phản quang bảo hộ', en: 'High-visibility vest / Hi-vis clothing', rel_vi: 'warnen (đt: cảnh báo), sichtbar (tt: dễ nhìn thấy)', rel_en: 'warnen (v: to warn), sichtbar (adj: visible)', ex_de: 'Ohne Warnweste darf niemand den Arbeitsbereich betreten.', ex_vi: 'Không ai được phép bước vào khu vực làm việc nếu không mặc áo phản quang.', ex_en: 'Nobody is allowed to enter the work zone without a high-visibility vest.' },
+      { id: 39, cat: '1.3', de: 'der Gehörschutz', ipa: '/deːɐ̯ ɡəˈhøːɐ̯ˌʃʊts/', type_vi: 'Danh từ (m.)', type_en: 'Noun (m.)', vi: 'Nút bịt tai / Chụp tai chống ồn', en: 'Hearing protection / Ear defenders', rel_vi: 'hören (đt: nghe), das Gehör (dt: thính giác)', rel_en: 'hören (v: to hear), das Gehör (n: hearing)', ex_de: 'Wenn die Schneidemaschine läuft, benutze bitte deinen Gehörschutz.', ex_vi: 'Khi máy cắt sắt hoạt động, hãy sử dụng đồ bảo vệ thính giác của bạn.', ex_en: 'When the rebar cutting machine is running, please use your hearing protection.' },
+      { id: 40, cat: '1.3', de: 'der Auffanggurt (-e) / die Absturzsicherung', ipa: '/deːɐ̯ ˈaʊfɡaŋˌɡʊʁt/ / /diː ˈapʃtʊʁtsˌzɪçəʁʊŋ/', type_vi: 'Danh từ (m./f.)', type_en: 'Noun (m./f.)', vi: 'Dây đai an toàn chống rơi ngã', en: 'Fall-arrest harness / Fall protection', rel_vi: 'auffangen (đt: đỡ lại), der Absturz (dt: sự rơi ngã)', rel_en: 'auffangen (v: to catch/arrest), der Absturz (n: fall from height)', ex_de: 'Sichere dich beim Arbeiten auf hohen Bewehrungskörben mit dem Auffanggurt.', ex_vi: 'Hãy thắt dây đai an toàn khi làm việc trên các lồng cốt thép cao.', ex_en: 'Secure yourself with the fall-arrest harness when working on tall rebar cages.' },
+      { id: 41, cat: '1.3', de: 'das Gerüst (-e) / die Arbeitsbühne (-n)', ipa: '/das ɡəˈʁʏst/ / /diː ˈaʁbaɪtsˌbyːnə/', type_vi: 'Danh từ (n./f.)', type_en: 'Noun (n./f.)', vi: 'Giàn giáo / Sàn thao tác', en: 'Scaffolding / Working platform', rel_vi: 'einrüsten (đt: dựng giàn giáo), die Bühne (dt: sàn công tác)', rel_en: 'einrüsten (v: to scaffold), die Bühne (n: platform)', ex_de: 'Prüfe vor dem Aufsteigen, ob das Gerüst fest steht.', ex_vi: 'Trước khi trèo lên, hãy kiểm tra xem giàn giáo đã đứng vững chưa.', ex_en: 'Check whether the scaffolding is standing firmly before climbing up.' },
+      { id: 42, cat: '1.3', de: 'die Stolpergefahr (-en)', ipa: '/diː ˈʃtɔlpɐɡəˌfaːɐ̯/', type_vi: 'Danh từ (f.)', type_en: 'Noun (f.)', vi: 'Nguy cơ vấp ngã (trên lưới thép)', en: 'Tripping hazard (on rebar mats)', rel_vi: 'stolpern (đt: vấp ngã), die Gefahr (dt: mối nguy hiểm)', rel_en: 'stolpern (v: to trip/stumble), die Gefahr (n: hazard/danger)', ex_de: 'Achte beim Laufen auf den Bewehrungsmatten auf die Stolpergefahr.', ex_vi: 'Khi đi lại trên các vỉ lưới thép, hãy chú ý nguy cơ vấp ngã.', ex_en: 'Watch out for the tripping hazard when walking across the rebar meshes.' },
+
+      // 1.4 Technical Verbs & Adjectives (14)
+      { id: 43, cat: '1.4', de: 'flechten / binden / rödeln', ipa: '/ˈflɛçtn̩/ / /ˈbɪndn̩/ / /ˈʁøːdl̩n/', type_vi: 'Động từ', type_en: 'Verb', vi: 'Buộc sắt / Xoắn dây kẽm cố định cốt thép', en: 'To tie rebar / To twist wire ties', rel_vi: 'der Flechter (dt: thợ buộc sắt), die Flechtarbeit (dt: công việc buộc sắt)', rel_en: 'der Flechter (n: rebar worker), die Flechtarbeit (n: steel-fixing work)', ex_de: 'Wir flechten jeden zweiten Kreuzungspunkt der Bewehrung fest.', ex_vi: 'Chúng ta buộc chặt cứ cách một giao điểm của lưới cốt thép.', ex_en: 'We tie every second intersection point of the reinforcement firmly.' },
+      { id: 44, cat: '1.4', de: 'verlegen / einbauen', ipa: '/fɛɐ̯ˈleːɡn̩/ / /ˈaɪnˌbaʊən/', type_vi: 'Động từ', type_en: 'Verb', vi: 'Rải thép / Lắp đặt cốt thép vào vị trí', en: 'To lay / To place and install rebar', rel_vi: 'die Verlegung (dt: sự lắp đặt), der Einbau (dt: việc lắp ghép)', rel_en: 'die Verlegung (n: installation), der Einbau (n: assembly/placement)', ex_de: 'Morgen verlegen wir die radialen Stäbe im Fundament.', ex_vi: 'Ngày mai chúng ta sẽ rải các thanh thép hướng tâm trong chân đế.', ex_en: 'Tomorrow we will lay the radial bars in the foundation.' },
+      { id: 45, cat: '1.4', de: 'biegen / abwinkeln', ipa: '/ˈbiːɡn̩/ / /ˈapˌvɪŋkl̩n/', type_vi: 'Động từ', type_en: 'Verb', vi: 'Uốn sắt / Bẻ góc thanh thép', en: 'To bend / To angle rebar', rel_vi: 'gebogen (tt: được uốn cong), der Winkel (dt: góc)', rel_en: 'gebogen (adj: bent), der Winkel (n: angle)', ex_de: 'Die Enden der Stäbe müssen nach Plan rechtwinklig abgewinkelt werden.', ex_vi: 'Các đầu thanh thép phải được bẻ vuông góc theo đúng bản vẽ.', ex_en: 'The ends of the bars must be bent at a right angle according to the plan.' },
+      { id: 46, cat: '1.4', de: 'schneiden / ablängen', ipa: '/ˈʃnaɪdn̩/ / /ˈapˌlɛŋən/', type_vi: 'Động từ', type_en: 'Verb', vi: 'Cắt sắt / Cắt theo đúng kích thước', en: 'To cut / To cut to exact length', rel_vi: 'der Schnitt (dt: vết cắt), die Länge (dt: chiều dài)', rel_en: 'der Schnitt (n: cut), die Länge (n: length)', ex_de: 'Wir haben alle Stäbe für Position 5 schon abgelängt.', ex_vi: 'Chúng ta đã cắt đủ chiều dài cho toàn bộ các thanh thép mã số 5 rồi.', ex_en: 'We have already cut all bars for position 5 to length.' },
+      { id: 47, cat: '1.4', de: 'messen / einmessen', ipa: '/ˈmɛsn̩/ / /ˈaɪnˌmɛsn̩/', type_vi: 'Động từ', type_en: 'Verb', vi: 'Đo đạc / Định vị tim cốt trên mặt bằng', en: 'To measure / To survey and lay out axes', rel_vi: 'die Messung (dt: phép đo), das Maß (dt: số đo)', rel_en: 'die Messung (n: measurement), das Maß (n: dimension)', ex_de: 'Der Polier misst jetzt die genaue Mitte vom Turmfundament ein.', ex_vi: 'Đốc công đang đo định vị chính xác tâm của chân đế tuabin.', ex_en: 'The foreman is now surveying the exact center of the tower foundation.' },
+      { id: 48, cat: '1.4', de: 'ausrichten / kontrollieren', ipa: '/ˈaʊsˌʁɪçtn̩/ / /kɔntʁoˈliːʁən/', type_vi: 'Động từ', type_en: 'Verb', vi: 'Căn chỉnh thẳng hàng / Kiểm tra nghiệm thu', en: 'To align / To inspect', rel_vi: 'gerade (tt: thẳng), die Kontrolle (dt: sự kiểm tra)', rel_en: 'gerade (adj: straight), die Kontrolle (n: inspection)', ex_de: 'Richte den Bewehrungskorb genau nach der Markierung aus.', ex_vi: 'Hãy căn chỉnh lồng cốt thép thẳng khớp với vạch đánh dấu.', ex_en: 'Align the reinforcement cage precisely with the layout mark.' },
+      { id: 49, cat: '1.4', de: 'befestigen / sichern', ipa: '/bəˈfɛstɪɡn̩/ / /ˈzɪçɐn/', type_vi: 'Động từ', type_en: 'Verb', vi: 'Cố định chắc chắn / Gia cố an toàn', en: 'To fasten / To secure', rel_vi: 'fest (tt: chắc chắn), sicher (tt: an toàn)', rel_en: 'fest (adj: tight/firm), sicher (adj: secure/safe)', ex_de: 'Befestige den Bindedraht so, dass nichts mehr verrutscht.', ex_vi: 'Hãy buộc cố định dây thép sao cho không còn gì bị xê dịch nữa.', ex_en: 'Fasten the tie wire so that nothing shifts out of place.' },
+      { id: 50, cat: '1.4', de: 'abnehmen (die Bewehrung)', ipa: '/ˈapˌneːmən/', type_vi: 'Động từ (tách)', type_en: 'Verb (separable)', vi: 'Nghiệm thu cốt thép (trước khi đổ bê tông)', en: 'To inspect and sign off (reinforcement)', rel_vi: 'die Bewehrungsabnahme (dt: lễ nghiệm thu cốt thép)', rel_en: 'die Bewehrungsabnahme (n: rebar sign-off inspection)', ex_de: 'Bevor der Beton kommt, muss der Bauleiter die Bewehrung abnehmen.', ex_vi: 'Trước khi xe bê tông tới, kỹ sư trưởng phải nghiệm thu phần cốt thép.', ex_en: 'Before the concrete arrives, the site engineer must sign off on the reinforcement.' },
+      { id: 51, cat: '1.4', de: 'betonieren / gießen', ipa: '/betoˈniːʁən/ / /ˈɡiːsn̩/', type_vi: 'Động từ', type_en: 'Verb', vi: 'Đổ bê tông', en: 'To pour concrete / To concrete', rel_vi: 'der Beton (dt: bê tông), die Betonage (dt: công tác đổ bê tông)', rel_en: 'der Beton (n: concrete), die Betonage (n: concreting)', ex_de: 'Nach der Abnahme beginnen wir sofort mit dem Betonieren.', ex_vi: 'Sau khi nghiệm thu xong, chúng ta bắt đầu đổ bê tông ngay.', ex_en: 'Right after sign-off, we start pouring concrete immediately.' },
+      { id: 52, cat: '1.4', de: 'fest / locker', ipa: '/fɛst/ / /ˈlɔkɐ/', type_vi: 'Tính từ', type_en: 'Adjective', vi: 'Chắc chắn / Lỏng lẻo', en: 'Tight / Loose', rel_vi: 'festziehen (đt: siết chặt)', rel_en: 'festziehen (v: to tighten)', ex_de: 'Dieser Knoten ist noch locker, bitte zieh ihn noch einmal fest.', ex_vi: 'Mối buộc này vẫn còn lỏng, hãy siết chặt lại một lần nữa nhé.', ex_en: 'This tie knot is still loose; please tighten it once more.' },
+      { id: 53, cat: '1.4', de: 'gerade / schief / gebogen', ipa: '/ɡəˈʁaːdə/ / /ʃiːf/ / /ɡəˈboːɡn̩/', type_vi: 'Tính từ', type_en: 'Adjective', vi: 'Thẳng / Bị lệch, nghiêng / Bị uốn cong', en: 'Straight / Crooked / Bent', rel_vi: 'begradigen (đt: nắn thẳng)', rel_en: 'begradigen (v: to straighten)', ex_de: 'Kontrolliere, ob alle vertikalen Stäbe ganz gerade stehen.', ex_vi: 'Kiểm tra xem tất cả các thanh thép đứng đã thẳng tắp chưa.', ex_en: 'Check whether all vertical bars are standing completely straight.' },
+      { id: 54, cat: '1.4', de: 'senkrecht / waagerecht', ipa: '/ˈzɛŋkˌʁɛçt/ / /ˈvaːɡəˌʁɛçt/', type_vi: 'Tính từ', type_en: 'Adjective', vi: 'Thẳng đứng / Nằm ngang', en: 'Vertical (plumb) / Horizontal (level)', rel_vi: 'die Senkrechte (dt: đường thẳng đứng)', rel_en: 'die Senkrechte (n: vertical line)', ex_de: 'Die Ankerbolzen müssen absolut senkrecht ausgerichtet sein.', ex_vi: 'Các bu-lông neo phải được căn chỉnh thẳng đứng tuyệt đối.', ex_en: 'The anchor bolts must be aligned absolutely vertically.' },
+      { id: 55, cat: '1.4', de: 'sauber / rostfrei', ipa: '/ˈzaʊbɐ/ / /ˈʁɔstˌfʁaɪ/', type_vi: 'Tính từ', type_en: 'Adjective', vi: 'Sạch sẽ / Không bị gỉ sét nặng', en: 'Clean / Free of loose rust', rel_vi: 'der Rost (dt: gỉ sét), reinigen (đt: làm sạch)', rel_en: 'der Rost (n: rust), reinigen (v: to clean)', ex_de: 'Der Betonstahl muss frei von Öl, Schmutz und losem Rost sein.', ex_vi: 'Thép cốt bê tông phải sạch dầu mỡ, bụi bẩn và không có gỉ bong tróc.', ex_en: 'Reinforcing steel must be free of oil, dirt, and loose flaking rust.' },
+      { id: 56, cat: '1.4', de: 'maßhaltig / genau', ipa: '/ˈmaːsˌhaltɪç/ / /ɡəˈnaʊ/', type_vi: 'Tính từ', type_en: 'Adjective', vi: 'Đúng kích thước chuẩn / Chính xác', en: 'Dimensionally accurate / Precise', rel_vi: 'die Maßhaltigkeit (dt: độ chuẩn xác kích thước)', rel_en: 'die Maßhaltigkeit (n: dimensional accuracy)', ex_de: 'Bei Windkraftanlagen ist eine maßhaltige Bewehrung entscheidend.', ex_vi: 'Đối với trụ điện gió, cốt thép đúng kích thước chuẩn là yếu tố quyết định.', ex_en: 'Dimensionally accurate reinforcement is critical for wind turbines.' }
+    ];
+
+    const PHRASES_DATA = [
+      // 2.1 Receiving Tasks & Reading Blueprints (9)
+      { id: 1, cat: '2.1', de: 'Was ist meine Aufgabe heute am Fundament?', vi: 'Hôm nay nhiệm vụ của tôi ở chân đế tuabin là gì?', en: 'What is my task today on the turbine foundation?' },
+      { id: 2, cat: '2.1', de: 'Welchen Bereich auf dem Bewehrungsplan machen wir zuerst?', vi: 'Chúng ta làm khu vực nào trên bản vẽ cốt thép trước?', en: 'Which section on the reinforcement drawing are we doing first?' },
+      { id: 3, cat: '2.1', de: 'Welche Positionsnummer und welchen Durchmesser brauchen wir hier?', vi: 'Chỗ này chúng ta cần thanh thép mã số mấy và đường kính bao nhiêu?', en: 'Which position number and diameter do we need here?' },
+      { id: 4, cat: '2.1', de: 'Wie groß muss der Stababstand sein?', vi: 'Khoảng cách giữa các thanh thép (bước thép) phải là bao nhiêu?', en: 'What must the bar spacing be?' },
+      { id: 5, cat: '2.1', de: 'Wie lang muss der Übergreifungsstoß sein?', vi: 'Đoạn nối chồng cốt thép phải dài bao nhiêu?', en: 'How long must the lap splice be?' },
+      { id: 6, cat: '2.1', de: 'Welche Abstandhalter nehmen wir für die Betondeckung?', vi: 'Chúng ta dùng loại con kê nào để tạo lớp bê tông bảo vệ?', en: 'Which spacers are we using for the concrete cover?' },
+      { id: 7, cat: '2.1', de: 'Soll ich jeden Knoten oder jeden zweiten Kreuzungspunkt flechten?', vi: 'Tôi nên buộc tất cả các nút hay buộc cách một giao điểm?', en: 'Should I tie every knot or every second intersection point?' },
+      { id: 8, cat: '2.1', de: 'In welchem Winkel müssen wir diese Bügel biegen?', vi: 'Chúng ta phải uốn các đai thép này theo góc bao nhiêu độ?', en: 'At what angle do we need to bend these stirrups?' },
+      { id: 9, cat: '2.1', de: 'Können Sie mir diese Stelle im Schnitt A-A kurz erklären?', vi: 'Anh/Chị có thể giải thích ngắn gọn cho tôi vị trí này ở mặt cắt A-A được không?', en: 'Could you briefly explain this spot in Section A-A to me?' },
+
+      // 2.2 Bending, Tying & Reporting Progress (7)
+      { id: 10, cat: '2.2', de: 'Ich bin mit dem Schneiden und Biegen für Position 8 fertig.', vi: 'Tôi đã cắt và uốn xong các thanh thép của mã số 8 rồi.', en: 'I am finished cutting and bending for position 8.' },
+      { id: 11, cat: '2.2', de: 'Die untere Bewehrungslage ist komplett verlegt und geflochten.', vi: 'Lớp cốt thép dưới đã được rải và buộc xong hoàn toàn.', en: 'The bottom reinforcement layer is completely laid and tied.' },
+      { id: 12, cat: '2.2', de: 'Wir haben alle Abstandhalter richtig untergelegt.', vi: 'Chúng tôi đã kê đủ tất cả con kê bê tông đúng quy cách.', en: 'We have placed all spacers properly underneath.' },
+      { id: 13, cat: '2.2', de: 'Uns fehlt noch Rundstahl Ø 20 und Bindedraht.', vi: 'Chúng tôi vẫn còn thiếu thép tròn Ø 20 và dây kẽm buộc sắt.', en: 'We still need round bars Ø 20 and tying wire.' },
+      { id: 14, cat: '2.2', de: 'Wo liegen die vorgefertigten Bewehrungskörbe?', vi: 'Các lồng cốt thép gia công sẵn được để ở đâu?', en: 'Where are the prefabricated reinforcement cages stored?' },
+      { id: 15, cat: '2.2', de: 'Der Kran kann jetzt das nächste Stahlbündel herunterlassen.', vi: 'Cần cẩu bây giờ có thể hạ bó thép tiếp theo xuống rồi.', en: 'The crane can lower the next steel bundle now.' },
+      { id: 16, cat: '2.2', de: 'Wir sind bereit für die Bewehrungsabnahme.', vi: 'Chúng tôi đã sẵn sàng cho việc nghiệm thu cốt thép.', en: 'We are ready for the reinforcement sign-off inspection.' },
+
+      // 2.3 Technical Inspection & Site Safety (7)
+      { id: 17, cat: '2.3', de: 'Hier stimmt der Stababstand noch nicht, wir müssen das korrigieren.', vi: 'Chỗ này khoảng cách thanh thép vẫn chưa đúng, chúng ta phải chỉnh lại.', en: 'The bar spacing isn’t right here yet; we need to correct it.' },
+      { id: 18, cat: '2.3', de: 'Diese Knoten sind noch zu locker, ich ziehe sie mit der Monierzange nach.', vi: 'Mấy mối buộc này vẫn còn lỏng, tôi sẽ siết chặt lại bằng kìm buộc sắt.', en: 'These knots are still too loose; I will tighten them with the concreters’ nippers.' },
+      { id: 19, cat: '2.3', de: 'Die Betondeckung zur Schalung ist hier zu gering.', vi: 'Lớp bê tông bảo vệ tính tới cốp pha ở chỗ này đang bị mỏng quá.', en: 'The concrete cover to the formwork is too thin here.' },
+      { id: 20, cat: '2.3', de: 'Achtung, der Kran schwenkt gleich mit Stahl über uns!', vi: 'Chú ý, cần cẩu sắp quay bó thép qua phía trên đầu chúng ta!', en: 'Watch out, the crane is about to swing steel overhead!' },
+      { id: 21, cat: '2.3', de: 'Bitte den Schutzhelm mit Kinnriemen und die S3-Sicherheitsschuhe tragen!', vi: 'Vui lòng đội mũ bảo hộ có cài quai cằm và mang giày bảo hộ S3!', en: 'Please wear your safety helmet with chin strap and S3 safety shoes!' },
+      { id: 22, cat: '2.3', de: 'Vorsicht beim Laufen auf der oberen Lage, Stolpergefahr!', vi: 'Cẩn thận khi đi lại trên lớp cốt thép trên, có nguy cơ vấp ngã!', en: 'Be careful walking on the top rebar layer—tripping hazard!' },
+      { id: 23, cat: '2.3', de: 'Können Sie die Bewehrung hier bitte kurz kontrollieren?', vi: 'Anh/Chị có thể kiểm tra nhanh phần cốt thép ở đây giúp tôi được không?', en: 'Could you please quickly inspect the reinforcement here?' },
+
+      // 2.4 Daily Site Talk (6)
+      { id: 24, cat: '2.4', de: 'Guten Morgen! / Schönen Feierabend!', vi: 'Chào buổi sáng! / Chúc tan ca vui vẻ!', en: 'Good morning! / Have a nice evening after work!' },
+      { id: 25, cat: '2.4', de: 'Können Sie das bitte etwas langsamer erklären?', vi: 'Anh/Chị có thể giải thích chậm lại một chút được không?', en: 'Could you please explain that a little more slowly?' },
+      { id: 26, cat: '2.4', de: 'Ich habe das nicht ganz verstanden. Können Sie es mir auf dem Plan zeigen?', vi: 'Tôi chưa hiểu rõ lắm. Anh/Chị có thể chỉ cho tôi trên bản vẽ được không?', en: 'I didn’t quite understand that. Could you show me on the drawing?' },
+      { id: 27, cat: '2.4', de: 'Alles klar, ich erledige das sofort.', vi: 'Rõ rồi, tôi sẽ làm ngay.', en: 'Understood, I will take care of that right away.' },
+      { id: 28, cat: '2.4', de: 'Kannst du mir bitte kurz helfen, diesen langen Stab zu tragen / auszurichten?', vi: 'Bạn giúp tôi một tay khiêng / căn chỉnh thanh thép dài này được không?', en: 'Can you quickly help me carry / align this long rebar?' },
+      { id: 29, cat: '2.4', de: 'Wann machen wir Frühstückspause / Mittagspause?', vi: 'Khi nào chúng ta nghỉ ăn sáng / nghỉ trưa?', en: 'When do we take our breakfast break / lunch break?' }
+    ];
+
+    const DIALOGUES_DATA = [
+      {
+        id: 1,
+        tab_vi: 'Hội thoại 1',
+        tab_en: 'Dialogue 1',
+        title_vi: 'Hội thoại 1: Nhận nhiệm vụ đầu ca & Đọc bản vẽ chân đế Tuabin',
+        title_en: 'Dialogue 1: Shift Briefing & Reading the Turbine Foundation Plan',
+        context_vi: 'Đầu giờ sáng tại khu vực thi công chân đế tuabin điện gió của BG Wind GmbH, kỹ thuật viên cốt thép (Đức) trao đổi với tổ trưởng/đốc công (Polier).',
+        context_en: 'Early morning at the BG Wind GmbH wind turbine foundation site: rebar technician (Duc) discusses tasks with the foreman (Polier).',
+        lines: [
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Guten Morgen, Meister! Was ist heute unsere Aufgabe am Turmfundament?', vi: 'Chào buổi sáng tổ trưởng! Hôm nay nhiệm vụ của chúng em ở chân đế tuabin là gì ạ?', en: 'Good morning, Supervisor! What is our task today on the tower foundation?' },
+          { role: 'partner', name_vi: 'Tổ trưởng (Polier)', name_en: 'Foreman (Polier)', de: 'Guten Morgen, Đức! Heute beginnen wir mit der unteren Bewehrungslage. Schau mal hier auf den Grundriss im Bewehrungsplan.', vi: 'Chào buổi sáng Đức! Hôm nay chúng ta bắt đầu với lớp cốt thép dưới. Cậu nhìn vào bản vẽ mặt bằng ở đây nhé.', en: 'Good morning, Duc! Today we start with the bottom reinforcement layer. Look here at the plan view in the rebar drawing.' },
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Alles klar. Welche Positionsnummer und welchen Durchmesser verlegen wir zuerst?', vi: 'Em rõ rồi. Chúng ta rải thanh thép mã số mấy và đường kính bao nhiêu trước ạ?', en: 'Understood. Which position number and diameter are we laying first?' },
+          { role: 'partner', name_vi: 'Tổ trưởng (Polier)', name_en: 'Foreman (Polier)', de: 'Zuerst Position 1, das ist Rundstahl mit 25 Millimeter Durchmesser. Der Stababstand beträgt genau 15 Zentimeter.', vi: 'Trước tiên là mã số 1, đó là thép thanh tròn đường kính 25 mm. Bước thép là chính xác 15 cm.', en: 'First position 1, which is 25-millimeter diameter round bar. The bar spacing is exactly 15 centimeters.' },
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Verstanden. Müssen wir vorher noch die Abstandhalter auf der Sauberkeitsschicht auslegen?', vi: 'Em hiểu rồi. Trước đó chúng em có cần rải con kê bê tông lên lớp bê tông lót không ạ?', en: 'Got it. Do we need to lay out the concrete spacers on the blinding layer beforehand?' },
+          { role: 'partner', name_vi: 'Tổ trưởng (Polier)', name_en: 'Foreman (Polier)', de: 'Ja, unbedingt! Wir brauchen eine Betondeckung von 50 Millimetern. Legt die Drunterleisten alle 80 Zentimeter aus.', vi: 'Có, nhất định rồi! Chúng ta cần lớp bê tông bảo vệ dày 50 mm. Các cậu đặt thanh kê cách nhau mỗi 80 cm nhé.', en: 'Yes, definitely! We need a concrete cover of 50 millimeters. Lay out the spacer bars every 80 centimeters.' },
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Super, wir fangen sofort damit an!', vi: 'Tuyệt vời, chúng em bắt đầu làm ngay đây ạ!', en: 'Great, we will start with that right away!' }
+        ]
+      },
+      {
+        id: 2,
+        tab_vi: 'Hội thoại 2',
+        tab_en: 'Dialogue 2',
+        title_vi: 'Hội thoại 2: Gia công cắt uốn sắt & Lắp đặt đai thép',
+        title_en: 'Dialogue 2: Cutting, Bending & Tying Stirrups',
+        context_vi: 'Tại khu vực máy cắt uốn, Đức hỏi tổ trưởng về thông số cắt và uốn đai thép cho lồng cốt thép chân tháp.',
+        context_en: 'At the cutting and bending station, Duc asks the foreman about cutting lengths and bending angles for tower stirrups.',
+        lines: [
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Die Stäbe für Position 1 sind alle verlegt. Jetzt brauchen wir die Steckbügel für den äußeren Ring, richtig?', vi: 'Các thanh thép mã số 1 đã rải xong hết rồi ạ. Giờ chúng ta cần các đai thép chữ U cho vòng ngoài đúng không anh?', en: 'The bars for position 1 are all laid. Now we need the U-stirrups for the outer ring, right?' },
+          { role: 'partner', name_vi: 'Tổ trưởng (Polier)', name_en: 'Foreman (Polier)', de: 'Genau. Schau in Schnitt B-B: Das ist Position 12, Durchmesser 16 Millimeter.', vi: 'Đúng vậy. Cậu xem ở mặt cắt B-B: Đó là mã số 12, đường kính 16 mm.', en: 'Exactly. Look in Section B-B: that is position 12, diameter 16 millimeters.' },
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Wie lang müssen wir die Stäbe an der Schneidemaschine ablängen und wie wird gebogen?', vi: 'Chúng em phải cắt thanh thép dài bao nhiêu trên máy cắt và uốn như thế nào ạ?', en: 'How long do we need to cut the bars on the shearing machine, and how are they bent?' },
+          { role: 'partner', name_vi: 'Tổ trưởng (Polier)', name_en: 'Foreman (Polier)', de: 'Die Gesamtlänge ist 2,40 Meter. An der Biegemaschine biegt ihr beide Enden im Winkel von 90 Grad um.', vi: 'Tổng chiều dài là 2,40 mét. Trên máy uốn sắt, các cậu uốn cả hai đầu một góc 90 độ.', en: 'The total length is 2.40 meters. On the bending machine, bend both ends at a 90-degree angle.' },
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Alles klar. Und beim Flechten: Soll ich jeden Kreuzungspunkt festbinden?', vi: 'Em rõ rồi. Còn khi buộc sắt: Em có nên buộc chặt mọi giao điểm không ạ?', en: 'Understood. And when tying: should I tie every single intersection point?' },
+          { role: 'partner', name_vi: 'Tổ trưởng (Polier)', name_en: 'Foreman (Polier)', de: 'An den Rändern und beim Übergreifungsstoß bindet ihr jeden Knoten fest. In der Fläche reicht jeder zweite Kreuzungspunkt.', vi: 'Ở các mép ngoài và chỗ nối chồng cốt thép thì buộc chặt từng nút một. Ở phần mặt phẳng bên trong thì buộc cách một giao điểm là đủ.', en: 'Along the edges and at lap splices, tie every knot tightly. Across the interior area, every second intersection is enough.' },
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Verstanden, ich stelle jetzt die Biegemaschine ein!', vi: 'Em hiểu rồi, em đi chỉnh máy uốn sắt ngay đây!', en: 'Got it, I will set up the bending machine now!' }
+        ]
+      },
+      {
+        id: 3,
+        tab_vi: 'Hội thoại 3',
+        tab_en: 'Dialogue 3',
+        title_vi: 'Hội thoại 3: Kiểm tra kỹ thuật & Nghiệm thu cốt thép trước khi đổ bê tông',
+        title_en: 'Dialogue 3: Technical Inspection & Rebar Sign-Off Before Pouring',
+        context_vi: 'Sau khi lắp dựng xong khung cốt thép và vòng neo, Đức mời tổ trưởng kiểm tra trước khi nghiệm thu.',
+        context_en: 'After assembling the rebar cage and anchor ring, Duc invites the foreman for a pre-inspection.',
+        lines: [
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Entschuldigung, haben Sie kurz Zeit? Wir sind mit dem Flechten im Sektor 2 fertig. Können Sie das bitte kontrollieren?', vi: 'Xin lỗi, anh có chút thời gian không ạ? Chúng em đã buộc xong phần cốt thép ở khu vực 2 rồi. Anh có thể kiểm tra giúp chúng em được không ạ?', en: 'Excuse me, do you have a moment? We are finished tying Sector 2. Could you please inspect it?' },
+          { role: 'partner', name_vi: 'Tổ trưởng (Polier)', name_en: 'Foreman (Polier)', de: 'Klar, schauen wir mal. Die Stababstände sehen sehr gleichmäßig aus. Habt ihr die Länge vom Übergreifungsstoß gemessen?', vi: 'Được chứ, để xem nào. Bước thép trông rất đều đặn. Các cậu đã đo chiều dài đoạn nối chồng chưa?', en: 'Sure, let’s take a look. The bar spacings look very uniform. Did you measure the lap splice length?' },
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Ja, ich habe mit dem Zollstock nachgemessen. Überall sind es mindestens 85 Zentimeter.', vi: 'Dạ rồi, em đã đo kiểm tra bằng thước gấp. Chỗ nào cũng đạt ít nhất 85 cm ạ.', en: 'Yes, I measured with the folding ruler. Everywhere it is at least 85 centimeters.' },
+          { role: 'partner', name_vi: 'Tổ trưởng (Polier)', name_en: 'Foreman (Polier)', de: 'Sehr gut! Aber schau mal hier am Rand zur Schalung: Hier fehlt noch ein Abstandhalter und zwei Knoten sind noch etwas locker.', vi: 'Rất tốt! Nhưng nhìn chỗ mép sát cốp pha này xem: Chỗ này vẫn thiếu một con kê và hai mối buộc vẫn còn hơi lỏng.', en: 'Very good! But look here at the edge near the formwork: a spacer is missing here and two tie knots are still a bit loose.' },
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Oh, das korrigiere ich sofort mit der Monierzange und setze den Abstandhalter ein.', vi: 'Ồ, em sẽ chỉnh lại ngay bằng kìm buộc sắt và lắp thêm con kê vào ạ.', en: 'Oh, I will fix that right away with the concreters’ nippers and insert the spacer.' },
+          { role: 'partner', name_vi: 'Tổ trưởng (Polier)', name_en: 'Foreman (Polier)', de: 'Prima! Danach kommt der Bauleiter zur offiziellen Bewehrungsabnahme, und morgen früh um 7 Uhr beginnen wir mit dem Betonieren.', vi: 'Tốt lắm! Sau đó kỹ sư trưởng sẽ tới nghiệm thu cốt thép chính thức, và 7 giờ sáng mai chúng ta sẽ bắt đầu đổ bê tông.', en: 'Great! After that, the site engineer will come for the official rebar sign-off, and tomorrow at 7 AM we start pouring concrete.' }
+        ]
+      },
+      {
+        id: 4,
+        tab_vi: 'Hội thoại 4',
+        tab_en: 'Dialogue 4',
+        title_vi: 'Hội thoại 4: Yêu cầu cấp thêm vật tư & An toàn dưới tầm cần cẩu',
+        title_en: 'Dialogue 4: Requesting Supplies & Crane Overhead Safety',
+        context_vi: 'Trong ca làm việc, dây kẽm buộc sắt sắp hết và cần cẩu chuẩn bị hạ lồng cốt thép mới xuống vị trí.',
+        context_en: 'Mid-shift, tie wire runs low and the crane prepares to swing a large rebar cage into position.',
+        lines: [
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Entschuldigung, mein Bindedraht ist fast leer. Wo finde ich neue Rollen?', vi: 'Xin lỗi, dây kẽm buộc sắt của em gần hết rồi ạ. Em có thể lấy cuộn mới ở đâu vậy anh?', en: 'Excuse me, my tie wire is almost out. Where can I find new rolls?' },
+          { role: 'partner', name_vi: 'Đồng nghiệp (Kollege)', name_en: 'Colleague (Kollege)', de: 'Im Materialcontainer direkt neben dem Biegetisch. Nimm dir am besten gleich zwei Rollen mit. Brauchst du sonst noch etwas?', vi: 'Ở công-ten-nơ vật tư ngay cạnh bàn uốn sắt ấy. Tốt nhất cậu lấy luôn hai cuộn mang theo. Cậu có cần thêm gì nữa không?', en: 'In the material container right next to the bending table. Best take two rolls with you right away. Do you need anything else?' },
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Ja, wir brauchen auch noch eine Kiste Abstandhalter für die 50-Millimeter-Betondeckung. Außerdem ist mein Handschuh am Daumen eingerissen.', vi: 'Có, chúng ta cũng cần thêm một thùng con kê bê tông loại 50 mm nữa. Ngoài ra găng tay của tôi cũng bị rách ở ngón cái rồi.', en: 'Yes, we also need another box of spacers for the 50-millimeter concrete cover. Also, my glove ripped at the thumb.' },
+          { role: 'partner', name_vi: 'Đồng nghiệp (Kollege)', name_en: 'Colleague (Kollege)', de: 'Neue Flechterhandschuhe bekommst du beim Polier im Baubüro. Ich hole schnell den Bindedraht und die Abstandhalter.', vi: 'Găng tay buộc sắt mới thì cậu ra chỗ tổ trưởng ở văn phòng công trường để lấy. Tôi sẽ đi lấy nhanh dây kẽm và con kê.', en: 'You can get new rebar gloves from the foreman in the site office. I’ll quickly grab the tie wire and spacers.' },
+          { role: 'partner', name_vi: 'Tổ trưởng (Polier)', name_en: 'Foreman (Polier)', de: 'Achtung Männer, der Kran schwenkt jetzt den großen Bewehrungskorb ein! Bitte alle aus dem Gefahrenbereich treten und Schutzhelm mit Kinnriemen prüfen!', vi: 'Chú ý anh em ơi, cần cẩu đang quay lồng cốt thép lớn vào đấy! Mọi người vui lòng bước ra khỏi vùng nguy hiểm và kiểm tra mũ bảo hộ cài quai cằm!', en: 'Heads up everyone, the crane is swinging the large rebar cage in now! Everyone step out of the danger zone and check your helmet chin straps!' },
+          { role: 'worker', name_vi: 'Đức', name_en: 'Duc', de: 'Alles klar, wir stehen sicher am Rand! Vielen Dank für deine Hilfe, Kollege!', vi: 'Rõ rồi ạ, chúng em đang đứng an toàn ở mép ngoài! Cảm ơn sự giúp đỡ của cậu nhé, đồng nghiệp!', en: 'All clear, we are standing safely at the perimeter! Thanks a lot for your help, buddy!' }
+        ]
+      }
+    ];
+
+    // =========================================================================
+    // 3. APPLICATION STATE & PERSISTENCE (localStorage)
+    // =========================================================================
+    const state = {
+      lang: localStorage.getItem('fd_lang') || 'vi',
+      activeTab: 'vocab',
+      globalVoice: sanitizeVoiceId(localStorage.getItem('fd_globalVoice'), 'piper_hochdeutsch'),
+      workerVoice: sanitizeVoiceId(localStorage.getItem('fd_workerVoice'), 'piper_hochdeutsch'),
+      partnerVoice: sanitizeVoiceId(localStorage.getItem('fd_partnerVoice'), 'piper_rostock'),
+      speed: parseFloat(localStorage.getItem('fd_speed')) || 1.0,
+      vocabCategory: 'all',
+      vocabQuery: '',
+      phraseCategory: 'all',
+      activeDialogueId: 1,
+      fcCategory: 'all',
+      fcDeck: [...VOCAB_DATA],
+      fcIndex: 0,
+      fcFlipped: false,
+      masteredIds: JSON.parse(localStorage.getItem('fd_mastered_thobuocsat') || '[]'),
+      voiceDrawerOpen: false
+    };
+
+    const audioCtrl = {
+      element: null,
+      activeBtnId: null,
+      isFullDialoguePlaying: false,
+      dialogueStopFlag: false,
+      toastTimer: null
+    };
+
+    function t(key) {
+      return (I18N[state.lang] && I18N[state.lang][key]) || I18N.vi[key] || key;
+    }
+
+    function getVoiceObj(voiceId) {
+      return VOICE_CATALOG.find(v => v.id === voiceId) || VOICE_CATALOG[0];
+    }
+
+    function showToast(msg) {
+      const box = document.getElementById('statusToast');
+      const txt = document.getElementById('statusToastText');
+      if (!box || !txt) return;
+      txt.textContent = msg;
+      box.classList.remove('hidden');
+      clearTimeout(audioCtrl.toastTimer);
+      audioCtrl.toastTimer = setTimeout(() => {
+        box.classList.add('hidden');
+      }, 3000);
+    }
+
+    // =========================================================================
+    // 4. AUDIO ENGINE WITH FALLBACK (audio/thobuocsat/<voice>/<file>)
+    // =========================================================================
+    function syncPlayingButtonUI() {
+      document.querySelectorAll('[data-audio-btn]').forEach(btn => {
+        const id = btn.getAttribute('data-audio-btn');
+        const isCurrent = audioCtrl.activeBtnId === id;
+        const iconPlay = btn.querySelector('.icon-play');
+        const iconStop = btn.querySelector('.icon-stop');
+        if (isCurrent) {
+          btn.classList.add('btn-playing');
+          if (iconPlay) iconPlay.classList.add('hidden');
+          if (iconStop) iconStop.classList.remove('hidden');
+        } else {
+          btn.classList.remove('btn-playing');
+          if (iconPlay) iconPlay.classList.remove('hidden');
+          if (iconStop) iconStop.classList.add('hidden');
+        }
+      });
+
+      const fullBtn = document.getElementById('playFullDialogueBtn');
+      if (fullBtn) {
+        if (audioCtrl.isFullDialoguePlaying) {
+          fullBtn.classList.add('bg-red-600', 'hover:bg-red-700');
+          fullBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+          fullBtn.innerHTML = `<span>■</span> <span>${t('stopFullDialogue')}</span>`;
+        } else {
+          fullBtn.classList.remove('bg-red-600', 'hover:bg-red-700');
+          fullBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
+          fullBtn.innerHTML = `<span>▶</span> <span>${t('playFullDialogue')}</span>`;
+        }
+      }
+
+      document.querySelectorAll('[data-preview-btn]').forEach(btn => {
+        const isPrev = audioCtrl.activeBtnId === 'preview_sample';
+        if (isPrev) {
+          btn.classList.add('bg-red-600', 'text-white');
+          btn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+          btn.innerHTML = `<span>■</span> <span>${t('stopPreviewBtn')}</span>`;
+        } else {
+          btn.classList.remove('bg-red-600');
+          btn.classList.add('bg-blue-600', 'hover:bg-blue-700', 'text-white');
+          btn.innerHTML = `<span>🔊</span> <span>${t('previewVoiceBtn')}</span>`;
+        }
+      });
+    }
+
+    function stopAllAudio(resetDialogue = true) {
+      if (resetDialogue) {
+        audioCtrl.dialogueStopFlag = true;
+        audioCtrl.isFullDialoguePlaying = false;
+      }
+      if (audioCtrl.element) {
+        audioCtrl.element.pause();
+        audioCtrl.element.src = '';
+        audioCtrl.element = null;
+      }
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      audioCtrl.activeBtnId = null;
+      document.querySelectorAll('.dialogue-line-active').forEach(el => {
+        el.classList.remove('dialogue-line-active', 'ring-2', 'ring-blue-500', 'bg-blue-50/70');
+      });
+      syncPlayingButtonUI();
+    }
+
+    function playAudioWithFallback(fileName, fallbackText, voiceId, btnId, onEndedCallback = null) {
+      if (audioCtrl.activeBtnId === btnId) {
+        stopAllAudio(true);
+        return;
+      }
+
+      stopAllAudio(false);
+      audioCtrl.activeBtnId = btnId;
+      syncPlayingButtonUI();
+
+      const chain = [voiceId, 'piper_hochdeutsch', 'edge_hochdeutsch'].filter((v, idx, arr) => v && arr.indexOf(v) === idx);
+      let attemptIdx = 0;
+
+      const finishPlayback = () => {
+        audioCtrl.activeBtnId = null;
+        audioCtrl.element = null;
+        syncPlayingButtonUI();
+        if (onEndedCallback) onEndedCallback();
+      };
+
+      const tryNextSource = () => {
+        if (attemptIdx >= chain.length) {
+          if ('speechSynthesis' in window && fallbackText) {
+            const utter = new SpeechSynthesisUtterance(fallbackText);
+            utter.lang = 'de-DE';
+            utter.rate = state.speed;
+            utter.onend = finishPlayback;
+            utter.onerror = finishPlayback;
+            window.speechSynthesis.speak(utter);
+          } else {
+            finishPlayback();
+          }
+          return;
+        }
+
+        const currentVoice = chain[attemptIdx];
+        const src = `${AUDIO_BASE_PATH}/${currentVoice}/${fileName}`;
+        const audio = new Audio(src);
+        audio.playbackRate = state.speed;
+        audioCtrl.element = audio;
+
+        audio.onended = finishPlayback;
+        audio.onerror = () => {
+          if (attemptIdx === 0 && currentVoice !== 'piper_hochdeutsch') {
+            showToast(t('fallbackNotice'));
+          }
+          attemptIdx++;
+          tryNextSource();
+        };
+
+        audio.play().catch(() => {
+          attemptIdx++;
+          tryNextSource();
+        });
+      };
+
+      tryNextSource();
+    }
+
+    async function toggleFullDialogue() {
+      if (audioCtrl.isFullDialoguePlaying) {
+        stopAllAudio(true);
+        return;
+      }
+      const dlg = DIALOGUES_DATA.find(d => d.id === state.activeDialogueId);
+      if (!dlg) return;
+
+      stopAllAudio(true);
+      audioCtrl.isFullDialoguePlaying = true;
+      audioCtrl.dialogueStopFlag = false;
+      syncPlayingButtonUI();
+
+      for (let i = 0; i < dlg.lines.length; i++) {
+        if (audioCtrl.dialogueStopFlag) break;
+        const line = dlg.lines[i];
+        const lineNum = i + 1;
+        const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+        const voice = line.role === 'worker' ? state.workerVoice : state.partnerVoice;
+
+        document.querySelectorAll('.dialogue-line-active').forEach(el => {
+          el.classList.remove('dialogue-line-active', 'ring-2', 'ring-blue-500', 'bg-blue-50/70');
+        });
+        const rowEl = document.getElementById(`row_${btnId}`);
+        if (rowEl) {
+          rowEl.classList.add('dialogue-line-active', 'ring-2', 'ring-blue-500', 'bg-blue-50/70');
+          rowEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        await new Promise(resolve => {
+          playAudioWithFallback(`dialog_${dlg.id}_line_${lineNum}.mp3`, line.de, voice, btnId, resolve);
+        });
+
+        if (!audioCtrl.dialogueStopFlag && i < dlg.lines.length - 1) {
+          await new Promise(r => setTimeout(r, 350));
+        }
+      }
+
+      stopAllAudio(true);
+    }
+
+    // =========================================================================
+    // 5. VOICE DRAWER / POPOVER CONTROLS
+    // =========================================================================
+    function buildVoiceOptionsHTML(selectedId) {
+      const groups = {};
+      VOICE_CATALOG.forEach(v => {
+        const g = state.lang === 'en' ? v.group_en : v.group_vi;
+        if (!groups[g]) groups[g] = [];
+        groups[g].push(v);
+      });
+      return Object.entries(groups).map(([groupLabel, items]) => `
+        <optgroup label="${groupLabel}">
+          ${items.map(v => `
+            <option value="${v.id}" ${v.id === selectedId ? 'selected' : ''}>
+              ${state.lang === 'en' ? v.label_en : v.label_vi}
+            </option>
+          `).join('')}
+        </optgroup>
+      `).join('');
+    }
+
+    function renderVoiceForms() {
+      const formHTML = `
+        <div class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t('selectVoiceLabel')}</label>
+            <select onchange="setGlobalVoice(this.value)"
+              class="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              ${buildVoiceOptionsHTML(state.globalVoice)}
+            </select>
+          </div>
+
+          <button type="button" data-preview-btn onclick="playAudioWithFallback('sample.mp3', 'Guten Tag! Willkommen bei BG Wind GmbH.', state.globalVoice, 'preview_sample')"
+            class="w-full h-10 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer">
+            <span>🔊</span> <span>${t('previewVoiceBtn')}</span>
+          </button>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t('speedLabel')}</label>
+            <div class="grid grid-cols-3 gap-1.5 bg-slate-100 p-1 rounded-xl">
+              ${[
+                { val: 0.75, label: t('speedSlow') },
+                { val: 1.0, label: t('speedNormal') },
+                { val: 1.25, label: t('speedFast') }
+              ].map(sp => `
+                <button type="button" onclick="setPlaybackSpeed(${sp.val})"
+                  class="h-9 rounded-lg text-xs font-bold transition cursor-pointer ${state.speed === sp.val ? 'bg-amber-500 text-slate-950 shadow-xs' : 'text-slate-600 hover:text-slate-900'}">
+                  ${sp.label}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+
+      const dForm = document.getElementById('desktopVoiceForm');
+      const mForm = document.getElementById('mobileVoiceForm');
+      if (dForm) dForm.innerHTML = formHTML;
+      if (mForm) mForm.innerHTML = formHTML;
+
+      const vObj = getVoiceObj(state.globalVoice);
+      const shortName = state.lang === 'en' ? vObj.short_en : vObj.short_vi;
+      const pill = document.getElementById('voicePillLabel');
+      if (pill) pill.textContent = `${shortName} • ${state.speed}x`;
+
+      const wSel = document.getElementById('workerVoiceSelect');
+      const pSel = document.getElementById('partnerVoiceSelect');
+      if (wSel) wSel.innerHTML = buildVoiceOptionsHTML(state.workerVoice);
+      if (pSel) pSel.innerHTML = buildVoiceOptionsHTML(state.partnerVoice);
+
+      syncPlayingButtonUI();
+    }
+
+    function toggleVoiceDrawer() {
+      state.voiceDrawerOpen = !state.voiceDrawerOpen;
+      const popover = document.getElementById('desktopVoicePopover');
+      const sheet = document.getElementById('mobileVoiceSheet');
+      const backdrop = document.getElementById('mobileVoiceBackdrop');
+
+      if (state.voiceDrawerOpen) {
+        renderVoiceForms();
+        popover.classList.remove('md:hidden');
+        popover.classList.add('md:block');
+        sheet.classList.remove('hidden');
+        backdrop.classList.remove('hidden');
+      } else {
+        closeVoiceDrawer();
+      }
+    }
+
+    function closeVoiceDrawer() {
+      state.voiceDrawerOpen = false;
+      const popover = document.getElementById('desktopVoicePopover');
+      const sheet = document.getElementById('mobileVoiceSheet');
+      const backdrop = document.getElementById('mobileVoiceBackdrop');
+      popover.classList.add('md:hidden');
+      popover.classList.remove('md:block');
+      sheet.classList.add('hidden');
+      backdrop.classList.add('hidden');
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!state.voiceDrawerOpen) return;
+      const popover = document.getElementById('desktopVoicePopover');
+      const trigger = document.getElementById('voiceTriggerBtn');
+      const sheet = document.getElementById('mobileVoiceSheet');
+      if (!popover.contains(e.target) && !trigger.contains(e.target) && !sheet.contains(e.target)) {
+        closeVoiceDrawer();
+      }
+    });
+
+    function setGlobalVoice(voiceId) {
+      state.globalVoice = voiceId;
+      localStorage.setItem('fd_globalVoice', voiceId);
+      renderVoiceForms();
+    }
+
+    function updateDialogueVoice(role, voiceId) {
+      if (role === 'worker') {
+        state.workerVoice = voiceId;
+        localStorage.setItem('fd_workerVoice', voiceId);
+      } else {
+        state.partnerVoice = voiceId;
+        localStorage.setItem('fd_partnerVoice', voiceId);
+      }
+    }
+
+    function setPlaybackSpeed(newSpeed) {
+      state.speed = newSpeed;
+      localStorage.setItem('fd_speed', String(newSpeed));
+      if (audioCtrl.element) {
+        audioCtrl.element.playbackRate = newSpeed;
+      }
+      renderVoiceForms();
+    }
+
+    // =========================================================================
+    // 6. SMART NORMALIZATION & RENDERERS (100% VI <-> EN)
+    // =========================================================================
+    function normalizeSearch(str) {
+      return (str || '')
+        .toLowerCase()
+        .replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/ü/g, 'u').replace(/ß/g, 'ss')
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/đ/g, 'd');
+    }
+
+    function renderNavigation() {
+      const tabs = [
+        { id: 'vocab', dLabel: t('nav_vocab_desktop'), mLabel: t('nav_vocab_mobile'), icon: 'M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25' },
+        { id: 'phrases', dLabel: t('nav_phrases_desktop'), mLabel: t('nav_phrases_mobile'), icon: 'M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z' },
+        { id: 'dialogues', dLabel: t('nav_dialogues_desktop'), mLabel: t('nav_dialogues_mobile'), icon: 'M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155' },
+        { id: 'flashcards', dLabel: t('nav_flashcards_desktop'), mLabel: t('nav_flashcards_mobile'), icon: 'M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3' }
+      ];
+
+      document.getElementById('desktopNav').innerHTML = tabs.map(tab => `
+        <button type="button" onclick="switchTab('${tab.id}')"
+          class="px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${state.activeTab === tab.id ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-300 hover:text-white hover:bg-slate-700/60'}">
+          ${tab.dLabel}
+        </button>
+      `).join('');
+
+      document.getElementById('mobileNavGrid').innerHTML = tabs.map(tab => {
+        const active = state.activeTab === tab.id;
+        return `
+          <button type="button" onclick="switchTab('${tab.id}')"
+            class="flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition cursor-pointer ${active ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}">
+            <svg class="w-5 h-5 ${active ? 'stroke-[2.3]' : 'stroke-[1.8]'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="${tab.icon}" />
+            </svg>
+            <span>${tab.mLabel}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function switchTab(tabId) {
+      state.activeTab = tabId;
+      ['vocab', 'phrases', 'dialogues', 'flashcards'].forEach(id => {
+        const el = document.getElementById(`section-${id}`);
+        if (el) el.classList.toggle('hidden', id !== tabId);
+      });
+      renderNavigation();
+      if (tabId === 'flashcards') renderFlashcard();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function speakBtnHTML(btnId, sizeClass = 'w-11 h-11') {
+      return `
+        <button type="button" data-audio-btn="${btnId}"
+          class="${sizeClass} shrink-0 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200/80 flex items-center justify-center transition cursor-pointer active:scale-95"
+          aria-label="Play audio">
+          <svg class="icon-play w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+          </svg>
+          <span class="icon-stop hidden text-xs font-extrabold">■</span>
+        </button>
+      `;
+    }
+
+    function renderVocab() {
+      const cats = [
+        { id: 'all', label: t('cat_all') },
+        { id: '1.1', label: t('cat_1_1') },
+        { id: '1.2', label: t('cat_1_2') },
+        { id: '1.3', label: t('cat_1_3') },
+        { id: '1.4', label: t('cat_1_4') }
+      ];
+
+      document.getElementById('vocabCategoryPills').innerHTML = cats.map(c => `
+        <button type="button" onclick="setVocabCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.vocabCategory === c.id ? 'bg-blue-600 text-white shadow-xs' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}">
+          ${c.label}
+        </button>
+      `).join('');
+
+      const q = normalizeSearch(state.vocabQuery);
+      const filtered = VOCAB_DATA.filter(item => {
+        const matchCat = state.vocabCategory === 'all' || item.cat === state.vocabCategory;
+        if (!matchCat) return false;
+        if (!q) return true;
+        const haystack = normalizeSearch(`${item.de} ${item.vi} ${item.en} ${item.rel_vi} ${item.rel_en} ${item.ex_de}`);
+        return haystack.includes(q);
+      });
+
+      const grid = document.getElementById('vocabGrid');
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div class="col-span-full bg-white rounded-2xl p-8 text-center text-sm text-slate-500 border border-slate-200">${t('noResults')}</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => {
+        const typeStr = state.lang === 'en' ? item.type_en : item.type_vi;
+        const meaningStr = state.lang === 'en' ? item.en : item.vi;
+        const relStr = state.lang === 'en' ? item.rel_en : item.rel_vi;
+        const exTrans = state.lang === 'en' ? item.ex_en : item.ex_vi;
+        const wordBtnId = `vocab_${item.id}_word`;
+        const exBtnId = `vocab_${item.id}_ex`;
+
+        return `
+          <article class="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex flex-col justify-between gap-3.5">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">${item.de}</h2>
+                    <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-100">${typeStr}</span>
+                  </div>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">${item.ipa}</p>
+                  <p class="text-sm sm:text-base font-bold text-emerald-700 mt-1.5">${meaningStr}</p>
+                </div>
+                <div onclick="playAudioWithFallback('vocab_${item.id}_word.mp3', '${item.de.replace(/'/g, "\\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, 'w-11 h-11')}
+                </div>
+              </div>
+
+              <div class="mt-2.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                <span class="font-semibold text-slate-700">${t('relatedPrefix')}</span> ${relStr}
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/60 flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <p class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">${item.ex_de}</p>
+                <p class="text-xs text-slate-600 italic mt-0.5 leading-snug">${exTrans}</p>
+              </div>
+              <div onclick="playAudioWithFallback('vocab_${item.id}_ex.mp3', '${item.ex_de.replace(/'/g, "\\'")}', state.globalVoice, '${exBtnId}')">
+                ${speakBtnHTML(exBtnId, 'w-11 h-11 bg-amber-100/80 hover:bg-amber-200/80 text-amber-800 border-amber-200')}
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      syncPlayingButtonUI();
+    }
+
+    function setVocabCategory(cat) {
+      state.vocabCategory = cat;
+      renderVocab();
+    }
+
+    function handleVocabSearch(val) {
+      state.vocabQuery = val;
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (clearBtn) {
+        clearBtn.classList.toggle('hidden', !val);
+        clearBtn.classList.toggle('flex', Boolean(val));
+      }
+      renderVocab();
+    }
+
+    function clearVocabSearch() {
+      const input = document.getElementById('vocabSearchInput');
+      if (input) input.value = '';
+      handleVocabSearch('');
+    }
+
+    function renderPhrases() {
+      const cats = [
+        { id: 'all', label: t('pcat_all') },
+        { id: '2.1', label: t('pcat_2_1') },
+        { id: '2.2', label: t('pcat_2_2') },
+        { id: '2.3', label: t('pcat_2_3') },
+        { id: '2.4', label: t('pcat_2_4') }
+      ];
+
+      document.getElementById('phraseCategoryPills').innerHTML = cats.map(c => `
+        <button type="button" onclick="setPhraseCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.phraseCategory === c.id ? 'bg-blue-600 text-white shadow-xs' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}">
+          ${c.label}
+        </button>
+      `).join('');
+
+      const filtered = PHRASES_DATA.filter(p => state.phraseCategory === 'all' || p.cat === state.phraseCategory);
+      document.getElementById('phrasesList').innerHTML = filtered.map(p => {
+        const trans = state.lang === 'en' ? p.en : p.vi;
+        const btnId = `phrase_${p.id}`;
+        return `
+          <div class="bg-white rounded-2xl p-4 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex items-center justify-between gap-3.5">
+            <div class="min-w-0">
+              <span class="inline-block text-[11px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md mb-1">${p.cat}</span>
+              <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${p.de}</p>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">${trans}</p>
+            </div>
+            <div onclick="playAudioWithFallback('phrase_${p.id}.mp3', '${p.de.replace(/'/g, "\\'")}', state.globalVoice, '${btnId}')">
+              ${speakBtnHTML(btnId, 'w-11 h-11')}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      syncPlayingButtonUI();
+    }
+
+    function setPhraseCategory(cat) {
+      state.phraseCategory = cat;
+      renderPhrases();
+    }
+
+    function renderDialogues() {
+      document.getElementById('dialogueTabs').innerHTML = DIALOGUES_DATA.map(d => {
+        const label = state.lang === 'en' ? d.tab_en : d.tab_vi;
+        const active = d.id === state.activeDialogueId;
+        return `
+          <button type="button" onclick="selectDialogue(${d.id})"
+            class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition cursor-pointer ${active ? 'bg-slate-900 text-white shadow-xs' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}">
+            ${label}
+          </button>
+        `;
+      }).join('');
+
+      const dlg = DIALOGUES_DATA.find(d => d.id === state.activeDialogueId) || DIALOGUES_DATA[0];
+      const title = state.lang === 'en' ? dlg.title_en : dlg.title_vi;
+      const context = state.lang === 'en' ? dlg.context_en : dlg.context_vi;
+
+      document.getElementById('dialogueContainer').innerHTML = `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-slate-900">${title}</h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">${context}</p>
+          </div>
+          <button id="playFullDialogueBtn" type="button" onclick="toggleFullDialogue()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 shadow-xs transition cursor-pointer">
+            <span>▶</span> <span>${t('playFullDialogue')}</span>
+          </button>
+        </div>
+
+        <div class="space-y-3">
+          ${dlg.lines.map((line, idx) => {
+            const lineNum = idx + 1;
+            const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+            const speakerName = state.lang === 'en' ? line.name_en : line.name_vi;
+            const lineTrans = state.lang === 'en' ? line.en : line.vi;
+            const isWorker = line.role === 'worker';
+            const voiceForLine = isWorker ? state.workerVoice : state.partnerVoice;
+
+            return `
+              <div id="row_${btnId}" class="p-3.5 sm:p-4 rounded-2xl border transition flex items-start justify-between gap-3 ${isWorker ? 'bg-slate-50/90 border-slate-200/80' : 'bg-amber-50/50 border-amber-200/60'}">
+                <div class="min-w-0">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold mb-1 ${isWorker ? 'bg-blue-100 text-blue-800' : 'bg-amber-200/80 text-amber-900'}">
+                    ${speakerName}
+                  </span>
+                  <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${line.de}</p>
+                  <p class="text-xs sm:text-sm text-slate-600 mt-1">${lineTrans}</p>
+                </div>
+                <div onclick="playAudioWithFallback('dialog_${dlg.id}_line_${lineNum}.mp3', '${line.de.replace(/'/g, "\\'")}', '${voiceForLine}', '${btnId}')">
+                  ${speakBtnHTML(btnId, 'w-11 h-11')}
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+
+      syncPlayingButtonUI();
+    }
+
+    function selectDialogue(id) {
+      stopAllAudio(true);
+      state.activeDialogueId = id;
+      renderDialogues();
+    }
+
+    function renderFlashcardControls() {
+      const opts = [
+        { id: 'all', label: t('fcAllCategories') },
+        { id: '1.1', label: t('cat_1_1') },
+        { id: '1.2', label: t('cat_1_2') },
+        { id: '1.3', label: t('cat_1_3') },
+        { id: '1.4', label: t('cat_1_4') }
+      ];
+      document.getElementById('fcCategorySelect').innerHTML = opts.map(o => `
+        <option value="${o.id}" ${o.id === state.fcCategory ? 'selected' : ''}>${o.label}</option>
+      `).join('');
+    }
+
+    function renderFlashcard() {
+      renderFlashcardControls();
+      if (state.fcDeck.length === 0) state.fcDeck = [...VOCAB_DATA];
+      if (state.fcIndex >= state.fcDeck.length) state.fcIndex = 0;
+
+      const card = state.fcDeck[state.fcIndex];
+      const typeStr = state.lang === 'en' ? card.type_en : card.type_vi;
+      const meaningStr = state.lang === 'en' ? card.en : card.vi;
+      const relStr = state.lang === 'en' ? card.rel_en : card.rel_vi;
+      const exTrans = state.lang === 'en' ? card.ex_en : card.ex_vi;
+      const isMastered = state.masteredIds.includes(card.id);
+
+      document.getElementById('fcCounter').textContent = `${state.fcIndex + 1} / ${state.fcDeck.length}`;
+
+      const masterBtn = document.getElementById('fcMasterBtn');
+      if (isMastered) {
+        masterBtn.className = 'h-11 px-4 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-bold shadow-xs flex items-center gap-1.5 transition cursor-pointer';
+        masterBtn.innerHTML = `<span>✓</span> <span>${t('fcMastered')}</span>`;
+      } else {
+        masterBtn.className = 'h-11 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-semibold shadow-xs flex items-center gap-1.5 transition cursor-pointer';
+        masterBtn.innerHTML = `<span>○</span> <span>${t('fcMarkMastered')}</span>`;
+      }
+
+      const wordBtnId = `fc_word_${card.id}`;
+      const exBtnId = `fc_ex_${card.id}`;
+
+      document.getElementById('flashcardStage').innerHTML = `
+        <div onclick="flipFlashcard()" class="relative w-full min-h-[310px] sm:min-h-[340px] cursor-pointer select-none">
+          <div class="w-full min-h-[310px] sm:min-h-[340px] transform-style-3d ${state.fcFlipped ? 'rotate-y-180' : ''}">
+            
+            <!-- FRONT -->
+            <div class="absolute inset-0 backface-hidden bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 flex flex-col items-center justify-between text-center">
+              <div class="w-full flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-blue-50 text-blue-700">${typeStr}</span>
+                <div onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, 'w-11 h-11')}
+                </div>
+              </div>
+
+              <div class="my-auto py-4">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${card.de}</h2>
+                <p class="text-sm font-mono text-slate-400 mt-2">${card.ipa}</p>
+              </div>
+
+              <p class="text-xs font-medium text-slate-400">${t('fcFrontHint')}</p>
+            </div>
+
+            <!-- BACK -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-800 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <p class="text-xs font-semibold text-amber-400 uppercase tracking-wider">${card.de}</p>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-1">${meaningStr}</h3>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\\'")}', state.globalVoice, '${wordBtnId}')"
+                    class="h-10 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shrink-0 cursor-pointer">
+                    <span>🔊</span> <span>${t('fcWordBtn')}</span>
+                  </button>
+                </div>
+
+                <p class="text-xs text-slate-300 bg-slate-800/80 p-3 rounded-xl mt-3 leading-relaxed">
+                  <span class="font-semibold text-amber-300">${t('relatedPrefix')}</span> ${relStr}
+                </p>
+
+                <div class="mt-3 p-3.5 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="text-xs sm:text-sm font-semibold text-white leading-snug">${card.ex_de}</p>
+                    <p class="text-xs text-slate-300 italic mt-1">${exTrans}</p>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_ex.mp3', '${card.ex_de.replace(/'/g, "\\'")}', state.globalVoice, '${exBtnId}')"
+                    class="w-11 h-11 shrink-0 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center justify-center font-bold cursor-pointer">
+                    🔊
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-center text-xs text-slate-400 mt-3">${t('fcBackHint')}</p>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+      syncPlayingButtonUI();
+    }
+
+    function flipFlashcard() {
+      state.fcFlipped = !state.fcFlipped;
+      renderFlashcard();
+    }
+
+    function nextFlashcard() {
+      state.fcFlipped = false;
+      state.fcIndex = (state.fcIndex + 1) % state.fcDeck.length;
+      renderFlashcard();
+    }
+
+    function prevFlashcard() {
+      state.fcFlipped = false;
+      state.fcIndex = (state.fcIndex - 1 + state.fcDeck.length) % state.fcDeck.length;
+      renderFlashcard();
+    }
+
+    function setFlashcardCategory(cat) {
+      state.fcCategory = cat;
+      state.fcFlipped = false;
+      state.fcIndex = 0;
+      state.fcDeck = cat === 'all' ? [...VOCAB_DATA] : VOCAB_DATA.filter(v => v.cat === cat);
+      renderFlashcard();
+    }
+
+    function shuffleFlashcards() {
+      for (let i = state.fcDeck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [state.fcDeck[i], state.fcDeck[j]] = [state.fcDeck[j], state.fcDeck[i]];
+      }
+      state.fcIndex = 0;
+      state.fcFlipped = false;
+      renderFlashcard();
+    }
+
+    function toggleFlashcardMastered() {
+      const card = state.fcDeck[state.fcIndex];
+      if (!card) return;
+      const idx = state.masteredIds.indexOf(card.id);
+      if (idx >= 0) {
+        state.masteredIds.splice(idx, 1);
+      } else {
+        state.masteredIds.push(card.id);
+      }
+      localStorage.setItem('fd_mastered_thobuocsat', JSON.stringify(state.masteredIds));
+      renderFlashcard();
+    }
+
+    // =========================================================================
+    // 7. LANGUAGE SWITCHER (100% UI + CONTENT LOCALIZATION)
+    // =========================================================================
+    function setLanguage(lang) {
+      state.lang = lang;
+      localStorage.setItem('fd_lang', lang);
+      document.documentElement.lang = lang;
+
+      const viBtn = document.getElementById('langBtnVi');
+      const enBtn = document.getElementById('langBtnEn');
+      if (lang === 'vi') {
+        viBtn.className = 'h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs';
+        enBtn.className = 'h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white';
+      } else {
+        enBtn.className = 'h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs';
+        viBtn.className = 'h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white';
+      }
+
+      document.getElementById('backHomeText').textContent = t('backHomeText');
+      document.getElementById('brandTitle').textContent = t('brandTitle');
+      document.getElementById('popoverTitle').textContent = t('voiceSettingsTitle');
+      document.getElementById('sheetTitle').textContent = t('voiceSettingsTitle');
+      document.getElementById('vocabSearchInput').placeholder = t('searchPlaceholder');
+      document.getElementById('workerVoiceLabel').textContent = t('workerVoiceLabel');
+      document.getElementById('partnerVoiceLabel').textContent = t('partnerVoiceLabel');
+      document.getElementById('fcShuffleText').textContent = t('fcShuffle');
+      document.getElementById('fcPrevText').textContent = t('fcPrev');
+      document.getElementById('fcNextText').textContent = t('fcNext');
+      document.getElementById('fcShortcutHint').textContent = t('fcShortcutHint');
+
+      renderNavigation();
+      renderVoiceForms();
+      renderVocab();
+      renderPhrases();
+      renderDialogues();
+      renderFlashcard();
+    }
+
+    // =========================================================================
+    // 8. KEYBOARD SHORTCUTS
+    // =========================================================================
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && state.voiceDrawerOpen) {
+        closeVoiceDrawer();
+        return;
+      }
+      if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+      if (state.activeTab !== 'flashcards') return;
+
+      const card = state.fcDeck[state.fcIndex];
+      if (!card) return;
+
+      if (e.code === 'Space') {
+        e.preventDefault();
+        flipFlashcard();
+      } else if (e.key === 'ArrowRight') {
+        nextFlashcard();
+      } else if (e.key === 'ArrowLeft') {
+        prevFlashcard();
+      } else if (e.key.toLowerCase() === 's') {
+        playAudioWithFallback(`vocab_${card.id}_word.mp3`, card.de, state.globalVoice, `fc_word_${card.id}`);
+      } else if (e.key.toLowerCase() === 'e') {
+        playAudioWithFallback(`vocab_${card.id}_ex.mp3`, card.ex_de, state.globalVoice, `fc_ex_${card.id}`);
+      }
+    });
+
+    // =========================================================================
+    // 9. INITIALIZE APP
+    // =========================================================================
+    setLanguage(state.lang);
+  </script>
+</body>
+</html>
