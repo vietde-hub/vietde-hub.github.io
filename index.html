@@ -107,7 +107,7 @@
         <div
           class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3.5 lg:gap-6"
         >
-          <!-- Left: Title + Full Subtitle (2-line safe container) -->
+          <!-- Left: Title + Full Subtitle -->
           <div class="min-w-0 flex-1 space-y-1">
             <div
               class="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-amber-300"
@@ -116,21 +116,21 @@
                 class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"
               ></span>
               <span id="heroBadge"
-                >Cổng đào tạo Tiếng Đức Chuyên Ngành & Kỹ Năng Sống</span
+                >Cổng đào tạo Tiếng Đức Đời Sống & Chuyên Ngành</span
               >
             </div>
             <h1
               id="heroTitle"
               class="text-lg sm:text-xl lg:text-2xl font-extrabold tracking-tight leading-snug text-white"
             >
-              Tiếng Đức Thực Chiến Cho Kỹ Thuật Viên Tại Đức
+              Tiếng Đức Hòa Nhập & Nghề Nghiệp Tại Đức
             </h1>
             <p
               id="heroSubtitle"
               class="text-xs sm:text-[13px] text-slate-300 leading-relaxed max-w-3xl"
             >
-              Từ vựng nhà xưởng, mẫu câu giao tiếp công trường và hội thoại
-              luyện nghe AI đa giọng dành cho đội ngũ BG Wind GmbH.
+              Hành trang đời sống (Anmeldung, ngân hàng, siêu thị, tàu xe, y tế)
+              và tiếng Đức thực chiến tại xưởng/công trường BG Wind GmbH.
             </p>
           </div>
 
@@ -142,12 +142,12 @@
               <span
                 id="statTradesVal"
                 class="text-sm sm:text-base font-extrabold text-emerald-400 leading-none"
-                >2/4</span
+                >3/4</span
               >
               <span
                 id="statTradesLabel"
                 class="text-[10px] sm:text-xs font-medium text-slate-300 mt-1 sm:mt-0 leading-tight"
-                >Ngành sẵn sàng</span
+                >Chuyên mục sẵn sàng</span
               >
             </div>
 
@@ -157,7 +157,7 @@
               <span
                 id="statTermsVal"
                 class="text-sm sm:text-base font-extrabold text-amber-400 leading-none"
-                >140</span
+                >230</span
               >
               <span
                 id="statTermsLabel"
@@ -172,12 +172,12 @@
               <span
                 id="statDialoguesVal"
                 class="text-sm sm:text-base font-extrabold text-sky-400 leading-none"
-                >10</span
+                >16</span
               >
               <span
                 id="statDialoguesLabel"
                 class="text-[10px] sm:text-xs font-medium text-slate-300 mt-1 sm:mt-0 leading-tight"
-                >Hội thoại xưởng</span
+                >Hội thoại thực tế</span
               >
             </div>
           </div>
@@ -208,7 +208,7 @@
             id="courseSearchInput"
             type="search"
             oninput="handleSearch(this.value)"
-            placeholder="Tìm ngành nghề (VD: Thợ sơn, Buộc sắt, Hàn...)"
+            placeholder="Tìm chuyên mục (VD: Đời sống, Thợ sơn, Buộc sắt, Hàn...)"
             class="w-full h-9 sm:h-10 pl-10 pr-8 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
           />
           <button
@@ -250,14 +250,15 @@
         vi: {
           pageTitle:
             "VietDe Hub — Tiếng Đức Chuyên Ngành & Hòa Nhập Cuộc Sống Đức",
-          heroBadge: "Cổng đào tạo Tiếng Đức Chuyên Ngành & Kỹ Năng Sống",
-          heroTitle: "Tiếng Đức Thực Chiến Cho Kỹ Thuật Viên Tại Đức",
+          heroBadge: "Cổng đào tạo Tiếng Đức Đời Sống & Chuyên Ngành",
+          heroTitle: "Tiếng Đức Hòa Nhập & Nghề Nghiệp Tại Đức",
           heroSubtitle:
-            "Từ vựng nhà xưởng, mẫu câu giao tiếp công trường và hội thoại luyện nghe AI đa giọng dành cho đội ngũ BG Wind GmbH.",
-          statTradesLabel: "Ngành sẵn sàng",
+            "Hành trang đời sống (Anmeldung, ngân hàng, siêu thị, tàu xe, y tế) và tiếng Đức thực chiến tại xưởng/công trường BG Wind GmbH.",
+          statTradesLabel: "Chuyên mục sẵn sàng",
           statTermsLabel: "Thuật ngữ lõi",
-          statDialoguesLabel: "Hội thoại xưởng",
-          searchPlaceholder: "Tìm ngành nghề (VD: Thợ sơn, Buộc sắt, Hàn...)",
+          statDialoguesLabel: "Hội thoại thực tế",
+          searchPlaceholder:
+            "Tìm chuyên mục (VD: Đời sống, Thợ sơn, Buộc sắt, Hàn...)",
           filterAll: "Tất cả",
           filterReady: "Sẵn sàng học",
           filterSoon: "Sắp ra mắt",
@@ -268,21 +269,21 @@
           soonToast:
             "Chuyên mục này đang được biên soạn nội dung & âm thanh. Vui lòng quay lại sau!",
           footerNote: "Hỗ trợ âm thanh AI offline & đa ngôn ngữ Việt – Anh",
-          noResults: "Không tìm thấy chuyên ngành phù hợp.",
+          noResults: "Không tìm thấy chuyên mục phù hợp.",
           plannedStats: "Kế hoạch mở rộng tiếp theo",
         },
         en: {
           pageTitle:
-            "VietDe Hub — Vocational German & Life Integration in Germany",
-          heroBadge: "Vocational German & Life Integration Hub",
-          heroTitle: "Practical German for Technicians in Germany",
+            "VietDe Hub — Everyday German & Trade German in Germany",
+          heroBadge: "Everyday German & Vocational Training Hub",
+          heroTitle: "Everyday Integration & Trade German in Germany",
           heroSubtitle:
-            "Workshop vocabulary, construction site phrases, and multi-voice AI dialogues built for BG Wind GmbH teams.",
-          statTradesLabel: "Active Trades",
+            "Daily living essentials (Anmeldung, banking, shopping, transit, healthcare) and practical BG Wind GmbH workshop/site German.",
+          statTradesLabel: "Active Modules",
           statTermsLabel: "Core Terms",
-          statDialoguesLabel: "Site Dialogues",
+          statDialoguesLabel: "Real Dialogues",
           searchPlaceholder:
-            "Search trades (e.g., Industrial Painter, Rebar Worker, Welder...)",
+            "Search modules (e.g., Everyday, Painter, Rebar, Welder...)",
           filterAll: "All Modules",
           filterReady: "Available Now",
           filterSoon: "Coming Soon",
@@ -291,14 +292,34 @@
           openBtn: "Start Learning →",
           soonBtn: "Coming Soon",
           soonToast:
-            "This trade module and its audio assets are currently in production.",
+            "This module and its audio assets are currently in production.",
           footerNote: "Offline AI audio & 100% Vietnamese – English support",
-          noResults: "No matching trades found.",
+          noResults: "No matching modules found.",
           plannedStats: "Planned upcoming module",
         },
       };
 
+      // Thứ tự hiển thị ưu tiên: 1. Đời sống & Hòa nhập -> 2. Thợ sơn -> 3. Thợ buộc sắt -> 4. ...
       const COURSES_DATA = [
+        {
+          id: "doisong",
+          href: "hoinhapduc.html",
+          ready: true,
+          accent: "emerald",
+          icon: "🏠",
+          germanTitle: "Alltagsdeutsch & Leben in Deutschland",
+          title_vi: "Tiếng Đức Đời Sống & Hòa Nhập",
+          title_en: "Everyday German & Living in Germany",
+          tag_vi: "Hành chính, Nhà ở, Ngân hàng, Tàu xe & Y tế",
+          tag_en: "Authorities, Housing, Bank, Transit & Healthcare",
+          desc_vi:
+            "90 từ vựng đời sống độc lập (Anmeldung, thuê nhà, phân loại rác, tài khoản IBAN, vé Deutschlandticket, khám bệnh), 40 mẫu câu và 6 hội thoại thực tế.",
+          desc_en:
+            "90 everyday German terms (Anmeldung, housing, waste sorting, IBAN banking, Deutschlandticket, doctor visits), 40 phrases, and 6 real-life dialogues.",
+          vocabCount: 90,
+          phraseCount: 40,
+          dialogueCount: 6,
+        },
         {
           id: "thoson",
           href: "thoson.html",
@@ -352,25 +373,6 @@
             "Từ vựng máy hàn MAG/TIG, khí bảo vệ, kiểm tra khuyết tật mối hàn, tiêu chuẩn an toàn chống cháy nổ và đọc thông số kỹ thuật.",
           desc_en:
             "MAG/TIG welding terminology, shielding gases, weld seam inspection, fire safety regulations, and technical specs.",
-          vocabCount: 0,
-          phraseCount: 0,
-          dialogueCount: 0,
-        },
-        {
-          id: "doisong",
-          href: "#",
-          ready: false,
-          accent: "emerald",
-          icon: "🏠",
-          germanTitle: "Alltagsdeutsch & Leben in Deutschland",
-          title_vi: "Tiếng Đức Đời Sống & Hòa Nhập",
-          title_en: "Everyday German & Living in Germany",
-          tag_vi: "Thủ tục hành chính, đi lại, mua sắm & y tế",
-          tag_en: "City Hall, Transport, Shopping & Healthcare",
-          desc_vi:
-            "Mẫu câu thiết yếu khi đăng ký cư trú (Anmeldung), mở tài khoản ngân hàng, đi siêu thị, đi tàu hỏa và khám bệnh tại Đức.",
-          desc_en:
-            "Essential dialogues for residence registration (Anmeldung), banking, supermarkets, public transit, and doctor visits.",
           vocabCount: 0,
           phraseCount: 0,
           dialogueCount: 0,
@@ -466,6 +468,28 @@
           : `${c.vocabCount} Từ vựng • ${c.phraseCount} Mẫu câu • ${c.dialogueCount} Hội thoại`;
       }
 
+      function getAccentStyles(accent) {
+        if (accent === "emerald") {
+          return {
+            hoverBorder: "hover:border-emerald-500",
+            iconBg: "bg-emerald-100",
+            subtitleColor: "text-emerald-700",
+          };
+        }
+        if (accent === "blue") {
+          return {
+            hoverBorder: "hover:border-blue-500",
+            iconBg: "bg-blue-100",
+            subtitleColor: "text-blue-700",
+          };
+        }
+        return {
+          hoverBorder: "hover:border-amber-500",
+          iconBg: "bg-amber-100",
+          subtitleColor: "text-amber-700",
+        };
+      }
+
       function renderCourses() {
         const q = currentQuery.trim().toLowerCase();
         const filtered = COURSES_DATA.filter((c) => {
@@ -489,24 +513,19 @@
             const tag = currentLang === "en" ? c.tag_en : c.tag_vi;
             const desc = currentLang === "en" ? c.desc_en : c.desc_vi;
             const stats = formatCourseStats(c);
-            const isBlue = c.accent === "blue";
-            const hoverBorder = isBlue
-              ? "hover:border-blue-500"
-              : "hover:border-amber-500";
-            const iconBg = isBlue ? "bg-blue-100" : "bg-amber-100";
-            const subtitleColor = isBlue ? "text-blue-700" : "text-amber-700";
+            const styles = getAccentStyles(c.accent);
 
             if (c.ready) {
               return `
-            <a href="${c.href}" class="group bg-white rounded-2xl p-4 sm:p-5 shadow-xs border-2 border-slate-200/90 ${hoverBorder} hover:shadow-md transition flex flex-col justify-between gap-3.5">
+            <a href="${c.href}" class="group bg-white rounded-2xl p-4 sm:p-5 shadow-xs border-2 border-slate-200/90 ${styles.hoverBorder} hover:shadow-md transition flex flex-col justify-between gap-3.5">
               <div>
                 <div class="flex items-start justify-between gap-2.5">
                   <div class="flex items-center gap-3 min-w-0">
-                    <div class="w-11 h-11 rounded-xl ${iconBg} text-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition">
+                    <div class="w-11 h-11 rounded-xl ${styles.iconBg} text-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition">
                       ${c.icon}
                     </div>
                     <div class="min-w-0">
-                      <span class="text-[11px] font-bold ${subtitleColor} uppercase tracking-wider block truncate">${c.germanTitle}</span>
+                      <span class="text-[11px] font-bold ${styles.subtitleColor} uppercase tracking-wider block truncate">${c.germanTitle}</span>
                       <h3 class="text-base sm:text-lg font-extrabold text-slate-900 group-hover:text-blue-600 transition leading-snug">${title}</h3>
                     </div>
                   </div>

@@ -1,0 +1,3913 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>
+      Fachdeutsch — Tiếng Đức Đời Sống & Hòa Nhập (Alltagsdeutsch) | VietDe Hub
+    </title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='14'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Crect width='64' height='21.34' y='0' fill='%23111827'/%3E%3Crect width='64' height='21.34' y='21.33' fill='%23DC2626'/%3E%3Crect width='64' height='21.34' y='42.66' fill='%23FACC15'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: #f1f5f9;
+        color: #0f172a;
+        min-height: 100dvh;
+        padding-bottom: calc(76px + var(--safe-bottom));
+      }
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 40px;
+        }
+      }
+      .bottom-nav-safe {
+        padding-bottom: calc(6px + var(--safe-bottom));
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+      @keyframes pulseRing {
+        0% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45);
+        }
+        70% {
+          box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        }
+      }
+      .btn-playing {
+        background-color: #ef4444 !important;
+        color: #ffffff !important;
+        border-color: #ef4444 !important;
+        animation: pulseRing 1.4s infinite;
+      }
+      @keyframes sheetSlideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .animate-sheet-up {
+        animation: sheetSlideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes popoverFade {
+        from {
+          opacity: 0;
+          transform: translateY(-6px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-popover {
+        animation: popoverFade 0.18s ease-out;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-emerald-200 selection:text-slate-900">
+    <!-- =====================================================================
+       ADAPTIVE STICKY TOP BAR (Back to Hub + Compact Mobile + 1-Row Desktop)
+       ===================================================================== -->
+    <header
+      class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-3 sm:px-6 h-14 flex items-center justify-between gap-2"
+      >
+        <!-- Left: Back to Hub + Brand + Desktop Navigation Tabs -->
+        <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
+          <a
+            href="index.html"
+            id="backHomeBtn"
+            title="Trang chủ / Home"
+            class="h-9 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center gap-1 shrink-0 transition"
+          >
+            <span>←</span>
+            <span id="backHomeText" class="hidden sm:inline">Trang chủ</span>
+          </a>
+
+          <div class="flex items-center gap-2 min-w-0">
+            <div
+              class="w-8 h-8 rounded-lg bg-emerald-500 text-slate-950 flex items-center justify-center font-extrabold shadow-inner shrink-0"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span
+                  id="brandTitle"
+                  class="font-bold text-sm sm:text-base tracking-tight truncate"
+                  >Đời Sống & Hòa Nhập</span
+                >
+                <span
+                  class="hidden xl:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+                  >Alltagsdeutsch</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Single-Row Navigation Tabs (Hidden on Mobile) -->
+          <nav
+            id="desktopNav"
+            class="hidden md:flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-slate-700/70"
+            aria-label="Primary Navigation"
+          ></nav>
+        </div>
+
+        <!-- Right: Voice Settings Trigger Pill + VI/EN Switch -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0 relative">
+          <button
+            id="voiceTriggerBtn"
+            type="button"
+            onclick="toggleVoiceDrawer()"
+            class="h-9 px-2.5 sm:px-3 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 border border-slate-700 text-xs font-medium text-slate-100 flex items-center gap-1.5 transition cursor-pointer"
+          >
+            <span class="text-amber-400">🎙</span>
+            <span
+              id="voicePillLabel"
+              class="max-w-[105px] sm:max-w-[160px] lg:max-w-[210px] truncate"
+              >Piper Chuẩn Đức • 1.0x</span
+            >
+            <svg
+              class="w-3.5 h-3.5 text-slate-400 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <!-- Language Switcher VI | EN -->
+          <div
+            class="h-9 bg-slate-800 p-0.5 rounded-xl border border-slate-700 flex items-center"
+            role="group"
+            aria-label="Language Switch"
+          >
+            <button
+              id="langBtnVi"
+              type="button"
+              onclick="setLanguage('vi')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              VI
+            </button>
+            <button
+              id="langBtnEn"
+              type="button"
+              onclick="setLanguage('en')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              EN
+            </button>
+          </div>
+
+          <!-- DESKTOP POPOVER: Voice & Speed Controls -->
+          <div
+            id="desktopVoicePopover"
+            class="hidden md:hidden absolute right-0 top-12 w-80 bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200 p-4 z-50 animate-popover"
+          >
+            <div
+              class="flex items-center justify-between pb-2.5 mb-3 border-b border-slate-100"
+            >
+              <span
+                id="popoverTitle"
+                class="text-xs font-bold uppercase tracking-wider text-slate-500"
+                >Cài đặt Giọng đọc & Tốc độ</span
+              >
+              <button
+                type="button"
+                onclick="closeVoiceDrawer()"
+                class="w-7 h-7 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+            <div id="desktopVoiceForm"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subtle Non-Blocking Audio Fallback / Status Banner -->
+    <div
+      id="statusToast"
+      class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-50 max-w-[92vw] sm:max-w-md bg-slate-900/95 text-white text-xs px-3.5 py-2 rounded-full shadow-lg border border-slate-700 flex items-center gap-2"
+    >
+      <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+      <span id="statusToastText" class="truncate"></span>
+    </div>
+
+    <!-- =====================================================================
+       MAIN CONTENT AREA
+       ===================================================================== -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6">
+      <!-- TAB 1: VOCABULARY -->
+      <section id="section-vocab" class="space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 space-y-3"
+        >
+          <div class="relative">
+            <svg
+              class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z"
+              />
+            </svg>
+            <input
+              id="vocabSearchInput"
+              type="search"
+              oninput="handleVocabSearch(this.value)"
+              placeholder="Tìm từ tiếng Đức, nghĩa tiếng Việt..."
+              class="w-full h-11 pl-10 pr-9 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
+            />
+            <button
+              id="clearSearchBtn"
+              type="button"
+              onclick="clearVocabSearch()"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-xs items-center justify-center hover:bg-slate-300 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div
+            id="vocabCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5"
+          ></div>
+        </div>
+
+        <div
+          id="vocabGrid"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"
+        ></div>
+      </section>
+
+      <!-- TAB 2: EVERYDAY PHRASES -->
+      <section id="section-phrases" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80"
+        >
+          <div
+            id="phraseCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar"
+          ></div>
+        </div>
+        <div
+          id="phrasesList"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3"
+        ></div>
+      </section>
+
+      <!-- TAB 3: DIALOGUES -->
+      <section id="section-dialogues" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3.5 sm:p-5 shadow-sm border border-slate-200/80 space-y-4"
+        >
+          <div
+            id="dialogueTabs"
+            class="flex items-center gap-2 overflow-x-auto no-scrollbar"
+          ></div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100"
+          >
+            <div>
+              <label
+                id="workerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Người học (Đức)</label
+              >
+              <select
+                id="workerVoiceSelect"
+                onchange="updateDialogueVoice('worker', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+            <div>
+              <label
+                id="partnerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Nhân viên / Đối tác Đức</label
+              >
+              <select
+                id="partnerVoiceSelect"
+                onchange="updateDialogueVoice('partner', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="dialogueContainer"
+          class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200/80"
+        ></div>
+      </section>
+
+      <!-- TAB 4: FLASHCARDS -->
+      <section
+        id="section-flashcards"
+        class="hidden space-y-4 max-w-2xl mx-auto"
+      >
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 flex flex-wrap items-center justify-between gap-2"
+        >
+          <select
+            id="fcCategorySelect"
+            onchange="setFlashcardCategory(this.value)"
+            class="h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></select>
+          <div class="flex items-center gap-2">
+            <span
+              id="fcCounter"
+              class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-2 rounded-xl"
+              >1 / 90</span
+            >
+            <button
+              id="fcShuffleBtn"
+              type="button"
+              onclick="shuffleFlashcards()"
+              class="h-10 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <span>🔀</span>
+              <span id="fcShuffleText">Trộn thẻ</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="flashcardStage" class="perspective-1000"></div>
+
+        <div class="flex items-center justify-between gap-2">
+          <button
+            type="button"
+            onclick="prevFlashcard()"
+            class="h-11 px-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>←</span>
+            <span id="fcPrevText">Trước</span>
+          </button>
+
+          <button
+            id="fcMasterBtn"
+            type="button"
+            onclick="toggleFlashcardMastered()"
+            class="h-11 px-4 rounded-xl border text-xs sm:text-sm font-semibold shadow-sm flex items-center gap-1.5 transition cursor-pointer"
+          ></button>
+
+          <button
+            type="button"
+            onclick="nextFlashcard()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-sm font-semibold text-white shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span id="fcNextText">Tiếp</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <p
+          id="fcShortcutHint"
+          class="hidden md:block text-center text-xs text-slate-400"
+        >
+          Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe
+          ví dụ)
+        </p>
+      </section>
+
+      <!-- CULTURAL & PRACTICAL LIVING NOTES CARD (FROM GOOGLE DOC) -->
+      <section
+        id="section-cultural-notes"
+        class="mt-6 bg-white rounded-2xl p-4 sm:p-6 shadow-xs border border-slate-200/80"
+      >
+        <h2
+          id="notesHeading"
+          class="text-base sm:text-lg font-extrabold text-slate-900 mb-3"
+        ></h2>
+        <ul
+          id="notesList"
+          class="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed"
+        ></ul>
+      </section>
+    </main>
+
+    <!-- MOBILE BOTTOM NAVIGATION BAR -->
+    <nav
+      id="mobileBottomNav"
+      class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-[0_-4px_16px_rgba(15,23,42,0.06)] bottom-nav-safe"
+      aria-label="Mobile Navigation"
+    >
+      <div id="mobileNavGrid" class="grid grid-cols-4 h-14"></div>
+    </nav>
+
+    <!-- MOBILE BOTTOM SHEET: VOICE & SPEED SETTINGS -->
+    <div
+      id="mobileVoiceBackdrop"
+      onclick="closeVoiceDrawer()"
+      class="hidden md:hidden fixed inset-0 z-50 bg-slate-950/50 backdrop-blur-xs transition-opacity"
+    ></div>
+    <div
+      id="mobileVoiceSheet"
+      class="hidden md:hidden fixed inset-x-0 bottom-0 z-50 bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 p-5 pb-[calc(20px+var(--safe-bottom))] animate-sheet-up"
+    >
+      <div class="w-10 h-1.5 rounded-full bg-slate-300 mx-auto mb-4"></div>
+      <div class="flex items-center justify-between mb-3">
+        <h3 id="sheetTitle" class="text-base font-bold text-slate-900">
+          Cài đặt Giọng đọc & Tốc độ
+        </h3>
+        <button
+          type="button"
+          onclick="closeVoiceDrawer()"
+          class="w-9 h-9 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold"
+        >
+          ✕
+        </button>
+      </div>
+      <div id="mobileVoiceForm"></div>
+    </div>
+
+    <script>
+      // =========================================================================
+      // 0. AUDIO FOLDER PREFIX FOR EVERYDAY GERMAN & INTEGRATION MODULE
+      // =========================================================================
+      const AUDIO_BASE_PATH = "audio/hoinhapduc";
+
+      // =========================================================================
+      // 1. VOICE CATALOG (4 VOICES: PIPER OFFLINE + EDGE NEURAL) & I18N
+      // =========================================================================
+      const VOICE_CATALOG = [
+        {
+          id: "piper_hochdeutsch",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Chuẩn Đức (High)",
+          label_en: "Piper Thorsten — Standard German (High)",
+          short_vi: "Piper Chuẩn Đức",
+          short_en: "Piper Standard",
+        },
+        {
+          id: "piper_rostock",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Miền Bắc / Rostock",
+          label_en: "Piper Thorsten — Northern / Rostock",
+          short_vi: "Piper Rostock",
+          short_en: "Piper Rostock",
+        },
+        {
+          id: "edge_hochdeutsch",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Chuẩn Đức (Nữ Katja)",
+          label_en: "Edge Neural — Standard German (Female Katja)",
+          short_vi: "Edge Katja",
+          short_en: "Edge Katja",
+        },
+        {
+          id: "edge_rostock",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Miền Bắc (Nam Conrad)",
+          label_en: "Edge Neural — Northern German (Male Conrad)",
+          short_vi: "Edge Conrad",
+          short_en: "Edge Conrad",
+        },
+      ];
+
+      function sanitizeVoiceId(savedId, fallbackId) {
+        return VOICE_CATALOG.some((v) => v.id === savedId)
+          ? savedId
+          : fallbackId;
+      }
+
+      const I18N = {
+        vi: {
+          pageTitle:
+            "Fachdeutsch — Tiếng Đức Đời Sống & Hòa Nhập (Alltagsdeutsch) | VietDe Hub",
+          backHomeText: "Trang chủ",
+          brandTitle: "Đời Sống & Hòa Nhập",
+          nav_vocab_desktop: "1. Từ vựng",
+          nav_phrases_desktop: "2. Mẫu câu đời sống",
+          nav_dialogues_desktop: "3. Hội thoại",
+          nav_flashcards_desktop: "4. Thẻ Flashcard",
+          nav_vocab_mobile: "Từ vựng",
+          nav_phrases_mobile: "Mẫu câu",
+          nav_dialogues_mobile: "Hội thoại",
+          nav_flashcards_mobile: "Thẻ nhớ",
+          voiceSettingsTitle: "Cài đặt Giọng đọc & Tốc độ",
+          selectVoiceLabel: "Chọn giọng đọc mặc định (4 giọng)",
+          previewVoiceBtn: "Nghe thử giọng",
+          stopPreviewBtn: "Dừng nghe thử",
+          speedLabel: "Tốc độ phát âm",
+          speedSlow: "Chậm 0.75x",
+          speedNormal: "Chuẩn 1.0x",
+          speedFast: "Nhanh 1.25x",
+          searchPlaceholder: "Tìm từ tiếng Đức, nghĩa tiếng Việt...",
+          cat_all: "Tất cả",
+          cat_1_1: "1.1 Hành chính & Cư trú",
+          cat_1_2: "1.2 Nhà ở & Phân loại rác",
+          cat_1_3: "1.3 Ngân hàng & Mua sắm",
+          cat_1_4: "1.4 Giao thông & Tàu xe",
+          cat_1_5: "1.5 Y tế & Bảo hiểm",
+          relatedPrefix: "Từ liên quan:",
+          noResults: "Không tìm thấy từ vựng phù hợp.",
+          pcat_all: "Tất cả mẫu câu",
+          pcat_2_1: "2.1 Hành chính & Giấy tờ",
+          pcat_2_2: "2.2 Ngân hàng & Siêu thị",
+          pcat_2_3: "2.3 Hỏi đường & Tàu xe",
+          pcat_2_4: "2.4 Khám bệnh & Hiệu thuốc",
+          pcat_2_5: "2.5 Thuê nhà & Hàng xóm",
+          workerVoiceLabel: "Giọng Người học (Đức)",
+          partnerVoiceLabel: "Giọng Nhân viên / Đối tác Đức",
+          playFullDialogue: "Nghe cả hội thoại",
+          stopFullDialogue: "Dừng hội thoại",
+          fcAllCategories: "Tất cả chủ đề",
+          fcShuffle: "Trộn thẻ",
+          fcPrev: "Trước",
+          fcNext: "Tiếp",
+          fcFrontHint: "Chạm thẻ để xem nghĩa & ví dụ",
+          fcBackHint: "Chạm thẻ để quay lại mặt trước",
+          fcWordBtn: "Nghe từ",
+          fcExBtn: "Nghe ví dụ",
+          fcMastered: "Đã thuộc",
+          fcMarkMastered: "Đánh dấu đã thuộc",
+          fcShortcutHint:
+            "Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe ví dụ)",
+          fallbackNotice: "Đang dùng giọng dự phòng Piper Offline cho câu này.",
+          notesHeading: "Ghi chú Văn hóa & Quy tắc Sống Quan trọng tại Đức",
+          notes: [
+            "<strong>Quy tắc 14 ngày đầu tiên:</strong> Ngay sau khi nhận phòng ở, cần xin giấy <em>Wohnungsgeberbestätigung</em> để đi làm <em>Anmeldung</em> tại <em>Bürgeramt</em>. Sau đó hệ thống sẽ tự gửi mã số thuế (<em>Steuer-ID</em>) qua bưu điện — hãy dán tên lên hòm thư (<em>Briefkasten</em>) ngay ngày đầu tiên để không bị thất lạc thư.",
+            "<strong>Vé đi lại tiết kiệm:</strong> Vé <em>Deutschlandticket</em> cho phép đi không giới hạn tàu vùng (RE, RB, S-Bahn, U-Bahn, xe buýt, tàu điện) trên toàn nước Đức, nhưng lưu ý phải hủy gia hạn trước ngày 10 hằng tháng nếu không dùng tiếp.",
+            "<strong>Nghỉ ốm & Bảo hiểm:</strong> Khi ốm phải gọi báo cho tổ trưởng/công ty trước giờ vào ca; từ ngày thứ 3 (hoặc theo quy định hợp đồng) đi khám bác sĩ để kích hoạt giấy nghỉ ốm điện tử (<em>eAU</em>).",
+            "<strong>Tổng đài khẩn cấp miễn phí:</strong> <strong>112</strong> (Cấp cứu y tế & Cứu hỏa) và <strong>110</strong> (Cảnh sát).",
+          ],
+        },
+        en: {
+          pageTitle:
+            "Fachdeutsch — Everyday German & Integration (Alltagsdeutsch) | VietDe Hub",
+          backHomeText: "Home",
+          brandTitle: "Everyday & Integration",
+          nav_vocab_desktop: "1. Vocabulary",
+          nav_phrases_desktop: "2. Everyday Phrases",
+          nav_dialogues_desktop: "3. Dialogues",
+          nav_flashcards_desktop: "4. Flashcards",
+          nav_vocab_mobile: "Vocab",
+          nav_phrases_mobile: "Phrases",
+          nav_dialogues_mobile: "Dialogues",
+          nav_flashcards_mobile: "Cards",
+          voiceSettingsTitle: "Voice & Playback Speed",
+          selectVoiceLabel: "Default AI Voice (4 Voices)",
+          previewVoiceBtn: "Preview Voice",
+          stopPreviewBtn: "Stop Preview",
+          speedLabel: "Playback Speed",
+          speedSlow: "Slow 0.75x",
+          speedNormal: "Normal 1.0x",
+          speedFast: "Fast 1.25x",
+          searchPlaceholder: "Search German words, English meanings...",
+          cat_all: "All",
+          cat_1_1: "1.1 Authorities & Registration",
+          cat_1_2: "1.2 Housing & Waste Sorting",
+          cat_1_3: "1.3 Bank & Shopping",
+          cat_1_4: "1.4 Transit & Travel",
+          cat_1_5: "1.5 Health & Insurance",
+          relatedPrefix: "Related words:",
+          noResults: "No matching vocabulary found.",
+          pcat_all: "All Phrases",
+          pcat_2_1: "2.1 Authorities & Documents",
+          pcat_2_2: "2.2 Bank & Supermarket",
+          pcat_2_3: "2.3 Directions & Transit",
+          pcat_2_4: "2.4 Doctor & Pharmacy",
+          pcat_2_5: "2.5 Housing & Neighbors",
+          workerVoiceLabel: "Learner Voice (Duc)",
+          partnerVoiceLabel: "Clerk / Local Speaker Voice",
+          playFullDialogue: "Play Full Dialogue",
+          stopFullDialogue: "Stop Dialogue",
+          fcAllCategories: "All Categories",
+          fcShuffle: "Shuffle",
+          fcPrev: "Previous",
+          fcNext: "Next",
+          fcFrontHint: "Tap card to reveal meaning & example",
+          fcBackHint: "Tap card to flip back",
+          fcWordBtn: "Speak Word",
+          fcExBtn: "Speak Example",
+          fcMastered: "Mastered",
+          fcMarkMastered: "Mark as Mastered",
+          fcShortcutHint:
+            "Shortcuts: Space (Flip) • ← / → (Navigate) • S (Word) • E (Example)",
+          fallbackNotice: "Using offline Piper fallback voice for this line.",
+          notesHeading: "Cultural Notes & Key Living Rules in Germany",
+          notes: [
+            "<strong>First 14-day rule:</strong> Right after moving in, obtain the <em>Wohnungsgeberbestätigung</em> to complete <em>Anmeldung</em> at the <em>Bürgeramt</em>. Your tax ID (<em>Steuer-ID</em>) is then sent by mail — label your <em>Briefkasten</em> on day one so letters are not returned.",
+            "<strong>Cost-effective transit:</strong> The <em>Deutschlandticket</em> covers regional trains (RE, RB, S-Bahn, U-Bahn), buses, and trams nationwide in Germany; remember to cancel before the 10th of a month if you want to stop.",
+            "<strong>Sick leave & insurance:</strong> Call your supervisor or employer before your shift starts if sick; from day three (or as stated in your contract), see a doctor to trigger your electronic sick note (<em>eAU</em>).",
+            "<strong>Free emergency numbers:</strong> <strong>112</strong> (Ambulance & Fire) and <strong>110</strong> (Police).",
+          ],
+        },
+      };
+
+      // =========================================================================
+      // 2. COMPLETE BILINGUAL DATASET (90 VOCAB, 40 PHRASES, 6 DIALOGUES)
+      // =========================================================================
+      const VOCAB_DATA = [
+        {
+          id: 1,
+          cat: "1.1",
+          de: "die Anmeldung (-en)",
+          ipa: "/diː ˈanˌmɛldʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Đăng ký địa chỉ cư trú (bắt buộc trong 14 ngày sau khi nhập cảnh)",
+          en: "Address / residence registration (mandatory within 14 days of arrival)",
+          rel_vi: "anmelden (đt: đăng ký), die Abmeldung (dt: hủy đăng ký)",
+          rel_en:
+            "anmelden (v: to register), die Abmeldung (n: deregistration)",
+          ex_de:
+            "Nach der Ankunft muss man die Anmeldung beim Bürgeramt machen.",
+          ex_vi:
+            "Sau khi tới Đức, người ta phải làm thủ tục đăng ký cư trú tại Phòng hành chính công dân.",
+          ex_en:
+            "After arriving, one must complete residence registration at the citizens' office.",
+        },
+        {
+          id: 2,
+          cat: "1.1",
+          de: "die Meldebescheinigung (-en)",
+          ipa: "/diː ˈmɛldəbəˌʃaɪnɪɡʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Giấy xác nhận đăng ký cư trú",
+          en: "Official residence registration certificate",
+          rel_vi: "die Bescheinigung (dt: giấy chứng nhận)",
+          rel_en: "die Bescheinigung (n: certificate/confirmation)",
+          ex_de: "Für das Bankkonto brauche ich meine Meldebescheinigung.",
+          ex_vi:
+            "Để mở tài khoản ngân hàng tôi cần giấy xác nhận đăng ký cư trú.",
+          ex_en:
+            "For the bank account, I need my residence registration certificate.",
+        },
+        {
+          id: 3,
+          cat: "1.1",
+          de: "die Wohnungsgeberbestätigung (-en)",
+          ipa: "/diː ˈvoːnʊŋsɡeːbɐbəˌʃtɛːtɪɡʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Giấy xác nhận của chủ nhà / đơn vị cấp nhà ở (để đi đăng ký cư trú)",
+          en: "Landlord / housing provider confirmation form (required for registration)",
+          rel_vi:
+            "der Wohnungsgeber (dt: bên cấp nhà ở), bestätigen (đt: xác nhận)",
+          rel_en:
+            "der Wohnungsgeber (n: landlord/housing provider), bestätigen (v: to confirm)",
+          ex_de: "Ohne Wohnungsgeberbestätigung kann man sich nicht anmelden.",
+          ex_vi:
+            "Không có giấy xác nhận của chủ nhà thì không thể đăng ký cư trú được.",
+          ex_en:
+            "Without the landlord confirmation form, you cannot register your address.",
+        },
+        {
+          id: 4,
+          cat: "1.1",
+          de: "das Bürgeramt (-er)",
+          ipa: "/das ˈbʏʁɡɐˌʔamt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Phòng hành chính công dân / Sở đăng ký cư trú địa phương",
+          en: "Citizens' registration office / Municipal service office",
+          rel_vi: "der Bürger (dt: công dân), das Amt (dt: cơ quan công quyền)",
+          rel_en:
+            "der Bürger (n: citizen), das Amt (n: public authority/office)",
+          ex_de: "Ich habe morgen um 9 Uhr einen Termin beim Bürgeramt.",
+          ex_vi:
+            "Ngày mai lúc 9 giờ tôi có lịch hẹn tại Phòng hành chính công dân.",
+          ex_en:
+            "I have an appointment at the citizens' office tomorrow at 9 AM.",
+        },
+        {
+          id: 5,
+          cat: "1.1",
+          de: "die Ausländerbehörde (-n)",
+          ipa: "/diː ˈaʊslɛndɐbəˌhøːʁdə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Sở Ngoại kiều (nơi cấp/gia hạn thẻ cư trú)",
+          en: "Foreigners' office / Immigration authority",
+          rel_vi:
+            "der Ausländer (dt: người nước ngoài), die Behörde (dt: cơ quan nhà nước)",
+          rel_en:
+            "der Ausländer (n: foreign national), die Behörde (n: public authority)",
+          ex_de:
+            "Die Ausländerbehörde prüft die Unterlagen für den Aufenthaltstitel.",
+          ex_vi: "Sở Ngoại kiều kiểm tra hồ sơ xin cấp thẻ cư trú.",
+          ex_en:
+            "The foreigners' office reviews the documents for the residence permit.",
+        },
+        {
+          id: 6,
+          cat: "1.1",
+          de: "der Aufenthaltstitel (-)",
+          ipa: "/deːɐ̯ ˈaʊfʔɛnthaltsˌtiːtl̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Thẻ cư trú / Giấy phép lưu trú dài hạn tại Đức",
+          en: "Residence permit / Residence title",
+          rel_vi: "der Aufenthalt (dt: sự lưu trú)",
+          rel_en: "der Aufenthalt (n: stay/residence)",
+          ex_de:
+            "Der elektronische Aufenthaltstitel gilt zusammen mit dem Reisepass.",
+          ex_vi: "Thẻ cư trú điện tử có hiệu lực đi kèm với hộ chiếu.",
+          ex_en:
+            "The electronic residence permit is valid together with the passport.",
+        },
+        {
+          id: 7,
+          cat: "1.1",
+          de: "der Reisepass (-e)",
+          ipa: "/deːɐ̯ ˈʁaɪzəˌpas/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Hộ chiếu",
+          en: "Passport",
+          rel_vi: "reisen (đt: đi lại/du lịch), der Pass (dt: hộ chiếu)",
+          rel_en: "reisen (v: to travel), der Pass (n: passport/ID)",
+          ex_de: "Bitte bringen Sie Ihren gültigen Reisepass zum Termin mit.",
+          ex_vi: "Vui lòng mang theo hộ chiếu còn hạn của bạn đến buổi hẹn.",
+          ex_en:
+            "Please bring your valid passport with you to the appointment.",
+        },
+        {
+          id: 8,
+          cat: "1.1",
+          de: "das Visum (Visa)",
+          ipa: "/das ˈviːzʊm/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Thị thực nhập cảnh (Visa)",
+          en: "Entry visa",
+          rel_vi: "das Arbeitsvisum (dt: visa lao động)",
+          rel_en: "das Arbeitsvisum (n: work visa)",
+          ex_de: "Mein nationales Visum ist sechs Monate gültig.",
+          ex_vi: "Thị thực quốc gia của tôi có hiệu lực sáu tháng.",
+          ex_en: "My national visa is valid for six months.",
+        },
+        {
+          id: 9,
+          cat: "1.1",
+          de: "der Termin (-e)",
+          ipa: "/deːɐ̯ tɛʁˈmiːn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Lịch hẹn làm việc",
+          en: "Appointment",
+          rel_vi: "vereinbaren (đt: đặt hẹn), pünktlich (tt: đúng giờ)",
+          rel_en:
+            "vereinbaren (v: to schedule/arrange), pünktlich (adj: punctual)",
+          ex_de:
+            "In Deutschland braucht man für fast jedes Amt vorher einen Termin.",
+          ex_vi: "Ở Đức hầu như đến cơ quan nào cũng cần đặt lịch hẹn trước.",
+          ex_en:
+            "In Germany, you need an appointment beforehand for almost every office.",
+        },
+        {
+          id: 10,
+          cat: "1.1",
+          de: "das Formular (-e)",
+          ipa: "/das fɔʁmuˈlaːɐ̯/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Biểu mẫu / Tờ khai hành chính",
+          en: "Form / Application form",
+          rel_vi: "ausfüllen (đt: điền đơn)",
+          rel_en: "ausfüllen (v: to fill out)",
+          ex_de: "Bitte füllen Sie dieses Formular in Druckbuchstaben aus.",
+          ex_vi: "Vui lòng điền biểu mẫu này bằng chữ in hoa.",
+          ex_en: "Please fill out this form in block capital letters.",
+        },
+        {
+          id: 11,
+          cat: "1.1",
+          de: "die Unterschrift (-en)",
+          ipa: "/diː ˈʊntɐˌʃʁɪft/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Chữ ký",
+          en: "Signature",
+          rel_vi: "unterschreiben (đt: ký tên)",
+          rel_en: "unterschreiben (v: to sign)",
+          ex_de: "Unten rechts auf dem Vertrag fehlt noch Ihre Unterschrift.",
+          ex_vi: "Ở góc dưới bên phải hợp đồng vẫn còn thiếu chữ ký của bạn.",
+          ex_en:
+            "Your signature is still missing at the bottom right of the contract.",
+        },
+        {
+          id: 12,
+          cat: "1.1",
+          de: "die Steuer-ID",
+          ipa: "/diː ˈʃtɔʏɐʔaɪˌdiː/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Mã số thuế cá nhân (11 chữ số, gửi qua bưu điện sau khi Anmeldung)",
+          en: "Tax identification number (11 digits, mailed after registration)",
+          rel_vi: "die Steuer (dt: thuế)",
+          rel_en: "die Steuer (n: tax)",
+          ex_de:
+            "Der Arbeitgeber braucht deine Steuer-ID für die Lohnabrechnung.",
+          ex_vi: "Công ty cần mã số thuế của bạn để tính bảng lương.",
+          ex_en: "The employer needs your tax ID for payroll accounting.",
+        },
+        {
+          id: 13,
+          cat: "1.1",
+          de: "die Sozialversicherungsnummer (-n)",
+          ipa: "/diː zoˈtsi̯aːlfɛɐ̯ˌzɪçəʁʊŋsˌnʊmɐ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Mã số bảo hiểm xã hội / bảo hiểm hưu trí",
+          en: "Social security / pension insurance number",
+          rel_vi: "die Versicherung (dt: bảo hiểm)",
+          rel_en: "die Versicherung (n: insurance)",
+          ex_de:
+            "Die Rentenversicherung schickt dir deine Sozialversicherungsnummer per Post.",
+          ex_vi:
+            "Cơ quan bảo hiểm hưu trí sẽ gửi mã số bảo hiểm xã hội cho bạn qua đường bưu điện.",
+          ex_en:
+            "The pension insurer will send your social security number by mail.",
+        },
+        {
+          id: 14,
+          cat: "1.1",
+          de: "der Arbeitsvertrag (-e)",
+          ipa: "/deːɐ̯ ˈaʁbaɪtsfɛɐ̯ˌtʁaːk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Hợp đồng lao động",
+          en: "Employment contract",
+          rel_vi: "der Vertrag (dt: hợp đồng)",
+          rel_en: "der Vertrag (n: contract)",
+          ex_de:
+            "Lies den Arbeitsvertrag vor der Unterschrift sorgfältig durch.",
+          ex_vi: "Hãy đọc kỹ hợp đồng lao động trước khi ký.",
+          ex_en: "Read the employment contract carefully before signing.",
+        },
+        {
+          id: 15,
+          cat: "1.1",
+          de: "die Lohnabrechnung (-en)",
+          ipa: "/diː ˈloːnʔapˌʁɛçnʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bảng lương chi tiết hằng tháng",
+          en: "Monthly payslip / wage statement",
+          rel_vi:
+            "der Lohn (dt: tiền lương), brutto (tt: lương trước thuế), netto (tt: lương thực nhận)",
+          rel_en: "der Lohn (n: wages), brutto (adj: gross), netto (adj: net)",
+          ex_de:
+            "Auf der Lohnabrechnung stehen Bruttolohn, Steuern und Nettolohn.",
+          ex_vi:
+            "Trên bảng lương ghi rõ lương gộp, các khoản thuế và lương thực nhận.",
+          ex_en: "The payslip lists gross pay, taxes, and net pay.",
+        },
+        {
+          id: 16,
+          cat: "1.1",
+          de: "der Briefkasten (-)",
+          ipa: "/deːɐ̯ ˈbʁiːfˌkastn̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Hòm thư bưu điện tại nhà",
+          en: "Mailbox / Letterbox",
+          rel_vi: "der Brief (dt: thư từ), leeren (đt: lấy thư ra)",
+          rel_en: "der Brief (n: letter), leeren (v: to empty)",
+          ex_de: "Klebe deinen Nachnamen deutlich auf den Briefkasten.",
+          ex_vi: "Hãy dán họ tên của bạn rõ ràng lên hòm thư.",
+          ex_en: "Put your last name clearly on the mailbox.",
+        },
+        {
+          id: 17,
+          cat: "1.1",
+          de: "das Einschreiben (-)",
+          ipa: "/das ˈaɪnˌʃʁaɪbn̩/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Thư bảo đảm (thư quan trọng cần ký nhận)",
+          en: "Registered mail / letter",
+          rel_vi: "verschicken (đt: gửi đi)",
+          rel_en: "verschicken (v: to send/dispatch)",
+          ex_de:
+            "Wichtige Kündigungen schickt man in Deutschland am besten per Einschreiben.",
+          ex_vi:
+            "Các thông báo chấm dứt hợp đồng quan trọng ở Đức tốt nhất nên gửi qua thư bảo đảm.",
+          ex_en:
+            "In Germany, important contract cancellations are best sent by registered mail.",
+        },
+        {
+          id: 18,
+          cat: "1.1",
+          de: "der Rundfunkbeitrag (-e)",
+          ipa: "/deːɐ̯ ˈʁʊntfʊŋkˌbaɪtʁaːk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Phí truyền hình & phát thanh công cộng (bắt buộc theo mỗi hộ gia đình)",
+          en: "Public broadcasting license fee (mandatory per household)",
+          rel_vi: "der Beitrag (dt: khoản đóng góp/phí)",
+          rel_en: "der Beitrag (n: contribution/fee)",
+          ex_de:
+            "Jede Wohnung in Deutschland zahlt monatlich den Rundfunkbeitrag.",
+          ex_vi:
+            "Mỗi căn hộ tại Đức đều đóng phí truyền hình công cộng hằng tháng.",
+          ex_en:
+            "Every household in Germany pays the monthly broadcasting fee.",
+        },
+        {
+          id: 19,
+          cat: "1.1",
+          de: "die Mülltrennung",
+          ipa: "/diː ˈmʏlˌtʁɛnʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Việc phân loại rác (quy định bắt buộc nghiêm ngặt tại Đức)",
+          en: "Waste separation / recycling sorting",
+          rel_vi: "der Müll (dt: rác thải), trennen (đt: phân loại)",
+          rel_en: "der Müll (n: waste/trash), trennen (v: to separate)",
+          ex_de: "In Deutschland gibt es strenge Regeln für die Mülltrennung.",
+          ex_vi: "Ở Đức có quy định nghiêm ngặt về việc phân loại rác.",
+          ex_en: "Germany has strict rules for waste separation.",
+        },
+        {
+          id: 20,
+          cat: "1.1",
+          de: "das Pfand",
+          ipa: "/das pfant/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Tiền đặt cọc vỏ chai/lon (hoàn lại khi bỏ vào máy thu hồi ở siêu thị)",
+          en: "Bottle / can deposit refund",
+          rel_vi: "die Pfandflasche (dt: chai có hoàn tiền cọc)",
+          rel_en: "die Pfandflasche (n: returnable deposit bottle)",
+          ex_de: "Auf Plastikflaschen und Dosen gibt es meist 25 Cent Pfand.",
+          ex_vi: "Trên chai nhựa và lon nước thường có 25 xu tiền cọc vỏ.",
+          ex_en: "Plastic bottles and cans usually have a 25-cent deposit.",
+        },
+        {
+          id: 21,
+          cat: "1.2",
+          de: "der Mietvertrag (-e)",
+          ipa: "/deːɐ̯ ˈmiːtfɛɐ̯ˌtʁaːk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Hợp đồng thuê nhà",
+          en: "Rental / lease agreement",
+          rel_vi:
+            "mieten (đt: thuê nhà), der Mieter (dt: người thuê), der Vermieter (dt: chủ nhà)",
+          rel_en:
+            "mieten (v: to rent), der Mieter (n: tenant), der Vermieter (n: landlord)",
+          ex_de: "Im Mietvertrag stehen die Kaltmiete und die Nebenkosten.",
+          ex_vi: "Trong hợp đồng thuê nhà có ghi tiền thuê thô và chi phí phụ.",
+          ex_en:
+            "The rental contract states the base rent and utility/service charges.",
+        },
+        {
+          id: 22,
+          cat: "1.2",
+          de: "die Kaltmiete (-n)",
+          ipa: "/diː ˈkaltˌmiːtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tiền thuê nhà chưa bao gồm điện, nước, sưởi",
+          en: "Base rent (excluding heating and utilities)",
+          rel_vi: "kalt (tt: lạnh/chưa sưởi)",
+          rel_en: "kalt (adj: cold/unheated)",
+          ex_de: "Die Kaltmiete beträgt 550 Euro im Monat.",
+          ex_vi: "Tiền thuê nhà chưa tính dịch vụ là 550 Euro một tháng.",
+          ex_en: "The base rent is 550 euros per month.",
+        },
+        {
+          id: 23,
+          cat: "1.2",
+          de: "die Warmmiete (-n)",
+          ipa: "/diː ˈvaʁmˌmiːtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tiền thuê nhà trọn gói (đã gồm sưởi và phụ phí cơ bản)",
+          en: "Warm rent (base rent plus heating and basic service charges)",
+          rel_vi: "warm (tt: ấm/đã bao gồm sưởi)",
+          rel_en: "warm (adj: warm/heated)",
+          ex_de: "Die Warmmiete inklusive Heizung liegt bei 700 Euro.",
+          ex_vi: "Tiền thuê trọn gói bao gồm sưởi là 700 Euro.",
+          ex_en: "The warm rent including heating is around 700 euros.",
+        },
+        {
+          id: 24,
+          cat: "1.2",
+          de: "die Nebenkosten (Pl.)",
+          ipa: "/diː ˈneːbn̩ˌkɔstn̩/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Chi phí phụ (rác thải, nước, vệ sinh chung, sưởi)",
+          en: "Ancillary / utility / service charges",
+          rel_vi: "die Kosten (dt: chi phí)",
+          rel_en: "die Kosten (n: costs/expenses)",
+          ex_de:
+            "Einmal im Jahr kommt die Nebenkostenabrechnung vom Vermieter.",
+          ex_vi: "Mỗi năm một lần chủ nhà sẽ gửi bảng quyết toán chi phí phụ.",
+          ex_en:
+            "Once a year, the landlord sends the annual utility statement.",
+        },
+        {
+          id: 25,
+          cat: "1.2",
+          de: "die Kaution (-en)",
+          ipa: "/diː kaʊˈtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tiền đặt cọc thuê nhà (thường bằng 2–3 tháng Kaltmiete)",
+          en: "Rental security deposit",
+          rel_vi: "überweisen (đt: chuyển khoản)",
+          rel_en: "überweisen (v: to transfer money)",
+          ex_de:
+            "Beim Auszug bekommt man die Kaution zurück, wenn nichts beschädigt ist.",
+          ex_vi:
+            "Khi chuyển đi người thuê sẽ nhận lại tiền cọc nếu không làm hư hỏng gì.",
+          ex_en:
+            "When moving out, you get the deposit back if nothing is damaged.",
+        },
+        {
+          id: 26,
+          cat: "1.2",
+          de: "die Wohngemeinschaft (WG)",
+          ipa: "/diː ˈvoːnɡəˌmaɪnʃaft/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nhà ở ghép chung (nhiều người thuê chung một căn hộ)",
+          en: "Shared flat / apartment (house share)",
+          rel_vi: "der Mitbewohner (dt: bạn cùng nhà)",
+          rel_en: "der Mitbewohner (n: flatmate/roommate)",
+          ex_de: "Viele Arbeiter und Studenten wohnen günstig in einer WG.",
+          ex_vi:
+            "Nhiều công nhân và sinh viên ở ghép chung căn hộ để tiết kiệm chi phí.",
+          ex_en: "Many workers and students live affordably in a shared flat.",
+        },
+        {
+          id: 27,
+          cat: "1.2",
+          de: "die Hausordnung (-en)",
+          ipa: "/diː ˈhaʊsˌʔɔʁdnʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nội quy tòa nhà (quy định giờ yên tĩnh, dọn vệ sinh hành lang)",
+          en: "House rules / building regulations",
+          rel_vi: "die Ruhezeit (dt: giờ yên tĩnh)",
+          rel_en: "die Ruhezeit (n: quiet hours)",
+          ex_de: "Laut Hausordnung gilt ab 22 Uhr Nachtruhe.",
+          ex_vi: "Theo nội quy tòa nhà, từ 22 giờ tối là giờ yên tĩnh ban đêm.",
+          ex_en: "According to the house rules, quiet hours start at 10 PM.",
+        },
+        {
+          id: 28,
+          cat: "1.2",
+          de: "die Ruhezeit (-en)",
+          ipa: "/diː ˈʁuːəˌtsaɪt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Giờ nghỉ ngơi yên tĩnh (từ 22h–6h sáng và cả ngày Chủ nhật)",
+          en: "Quiet hours (nights and Sundays)",
+          rel_vi: "ruhig (tt: yên tĩnh)",
+          rel_en: "ruhig (adj: quiet/calm)",
+          ex_de:
+            "Am Sonntag ist den ganzen Tag Ruhezeit, man darf nicht laut bohren.",
+          ex_vi:
+            "Vào Chủ nhật là giờ yên tĩnh cả ngày, không được khoan đục gây ồn.",
+          ex_en:
+            "On Sunday it is quiet time all day; loud drilling is not allowed.",
+        },
+        {
+          id: 29,
+          cat: "1.2",
+          de: "die Heizung (-en)",
+          ipa: "/diː ˈhaɪtsʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hệ thống lò sưởi trong phòng",
+          en: "Heating / radiator",
+          rel_vi: "heizen (đt: sưởi ấm)",
+          rel_en: "heizen (v: to heat)",
+          ex_de: "Im Winter drehen wir die Heizung auf Stufe drei.",
+          ex_vi: "Vào mùa đông chúng tôi vặn lò sưởi ở mức số 3.",
+          ex_en: "In winter, we turn the heating up to level three.",
+        },
+        {
+          id: 30,
+          cat: "1.2",
+          de: "stoßlüften",
+          ipa: "/ˈʃtoːsˌlʏftn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Mở tung cửa sổ thông gió nhanh (5–10 phút để chống ẩm mốc tường)",
+          en: "To air out a room quickly with wide-open windows",
+          rel_vi: "lüften (đt: thông gió), der Schimmel (dt: nấm mốc)",
+          rel_en: "lüften (v: to ventilate), der Schimmel (n: mold)",
+          ex_de:
+            "Im Winter soll man morgens zehn Minuten stoßlüften, damit kein Schimmel entsteht.",
+          ex_vi:
+            "Vào mùa đông buổi sáng nên mở tung cửa thông gió 10 phút để tường không bị nấm mốc.",
+          ex_en:
+            "In winter, you should air out the room for ten minutes in the morning so mold doesn't form.",
+        },
+        {
+          id: 31,
+          cat: "1.2",
+          de: "die Waschmaschine (-n)",
+          ipa: "/diː ˈvaʃmaˌʃiːnə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Máy giặt",
+          en: "Washing machine",
+          rel_vi: "waschen (đt: giặt giũ), das Waschmittel (dt: bột/nước giặt)",
+          rel_en:
+            "waschen (v: to wash), das Waschmittel (n: laundry detergent)",
+          ex_de:
+            "Im Keller gibt es eine gemeinsame Waschmaschine für alle Bewohner.",
+          ex_vi: "Dưới tầng hầm có một máy giặt chung cho tất cả cư dân.",
+          ex_en:
+            "In the basement there is a shared washing machine for all residents.",
+        },
+        {
+          id: 32,
+          cat: "1.2",
+          de: "der Hausmeister (-)",
+          ipa: "/deːɐ̯ ˈhaʊsˌmaɪstɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Nhân viên quản lý / bảo trì tòa nhà",
+          en: "Caretaker / building manager / janitor",
+          rel_vi: "reparieren (đt: sửa chữa)",
+          rel_en: "reparieren (v: to repair)",
+          ex_de: "Wenn der Wasserhahn tropft, rufen wir den Hausmeister an.",
+          ex_vi:
+            "Nếu vòi nước bị rò rỉ, chúng ta gọi cho nhân viên quản lý tòa nhà.",
+          ex_en: "If the faucet drips, we call the building caretaker.",
+        },
+        {
+          id: 33,
+          cat: "1.2",
+          de: "die Biotonne",
+          ipa: "/diː ˈbiːoˌtɔnə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thùng rác hữu cơ (thức ăn thừa, vỏ trái cây)",
+          en: "Organic waste bin (food scraps, peels)",
+          rel_vi: "der Restmüll (dt: rác thải sinh hoạt còn lại)",
+          rel_en: "der Restmüll (n: residual household waste)",
+          ex_de: "Essensreste gehören in die braune Biotonne.",
+          ex_vi: "Thức ăn thừa phải bỏ vào thùng rác hữu cơ màu nâu.",
+          ex_en: "Food scraps belong in the brown organic waste bin.",
+        },
+        {
+          id: 34,
+          cat: "1.2",
+          de: "der Gelbe Sack",
+          ipa: "/deːɐ̯ ˈɡɛlbə zak/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Túi vàng / Thùng vàng đựng bao bì nhựa, kim loại, hộp sữa",
+          en: "Yellow recycling bag / bin (plastic, metal, cartons)",
+          rel_vi: "die Verpackung (dt: bao bì đóng gói)",
+          rel_en: "die Verpackung (n: packaging)",
+          ex_de: "Leere Plastikverpackungen kommen in den Gelben Sack.",
+          ex_vi: "Bao bì nhựa rỗng được bỏ vào túi rác màu vàng.",
+          ex_en: "Empty plastic packaging goes into the yellow bag.",
+        },
+        {
+          id: 35,
+          cat: "1.2",
+          de: "die Papiertonne (-n)",
+          ipa: "/diː paˈpiːɐ̯ˌtɔnə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thùng rác giấy & bìa các-tông (thường màu xanh dương)",
+          en: "Paper and cardboard recycling bin",
+          rel_vi: "das Altpapier (dt: giấy loại)",
+          rel_en: "das Altpapier (n: waste paper)",
+          ex_de: "Kartons bitte flach falten und in die Papiertonne werfen.",
+          ex_vi: "Vui lòng gấp phẳng thùng các-tông rồi bỏ vào thùng rác giấy.",
+          ex_en:
+            "Please flatten cardboard boxes and put them in the paper bin.",
+        },
+        {
+          id: 36,
+          cat: "1.2",
+          de: "der Sperrmüll",
+          ipa: "/deːɐ̯ ˈʃpɛʁˌmʏl/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Rác thải cồng kềnh (đồ gỗ cũ, nệm, bàn ghế hỏng)",
+          en: "Bulky waste (old furniture, mattresses)",
+          rel_vi: "abholen (đt: đến thu gom)",
+          rel_en: "abholen (v: to pick up/collect)",
+          ex_de:
+            "Alte Möbel darf man nicht einfach auf die Straße stellen, man muss Sperrmüll anmelden.",
+          ex_vi:
+            "Đồ nội thất cũ không được tự ý vứt ra đường mà phải đăng ký thu gom rác cồng kềnh.",
+          ex_en:
+            "You can't just leave old furniture on the street; you must register bulky waste pickup.",
+        },
+        {
+          id: 37,
+          cat: "1.3",
+          de: "das Girokonto (-en)",
+          ipa: "/das ˈʒiːʁoˌkɔnto/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Tài khoản thanh toán ngân hàng",
+          en: "Current / checking bank account",
+          rel_vi: "das Konto (dt: tài khoản), eröffnen (đt: mở tài khoản)",
+          rel_en: "das Konto (n: account), eröffnen (v: to open)",
+          ex_de: "Für die Gehaltszahlung brauchst du ein deutsches Girokonto.",
+          ex_vi: "Để nhận lương bạn cần có một tài khoản ngân hàng tại Đức.",
+          ex_en: "For salary payments, you need a German checking account.",
+        },
+        {
+          id: 38,
+          cat: "1.3",
+          de: "die IBAN",
+          ipa: "/diː ˈiːban/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Số tài khoản ngân hàng chuẩn quốc tế châu Âu (bắt đầu bằng DE...)",
+          en: "International Bank Account Number (IBAN)",
+          rel_vi: "die Bankverbindung (dt: thông tin tài khoản)",
+          rel_en: "die Bankverbindung (n: bank account details)",
+          ex_de: "Eine deutsche IBAN hat 22 Stellen und beginnt mit DE.",
+          ex_vi: "Số IBAN của Đức có 22 ký tự và bắt đầu bằng chữ DE.",
+          ex_en: "A German IBAN has 22 characters and starts with DE.",
+        },
+        {
+          id: 39,
+          cat: "1.3",
+          de: "die Girokarte",
+          ipa: "/diː ˈʒiːʁoˌkaʁtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thẻ thanh toán ngân hàng nội địa Đức",
+          en: "German bank debit card",
+          rel_vi: "die Karte (dt: thẻ), die PIN (dt: mã PIN)",
+          rel_en: "die Karte (n: card), die PIN (n: PIN code)",
+          ex_de:
+            "In vielen Geschäften kann man bequem mit der Girokarte bezahlen.",
+          ex_vi:
+            "Ở nhiều cửa hàng có thể thanh toán tiện lợi bằng thẻ ngân hàng.",
+          ex_en:
+            "In many shops, you can pay conveniently with your debit card.",
+        },
+        {
+          id: 40,
+          cat: "1.3",
+          de: "die Überweisung (-en)",
+          ipa: "/diː yːbɐˈvaɪzʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Giao dịch chuyển khoản ngân hàng",
+          en: "Bank transfer",
+          rel_vi: "überweisen (đt: chuyển khoản)",
+          rel_en: "überweisen (v: to transfer)",
+          ex_de: "Ich mache die Überweisung für die Miete per Online-Banking.",
+          ex_vi:
+            "Tôi thực hiện lệnh chuyển khoản tiền nhà qua ngân hàng trực tuyến.",
+          ex_en: "I make the rent transfer via online banking.",
+        },
+        {
+          id: 41,
+          cat: "1.3",
+          de: "der Dauerauftrag (-e)",
+          ipa: "/deːɐ̯ ˈdaʊɐˌʔaʊftʁaːk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Lệnh chuyển khoản định kỳ tự động hằng tháng",
+          en: "Standing bank order (recurring transfer)",
+          rel_vi: "regelmäßig (tt: định kỳ/đều đặn)",
+          rel_en: "regelmäßig (adj: regular)",
+          ex_de: "Für die Miete richte ich einen monatlichen Dauerauftrag ein.",
+          ex_vi:
+            "Đối với tiền thuê nhà, tôi cài đặt lệnh chuyển khoản tự động hằng tháng.",
+          ex_en: "I set up a monthly standing order for the rent.",
+        },
+        {
+          id: 42,
+          cat: "1.3",
+          de: "das Lastschriftverfahren",
+          ipa: "/das ˈlastʃʁɪftfɛɐ̯ˌfaːʁən/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Hình thức ủy nhiệm thu / trừ tiền tự động",
+          en: "Direct debit authorization",
+          rel_vi: "abbuchen (đt: trừ tiền tự động)",
+          rel_en: "abbuchen (v: to debit)",
+          ex_de:
+            "Der Handyvertrag wird per Lastschriftverfahren vom Konto abgebucht.",
+          ex_vi: "Cước hợp đồng điện thoại được trừ tự động từ tài khoản.",
+          ex_en:
+            "The mobile contract is debited from the account via direct debit.",
+        },
+        {
+          id: 43,
+          cat: "1.3",
+          de: "der Geldautomat (-en)",
+          ipa: "/deːɐ̯ ˈɡɛltʔaʊtoˌmaːt/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Cây rút tiền tự động (ATM)",
+          en: "ATM / cash machine",
+          rel_vi: "abheben (đt: rút tiền mặt)",
+          rel_en: "abheben (v: to withdraw cash)",
+          ex_de: "Am Geldautomaten der eigenen Bank ist das Abheben kostenlos.",
+          ex_vi:
+            "Rút tiền tại cây ATM của chính ngân hàng mình mở thẻ thì miễn phí.",
+          ex_en: "Withdrawing cash at your own bank's ATM is free of charge.",
+        },
+        {
+          id: 44,
+          cat: "1.3",
+          de: "das Bargeld",
+          ipa: "/das ˈbaːɐ̯ˌɡɛlt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Tiền mặt",
+          en: "Cash",
+          rel_vi: "bar bezahlen (đt: trả bằng tiền mặt)",
+          rel_en: "bar bezahlen (v: to pay in cash)",
+          ex_de:
+            "Beim Bäcker oder auf dem Wochenmarkt braucht man oft Bargeld.",
+          ex_vi: "Ở tiệm bánh mì hoặc chợ phiên thường cần dùng tiền mặt.",
+          ex_en: "At the bakery or weekly market, you often need cash.",
+        },
+        {
+          id: 45,
+          cat: "1.3",
+          de: "der Kassenbon (-s)",
+          ipa: "/deːɐ̯ ˈkasn̩ˌbɔŋ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Hóa đơn tính tiền tại quầy thu ngân",
+          en: "Checkout receipt",
+          rel_vi: "die Kasse (dt: quầy thu ngân)",
+          rel_en: "die Kasse (n: checkout/cash register)",
+          ex_de: "Hebe den Kassenbon für den Umtausch gut auf.",
+          ex_vi: "Hãy giữ kỹ hóa đơn tính tiền để đổi trả hàng khi cần.",
+          ex_en: "Keep the receipt safely in case you need an exchange.",
+        },
+        {
+          id: 46,
+          cat: "1.3",
+          de: "der Supermarkt (-e)",
+          ipa: "/deːɐ̯ ˈzuːpɐˌmaʁkt/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Siêu thị",
+          en: "Supermarket",
+          rel_vi: "einkaufen (đt: đi mua sắm)",
+          rel_en: "einkaufen (v: to shop for groceries)",
+          ex_de: "Nach der Arbeit gehe ich kurz in den Supermarkt.",
+          ex_vi: "Sau giờ làm tôi ghé nhanh vào siêu thị.",
+          ex_en: "After work, I stop by the supermarket briefly.",
+        },
+        {
+          id: 47,
+          cat: "1.3",
+          de: "der Discounter (-)",
+          ipa: "/deːɐ̯ dɪsˈkaʊntɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Siêu thị giá rẻ (Aldi, Lidl, Netto, Penny)",
+          en: "Discount supermarket (e.g., Aldi, Lidl, Netto)",
+          rel_vi: "günstig (tt: rẻ/hợp lý)",
+          rel_en: "günstig (adj: affordable/inexpensive)",
+          ex_de: "Beim Discounter sind Lebensmittel deutlich günstiger.",
+          ex_vi: "Ở các siêu thị giá rẻ thì thực phẩm rẻ hơn rõ rệt.",
+          ex_en: "Groceries are noticeably cheaper at a discount supermarket.",
+        },
+        {
+          id: 48,
+          cat: "1.3",
+          de: "das Angebot (-e)",
+          ipa: "/das ˈanɡəˌboːt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Chương trình khuyến mãi / Giảm giá",
+          en: "Special offer / promotion",
+          rel_vi: "reduziert (tt: đã giảm giá)",
+          rel_en: "reduziert (adj: discounted/reduced)",
+          ex_de: "Diese Woche ist Kaffee im Supermarkt im Angebot.",
+          ex_vi:
+            "Tuần này cà phê trong siêu thị đang có chương trình khuyến mãi.",
+          ex_en: "Coffee is on special offer at the supermarket this week.",
+        },
+        {
+          id: 49,
+          cat: "1.3",
+          de: "das Mindesthaltbarkeitsdatum (MHD)",
+          ipa: "/das ˈmɪndəstˌhaltbaːɐ̯kaɪtsˌdaːtʊm/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Hạn sử dụng tối thiểu ghi trên bao bì",
+          en: "Best-before date",
+          rel_vi: "haltbar (tt: bảo quản được)",
+          rel_en: "haltbar (adj: durable/long-lasting)",
+          ex_de: "Schau beim Einkaufen auf das Mindesthaltbarkeitsdatum.",
+          ex_vi: "Khi đi mua sắm hãy nhìn hạn sử dụng trên bao bì.",
+          ex_en: "Check the best-before date when grocery shopping.",
+        },
+        {
+          id: 50,
+          cat: "1.3",
+          de: "der Pfandautomat (-en)",
+          ipa: "/deːɐ̯ ˈpfantʔaʊtoˌmaːt/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Máy thu hồi vỏ chai nhựa/lon nhận phiếu hoàn tiền",
+          en: "Reverse vending machine for bottle deposits",
+          rel_vi: "der Pfandbon (dt: phiếu hoàn tiền cọc)",
+          rel_en: "der Pfandbon (n: deposit refund voucher)",
+          ex_de: "Am Eingang vom Supermarkt steht der Pfandautomat.",
+          ex_vi: "Ngay lối vào siêu thị có đặt máy thu hồi vỏ chai hoàn tiền.",
+          ex_en:
+            "The bottle deposit machine is right by the supermarket entrance.",
+        },
+        {
+          id: 51,
+          cat: "1.3",
+          de: "die Einkaufstasche (-n)",
+          ipa: "/diː ˈaɪnkaʊfsˌtaʃə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Túi đi chợ / Túi đựng đồ mua sắm",
+          en: "Shopping bag / reusable tote",
+          rel_vi: "mitbringen (đt: mang theo)",
+          rel_en: "mitbringen (v: to bring along)",
+          ex_de:
+            "Nimm eine Einkaufstasche mit, Plastiktüten kosten an der Kasse extra.",
+          ex_vi:
+            "Hãy mang theo túi đựng đồ, túi nilon ở quầy thu ngân phải trả thêm tiền.",
+          ex_en:
+            "Bring a shopping bag; plastic bags cost extra at the checkout.",
+        },
+        {
+          id: 52,
+          cat: "1.3",
+          de: "die Apotheke (-n)",
+          ipa: "/diː apoˈteːkə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hiệu thuốc tây",
+          en: "Pharmacy",
+          rel_vi: "das Medikament (dt: thuốc), das Rezept (dt: đơn thuốc)",
+          rel_en:
+            "das Medikament (n: medication), das Rezept (n: prescription)",
+          ex_de:
+            "Schmerzmittel und Hustensaft bekommt man nur in der Apotheke.",
+          ex_vi: "Thuốc giảm đau và si-rô ho chỉ mua được ở hiệu thuốc.",
+          ex_en:
+            "Painkillers and cough syrup are only available at the pharmacy.",
+        },
+        {
+          id: 53,
+          cat: "1.3",
+          de: "die Drogerie (-n)",
+          ipa: "/diː dʁoɡəˈʁiː/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Cửa hàng hóa mỹ phẩm & đồ dùng vệ sinh (dm, Rossmann)",
+          en: "Drugstore (personal care & household items)",
+          rel_vi:
+            "das Duschgel (dt: sữa tắm), die Zahnpasta (dt: kem đánh răng)",
+          rel_en: "das Duschgel (n: shower gel), die Zahnpasta (n: toothpaste)",
+          ex_de:
+            "Waschmittel, Shampoo und Rasierklingen kauft man günstig in der Drogerie.",
+          ex_vi:
+            "Nước giặt, dầu gội và dao cạo râu mua ở cửa hàng hóa mỹ phẩm rất rẻ.",
+          ex_en:
+            "Detergent, shampoo, and razor blades are inexpensive at the drugstore.",
+        },
+        {
+          id: 54,
+          cat: "1.3",
+          de: "die Packstation (-en)",
+          ipa: "/diː ˈpakˌstaːtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tủ nhận bưu phẩm tự động 24/7",
+          en: "Automated 24/7 parcel locker",
+          rel_vi: "das Paket (dt: bưu kiện)",
+          rel_en: "das Paket (n: parcel/package)",
+          ex_de: "Ich hole mein Paket nach der Arbeit an der Packstation ab.",
+          ex_vi: "Sau giờ làm tôi ra tủ tự động lấy bưu kiện của mình.",
+          ex_en: "I pick up my package at the parcel locker after work.",
+        },
+        {
+          id: 55,
+          cat: "1.4",
+          de: "das Deutschlandticket",
+          ipa: "/das ˈdɔʏtʃlantˌtɪkət/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Vé tháng đi toàn bộ phương tiện công cộng khắp nước Đức",
+          en: "Nationwide monthly public transit pass in Germany",
+          rel_vi: "der Nahverkehr (dt: giao thông nội vùng)",
+          rel_en: "der Nahverkehr (n: local/regional public transit)",
+          ex_de:
+            "Mit dem Deutschlandticket kann man deutschlandweit Regionalzüge und Busse nutzen.",
+          ex_vi:
+            "Với vé Deutschlandticket, bạn có thể đi tàu vùng và xe buýt trên toàn nước Đức.",
+          ex_en:
+            "With the Deutschlandticket, you can ride regional trains and buses nationwide.",
+        },
+        {
+          id: 56,
+          cat: "1.4",
+          de: "der Hauptbahnhof (Hbf)",
+          ipa: "/deːɐ̯ ˈhaʊptbaːnˌhoːf/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Ga tàu hỏa trung tâm",
+          en: "Central train station",
+          rel_vi: "der Bahnsteig (dt: sân ga)",
+          rel_en: "der Bahnsteig (n: train platform)",
+          ex_de: "Der Zug nach Rostock fährt vom Hauptbahnhof ab.",
+          ex_vi: "Chuyến tàu đi Rostock khởi hành từ ga trung tâm.",
+          ex_en: "The train to Rostock departs from the central station.",
+        },
+        {
+          id: 57,
+          cat: "1.4",
+          de: "das Gleis (-e)",
+          ipa: "/das ɡlaɪs/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Đường ray / Sân ga số mấy",
+          en: "Track / platform number",
+          rel_vi: "abfahren (đt: khởi hành)",
+          rel_en: "abfahren (v: to depart)",
+          ex_de: "Der Regionalexpress fährt heute auf Gleis 4 ab.",
+          ex_vi: "Tàu nhanh khu vực hôm nay khởi hành ở sân ga số 4.",
+          ex_en: "The regional express departs from platform 4 today.",
+        },
+        {
+          id: 58,
+          cat: "1.4",
+          de: "die Fahrkarte (-n)",
+          ipa: "/diː ˈfaːɐ̯ˌkaʁtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Vé tàu / Vé xe",
+          en: "Transit / train ticket",
+          rel_vi: "entwerten (đt: dập vé trước khi lên tàu)",
+          rel_en: "entwerten (v: to validate a ticket)",
+          ex_de:
+            "Vergiss nicht, die Papierfahrkarte vor der Fahrt am Automaten zu entwerten.",
+          ex_vi: "Đừng quên dập vé giấy tại máy trước khi lên tàu nhé.",
+          ex_en:
+            "Don't forget to validate your paper ticket at the machine before boarding.",
+        },
+        {
+          id: 59,
+          cat: "1.4",
+          de: "die Verspätung (-en)",
+          ipa: "/diː fɛɐ̯ˈʃpɛːtʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Sự trễ chuyến (tàu/xe đến muộn)",
+          en: "Delay (late train/bus)",
+          rel_vi: "verspätet (tt: bị trễ), pünktlich (tt: đúng giờ)",
+          rel_en: "verspätet (adj: delayed), pünktlich (adj: on time/punctual)",
+          ex_de: "Der Zug hat heute leider zwanzig Minuten Verspätung.",
+          ex_vi: "Chuyến tàu hôm nay tiếc là bị trễ 20 phút.",
+          ex_en: "Unfortunately, the train is twenty minutes delayed today.",
+        },
+        {
+          id: 60,
+          cat: "1.4",
+          de: "der Anschlusszug (-e)",
+          ipa: "/deːɐ̯ ˈanʃlʊsˌtsuːk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Chuyến tàu nối chuyến",
+          en: "Connecting train",
+          rel_vi: "umsteigen (đt: chuyển tàu/đổi tuyến)",
+          rel_en: "umsteigen (v: to transfer/change trains)",
+          ex_de: "Wegen der Verspätung habe ich meinen Anschlusszug verpasst.",
+          ex_vi: "Vì tàu đến muộn nên tôi đã bị lỡ chuyến tàu nối tiếp.",
+          ex_en: "Because of the delay, I missed my connecting train.",
+        },
+        {
+          id: 61,
+          cat: "1.4",
+          de: "umsteigen",
+          ipa: "/ˈʊmˌʃtaɪɡn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Chuyển tàu / Đổi tuyến xe",
+          en: "To transfer / change trains or buses",
+          rel_vi: "einsteigen (đt: lên xe), aussteigen (đt: xuống xe)",
+          rel_en: "einsteigen (v: to board), aussteigen (v: to get off)",
+          ex_de:
+            "In Rostock müssen wir in den Bus Richtung Kavelstorf umsteigen.",
+          ex_vi:
+            "Ở Rostock chúng ta phải chuyển sang xe buýt đi hướng Kavelstorf.",
+          ex_en:
+            "In Rostock, we have to transfer to the bus toward Kavelstorf.",
+        },
+        {
+          id: 62,
+          cat: "1.4",
+          de: "die Haltestelle (-n)",
+          ipa: "/diː ˈhaltəˌʃtɛlə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Trạm dừng xe buýt / tàu điện",
+          en: "Bus stop / tram stop",
+          rel_vi: "halten (đt: dừng lại)",
+          rel_en: "halten (v: to stop)",
+          ex_de: "Die nächste Haltestelle ist direkt vor dem Werkstor.",
+          ex_vi: "Trạm dừng tiếp theo nằm ngay trước cổng nhà máy.",
+          ex_en: "The next stop is right in front of the factory gate.",
+        },
+        {
+          id: 63,
+          cat: "1.4",
+          de: "die Straßenbahn (-en)",
+          ipa: "/diː ˈʃtʁaːsn̩ˌbaːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tàu điện mặt đất (Tram)",
+          en: "Streetcar / tram",
+          rel_vi:
+            "die U-Bahn (dt: tàu điện ngầm), die S-Bahn (dt: tàu ngoại ô)",
+          rel_en: "die U-Bahn (n: subway/metro), die S-Bahn (n: commuter rail)",
+          ex_de:
+            "Mit der Straßenbahn bin ich in zehn Minuten in der Innenstadt.",
+          ex_vi:
+            "Đi tàu điện mặt đất chỉ mất 10 phút là tôi vào tới trung tâm thành phố.",
+          ex_en: "By tram, I'm in the city center in ten minutes.",
+        },
+        {
+          id: 64,
+          cat: "1.4",
+          de: "der Regionalzug (RE / RB)",
+          ipa: "/deːɐ̯ ʁeɡi̯oˈnaːlˌtsuːk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Tàu hỏa liên vùng (chạy nội bang, dùng được vé tháng)",
+          en: "Regional train (RE / RB)",
+          rel_vi: "der Fernverkehr (dt: tàu đường dài ICE/IC)",
+          rel_en: "der Fernverkehr (n: long-distance rail ICE/IC)",
+          ex_de:
+            "Das Deutschlandticket gilt im Regionalzug, aber nicht im ICE.",
+          ex_vi:
+            "Vé Deutschlandticket dùng được trên tàu vùng nhưng không dùng được trên tàu cao tốc ICE.",
+          ex_en:
+            "The Deutschlandticket is valid on regional trains, but not on ICE high-speed trains.",
+        },
+        {
+          id: 65,
+          cat: "1.4",
+          de: "der Fahrplan (-e)",
+          ipa: "/deːɐ̯ ˈfaːɐ̯ˌplaːn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Lịch trình giờ tàu xe chạy",
+          en: "Timetable / schedule",
+          rel_vi: "die App (dt: ứng dụng DB Navigator)",
+          rel_en: "die App (n: transit app)",
+          ex_de: "Im Fahrplan steht, dass der erste Bus um 5:15 Uhr fährt.",
+          ex_vi:
+            "Trên lịch trình ghi chuyến xe buýt đầu tiên chạy lúc 5:15 sáng.",
+          ex_en: "The timetable says the first bus runs at 5:15 AM.",
+        },
+        {
+          id: 66,
+          cat: "1.4",
+          de: "das Fahrrad (-er)",
+          ipa: "/das ˈfaːɐ̯ˌʁaːt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Xe đạp",
+          en: "Bicycle",
+          rel_vi:
+            "der Fahrradweg (dt: làn đường xe đạp), abschließen (đt: khóa xe)",
+          rel_en: "der Fahrradweg (n: bike lane), abschließen (v: to lock)",
+          ex_de: "Viele Kollegen fahren mit dem Fahrrad zur Arbeit.",
+          ex_vi: "Nhiều đồng nghiệp đi làm bằng xe đạp.",
+          ex_en: "Many colleagues ride their bicycles to work.",
+        },
+        {
+          id: 67,
+          cat: "1.4",
+          de: "der Führerschein (-e)",
+          ipa: "/deːɐ̯ ˈfyːʁɐˌʃaɪn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Giấy phép lái xe",
+          en: "Driver's license",
+          rel_vi: "umschreiben (đt: đổi bằng lái)",
+          rel_en: "umschreiben (v: to convert/exchange a license)",
+          ex_de:
+            "Nach sechs Monaten muss man den ausländischen Führerschein umschreiben lassen.",
+          ex_vi:
+            "Sau 6 tháng người cư trú phải làm thủ tục đổi bằng lái xe nước ngoài.",
+          ex_en:
+            "After six months, a foreign driver's license must be converted.",
+        },
+        {
+          id: 68,
+          cat: "1.4",
+          de: "die Fahrgemeinschaft (-en)",
+          ipa: "/diː ˈfaːɐ̯ɡəˌmaɪnʃaft/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nhóm đi chung xe ô tô đi làm để chia tiền xăng",
+          en: "Carpool / ride-sharing group",
+          rel_vi: "mitfahren (đt: đi nhờ/đi chung xe)",
+          rel_en: "mitfahren (v: to ride along/carpool)",
+          ex_de: "Wir bilden eine Fahrgemeinschaft zur Baustelle.",
+          ex_vi: "Chúng tôi lập nhóm đi chung xe tới công trường.",
+          ex_en: "We form a carpool to the construction site.",
+        },
+        {
+          id: 69,
+          cat: "1.4",
+          de: "die Tankstelle (-n)",
+          ipa: "/diː ˈtaŋkˌʃtɛlə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Trạm xăng dầu",
+          en: "Gas / petrol station",
+          rel_vi: "tanken (đt: đổ xăng/dầu)",
+          rel_en: "tanken (v: to refuel)",
+          ex_de:
+            "An der Tankstelle kann man auch abends noch Kleinigkeiten kaufen.",
+          ex_vi: "Ở trạm xăng buổi tối muộn vẫn có thể mua vài đồ thiết yếu.",
+          ex_en:
+            "At the gas station, you can still buy small items in the evening.",
+        },
+        {
+          id: 70,
+          cat: "1.4",
+          de: "die Ampel (-n)",
+          ipa: "/diː ˈampl̩/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Đèn tín hiệu giao thông",
+          en: "Traffic light",
+          rel_vi:
+            "der Zebrastreifen (dt: vạch qua đường), die Vorfahrt (dt: quyền ưu tiên)",
+          rel_en:
+            "der Zebrastreifen (n: crosswalk), die Vorfahrt (n: right of way)",
+          ex_de: "An der roten Ampel muss man auch als Fußgänger warten.",
+          ex_vi: "Khi đèn đỏ thì ngay cả người đi bộ cũng phải dừng chờ.",
+          ex_en: "Even as a pedestrian, you must wait at a red traffic light.",
+        },
+        {
+          id: 71,
+          cat: "1.4",
+          de: "der Strafzettel (-)",
+          ipa: "/deːɐ̯ ˈʃtʁaːfˌtsɛtl̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Phiếu phạt vi phạm giao thông / hành chính",
+          en: "Fine ticket / penalty notice",
+          rel_vi:
+            "schwarzfahren (đt: đi tàu xe trốn vé), das Bußgeld (dt: tiền phạt)",
+          rel_en:
+            "schwarzfahren (v: to ride without a ticket), das Bußgeld (n: administrative fine)",
+          ex_de: "Wer ohne gültige Fahrkarte fährt, zahlt 60 Euro Strafe.",
+          ex_vi: "Ai đi tàu xe không có vé hợp lệ sẽ bị phạt 60 Euro.",
+          ex_en: "Anyone riding without a valid ticket pays a 60-euro fine.",
+        },
+        {
+          id: 72,
+          cat: "1.4",
+          de: "die Adresse (-n)",
+          ipa: "/diː aˈdʁɛsə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Địa chỉ nhà",
+          en: "Address",
+          rel_vi: "die Postleitzahl (dt: mã bưu chính PLZ)",
+          rel_en: "die Postleitzahl (n: postal code)",
+          ex_de: "Gib die genaue Adresse mit Postleitzahl ins Navi ein.",
+          ex_vi:
+            "Hãy nhập địa chỉ chính xác kèm mã bưu chính vào bản đồ dẫn đường.",
+          ex_en:
+            "Enter the exact address with the postal code into the navigation system.",
+        },
+        {
+          id: 73,
+          cat: "1.5",
+          de: "die Krankenversicherung (-en)",
+          ipa: "/diː ˈkʁaŋkn̩fɛɐ̯ˌzɪçəʁʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bảo hiểm y tế (bắt buộc đối với mọi người làm việc tại Đức)",
+          en: "Health insurance (mandatory for employees in Germany)",
+          rel_vi: "die Krankenkasse (dt: hãng BHYT — AOK, TK, Barmer)",
+          rel_en: "die Krankenkasse (n: health insurance fund)",
+          ex_de:
+            "Jeder Arbeitnehmer in Deutschland hat eine gesetzliche Krankenversicherung.",
+          ex_vi: "Mọi người lao động tại Đức đều có bảo hiểm y tế công.",
+          ex_en: "Every employee in Germany has statutory health insurance.",
+        },
+        {
+          id: 74,
+          cat: "1.5",
+          de: "die Gesundheitskarte (-n)",
+          ipa: "/diː ɡəˈzʊnthaɪtsˌkaʁtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thẻ bảo hiểm y tế điện tử",
+          en: "Electronic health insurance card",
+          rel_vi: "vorzeigen (đt: xuất trình thẻ)",
+          rel_en: "vorzeigen (v: to present/show)",
+          ex_de: "Nimm deine Gesundheitskarte immer mit zum Arztbesuch.",
+          ex_vi: "Luôn mang theo thẻ bảo hiểm y tế khi đi khám bác sĩ.",
+          ex_en: "Always bring your health insurance card to doctor visits.",
+        },
+        {
+          id: 75,
+          cat: "1.5",
+          de: "der Hausarzt (-e)",
+          ipa: "/deːɐ̯ ˈhaʊsˌʔaːɐ̯tst/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bác sĩ gia đình / Bác sĩ đa khoa tuyến đầu",
+          en: "General practitioner / family doctor",
+          rel_vi: "die Praxis (dt: phòng khám)",
+          rel_en: "die Praxis (n: doctor's practice/clinic)",
+          ex_de: "Bei Erkältung oder Fieber geht man zuerst zum Hausarzt.",
+          ex_vi:
+            "Khi bị cảm lạnh hoặc sốt, trước tiên người ta đến khám bác sĩ gia đình.",
+          ex_en: "For a cold or fever, you go to the family doctor first.",
+        },
+        {
+          id: 76,
+          cat: "1.5",
+          de: "der Facharzt (-e)",
+          ipa: "/deːɐ̯ ˈfaxˌʔaːɐ̯tst/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bác sĩ chuyên khoa (răng, mắt, xương khớp...)",
+          en: "Medical specialist",
+          rel_vi: "die Überweisung (dt: giấy giới thiệu chuyển tuyến)",
+          rel_en: "die Überweisung (n: referral slip)",
+          ex_de:
+            "Für den Facharzt braucht man oft eine Überweisung vom Hausarzt.",
+          ex_vi:
+            "Để khám bác sĩ chuyên khoa thường cần giấy giới thiệu từ bác sĩ gia đình.",
+          ex_en:
+            "For a specialist, you often need a referral from your family doctor.",
+        },
+        {
+          id: 77,
+          cat: "1.5",
+          de: "die Notaufnahme (-n)",
+          ipa: "/diː ˈnoːtʔaʊfˌnaːmə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khoa cấp cứu bệnh viện",
+          en: "Hospital emergency room / A&E",
+          rel_vi:
+            "das Krankenhaus (dt: bệnh viện), der Notfall (dt: trường hợp khẩn cấp)",
+          rel_en: "das Krankenhaus (n: hospital), der Notfall (n: emergency)",
+          ex_de:
+            "Bei schweren Arbeitsunfällen fährt man sofort in die Notaufnahme.",
+          ex_vi:
+            "Khi bị tai nạn lao động nghiêm trọng phải đưa ngay tới khoa cấp cứu.",
+          ex_en:
+            "In severe workplace accidents, go straight to the emergency room.",
+        },
+        {
+          id: 78,
+          cat: "1.5",
+          de: "der Notruf (112 / 110)",
+          ipa: "/deːɐ̯ ˈnoːtˌʁuːf/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Số điện thoại khẩn cấp (112: Cấp cứu & Cứu hỏa; 110: Cảnh sát)",
+          en: "Emergency call number (112: ambulance/fire; 110: police)",
+          rel_vi: "der Rettungswagen (dt: xe cứu thương)",
+          rel_en: "der Rettungswagen (n: ambulance)",
+          ex_de:
+            "Die 112 ist der kostenlose Notruf für Feuerwehr und Rettungsdienst.",
+          ex_vi:
+            "Số 112 là tổng đài khẩn cấp miễn phí cho cứu hỏa và cấp cứu y tế.",
+          ex_en:
+            "112 is the free emergency number for fire and ambulance services.",
+        },
+        {
+          id: 79,
+          cat: "1.5",
+          de: "die Krankmeldung (-en)",
+          ipa: "/diː ˈkʁaŋkˌmɛldʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Việc báo ốm với công ty (phải báo ngay trước ca làm)",
+          en: "Calling in sick to the employer",
+          rel_vi: "sich krankmelden (đt: xin nghỉ ốm)",
+          rel_en: "sich krankmelden (v: to report oneself sick)",
+          ex_de:
+            "Wenn du krank bist, musst du den Arbeitgeber sofort morgens informieren.",
+          ex_vi: "Khi bị ốm, bạn phải báo ngay cho công ty vào buổi sáng.",
+          ex_en:
+            "If you are sick, you must inform your employer immediately in the morning.",
+        },
+        {
+          id: 80,
+          cat: "1.5",
+          de: "die Arbeitsunfähigkeitsbescheinigung (AU)",
+          ipa: "/diː ˈaʁbaɪtsʔʊnfɛːɪçkaɪtsbəˌʃaɪnɪɡʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Giấy chứng nhận nghỉ ốm của bác sĩ (eAU điện tử)",
+          en: "Doctor's certificate of incapacity for work (sick note)",
+          rel_vi: "arbeitsunfähig (tt: không đủ sức khỏe làm việc)",
+          rel_en: "arbeitsunfähig (adj: unfit for work)",
+          ex_de:
+            "Ab dem dritten Krankheitstag braucht man eine Arbeitsunfähigkeitsbescheinigung vom Arzt.",
+          ex_vi:
+            "Từ ngày ốm thứ ba trở đi cần có giấy chứng nhận nghỉ ốm của bác sĩ.",
+          ex_en:
+            "Starting from the third day of illness, you need a doctor's sick note.",
+        },
+        {
+          id: 81,
+          cat: "1.5",
+          de: "das Rezept (-e)",
+          ipa: "/das ʁeˈtsɛpt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Đơn thuốc của bác sĩ",
+          en: "Medical prescription",
+          rel_vi: "verschreiben (đt: kê đơn thuốc)",
+          rel_en: "verschreiben (v: to prescribe)",
+          ex_de:
+            "Mit dem Kassenrezept zahlst du in der Apotheke nur eine kleine Zuzahlung.",
+          ex_vi:
+            "Với đơn thuốc bảo hiểm, bạn chỉ trả một khoản đồng chi trả nhỏ tại hiệu thuốc.",
+          ex_en:
+            "With a statutory prescription, you only pay a small co-payment at the pharmacy.",
+        },
+        {
+          id: 82,
+          cat: "1.5",
+          de: "das Medikament (-e)",
+          ipa: "/das medikaˈmɛnt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Thuốc điều trị",
+          en: "Medication / medicine",
+          rel_vi: "einnehmen (đt: uống thuốc)",
+          rel_en: "einnehmen (v: to take medicine)",
+          ex_de: "Nimm dieses Medikament dreimal täglich nach dem Essen ein.",
+          ex_vi: "Hãy uống thuốc này ngày ba lần sau bữa ăn.",
+          ex_en: "Take this medication three times a day after meals.",
+        },
+        {
+          id: 83,
+          cat: "1.5",
+          de: "die Schmerzen (Pl.)",
+          ipa: "/diː ˈʃmɛʁtsn̩/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Cơn đau (Kopfschmerzen, Rückenschmerzen, Zahnschmerzen)",
+          en: "Pain / aches",
+          rel_vi: "wehtun (đt: bị đau)",
+          rel_en: "wehtun (v: to hurt/ache)",
+          ex_de: "Ich habe seit gestern starke Rückenschmerzen.",
+          ex_vi: "Từ hôm qua tôi bị đau lưng dữ dội.",
+          ex_en: "I have had severe back pain since yesterday.",
+        },
+        {
+          id: 84,
+          cat: "1.5",
+          de: "das Fieber",
+          ipa: "/das ˈfiːbɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Cơn sốt",
+          en: "Fever",
+          rel_vi: "der Husten (dt: ho), der Schnupfen (dt: sổ mũi)",
+          rel_en: "der Husten (n: cough), der Schnupfen (n: runny nose)",
+          ex_de: "Ich habe hohes Fieber und starken Husten.",
+          ex_vi: "Tôi bị sốt cao và ho nhiều.",
+          ex_en: "I have a high fever and a bad cough.",
+        },
+        {
+          id: 85,
+          cat: "1.5",
+          de: "die Allergie (-n)",
+          ipa: "/diː alɛʁˈɡiː/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dị ứng (thuốc, phấn hoa, thực phẩm)",
+          en: "Allergy",
+          rel_vi: "allergisch (tt: bị dị ứng)",
+          rel_en: "allergisch (adj: allergic)",
+          ex_de: "Haben Sie eine Allergie gegen bestimmte Medikamente?",
+          ex_vi: "Bạn có bị dị ứng với loại thuốc nào không?",
+          ex_en: "Do you have an allergy to any specific medications?",
+        },
+        {
+          id: 86,
+          cat: "1.5",
+          de: "der Arbeitsunfall (-e)",
+          ipa: "/deːɐ̯ ˈaʁbaɪtsˌʔʊnfal/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Tai nạn lao động (được bảo hiểm BG chi trả 100%)",
+          en: "Workplace / occupational accident",
+          rel_vi:
+            "die Berufsgenossenschaft (dt: Hiệp hội bảo hiểm tai nạn nghề nghiệp)",
+          rel_en: "die Berufsgenossenschaft (n: statutory accident insurer)",
+          ex_de:
+            "Jeder Arbeitsunfall muss sofort im Verbandbuch eingetragen werden.",
+          ex_vi: "Mọi tai nạn lao động phải được ghi ngay vào sổ sơ cứu.",
+          ex_en:
+            "Every workplace accident must be recorded in the first-aid log immediately.",
+        },
+        {
+          id: 87,
+          cat: "1.5",
+          de: "der Durchgangsarzt (-e)",
+          ipa: "/deːɐ̯ ˈdʊʁçɡaŋsˌʔaːɐ̯tst/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bác sĩ chuyên trách xử lý tai nạn lao động",
+          en: "Designated occupational accident physician",
+          rel_vi: "untersuchen (đt: khám bệnh)",
+          rel_en: "untersuchen (v: to examine)",
+          ex_de:
+            "Nach einem Arbeitsunfall muss man direkt zum Durchgangsarzt gehen.",
+          ex_vi:
+            "Sau tai nạn lao động phải đến khám trực tiếp bác sĩ chuyên trách tai nạn lao động.",
+          ex_en:
+            "After a workplace accident, you must see the occupational accident doctor directly.",
+        },
+        {
+          id: 88,
+          cat: "1.5",
+          de: "der Impfpass (-e)",
+          ipa: "/deːɐ̯ ˈɪmpfˌpas/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Sổ chứng nhận tiêm chủng vắc-xin",
+          en: "Vaccination record / booklet",
+          rel_vi: "impfen (đt: tiêm phòng)",
+          rel_en: "impfen (v: to vaccinate)",
+          ex_de: "Bitte bringen Sie Ihren Impfpass zur Untersuchung mit.",
+          ex_vi: "Vui lòng mang theo sổ tiêm chủng khi đi khám.",
+          ex_en:
+            "Please bring your vaccination record with you to the examination.",
+        },
+        {
+          id: 89,
+          cat: "1.5",
+          de: "die Sprechstunde (-n)",
+          ipa: "/diː ˈʃpʁɛçˌʃtʊndə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Giờ khám bệnh / Giờ tiếp bệnh nhân của phòng khám",
+          en: "Clinic / doctor's consulting hours",
+          rel_vi: "geöffnet (tt: mở cửa)",
+          rel_en: "geöffnet (adj: open)",
+          ex_de: "Die offene Sprechstunde beginnt jeden Morgen um 8 Uhr.",
+          ex_vi: "Giờ khám không cần hẹn trước bắt đầu lúc 8 giờ mỗi sáng.",
+          ex_en: "Walk-in consulting hours start every morning at 8 AM.",
+        },
+        {
+          id: 90,
+          cat: "1.5",
+          de: "Gute Besserung!",
+          ipa: "/ˈɡuːtə ˈbɛsəʁʊŋ/",
+          type_vi: "Thành ngữ giao tiếp",
+          type_en: "Phrase",
+          vi: "Chúc mau khỏe lại!",
+          en: "Get well soon!",
+          rel_vi: "sich erholen (đt: hồi phục sức khỏe)",
+          rel_en: "sich erholen (v: to recover)",
+          ex_de: "Ruh dich gut aus und gute Besserung!",
+          ex_vi: "Nghỉ ngơi cho khỏe và chúc bạn mau bình phục nhé!",
+          ex_en: "Get plenty of rest and get well soon!",
+        },
+      ];
+
+      const PHRASES_DATA = [
+        {
+          id: 1,
+          cat: "2.1",
+          de: "Guten Tag, ich möchte meinen Wohnsitz anmelden.",
+          vi: "Xin chào, tôi muốn đăng ký địa chỉ cư trú.",
+          en: "Hello, I would like to register my residence.",
+        },
+        {
+          id: 2,
+          cat: "2.1",
+          de: "Hier sind mein Reisepass und die Wohnungsgeberbestätigung.",
+          vi: "Đây là hộ chiếu của tôi và giấy xác nhận của chủ nhà.",
+          en: "Here are my passport and the landlord confirmation form.",
+        },
+        {
+          id: 3,
+          cat: "2.1",
+          de: "Wann bekomme ich meine Steueridentifikationsnummer per Post?",
+          vi: "Khi nào tôi nhận được mã số thuế cá nhân qua đường bưu điện?",
+          en: "When will I receive my tax identification number by mail?",
+        },
+        {
+          id: 4,
+          cat: "2.1",
+          de: "Ich habe online einen Termin vereinbart. Hier ist meine Terminnummer.",
+          vi: "Tôi đã đặt lịch hẹn trực tuyến. Đây là mã số hẹn của tôi.",
+          en: "I booked an appointment online. Here is my appointment number.",
+        },
+        {
+          id: 5,
+          cat: "2.1",
+          de: "Können Sie mir bitte zeigen, wo ich hier unterschreiben muss?",
+          vi: "Anh/Chị có thể chỉ giúp tôi chỗ nào cần ký tên ở đây không?",
+          en: "Could you please show me where I need to sign here?",
+        },
+        {
+          id: 6,
+          cat: "2.1",
+          de: "Ich brauche eine aktuelle Meldebescheinigung für die Bank.",
+          vi: "Tôi cần một bản xác nhận đăng ký cư trú mới nhất để nộp cho ngân hàng.",
+          en: "I need a current residence registration certificate for the bank.",
+        },
+        {
+          id: 7,
+          cat: "2.1",
+          de: "Wie lange dauert die Bearbeitung meines Aufenthaltstitels?",
+          vi: "Thời gian xử lý thẻ cư trú của tôi mất bao lâu?",
+          en: "How long does processing my residence permit take?",
+        },
+        {
+          id: 8,
+          cat: "2.1",
+          de: "Können Sie das bitte aufschreiben? Mein Deutsch ist noch nicht so gut.",
+          vi: "Anh/Chị có thể viết điều đó ra giấy giúp tôi không? Tiếng Đức của tôi chưa tốt lắm.",
+          en: "Could you please write that down? My German is not very good yet.",
+        },
+        {
+          id: 9,
+          cat: "2.2",
+          de: "Guten Tag, ich möchte ein Girokonto eröffnen.",
+          vi: "Xin chào, tôi muốn mở một tài khoản thanh toán ngân hàng.",
+          en: "Hello, I would like to open a checking account.",
+        },
+        {
+          id: 10,
+          cat: "2.2",
+          de: "Welche Unterlagen brauchen Sie für die Kontoeröffnung?",
+          vi: "Quý ngân hàng cần những giấy tờ gì để mở tài khoản?",
+          en: "Which documents do you need to open an account?",
+        },
+        {
+          id: 11,
+          cat: "2.2",
+          de: "Kann ich hier mit Karte bezahlen oder nur bar?",
+          vi: "Ở đây tôi có thể trả bằng thẻ hay chỉ nhận tiền mặt?",
+          en: "Can I pay by card here or only in cash?",
+        },
+        {
+          id: 12,
+          cat: "2.2",
+          de: "Wo finde ich hier den Pfandautomaten für leere Flaschen?",
+          vi: "Cho tôi hỏi máy thu hồi vỏ chai hoàn tiền đặt ở đâu vậy?",
+          en: "Where can I find the bottle deposit return machine here?",
+        },
+        {
+          id: 13,
+          cat: "2.2",
+          de: "Ich möchte gerne diesen Artikel umtauschen, hier ist der Kassenbon.",
+          vi: "Tôi muốn đổi lại món hàng này, đây là hóa đơn tính tiền.",
+          en: "I would like to exchange this item; here is the receipt.",
+        },
+        {
+          id: 14,
+          cat: "2.2",
+          de: "Brauchen Sie eine Tüte oder den Kassenbon?",
+          vi: "Anh/Chị có cần túi đựng hay lấy hóa đơn không?",
+          en: "Do you need a bag or the receipt?",
+        },
+        {
+          id: 15,
+          cat: "2.2",
+          de: "Danke, ich habe eine eigene Tasche dabei. Den Bon nehme ich gerne.",
+          vi: "Cảm ơn, tôi có mang túi riêng rồi. Cho tôi xin hóa đơn nhé.",
+          en: "Thanks, I brought my own bag. I'd like the receipt, please.",
+        },
+        {
+          id: 16,
+          cat: "2.2",
+          de: "Entschuldigung, in welchem Gang finde ich Reis und Gewürze?",
+          vi: "Xin lỗi, gạo và gia vị nằm ở dãy kệ nào vậy ạ?",
+          en: "Excuse me, in which aisle do I find rice and spices?",
+        },
+        {
+          id: 17,
+          cat: "2.3",
+          de: "Entschuldigung, fährt dieser Bus zum Hauptbahnhof?",
+          vi: "Xin lỗi, xe buýt này có đi tới ga trung tâm không ạ?",
+          en: "Excuse me, does this bus go to the central station?",
+        },
+        {
+          id: 18,
+          cat: "2.3",
+          de: "Auf welchem Gleis fährt der Regionalzug nach Rostock ab?",
+          vi: "Tàu vùng đi Rostock khởi hành ở sân ga số mấy vậy?",
+          en: "From which platform does the regional train to Rostock depart?",
+        },
+        {
+          id: 19,
+          cat: "2.3",
+          de: "Muss ich auf dieser Strecke umsteigen oder fährt der Zug durch?",
+          vi: "Trên tuyến này tôi có phải đổi tàu không hay tàu chạy thẳng?",
+          en: "Do I have to transfer on this route or does the train run through?",
+        },
+        {
+          id: 20,
+          cat: "2.3",
+          de: "Gilt das Deutschlandticket auch in dieser Straßenbahn?",
+          vi: "Vé Deutschlandticket có dùng được trên tuyến tàu điện này không?",
+          en: "Is the Deutschlandticket also valid on this tram?",
+        },
+        {
+          id: 21,
+          cat: "2.3",
+          de: "Entschuldigung, ist dieser Platz noch frei?",
+          vi: "Xin lỗi, chỗ ngồi này vẫn còn trống chứ ạ?",
+          en: "Excuse me, is this seat still free?",
+        },
+        {
+          id: 22,
+          cat: "2.3",
+          de: "Können Sie mir sagen, an welcher Haltestelle ich aussteigen muss?",
+          vi: "Bạn có thể cho tôi biết tôi phải xuống ở trạm dừng nào không?",
+          en: "Can you tell me which stop I need to get off at?",
+        },
+        {
+          id: 23,
+          cat: "2.3",
+          de: "Mein Zug hat Verspätung. Bekomme ich den Anschlusszug noch?",
+          vi: "Tàu của tôi bị trễ. Tôi còn kịp chuyến tàu nối tiếp không?",
+          en: "My train is delayed. Will I still make my connecting train?",
+        },
+        {
+          id: 24,
+          cat: "2.3",
+          de: "Entschuldigung, ich suche diese Adresse. Können Sie mir den Weg zeigen?",
+          vi: "Xin lỗi, tôi đang tìm địa chỉ này. Bạn có thể chỉ đường giúp tôi không?",
+          en: "Excuse me, I'm looking for this address. Can you show me the way?",
+        },
+        {
+          id: 25,
+          cat: "2.4",
+          de: "Guten Tag, ich fühle mich nicht wohl und brauche einen Arzttermin.",
+          vi: "Xin chào, tôi thấy trong người không khỏe và cần lịch hẹn khám bác sĩ.",
+          en: "Hello, I don't feel well and need a doctor's appointment.",
+        },
+        {
+          id: 26,
+          cat: "2.4",
+          de: "Hier ist meine Gesundheitskarte von der Krankenkasse.",
+          vi: "Đây là thẻ bảo hiểm y tế của tôi.",
+          en: "Here is my health insurance card.",
+        },
+        {
+          id: 27,
+          cat: "2.4",
+          de: "Ich habe seit zwei Tagen Fieber, Halsschmerzen und starken Husten.",
+          vi: "Tôi bị sốt, đau họng và ho nhiều từ hai ngày nay rồi.",
+          en: "I have had a fever, sore throat, and a bad cough for two days.",
+        },
+        {
+          id: 28,
+          cat: "2.4",
+          de: "Ich habe mir auf der Arbeit am Rücken oder an der Hand wehgetan.",
+          vi: "Tôi bị đau ở lưng hoặc ở tay trong lúc làm việc.",
+          en: "I hurt my back or my hand at work.",
+        },
+        {
+          id: 29,
+          cat: "2.4",
+          de: "Ich brauche bitte eine Arbeitsunfähigkeitsbescheinigung für meinen Arbeitgeber.",
+          vi: "Tôi cần xin giấy chứng nhận nghỉ ốm để nộp cho công ty.",
+          en: "I need a certificate of incapacity for work for my employer, please.",
+        },
+        {
+          id: 30,
+          cat: "2.4",
+          de: "Wie oft und wann muss ich diese Tabletten einnehmen?",
+          vi: "Tôi phải uống thuốc viên này mấy lần một ngày và vào lúc nào?",
+          en: "How often and when do I need to take these tablets?",
+        },
+        {
+          id: 31,
+          cat: "2.4",
+          de: "Ich habe ein Rezept vom Arzt. Haben Sie dieses Medikament da?",
+          vi: "Tôi có đơn thuốc của bác sĩ. Hiệu thuốc có sẵn loại thuốc này không?",
+          en: "I have a prescription from the doctor. Do you have this medication in stock?",
+        },
+        {
+          id: 32,
+          cat: "2.4",
+          de: "Haben Sie etwas gegen Kopfschmerzen und Erkältung ohne Rezept?",
+          vi: "Anh/Chị có thuốc trị đau đầu và cảm lạnh loại không cần kê đơn không?",
+          en: "Do you have something for headaches and a cold without a prescription?",
+        },
+        {
+          id: 33,
+          cat: "2.5",
+          de: "Guten Tag, ich bin Ihr neuer Nachbar aus Wohnung 4.",
+          vi: "Xin chào, tôi là hàng xóm mới của anh/chị ở căn hộ số 4.",
+          en: "Hello, I'm your new neighbor from Apartment 4.",
+        },
+        {
+          id: 34,
+          cat: "2.5",
+          de: "Können Sie mir bitte die Wohnungsgeberbestätigung unterschreiben?",
+          vi: "Anh/Chị có thể ký giúp tôi giấy xác nhận của chủ nhà được không?",
+          en: "Could you please sign the landlord confirmation form for me?",
+        },
+        {
+          id: 35,
+          cat: "2.5",
+          de: "Entschuldigung, die Heizung in meinem Zimmer wird nicht warm.",
+          vi: "Xin lỗi, lò sưởi trong phòng tôi không nóng lên được.",
+          en: "Excuse me, the radiator in my room isn't getting warm.",
+        },
+        {
+          id: 36,
+          cat: "2.5",
+          de: "Wo stehen hier im Hof die Mülltonnen für Papier und Biomüll?",
+          vi: "Cho hỏi các thùng rác giấy và rác hữu cơ trong sân để ở chỗ nào vậy?",
+          en: "Where in the courtyard are the bins for paper and organic waste?",
+        },
+        {
+          id: 37,
+          cat: "2.5",
+          de: "Kein Problem, wir achten ab 22 Uhr auf die Nachtruhe.",
+          vi: "Không vấn đề gì, từ 22 giờ tối chúng tôi luôn giữ yên tĩnh ban đêm.",
+          en: "No problem, we observe quiet hours starting at 10 PM.",
+        },
+        {
+          id: 38,
+          cat: "2.5",
+          de: "Ich habe mich leider ausgesperrt. Wen muss ich anrufen?",
+          vi: "Tiếc quá tôi lỡ khóa trái cửa mà quên chìa bên trong. Tôi phải gọi cho ai bây giờ?",
+          en: "Unfortunately, I locked myself out. Who do I need to call?",
+        },
+        {
+          id: 39,
+          cat: "2.5",
+          de: "Wann wird hier der Sperrmüll abgeholt?",
+          vi: "Khi nào ở đây có xe đến thu gom rác cồng kềnh vậy?",
+          en: "When is bulky waste collected here?",
+        },
+        {
+          id: 40,
+          cat: "2.5",
+          de: "Vielen Dank für Ihre freundliche Hilfe!",
+          vi: "Cảm ơn rất nhiều vì sự giúp đỡ nhiệt tình của anh/chị!",
+          en: "Thank you very much for your kind help!",
+        },
+      ];
+
+      const DIALOGUES_DATA = [
+        {
+          id: 1,
+          tab_vi: "Hội thoại 1: Anmeldung",
+          tab_en: "Dialogue 1: Anmeldung",
+          title_vi:
+            "Hội thoại 1: Đăng ký địa chỉ cư trú tại Phòng hành chính công dân (Anmeldung beim Bürgeramt)",
+          title_en:
+            "Dialogue 1: Registering Residence at the Citizens' Office (Anmeldung beim Bürgeramt)",
+          context_vi:
+            "Trong tuần đầu tiên sang Đức, Đức đến Phòng hành chính công dân (Bürgeramt) theo lịch hẹn để đăng ký địa chỉ cư trú.",
+          context_en:
+            "During his first week in Germany, Đức goes to the citizens' office (Bürgeramt) for a scheduled residence registration appointment.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Sachbearbeiterin (Nhân viên hành chính)",
+              name_en: "Sachbearbeiterin (Clerk)",
+              de: "Guten Morgen! Bitte nehmen Sie Platz. Was kann ich für Sie tun?",
+              vi: "Chào buổi sáng! Mời anh ngồi. Tôi có thể giúp gì cho anh?",
+              en: "Good morning! Please take a seat. How can I help you?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Guten Morgen! Ich bin neu in Deutschland und möchte meinen Wohnsitz anmelden.",
+              vi: "Chào buổi sáng! Tôi mới sang Đức và muốn đăng ký địa chỉ cư trú của mình.",
+              en: "Good morning! I am new to Germany and would like to register my residence.",
+            },
+            {
+              role: "partner",
+              name_vi: "Sachbearbeiterin (Nhân viên hành chính)",
+              name_en: "Sachbearbeiterin (Clerk)",
+              de: "Gerne. Haben Sie Ihren Reisepass und die Wohnungsgeberbestätigung dabei?",
+              vi: "Được chứ. Anh có mang theo hộ chiếu và giấy xác nhận của chủ nhà không?",
+              en: "Certainly. Do you have your passport and the landlord confirmation form with you?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Ja, hier sind mein Reisepass, mein Arbeitsvertrag und die unterschriebene Wohnungsgeberbestätigung.",
+              vi: "Có, đây là hộ chiếu, hợp đồng lao động và giấy xác nhận của chủ nhà đã ký của tôi.",
+              en: "Yes, here are my passport, my employment contract, and the signed landlord confirmation form.",
+            },
+            {
+              role: "partner",
+              name_vi: "Sachbearbeiterin (Nhân viên hành chính)",
+              name_en: "Sachbearbeiterin (Clerk)",
+              de: "Vielen Dank, das ist alles vollständig. Ich trage Ihre Adresse jetzt ins System ein. Bitte unterschreiben Sie hier unten.",
+              vi: "Cảm ơn anh, hồ sơ đã đầy đủ hết rồi. Tôi đang nhập địa chỉ của anh vào hệ thống. Vui lòng ký tên ở phía dưới này.",
+              en: "Thank you, everything is complete. I am entering your address into the system now. Please sign down here.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Gerne. Wann bekomme ich meine Steueridentifikationsnummer?",
+              vi: "Vâng ạ. Khi nào tôi nhận được mã số thuế cá nhân của mình?",
+              en: "Gladly. When will I receive my tax identification number?",
+            },
+            {
+              role: "partner",
+              name_vi: "Sachbearbeiterin (Nhân viên hành chính)",
+              name_en: "Sachbearbeiterin (Clerk)",
+              de: "Die Steuer-ID wird Ihnen automatisch in ein bis zwei Wochen per Post zugeschickt. Hier ist Ihre Meldebescheinigung. Willkommen in Deutschland!",
+              vi: "Mã số thuế sẽ tự động gửi qua đường bưu điện cho anh sau 1 đến 2 tuần. Đây là giấy xác nhận đăng ký cư trú của anh. Chào mừng đến với nước Đức!",
+              en: "Your tax ID will be mailed to you automatically in one to two weeks. Here is your registration certificate. Welcome to Germany!",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Vielen Dank für Ihre Hilfe! Auf Wiedersehen!",
+              vi: "Cảm ơn sự giúp đỡ của chị rất nhiều! Chào tạm biệt!",
+              en: "Thank you very much for your help! Goodbye!",
+            },
+          ],
+        },
+        {
+          id: 2,
+          tab_vi: "Hội thoại 2: Ngân hàng",
+          tab_en: "Dialogue 2: Bank Account",
+          title_vi:
+            "Hội thoại 2: Mở tài khoản ngân hàng (Girokonto bei der Bank eröffnen)",
+          title_en:
+            "Dialogue 2: Opening a Bank Account (Girokonto bei der Bank eröffnen)",
+          context_vi:
+            "Sau khi có giấy xác nhận đăng ký cư trú, Đức đến ngân hàng địa phương (Sparkasse / Volksbank) để mở tài khoản nhận lương.",
+          context_en:
+            "After receiving his residence registration certificate, Đức visits a local bank (Sparkasse / Volksbank) to open a salary account.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Bankberater (Nhân viên ngân hàng)",
+              name_en: "Bankberater (Bank Advisor)",
+              de: "Guten Tag! Wie kann ich Ihnen helfen?",
+              vi: "Xin chào! Tôi có thể giúp gì cho anh?",
+              en: "Good day! How can I help you?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Guten Tag! Ich arbeite jetzt hier bei BG Wind GmbH und möchte ein Girokonto eröffnen.",
+              vi: "Xin chào! Hiện tôi đang làm việc tại công ty BG Wind GmbH và muốn mở một tài khoản thanh toán.",
+              en: "Good day! I now work here at BG Wind GmbH and would like to open a checking account.",
+            },
+            {
+              role: "partner",
+              name_vi: "Bankberater (Nhân viên ngân hàng)",
+              name_en: "Bankberater (Bank Advisor)",
+              de: "Sehr gerne. Dafür brauche ich Ihren Reisepass, Ihre Meldebescheinigung und Ihren Arbeitsvertrag.",
+              vi: "Rất sẵn lòng. Để làm thủ tục tôi cần hộ chiếu, giấy xác nhận đăng ký cư trú và hợp đồng lao động của anh.",
+              en: "With pleasure. For that, I need your passport, your residence registration certificate, and your employment contract.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Bitte schön, hier sind alle Unterlagen. Bekomme ich auch eine Girokarte und Online-Banking?",
+              vi: "Xin gửi anh, đây là toàn bộ giấy tờ. Tôi có được cấp thẻ thanh toán và ngân hàng trực tuyến không?",
+              en: "Here you go, all the documents are here. Will I also get a debit card and online banking?",
+            },
+            {
+              role: "partner",
+              name_vi: "Bankberater (Nhân viên ngân hàng)",
+              name_en: "Bankberater (Bank Advisor)",
+              de: "Ja, natürlich. Die Girokarte und die PIN kommen aus Sicherheitsgründen in zwei getrennten Briefen per Post. Hier steht schon Ihre neue IBAN.",
+              vi: "Có chứ, tất nhiên rồi. Vì lý do bảo mật, thẻ ngân hàng và mã PIN sẽ được gửi qua bưu điện trong hai phong bì riêng biệt. Còn đây là số IBAN mới của anh.",
+              en: "Yes, of course. For security reasons, the debit card and PIN arrive by mail in two separate letters. Here is your new IBAN already.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Super, dann kann ich die IBAN heute direkt meinem Arbeitgeber geben! Vielen Dank!",
+              vi: "Tuyệt quá, vậy hôm nay tôi có thể gửi ngay số IBAN này cho công ty rồi! Cảm ơn anh nhiều!",
+              en: "Great, then I can give the IBAN straight to my employer today! Thank you very much!",
+            },
+          ],
+        },
+        {
+          id: 3,
+          tab_vi: "Hội thoại 3: Siêu thị & Pfand",
+          tab_en: "Dialogue 3: Supermarket & Pfand",
+          title_vi:
+            "Hội thoại 3: Mua sắm tại siêu thị & Đổi vỏ chai lấy tiền cọc (Im Supermarkt & Pfandautomat)",
+          title_en:
+            "Dialogue 3: Grocery Shopping & Bottle Deposit Return (Im Supermarkt & Pfandautomat)",
+          context_vi:
+            "Cuối tuần Đức đi siêu thị mua thực phẩm, trả vỏ chai tại máy Pfandautomat và thanh toán tại quầy.",
+          context_en:
+            "On the weekend, Đức goes grocery shopping, returns bottles at the Pfandautomat, and pays at the checkout.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Entschuldigung, können Sie mir kurz helfen? Wo steht hier der Pfandautomat?",
+              vi: "Xin lỗi, bạn có thể giúp tôi một chút không? Máy thu hồi vỏ chai hoàn tiền đặt ở đâu vậy?",
+              en: "Excuse me, could you briefly help me? Where is the bottle deposit machine here?",
+            },
+            {
+              role: "partner",
+              name_vi: "Mitarbeiter (Nhân viên siêu thị)",
+              name_en: "Mitarbeiter (Store Staff)",
+              de: "Direkt vorne links neben dem Eingang. Einfach die Flaschen mit dem Boden zuerst hineinstecken und danach den grünen Knopf drücken.",
+              vi: "Ngay phía trước bên trái cạnh lối vào ấy. Bạn cứ đẩy đáy chai vào trước rồi sau đó bấm nút màu xanh lá là được.",
+              en: "Right up front on the left next to the entrance. Just insert the bottles base-first and then press the green button.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Super, danke! Und wo finde ich Reis und Speiseöl?",
+              vi: "Tuyệt quá, cảm ơn bạn! Còn gạo và dầu ăn thì nằm ở đâu vậy?",
+              en: "Awesome, thanks! And where do I find rice and cooking oil?",
+            },
+            {
+              role: "partner",
+              name_vi: "Mitarbeiter (Nhân viên siêu thị)",
+              name_en: "Mitarbeiter (Store Staff)",
+              de: "Reis ist in Gang 3 bei den Nudeln, und Speiseöl steht gleich daneben.",
+              vi: "Gạo ở dãy kệ số 3 chỗ khu mì ống, còn dầu ăn nằm ngay bên cạnh.",
+              en: "Rice is in aisle 3 by the pasta, and cooking oil is right next to it.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kassiererin (Thu ngân)",
+              name_en: "Kassiererin (Cashier)",
+              de: "Hallo! Haben Sie einen Pfandbon oder eine Kundenkarte?",
+              vi: "Xin chào! Anh có phiếu hoàn tiền vỏ chai hay thẻ khách hàng không?",
+              en: "Hello! Do you have a bottle deposit voucher or a loyalty card?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Ja, hier ist mein Pfandbon über 3,50 Euro. Ich möchte bitte mit Karte bezahlen.",
+              vi: "Có, đây là phiếu hoàn tiền 3,50 Euro của tôi. Tôi muốn thanh toán bằng thẻ ạ.",
+              en: "Yes, here is my deposit voucher for 3.50 euros. I would like to pay by card, please.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kassiererin (Thu ngân)",
+              name_en: "Kassiererin (Cashier)",
+              de: "Gerne, halten Sie die Karte bitte oben an das Lesegerät. Brauchen Sie den Kassenbon?",
+              vi: "Được ạ, anh vui lòng chạm thẻ vào phía trên máy quẹt. Anh có cần lấy hóa đơn không?",
+              en: "Sure, please hold your card up to the reader at the top. Do you need the receipt?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Ja, gerne. Schönen Tag noch!",
+              vi: "Có, cho tôi xin nhé. Chúc chị một ngày tốt lành!",
+              en: "Yes, please. Have a nice day!",
+            },
+          ],
+        },
+        {
+          id: 4,
+          tab_vi: "Hội thoại 4: Tàu hỏa & Vé tháng",
+          tab_en: "Dialogue 4: Train & Transit Pass",
+          title_vi:
+            "Hội thoại 4: Đi tàu hỏa, hỏi sân ga & xử lý khi tàu trễ chuyến (Am Bahnhof & Zugverspätung)",
+          title_en:
+            "Dialogue 4: Taking the Train, Platform Info & Handling Delays (Am Bahnhof & Zugverspätung)",
+          context_vi:
+            "Đức đi tàu vùng từ Rostock và cần hỏi thông tin chuyến tàu nối tiếp tại nhà ga.",
+          context_en:
+            "Đức takes a regional train from Rostock and asks for information about his connecting train at the station.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Entschuldigung, fährt der Regionalexpress nach Schwerin heute von Gleis 3?",
+              vi: "Xin lỗi, tàu nhanh khu vực đi Schwerin hôm nay có chạy từ sân ga số 3 không ạ?",
+              en: "Excuse me, does the regional express to Schwerin depart from platform 3 today?",
+            },
+            {
+              role: "partner",
+              name_vi: "Bahnmitarbeiter (Nhân viên nhà ga)",
+              name_en: "Bahnmitarbeiter (Rail Staff)",
+              de: "Nein, heute gibt es eine Gleisänderung. Der Zug fährt auf Gleis 5 ab und hat leider zehn Minuten Verspätung.",
+              vi: "Không, hôm nay có thay đổi sân ga. Tàu sẽ khởi hành ở sân ga số 5 và tiếc là bị trễ 10 phút.",
+              en: "No, there is a platform change today. The train departs from platform 5 and is unfortunately ten minutes delayed.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Oh, danke für die Info! Schaffe ich dann noch meinen Anschlusszug in Bad Kleinen?",
+              vi: "Ồ, cảm ơn thông tin của anh! Vậy tôi có còn kịp chuyến tàu nối tiếp ở Bad Kleinen không?",
+              en: "Oh, thanks for the info! Will I still make my connecting train in Bad Kleinen then?",
+            },
+            {
+              role: "partner",
+              name_vi: "Bahnmitarbeiter (Nhân viên nhà ga)",
+              name_en: "Bahnmitarbeiter (Rail Staff)",
+              de: "Ja, der Anschlusszug wartet normalerweise auf Reisende aus Rostock. Gilt Ihr Ticket für den Nahverkehr?",
+              vi: "Có, tàu nối chuyến thường sẽ đợi hành khách từ Rostock tới. Vé của anh có dùng cho tàu vùng không?",
+              en: "Yes, the connecting train usually waits for passengers from Rostock. Is your ticket valid for local/regional transit?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Ja, ich habe das Deutschlandticket auf meinem Handy.",
+              vi: "Có, tôi có vé Deutschlandticket trên điện thoại rồi.",
+              en: "Yes, I have the Deutschlandticket on my phone.",
+            },
+            {
+              role: "partner",
+              name_vi: "Bahnmitarbeiter (Nhân viên nhà ga)",
+              name_en: "Bahnmitarbeiter (Rail Staff)",
+              de: "Perfekt, dann können Sie damit alle Regionalzüge nutzen. Gute Reise!",
+              vi: "Hoàn hảo, vậy anh có thể đi mọi chuyến tàu vùng bằng vé đó. Chúc thượng lộ bình an!",
+              en: "Perfect, then you can use it on all regional trains. Have a good trip!",
+            },
+          ],
+        },
+        {
+          id: 5,
+          tab_vi: "Hội thoại 5: Khám bệnh & Nghỉ ốm",
+          tab_en: "Dialogue 5: Doctor & Sick Leave",
+          title_vi:
+            "Hội thoại 5: Khám bệnh tại phòng khám bác sĩ gia đình & xin giấy nghỉ ốm (Beim Hausarzt)",
+          title_en:
+            "Dialogue 5: Visiting the Family Doctor & Sick Leave Certificate (Beim Hausarzt)",
+          context_vi:
+            "Đức bị sốt và đau họng nên gọi đặt lịch khám tại phòng khám bác sĩ gia đình và xin giấy chứng nhận nghỉ ốm (AU) cho công ty.",
+          context_en:
+            "Đức has a fever and sore throat, so he calls to book an appointment at the family doctor's clinic and asks for a sick leave certificate (AU) for his employer.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Arzthelferin (Trợ lý phòng khám)",
+              name_en: "Arzthelferin (Clinic Assistant)",
+              de: "Praxis Dr. Weber, guten Morgen! Was kann ich für Sie tun?",
+              vi: "Phòng khám bác sĩ Weber xin chào! Tôi có thể giúp gì cho anh?",
+              en: "Dr. Weber's practice, good morning! How can I help you?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Guten Morgen! Ich habe seit gestern hohes Fieber und starke Halsschmerzen. Kann ich heute noch vorbeikommen?",
+              vi: "Chào buổi sáng! Từ hôm qua tôi bị sốt cao và đau họng dữ dội. Hôm nay tôi có thể tới khám được không ạ?",
+              en: "Good morning! Since yesterday I have had a high fever and a severe sore throat. Can I still come in today?",
+            },
+            {
+              role: "partner",
+              name_vi: "Arzthelferin (Trợ lý phòng khám)",
+              name_en: "Arzthelferin (Clinic Assistant)",
+              de: "Ja, kommen Sie bitte um 10:30 Uhr in die Akutsprechstunde. Bringen Sie Ihre Gesundheitskarte mit.",
+              vi: "Được ạ, anh vui lòng đến lúc 10:30 sáng vào khung giờ khám cấp tính. Nhớ mang theo thẻ bảo hiểm y tế nhé.",
+              en: "Yes, please come in at 10:30 AM for acute walk-in hours. Bring your health insurance card.",
+            },
+            {
+              role: "partner",
+              name_vi: "Arzt (Bác sĩ)",
+              name_en: "Arzt (Doctor)",
+              de: "Guten Tag! Sie haben eine starke Erkältung mit Fieber. Ich schreibe Sie für drei Tage krank und gebe Ihnen ein Rezept für Medikamente.",
+              vi: "Xin chào! Anh bị cảm lạnh nặng kèm sốt. Tôi sẽ cấp giấy nghỉ ốm cho anh 3 ngày và kê đơn thuốc cho anh.",
+              en: "Good day! You have a bad cold with a fever. I'll put you on sick leave for three days and give you a prescription for medication.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Vielen Dank, Herr Doktor! Muss ich die Arbeitsunfähigkeitsbescheinigung selbst an meinen Arbeitgeber schicken?",
+              vi: "Cảm ơn bác sĩ nhiều ạ! Tôi có phải tự gửi giấy chứng nhận nghỉ ốm cho công ty không?",
+              en: "Thank you very much, Doctor! Do I have to send the sick leave certificate to my employer myself?",
+            },
+            {
+              role: "partner",
+              name_vi: "Arzt (Bác sĩ)",
+              name_en: "Arzt (Doctor)",
+              de: "Nein, das läuft heute digital über Ihre Krankenkasse. Sie müssen Ihrem Arbeitgeber nur telefonisch Bescheid geben. Gute Besserung!",
+              vi: "Không cần đâu, hiện nay việc đó được truyền điện tử qua hãng bảo hiểm y tế của anh rồi. Anh chỉ cần gọi điện báo cho công ty biết là được. Chúc anh mau khỏe!",
+              en: "No, nowadays that goes digitally through your health insurer. You just need to let your employer know by phone. Get well soon!",
+            },
+          ],
+        },
+        {
+          id: 6,
+          tab_vi: "Hội thoại 6: Nhà ở, Rác & Sưởi",
+          tab_en: "Dialogue 6: Housing, Waste & Heating",
+          title_vi:
+            "Hội thoại 6: Trao đổi với quản lý tòa nhà về phân loại rác & sưởi ấm (Mit dem Hausmeister)",
+          title_en:
+            "Dialogue 6: Speaking with the Caretaker About Waste Sorting & Heating (Mit dem Hausmeister)",
+          context_vi:
+            "Đức trao đổi với quản lý tòa nhà về quy định phân loại rác và cách sử dụng lò sưởi tiết kiệm vào mùa đông.",
+          context_en:
+            "Đức talks with the building caretaker about waste sorting rules and using the heating efficiently in winter.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Guten Tag, Herr Müller! Ich habe eine kurze Frage zur Mülltrennung hier im Haus.",
+              vi: "Xin chào ông Müller! Tôi có một câu hỏi ngắn về việc phân loại rác ở tòa nhà mình.",
+              en: "Good day, Mr. Müller! I have a quick question about waste sorting here in the building.",
+            },
+            {
+              role: "partner",
+              name_vi: "Hausmeister (Quản lý tòa nhà)",
+              name_en: "Hausmeister (Caretaker)",
+              de: "Gerne, fragen Sie ruhig!",
+              vi: "Cứ tự nhiên hỏi đi anh!",
+              en: "Gladly, feel free to ask!",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "In welche Tonne kommen leere Plastikverpackungen und Dosen?",
+              vi: "Bao bì nhựa rỗng và vỏ lon thì bỏ vào thùng rác nào vậy ông?",
+              en: "Which bin do empty plastic packaging and cans go into?",
+            },
+            {
+              role: "partner",
+              name_vi: "Hausmeister (Quản lý tòa nhà)",
+              name_en: "Hausmeister (Caretaker)",
+              de: "Die gehören in den Gelben Sack oder die Gelbe Tonne. Papier und Kartons kommen in die blaue Papiertonne und Essensreste in die braune Biotonne.",
+              vi: "Chúng thuộc về túi vàng hoặc thùng rác màu vàng. Giấy và bìa các-tông bỏ vào thùng xanh dương, còn thức ăn thừa bỏ vào thùng hữu cơ màu nâu.",
+              en: "Those go in the yellow bag or yellow bin. Paper and cardboard go in the blue paper bin, and food scraps go in the brown organic bin.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Alles klar, danke! Und noch eine Frage: Im Wohnzimmer wird die Heizung nicht richtig warm.",
+              vi: "Tôi rõ rồi, cảm ơn ông! Và thêm một câu hỏi nữa: Trong phòng khách lò sưởi không nóng lên hẳn.",
+              en: "All clear, thanks! And one more question: the radiator in the living room isn't getting properly warm.",
+            },
+            {
+              role: "partner",
+              name_vi: "Hausmeister (Quản lý tòa nhà)",
+              name_en: "Hausmeister (Caretaker)",
+              de: "Ich komme heute Nachmittag kurz vorbei und entlüfte die Heizung. Denken Sie morgens auch ans Stoßlüften, damit sich keine Feuchtigkeit sammelt.",
+              vi: "Chiều nay tôi sẽ ghé qua xả khí cho lò sưởi. Buổi sáng anh cũng nhớ mở tung cửa thông gió nhanh để phòng không bị tích tụ hơi ẩm nhé.",
+              en: "I'll stop by briefly this afternoon and bleed the radiator. Remember to air out the room quickly in the morning too so moisture doesn't build up.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức",
+              name_en: "Đức",
+              de: "Vielen Dank, Herr Müller! Bis heute Nachmittag!",
+              vi: "Cảm ơn ông Müller rất nhiều! Hẹn gặp ông chiều nay!",
+              en: "Thank you very much, Mr. Müller! See you this afternoon!",
+            },
+          ],
+        },
+      ];
+
+      // =========================================================================
+      // 3. APPLICATION STATE & PERSISTENCE (localStorage)
+      // =========================================================================
+      const state = {
+        lang: localStorage.getItem("fd_lang") || "vi",
+        activeTab: "vocab",
+        globalVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_globalVoice"),
+          "piper_hochdeutsch",
+        ),
+        workerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_workerVoice"),
+          "piper_hochdeutsch",
+        ),
+        partnerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_partnerVoice"),
+          "piper_rostock",
+        ),
+        speed: parseFloat(localStorage.getItem("fd_speed")) || 1.0,
+        vocabCategory: "all",
+        vocabQuery: "",
+        phraseCategory: "all",
+        activeDialogueId: 1,
+        fcCategory: "all",
+        fcDeck: [...VOCAB_DATA],
+        fcIndex: 0,
+        fcFlipped: false,
+        masteredIds: JSON.parse(
+          localStorage.getItem("fd_mastered_hoinhapduc") || "[]",
+        ),
+        voiceDrawerOpen: false,
+      };
+
+      const audioCtrl = {
+        element: null,
+        activeBtnId: null,
+        isFullDialoguePlaying: false,
+        dialogueStopFlag: false,
+        toastTimer: null,
+      };
+
+      function t(key) {
+        return (
+          (I18N[state.lang] && I18N[state.lang][key]) || I18N.vi[key] || key
+        );
+      }
+
+      function getVoiceObj(voiceId) {
+        return VOICE_CATALOG.find((v) => v.id === voiceId) || VOICE_CATALOG[0];
+      }
+
+      function showToast(msg) {
+        const box = document.getElementById("statusToast");
+        const txt = document.getElementById("statusToastText");
+        if (!box || !txt) return;
+        txt.textContent = msg;
+        box.classList.remove("hidden");
+        clearTimeout(audioCtrl.toastTimer);
+        audioCtrl.toastTimer = setTimeout(() => {
+          box.classList.add("hidden");
+        }, 3000);
+      }
+
+      // =========================================================================
+      // 4. AUDIO ENGINE WITH FALLBACK (audio/hoinhapduc/<voice>/<file>)
+      // =========================================================================
+      function syncPlayingButtonUI() {
+        document.querySelectorAll("[data-audio-btn]").forEach((btn) => {
+          const id = btn.getAttribute("data-audio-btn");
+          const isCurrent = audioCtrl.activeBtnId === id;
+          const iconPlay = btn.querySelector(".icon-play");
+          const iconStop = btn.querySelector(".icon-stop");
+          if (isCurrent) {
+            btn.classList.add("btn-playing");
+            if (iconPlay) iconPlay.classList.add("hidden");
+            if (iconStop) iconStop.classList.remove("hidden");
+          } else {
+            btn.classList.remove("btn-playing");
+            if (iconPlay) iconPlay.classList.remove("hidden");
+            if (iconStop) iconStop.classList.add("hidden");
+          }
+        });
+
+        const fullBtn = document.getElementById("playFullDialogueBtn");
+        if (fullBtn) {
+          if (audioCtrl.isFullDialoguePlaying) {
+            fullBtn.classList.add("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>■</span> <span>${t("stopFullDialogue")}</span>`;
+          } else {
+            fullBtn.classList.remove("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.add("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>▶</span> <span>${t("playFullDialogue")}</span>`;
+          }
+        }
+
+        document.querySelectorAll("[data-preview-btn]").forEach((btn) => {
+          const isPrev = audioCtrl.activeBtnId === "preview_sample";
+          if (isPrev) {
+            btn.classList.add("bg-red-600", "text-white");
+            btn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            btn.innerHTML = `<span>■</span> <span>${t("stopPreviewBtn")}</span>`;
+          } else {
+            btn.classList.remove("bg-red-600");
+            btn.classList.add("bg-blue-600", "hover:bg-blue-700", "text-white");
+            btn.innerHTML = `<span>🔊</span> <span>${t("previewVoiceBtn")}</span>`;
+          }
+        });
+      }
+
+      function stopAllAudio(resetDialogue = true) {
+        if (resetDialogue) {
+          audioCtrl.dialogueStopFlag = true;
+          audioCtrl.isFullDialoguePlaying = false;
+        }
+        if (audioCtrl.element) {
+          audioCtrl.element.pause();
+          audioCtrl.element.src = "";
+          audioCtrl.element = null;
+        }
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+        }
+        audioCtrl.activeBtnId = null;
+        document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+          el.classList.remove(
+            "dialogue-line-active",
+            "ring-2",
+            "ring-blue-500",
+            "bg-blue-50/70",
+          );
+        });
+        syncPlayingButtonUI();
+      }
+
+      function playAudioWithFallback(
+        fileName,
+        fallbackText,
+        voiceId,
+        btnId,
+        onEndedCallback = null,
+      ) {
+        if (audioCtrl.activeBtnId === btnId) {
+          stopAllAudio(true);
+          return;
+        }
+
+        stopAllAudio(false);
+        audioCtrl.activeBtnId = btnId;
+        syncPlayingButtonUI();
+
+        const chain = [voiceId, "piper_hochdeutsch", "edge_hochdeutsch"].filter(
+          (v, idx, arr) => v && arr.indexOf(v) === idx,
+        );
+        let attemptIdx = 0;
+
+        const finishPlayback = () => {
+          audioCtrl.activeBtnId = null;
+          audioCtrl.element = null;
+          syncPlayingButtonUI();
+          if (onEndedCallback) onEndedCallback();
+        };
+
+        const tryNextSource = () => {
+          if (attemptIdx >= chain.length) {
+            if ("speechSynthesis" in window && fallbackText) {
+              const utter = new SpeechSynthesisUtterance(fallbackText);
+              utter.lang = "de-DE";
+              utter.rate = state.speed;
+              utter.onend = finishPlayback;
+              utter.onerror = finishPlayback;
+              window.speechSynthesis.speak(utter);
+            } else {
+              finishPlayback();
+            }
+            return;
+          }
+
+          const currentVoice = chain[attemptIdx];
+          const src = `${AUDIO_BASE_PATH}/${currentVoice}/${fileName}`;
+          const audio = new Audio(src);
+          audio.playbackRate = state.speed;
+          audioCtrl.element = audio;
+
+          audio.onended = finishPlayback;
+          audio.onerror = () => {
+            if (attemptIdx === 0 && currentVoice !== "piper_hochdeutsch") {
+              showToast(t("fallbackNotice"));
+            }
+            attemptIdx++;
+            tryNextSource();
+          };
+
+          audio.play().catch(() => {
+            attemptIdx++;
+            tryNextSource();
+          });
+        };
+
+        tryNextSource();
+      }
+
+      async function toggleFullDialogue() {
+        if (audioCtrl.isFullDialoguePlaying) {
+          stopAllAudio(true);
+          return;
+        }
+        const dlg = DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId);
+        if (!dlg) return;
+
+        stopAllAudio(true);
+        audioCtrl.isFullDialoguePlaying = true;
+        audioCtrl.dialogueStopFlag = false;
+        syncPlayingButtonUI();
+
+        for (let i = 0; i < dlg.lines.length; i++) {
+          if (audioCtrl.dialogueStopFlag) break;
+          const line = dlg.lines[i];
+          const lineNum = i + 1;
+          const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+          const voice =
+            line.role === "worker" ? state.workerVoice : state.partnerVoice;
+
+          document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+            el.classList.remove(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+          });
+          const rowEl = document.getElementById(`row_${btnId}`);
+          if (rowEl) {
+            rowEl.classList.add(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+            rowEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+
+          await new Promise((resolve) => {
+            playAudioWithFallback(
+              `dialog_${dlg.id}_line_${lineNum}.mp3`,
+              line.de,
+              voice,
+              btnId,
+              resolve,
+            );
+          });
+
+          if (!audioCtrl.dialogueStopFlag && i < dlg.lines.length - 1) {
+            await new Promise((r) => setTimeout(r, 350));
+          }
+        }
+
+        stopAllAudio(true);
+      }
+
+      // =========================================================================
+      // 5. VOICE DRAWER / POPOVER CONTROLS
+      // =========================================================================
+      function buildVoiceOptionsHTML(selectedId) {
+        const groups = {};
+        VOICE_CATALOG.forEach((v) => {
+          const g = state.lang === "en" ? v.group_en : v.group_vi;
+          if (!groups[g]) groups[g] = [];
+          groups[g].push(v);
+        });
+        return Object.entries(groups)
+          .map(
+            ([groupLabel, items]) => `
+        <optgroup label="${groupLabel}">
+          ${items
+            .map(
+              (v) => `
+            <option value="${v.id}" ${v.id === selectedId ? "selected" : ""}>
+              ${state.lang === "en" ? v.label_en : v.label_vi}
+            </option>
+          `,
+            )
+            .join("")}
+        </optgroup>
+      `,
+          )
+          .join("");
+      }
+
+      function renderVoiceForms() {
+        const formHTML = `
+        <div class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("selectVoiceLabel")}</label>
+            <select onchange="setGlobalVoice(this.value)"
+              class="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              ${buildVoiceOptionsHTML(state.globalVoice)}
+            </select>
+          </div>
+
+          <button type="button" data-preview-btn onclick="playAudioWithFallback('sample.mp3', 'Guten Tag! Willkommen in Deutschland.', state.globalVoice, 'preview_sample')"
+            class="w-full h-10 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer">
+            <span>🔊</span> <span>${t("previewVoiceBtn")}</span>
+          </button>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("speedLabel")}</label>
+            <div class="grid grid-cols-3 gap-1.5 bg-slate-100 p-1 rounded-xl">
+              ${[
+                { val: 0.75, label: t("speedSlow") },
+                { val: 1.0, label: t("speedNormal") },
+                { val: 1.25, label: t("speedFast") },
+              ]
+                .map(
+                  (sp) => `
+                <button type="button" onclick="setPlaybackSpeed(${sp.val})"
+                  class="h-9 rounded-lg text-xs font-bold transition cursor-pointer ${state.speed === sp.val ? "bg-amber-500 text-slate-950 shadow-xs" : "text-slate-600 hover:text-slate-900"}">
+                  ${sp.label}
+                </button>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+        </div>
+      `;
+
+        const dForm = document.getElementById("desktopVoiceForm");
+        const mForm = document.getElementById("mobileVoiceForm");
+        if (dForm) dForm.innerHTML = formHTML;
+        if (mForm) mForm.innerHTML = formHTML;
+
+        const vObj = getVoiceObj(state.globalVoice);
+        const shortName = state.lang === "en" ? vObj.short_en : vObj.short_vi;
+        const pill = document.getElementById("voicePillLabel");
+        if (pill) pill.textContent = `${shortName} • ${state.speed}x`;
+
+        const wSel = document.getElementById("workerVoiceSelect");
+        const pSel = document.getElementById("partnerVoiceSelect");
+        if (wSel) wSel.innerHTML = buildVoiceOptionsHTML(state.workerVoice);
+        if (pSel) pSel.innerHTML = buildVoiceOptionsHTML(state.partnerVoice);
+
+        syncPlayingButtonUI();
+      }
+
+      function toggleVoiceDrawer() {
+        state.voiceDrawerOpen = !state.voiceDrawerOpen;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+
+        if (state.voiceDrawerOpen) {
+          renderVoiceForms();
+          popover.classList.remove("md:hidden");
+          popover.classList.add("md:block");
+          sheet.classList.remove("hidden");
+          backdrop.classList.remove("hidden");
+        } else {
+          closeVoiceDrawer();
+        }
+      }
+
+      function closeVoiceDrawer() {
+        state.voiceDrawerOpen = false;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+        popover.classList.add("md:hidden");
+        popover.classList.remove("md:block");
+        sheet.classList.add("hidden");
+        backdrop.classList.add("hidden");
+      }
+
+      document.addEventListener("click", (e) => {
+        if (!state.voiceDrawerOpen) return;
+        const popover = document.getElementById("desktopVoicePopover");
+        const trigger = document.getElementById("voiceTriggerBtn");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        if (
+          !popover.contains(e.target) &&
+          !trigger.contains(e.target) &&
+          !sheet.contains(e.target)
+        ) {
+          closeVoiceDrawer();
+        }
+      });
+
+      function setGlobalVoice(voiceId) {
+        state.globalVoice = voiceId;
+        localStorage.setItem("fd_globalVoice", voiceId);
+        renderVoiceForms();
+      }
+
+      function updateDialogueVoice(role, voiceId) {
+        if (role === "worker") {
+          state.workerVoice = voiceId;
+          localStorage.setItem("fd_workerVoice", voiceId);
+        } else {
+          state.partnerVoice = voiceId;
+          localStorage.setItem("fd_partnerVoice", voiceId);
+        }
+      }
+
+      function setPlaybackSpeed(newSpeed) {
+        state.speed = newSpeed;
+        localStorage.setItem("fd_speed", String(newSpeed));
+        if (audioCtrl.element) {
+          audioCtrl.element.playbackRate = newSpeed;
+        }
+        renderVoiceForms();
+      }
+
+      // =========================================================================
+      // 6. SMART NORMALIZATION & RENDERERS (100% VI <-> EN)
+      // =========================================================================
+      function normalizeSearch(str) {
+        return (str || "")
+          .toLowerCase()
+          .replace(/ä/g, "a")
+          .replace(/ö/g, "o")
+          .replace(/ü/g, "u")
+          .replace(/ß/g, "ss")
+          .normalize("NFD")
+          .replace(/[̀-ͯ]/g, "")
+          .replace(/đ/g, "d");
+      }
+
+      function renderNavigation() {
+        const tabs = [
+          {
+            id: "vocab",
+            dLabel: `${t("nav_vocab_desktop")} (${VOCAB_DATA.length})`,
+            mLabel: t("nav_vocab_mobile"),
+            icon: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25",
+          },
+          {
+            id: "phrases",
+            dLabel: `${t("nav_phrases_desktop")} (${PHRASES_DATA.length})`,
+            mLabel: t("nav_phrases_mobile"),
+            icon: "M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z",
+          },
+          {
+            id: "dialogues",
+            dLabel: `${t("nav_dialogues_desktop")} (${DIALOGUES_DATA.length})`,
+            mLabel: t("nav_dialogues_mobile"),
+            icon: "M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155",
+          },
+          {
+            id: "flashcards",
+            dLabel: t("nav_flashcards_desktop"),
+            mLabel: t("nav_flashcards_mobile"),
+            icon: "M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3",
+          },
+        ];
+
+        document.getElementById("desktopNav").innerHTML = tabs
+          .map(
+            (tab) => `
+        <button type="button" onclick="switchTab('${tab.id}')"
+          class="px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${state.activeTab === tab.id ? "bg-white text-slate-900 shadow-xs" : "text-slate-300 hover:text-white hover:bg-slate-700/60"}">
+          ${tab.dLabel}
+        </button>
+      `,
+          )
+          .join("");
+
+        document.getElementById("mobileNavGrid").innerHTML = tabs
+          .map((tab) => {
+            const active = state.activeTab === tab.id;
+            return `
+          <button type="button" onclick="switchTab('${tab.id}')"
+            class="flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition cursor-pointer ${active ? "text-blue-600" : "text-slate-500 hover:text-slate-800"}">
+            <svg class="w-5 h-5 ${active ? "stroke-[2.3]" : "stroke-[1.8]"}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="${tab.icon}" />
+            </svg>
+            <span>${tab.mLabel}</span>
+          </button>
+        `;
+          })
+          .join("");
+      }
+
+      function switchTab(tabId) {
+        state.activeTab = tabId;
+        ["vocab", "phrases", "dialogues", "flashcards"].forEach((id) => {
+          const el = document.getElementById(`section-${id}`);
+          if (el) el.classList.toggle("hidden", id !== tabId);
+        });
+        renderNavigation();
+        if (tabId === "flashcards") renderFlashcard();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function speakBtnHTML(btnId, sizeClass = "w-11 h-11") {
+        return `
+        <button type="button" data-audio-btn="${btnId}"
+          class="${sizeClass} shrink-0 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200/80 flex items-center justify-center transition cursor-pointer active:scale-95"
+          aria-label="Play audio">
+          <svg class="icon-play w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+          </svg>
+          <span class="icon-stop hidden text-xs font-extrabold">■</span>
+        </button>
+      `;
+      }
+
+      function renderVocab() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("cat_all")} (${VOCAB_DATA.length})` },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+
+        document.getElementById("vocabCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setVocabCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.vocabCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const q = normalizeSearch(state.vocabQuery);
+        const filtered = VOCAB_DATA.filter((item) => {
+          const matchCat =
+            state.vocabCategory === "all" || item.cat === state.vocabCategory;
+          if (!matchCat) return false;
+          if (!q) return true;
+          const haystack = normalizeSearch(
+            `${item.de} ${item.vi} ${item.en} ${item.rel_vi} ${item.rel_en} ${item.ex_de} ${item.ex_vi} ${item.ex_en}`,
+          );
+          return haystack.includes(q);
+        });
+
+        const grid = document.getElementById("vocabGrid");
+        if (filtered.length === 0) {
+          grid.innerHTML = `<div class="col-span-full bg-white rounded-2xl p-8 text-center text-sm text-slate-500 border border-slate-200">${t("noResults")}</div>`;
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map((item) => {
+            const typeStr = state.lang === "en" ? item.type_en : item.type_vi;
+            const meaningStr = state.lang === "en" ? item.en : item.vi;
+            const relStr = state.lang === "en" ? item.rel_en : item.rel_vi;
+            const exTrans = state.lang === "en" ? item.ex_en : item.ex_vi;
+            const wordBtnId = `vocab_${item.id}_word`;
+            const exBtnId = `vocab_${item.id}_ex`;
+
+            return `
+          <article class="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex flex-col justify-between gap-3.5">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">${item.de}</h2>
+                    <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-100">${typeStr}</span>
+                  </div>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">${item.ipa}</p>
+                  <p class="text-sm sm:text-base font-bold text-emerald-700 mt-1.5">${meaningStr}</p>
+                </div>
+                <div onclick="playAudioWithFallback('vocab_${item.id}_word.mp3', '${item.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="mt-2.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                <span class="font-semibold text-slate-700">${t("relatedPrefix")}</span> ${relStr}
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/60 flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <p class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">${item.ex_de}</p>
+                <p class="text-xs text-slate-600 italic mt-0.5 leading-snug">${exTrans}</p>
+              </div>
+              <div onclick="playAudioWithFallback('vocab_${item.id}_ex.mp3', '${item.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')">
+                ${speakBtnHTML(exBtnId, "w-11 h-11 bg-amber-100/80 hover:bg-amber-200/80 text-amber-800 border-amber-200")}
+              </div>
+            </div>
+          </article>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setVocabCategory(cat) {
+        state.vocabCategory = cat;
+        renderVocab();
+      }
+
+      function handleVocabSearch(val) {
+        state.vocabQuery = val;
+        const clearBtn = document.getElementById("clearSearchBtn");
+        if (clearBtn) {
+          clearBtn.classList.toggle("hidden", !val);
+          clearBtn.classList.toggle("flex", Boolean(val));
+        }
+        renderVocab();
+      }
+
+      function clearVocabSearch() {
+        const input = document.getElementById("vocabSearchInput");
+        if (input) input.value = "";
+        handleVocabSearch("");
+      }
+
+      function renderPhrases() {
+        const countPCat = (cat) =>
+          PHRASES_DATA.filter((p) => p.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("pcat_all")} (${PHRASES_DATA.length})` },
+          { id: "2.1", label: `${t("pcat_2_1")} (${countPCat("2.1")})` },
+          { id: "2.2", label: `${t("pcat_2_2")} (${countPCat("2.2")})` },
+          { id: "2.3", label: `${t("pcat_2_3")} (${countPCat("2.3")})` },
+          { id: "2.4", label: `${t("pcat_2_4")} (${countPCat("2.4")})` },
+          { id: "2.5", label: `${t("pcat_2_5")} (${countPCat("2.5")})` },
+        ];
+
+        document.getElementById("phraseCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setPhraseCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.phraseCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const filtered = PHRASES_DATA.filter(
+          (p) =>
+            state.phraseCategory === "all" || p.cat === state.phraseCategory,
+        );
+        document.getElementById("phrasesList").innerHTML = filtered
+          .map((p) => {
+            const trans = state.lang === "en" ? p.en : p.vi;
+            const btnId = `phrase_${p.id}`;
+            return `
+          <div class="bg-white rounded-2xl p-4 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex items-center justify-between gap-3.5">
+            <div class="min-w-0">
+              <span class="inline-block text-[11px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md mb-1">${p.cat}</span>
+              <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${p.de}</p>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">${trans}</p>
+            </div>
+            <div onclick="playAudioWithFallback('phrase_${p.id}.mp3', '${p.de.replace(/'/g, "\'")}', state.globalVoice, '${btnId}')">
+              ${speakBtnHTML(btnId, "w-11 h-11")}
+            </div>
+          </div>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setPhraseCategory(cat) {
+        state.phraseCategory = cat;
+        renderPhrases();
+      }
+
+      function renderDialogues() {
+        document.getElementById("dialogueTabs").innerHTML = DIALOGUES_DATA.map(
+          (d) => {
+            const label = state.lang === "en" ? d.tab_en : d.tab_vi;
+            const active = d.id === state.activeDialogueId;
+            return `
+          <button type="button" onclick="selectDialogue(${d.id})"
+            class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition cursor-pointer ${active ? "bg-slate-900 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+            ${label}
+          </button>
+        `;
+          },
+        ).join("");
+
+        const dlg =
+          DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId) ||
+          DIALOGUES_DATA[0];
+        const title = state.lang === "en" ? dlg.title_en : dlg.title_vi;
+        const context = state.lang === "en" ? dlg.context_en : dlg.context_vi;
+
+        document.getElementById("dialogueContainer").innerHTML = `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-slate-900">${title}</h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">${context}</p>
+          </div>
+          <button id="playFullDialogueBtn" type="button" onclick="toggleFullDialogue()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 shadow-xs transition cursor-pointer">
+            <span>▶</span> <span>${t("playFullDialogue")}</span>
+          </button>
+        </div>
+
+        <div class="space-y-3">
+          ${dlg.lines
+            .map((line, idx) => {
+              const lineNum = idx + 1;
+              const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+              const speakerName =
+                state.lang === "en" ? line.name_en : line.name_vi;
+              const lineTrans = state.lang === "en" ? line.en : line.vi;
+              const isWorker = line.role === "worker";
+              const voiceForLine = isWorker
+                ? state.workerVoice
+                : state.partnerVoice;
+
+              return `
+              <div id="row_${btnId}" class="p-3.5 sm:p-4 rounded-2xl border transition flex items-start justify-between gap-3 ${isWorker ? "bg-slate-50/90 border-slate-200/80" : "bg-emerald-50/50 border-emerald-200/60"}">
+                <div class="min-w-0">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold mb-1 ${isWorker ? "bg-blue-100 text-blue-800" : "bg-emerald-100 text-emerald-900"}">
+                    ${speakerName}
+                  </span>
+                  <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${line.de}</p>
+                  <p class="text-xs sm:text-sm text-slate-600 mt-1">${lineTrans}</p>
+                </div>
+                <div onclick="playAudioWithFallback('dialog_${dlg.id}_line_${lineNum}.mp3', '${line.de.replace(/'/g, "\'")}', '${voiceForLine}', '${btnId}')">
+                  ${speakBtnHTML(btnId, "w-11 h-11")}
+                </div>
+              </div>
+            `;
+            })
+            .join("")}
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function selectDialogue(id) {
+        stopAllAudio(true);
+        state.activeDialogueId = id;
+        renderDialogues();
+      }
+
+      function renderFlashcardControls() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cardUnit = state.lang === "en" ? "cards" : "thẻ";
+        const opts = [
+          {
+            id: "all",
+            label: `${t("fcAllCategories")} (${VOCAB_DATA.length} ${cardUnit})`,
+          },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+        document.getElementById("fcCategorySelect").innerHTML = opts
+          .map(
+            (o) => `
+        <option value="${o.id}" ${o.id === state.fcCategory ? "selected" : ""}>${o.label}</option>
+      `,
+          )
+          .join("");
+      }
+
+      function renderFlashcard() {
+        renderFlashcardControls();
+        if (state.fcDeck.length === 0) state.fcDeck = [...VOCAB_DATA];
+        if (state.fcIndex >= state.fcDeck.length) state.fcIndex = 0;
+
+        const card = state.fcDeck[state.fcIndex];
+        const typeStr = state.lang === "en" ? card.type_en : card.type_vi;
+        const meaningStr = state.lang === "en" ? card.en : card.vi;
+        const relStr = state.lang === "en" ? card.rel_en : card.rel_vi;
+        const exTrans = state.lang === "en" ? card.ex_en : card.ex_vi;
+        const isMastered = state.masteredIds.includes(card.id);
+
+        document.getElementById("fcCounter").textContent =
+          `${state.fcIndex + 1} / ${state.fcDeck.length}`;
+
+        const masterBtn = document.getElementById("fcMasterBtn");
+        if (isMastered) {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-bold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>✓</span> <span>${t("fcMastered")}</span>`;
+        } else {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-semibold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>○</span> <span>${t("fcMarkMastered")}</span>`;
+        }
+
+        const wordBtnId = `fc_word_${card.id}`;
+        const exBtnId = `fc_ex_${card.id}`;
+
+        document.getElementById("flashcardStage").innerHTML = `
+        <div onclick="flipFlashcard()" class="relative w-full min-h-[310px] sm:min-h-[340px] cursor-pointer select-none">
+          <div class="w-full min-h-[310px] sm:min-h-[340px] transform-style-3d ${state.fcFlipped ? "rotate-y-180" : ""}">
+            
+            <!-- FRONT -->
+            <div class="absolute inset-0 backface-hidden bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 flex flex-col items-center justify-between text-center">
+              <div class="w-full flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-50 text-emerald-700">${typeStr}</span>
+                <div onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="my-auto py-4">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${card.de}</h2>
+                <p class="text-sm font-mono text-slate-400 mt-2">${card.ipa}</p>
+              </div>
+
+              <p class="text-xs font-medium text-slate-400">${t("fcFrontHint")}</p>
+            </div>
+
+            <!-- BACK -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-800 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <p class="text-xs font-semibold text-amber-400 uppercase tracking-wider">${card.de}</p>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-1">${meaningStr}</h3>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')"
+                    class="h-10 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shrink-0 cursor-pointer">
+                    <span>🔊</span> <span>${t("fcWordBtn")}</span>
+                  </button>
+                </div>
+
+                <p class="text-xs text-slate-300 bg-slate-800/80 p-3 rounded-xl mt-3 leading-relaxed">
+                  <span class="font-semibold text-amber-300">${t("relatedPrefix")}</span> ${relStr}
+                </p>
+
+                <div class="mt-3 p-3.5 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="text-xs sm:text-sm font-semibold text-white leading-snug">${card.ex_de}</p>
+                    <p class="text-xs text-slate-300 italic mt-1">${exTrans}</p>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_ex.mp3', '${card.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')"
+                    class="w-11 h-11 shrink-0 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center justify-center font-bold cursor-pointer">
+                    🔊
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-center text-xs text-slate-400 mt-3">${t("fcBackHint")}</p>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function flipFlashcard() {
+        state.fcFlipped = !state.fcFlipped;
+        renderFlashcard();
+      }
+
+      function nextFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex = (state.fcIndex + 1) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function prevFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex =
+          (state.fcIndex - 1 + state.fcDeck.length) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function setFlashcardCategory(cat) {
+        state.fcCategory = cat;
+        state.fcFlipped = false;
+        state.fcIndex = 0;
+        state.fcDeck =
+          cat === "all"
+            ? [...VOCAB_DATA]
+            : VOCAB_DATA.filter((v) => v.cat === cat);
+        renderFlashcard();
+      }
+
+      function shuffleFlashcards() {
+        for (let i = state.fcDeck.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [state.fcDeck[i], state.fcDeck[j]] = [
+            state.fcDeck[j],
+            state.fcDeck[i],
+          ];
+        }
+        state.fcIndex = 0;
+        state.fcFlipped = false;
+        renderFlashcard();
+      }
+
+      function toggleFlashcardMastered() {
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+        const idx = state.masteredIds.indexOf(card.id);
+        if (idx >= 0) {
+          state.masteredIds.splice(idx, 1);
+        } else {
+          state.masteredIds.push(card.id);
+        }
+        localStorage.setItem(
+          "fd_mastered_hoinhapduc",
+          JSON.stringify(state.masteredIds),
+        );
+        renderFlashcard();
+      }
+
+      function renderCulturalNotes() {
+        document.getElementById("notesHeading").textContent = t("notesHeading");
+        const items = t("notes") || [];
+        document.getElementById("notesList").innerHTML = items
+          .map(
+            (n) => `
+        <li class="p-3 rounded-xl bg-slate-50 border border-slate-100">${n}</li>
+      `,
+          )
+          .join("");
+      }
+
+      // =========================================================================
+      // 7. LANGUAGE SWITCHER (100% UI + CONTENT LOCALIZATION)
+      // =========================================================================
+      function setLanguage(lang) {
+        state.lang = lang;
+        localStorage.setItem("fd_lang", lang);
+        document.documentElement.lang = lang;
+        document.title = t("pageTitle");
+
+        const viBtn = document.getElementById("langBtnVi");
+        const enBtn = document.getElementById("langBtnEn");
+        if (lang === "vi") {
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        } else {
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        }
+
+        document.getElementById("backHomeText").textContent = t("backHomeText");
+        document.getElementById("brandTitle").textContent = t("brandTitle");
+        document.getElementById("popoverTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("sheetTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("vocabSearchInput").placeholder =
+          t("searchPlaceholder");
+        document.getElementById("workerVoiceLabel").textContent =
+          t("workerVoiceLabel");
+        document.getElementById("partnerVoiceLabel").textContent =
+          t("partnerVoiceLabel");
+        document.getElementById("fcShuffleText").textContent = t("fcShuffle");
+        document.getElementById("fcPrevText").textContent = t("fcPrev");
+        document.getElementById("fcNextText").textContent = t("fcNext");
+        document.getElementById("fcShortcutHint").textContent =
+          t("fcShortcutHint");
+
+        renderNavigation();
+        renderVoiceForms();
+        renderVocab();
+        renderPhrases();
+        renderDialogues();
+        renderFlashcard();
+        renderCulturalNotes();
+      }
+
+      // =========================================================================
+      // 8. KEYBOARD SHORTCUTS
+      // =========================================================================
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && state.voiceDrawerOpen) {
+          closeVoiceDrawer();
+          return;
+        }
+        if (
+          ["INPUT", "SELECT", "TEXTAREA"].includes(
+            document.activeElement.tagName,
+          )
+        )
+          return;
+        if (state.activeTab !== "flashcards") return;
+
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+
+        if (e.code === "Space") {
+          e.preventDefault();
+          flipFlashcard();
+        } else if (e.key === "ArrowRight") {
+          nextFlashcard();
+        } else if (e.key === "ArrowLeft") {
+          prevFlashcard();
+        } else if (e.key.toLowerCase() === "s") {
+          playAudioWithFallback(
+            `vocab_${card.id}_word.mp3`,
+            card.de,
+            state.globalVoice,
+            `fc_word_${card.id}`,
+          );
+        } else if (e.key.toLowerCase() === "e") {
+          playAudioWithFallback(
+            `vocab_${card.id}_ex.mp3`,
+            card.ex_de,
+            state.globalVoice,
+            `fc_ex_${card.id}`,
+          );
+        }
+      });
+
+      // =========================================================================
+      // 9. INITIALIZE APP
+      // =========================================================================
+      setLanguage(state.lang);
+    </script>
+  </body>
+</html>
