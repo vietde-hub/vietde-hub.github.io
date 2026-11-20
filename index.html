@@ -116,7 +116,7 @@
                 class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"
               ></span>
               <span id="heroBadge"
-                >Cổng đào tạo Tiếng Đức Đời Sống & Chuyên Ngành</span
+                >Cổng đào tạo Tiếng Đức Đời Sống & Đa Ngành Nghề</span
               >
             </div>
             <h1
@@ -130,7 +130,7 @@
               class="text-xs sm:text-[13px] text-slate-300 leading-relaxed max-w-3xl"
             >
               Hành trang đời sống (Anmeldung, ngân hàng, siêu thị, tàu xe, y tế)
-              và tiếng Đức thực chiến tại xưởng/công trường BG Wind GmbH.
+              và chuyên ngành kỹ thuật, y tế, dịch vụ, hậu cần tại Đức.
             </p>
           </div>
 
@@ -142,7 +142,7 @@
               <span
                 id="statTradesVal"
                 class="text-sm sm:text-base font-extrabold text-emerald-400 leading-none"
-                >3/4</span
+                >3/11</span
               >
               <span
                 id="statTradesLabel"
@@ -208,7 +208,7 @@
             id="courseSearchInput"
             type="search"
             oninput="handleSearch(this.value)"
-            placeholder="Tìm chuyên mục (VD: Đời sống, Thợ sơn, Buộc sắt, Hàn...)"
+            placeholder="Tìm chuyên mục (VD: Đời sống, Điều dưỡng, Nha khoa, Bếp, Kho vận...)"
             class="w-full h-9 sm:h-10 pl-10 pr-8 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
           />
           <button
@@ -250,15 +250,15 @@
         vi: {
           pageTitle:
             "VietDe Hub — Tiếng Đức Chuyên Ngành & Hòa Nhập Cuộc Sống Đức",
-          heroBadge: "Cổng đào tạo Tiếng Đức Đời Sống & Chuyên Ngành",
+          heroBadge: "Cổng đào tạo Tiếng Đức Đời Sống & Đa Ngành Nghề",
           heroTitle: "Tiếng Đức Hòa Nhập & Nghề Nghiệp Tại Đức",
           heroSubtitle:
-            "Hành trang đời sống (Anmeldung, ngân hàng, siêu thị, tàu xe, y tế) và tiếng Đức thực chiến tại xưởng/công trường BG Wind GmbH.",
+            "Hành trang đời sống (Anmeldung, ngân hàng, siêu thị, tàu xe, y tế) và chuyên ngành kỹ thuật, y tế, dịch vụ, hậu cần tại Đức.",
           statTradesLabel: "Chuyên mục sẵn sàng",
           statTermsLabel: "Thuật ngữ lõi",
           statDialoguesLabel: "Hội thoại thực tế",
           searchPlaceholder:
-            "Tìm chuyên mục (VD: Đời sống, Thợ sơn, Buộc sắt, Hàn...)",
+            "Tìm chuyên mục (VD: Đời sống, Điều dưỡng, Nha khoa, Bếp, Kho vận...)",
           filterAll: "Tất cả",
           filterReady: "Sẵn sàng học",
           filterSoon: "Sắp ra mắt",
@@ -267,23 +267,23 @@
           openBtn: "Bắt đầu học →",
           soonBtn: "Sắp ra mắt",
           soonToast:
-            "Chuyên mục này đang được biên soạn nội dung & âm thanh. Vui lòng quay lại sau!",
+            "Chuyên mục này đang được xây dựng từng phần theo lộ trình của bạn. Khi bắt đầu biên soạn sẽ cập nhật tiếp!",
           footerNote: "Hỗ trợ âm thanh AI offline & đa ngôn ngữ Việt – Anh",
           noResults: "Không tìm thấy chuyên mục phù hợp.",
-          plannedStats: "Kế hoạch mở rộng tiếp theo",
+          plannedStats: "Đang lên khung xây dựng từng phần",
         },
         en: {
           pageTitle:
             "VietDe Hub — Everyday German & Trade German in Germany",
-          heroBadge: "Everyday German & Vocational Training Hub",
+          heroBadge: "Everyday German & Multi-Trade Training Hub",
           heroTitle: "Everyday Integration & Trade German in Germany",
           heroSubtitle:
-            "Daily living essentials (Anmeldung, banking, shopping, transit, healthcare) and practical BG Wind GmbH workshop/site German.",
+            "Daily living essentials (Anmeldung, banking, shopping, transit, healthcare) plus technical, healthcare, hospitality, and logistics German.",
           statTradesLabel: "Active Modules",
           statTermsLabel: "Core Terms",
           statDialoguesLabel: "Real Dialogues",
           searchPlaceholder:
-            "Search modules (e.g., Everyday, Painter, Rebar, Welder...)",
+            "Search modules (e.g., Everyday, Nursing, Dental, Kitchen, Logistics...)",
           filterAll: "All Modules",
           filterReady: "Available Now",
           filterSoon: "Coming Soon",
@@ -292,14 +292,19 @@
           openBtn: "Start Learning →",
           soonBtn: "Coming Soon",
           soonToast:
-            "This module and its audio assets are currently in production.",
+            "This module is scheduled for step-by-step creation as we build each trade.",
           footerNote: "Offline AI audio & 100% Vietnamese – English support",
           noResults: "No matching modules found.",
-          plannedStats: "Planned upcoming module",
+          plannedStats: "Planned step-by-step module",
         },
       };
 
-      // Thứ tự hiển thị ưu tiên: 1. Đời sống & Hòa nhập -> 2. Thợ sơn -> 3. Thợ buộc sắt -> 4. ...
+      // Thứ tự hiển thị:
+      // 1. Đời sống & Hòa nhập (hoinhapduc.html)
+      // 2. Ngành Sơn Công Nghiệp (thoson.html)
+      // 3. Kỹ Thuật Viên Cốt Thép (thobuocsat.html)
+      // 4. Ngành Thợ Hàn Công Nghiệp
+      // 5..11. Các chuyên mục mở rộng mới: Điều dưỡng, Trợ lý nha khoa, Chế biến thực phẩm, Bếp, Nhà hàng khách sạn, Nail, Kho vận
       const COURSES_DATA = [
         {
           id: "doisong",
@@ -373,6 +378,139 @@
             "Từ vựng máy hàn MAG/TIG, khí bảo vệ, kiểm tra khuyết tật mối hàn, tiêu chuẩn an toàn chống cháy nổ và đọc thông số kỹ thuật.",
           desc_en:
             "MAG/TIG welding terminology, shielding gases, weld seam inspection, fire safety regulations, and technical specs.",
+          vocabCount: 0,
+          phraseCount: 0,
+          dialogueCount: 0,
+        },
+        {
+          id: "dieuduong",
+          href: "#",
+          ready: false,
+          accent: "rose",
+          icon: "🩺",
+          germanTitle: "Pflegefachkraft & Pflegehelfer",
+          title_vi: "Ngành Điều Dưỡng & Chăm Sóc Y Tế",
+          title_en: "Nursing & Healthcare Care",
+          tag_vi: "Bệnh viện, Viện dưỡng lão & Chăm sóc bệnh nhân",
+          tag_en: "Hospitals, Nursing Homes & Patient Care",
+          desc_vi:
+            "Thuật ngữ chăm sóc cơ bản (Grundpflege), vệ sinh & hỗ trợ vận động bệnh nhân, bàn giao ca (Übergabe), chỉ số sinh tồn và giao tiếp y tế.",
+          desc_en:
+            "Basic care (Grundpflege), patient mobility & hygiene, shift handover (Übergabe), vital signs, and clinical communication.",
+          vocabCount: 0,
+          phraseCount: 0,
+          dialogueCount: 0,
+        },
+        {
+          id: "trolynhakhoa",
+          href: "#",
+          ready: false,
+          accent: "cyan",
+          icon: "🦷",
+          germanTitle: "Zahnmedizinische Fachangestellte (ZFA)",
+          title_vi: "Ngành Trợ Lý Nha Khoa",
+          title_en: "Dental Assistant",
+          tag_vi: "Phòng khám nha khoa, Vô trùng dụng cụ & Hỗ trợ điều trị",
+          tag_en: "Dental Clinics, Sterilization & Chairside Assistance",
+          desc_vi:
+            "Từ vựng dụng cụ nha khoa, quy trình khử khuẩn & tiệt trùng (Hygiene & Sterilisation), hỗ trợ bác sĩ trên ghế nha và đặt lịch bệnh nhân.",
+          desc_en:
+            "Dental instruments, hygiene & sterilization routines, chairside assistance, and patient scheduling.",
+          vocabCount: 0,
+          phraseCount: 0,
+          dialogueCount: 0,
+        },
+        {
+          id: "chebienthucpham",
+          href: "#",
+          ready: false,
+          accent: "orange",
+          icon: "🥩",
+          germanTitle: "Lebensmittelverarbeitung & Fleischer",
+          title_vi: "Ngành Chế Biến Thực Phẩm",
+          title_en: "Food Processing",
+          tag_vi: "Dây chuyền thực phẩm, Vệ sinh HACCP & Đóng gói",
+          tag_en: "Food Production Lines, HACCP Hygiene & Packaging",
+          desc_vi:
+            "Thuật ngữ dây chuyền chế biến thực phẩm, tiêu chuẩn vệ sinh an toàn thực phẩm (Hygiene / HACCP), bảo quản lạnh, kiểm soát chất lượng và đóng gói.",
+          desc_en:
+            "Food processing lines, HACCP hygiene standards, cold chain storage, quality checks, and packaging.",
+          vocabCount: 0,
+          phraseCount: 0,
+          dialogueCount: 0,
+        },
+        {
+          id: "bep",
+          href: "#",
+          ready: false,
+          accent: "amber",
+          icon: "👨‍🍳",
+          germanTitle: "Koch & Küchenhilfe",
+          title_vi: "Ngành Bếp & Phụ Bếp",
+          title_en: "Kitchen & Culinary Arts",
+          tag_vi: "Sơ chế, Chế biến món ăn & An toàn vệ sinh bếp",
+          tag_en: "Prep, Cooking Methods & Kitchen Hygiene",
+          desc_vi:
+            "Từ vựng nguyên liệu, kỹ thuật sơ chế/cắt thái/nấu nướng (schneiden, anbraten, kochen, würzen), thiết bị bếp công nghiệp và an toàn thực phẩm.",
+          desc_en:
+            "Ingredients, prep & cooking verbs (schneiden, anbraten, kochen, würzen), kitchen appliances, and food safety.",
+          vocabCount: 0,
+          phraseCount: 0,
+          dialogueCount: 0,
+        },
+        {
+          id: "nhahangkhachsan",
+          href: "#",
+          ready: false,
+          accent: "indigo",
+          icon: "🏨",
+          germanTitle: "Hotellerie & Gastronomie (Service)",
+          title_vi: "Ngành Nhà Hàng & Khách Sạn",
+          title_en: "Hospitality & Restaurant Service",
+          tag_vi: "Lễ tân, Buồng phòng & Phục vụ bàn nhà hàng",
+          tag_en: "Front Desk, Housekeeping & Restaurant Service",
+          desc_vi:
+            "Mẫu câu đón tiếp khách, nhận/trả phòng (Check-in / Check-out), phục vụ bàn, gọi món, xử lý yêu cầu khách hàng và tiêu chuẩn dịch vụ tại Đức.",
+          desc_en:
+            "Guest greeting, check-in/check-out, table service, ordering, handling guest requests, and hospitality standards.",
+          vocabCount: 0,
+          phraseCount: 0,
+          dialogueCount: 0,
+        },
+        {
+          id: "nail",
+          href: "#",
+          ready: false,
+          accent: "pink",
+          icon: "💅",
+          germanTitle: "Nagelstudio & Kosmetik / Maniküre",
+          title_vi: "Ngành Nail & Chăm Sóc Móng",
+          title_en: "Nail Care & Manicure",
+          tag_vi: "Chăm sóc móng tay/chân, Gel/Acryl & Vệ sinh tiệm",
+          tag_en: "Manicure/Pedicure, Gel/Acrylic & Salon Hygiene",
+          desc_vi:
+            "Từ vựng làm móng tay/chân (Maniküre, Pediküre), đắp gel/bột, tư vấn kiểu dáng/màu sắc cho khách và khử khuẩn dụng cụ tại tiệm.",
+          desc_en:
+            "Manicure & pedicure terms, gel/acrylic extensions, consulting clients on styles/shades, and salon hygiene.",
+          vocabCount: 0,
+          phraseCount: 0,
+          dialogueCount: 0,
+        },
+        {
+          id: "khovanj",
+          href: "#",
+          ready: false,
+          accent: "sky",
+          icon: "📦",
+          germanTitle: "Lagerlogistik & Fachkraft für Lagerlogistik",
+          title_vi: "Ngành Kho Vận & Logistics",
+          title_en: "Warehouse & Logistics",
+          tag_vi: "Xuất nhập kho, Xe nâng (Stapler), Quét mã & Đóng gói",
+          tag_en: "Warehousing, Forklift (Stapler), Scanning & Dispatch",
+          desc_vi:
+            "Thuật ngữ nhận hàng (Warenannahme), soạn đơn (Kommissionierung), xe nâng hàng (Gabelstapler / Stapler), kiểm kê, đóng gói và an toàn kho bãi.",
+          desc_en:
+            "Goods receipt (Warenannahme), order picking (Kommissionierung), forklifts (Stapler), inventory, packing, and warehouse safety.",
           vocabCount: 0,
           phraseCount: 0,
           dialogueCount: 0,
@@ -469,25 +607,60 @@
       }
 
       function getAccentStyles(accent) {
-        if (accent === "emerald") {
-          return {
+        const map = {
+          emerald: {
             hoverBorder: "hover:border-emerald-500",
             iconBg: "bg-emerald-100",
             subtitleColor: "text-emerald-700",
-          };
-        }
-        if (accent === "blue") {
-          return {
+          },
+          blue: {
             hoverBorder: "hover:border-blue-500",
             iconBg: "bg-blue-100",
             subtitleColor: "text-blue-700",
-          };
-        }
-        return {
-          hoverBorder: "hover:border-amber-500",
-          iconBg: "bg-amber-100",
-          subtitleColor: "text-amber-700",
+          },
+          amber: {
+            hoverBorder: "hover:border-amber-500",
+            iconBg: "bg-amber-100",
+            subtitleColor: "text-amber-700",
+          },
+          rose: {
+            hoverBorder: "hover:border-rose-500",
+            iconBg: "bg-rose-100",
+            subtitleColor: "text-rose-700",
+          },
+          cyan: {
+            hoverBorder: "hover:border-cyan-500",
+            iconBg: "bg-cyan-100",
+            subtitleColor: "text-cyan-700",
+          },
+          orange: {
+            hoverBorder: "hover:border-orange-500",
+            iconBg: "bg-orange-100",
+            subtitleColor: "text-orange-700",
+          },
+          indigo: {
+            hoverBorder: "hover:border-indigo-500",
+            iconBg: "bg-indigo-100",
+            subtitleColor: "text-indigo-700",
+          },
+          pink: {
+            hoverBorder: "hover:border-pink-500",
+            iconBg: "bg-pink-100",
+            subtitleColor: "text-pink-700",
+          },
+          sky: {
+            hoverBorder: "hover:border-sky-500",
+            iconBg: "bg-sky-100",
+            subtitleColor: "text-sky-700",
+          },
         };
+        return (
+          map[accent] || {
+            hoverBorder: "hover:border-slate-400",
+            iconBg: "bg-slate-100",
+            subtitleColor: "text-slate-500",
+          }
+        );
       }
 
       function renderCourses() {
