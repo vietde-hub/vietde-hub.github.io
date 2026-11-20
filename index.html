@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>VietDe Hub — Tiếng Đức Chuyên Ngành & Hòa Nhập Cuộc Sống Đức</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='14'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Crect width='64' height='21.34' y='0' fill='%23111827'/%3E%3Crect width='64' height='21.34' y='21.33' fill='%23DC2626'/%3E%3Crect width='64' height='21.34' y='42.66' fill='%23FACC15'/%3E%3C/g%3E%3C/svg%3E" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,24 +20,35 @@
       color: #0f172a;
       min-height: 100dvh;
     }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
   </style>
 </head>
 <body class="antialiased selection:bg-amber-200 selection:text-slate-900 flex flex-col min-h-screen">
 
-  <!-- STICKY TOP BAR -->
-  <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-3">
-      <a href="index.html" class="flex items-center gap-2.5 min-w-0">
-        <div class="w-8 h-8 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center font-extrabold shadow-inner shrink-0">
-          DE
-        </div>
-        <div class="min-w-0">
-          <span class="font-bold text-sm sm:text-base tracking-tight block truncate">VietDe Hub</span>
+  <!-- STICKY COMPACT TOP BAR -->
+  <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-13 sm:h-14 flex items-center justify-between gap-3">
+      <a href="index.html" class="flex items-center gap-2.5 min-w-0 group">
+        <!-- German Flag Emblem -->
+        <span class="w-7 h-5 rounded-md overflow-hidden shadow-xs border border-white/15 flex flex-col shrink-0 group-hover:scale-105 transition" aria-hidden="true">
+          <span class="h-1/3 bg-slate-950"></span>
+          <span class="h-1/3 bg-red-600"></span>
+          <span class="h-1/3 bg-amber-400"></span>
+        </span>
+        <div class="flex items-center gap-2 min-w-0">
+          <span class="font-extrabold text-sm sm:text-base tracking-tight truncate">VietDe Hub</span>
+          <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-slate-800 text-amber-300 border border-slate-700">BG Wind GmbH</span>
         </div>
       </a>
 
       <!-- Language Switcher VI | EN -->
-      <div class="h-9 bg-slate-800 p-0.5 rounded-xl border border-slate-700 flex items-center shrink-0" role="group" aria-label="Language Switch">
+      <div class="h-8 sm:h-9 bg-slate-800 p-0.5 rounded-xl border border-slate-700 flex items-center shrink-0" role="group" aria-label="Language Switch">
         <button id="langBtnVi" type="button" onclick="setLanguage('vi')"
           class="h-full px-3 rounded-lg text-xs font-bold transition cursor-pointer">VI</button>
         <button id="langBtnEn" type="button" onclick="setLanguage('en')"
@@ -45,41 +57,74 @@
     </div>
   </header>
 
-  <!-- HERO BANNER -->
-  <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white border-b border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-      <div class="max-w-2xl">
-        <span id="heroBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30 mb-3">
-          🇩🇪 Cộng đồng học tiếng Đức nghề nghiệp & hòa nhập
-        </span>
-        <h1 id="heroTitle" class="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight">
-          Tiếng Đức Chuyên Ngành & Kỹ Năng Sống Tại Đức
-        </h1>
-        <p id="heroSubtitle" class="text-sm sm:text-base text-slate-300 mt-3 leading-relaxed">
-          Hệ thống học từ vựng thực chiến tại nhà xưởng, mẫu câu giao tiếp với tổ trưởng và hội thoại luyện nghe đa giọng AI dành cho anh em chuẩn bị sang Đức làm việc.
-        </p>
-      </div>
+  <!-- BALANCED COMPACT SPLIT-HERO (60% Left Info / 40% Right Live Stats) -->
+  <section class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-5 sm:py-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-center">
+        
+        <!-- Left Column: Concise Title & Subtitle -->
+        <div class="lg:col-span-7 space-y-1.5">
+          <div class="inline-flex items-center gap-2 text-xs font-semibold text-amber-300">
+            <span class="w-4 h-3 rounded-[2px] overflow-hidden inline-flex flex-col border border-white/20 shrink-0">
+              <span class="h-1/3 bg-black"></span>
+              <span class="h-1/3 bg-red-600"></span>
+              <span class="h-1/3 bg-amber-400"></span>
+            </span>
+            <span id="heroBadge">Cổng đào tạo Tiếng Đức Chuyên Ngành & Kỹ Năng Sống</span>
+          </div>
+          <h1 id="heroTitle" class="text-xl sm:text-2xl lg:text-[26px] font-extrabold tracking-tight leading-snug text-white">
+            Tiếng Đức Thực Chiến Cho Kỹ Thuật Viên Tại Đức
+          </h1>
+          <p id="heroSubtitle" class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
+            Từ vựng nhà xưởng, mẫu câu giao tiếp công trường và hội thoại luyện nghe AI đa giọng dành cho đội ngũ BG Wind GmbH.
+          </p>
+        </div>
 
-      <!-- Search Professions -->
-      <div class="mt-6 max-w-xl relative">
-        <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z" />
-        </svg>
-        <input id="courseSearchInput" type="search" oninput="renderCourses(this.value)"
-          placeholder="Tìm ngành nghề (VD: Thợ sơn, Buộc sắt, Hàn...)"
-          class="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-800/90 border border-slate-700 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:bg-slate-800 transition" />
+        <!-- Right Column: Balanced Quick-Stat Cards -->
+        <div class="lg:col-span-5 grid grid-cols-3 gap-2.5 sm:gap-3">
+          <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-2.5 sm:p-3 text-center">
+            <div class="text-lg sm:text-xl font-extrabold text-emerald-400">2 / 4</div>
+            <div id="statTradesLabel" class="text-[11px] sm:text-xs font-medium text-slate-300 mt-0.5">Ngành sẵn sàng</div>
+          </div>
+          <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-2.5 sm:p-3 text-center">
+            <div class="text-lg sm:text-xl font-extrabold text-amber-400">112</div>
+            <div id="statTermsLabel" class="text-[11px] sm:text-xs font-medium text-slate-300 mt-0.5">Thuật ngữ lõi</div>
+          </div>
+          <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-2.5 sm:p-3 text-center">
+            <div class="text-lg sm:text-xl font-extrabold text-sky-400">8</div>
+            <div id="statDialoguesLabel" class="text-[11px] sm:text-xs font-medium text-slate-300 mt-0.5">Hội thoại xưởng</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- MAIN COURSES GRID -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 flex-1 w-full">
-    <div class="flex items-center justify-between mb-4">
-      <h2 id="sectionHeading" class="text-base sm:text-lg font-bold text-slate-800">Danh mục Chuyên ngành & Chủ đề</h2>
-      <span id="courseCountBadge" class="text-xs font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-lg border border-slate-200">4 chuyên mục</span>
+  <!-- MAIN COURSES SECTION -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-5 sm:py-6 flex-1 w-full">
+    
+    <!-- Unified Search & Filter Toolbar -->
+    <div class="bg-white rounded-2xl p-3 sm:p-3.5 shadow-xs border border-slate-200/90 mb-4 sm:mb-5 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+      <!-- Search Input -->
+      <div class="relative flex-1">
+        <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z" />
+        </svg>
+        <input id="courseSearchInput" type="search" oninput="handleSearch(this.value)"
+          placeholder="Tìm ngành nghề (VD: Thợ sơn, Buộc sắt, Hàn...)"
+          class="w-full h-10 pl-10 pr-8 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" />
+        <button id="clearSearchBtn" type="button" onclick="clearSearch()"
+          class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-slate-200 text-slate-600 text-[11px] items-center justify-center hover:bg-slate-300 cursor-pointer">✕</button>
+      </div>
+
+      <!-- Status Filter Pills -->
+      <div id="filterPills" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar shrink-0">
+        <!-- Rendered by JS -->
+      </div>
     </div>
 
-    <div id="coursesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+    <!-- Courses Grid -->
+    <div id="coursesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <!-- Rendered by JS -->
     </div>
   </main>
@@ -89,37 +134,45 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="border-t border-slate-200 bg-white py-5 mt-8">
+  <footer class="border-t border-slate-200 bg-white py-4 mt-6">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
       <span>© 2026 VietDe Hub • Fachdeutsch für Beruf & Alltag</span>
-      <span id="footerNote">Hỗ trợ âm thanh offline & đa ngôn ngữ Việt – Anh</span>
+      <span id="footerNote">Hỗ trợ âm thanh AI offline & đa ngôn ngữ Việt – Anh</span>
     </div>
   </footer>
 
   <script>
     const HUB_I18N = {
       vi: {
-        heroBadge: '🇩🇪 Cộng đồng học tiếng Đức nghề nghiệp & hòa nhập',
-        heroTitle: 'Tiếng Đức Chuyên Ngành & Kỹ Năng Sống Tại Đức',
-        heroSubtitle: 'Hệ thống học từ vựng thực chiến tại nhà xưởng, mẫu câu giao tiếp với tổ trưởng và hội thoại luyện nghe đa giọng AI dành cho anh em chuẩn bị sang Đức làm việc.',
+        heroBadge: 'Cổng đào tạo Tiếng Đức Chuyên Ngành & Kỹ Năng Sống',
+        heroTitle: 'Tiếng Đức Thực Chiến Cho Kỹ Thuật Viên Tại Đức',
+        heroSubtitle: 'Từ vựng nhà xưởng, mẫu câu giao tiếp công trường và hội thoại luyện nghe AI đa giọng dành cho đội ngũ BG Wind GmbH.',
+        statTradesLabel: 'Ngành sẵn sàng',
+        statTermsLabel: 'Thuật ngữ lõi',
+        statDialoguesLabel: 'Hội thoại xưởng',
         searchPlaceholder: 'Tìm ngành nghề (VD: Thợ sơn, Buộc sắt, Hàn...)',
-        sectionHeading: 'Danh mục Chuyên ngành & Chủ đề',
-        countSuffix: 'chuyên mục',
+        filterAll: 'Tất cả (4)',
+        filterReady: 'Sẵn sàng học (2)',
+        filterSoon: 'Sắp ra mắt (2)',
         statusReady: 'Sẵn sàng học',
         statusSoon: 'Đang biên soạn',
         openBtn: 'Bắt đầu học →',
         soonBtn: 'Sắp ra mắt',
         soonToast: 'Chuyên mục này đang được biên soạn nội dung & âm thanh. Vui lòng quay lại sau!',
-        footerNote: 'Hỗ trợ âm thanh offline & đa ngôn ngữ Việt – Anh',
+        footerNote: 'Hỗ trợ âm thanh AI offline & đa ngôn ngữ Việt – Anh',
         noResults: 'Không tìm thấy chuyên ngành phù hợp.'
       },
       en: {
-        heroBadge: '🇩🇪 Vocational German & Life Integration Hub',
-        heroTitle: 'Technical German & Everyday Life in Germany',
-        heroSubtitle: 'Practical workshop vocabulary, supervisor communication phrases, and multi-voice AI dialogues designed for technicians and workers moving to Germany.',
+        heroBadge: 'Vocational German & Life Integration Hub',
+        heroTitle: 'Practical German for Technicians in Germany',
+        heroSubtitle: 'Workshop vocabulary, construction site phrases, and multi-voice AI dialogues built for BG Wind GmbH teams.',
+        statTradesLabel: 'Active Trades',
+        statTermsLabel: 'Core Terms',
+        statDialoguesLabel: 'Site Dialogues',
         searchPlaceholder: 'Search trades (e.g., Industrial Painter, Rebar Worker, Welder...)',
-        sectionHeading: 'Trades & Learning Modules',
-        countSuffix: 'modules',
+        filterAll: 'All Modules (4)',
+        filterReady: 'Available Now (2)',
+        filterSoon: 'Coming Soon (2)',
         statusReady: 'Available Now',
         statusSoon: 'In Progress',
         openBtn: 'Start Learning →',
@@ -198,6 +251,8 @@
     ];
 
     let currentLang = localStorage.getItem('fd_lang') || 'vi';
+    let currentFilter = 'all';
+    let currentQuery = '';
     let toastTimer = null;
 
     function t(key) {
@@ -212,17 +267,51 @@
       toastTimer = setTimeout(() => el.classList.add('hidden'), 3200);
     }
 
-    function renderCourses(query = '') {
-      const q = query.trim().toLowerCase();
+    function renderFilters() {
+      const filters = [
+        { id: 'all', label: t('filterAll') },
+        { id: 'ready', label: t('filterReady') },
+        { id: 'soon', label: t('filterSoon') }
+      ];
+      document.getElementById('filterPills').innerHTML = filters.map(f => `
+        <button type="button" onclick="setFilter('${f.id}')"
+          class="h-9 px-3 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${currentFilter === f.id ? 'bg-slate-900 text-white shadow-xs' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}">
+          ${f.label}
+        </button>
+      `).join('');
+    }
+
+    function setFilter(filterId) {
+      currentFilter = filterId;
+      renderFilters();
+      renderCourses();
+    }
+
+    function handleSearch(val) {
+      currentQuery = val;
+      const btn = document.getElementById('clearSearchBtn');
+      btn.classList.toggle('hidden', !val);
+      btn.classList.toggle('flex', Boolean(val));
+      renderCourses();
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('courseSearchInput');
+      input.value = '';
+      handleSearch('');
+    }
+
+    function renderCourses() {
+      const q = currentQuery.trim().toLowerCase();
       const filtered = COURSES_DATA.filter(c => {
+        if (currentFilter === 'ready' && !c.ready) return false;
+        if (currentFilter === 'soon' && c.ready) return false;
         if (!q) return true;
         const text = `${c.germanTitle} ${c.title_vi} ${c.title_en} ${c.tag_vi} ${c.tag_en} ${c.desc_vi} ${c.desc_en}`.toLowerCase();
         return text.includes(q);
       });
 
-      document.getElementById('courseCountBadge').textContent = `${filtered.length} ${t('countSuffix')}`;
       const grid = document.getElementById('coursesGrid');
-
       if (filtered.length === 0) {
         grid.innerHTML = `<div class="col-span-full bg-white rounded-2xl p-8 text-center text-sm text-slate-500 border border-slate-200">${t('noResults')}</div>`;
         return;
@@ -240,16 +329,16 @@
 
         if (c.ready) {
           return `
-            <a href="${c.href}" class="group bg-white rounded-2xl p-5 sm:p-6 shadow-xs border-2 border-slate-200/90 ${hoverBorder} hover:shadow-md transition flex flex-col justify-between gap-4">
+            <a href="${c.href}" class="group bg-white rounded-2xl p-4 sm:p-5 shadow-xs border-2 border-slate-200/90 ${hoverBorder} hover:shadow-md transition flex flex-col justify-between gap-3.5">
               <div>
                 <div class="flex items-start justify-between gap-3">
                   <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 rounded-2xl ${iconBg} text-2xl flex items-center justify-center shrink-0 group-hover:scale-105 transition">
+                    <div class="w-11 h-11 rounded-xl ${iconBg} text-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition">
                       ${c.icon}
                     </div>
                     <div>
-                      <span class="text-xs font-bold ${subtitleColor} uppercase tracking-wider">${c.germanTitle}</span>
-                      <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 group-hover:text-blue-600 transition">${title}</h3>
+                      <span class="text-[11px] font-bold ${subtitleColor} uppercase tracking-wider block">${c.germanTitle}</span>
+                      <h3 class="text-base sm:text-lg font-extrabold text-slate-900 group-hover:text-blue-600 transition leading-snug">${title}</h3>
                     </div>
                   </div>
                   <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 shrink-0">
@@ -257,13 +346,13 @@
                   </span>
                 </div>
 
-                <p class="text-xs font-semibold text-slate-500 mt-3">${tag}</p>
-                <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">${desc}</p>
+                <p class="text-xs font-semibold text-slate-500 mt-2.5">${tag}</p>
+                <p class="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">${desc}</p>
               </div>
 
-              <div class="pt-3.5 border-t border-slate-100 flex items-center justify-between gap-2">
+              <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
                 <span class="text-xs font-semibold text-slate-500">${stats}</span>
-                <span class="px-3.5 py-2 rounded-xl bg-slate-900 group-hover:bg-blue-600 text-white text-xs font-bold transition">
+                <span class="h-10 px-3.5 rounded-xl bg-slate-900 group-hover:bg-blue-600 text-white text-xs font-bold inline-flex items-center transition">
                   ${t('openBtn')}
                 </span>
               </div>
@@ -271,17 +360,17 @@
           `;
         } else {
           return `
-            <div onclick="showHubToast('${t('soonToast').replace(/'/g, "\\'")}')"
-              class="bg-white/80 rounded-2xl p-5 sm:p-6 border border-slate-200/80 flex flex-col justify-between gap-4 opacity-85 hover:opacity-100 transition cursor-pointer">
+            <div onclick="showHubToast('${t('soonToast').replace(/'/g, "\'")}')"
+              class="bg-white/80 rounded-2xl p-4 sm:p-5 border border-slate-200/80 flex flex-col justify-between gap-3.5 opacity-85 hover:opacity-100 transition cursor-pointer">
               <div>
                 <div class="flex items-start justify-between gap-3">
                   <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 rounded-2xl bg-slate-100 text-2xl flex items-center justify-center shrink-0">
+                    <div class="w-11 h-11 rounded-xl bg-slate-100 text-xl flex items-center justify-center shrink-0">
                       ${c.icon}
                     </div>
                     <div>
-                      <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">${c.germanTitle}</span>
-                      <h3 class="text-lg sm:text-xl font-bold text-slate-700">${title}</h3>
+                      <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">${c.germanTitle}</span>
+                      <h3 class="text-base sm:text-lg font-bold text-slate-700 leading-snug">${title}</h3>
                     </div>
                   </div>
                   <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-600 shrink-0">
@@ -289,13 +378,13 @@
                   </span>
                 </div>
 
-                <p class="text-xs font-semibold text-slate-400 mt-3">${tag}</p>
-                <p class="text-xs sm:text-sm text-slate-500 mt-2 leading-relaxed">${desc}</p>
+                <p class="text-xs font-semibold text-slate-400 mt-2.5">${tag}</p>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1.5 leading-relaxed">${desc}</p>
               </div>
 
-              <div class="pt-3.5 border-t border-slate-100 flex items-center justify-between gap-2">
+              <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
                 <span class="text-xs font-medium text-slate-400">${stats}</span>
-                <span class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-500 text-xs font-semibold">
+                <span class="h-10 px-3.5 rounded-xl bg-slate-100 text-slate-500 text-xs font-semibold inline-flex items-center">
                   ${t('soonBtn')}
                 </span>
               </div>
@@ -323,11 +412,14 @@
       document.getElementById('heroBadge').textContent = t('heroBadge');
       document.getElementById('heroTitle').textContent = t('heroTitle');
       document.getElementById('heroSubtitle').textContent = t('heroSubtitle');
+      document.getElementById('statTradesLabel').textContent = t('statTradesLabel');
+      document.getElementById('statTermsLabel').textContent = t('statTermsLabel');
+      document.getElementById('statDialoguesLabel').textContent = t('statDialoguesLabel');
       document.getElementById('courseSearchInput').placeholder = t('searchPlaceholder');
-      document.getElementById('sectionHeading').textContent = t('sectionHeading');
       document.getElementById('footerNote').textContent = t('footerNote');
 
-      renderCourses(document.getElementById('courseSearchInput').value);
+      renderFilters();
+      renderCourses();
     }
 
     setLanguage(currentLang);
