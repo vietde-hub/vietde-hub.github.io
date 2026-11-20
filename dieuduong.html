@@ -1,0 +1,3895 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>
+      Fachdeutsch — Tiếng Đức Ngành Điều Dưỡng & Chăm Sóc Y Tế (Pflege) | VietDe
+      Hub
+    </title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='14'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Crect width='64' height='21.34' y='0' fill='%23111827'/%3E%3Crect width='64' height='21.34' y='21.33' fill='%23DC2626'/%3E%3Crect width='64' height='21.34' y='42.66' fill='%23FACC15'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: #f1f5f9;
+        color: #0f172a;
+        min-height: 100dvh;
+        padding-bottom: calc(76px + var(--safe-bottom));
+      }
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 40px;
+        }
+      }
+      .bottom-nav-safe {
+        padding-bottom: calc(6px + var(--safe-bottom));
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+      @keyframes pulseRing {
+        0% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45);
+        }
+        70% {
+          box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        }
+      }
+      .btn-playing {
+        background-color: #ef4444 !important;
+        color: #ffffff !important;
+        border-color: #ef4444 !important;
+        animation: pulseRing 1.4s infinite;
+      }
+      @keyframes sheetSlideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .animate-sheet-up {
+        animation: sheetSlideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes popoverFade {
+        from {
+          opacity: 0;
+          transform: translateY(-6px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-popover {
+        animation: popoverFade 0.18s ease-out;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-rose-200 selection:text-slate-900">
+    <!-- =====================================================================
+       ADAPTIVE STICKY TOP BAR (Back to Hub + Compact Mobile + 1-Row Desktop)
+       ===================================================================== -->
+    <header
+      class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-3 sm:px-6 h-14 flex items-center justify-between gap-2"
+      >
+        <!-- Left: Back to Hub + Brand + Desktop Navigation Tabs -->
+        <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
+          <a
+            href="index.html"
+            id="backHomeBtn"
+            title="Trang chủ / Home"
+            class="h-9 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center gap-1 shrink-0 transition"
+          >
+            <span>←</span>
+            <span id="backHomeText" class="hidden sm:inline">Trang chủ</span>
+          </a>
+
+          <div class="flex items-center gap-2 min-w-0">
+            <div
+              class="w-8 h-8 rounded-lg bg-rose-500 text-white flex items-center justify-center font-extrabold shadow-inner shrink-0"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span
+                  id="brandTitle"
+                  class="font-bold text-sm sm:text-base tracking-tight truncate"
+                  >Ngành Điều Dưỡng</span
+                >
+                <span
+                  class="hidden xl:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30"
+                  >Pflegefachkraft</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Single-Row Navigation Tabs (Hidden on Mobile) -->
+          <nav
+            id="desktopNav"
+            class="hidden md:flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-slate-700/70"
+            aria-label="Primary Navigation"
+          ></nav>
+        </div>
+
+        <!-- Right: Voice Settings Trigger Pill + VI/EN Switch -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0 relative">
+          <button
+            id="voiceTriggerBtn"
+            type="button"
+            onclick="toggleVoiceDrawer()"
+            class="h-9 px-2.5 sm:px-3 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 border border-slate-700 text-xs font-medium text-slate-100 flex items-center gap-1.5 transition cursor-pointer"
+          >
+            <span class="text-amber-400">🎙</span>
+            <span
+              id="voicePillLabel"
+              class="max-w-[105px] sm:max-w-[160px] lg:max-w-[210px] truncate"
+              >Piper Chuẩn Đức • 1.0x</span
+            >
+            <svg
+              class="w-3.5 h-3.5 text-slate-400 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <!-- Language Switcher VI | EN -->
+          <div
+            class="h-9 bg-slate-800 p-0.5 rounded-xl border border-slate-700 flex items-center"
+            role="group"
+            aria-label="Language Switch"
+          >
+            <button
+              id="langBtnVi"
+              type="button"
+              onclick="setLanguage('vi')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              VI
+            </button>
+            <button
+              id="langBtnEn"
+              type="button"
+              onclick="setLanguage('en')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              EN
+            </button>
+          </div>
+
+          <!-- DESKTOP POPOVER: Voice & Speed Controls -->
+          <div
+            id="desktopVoicePopover"
+            class="hidden md:hidden absolute right-0 top-12 w-80 bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200 p-4 z-50 animate-popover"
+          >
+            <div
+              class="flex items-center justify-between pb-2.5 mb-3 border-b border-slate-100"
+            >
+              <span
+                id="popoverTitle"
+                class="text-xs font-bold uppercase tracking-wider text-slate-500"
+                >Cài đặt Giọng đọc & Tốc độ</span
+              >
+              <button
+                type="button"
+                onclick="closeVoiceDrawer()"
+                class="w-7 h-7 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+            <div id="desktopVoiceForm"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subtle Non-Blocking Audio Fallback / Status Banner -->
+    <div
+      id="statusToast"
+      class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-50 max-w-[92vw] sm:max-w-md bg-slate-900/95 text-white text-xs px-3.5 py-2 rounded-full shadow-lg border border-slate-700 flex items-center gap-2"
+    >
+      <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+      <span id="statusToastText" class="truncate"></span>
+    </div>
+
+    <!-- =====================================================================
+       MAIN CONTENT AREA
+       ===================================================================== -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6">
+      <!-- TAB 1: VOCABULARY -->
+      <section id="section-vocab" class="space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 space-y-3"
+        >
+          <div class="relative">
+            <svg
+              class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z"
+              />
+            </svg>
+            <input
+              id="vocabSearchInput"
+              type="search"
+              oninput="handleVocabSearch(this.value)"
+              placeholder="Tìm từ tiếng Đức, nghĩa tiếng Việt..."
+              class="w-full h-11 pl-10 pr-9 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
+            />
+            <button
+              id="clearSearchBtn"
+              type="button"
+              onclick="clearVocabSearch()"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-xs items-center justify-center hover:bg-slate-300 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div
+            id="vocabCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5"
+          ></div>
+        </div>
+
+        <div
+          id="vocabGrid"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"
+        ></div>
+      </section>
+
+      <!-- TAB 2: NURSING PHRASES -->
+      <section id="section-phrases" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80"
+        >
+          <div
+            id="phraseCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar"
+          ></div>
+        </div>
+        <div
+          id="phrasesList"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3"
+        ></div>
+      </section>
+
+      <!-- TAB 3: DIALOGUES -->
+      <section id="section-dialogues" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3.5 sm:p-5 shadow-sm border border-slate-200/80 space-y-4"
+        >
+          <div
+            id="dialogueTabs"
+            class="flex items-center gap-2 overflow-x-auto no-scrollbar"
+          ></div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100"
+          >
+            <div>
+              <label
+                id="workerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Điều dưỡng viên (Đức)</label
+              >
+              <select
+                id="workerVoiceSelect"
+                onchange="updateDialogueVoice('worker', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+            <div>
+              <label
+                id="partnerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Bệnh nhân / Đồng nghiệp</label
+              >
+              <select
+                id="partnerVoiceSelect"
+                onchange="updateDialogueVoice('partner', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="dialogueContainer"
+          class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200/80"
+        ></div>
+      </section>
+
+      <!-- TAB 4: FLASHCARDS -->
+      <section
+        id="section-flashcards"
+        class="hidden space-y-4 max-w-2xl mx-auto"
+      >
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 flex flex-wrap items-center justify-between gap-2"
+        >
+          <select
+            id="fcCategorySelect"
+            onchange="setFlashcardCategory(this.value)"
+            class="h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></select>
+          <div class="flex items-center gap-2">
+            <span
+              id="fcCounter"
+              class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-2 rounded-xl"
+              >1 / 88</span
+            >
+            <button
+              id="fcShuffleBtn"
+              type="button"
+              onclick="shuffleFlashcards()"
+              class="h-10 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <span>🔀</span>
+              <span id="fcShuffleText">Trộn thẻ</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="flashcardStage" class="perspective-1000"></div>
+
+        <div class="flex items-center justify-between gap-2">
+          <button
+            type="button"
+            onclick="prevFlashcard()"
+            class="h-11 px-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>←</span>
+            <span id="fcPrevText">Trước</span>
+          </button>
+
+          <button
+            id="fcMasterBtn"
+            type="button"
+            onclick="toggleFlashcardMastered()"
+            class="h-11 px-4 rounded-xl border text-xs sm:text-sm font-semibold shadow-sm flex items-center gap-1.5 transition cursor-pointer"
+          ></button>
+
+          <button
+            type="button"
+            onclick="nextFlashcard()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-sm font-semibold text-white shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span id="fcNextText">Tiếp</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <p
+          id="fcShortcutHint"
+          class="hidden md:block text-center text-xs text-slate-400"
+        >
+          Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe
+          ví dụ)
+        </p>
+      </section>
+
+      <!-- PRACTICAL NURSING NOTES CARD (FROM GOOGLE DOC) -->
+      <section
+        id="section-nursing-notes"
+        class="mt-6 bg-white rounded-2xl p-4 sm:p-6 shadow-xs border border-slate-200/80"
+      >
+        <h2
+          id="notesHeading"
+          class="text-base sm:text-lg font-extrabold text-slate-900 mb-3"
+        ></h2>
+        <ul
+          id="notesList"
+          class="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed"
+        ></ul>
+      </section>
+    </main>
+
+    <!-- MOBILE BOTTOM NAVIGATION BAR -->
+    <nav
+      id="mobileBottomNav"
+      class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-[0_-4px_16px_rgba(15,23,42,0.06)] bottom-nav-safe"
+      aria-label="Mobile Navigation"
+    >
+      <div id="mobileNavGrid" class="grid grid-cols-4 h-14"></div>
+    </nav>
+
+    <!-- MOBILE BOTTOM SHEET: VOICE & SPEED SETTINGS -->
+    <div
+      id="mobileVoiceBackdrop"
+      onclick="closeVoiceDrawer()"
+      class="hidden md:hidden fixed inset-0 z-50 bg-slate-950/50 backdrop-blur-xs transition-opacity"
+    ></div>
+    <div
+      id="mobileVoiceSheet"
+      class="hidden md:hidden fixed inset-x-0 bottom-0 z-50 bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 p-5 pb-[calc(20px+var(--safe-bottom))] animate-sheet-up"
+    >
+      <div class="w-10 h-1.5 rounded-full bg-slate-300 mx-auto mb-4"></div>
+      <div class="flex items-center justify-between mb-3">
+        <h3 id="sheetTitle" class="text-base font-bold text-slate-900">
+          Cài đặt Giọng đọc & Tốc độ
+        </h3>
+        <button
+          type="button"
+          onclick="closeVoiceDrawer()"
+          class="w-9 h-9 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold"
+        >
+          ✕
+        </button>
+      </div>
+      <div id="mobileVoiceForm"></div>
+    </div>
+
+    <script>
+      // =========================================================================
+      // 0. AUDIO FOLDER PREFIX FOR NURSING & HEALTHCARE MODULE
+      // =========================================================================
+      const AUDIO_BASE_PATH = "audio/dieuduong";
+
+      // =========================================================================
+      // 1. VOICE CATALOG (4 VOICES: PIPER OFFLINE + EDGE NEURAL) & I18N
+      // =========================================================================
+      const VOICE_CATALOG = [
+        {
+          id: "piper_hochdeutsch",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Chuẩn Đức (High)",
+          label_en: "Piper Thorsten — Standard German (High)",
+          short_vi: "Piper Chuẩn Đức",
+          short_en: "Piper Standard",
+        },
+        {
+          id: "piper_rostock",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Miền Bắc / Rostock",
+          label_en: "Piper Thorsten — Northern / Rostock",
+          short_vi: "Piper Rostock",
+          short_en: "Piper Rostock",
+        },
+        {
+          id: "edge_hochdeutsch",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Chuẩn Đức (Nữ Katja)",
+          label_en: "Edge Neural — Standard German (Female Katja)",
+          short_vi: "Edge Katja",
+          short_en: "Edge Katja",
+        },
+        {
+          id: "edge_rostock",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Miền Bắc (Nam Conrad)",
+          label_en: "Edge Neural — Northern German (Male Conrad)",
+          short_vi: "Edge Conrad",
+          short_en: "Edge Conrad",
+        },
+      ];
+
+      function sanitizeVoiceId(savedId, fallbackId) {
+        return VOICE_CATALOG.some((v) => v.id === savedId)
+          ? savedId
+          : fallbackId;
+      }
+
+      const I18N = {
+        vi: {
+          pageTitle:
+            "Fachdeutsch — Tiếng Đức Ngành Điều Dưỡng & Chăm Sóc Y Tế (Pflege) | VietDe Hub",
+          backHomeText: "Trang chủ",
+          brandTitle: "Ngành Điều Dưỡng",
+          nav_vocab_desktop: "1. Từ vựng",
+          nav_phrases_desktop: "2. Mẫu câu y tế",
+          nav_dialogues_desktop: "3. Hội thoại",
+          nav_flashcards_desktop: "4. Thẻ Flashcard",
+          nav_vocab_mobile: "Từ vựng",
+          nav_phrases_mobile: "Mẫu câu",
+          nav_dialogues_mobile: "Hội thoại",
+          nav_flashcards_mobile: "Thẻ nhớ",
+          voiceSettingsTitle: "Cài đặt Giọng đọc & Tốc độ",
+          selectVoiceLabel: "Chọn giọng đọc mặc định (4 giọng)",
+          previewVoiceBtn: "Nghe thử giọng",
+          stopPreviewBtn: "Dừng nghe thử",
+          speedLabel: "Tốc độ phát âm",
+          speedSlow: "Chậm 0.75x",
+          speedNormal: "Chuẩn 1.0x",
+          speedFast: "Nhanh 1.25x",
+          searchPlaceholder: "Tìm từ tiếng Đức, nghĩa tiếng Việt...",
+          cat_all: "Tất cả",
+          cat_1_1: "1.1 Chăm sóc cơ bản & Vận động",
+          cat_1_2: "1.2 Chỉ số sinh tồn & Y tế",
+          cat_1_3: "1.3 Dự phòng, Vệ sinh & Hồ sơ",
+          cat_1_4: "1.4 Ca trực, Khoa phòng & Môi trường",
+          cat_1_5: "1.5 Động từ & Tính từ điều dưỡng",
+          relatedPrefix: "Từ liên quan:",
+          noResults: "Không tìm thấy từ vựng phù hợp.",
+          pcat_all: "Tất cả mẫu câu",
+          pcat_2_1: "2.1 Chào hỏi & Chăm sóc hằng ngày",
+          pcat_2_2: "2.2 Triệu chứng, Đau & Sinh tồn",
+          pcat_2_3: "2.3 An toàn, Vệ sinh & Dự phòng",
+          pcat_2_4: "2.4 Bàn giao ca & Phối hợp đội ngũ",
+          workerVoiceLabel: "Giọng Điều dưỡng viên (Đức)",
+          partnerVoiceLabel: "Giọng Bệnh nhân / Đồng nghiệp",
+          playFullDialogue: "Nghe cả hội thoại",
+          stopFullDialogue: "Dừng hội thoại",
+          fcAllCategories: "Tất cả chủ đề",
+          fcShuffle: "Trộn thẻ",
+          fcPrev: "Trước",
+          fcNext: "Tiếp",
+          fcFrontHint: "Chạm thẻ để xem nghĩa & ví dụ",
+          fcBackHint: "Chạm thẻ để quay lại mặt trước",
+          fcWordBtn: "Nghe từ",
+          fcExBtn: "Nghe ví dụ",
+          fcMastered: "Đã thuộc",
+          fcMarkMastered: "Đánh dấu đã thuộc",
+          fcShortcutHint:
+            "Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe ví dụ)",
+          fallbackNotice: "Đang dùng giọng dự phòng Piper Offline cho câu này.",
+          notesHeading: "Ghi chú Thực tế Ngành Điều Dưỡng tại Đức (Pflege)",
+          notes: [
+            '<strong>Xưng hô & Tôn trọng (Anrede & Respekt):</strong> Trong bệnh viện và viện dưỡng lão tại Đức, nhân viên điều dưỡng luôn dùng đại từ lịch sự <em>"Sie"</em> kèm họ (<em>Frau Weber, Herr Bauer</em>) với bệnh nhân và người cao tuổi. Chỉ dùng <em>"Du"</em> khi người bệnh chủ động đề nghị hoặc trong môi trường chăm sóc đặc biệt đã thỏa thuận trước.',
+            "<strong>Bàn giao ca & Hồ sơ (Übergabe & Pflegedokumentation):</strong> Mọi thay đổi về chỉ số sinh tồn (<em>Vitalzeichen</em>), mức độ đau, tình trạng ăn uống/bài tiết và các biện pháp dự phòng (<em>Prophylaxen</em>) phải được ghi chép ngay vào phần mềm hồ sơ chăm sóc chuẩn pháp lý và báo cáo đầy đủ trong ca bàn giao.",
+            "<strong>Vệ sinh & Bảo mật (Hygiene & Schweigepflicht):</strong> Tuân thủ nghiêm ngặt 5 thời điểm sát khuẩn tay (<em>Händedesinfektion</em>). Bảo vệ tối đa sự riêng tư (<em>Intimsphäre</em>) khi vệ sinh cá nhân và tuyệt đối giữ bí mật thông tin y tế bệnh nhân (<em>Schweigepflicht</em>) theo quy định luật pháp Đức.",
+          ],
+        },
+        en: {
+          pageTitle:
+            "Fachdeutsch — Nursing & Healthcare (Pflegefachkraft & Pflegehelfer) | VietDe Hub",
+          backHomeText: "Home",
+          brandTitle: "Nursing & Healthcare",
+          nav_vocab_desktop: "1. Vocabulary",
+          nav_phrases_desktop: "2. Clinical Phrases",
+          nav_dialogues_desktop: "3. Dialogues",
+          nav_flashcards_desktop: "4. Flashcards",
+          nav_vocab_mobile: "Vocab",
+          nav_phrases_mobile: "Phrases",
+          nav_dialogues_mobile: "Dialogues",
+          nav_flashcards_mobile: "Cards",
+          voiceSettingsTitle: "Voice & Playback Speed",
+          selectVoiceLabel: "Default AI Voice (4 Voices)",
+          previewVoiceBtn: "Preview Voice",
+          stopPreviewBtn: "Stop Preview",
+          speedLabel: "Playback Speed",
+          speedSlow: "Slow 0.75x",
+          speedNormal: "Normal 1.0x",
+          speedFast: "Fast 1.25x",
+          searchPlaceholder: "Search German words, English meanings...",
+          cat_all: "All",
+          cat_1_1: "1.1 Basic Care & Mobilization",
+          cat_1_2: "1.2 Vital Signs & Clinical Care",
+          cat_1_3: "1.3 Prophylaxis, Hygiene & Records",
+          cat_1_4: "1.4 Shifts, Wards & Care Settings",
+          cat_1_5: "1.5 Nursing Verbs & Adjectives",
+          relatedPrefix: "Related words:",
+          noResults: "No matching vocabulary found.",
+          pcat_all: "All Phrases",
+          pcat_2_1: "2.1 Greeting & Daily Care",
+          pcat_2_2: "2.2 Symptoms, Pain & Vital Signs",
+          pcat_2_3: "2.3 Safety, Hygiene & Prophylaxis",
+          pcat_2_4: "2.4 Shift Handover & Teamwork",
+          workerVoiceLabel: "Nurse Voice (Duc)",
+          partnerVoiceLabel: "Patient / Colleague Voice",
+          playFullDialogue: "Play Full Dialogue",
+          stopFullDialogue: "Stop Dialogue",
+          fcAllCategories: "All Categories",
+          fcShuffle: "Shuffle",
+          fcPrev: "Previous",
+          fcNext: "Next",
+          fcFrontHint: "Tap card to reveal meaning & example",
+          fcBackHint: "Tap card to flip back",
+          fcWordBtn: "Speak Word",
+          fcExBtn: "Speak Example",
+          fcMastered: "Mastered",
+          fcMarkMastered: "Mark as Mastered",
+          fcShortcutHint:
+            "Shortcuts: Space (Flip) • ← / → (Navigate) • S (Word) • E (Example)",
+          fallbackNotice: "Using offline Piper fallback voice for this line.",
+          notesHeading: "Practical Nursing & Care Notes in Germany (Pflege)",
+          notes: [
+            '<strong>Forms of Address & Respect (Anrede & Respekt):</strong> In German hospitals and nursing homes, nurses always use the formal pronoun <em>"Sie"</em> plus surname (<em>Frau Weber, Herr Bauer</em>) with patients and elderly residents unless explicitly agreed otherwise.',
+            "<strong>Shift Handover & Documentation (Übergabe & Pflegedokumentation):</strong> All changes in vital signs (<em>Vitalzeichen</em>), pain scores, food/fluid intake, elimination, and preventive measures (<em>Prophylaxen</em>) must be charted accurately in the care documentation and reported during shift handover.",
+            "<strong>Hygiene & Confidentiality (Hygiene & Schweigepflicht):</strong> Strictly follow the 5 moments of hand disinfection (<em>Händedesinfektion</em>), safeguard personal privacy (<em>Intimsphäre</em>), and maintain strict medical confidentiality (<em>Schweigepflicht</em>) under German law.",
+          ],
+        },
+      };
+
+      // =========================================================================
+      // 2. COMPLETE BILINGUAL DATASET (88 VOCAB, 36 PHRASES, 6 DIALOGUES)
+      // =========================================================================
+      const VOCAB_DATA = [
+        {
+          id: 1,
+          cat: "1.1",
+          de: "die Grundpflege",
+          ipa: "/diː ˈɡʁʊntˌpfleːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Công tác chăm sóc cơ bản hằng ngày (vệ sinh cá nhân, ăn uống, vận động, bài tiết)",
+          en: "Basic daily nursing care (personal hygiene, nutrition, mobility, elimination)",
+          rel_vi:
+            "pflegen (đt: chăm sóc), die Pflegekraft (dt: điều dưỡng viên)",
+          rel_en:
+            "pflegen (v: to care for), die Pflegekraft (n: nurse / caregiver)",
+          ex_de:
+            "Zur Grundpflege gehören morgendliche Körperpflege, Mobilisation und Hilfestellung beim Essen.",
+          ex_vi:
+            "Chăm sóc cơ bản bao gồm vệ sinh cá nhân buổi sáng, vận động và hỗ trợ ăn uống.",
+          ex_en:
+            "Basic care includes morning personal hygiene, mobilization, and assistance with eating.",
+        },
+        {
+          id: 2,
+          cat: "1.1",
+          de: "die Körperpflege",
+          ipa: "/diː ˈkœʁpɐˌpfleːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Chăm sóc vệ sinh cơ thể cho bệnh nhân/người cao tuổi",
+          en: "Personal body hygiene care",
+          rel_vi:
+            "sich waschen (đt: rửa/tắm), die Waschung (dt: việc lau rửa cơ thể)",
+          rel_en:
+            "sich waschen (v: to wash oneself), die Waschung (n: body wash)",
+          ex_de:
+            "Bei der Körperpflege achten wir auf die Intimsphäre und Würde des Patienten.",
+          ex_vi:
+            "Khi chăm sóc vệ sinh cơ thể chúng tôi tôn trọng sự riêng tư và phẩm giá của người bệnh.",
+          ex_en:
+            "During personal hygiene care, we respect the patient's privacy and dignity.",
+        },
+        {
+          id: 3,
+          cat: "1.1",
+          de: "die Ganzkörperwaschung (-en)",
+          ipa: "/diː ˈɡantskœʁpɐˌvaʃʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Lau rửa toàn thân cho người bệnh tại giường",
+          en: "Full-body bed bath / wash",
+          rel_vi:
+            "der Waschlappen (dt: khăn lau người), das Handtuch (dt: khăn tắm)",
+          rel_en: "der Waschlappen (n: washcloth), das Handtuch (n: towel)",
+          ex_de:
+            "Für bettlägerige Bewohner machen wir morgens eine Ganzkörperwaschung im Bett.",
+          ex_vi:
+            "Đối với người cao tuổi nằm liệt giường, buổi sáng chúng tôi thực hiện lau rửa toàn thân tại giường.",
+          ex_en:
+            "For bedridden residents, we perform a full-body wash in bed in the morning.",
+        },
+        {
+          id: 4,
+          cat: "1.1",
+          de: "die Mundpflege",
+          ipa: "/diː ˈmʊntˌpfleːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Vệ sinh răng miệng",
+          en: "Oral hygiene care",
+          rel_vi:
+            "die Zahnbürste (dt: bàn chải đánh răng), die Zahnprothese (dt: hàm răng giả)",
+          rel_en:
+            "die Zahnbürste (n: toothbrush), die Zahnprothese (n: dentures)",
+          ex_de:
+            "Nach dem Frühstück ist die Mundpflege wichtig, besonders bei Zahnprothesen.",
+          ex_vi:
+            "Sau bữa sáng việc vệ sinh răng miệng rất quan trọng, nhất là với người đeo hàm giả.",
+          ex_en:
+            "Oral care is important after breakfast, especially for residents with dentures.",
+        },
+        {
+          id: 5,
+          cat: "1.1",
+          de: "die Mobilisation (-en) / die Mobilisierung",
+          ipa: "/diː mobilizaˈtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hỗ trợ tập vận động, di chuyển từ giường ra ghế hoặc đi lại",
+          en: "Mobilization (helping patients sit up, transfer, or walk)",
+          rel_vi:
+            "mobilisieren (đt: hỗ trợ vận động), die Mobilität (dt: khả năng vận động)",
+          rel_en: "mobilisieren (v: to mobilize), die Mobilität (n: mobility)",
+          ex_de:
+            "Frühmobilisation hilft Patienten, schneller wieder auf die Beine zu kommen.",
+          ex_vi:
+            "Vận động sớm giúp người bệnh nhanh chóng đứng dậy đi lại được.",
+          ex_en:
+            "Early mobilization helps patients get back on their feet faster.",
+        },
+        {
+          id: 6,
+          cat: "1.1",
+          de: "die Lagerung (-en) / umlagern",
+          ipa: "/diː ˈlaːɡəʁʊŋ/",
+          type_vi: "Danh từ (f.) / Động từ",
+          type_en: "Noun (f.) / Verb",
+          vi: "Thay đổi tư thế nằm/ngồi cho người bệnh (chống loét tỳ đè & viêm phổi)",
+          en: "Patient positioning / repositioning (to prevent pressure ulcers & pneumonia)",
+          rel_vi: "das Lagerungskissen (dt: gối kê đổi tư thế)",
+          rel_en: "das Lagerungskissen (n: positioning cushion)",
+          ex_de: "Wir lagern den Patienten alle zwei Stunden um.",
+          ex_vi: "Chúng tôi đổi tư thế nằm cho người bệnh hai tiếng một lần.",
+          ex_en: "We reposition the patient every two hours.",
+        },
+        {
+          id: 7,
+          cat: "1.1",
+          de: "bettlägerig",
+          ipa: "/ˈbɛtˌlɛːɡəʁɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Nằm liệt giường / phải nằm giường điều trị",
+          en: "Bedridden / confined to bed",
+          rel_vi:
+            "das Krankenbett (dt: giường bệnh), das Bettgitter (dt: thanh chắn giường)",
+          rel_en:
+            "das Krankenbett (n: hospital bed), das Bettgitter (n: bed rail)",
+          ex_de:
+            "Die bettlägerige Bewohnerin braucht Hilfe beim Trinken und Umlagern.",
+          ex_vi:
+            "Cụ bà nằm liệt giường cần được hỗ trợ uống nước và đổi tư thế.",
+          ex_en:
+            "The bedridden resident needs assistance with drinking and repositioning.",
+        },
+        {
+          id: 8,
+          cat: "1.1",
+          de: "der Rollator (-en)",
+          ipa: "/deːɐ̯ ʁolaˈtoːɐ̯/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Xe khung tập đi có bánh xe và phanh",
+          en: "Wheeled walker / rollator",
+          rel_vi: "die Gehhilfe (dt: dụng cụ hỗ trợ đi lại)",
+          rel_en: "die Gehhilfe (n: walking aid)",
+          ex_de:
+            "Mit dem Rollator kann Herr Weber wieder selbstständig zum Speisesaal gehen.",
+          ex_vi: "Nhờ xe tập đi, ông Weber có thể tự đi tới phòng ăn được rồi.",
+          ex_en:
+            "With the rollator, Mr. Weber can walk to the dining hall independently again.",
+        },
+        {
+          id: 9,
+          cat: "1.1",
+          de: "der Rollstuhl (-e)",
+          ipa: "/deːɐ̯ ˈʁɔlˌʃtuːl/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Xe lăn",
+          en: "Wheelchair",
+          rel_vi: "die Bremse feststellen (đt: hãm phanh xe lăn)",
+          rel_en: "die Bremse feststellen (v: to lock wheelchair brakes)",
+          ex_de:
+            "Stelle bitte zuerst die Bremsen am Rollstuhl fest, bevor sich der Patient setzt.",
+          ex_vi:
+            "Vui lòng hãm chặt phanh xe lăn trước khi người bệnh ngồi xuống.",
+          ex_en:
+            "Please lock the brakes on the wheelchair first before the patient sits down.",
+        },
+        {
+          id: 10,
+          cat: "1.1",
+          de: "der Gehbock (-e) / die Gehhilfe (-n)",
+          ipa: "/deːɐ̯ ˈɡeːˌbɔk/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Khung tập đi / Dụng cụ hỗ trợ đi lại",
+          en: "Walking frame / mobility aid",
+          rel_vi: "der Gehstock (dt: gậy chống đi lại)",
+          rel_en: "der Gehstock (n: walking cane)",
+          ex_de: "Der Gehbock gibt dem Patienten mehr Sicherheit beim Gehen.",
+          ex_vi:
+            "Khung tập đi tạo thêm sự an toàn cho người bệnh khi di chuyển.",
+          ex_en:
+            "The walking frame gives the patient greater stability when walking.",
+        },
+        {
+          id: 11,
+          cat: "1.1",
+          de: "der Lifter (-) / der Patientenlifter",
+          ipa: "/deːɐ̯ ˈlɪftɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Thiết bị nâng hạ bệnh nhân chuyên dụng",
+          en: "Patient hoist / mechanical lift",
+          rel_vi: "das Hebetuch (dt: tấm đai nâng người bệnh)",
+          rel_en: "das Hebetuch (n: lifting sling)",
+          ex_de:
+            "Für den Transfer aus dem Bett nutzen wir den Patientenlifter.",
+          ex_vi:
+            "Để chuyển người bệnh ra khỏi giường chúng tôi dùng thiết bị nâng bệnh nhân.",
+          ex_en: "We use the patient lift to transfer the patient out of bed.",
+        },
+        {
+          id: 12,
+          cat: "1.1",
+          de: "der Toilettenstuhl (-e)",
+          ipa: "/deːɐ̯ to̯iˈlɛtn̩ˌʃtuːl/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Ghế bô vệ sinh tại phòng",
+          en: "Bedside commode chair",
+          rel_vi: "der Toilettengang (dt: việc đi vệ sinh)",
+          rel_en: "der Toilettengang (n: going to the toilet)",
+          ex_de:
+            "Für den nächtlichen Toilettengang steht der Toilettenstuhl direkt neben dem Bett.",
+          ex_vi: "Để đi vệ sinh ban đêm, ghế bô được đặt ngay cạnh giường.",
+          ex_en:
+            "For nighttime toilet visits, the commode chair stands right next to the bed.",
+        },
+        {
+          id: 13,
+          cat: "1.1",
+          de: "die Inkontinenz / das Inkontinenzmaterial",
+          ipa: "/diː ɪnkɔntiˈnɛnts/",
+          type_vi: "Danh từ (f./n.)",
+          type_en: "Noun (f./n.)",
+          vi: "Tình trạng tiểu/đại tiện không tự chủ / Vật tư thấm hút",
+          en: "Incontinence / incontinence pads & briefs",
+          rel_vi:
+            "die Vorlage (dt: miếng lót thấm hút), die Windel (dt: tã/bỉm)",
+          rel_en:
+            "die Vorlage (n: incontinence pad), die Windel (n: adult brief)",
+          ex_de:
+            "Wechsle die Vorlage sofort, wenn sie feucht ist, um Hautreizungen zu vermeiden.",
+          ex_vi: "Hãy thay miếng lót ngay khi bị ẩm để tránh kích ứng da.",
+          ex_en:
+            "Change the pad immediately when it is damp to prevent skin irritation.",
+        },
+        {
+          id: 14,
+          cat: "1.1",
+          de: "die Ausscheidung (-en)",
+          ipa: "/diː ˈaʊsˌʃaɪdʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bài tiết (nước tiểu, phân) — thuật ngữ ghi chép điều dưỡng",
+          en: "Elimination / excretion (urine, stool)",
+          rel_vi:
+            "der Stuhlgang (dt: đại tiện), das Wasserlassen (dt: tiểu tiện)",
+          rel_en:
+            "der Stuhlgang (n: bowel movement), das Wasserlassen (n: urination)",
+          ex_de:
+            "Stuhlgang und Wasserlassen werden täglich im Pflegebericht dokumentiert.",
+          ex_vi:
+            "Đại tiện và tiểu tiện được ghi chép hằng ngày trong báo cáo chăm sóc.",
+          ex_en:
+            "Bowel movements and urination are documented daily in the care report.",
+        },
+        {
+          id: 15,
+          cat: "1.1",
+          de: "die Ernährung / die Nahrungsaufnahme",
+          ipa: "/diː ɛɐ̯ˈnɛːʁʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dinh dưỡng / Việc ăn uống",
+          en: "Nutrition / food intake",
+          rel_vi:
+            "schlucken (đt: nuốt), die Schluckstörung (dt: rối loạn nuốt)",
+          rel_en:
+            "schlucken (v: to swallow), die Schluckstörung (n: dysphagia / swallowing disorder)",
+          ex_de:
+            "Bei Schluckstörungen achten wir auf langsame Nahrungsaufnahme und aufrechte Sitzhaltung.",
+          ex_vi:
+            "Khi bị rối loạn nuốt chúng tôi chú ý cho ăn chậm và giữ tư thế ngồi thẳng.",
+          ex_en:
+            "With swallowing disorders, we ensure slow food intake and an upright sitting posture.",
+        },
+        {
+          id: 16,
+          cat: "1.1",
+          de: "die Flüssigkeitsbilanz (-en)",
+          ipa: "/diː ˈflʏsɪçkaɪtsbiˌlants/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bảng cân bằng lượng nước vào – ra",
+          en: "Fluid intake and output balance chart",
+          rel_vi:
+            "die Flüssigkeit (dt: chất lỏng/nước), trinken (đt: uống nước)",
+          rel_en: "die Flüssigkeit (n: fluid/liquid), trinken (v: to drink)",
+          ex_de:
+            "Bei älteren Patienten kontrollieren wir oft die tägliche Flüssigkeitsbilanz.",
+          ex_vi:
+            "Với người cao tuổi chúng tôi thường kiểm soát lượng nước nạp vào hằng ngày.",
+          ex_en:
+            "In elderly patients, we frequently monitor the daily fluid balance.",
+        },
+        {
+          id: 17,
+          cat: "1.1",
+          de: "das Frühstück / das Mittagessen / das Abendbrot",
+          ipa: "/das ˈfʁyːʃtʏk/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Bữa sáng / Bữa trưa / Bữa tối (chiều tối kiểu Đức)",
+          en: "Breakfast / lunch / evening meal (supper)",
+          rel_vi: "die Zwischenmahlzeit (dt: bữa phụ)",
+          rel_en: "die Zwischenmahlzeit (n: between-meal snack)",
+          ex_de:
+            "Auf der Station gibt es um 8 Uhr Frühstück und um 12 Uhr Mittagessen.",
+          ex_vi: "Trên khoa có bữa sáng lúc 8 giờ và bữa trưa lúc 12 giờ.",
+          ex_en: "On the ward, breakfast is served at 8 AM and lunch at 12 PM.",
+        },
+        {
+          id: 18,
+          cat: "1.1",
+          de: "die Schonkost / die Diät (-en)",
+          ipa: "/diː ˈʃoːnˌkɔst/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Chế độ ăn nhẹ dễ tiêu / Chế độ ăn kiêng bệnh lý",
+          en: "Bland / light easily digestible diet / medical diet",
+          rel_vi: "das Essen anreichen (đt: hỗ trợ đút ăn)",
+          rel_en: "das Essen anreichen (v: to assist with feeding)",
+          ex_de: "Herr Schmidt bekommt heute wegen Magenproblemen Schonkost.",
+          ex_vi:
+            "Hôm nay ông Schmidt được ăn chế độ nhẹ dễ tiêu vì vấn đề dạ dày.",
+          ex_en:
+            "Mr. Schmidt is receiving a light easily digestible diet today due to stomach issues.",
+        },
+        {
+          id: 19,
+          cat: "1.1",
+          de: "das Bettgitter (-)",
+          ipa: "/das ˈbɛtˌɡɪtɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Thanh chắn thành giường bệnh",
+          en: "Hospital bed side rail",
+          rel_vi: "hochklappen (đt: nâng lên), absenken (đt: hạ xuống)",
+          rel_en: "hochklappen (v: to raise/fold up), absenken (v: to lower)",
+          ex_de:
+            "Klappe das Bettgitter nach der Versorgung wieder richtig hoch.",
+          ex_vi:
+            "Hãy nâng thanh chắn giường lên đúng vị trí sau khi chăm sóc xong.",
+          ex_en: "Raise the bed rail back up properly after completing care.",
+        },
+        {
+          id: 20,
+          cat: "1.1",
+          de: "die Klingel (-n) / der Notrufknopf",
+          ipa: "/diː ˈklɪŋl̩/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Chuông gọi điều dưỡng / Nút bấm gọi khẩn cấp",
+          en: "Nurse call bell / bedside emergency call button",
+          rel_vi: "klingeln (đt: bấm chuông gọi)",
+          rel_en: "klingeln (v: to ring the call bell)",
+          ex_de:
+            "Wenn Sie Hilfe brauchen, drücken Sie bitte einfach die Klingel am Bett.",
+          ex_vi:
+            "Nếu cần hỗ trợ, anh/chị vui lòng bấm nút chuông ở đầu giường nhé.",
+          ex_en:
+            "If you need help, please simply press the call button by the bed.",
+        },
+        {
+          id: 21,
+          cat: "1.2",
+          de: "die Vitalzeichen (Pl.) / die Vitalwerte",
+          ipa: "/diː viˈtaːlˌtsaɪçn̩/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Các chỉ số sinh tồn (huyết áp, mạch, nhịp thở, thân nhiệt, SpO2)",
+          en: "Vital signs (blood pressure, pulse, respiratory rate, temperature, SpO2)",
+          rel_vi: "messen (đt: đo), kontrollieren (đt: kiểm tra)",
+          rel_en: "messen (v: to measure), kontrollieren (v: to monitor/check)",
+          ex_de:
+            "Wir messen die Vitalzeichen jeden Morgen um 6 Uhr vor der Visite.",
+          ex_vi:
+            "Chúng tôi đo các chỉ số sinh tồn mỗi sáng lúc 6 giờ trước giờ đi buồng bác sĩ.",
+          ex_en:
+            "We measure vital signs every morning at 6 AM before the doctor's ward rounds.",
+        },
+        {
+          id: 22,
+          cat: "1.2",
+          de: "der Blutdruck (RR)",
+          ipa: "/deːɐ̯ ˈbluːtˌdʁʊk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Huyết áp (ký hiệu lâm sàng RR theo Riva-Rocci)",
+          en: "Blood pressure (clinical abbreviation RR)",
+          rel_vi:
+            "die Blutdruckmanschette (dt: bao đo huyết áp), zu hoch / zu niedrig",
+          rel_en:
+            "die Blutdruckmanschette (n: blood pressure cuff), zu hoch / zu niedrig (too high / too low)",
+          ex_de:
+            "Der Blutdruck von Frau Bauer liegt heute bei 135 zu 85 Millimeter Quecksilbersäule.",
+          ex_vi: "Huyết áp của bà Bauer hôm nay là 135/85 mmHg.",
+          ex_en:
+            "Mrs. Bauer's blood pressure today is 135 over 85 millimeters of mercury.",
+        },
+        {
+          id: 23,
+          cat: "1.2",
+          de: "der Puls (-e) / die Herzfrequenz",
+          ipa: "/deːɐ̯ pʊls/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Mạch / Nhịp tim mỗi phút",
+          en: "Pulse / heart rate (beats per minute)",
+          rel_vi: "regelmäßig (tt: đều đặn), unregelmäßig (tt: không đều)",
+          rel_en: "regelmäßig (adj: regular), unregelmäßig (adj: irregular)",
+          ex_de:
+            "Der Puls ist kräftig und regelmäßig bei 72 Schlägen pro Minute.",
+          ex_vi: "Mạch rõ và đều ở mức 72 nhịp mỗi phút.",
+          ex_en: "The pulse is strong and regular at 72 beats per minute.",
+        },
+        {
+          id: 24,
+          cat: "1.2",
+          de: "die Körpertemperatur (-en) / das Fieber",
+          ipa: "/diː ˈkœʁpɐtempəʁaˌtuːɐ̯/",
+          type_vi: "Danh từ (f./n.)",
+          type_en: "Noun (f./n.)",
+          vi: "Thân nhiệt cơ thể / Sốt",
+          en: "Body temperature / fever",
+          rel_vi: "das Fieberthermometer (dt: nhiệt kế), fiebern (đt: bị sốt)",
+          rel_en:
+            "das Fieberthermometer (n: clinical thermometer), fiebern (v: to have a fever)",
+          ex_de:
+            "Die Temperatur beträgt 38,4 Grad, der Patient hat leichtes Fieber.",
+          ex_vi: "Thân nhiệt là 38,4 độ C, người bệnh bị sốt nhẹ.",
+          ex_en:
+            "The temperature is 38.4 degrees; the patient has a mild fever.",
+        },
+        {
+          id: 25,
+          cat: "1.2",
+          de: "die Atemfrequenz (AF)",
+          ipa: "/diː ˈaːtəmfʁeˌkvɛnts/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nhịp thở mỗi phút",
+          en: "Respiratory rate (breaths per minute)",
+          rel_vi: "die Atmung (dt: hô hấp), die Atemnot (dt: khó thở)",
+          rel_en:
+            "die Atmung (n: breathing), die Atemnot (n: shortness of breath / dyspnea)",
+          ex_de: "Bei Atemnot beobachten wir die Atemfrequenz besonders genau.",
+          ex_vi: "Khi khó thở chúng tôi theo dõi nhịp thở đặc biệt sát sao.",
+          ex_en:
+            "When a patient has shortness of breath, we monitor the respiratory rate especially closely.",
+        },
+        {
+          id: 26,
+          cat: "1.2",
+          de: "die Sauerstoffsättigung (SpO2)",
+          ipa: "/diː ˈzaʊɐʃtɔfˌzɛtɪɡʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Độ bão hòa ô-xy trong máu (SpO2)",
+          en: "Blood oxygen saturation (SpO2)",
+          rel_vi: "das Pulsoximeter (dt: máy kẹp đo SpO2)",
+          rel_en: "das Pulsoximeter (n: pulse oximeter)",
+          ex_de: "Die Sauerstoffsättigung liegt bei 96 Prozent mit Raumluft.",
+          ex_vi: "Độ bão hòa ô-xy đạt 96% khi thở khí trời.",
+          ex_en: "Oxygen saturation is at 96 percent on room air.",
+        },
+        {
+          id: 27,
+          cat: "1.2",
+          de: "der Blutzucker (BZ)",
+          ipa: "/deːɐ̯ ˈbluːtˌtsʊkɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Đường huyết",
+          en: "Blood glucose / blood sugar",
+          rel_vi:
+            "das Blutzuckermessgerät (dt: máy đo BZ), der Diabetes (dt: bệnh tiểu đường)",
+          rel_en:
+            "das Blutzuckermessgerät (n: glucometer), der Diabetes (n: diabetes)",
+          ex_de: "Wir messen den Blutzucker vor dem Frühstück nüchtern.",
+          ex_vi: "Chúng tôi đo đường huyết lúc đói trước bữa sáng.",
+          ex_en: "We measure fasting blood glucose before breakfast.",
+        },
+        {
+          id: 28,
+          cat: "1.2",
+          de: "die Schmerzen (Pl.) / die Schmerzskala (VAS)",
+          ipa: "/diː ˈʃmɛʁtsn̩/",
+          type_vi: "Danh từ (Pl./f.)",
+          type_en: "Noun (Pl./f.)",
+          vi: "Cơn đau / Thang điểm đánh giá đau (0 đến 10)",
+          en: "Pain / pain rating scale (0 to 10)",
+          rel_vi: "stechend (tt: nhói), dumpf (tt: âm ỉ), brennend (tt: rát)",
+          rel_en:
+            "stechend (adj: stabbing), dumpf (adj: dull), brennend (adj: burning)",
+          ex_de:
+            "Wie stark sind Ihre Schmerzen jetzt auf einer Skala von null bis zehn?",
+          ex_vi:
+            "Cơn đau của anh/chị hiện giờ mạnh ở mức mấy trên thang điểm từ 0 đến 10?",
+          ex_en:
+            "How severe is your pain right now on a scale from zero to ten?",
+        },
+        {
+          id: 29,
+          cat: "1.2",
+          de: "die Übelkeit / das Erbrechen",
+          ipa: "/diː ˈyːbl̩kaɪt/",
+          type_vi: "Danh từ (f./n.)",
+          type_en: "Noun (f./n.)",
+          vi: "Buồn nôn / Nôn mửa",
+          en: "Nausea / vomiting",
+          rel_vi: "sich übergeben (đt: bị nôn)",
+          rel_en: "sich übergeben (v: to vomit / throw up)",
+          ex_de: "Nach dem Aufstehen klagte die Patientin über Übelkeit.",
+          ex_vi: "Sau khi ngồi dậy nữ bệnh nhân than bị buồn nôn.",
+          ex_en: "After sitting up, the patient complained of nausea.",
+        },
+        {
+          id: 30,
+          cat: "1.2",
+          de: "der Schwindel",
+          ipa: "/deːɐ̯ ˈʃvɪndl̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Chóng mặt / Choáng váng",
+          en: "Dizziness / vertigo",
+          rel_vi: "schwindlig sein (đt: bị chóng mặt)",
+          rel_en: "schwindlig sein (v: to feel dizzy)",
+          ex_de:
+            "Achtung beim Aufstehen, dem Patienten ist manchmal schwindlig.",
+          ex_vi: "Chú ý khi đứng dậy, người bệnh đôi khi bị chóng mặt.",
+          ex_en:
+            "Be careful when standing up; the patient sometimes feels dizzy.",
+        },
+        {
+          id: 31,
+          cat: "1.2",
+          de: "der Wundverband (-e) / der Verbandswechsel",
+          ipa: "/deːɐ̯ ˈvʊntfɛɐ̯ˌbant/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Băng vết thương / Việc thay băng vết thương",
+          en: "Wound dressing / dressing change",
+          rel_vi: "die Wunde (dt: vết thương), steril (tt: vô trùng)",
+          rel_en: "die Wunde (n: wound), steril (adj: sterile)",
+          ex_de: "Der Verbandswechsel an der Operationswunde erfolgt steril.",
+          ex_vi: "Việc thay băng ở vết mổ được thực hiện vô trùng.",
+          ex_en:
+            "The dressing change on the surgical wound is performed under sterile conditions.",
+        },
+        {
+          id: 32,
+          cat: "1.2",
+          de: "die Infusion (-en)",
+          ipa: "/diː ɪnfuˈzi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Truyền dịch tĩnh mạch",
+          en: "Intravenous infusion / IV drip",
+          rel_vi:
+            "die Infusionsflasche (dt: chai dịch truyền), der Tropf (dt: bộ dịch truyền)",
+          rel_en: "die Infusionsflasche (n: IV bottle), der Tropf (n: IV drip)",
+          ex_de: "Bitte achten Sie darauf, dass die Infusion richtig tropft.",
+          ex_vi: "Vui lòng chú ý xem dịch truyền có nhỏ giọt đúng nhịp không.",
+          ex_en:
+            "Please pay attention to whether the IV infusion is dripping properly.",
+        },
+        {
+          id: 33,
+          cat: "1.2",
+          de: "die Injektion (-en) / spritzen",
+          ipa: "/diː ɪnjekˈtsi̯oːn/",
+          type_vi: "Danh từ (f.) / Động từ",
+          type_en: "Noun (f.) / Verb",
+          vi: "Tiêm thuốc (tiêm dưới da s.c., tiêm bắp i.m., tiêm tĩnh mạch i.v.)",
+          en: "Injection (subcutaneous s.c., intramuscular i.m., intravenous i.v.)",
+          rel_vi: "die Spritze (dt: ống tiêm/mũi tiêm)",
+          rel_en: "die Spritze (n: syringe/injection)",
+          ex_de:
+            "Der Patient bekommt morgens eine subkutane Injektion in den Bauch.",
+          ex_vi: "Người bệnh được tiêm dưới da ở vùng bụng vào buổi sáng.",
+          ex_en:
+            "The patient receives a subcutaneous injection in the abdomen in the morning.",
+        },
+        {
+          id: 34,
+          cat: "1.2",
+          de: "der Katheter (-)",
+          ipa: "/deːɐ̯ kaˈteːtɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Ống thông (thông tiểu, thông dạ dày)",
+          en: "Catheter (urinary or feeding catheter)",
+          rel_vi: "der Urinbeutel (dt: túi đựng nước tiểu)",
+          rel_en: "der Urinbeutel (n: urine drainage bag)",
+          ex_de: "Leere den Urinbeutel rechtzeitig, bevor er zu voll wird.",
+          ex_vi: "Hãy xả túi nước tiểu kịp lúc trước khi nó quá đầy.",
+          ex_en: "Empty the urine bag in good time before it gets too full.",
+        },
+        {
+          id: 35,
+          cat: "1.2",
+          de: "die Medikamentengabe",
+          ipa: "/diː medikamenˈtənˌɡaːbə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Việc cấp/cho uống thuốc đúng giờ, đúng liều",
+          en: "Medication administration (right patient, time, dose)",
+          rel_vi:
+            "die Tablette (dt: viên thuốc), die Tropfen (dt: thuốc nhỏ giọt)",
+          rel_en: "die Tablette (n: tablet/pill), die Tropfen (n: drops)",
+          ex_de:
+            "Bei der Medikamentengabe prüfen wir immer Namen und Geburtsdatum.",
+          ex_vi: "Khi cấp thuốc chúng tôi luôn kiểm tra tên và ngày sinh.",
+          ex_en:
+            "During medication administration, we always verify the name and date of birth.",
+        },
+        {
+          id: 36,
+          cat: "1.2",
+          de: "die Blutzuckersenkung / das Insulin",
+          ipa: "/diː ˈbluːtˌtsʊkɐzɛŋkʊŋ/",
+          type_vi: "Danh từ (f./n.)",
+          type_en: "Noun (f./n.)",
+          vi: "Hạ đường huyết / Insulin",
+          en: "Blood glucose lowering / insulin",
+          rel_vi: "spritzen (đt: tiêm)",
+          rel_en: "spritzen (v: to inject)",
+          ex_de:
+            "Vor dem Essen messen wir den Wert und spritzen bei Bedarf Insulin.",
+          ex_vi: "Trước bữa ăn chúng tôi đo chỉ số và tiêm insulin nếu cần.",
+          ex_en:
+            "Before meals, we check the reading and inject insulin if needed.",
+        },
+        {
+          id: 37,
+          cat: "1.2",
+          de: "die Atemtherapie / das Inhalieren",
+          ipa: "/diː ˈaːtəmtɛʁaˌpiː/",
+          type_vi: "Danh từ (f./n.)",
+          type_en: "Noun (f./n.)",
+          vi: "Vật lý trị liệu hô hấp / Hít khí dung",
+          en: "Respiratory therapy / nebulizer inhalation",
+          rel_vi: "inhalieren (đt: hít thở khí dung)",
+          rel_en: "inhalieren (v: to inhale mist/medication)",
+          ex_de: "Das Inhalieren hilft, den Schleim in den Atemwegen zu lösen.",
+          ex_vi: "Hít khí dung giúp làm loãng đờm trong đường hô hấp.",
+          ex_en: "Inhaling helps loosen mucus in the respiratory tract.",
+        },
+        {
+          id: 38,
+          cat: "1.2",
+          de: "die Kreislaufprobleme (Pl.)",
+          ipa: "/diː ˈkʁaɪslaʊfpʁoˌbleːmə/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Rối loạn tuần hoàn / Tụt huyết áp tư thế",
+          en: "Circulatory problems / orthostatic blood pressure drop",
+          rel_vi: "der Kreislauf (dt: hệ tuần hoàn)",
+          rel_en: "der Kreislauf (n: circulation)",
+          ex_de:
+            "Bei Kreislaufproblemen legen wir den Patienten flach und lagern die Beine hoch.",
+          ex_vi:
+            "Khi có vấn đề tuần hoàn chúng tôi cho người bệnh nằm phẳng và kê cao chân.",
+          ex_en:
+            "For circulatory issues, we lay the patient flat and elevate the legs.",
+        },
+        {
+          id: 39,
+          cat: "1.3",
+          de: "die Dekubitusprophylaxe",
+          ipa: "/diː dekuˈbiːtʊspʁofyˌlaksə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dự phòng loét tỳ đè (đổi tư thế, dùng đệm, chăm sóc da)",
+          en: "Pressure ulcer (bedsore) prophylaxis",
+          rel_vi: "der Dekubitus (dt: vết loét tỳ đè), die Haut (dt: da)",
+          rel_en: "der Dekubitus (n: pressure sore), die Haut (n: skin)",
+          ex_de:
+            "Regelmäßiges Umlagern und Weichlagerung sind wichtig für die Dekubitusprophylaxe.",
+          ex_vi:
+            "Đổi tư thế thường xuyên và kê đệm mềm rất quan trọng để phòng loét tỳ đè.",
+          ex_en:
+            "Regular repositioning and pressure-relieving mattresses are vital for pressure ulcer prevention.",
+        },
+        {
+          id: 40,
+          cat: "1.3",
+          de: "die Thromboseprophylaxe",
+          ipa: "/diː tʁɔmˈboːzəpʁofyˌlaksə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dự phòng huyết khối tĩnh mạch (vận động, tất áp lực)",
+          en: "Deep vein thrombosis (DVT) prophylaxis",
+          rel_vi:
+            "die Thrombose (dt: huyết khối), die Kompressionsstrümpfe (dt: tất áp lực)",
+          rel_en:
+            "die Thrombose (n: thrombosis), die Kompressionsstrümpfe (n: compression stockings)",
+          ex_de:
+            "Zur Thromboseprophylaxe gehören Bewegungsübungen und Stützstrümpfe.",
+          ex_vi:
+            "Dự phòng huyết khối gồm các bài tập vận động và mang tất áp lực.",
+          ex_en:
+            "Thrombosis prophylaxis includes movement exercises and compression stockings.",
+        },
+        {
+          id: 41,
+          cat: "1.3",
+          de: "die Pneumonieprophylaxe",
+          ipa: "/diː pnoɪ̯moˈniːpʁofyˌlaksə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dự phòng viêm phổi (tập thở sâu, đổi tư thế, ngồi dậy)",
+          en: "Pneumonia prophylaxis (deep breathing & mobilization)",
+          rel_vi:
+            "die Pneumonie (dt: viêm phổi), tief durchatmen (đt: hít thở sâu)",
+          rel_en:
+            "die Pneumonie (n: pneumonia), tief durchatmen (v: to breathe deeply)",
+          ex_de:
+            "Tiefe Atemzüge und Mobilisation dienen der Pneumonieprophylaxe.",
+          ex_vi: "Hít thở sâu và vận động giúp phòng ngừa viêm phổi.",
+          ex_en: "Deep breaths and mobilization help prevent pneumonia.",
+        },
+        {
+          id: 42,
+          cat: "1.3",
+          de: "die Sturzprophylaxe",
+          ipa: "/diː ˈʃtʊʁtspʁofyˌlaksə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dự phòng té ngã (giày chống trượt, lối đi gọn gàng)",
+          en: "Fall prevention prophylaxis",
+          rel_vi: "der Sturz (dt: sự té ngã), rutschfest (tt: chống trượt)",
+          rel_en: "der Sturz (n: fall), rutschfest (adj: non-slip)",
+          ex_de:
+            "Rutschfeste Hausschuhe und gutes Licht sind Teil der Sturzprophylaxe.",
+          ex_vi:
+            "Dép đi trong nhà chống trượt và ánh sáng tốt là một phần của phòng chống té ngã.",
+          ex_en:
+            "Non-slip slippers and good lighting are part of fall prevention.",
+        },
+        {
+          id: 43,
+          cat: "1.3",
+          de: "die Kontrakturenprophylaxe",
+          ipa: "/diː kɔntʁakˈtuːʁənpʁofyˌlaksə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dự phòng co cứng khớp",
+          en: "Joint contracture prophylaxis",
+          rel_vi:
+            "die Kontraktur (dt: co cứng khớp), bewegen (đt: vận động khớp)",
+          rel_en:
+            "die Kontraktur (n: contracture), bewegen (v: to move joints)",
+          ex_de:
+            "Durch tägliches Bewegen der Gelenke beugen wir Kontrakturen vor.",
+          ex_vi:
+            "Nhờ vận động khớp hằng ngày chúng ta phòng ngừa co cứng khớp.",
+          ex_en: "By moving the joints daily, we prevent contractures.",
+        },
+        {
+          id: 44,
+          cat: "1.3",
+          de: "die Händedesinfektion",
+          ipa: "/diː ˈhɛndədesɪnfɛkˌtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Sát khuẩn tay bằng dung dịch cồn y tế",
+          en: "Alcohol-based hand disinfection",
+          rel_vi:
+            "desinfizieren (đt: sát khuẩn), das Desinfektionsmittel (dt: thuốc sát khuẩn)",
+          rel_en:
+            "desinfizieren (v: to disinfect), das Desinfektionsmittel (n: disinfectant)",
+          ex_de:
+            "Vor und nach jedem Patientenkontakt ist eine Händedesinfektion Pflicht.",
+          ex_vi:
+            "Trước và sau mỗi lần tiếp xúc người bệnh, sát khuẩn tay là bắt buộc.",
+          ex_en:
+            "Hand disinfection is mandatory before and after every patient contact.",
+        },
+        {
+          id: 45,
+          cat: "1.3",
+          de: "die Flächendesinfektion",
+          ipa: "/diː ˈflɛçn̩desɪnfɛkˌtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khử khuẩn bề mặt giường tủ, bàn khám, dụng cụ",
+          en: "Surface disinfection (beds, tables, equipment)",
+          rel_vi: "die Wischdesinfektion (dt: lau khử khuẩn)",
+          rel_en: "die Wischdesinfektion (n: wipe disinfection)",
+          ex_de:
+            "Nach der Entlassung des Patienten machen wir eine gründliche Flächendesinfektion.",
+          ex_vi:
+            "Sau khi người bệnh xuất viện chúng ta thực hiện khử khuẩn bề mặt kỹ lưỡng.",
+          ex_en:
+            "After the patient is discharged, we perform thorough surface disinfection.",
+        },
+        {
+          id: 46,
+          cat: "1.3",
+          de: "die Hygiene",
+          ipa: "/diː hyˈɡi̯eːnə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Vệ sinh y tế & kiểm soát nhiễm khuẩn",
+          en: "Clinical hygiene & infection control",
+          rel_vi:
+            "der Hygieneplan (dt: kế hoạch vệ sinh), hygienisch (tt: hợp vệ sinh)",
+          rel_en:
+            "der Hygieneplan (n: hygiene protocol), hygienisch (adj: hygienic)",
+          ex_de:
+            "Hygiene hat im Krankenhaus und im Pflegeheim oberste Priorität.",
+          ex_vi:
+            "Vệ sinh có mức ưu tiên cao nhất trong bệnh viện và viện dưỡng lão.",
+          ex_en:
+            "Hygiene has the highest priority in hospitals and nursing homes.",
+        },
+        {
+          id: 47,
+          cat: "1.3",
+          de: "die Isolierung / der Isolationspatient",
+          ipa: "/diː izoˈliːʁʊŋ/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Cách ly y tế / Bệnh nhân cần cách ly",
+          en: "Medical isolation / isolated patient",
+          rel_vi: "ansteckend (tt: lây nhiễm)",
+          rel_en: "ansteckend (adj: contagious/infectious)",
+          ex_de:
+            "Bei ansteckenden Infektionen gilt eine Isolierung mit Schutzkittel und Maske.",
+          ex_vi:
+            "Khi có bệnh nhiễm trùng lây lan sẽ áp dụng cách ly với áo choàng và khẩu trang.",
+          ex_en:
+            "For contagious infections, isolation with protective gown and mask applies.",
+        },
+        {
+          id: 48,
+          cat: "1.3",
+          de: "der Schutzkittel (-)",
+          ipa: "/deːɐ̯ ˈʃʊtsˌkɪtl̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Áo choàng bảo hộ dùng một lần",
+          en: "Disposable protective isolation gown",
+          rel_vi: "der Kittel (dt: áo choàng)",
+          rel_en: "der Kittel (n: gown/coat)",
+          ex_de:
+            "Ziehe bei der Versorgung einen Schutzkittel an und entsorge ihn danach richtig.",
+          ex_vi:
+            "Hãy mặc áo choàng bảo hộ khi chăm sóc và bỏ đúng nơi quy định sau đó.",
+          ex_en:
+            "Put on a protective gown during care and dispose of it properly afterward.",
+        },
+        {
+          id: 49,
+          cat: "1.3",
+          de: "die Einmalhandschuhe (Pl.)",
+          ipa: "/diː ˈaɪnmaːlˌhantʃuːə/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Găng tay y tế dùng một lần",
+          en: "Disposable medical examination gloves",
+          rel_vi: "der Handschuhspender (dt: hộp găng tay)",
+          rel_en: "der Handschuhspender (n: glove dispenser)",
+          ex_de:
+            "Wechsle die Einmalhandschuhe bei jedem Schritt mit Kontaminationsrisiko.",
+          ex_vi:
+            "Hãy thay găng tay dùng một lần ở mỗi bước có nguy cơ nhiễm bẩn.",
+          ex_en:
+            "Change disposable gloves at every step with a risk of contamination.",
+        },
+        {
+          id: 50,
+          cat: "1.3",
+          de: "die Schichtübergabe / die Übergabe",
+          ipa: "/diː ˈʃɪçtʔyːbɐˌɡaːbə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bàn giao ca trực điều dưỡng",
+          en: "Nursing shift handover",
+          rel_vi:
+            "übergeben (đt: bàn giao), die Frühschicht / Spätschicht / Nachtschicht",
+          rel_en: "übergeben (v: to hand over), early / late / night shift",
+          ex_de:
+            "Bei der Übergabe berichten wir über wichtige Veränderungen beim Zustand der Patienten.",
+          ex_vi:
+            "Khi bàn giao ca chúng tôi báo cáo về những thay đổi quan trọng ở tình trạng bệnh nhân.",
+          ex_en:
+            "During shift handover, we report important changes in the patients' condition.",
+        },
+        {
+          id: 51,
+          cat: "1.3",
+          de: "der Pflegebericht (-e)",
+          ipa: "/deːɐ̯ ˈpfleːɡəˌbəʁɪçt/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Báo cáo / Nhật ký ghi chép chăm sóc hằng ngày",
+          en: "Daily nursing progress report / care log",
+          rel_vi: "dokumentieren (đt: ghi chép hồ sơ)",
+          rel_en: "dokumentieren (v: to document)",
+          ex_de:
+            "Schreibe im Pflegebericht sachlich und genau, was beobachtet und gemacht wurde.",
+          ex_vi:
+            "Hãy viết trong báo cáo chăm sóc một cách khách quan và chính xác những gì đã quan sát và thực hiện.",
+          ex_en:
+            "Write objectively and accurately in the care report what was observed and done.",
+        },
+        {
+          id: 52,
+          cat: "1.3",
+          de: "die Pflegedokumentation",
+          ipa: "/diː ˈpfleːɡədɔkumɛntaˌtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hồ sơ ghi chép chăm sóc điều dưỡng (chuẩn pháp lý)",
+          en: "Official nursing care documentation",
+          rel_vi: "die Pflegeplanung (dt: kế hoạch chăm sóc)",
+          rel_en: "die Pflegeplanung (n: care plan)",
+          ex_de:
+            "Eine lückenlose Pflegedokumentation ist wichtig für das ganze Team.",
+          ex_vi:
+            "Hồ sơ chăm sóc đầy đủ, không thiếu sót rất quan trọng cho cả đội ngũ.",
+          ex_en:
+            "Complete, gap-free care documentation is essential for the entire team.",
+        },
+        {
+          id: 53,
+          cat: "1.3",
+          de: "die Pflegeplanung",
+          ipa: "/diː ˈpfleːɡəˌplaːnʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kế hoạch chăm sóc cá nhân hóa cho từng bệnh nhân",
+          en: "Individualized nursing care plan",
+          rel_vi:
+            "das Pflegeziel (dt: mục tiêu chăm sóc), die Maßnahme (dt: biện pháp chăm sóc)",
+          rel_en:
+            "das Pflegeziel (n: care goal), die Maßnahme (n: nursing intervention)",
+          ex_de:
+            "In der Pflegeplanung legen wir Ziele und Maßnahmen für den Bewohner fest.",
+          ex_vi:
+            "Trong kế hoạch chăm sóc chúng tôi xác định mục tiêu và biện pháp cho người cao tuổi.",
+          ex_en:
+            "In the care plan, we define goals and interventions for the resident.",
+        },
+        {
+          id: 54,
+          cat: "1.3",
+          de: "der Pflegegrad (1 bis 5)",
+          ipa: "/deːɐ̯ ˈpfleːɡəˌɡʁaːt/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Mức độ cần chăm sóc (bậc 1 đến bậc 5 tại Đức)",
+          en: "German care dependency level (Grades 1 to 5)",
+          rel_vi: "die Pflegeversicherung (dt: bảo hiểm chăm sóc)",
+          rel_en: "die Pflegeversicherung (n: long-term care insurance)",
+          ex_de:
+            "Frau Meier hat Pflegegrad 3 und bekommt Unterstützung im Alltag.",
+          ex_vi:
+            "Bà Meier có mức chăm sóc bậc 3 và nhận được hỗ trợ trong sinh hoạt hằng ngày.",
+          ex_en:
+            "Mrs. Meier has care grade 3 and receives support in everyday life.",
+        },
+        {
+          id: 55,
+          cat: "1.3",
+          de: "die Visite (-n)",
+          ipa: "/diː viˈziːtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Buổi đi buồng khám bệnh của bác sĩ cùng điều dưỡng",
+          en: "Doctor's ward rounds",
+          rel_vi: "der Stationsarzt (dt: bác sĩ điều trị khoa)",
+          rel_en: "der Stationsarzt (n: ward physician)",
+          ex_de:
+            "Bei der Visite bereiten wir die aktuellen Vitalwerte und den Verlauf vor.",
+          ex_vi:
+            "Khi đi buồng cùng bác sĩ chúng tôi chuẩn bị sẵn chỉ số sinh tồn mới nhất và diễn biến.",
+          ex_en:
+            "For ward rounds, we prepare the latest vital signs and clinical progress.",
+        },
+        {
+          id: 56,
+          cat: "1.3",
+          de: "die Stationsleitung (-en) / die PDL",
+          ipa: "/diː ˈstaˌtsi̯oːnsˌlaɪtʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Điều dưỡng trưởng khoa / Quản lý dịch vụ chăm sóc (PDL)",
+          en: "Ward manager / Head nurse / Director of Nursing (PDL)",
+          rel_vi: "die Pflegedienstleitung (dt: Ban quản lý điều dưỡng)",
+          rel_en: "die Pflegedienstleitung (n: nursing management)",
+          ex_de:
+            "Bei Fragen zum Dienstplan wende ich mich an die Stationsleitung.",
+          ex_vi:
+            "Khi có thắc mắc về lịch trực tôi trao đổi với điều dưỡng trưởng khoa.",
+          ex_en:
+            "For questions about the shift schedule, I speak to the ward manager.",
+        },
+        {
+          id: 57,
+          cat: "1.4",
+          de: "die Frühschicht (-en)",
+          ipa: "/diː ˈfʁyːˌʃɪçt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Ca sáng (thường bắt đầu khoảng 6h00–6h30)",
+          en: "Morning / early shift (usually starting around 6:00–6:30 AM)",
+          rel_vi: "die Schicht (dt: ca làm việc)",
+          rel_en: "die Schicht (n: work shift)",
+          ex_de:
+            "In der Frühschicht haben wir meistens viel Grundpflege und Visite.",
+          ex_vi:
+            "Trong ca sáng chúng tôi thường có nhiều công việc chăm sóc cơ bản và đi buồng.",
+          ex_en:
+            "On the early shift, we usually have a lot of basic care and ward rounds.",
+        },
+        {
+          id: 58,
+          cat: "1.4",
+          de: "die Spätschicht (-en)",
+          ipa: "/diː ˈʃpɛːtˌʃɪçt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Ca chiều (thường từ khoảng 13h00–21h00)",
+          en: "Afternoon / late shift (usually around 1:00–9:00 PM)",
+          rel_vi: "der Spätdienst (dt: ca trực chiều)",
+          rel_en: "der Spätdienst (n: late duty shift)",
+          ex_de:
+            "In der Spätschicht helfen wir beim Abendessen und bereiten die Nachtruhe vor.",
+          ex_vi:
+            "Trong ca chiều chúng tôi hỗ trợ bữa tối và chuẩn bị cho giờ nghỉ đêm.",
+          ex_en:
+            "On the late shift, we assist with supper and prepare patients for bedtime.",
+        },
+        {
+          id: 59,
+          cat: "1.4",
+          de: "die Nachtschicht (-en)",
+          ipa: "/diː ˈnaxtˌʃɪçt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Ca đêm",
+          en: "Night shift",
+          rel_vi: "der Nachtdienst (dt: ca trực đêm)",
+          rel_en: "der Nachtdienst (n: night duty)",
+          ex_de:
+            "In der Nachtschicht achten wir besonders auf Ruhe, Sicherheit und Klingelrufe.",
+          ex_vi:
+            "Trong ca đêm chúng tôi đặc biệt chú ý sự yên tĩnh, an toàn và chuông gọi.",
+          ex_en:
+            "On the night shift, we pay special attention to quietness, safety, and call bells.",
+        },
+        {
+          id: 60,
+          cat: "1.4",
+          de: "der Dienstplan (-e)",
+          ipa: "/deːɐ̯ ˈdiːnstˌplaːn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Lịch phân công ca trực",
+          en: "Shift duty roster / work schedule",
+          rel_vi:
+            "der Frei-Wunsch (dt: nguyện vọng nghỉ), einspringen (đt: đi làm thay ca)",
+          rel_en:
+            "der Frei-Wunsch (n: day-off request), einspringen (v: to cover a shift)",
+          ex_de:
+            "Der neue Dienstplan für nächsten Monat hängt im Dienstzimmer.",
+          ex_vi: "Lịch trực mới cho tháng sau được treo ở phòng trực.",
+          ex_en:
+            "The new duty roster for next month is posted in the nurses' office.",
+        },
+        {
+          id: 61,
+          cat: "1.4",
+          de: "das Dienstzimmer (-n)",
+          ipa: "/das ˈdiːnstˌtsɪmɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Phòng trực của đội ngũ điều dưỡng trên khoa",
+          en: "Nurses' station / staff duty room",
+          rel_vi: "das Übergabegespräch (dt: buổi bàn giao ca)",
+          rel_en: "das Übergabegespräch (n: handover briefing)",
+          ex_de: "Die Übergabe findet um 13:30 Uhr im Dienstzimmer statt.",
+          ex_vi: "Buổi bàn giao ca diễn ra lúc 13 giờ 30 tại phòng trực.",
+          ex_en: "Handover takes place at 1:30 PM in the nurses' duty room.",
+        },
+        {
+          id: 62,
+          cat: "1.4",
+          de: "die Station (-en)",
+          ipa: "/diː staˈtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khoa / Buồng bệnh trong bệnh viện",
+          en: "Hospital ward / unit",
+          rel_vi: "die Pflegeabteilung (dt: khu vực chăm sóc)",
+          rel_en: "die Pflegeabteilung (n: care unit)",
+          ex_de: "Ich arbeite auf der Station 4B in der Inneren Medizin.",
+          ex_vi: "Tôi làm việc tại khoa 4B chuyên khoa Nội.",
+          ex_en: "I work on Ward 4B in Internal Medicine.",
+        },
+        {
+          id: 63,
+          cat: "1.4",
+          de: "das Pflegeheim (-e) / die Senioreneinrichtung",
+          ipa: "/das ˈpfleːɡəˌhaɪm/",
+          type_vi: "Danh từ (n./f.)",
+          type_en: "Noun (n./f.)",
+          vi: "Viện dưỡng lão / Cơ sở chăm sóc người cao tuổi",
+          en: "Nursing home / senior care facility",
+          rel_vi: "der Bewohner / die Bewohnerin (dt: cư dân)",
+          rel_en: "der Bewohner / die Bewohnerin (n: resident)",
+          ex_de: "Im Pflegeheim betreuen wir ältere Menschen rund um die Uhr.",
+          ex_vi: "Tại viện dưỡng lão chúng tôi chăm sóc người cao tuổi 24/7.",
+          ex_en:
+            "In the nursing home, we care for elderly residents around the clock.",
+        },
+        {
+          id: 64,
+          cat: "1.4",
+          de: "die ambulante Pflege",
+          ipa: "/diː ambuˈlantə ˈpfleːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Chăm sóc điều dưỡng tại nhà bệnh nhân",
+          en: "Outpatient / home-visit nursing care",
+          rel_vi: "der Pflegedienst (dt: dịch vụ chăm sóc)",
+          rel_en: "der Pflegedienst (n: home care service)",
+          ex_de:
+            "In der ambulanten Pflege fahren wir mit dem Auto zu den Patienten nach Hause.",
+          ex_vi:
+            "Trong chăm sóc tại nhà chúng tôi lái xe tới tận nhà người bệnh.",
+          ex_en: "In outpatient care, we drive to the patients' homes by car.",
+        },
+        {
+          id: 65,
+          cat: "1.4",
+          de: "das Patientenzimmer / das Bewohnerzimmer",
+          ipa: "/das paˈtsi̯ɛntn̩ˌtsɪmɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Phòng bệnh / Phòng ở người được chăm sóc",
+          en: "Patient room / resident's room",
+          rel_vi: "klopfen (đt: gõ cửa)",
+          rel_en: "klopfen (v: to knock on the door)",
+          ex_de:
+            "Bitte klopfe immer an und stelle dich vor, bevor du ins Zimmer gehst.",
+          ex_vi:
+            "Vui lòng luôn gõ cửa và tự giới thiệu trước khi bước vào phòng.",
+          ex_en:
+            "Please always knock and introduce yourself before entering the room.",
+        },
+        {
+          id: 66,
+          cat: "1.4",
+          de: "die Angehörigen (Pl.)",
+          ipa: "/diː ˈaŋɡəˌhøːʁɪɡn̩/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Người thân / Gia đình bệnh nhân",
+          en: "Relatives / family members",
+          rel_vi: "das Angehörigengespräch (dt: trao đổi với người thân)",
+          rel_en: "das Angehörigengespräch (n: family consultation)",
+          ex_de:
+            "Wir informieren die Angehörigen freundlich über den aktuellen Zustand.",
+          ex_vi:
+            "Chúng tôi thông báo nhẹ nhàng cho người thân về tình trạng hiện tại.",
+          ex_en:
+            "We inform the relatives politely about the current condition.",
+        },
+        {
+          id: 67,
+          cat: "1.4",
+          de: "die Demenz",
+          ipa: "/diː deˈmɛnts/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Chứng sa sút trí tuệ ở người lớn tuổi",
+          en: "Dementia",
+          rel_vi: "orientierungslos (tt: mất định hướng)",
+          rel_en: "orientierungslos (adj: disoriented)",
+          ex_de:
+            "Bei Menschen mit Demenz sprechen wir ruhig, geduldig und in klaren Sätzen.",
+          ex_vi:
+            "Với người bị sa sút trí tuệ chúng tôi nói chuyện bình tĩnh, kiên nhẫn và bằng câu rõ ràng.",
+          ex_en:
+            "With people living with dementia, we speak calmly, patiently, and in clear sentences.",
+        },
+        {
+          id: 68,
+          cat: "1.4",
+          de: "die Würde / die Intimsphäre",
+          ipa: "/diː ˈvʏʁdə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Phẩm giá con người / Không gian riêng tư nhạy cảm",
+          en: "Human dignity / personal privacy",
+          rel_vi: "respektieren (đt: tôn trọng)",
+          rel_en: "respektieren (v: to respect)",
+          ex_de:
+            "Die Wahrung der Würde und Intimsphäre ist grundlegend in der Pflege.",
+          ex_vi:
+            "Giữ gìn phẩm giá và sự riêng tư là nền tảng trong nghề điều dưỡng.",
+          ex_en:
+            "Preserving dignity and personal privacy is fundamental in nursing.",
+        },
+        {
+          id: 69,
+          cat: "1.4",
+          de: "die Schweigepflicht",
+          ipa: "/diː ˈʃvaɪɡəˌpflɪçt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nghĩa vụ bảo mật thông tin bệnh nhân & hồ sơ",
+          en: "Medical confidentiality / duty of secrecy",
+          rel_vi: "vertraulich (tt: bảo mật)",
+          rel_en: "vertraulich (adj: confidential)",
+          ex_de:
+            "Alle Informationen über Patienten unterliegen der strengen Schweigepflicht.",
+          ex_vi:
+            "Mọi thông tin về người bệnh đều chịu sự ràng buộc bảo mật nghiêm ngặt.",
+          ex_en:
+            "All information about patients is subject to strict medical confidentiality.",
+        },
+        {
+          id: 70,
+          cat: "1.4",
+          de: "der Notfall (-e)",
+          ipa: "/deːɐ̯ ˈnoːtˌfal/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Tình huống y tế khẩn cấp",
+          en: "Medical emergency",
+          rel_vi:
+            "der Notarzt (dt: bác sĩ cấp cứu), schnell handeln (đt: hành động nhanh)",
+          rel_en:
+            "der Notarzt (n: emergency physician), schnell handeln (v: to act quickly)",
+          ex_de: "Im Notfall rufen wir sofort den Arzt oder den Notruf.",
+          ex_vi:
+            "Trong tình huống khẩn cấp chúng tôi gọi ngay bác sĩ hoặc tổng đài cấp cứu.",
+          ex_en:
+            "In an emergency, we call the doctor or emergency services immediately.",
+        },
+        {
+          id: 71,
+          cat: "1.4",
+          de: "der Müllabwurf / der Abfallbehälter",
+          ipa: "/deːɐ̯ ˈmʏlʔapˌvʊʁf/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Thùng thu gom rác thải y tế / sinh hoạt trên khoa",
+          en: "Clinical / ward waste disposal bin",
+          rel_vi: "entsorgen (đt: xử lý/bỏ rác đúng quy định)",
+          rel_en: "entsorgen (v: to dispose of)",
+          ex_de:
+            "Gebrauchte Einmalhandschuhe entsorgen wir sofort nach der Maßnahme.",
+          ex_vi:
+            "Găng tay dùng một lần đã qua sử dụng được bỏ ngay sau khi thao tác.",
+          ex_en:
+            "Used disposable gloves are disposed of immediately after the procedure.",
+        },
+        {
+          id: 72,
+          cat: "1.4",
+          de: "die Wäsche / der Wäschewagen",
+          ipa: "/diː ˈvɛʃə/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Đồ vải / Khăn ga trải giường / Xe đẩy đồ vải",
+          en: "Linens / bedsheets / ward laundry cart",
+          rel_vi:
+            "die Schmutzwäsche (dt: đồ vải bẩn), beziehen (đt: thay ga gối)",
+          rel_en:
+            "die Schmutzwäsche (n: soiled linen), beziehen (v: to make/change bedsheets)",
+          ex_de:
+            "Wir beziehen das Bett mit frischer Wäsche, wenn es verschmutzt ist.",
+          ex_vi: "Chúng tôi thay ga gối sạch khi bị bẩn.",
+          ex_en: "We make the bed with fresh linens whenever it is soiled.",
+        },
+        {
+          id: 73,
+          cat: "1.5",
+          de: "unterstützen / helfen",
+          ipa: "/ˌʊntɐˈʃtʏtsn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Hỗ trợ / Giúp đỡ người bệnh",
+          en: "To support / assist / help",
+          rel_vi: "die Unterstützung (dt: sự hỗ trợ)",
+          rel_en: "die Unterstützung (n: support/assistance)",
+          ex_de: "Darf ich Ihnen beim Aufstehen und Anziehen helfen?",
+          ex_vi: "Tôi có thể giúp ông/bà đứng dậy và mặc quần áo không ạ?",
+          ex_en: "May I help you get up and get dressed?",
+        },
+        {
+          id: 74,
+          cat: "1.5",
+          de: "betreuen / versorgen",
+          ipa: "/bəˈtʁɔʏ̯ən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Chăm sóc, theo dõi và phục vụ người bệnh",
+          en: "To look after / care for / tend to",
+          rel_vi: "die Versorgung (dt: việc chăm sóc/xử lý)",
+          rel_en: "die Versorgung (n: nursing care/provision)",
+          ex_de: "Heute betreue ich Zimmer 12 und 14 in der Frühschicht.",
+          ex_vi: "Hôm nay ở ca sáng tôi phụ trách chăm sóc phòng 12 và 14.",
+          ex_en: "Today I am looking after Rooms 12 and 14 on the early shift.",
+        },
+        {
+          id: 75,
+          cat: "1.5",
+          de: "beobachten",
+          ipa: "/bəˈoːbaxtn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Quan sát kỹ lưỡng diễn biến sức khỏe / hành vi",
+          en: "To observe / monitor closely",
+          rel_vi: "die Beobachtung (dt: sự quan sát)",
+          rel_en: "die Beobachtung (n: clinical observation)",
+          ex_de:
+            "Wir beobachten genau, wie viel der Patient trinkt und wie er atmet.",
+          ex_vi:
+            "Chúng tôi quan sát kỹ người bệnh uống bao nhiêu nước và thở ra sao.",
+          ex_en:
+            "We closely observe how much the patient drinks and how they breathe.",
+        },
+        {
+          id: 76,
+          cat: "1.5",
+          de: "dokumentieren",
+          ipa: "/dokumɛnˈtiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Ghi chép chính xác vào hồ sơ điều dưỡng",
+          en: "To document / chart in care records",
+          rel_vi: "die Dokumentation (dt: việc ghi hồ sơ)",
+          rel_en: "die Dokumentation (n: documentation/charting)",
+          ex_de:
+            "Bitte dokumentiere den Blutdruck und die Schmerzen sofort im System.",
+          ex_vi:
+            "Vui lòng ghi ngay chỉ số huyết áp và mức độ đau vào hệ thống.",
+          ex_en:
+            "Please document the blood pressure and pain score in the system right away.",
+        },
+        {
+          id: 77,
+          cat: "1.5",
+          de: "desinfizieren",
+          ipa: "/desɪnfɛkˈtsiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Sát khuẩn / Khử khuẩn",
+          en: "To disinfect / sanitize",
+          rel_vi: "die Desinfektion (dt: sự khử khuẩn)",
+          rel_en: "die Desinfektion (n: disinfection)",
+          ex_de: "Desinfizieren Sie bitte vor dem Essen gründlich die Hände.",
+          ex_vi: "Anh/Chị vui lòng sát khuẩn tay kỹ trước khi ăn nhé.",
+          ex_en: "Please disinfect your hands thoroughly before eating.",
+        },
+        {
+          id: 78,
+          cat: "1.5",
+          de: "anreichen",
+          ipa: "/ˈanˌʁaɪçn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Đưa / Đút hỗ trợ (thức ăn, đồ uống, vật dụng)",
+          en: "To hand over / assist with feeding or drinking",
+          rel_vi: "reichen (đt: đưa/chuyền)",
+          rel_en: "reichen (v: to pass/hand)",
+          ex_de: "Ich reiche Ihnen gern das Glas Wasser und die Tabletten an.",
+          ex_vi: "Tôi xin gửi ông/bà cốc nước và thuốc viên ạ.",
+          ex_en: "I will gladly hand you the glass of water and the tablets.",
+        },
+        {
+          id: 79,
+          cat: "1.5",
+          de: "klopfen",
+          ipa: "/ˈklɔpfn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Gõ cửa trước khi bước vào phòng",
+          en: "To knock on the door",
+          rel_vi: "anklopfen (đt: gõ cửa)",
+          rel_en: "anklopfen (v: to knock)",
+          ex_de: "Ich klopfe kurz an und komme dann ins Zimmer.",
+          ex_vi: "Tôi gõ cửa một chút rồi bước vào phòng ạ.",
+          ex_en: "I'll knock briefly and then come into the room.",
+        },
+        {
+          id: 80,
+          cat: "1.5",
+          de: "sich vorstellen",
+          ipa: "/zɪç ˈfoːɐ̯ˌʃtɛlən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Tự giới thiệu tên và vai trò của mình",
+          en: "To introduce oneself",
+          rel_vi: "die Vorstellung (dt: sự giới thiệu)",
+          rel_en: "die Vorstellung (n: introduction)",
+          ex_de:
+            "Ich stelle mich kurz vor: Mein Name ist Đức, ich bin Pflegekraft.",
+          ex_vi:
+            "Tôi xin tự giới thiệu ngắn gọn: Tên tôi là Đức, tôi là nhân viên điều dưỡng.",
+          ex_en:
+            "Let me introduce myself briefly: my name is Đức, I am a nurse.",
+        },
+        {
+          id: 81,
+          cat: "1.5",
+          de: "beruhigen",
+          ipa: "/bəˈʁuːɪɡn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Trấn an, làm dịu bớt lo lắng/sợ hãi của bệnh nhân",
+          en: "To calm down / reassure",
+          rel_vi: "ruhig (tt: bình tĩnh/yên tĩnh)",
+          rel_en: "ruhig (adj: calm/quiet)",
+          ex_de:
+            "Wenn ein Patient Angst hat, sprechen wir ruhig und beruhigen ihn.",
+          ex_vi:
+            "Khi người bệnh lo sợ, chúng tôi nói chuyện nhẹ nhàng và trấn an họ.",
+          ex_en:
+            "When a patient is anxious, we speak calmly and reassure them.",
+        },
+        {
+          id: 82,
+          cat: "1.5",
+          de: "erfragen",
+          ipa: "/ɛɐ̯ˈfʁaːɡn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Hỏi thăm, khai thác thông tin (mức đau, triệu chứng)",
+          en: "To ask about / inquire (symptoms, pain)",
+          rel_vi: "fragen (đt: hỏi)",
+          rel_en: "fragen (v: to ask)",
+          ex_de:
+            "Ich erfrage morgens immer, ob der Patient gut geschlafen hat.",
+          ex_vi: "Buổi sáng tôi luôn hỏi xem người bệnh có ngủ ngon không.",
+          ex_en: "In the morning, I always ask whether the patient slept well.",
+        },
+        {
+          id: 83,
+          cat: "1.5",
+          de: "rückfragen",
+          ipa: "/ˈʁʏkˌfʁaːɡn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Hỏi lại để xác nhận cho chắc chắn",
+          en: "To double-check / ask back for clarification",
+          rel_vi: "die Rückfrage (dt: câu hỏi xác nhận lại)",
+          rel_en: "die Rückfrage (n: follow-up question)",
+          ex_de:
+            "Wenn etwas unklar ist, frage ich lieber bei der Stationsleitung nach.",
+          ex_vi:
+            "Khi có điều chưa rõ tôi ưu tiên hỏi lại điều dưỡng trưởng khoa.",
+          ex_en:
+            "If anything is unclear, I prefer to double-check with the ward manager.",
+        },
+        {
+          id: 84,
+          cat: "1.5",
+          de: "geduldig",
+          ipa: "/ɡəˈdʊltɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Kiên nhẫn",
+          en: "Patient",
+          rel_vi: "die Geduld (dt: sự kiên nhẫn)",
+          rel_en: "die Geduld (n: patience)",
+          ex_de:
+            "In der Pflege braucht man viel Geduld und Einfühlungsvermögen.",
+          ex_vi: "Trong nghề điều dưỡng cần nhiều sự kiên nhẫn và sự thấu cảm.",
+          ex_en: "In nursing, you need a lot of patience and empathy.",
+        },
+        {
+          id: 85,
+          cat: "1.5",
+          de: "freundlich / höflich",
+          ipa: "/ˈfʁɔʏntlɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Thân thiện / Lịch sự",
+          en: "Friendly / polite",
+          rel_vi: "die Freundlichkeit (dt: sự thân thiện)",
+          rel_en: "die Freundlichkeit (n: friendliness)",
+          ex_de: "Ein freundlicher Ton hilft, Vertrauen aufzubauen.",
+          ex_vi: "Giọng điệu thân thiện giúp tạo dựng niềm tin.",
+          ex_en: "A friendly tone helps build trust.",
+        },
+        {
+          id: 86,
+          cat: "1.5",
+          de: "aufrecht",
+          ipa: "/ˈaʊfˌʁɛçt/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Ngồi thẳng người / Tư thế thẳng đứng",
+          en: "Upright (sitting posture)",
+          rel_vi: "aufrecht sitzen (đt: ngồi thẳng)",
+          rel_en: "aufrecht sitzen (v: to sit upright)",
+          ex_de: "Beim Essen soll der Patient möglichst aufrecht sitzen.",
+          ex_vi: "Khi ăn, người bệnh nên ngồi thẳng người nhất có thể.",
+          ex_en: "While eating, the patient should sit as upright as possible.",
+        },
+        {
+          id: 87,
+          cat: "1.5",
+          de: "schmerzfrei",
+          ipa: "/ˈʃmɛʁtsˌfʁaɪ/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Không còn đau / Đỡ đau",
+          en: "Pain-free",
+          rel_vi: "der Schmerz (dt: cơn đau)",
+          rel_en: "der Schmerz (n: pain)",
+          ex_de:
+            "Nach dem Schmerzmittel ist die Patientin jetzt fast schmerzfrei.",
+          ex_vi:
+            "Sau khi dùng thuốc giảm đau, nữ bệnh nhân giờ gần như hết đau.",
+          ex_en:
+            "After the pain medication, the patient is now almost pain-free.",
+        },
+        {
+          id: 88,
+          cat: "1.5",
+          de: "stabil / kreislaufstabil",
+          ipa: "/ʃtaˈbiːl/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Ổn định / Huyết động & tuần hoàn ổn định",
+          en: "Stable / hemodynamically stable",
+          rel_vi: "sich stabilisieren (đt: ổn định lại)",
+          rel_en: "sich stabilisieren (v: to stabilize)",
+          ex_de: "Die Vitalwerte sind heute stabil.",
+          ex_vi: "Các chỉ số sinh tồn hôm nay ổn định.",
+          ex_en: "Vital signs are stable today.",
+        },
+      ];
+
+      const PHRASES_DATA = [
+        {
+          id: 1,
+          cat: "2.1",
+          de: "Guten Morgen, Frau Meier! Ich bin Đức, ich bin heute in der Frühschicht für Sie da.",
+          vi: "Chào buổi sáng bà Meier! Tôi là Đức, ca sáng hôm nay tôi phụ trách chăm sóc bà.",
+          en: "Good morning, Mrs. Meier! I am Đức, and I am looking after you on the early shift today.",
+        },
+        {
+          id: 2,
+          cat: "2.1",
+          de: "Darf ich kurz hereinkommen? Ich möchte Ihnen bei der Körperpflege helfen.",
+          vi: "Tôi có thể bước vào một chút không ạ? Tôi muốn hỗ trợ ông/bà vệ sinh cơ thể.",
+          en: "May I come in briefly? I would like to help you with your personal hygiene.",
+        },
+        {
+          id: 3,
+          cat: "2.1",
+          de: "Möchten Sie lieber im Bett gewaschen werden oder im Bad am Waschbecken?",
+          vi: "Ông/Bà thích được lau rửa tại giường hay rửa mặt/tay ở bồn rửa trong phòng tắm ạ?",
+          en: "Would you prefer to be washed in bed or at the sink in the bathroom?",
+        },
+        {
+          id: 4,
+          cat: "2.1",
+          de: "Ich helfe Ihnen jetzt beim Aufstehen. Bitte halten Sie sich gut fest.",
+          vi: "Bây giờ tôi giúp ông/bà đứng dậy nhé. Vui lòng bám chắc vào ạ.",
+          en: "I will help you stand up now. Please hold on tightly.",
+        },
+        {
+          id: 5,
+          cat: "2.1",
+          de: "Soll ich Ihnen den Rollator oder den Rollstuhl bringen?",
+          vi: "Tôi mang xe khung tập đi hay xe lăn tới cho ông/bà ạ?",
+          en: "Should I bring you the rollator or the wheelchair?",
+        },
+        {
+          id: 6,
+          cat: "2.1",
+          de: "Ich lagere Sie jetzt ein wenig um, damit der Rücken entlastet wird.",
+          vi: "Bây giờ tôi đổi tư thế nằm cho ông/bà một chút để giảm áp lực cho vùng lưng.",
+          en: "I am going to reposition you slightly now to relieve pressure on your back.",
+        },
+        {
+          id: 7,
+          cat: "2.1",
+          de: "Möchten Sie etwas trinken oder beim Essen ein wenig Unterstützung haben?",
+          vi: "Ông/Bà có muốn uống chút nước hay cần hỗ trợ một chút khi ăn không ạ?",
+          en: "Would you like something to drink or a little assistance with eating?",
+        },
+        {
+          id: 8,
+          cat: "2.1",
+          de: "Ich stelle Ihnen die Klingel direkt neben die Hand, falls Sie etwas brauchen.",
+          vi: "Tôi đặt chuông gọi ngay cạnh tay để ông/bà bấm khi cần bất cứ điều gì nhé.",
+          en: "I'll place the call bell right next to your hand in case you need anything.",
+        },
+        {
+          id: 9,
+          cat: "2.1",
+          de: "Haben Sie gut geschlafen? Wie fühlen Sie sich heute Morgen?",
+          vi: "Ông/Bà có ngủ ngon không ạ? Sáng nay ông/bà thấy trong người thế nào?",
+          en: "Did you sleep well? How are you feeling this morning?",
+        },
+        {
+          id: 10,
+          cat: "2.1",
+          de: "Ich mache jetzt kurz die Händedesinfektion und wechsele die Handschuhe.",
+          vi: "Bây giờ tôi sát khuẩn tay nhanh và thay găng tay nhé.",
+          en: "I will quickly disinfect my hands and change gloves now.",
+        },
+        {
+          id: 11,
+          cat: "2.2",
+          de: "Ich möchte gerne Ihren Blutdruck und Ihren Puls messen. Ist das in Ordnung?",
+          vi: "Tôi muốn đo huyết áp và mạch cho ông/bà. Như vậy có được không ạ?",
+          en: "I would like to measure your blood pressure and pulse. Is that okay?",
+        },
+        {
+          id: 12,
+          cat: "2.2",
+          de: "Bitte atmen Sie einmal tief ein und wieder aus.",
+          vi: "Vui lòng hít vào thật sâu rồi thở ra ạ.",
+          en: "Please take a deep breath in and breathe out again.",
+        },
+        {
+          id: 13,
+          cat: "2.2",
+          de: "Haben Sie irgendwo Schmerzen? Wo genau tut es weh?",
+          vi: "Ông/Bà có bị đau ở đâu không ạ? Đau chính xác ở chỗ nào vậy?",
+          en: "Do you have pain anywhere? Where exactly does it hurt?",
+        },
+        {
+          id: 14,
+          cat: "2.2",
+          de: "Wie stark sind die Schmerzen auf einer Skala von null bis zehn?",
+          vi: "Mức độ đau của ông/bà là bao nhiêu trên thang điểm từ 0 đến 10 ạ?",
+          en: "How strong is the pain on a scale from zero to ten?",
+        },
+        {
+          id: 15,
+          cat: "2.2",
+          de: "Ist der Schmerz eher stechend, dumpf oder brennend?",
+          vi: "Cơn đau có cảm giác nhói, âm ỉ hay rát bỏng ạ?",
+          en: "Is the pain more stabbing, dull, or burning?",
+        },
+        {
+          id: 16,
+          cat: "2.2",
+          de: "Ist Ihnen schwindlig oder übel?",
+          vi: "Ông/Bà có thấy chóng mặt hay buồn nôn không ạ?",
+          en: "Do you feel dizzy or nauseous?",
+        },
+        {
+          id: 17,
+          cat: "2.2",
+          de: "Ich gebe Ihnen jetzt die verordneten Tabletten und ein Glas Wasser.",
+          vi: "Bây giờ tôi gửi ông/bà thuốc viên đã được kê đơn cùng một cốc nước ạ.",
+          en: "I'll give you your prescribed tablets and a glass of water now.",
+        },
+        {
+          id: 18,
+          cat: "2.2",
+          de: "Bitte schlucken Sie die Tablette in Ruhe mit einem Schluck Wasser.",
+          vi: "Ông/Bà vui lòng nuốt từ từ viên thuốc cùng một ngụm nước nhé.",
+          en: "Please swallow the tablet calmly with a sip of water.",
+        },
+        {
+          id: 19,
+          cat: "2.2",
+          de: "Ich gebe die Werte gleich an die Stationsärztin oder den Stationsarzt weiter.",
+          vi: "Tôi sẽ báo ngay các chỉ số này cho nữ/nam bác sĩ điều trị tại khoa.",
+          en: "I will pass these readings right along to the ward physician.",
+        },
+        {
+          id: 20,
+          cat: "2.3",
+          de: "Bitte ziehen Sie rutschfeste Schuhe an, damit Sie nicht ausrutschen.",
+          vi: "Vui lòng mang giày/dép chống trượt để không bị trơn trượt nhé.",
+          en: "Please put on non-slip shoes so that you don't slip.",
+        },
+        {
+          id: 21,
+          cat: "2.3",
+          de: "Ich stelle jetzt die Bremsen am Rollstuhl fest und klappe das Bettgitter hoch.",
+          vi: "Bây giờ tôi hãm phanh xe lăn và nâng thanh chắn giường lên nhé.",
+          en: "I'm locking the wheelchair brakes and raising the bed rail now.",
+        },
+        {
+          id: 22,
+          cat: "2.3",
+          de: "Bitte lassen Sie die Tür hier kurz offen oder geschlossen, je nach Hygieneplan.",
+          vi: "Vui lòng để cửa ở đây mở hoặc đóng tạm theo quy định vệ sinh của khoa.",
+          en: "Please leave the door open or closed briefly here according to the hygiene protocol.",
+        },
+        {
+          id: 23,
+          cat: "2.3",
+          de: "Ich wechsele jetzt den Wundverband und arbeite dabei steril.",
+          vi: "Bây giờ tôi thay băng vết thương và thao tác vô trùng ạ.",
+          en: "I will change the wound dressing now using sterile technique.",
+        },
+        {
+          id: 24,
+          cat: "2.3",
+          de: "Wir lüften kurz das Zimmer, damit frische Luft hereinkommt.",
+          vi: "Chúng ta mở cửa thông gió phòng một chút để có không khí trong lành nhé.",
+          en: "We'll air out the room briefly to let fresh air in.",
+        },
+        {
+          id: 25,
+          cat: "2.3",
+          de: "Bitte bleiben Sie noch einen Moment sitzen, bevor Sie aufstehen.",
+          vi: "Ông/Bà vui lòng ngồi nghỉ thêm một lát trước khi đứng dậy nhé.",
+          en: "Please stay seated for another moment before standing up.",
+        },
+        {
+          id: 26,
+          cat: "2.3",
+          de: "Ich habe die Beobachtung bereits im Pflegebericht dokumentiert.",
+          vi: "Tôi đã ghi nhận phần quan sát vào báo cáo chăm sóc rồi ạ.",
+          en: "I have already documented the observation in the care report.",
+        },
+        {
+          id: 27,
+          cat: "2.3",
+          de: "Bei Fragen können sich die Angehörigen gerne an unser Pflegeteam wenden.",
+          vi: "Nếu có thắc mắc, người thân vui lòng trao đổi với đội ngũ điều dưỡng chúng tôi nhé.",
+          en: "If relatives have any questions, they are welcome to speak with our nursing team.",
+        },
+        {
+          id: 28,
+          cat: "2.3",
+          de: "Ich wünsche Ihnen weiterhin gute Besserung und einen ruhigen Tag!",
+          vi: "Chúc ông/bà tiếp tục mau khỏe và có một ngày nghỉ ngơi yên tĩnh!",
+          en: "I wish you a continued speedy recovery and a peaceful day!",
+        },
+        {
+          id: 29,
+          cat: "2.4",
+          de: "Hallo zusammen, wir starten jetzt mit der Übergabe für die Spätschicht.",
+          vi: "Chào mọi người, chúng ta bắt đầu bàn giao ca cho ca chiều nhé.",
+          en: "Hello everyone, we're starting the shift handover for the late shift now.",
+        },
+        {
+          id: 30,
+          cat: "2.4",
+          de: "In Zimmer 5 hat der Patient heute Morgen leichte Kreislaufprobleme gehabt, der Blutdruck ist jetzt stabil.",
+          vi: "Ở phòng 5, sáng nay người bệnh có hơi tụt huyết áp nhẹ, hiện huyết áp đã ổn định.",
+          en: "In Room 5, the patient had mild circulatory issues this morning; blood pressure is stable now.",
+        },
+        {
+          id: 31,
+          cat: "2.4",
+          de: "Frau Becker aus Zimmer 8 hat Schmerzen im linken Knie, Schmerzstärke 4, und hat ein Schmerzmittel bekommen.",
+          vi: "Bà Becker ở phòng 8 bị đau đầu gối trái, mức đau 4 điểm, và đã được cấp thuốc giảm đau.",
+          en: "Mrs. Becker in Room 8 has pain in her left knee, pain score 4, and has received pain medication.",
+        },
+        {
+          id: 32,
+          cat: "2.4",
+          de: "Herr Müller in Zimmer 3 braucht beim Essen und Trinken Hilfe und Schonkost.",
+          vi: "Ông Müller ở phòng 3 cần hỗ trợ khi ăn uống và dùng chế độ ăn nhẹ dễ tiêu.",
+          en: "Mr. Müller in Room 3 needs help with eating and drinking as well as a light diet.",
+        },
+        {
+          id: 33,
+          cat: "2.4",
+          de: "Wir müssen bei Zimmer 2 noch auf die Flüssigkeitsbilanz und den Verbandswechsel achten.",
+          vi: "Ở phòng 2 chúng ta còn phải chú ý theo dõi lượng nước vào ra và thay băng vết thương.",
+          en: "In Room 2, we still need to watch the fluid balance and the wound dressing change.",
+        },
+        {
+          id: 34,
+          cat: "2.4",
+          de: "Kannst du mir bitte kurz beim Umlagern von Herrn Braun in Zimmer 7 helfen?",
+          vi: "Bạn giúp mình một tay đổi tư thế cho ông Braun ở phòng 7 một chút được không?",
+          en: "Could you briefly help me reposition Mr. Braun in Room 7?",
+        },
+        {
+          id: 35,
+          cat: "2.4",
+          de: "Ich habe den Pflegebericht für meinen Bereich schon vollständig eingetragen.",
+          vi: "Mình đã nhập đầy đủ báo cáo chăm sóc cho khu vực mình phụ trách rồi.",
+          en: "I have already completely entered the care report for my section.",
+        },
+        {
+          id: 36,
+          cat: "2.4",
+          de: "Danke für die gute Zusammenarbeit in dieser Schicht! Schönen Feierabend!",
+          vi: "Cảm ơn mọi người đã phối hợp tốt trong ca trực này! Chúc tan ca vui vẻ!",
+          en: "Thanks for the great teamwork on this shift! Have a great evening!",
+        },
+      ];
+
+      const DIALOGUES_DATA = [
+        {
+          id: 1,
+          tab_vi: "Hội thoại 1: Vệ sinh buổi sáng",
+          tab_en: "Dialogue 1: Morning Care",
+          title_vi:
+            "Hội thoại 1: Chào hỏi đầu ca, tự giới thiệu & hỗ trợ vệ sinh cơ thể",
+          title_en:
+            "Dialogue 1: Shift Greeting, Self-Introduction & Morning Hygiene Care",
+          context_vi:
+            "Trong ca sáng tại viện dưỡng lão/khoa nội trú, điều dưỡng viên Đức gõ cửa bước vào phòng của bà Weber để hỗ trợ vệ sinh buổi sáng.",
+          context_en:
+            "On the morning shift in a nursing home/inpatient ward, nurse Đức knocks and enters Mrs. Weber's room to assist with morning hygiene.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Klopf, klopf! Guten Morgen, Frau Weber! Darf ich kurz hereinkommen?",
+              vi: "Cốc, cốc! Chào buổi sáng bà Weber! Tôi có thể bước vào một chút không ạ?",
+              en: "Knock, knock! Good morning, Mrs. Weber! May I come in briefly?",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Weber (Người bệnh)",
+              name_en: "Mrs. Weber (Resident)",
+              de: "Guten Morgen. Ja, bitte kommen Sie rein.",
+              vi: "Chào buổi sáng. Vâng, mời anh vào.",
+              en: "Good morning. Yes, please come in.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Mein Name ist Đức, ich bin heute in der Frühschicht für Sie da. Haben Sie gut geschlafen?",
+              vi: "Tên tôi là Đức, ca sáng hôm nay tôi phụ trách chăm sóc bà. Bà có ngủ ngon không ạ?",
+              en: "My name is Đức, and I am looking after you on the early shift today. Did you sleep well?",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Weber (Người bệnh)",
+              name_en: "Mrs. Weber (Resident)",
+              de: "Nicht so gut, ich hatte nachts etwas Rückenschmerzen.",
+              vi: "Ngủ không ngon lắm, đêm qua tôi hơi bị đau lưng.",
+              en: "Not so well; I had a bit of back pain during the night.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Das tut mir leid. Möchten Sie heute lieber im Bett gewaschen werden oder im Bad am Waschbecken?",
+              vi: "Tôi rất tiếc khi nghe vậy. Hôm nay bà thích được lau rửa tại giường hay rửa ở chậu rửa trong phòng tắm ạ?",
+              en: "I'm sorry to hear that. Would you prefer to be washed in bed today or at the sink in the bathroom?",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Weber (Người bệnh)",
+              name_en: "Mrs. Weber (Resident)",
+              de: "Ich versuche es heute gerne im Bad, aber ich brauche Hilfe beim Aufstehen.",
+              vi: "Hôm nay tôi muốn thử vào phòng tắm, nhưng tôi cần người đỡ đứng dậy.",
+              en: "I'd like to try in the bathroom today, but I need help standing up.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Gerne, ich helfe Ihnen ganz in Ruhe. Zuerst messe ich kurz Ihren Blutdruck und stelle den Rollator bereit.",
+              vi: "Vâng ạ, tôi sẽ đỡ bà từ từ. Trước tiên tôi đo huyết áp nhanh cho bà và chuẩn bị sẵn xe tập đi nhé.",
+              en: "Gladly, I'll help you take your time. First I'll quickly check your blood pressure and get the rollator ready.",
+            },
+          ],
+        },
+        {
+          id: 2,
+          tab_vi: "Hội thoại 2: Đau & Chỉ số sinh tồn",
+          tab_en: "Dialogue 2: Pain & Vitals",
+          title_vi: "Hội thoại 2: Đánh giá cơn đau & Theo dõi chỉ số sinh tồn",
+          title_en: "Dialogue 2: Pain Assessment & Monitoring Vital Signs",
+          context_vi:
+            "Đức đo huyết áp, mạch và hỏi chi tiết về cơn đau cho ông Bauer trước giờ đi buồng của bác sĩ.",
+          context_en:
+            "Đức measures blood pressure and pulse and asks detailed pain questions for Mr. Bauer before the doctor's ward rounds.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Guten Morgen, Herr Bauer! Ich messe jetzt Ihren Blutdruck und Ihren Puls für die Morgenkurve.",
+              vi: "Chào buổi sáng ông Bauer! Bây giờ tôi đo huyết áp và mạch cho ông để ghi vào bảng theo dõi buổi sáng ạ.",
+              en: "Good morning, Mr. Bauer! I'm measuring your blood pressure and pulse now for the morning chart.",
+            },
+            {
+              role: "partner",
+              name_vi: "Herr Bauer (Người bệnh)",
+              name_en: "Mr. Bauer (Patient)",
+              de: "Guten Morgen, Herr Đức. Machen Sie nur.",
+              vi: "Chào buổi sáng anh Đức. Cứ tự nhiên làm đi.",
+              en: "Good morning, Mr. Đức. Go right ahead.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Der Blutdruck liegt bei 128 zu 80 und der Puls bei 74. Wie fühlen Sie sich heute?",
+              vi: "Huyết áp là 128/80 và mạch là 74. Hôm nay ông thấy trong người thế nào ạ?",
+              en: "Your blood pressure is 128 over 80 and your pulse is 74. How are you feeling today?",
+            },
+            {
+              role: "partner",
+              name_vi: "Herr Bauer (Người bệnh)",
+              name_en: "Mr. Bauer (Patient)",
+              de: "Etwas besser, aber beim Gehen habe ich noch Schmerzen im rechten Bein.",
+              vi: "Đỡ hơn một chút, nhưng khi đi lại tôi vẫn bị đau ở chân phải.",
+              en: "A little better, but when walking I still have pain in my right leg.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Auf einer Skala von null bis zehn: Wie stark sind die Schmerzen jetzt, und sind sie eher stechend oder dumpf?",
+              vi: "Trên thang điểm từ 0 đến 10: Cơn đau hiện tại mạnh ở mức mấy, và cảm giác nhói hay âm ỉ ạ?",
+              en: "On a scale from zero to ten: how severe is the pain now, and is it more stabbing or dull?",
+            },
+            {
+              role: "partner",
+              name_vi: "Herr Bauer (Người bệnh)",
+              name_en: "Mr. Bauer (Patient)",
+              de: "Etwa bei drei, eher dumpf.",
+              vi: "Khoảng mức 3, thiên về đau âm ỉ.",
+              en: "Around a three, more on the dull side.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Danke für die genaue Angabe. Ich dokumentiere das im Pflegebericht und bespreche es gleich mit der Stationsärztin.",
+              vi: "Cảm ơn ông đã mô tả rõ. Tôi sẽ ghi vào báo cáo chăm sóc và trao đổi ngay với nữ bác sĩ của khoa ạ.",
+              en: "Thank you for the clear description. I'll document that in the care report and discuss it with the ward doctor right away.",
+            },
+          ],
+        },
+        {
+          id: 3,
+          tab_vi: "Hội thoại 3: Chống trượt & Xe lăn",
+          tab_en: "Dialogue 3: Fall Prevention",
+          title_vi:
+            "Hội thoại 3: An toàn vận động, chống trượt ngã & Chăm sóc dự phòng",
+          title_en: "Dialogue 3: Safe Mobility, Fall Prevention & Prophylaxis",
+          context_vi:
+            "Đức hỗ trợ cụ bà Schmidt di chuyển an toàn bằng xe lăn và dặn dò phòng tránh té ngã.",
+          context_en:
+            "Đức helps Mrs. Schmidt transfer safely with a wheelchair and advises on fall prevention.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Hallo Frau Schmidt, möchten Sie nach dem Frühstück ein wenig im Flur spazieren gehen?",
+              vi: "Chào bà Schmidt, sau bữa sáng bà có muốn đi dạo một chút ngoài hành lang không ạ?",
+              en: "Hello Mrs. Schmidt, would you like to take a short walk in the hallway after breakfast?",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Schmidt (Người bệnh)",
+              name_en: "Mrs. Schmidt (Resident)",
+              de: "Ja, sehr gerne, aber mir ist manchmal etwas schwindlig, wenn ich zu schnell aufstehe.",
+              vi: "Có, tôi rất thích, nhưng đôi khi đứng dậy quá nhanh tôi hơi bị chóng mặt.",
+              en: "Yes, very much, though I sometimes feel a bit dizzy if I stand up too quickly.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Deshalb stehen wir ganz langsam auf. Ich stelle zuerst die Bremse am Rollstuhl fest und helfe Ihnen beim Hinsetzen.",
+              vi: "Vì vậy chúng ta sẽ đứng dậy thật từ từ. Trước tiên tôi hãm phanh xe lăn và đỡ bà ngồi xuống nhé.",
+              en: "That's why we'll stand up very slowly. First I'll lock the wheelchair brakes and help you sit down.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Schmidt (Người bệnh)",
+              name_en: "Mrs. Schmidt (Resident)",
+              de: "Haben Sie auch meine rutschfesten Schuhe dabei?",
+              vi: "Anh có mang theo đôi giày chống trượt của tôi không?",
+              en: "Did you also bring my non-slip shoes?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Ja, hier sind sie schon. Wichtig ist auch, dass wir immer auf die Sturzprophylaxe achten und den Weg frei halten.",
+              vi: "Dạ có, giày ở đây rồi ạ. Điều quan trọng nữa là chúng ta luôn chú ý phòng chống té ngã và giữ lối đi thông thoáng.",
+              en: "Yes, here they are. It's also important that we always follow fall prevention and keep the walkway clear.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Schmidt (Người bệnh)",
+              name_en: "Mrs. Schmidt (Resident)",
+              de: "Das finde ich gut, so fühle ich mich sicher.",
+              vi: "Tôi thấy vậy rất tốt, như thế tôi cảm thấy an tâm.",
+              en: "I think that's great—that makes me feel safe.",
+            },
+          ],
+        },
+        {
+          id: 4,
+          tab_vi: "Hội thoại 4: Cấp thuốc an toàn",
+          tab_en: "Dialogue 4: Medication",
+          title_vi: "Hội thoại 4: Cấp thuốc & Hướng dẫn uống thuốc an toàn",
+          title_en:
+            "Dialogue 4: Medication Administration & Safe Swallowing Guidance",
+          context_vi:
+            "Đức cấp thuốc buổi sáng cho bệnh nhân và giải thích rõ cách uống thuốc.",
+          context_en:
+            "Đức gives morning medication to a patient and explains how to take it safely.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Guten Morgen, Frau Keller! Ich bringe Ihnen jetzt Ihre Morgenmedikamente und ein Glas Wasser.",
+              vi: "Chào buổi sáng bà Keller! Bây giờ tôi mang thuốc buổi sáng và một cốc nước tới cho bà ạ.",
+              en: "Good morning, Mrs. Keller! I'm bringing you your morning medications and a glass of water now.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Keller (Người bệnh)",
+              name_en: "Mrs. Keller (Patient)",
+              de: "Sind das dieselben Tabletten wie gestern?",
+              vi: "Đây có phải là các viên thuốc giống hôm qua không ạ?",
+              en: "Are these the same tablets as yesterday?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Ja, das sind die Tabletten für den Blutdruck. Bitte nehmen Sie sie jetzt mit einem Schluck Wasser ein.",
+              vi: "Dạ đúng, đây là thuốc huyết áp của bà. Bà vui lòng uống thuốc ngay bây giờ cùng một ngụm nước nhé.",
+              en: "Yes, these are your blood pressure tablets. Please take them now with a sip of water.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Keller (Người bệnh)",
+              name_en: "Mrs. Keller (Patient)",
+              de: "Gut, ich nehme sie gleich ein. Muss ich sonst noch etwas beachten?",
+              vi: "Được, tôi uống ngay đây. Tôi có cần lưu ý thêm điều gì khác nữa không?",
+              en: "Good, I'll take them right away. Is there anything else I need to keep in mind?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Bitte sitzen Sie beim Schlucken aufrecht und melden Sie sich sofort, falls Ihnen schwindlig wird oder etwas unklar ist.",
+              vi: "Bà vui lòng ngồi thẳng lưng khi nuốt và báo ngay cho chúng tôi nếu thấy chóng mặt hoặc có điều gì chưa rõ nhé.",
+              en: "Please sit upright while swallowing and let us know right away if you feel dizzy or if anything is unclear.",
+            },
+          ],
+        },
+        {
+          id: 5,
+          tab_vi: "Hội thoại 5: Bàn giao ca trực",
+          tab_en: "Dialogue 5: Shift Handover",
+          title_vi:
+            "Hội thoại 5: Bàn giao ca trực (Schichtübergabe) giữa ca sáng và ca chiều",
+          title_en:
+            "Dialogue 5: Shift Handover (Schichtübergabe) Between Morning & Afternoon Shifts",
+          context_vi:
+            "Cuối ca sáng tại phòng trực (Dienstzimmer), Đức bàn giao thông tin chăm sóc bệnh nhân cho đồng nghiệp ca chiều (Frau Richter).",
+          context_en:
+            "At the end of the morning shift in the duty room, Đức hands over patient care updates to afternoon colleague Mrs. Richter.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Ca sáng)",
+              name_en: "Đức (Morning Shift)",
+              de: "Hallo Frau Richter, wollen wir mit der Übergabe für Zimmer 1 bis 6 starten?",
+              vi: "Chào chị Richter, chúng mình bắt đầu bàn giao ca cho phòng 1 đến phòng 6 nhé?",
+              en: "Hello Mrs. Richter, shall we start the shift handover for Rooms 1 through 6?",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Richter (Ca chiều)",
+              name_en: "Mrs. Richter (Late Shift)",
+              de: "Ja, gerne. Gibt es Besonderheiten bei den Vitalzeichen oder bei der Grundpflege?",
+              vi: "Vâng, bắt đầu thôi. Có điểm nào cần lưu ý đặc biệt về chỉ số sinh tồn hay chăm sóc cơ bản không?",
+              en: "Yes, gladly. Are there any special notes regarding vital signs or basic care?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Ca sáng)",
+              name_en: "Đức (Morning Shift)",
+              de: "In Zimmer 1 hatte Herr Wagner heute eine Ganzkörperwaschung im Bett. Der Blutdruck ist stabil, aber wir führen die Flüssigkeitsbilanz fort.",
+              vi: "Ở phòng 1, hôm nay ông Wagner được lau rửa toàn thân tại giường. Huyết áp ổn định, nhưng chúng ta tiếp tục theo dõi bảng cân bằng nước vào ra.",
+              en: "In Room 1, Mr. Wagner had a full-body bed wash today. His blood pressure is stable, but we are continuing the fluid balance chart.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Richter (Ca chiều)",
+              name_en: "Mrs. Richter (Late Shift)",
+              de: "Und wie sieht es mit der Dekubitusprophylaxe bei Frau Weber in Zimmer 3 aus?",
+              vi: "Còn việc phòng ngừa loét tỳ đè cho bà Weber ở phòng 3 thì sao?",
+              en: "And what about pressure ulcer prophylaxis for Mrs. Weber in Room 3?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Ca sáng)",
+              name_en: "Đức (Morning Shift)",
+              de: "Wir haben sie alle zwei Stunden umgelagert und die Haut ist intakt. Ich habe alles im Pflegebericht dokumentiert.",
+              vi: "Chúng tôi đã đổi tư thế hai tiếng một lần và da vẫn nguyên vẹn. Tôi đã ghi đầy đủ hết vào báo cáo chăm sóc rồi.",
+              en: "We repositioned her every two hours and her skin is intact. I documented everything in the care report.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Richter (Ca chiều)",
+              name_en: "Mrs. Richter (Late Shift)",
+              de: "Super, vielen Dank für die saubere Übergabe und schönen Feierabend!",
+              vi: "Tuyệt vời, cảm ơn bạn đã bàn giao rất rõ ràng và chúc tan ca vui vẻ nhé!",
+              en: "Awesome, thank you very much for the clear handover and have a nice evening!",
+            },
+          ],
+        },
+        {
+          id: 6,
+          tab_vi: "Hội thoại 6: Trao đổi người thân",
+          tab_en: "Dialogue 6: Family Talk",
+          title_vi:
+            "Hội thoại 6: Trao đổi với người thân bệnh nhân (Angehörigengespräch)",
+          title_en:
+            "Dialogue 6: Speaking with a Patient's Family Member (Angehörigengespräch)",
+          context_vi:
+            "Con gái của người bệnh đến thăm và hỏi Đức về tình hình ăn uống, vận động của mẹ mình tại cơ sở chăm sóc.",
+          context_en:
+            "A resident's daughter visits and asks Đức about her mother's eating and mobility at the care facility.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Tochter (Con gái bệnh nhân)",
+              name_en: "Daughter (Family Member)",
+              de: "Guten Tag, Herr Đức. Wie geht es meiner Mutter heute? Sie hat gestern wenig gegessen.",
+              vi: "Xin chào anh Đức. Hôm nay mẹ tôi thế nào ạ? Hôm qua bà ăn được ít lắm.",
+              en: "Good day, Mr. Đức. How is my mother doing today? She ate very little yesterday.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Guten Tag, Frau Meier. Heute Morgen hat Ihre Mutter gut gefrühstückt und genug getrunken.",
+              vi: "Xin chào chị Meier. Sáng nay mẹ chị đã ăn sáng tốt và uống đủ nước ạ.",
+              en: "Good day, Mrs. Meier. This morning your mother ate a good breakfast and drank enough fluids.",
+            },
+            {
+              role: "partner",
+              name_vi: "Tochter (Con gái bệnh nhân)",
+              name_en: "Daughter (Family Member)",
+              de: "Das freut mich zu hören! Macht sie auch ein bisschen Mobilisation?",
+              vi: "Nghe vậy tôi mừng quá! Bà có tập vận động một chút nào không ạ?",
+              en: "I'm so glad to hear that! Is she also doing a bit of mobilization?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Điều dưỡng viên)",
+              name_en: "Đức (Nurse)",
+              de: "Ja, wir gehen täglich mit ihr ein paar Schritte mit dem Rollator und achten auf sicheres Gehen. Wenn Sie Fragen zur Pflegeplanung haben, spricht die Stationsleitung auch gern mit Ihnen.",
+              vi: "Có ạ, hằng ngày chúng tôi đều cho bà tập đi vài bước bằng xe khung tập đi và chú ý đi lại an toàn. Nếu chị có câu hỏi về kế hoạch chăm sóc, điều dưỡng trưởng khoa cũng rất sẵn lòng trao đổi với chị.",
+              en: "Yes, we walk a few steps with her daily using the rollator and ensure safe walking. If you have questions about the care plan, the ward manager will also gladly speak with you.",
+            },
+            {
+              role: "partner",
+              name_vi: "Tochter (Con gái bệnh nhân)",
+              name_en: "Daughter (Family Member)",
+              de: "Vielen Dank für Ihre herzliche Betreuung!",
+              vi: "Cảm ơn anh rất nhiều vì đã tận tâm chăm sóc mẹ tôi!",
+              en: "Thank you very much for your warm and dedicated care!",
+            },
+          ],
+        },
+      ];
+
+      // =========================================================================
+      // 3. APPLICATION STATE & PERSISTENCE (localStorage)
+      // =========================================================================
+      const state = {
+        lang: localStorage.getItem("fd_lang") || "vi",
+        activeTab: "vocab",
+        globalVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_globalVoice"),
+          "piper_hochdeutsch",
+        ),
+        workerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_workerVoice"),
+          "piper_hochdeutsch",
+        ),
+        partnerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_partnerVoice"),
+          "piper_rostock",
+        ),
+        speed: parseFloat(localStorage.getItem("fd_speed")) || 1.0,
+        vocabCategory: "all",
+        vocabQuery: "",
+        phraseCategory: "all",
+        activeDialogueId: 1,
+        fcCategory: "all",
+        fcDeck: [...VOCAB_DATA],
+        fcIndex: 0,
+        fcFlipped: false,
+        masteredIds: JSON.parse(
+          localStorage.getItem("fd_mastered_dieuduong") || "[]",
+        ),
+        voiceDrawerOpen: false,
+      };
+
+      const audioCtrl = {
+        element: null,
+        activeBtnId: null,
+        isFullDialoguePlaying: false,
+        dialogueStopFlag: false,
+        toastTimer: null,
+      };
+
+      function t(key) {
+        return (
+          (I18N[state.lang] && I18N[state.lang][key]) || I18N.vi[key] || key
+        );
+      }
+
+      function getVoiceObj(voiceId) {
+        return VOICE_CATALOG.find((v) => v.id === voiceId) || VOICE_CATALOG[0];
+      }
+
+      function showToast(msg) {
+        const box = document.getElementById("statusToast");
+        const txt = document.getElementById("statusToastText");
+        if (!box || !txt) return;
+        txt.textContent = msg;
+        box.classList.remove("hidden");
+        clearTimeout(audioCtrl.toastTimer);
+        audioCtrl.toastTimer = setTimeout(() => {
+          box.classList.add("hidden");
+        }, 3000);
+      }
+
+      // =========================================================================
+      // 4. AUDIO ENGINE WITH FALLBACK (audio/dieuduong/<voice>/<file>)
+      // =========================================================================
+      function syncPlayingButtonUI() {
+        document.querySelectorAll("[data-audio-btn]").forEach((btn) => {
+          const id = btn.getAttribute("data-audio-btn");
+          const isCurrent = audioCtrl.activeBtnId === id;
+          const iconPlay = btn.querySelector(".icon-play");
+          const iconStop = btn.querySelector(".icon-stop");
+          if (isCurrent) {
+            btn.classList.add("btn-playing");
+            if (iconPlay) iconPlay.classList.add("hidden");
+            if (iconStop) iconStop.classList.remove("hidden");
+          } else {
+            btn.classList.remove("btn-playing");
+            if (iconPlay) iconPlay.classList.remove("hidden");
+            if (iconStop) iconStop.classList.add("hidden");
+          }
+        });
+
+        const fullBtn = document.getElementById("playFullDialogueBtn");
+        if (fullBtn) {
+          if (audioCtrl.isFullDialoguePlaying) {
+            fullBtn.classList.add("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>■</span> <span>${t("stopFullDialogue")}</span>`;
+          } else {
+            fullBtn.classList.remove("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.add("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>▶</span> <span>${t("playFullDialogue")}</span>`;
+          }
+        }
+
+        document.querySelectorAll("[data-preview-btn]").forEach((btn) => {
+          const isPrev = audioCtrl.activeBtnId === "preview_sample";
+          if (isPrev) {
+            btn.classList.add("bg-red-600", "text-white");
+            btn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            btn.innerHTML = `<span>■</span> <span>${t("stopPreviewBtn")}</span>`;
+          } else {
+            btn.classList.remove("bg-red-600");
+            btn.classList.add("bg-blue-600", "hover:bg-blue-700", "text-white");
+            btn.innerHTML = `<span>🔊</span> <span>${t("previewVoiceBtn")}</span>`;
+          }
+        });
+      }
+
+      function stopAllAudio(resetDialogue = true) {
+        if (resetDialogue) {
+          audioCtrl.dialogueStopFlag = true;
+          audioCtrl.isFullDialoguePlaying = false;
+        }
+        if (audioCtrl.element) {
+          audioCtrl.element.pause();
+          audioCtrl.element.src = "";
+          audioCtrl.element = null;
+        }
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+        }
+        audioCtrl.activeBtnId = null;
+        document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+          el.classList.remove(
+            "dialogue-line-active",
+            "ring-2",
+            "ring-blue-500",
+            "bg-blue-50/70",
+          );
+        });
+        syncPlayingButtonUI();
+      }
+
+      function playAudioWithFallback(
+        fileName,
+        fallbackText,
+        voiceId,
+        btnId,
+        onEndedCallback = null,
+      ) {
+        if (audioCtrl.activeBtnId === btnId) {
+          stopAllAudio(true);
+          return;
+        }
+
+        stopAllAudio(false);
+        audioCtrl.activeBtnId = btnId;
+        syncPlayingButtonUI();
+
+        const chain = [voiceId, "piper_hochdeutsch", "edge_hochdeutsch"].filter(
+          (v, idx, arr) => v && arr.indexOf(v) === idx,
+        );
+        let attemptIdx = 0;
+
+        const finishPlayback = () => {
+          audioCtrl.activeBtnId = null;
+          audioCtrl.element = null;
+          syncPlayingButtonUI();
+          if (onEndedCallback) onEndedCallback();
+        };
+
+        const tryNextSource = () => {
+          if (attemptIdx >= chain.length) {
+            if ("speechSynthesis" in window && fallbackText) {
+              const utter = new SpeechSynthesisUtterance(fallbackText);
+              utter.lang = "de-DE";
+              utter.rate = state.speed;
+              utter.onend = finishPlayback;
+              utter.onerror = finishPlayback;
+              window.speechSynthesis.speak(utter);
+            } else {
+              finishPlayback();
+            }
+            return;
+          }
+
+          const currentVoice = chain[attemptIdx];
+          const src = `${AUDIO_BASE_PATH}/${currentVoice}/${fileName}`;
+          const audio = new Audio(src);
+          audio.playbackRate = state.speed;
+          audioCtrl.element = audio;
+
+          audio.onended = finishPlayback;
+          audio.onerror = () => {
+            if (attemptIdx === 0 && currentVoice !== "piper_hochdeutsch") {
+              showToast(t("fallbackNotice"));
+            }
+            attemptIdx++;
+            tryNextSource();
+          };
+
+          audio.play().catch(() => {
+            attemptIdx++;
+            tryNextSource();
+          });
+        };
+
+        tryNextSource();
+      }
+
+      async function toggleFullDialogue() {
+        if (audioCtrl.isFullDialoguePlaying) {
+          stopAllAudio(true);
+          return;
+        }
+        const dlg = DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId);
+        if (!dlg) return;
+
+        stopAllAudio(true);
+        audioCtrl.isFullDialoguePlaying = true;
+        audioCtrl.dialogueStopFlag = false;
+        syncPlayingButtonUI();
+
+        for (let i = 0; i < dlg.lines.length; i++) {
+          if (audioCtrl.dialogueStopFlag) break;
+          const line = dlg.lines[i];
+          const lineNum = i + 1;
+          const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+          const voice =
+            line.role === "worker" ? state.workerVoice : state.partnerVoice;
+
+          document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+            el.classList.remove(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+          });
+          const rowEl = document.getElementById(`row_${btnId}`);
+          if (rowEl) {
+            rowEl.classList.add(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+            rowEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+
+          await new Promise((resolve) => {
+            playAudioWithFallback(
+              `dialog_${dlg.id}_line_${lineNum}.mp3`,
+              line.de,
+              voice,
+              btnId,
+              resolve,
+            );
+          });
+
+          if (!audioCtrl.dialogueStopFlag && i < dlg.lines.length - 1) {
+            await new Promise((r) => setTimeout(r, 350));
+          }
+        }
+
+        stopAllAudio(true);
+      }
+
+      // =========================================================================
+      // 5. VOICE DRAWER / POPOVER CONTROLS
+      // =========================================================================
+      function buildVoiceOptionsHTML(selectedId) {
+        const groups = {};
+        VOICE_CATALOG.forEach((v) => {
+          const g = state.lang === "en" ? v.group_en : v.group_vi;
+          if (!groups[g]) groups[g] = [];
+          groups[g].push(v);
+        });
+        return Object.entries(groups)
+          .map(
+            ([groupLabel, items]) => `
+        <optgroup label="${groupLabel}">
+          ${items
+            .map(
+              (v) => `
+            <option value="${v.id}" ${v.id === selectedId ? "selected" : ""}>
+              ${state.lang === "en" ? v.label_en : v.label_vi}
+            </option>
+          `,
+            )
+            .join("")}
+        </optgroup>
+      `,
+          )
+          .join("");
+      }
+
+      function renderVoiceForms() {
+        const formHTML = `
+        <div class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("selectVoiceLabel")}</label>
+            <select onchange="setGlobalVoice(this.value)"
+              class="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              ${buildVoiceOptionsHTML(state.globalVoice)}
+            </select>
+          </div>
+
+          <button type="button" data-preview-btn onclick="playAudioWithFallback('sample.mp3', 'Guten Tag! Ich bin heute in der Frühschicht für Sie da.', state.globalVoice, 'preview_sample')"
+            class="w-full h-10 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer">
+            <span>🔊</span> <span>${t("previewVoiceBtn")}</span>
+          </button>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("speedLabel")}</label>
+            <div class="grid grid-cols-3 gap-1.5 bg-slate-100 p-1 rounded-xl">
+              ${[
+                { val: 0.75, label: t("speedSlow") },
+                { val: 1.0, label: t("speedNormal") },
+                { val: 1.25, label: t("speedFast") },
+              ]
+                .map(
+                  (sp) => `
+                <button type="button" onclick="setPlaybackSpeed(${sp.val})"
+                  class="h-9 rounded-lg text-xs font-bold transition cursor-pointer ${state.speed === sp.val ? "bg-amber-500 text-slate-950 shadow-xs" : "text-slate-600 hover:text-slate-900"}">
+                  ${sp.label}
+                </button>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+        </div>
+      `;
+
+        const dForm = document.getElementById("desktopVoiceForm");
+        const mForm = document.getElementById("mobileVoiceForm");
+        if (dForm) dForm.innerHTML = formHTML;
+        if (mForm) mForm.innerHTML = formHTML;
+
+        const vObj = getVoiceObj(state.globalVoice);
+        const shortName = state.lang === "en" ? vObj.short_en : vObj.short_vi;
+        const pill = document.getElementById("voicePillLabel");
+        if (pill) pill.textContent = `${shortName} • ${state.speed}x`;
+
+        const wSel = document.getElementById("workerVoiceSelect");
+        const pSel = document.getElementById("partnerVoiceSelect");
+        if (wSel) wSel.innerHTML = buildVoiceOptionsHTML(state.workerVoice);
+        if (pSel) pSel.innerHTML = buildVoiceOptionsHTML(state.partnerVoice);
+
+        syncPlayingButtonUI();
+      }
+
+      function toggleVoiceDrawer() {
+        state.voiceDrawerOpen = !state.voiceDrawerOpen;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+
+        if (state.voiceDrawerOpen) {
+          renderVoiceForms();
+          popover.classList.remove("md:hidden");
+          popover.classList.add("md:block");
+          sheet.classList.remove("hidden");
+          backdrop.classList.remove("hidden");
+        } else {
+          closeVoiceDrawer();
+        }
+      }
+
+      function closeVoiceDrawer() {
+        state.voiceDrawerOpen = false;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+        popover.classList.add("md:hidden");
+        popover.classList.remove("md:block");
+        sheet.classList.add("hidden");
+        backdrop.classList.add("hidden");
+      }
+
+      document.addEventListener("click", (e) => {
+        if (!state.voiceDrawerOpen) return;
+        const popover = document.getElementById("desktopVoicePopover");
+        const trigger = document.getElementById("voiceTriggerBtn");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        if (
+          !popover.contains(e.target) &&
+          !trigger.contains(e.target) &&
+          !sheet.contains(e.target)
+        ) {
+          closeVoiceDrawer();
+        }
+      });
+
+      function setGlobalVoice(voiceId) {
+        state.globalVoice = voiceId;
+        localStorage.setItem("fd_globalVoice", voiceId);
+        renderVoiceForms();
+      }
+
+      function updateDialogueVoice(role, voiceId) {
+        if (role === "worker") {
+          state.workerVoice = voiceId;
+          localStorage.setItem("fd_workerVoice", voiceId);
+        } else {
+          state.partnerVoice = voiceId;
+          localStorage.setItem("fd_partnerVoice", voiceId);
+        }
+      }
+
+      function setPlaybackSpeed(newSpeed) {
+        state.speed = newSpeed;
+        localStorage.setItem("fd_speed", String(newSpeed));
+        if (audioCtrl.element) {
+          audioCtrl.element.playbackRate = newSpeed;
+        }
+        renderVoiceForms();
+      }
+
+      // =========================================================================
+      // 6. SMART NORMALIZATION & RENDERERS (100% VI <-> EN)
+      // =========================================================================
+      function normalizeSearch(str) {
+        return (str || "")
+          .toLowerCase()
+          .replace(/ä/g, "a")
+          .replace(/ö/g, "o")
+          .replace(/ü/g, "u")
+          .replace(/ß/g, "ss")
+          .normalize("NFD")
+          .replace(/[̀-ͯ]/g, "")
+          .replace(/đ/g, "d");
+      }
+
+      function renderNavigation() {
+        const tabs = [
+          {
+            id: "vocab",
+            dLabel: `${t("nav_vocab_desktop")} (${VOCAB_DATA.length})`,
+            mLabel: t("nav_vocab_mobile"),
+            icon: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25",
+          },
+          {
+            id: "phrases",
+            dLabel: `${t("nav_phrases_desktop")} (${PHRASES_DATA.length})`,
+            mLabel: t("nav_phrases_mobile"),
+            icon: "M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z",
+          },
+          {
+            id: "dialogues",
+            dLabel: `${t("nav_dialogues_desktop")} (${DIALOGUES_DATA.length})`,
+            mLabel: t("nav_dialogues_mobile"),
+            icon: "M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155",
+          },
+          {
+            id: "flashcards",
+            dLabel: t("nav_flashcards_desktop"),
+            mLabel: t("nav_flashcards_mobile"),
+            icon: "M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3",
+          },
+        ];
+
+        document.getElementById("desktopNav").innerHTML = tabs
+          .map(
+            (tab) => `
+        <button type="button" onclick="switchTab('${tab.id}')"
+          class="px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${state.activeTab === tab.id ? "bg-white text-slate-900 shadow-xs" : "text-slate-300 hover:text-white hover:bg-slate-700/60"}">
+          ${tab.dLabel}
+        </button>
+      `,
+          )
+          .join("");
+
+        document.getElementById("mobileNavGrid").innerHTML = tabs
+          .map((tab) => {
+            const active = state.activeTab === tab.id;
+            return `
+          <button type="button" onclick="switchTab('${tab.id}')"
+            class="flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition cursor-pointer ${active ? "text-blue-600" : "text-slate-500 hover:text-slate-800"}">
+            <svg class="w-5 h-5 ${active ? "stroke-[2.3]" : "stroke-[1.8]"}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="${tab.icon}" />
+            </svg>
+            <span>${tab.mLabel}</span>
+          </button>
+        `;
+          })
+          .join("");
+      }
+
+      function switchTab(tabId) {
+        state.activeTab = tabId;
+        ["vocab", "phrases", "dialogues", "flashcards"].forEach((id) => {
+          const el = document.getElementById(`section-${id}`);
+          if (el) el.classList.toggle("hidden", id !== tabId);
+        });
+        renderNavigation();
+        if (tabId === "flashcards") renderFlashcard();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function speakBtnHTML(btnId, sizeClass = "w-11 h-11") {
+        return `
+        <button type="button" data-audio-btn="${btnId}"
+          class="${sizeClass} shrink-0 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200/80 flex items-center justify-center transition cursor-pointer active:scale-95"
+          aria-label="Play audio">
+          <svg class="icon-play w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+          </svg>
+          <span class="icon-stop hidden text-xs font-extrabold">■</span>
+        </button>
+      `;
+      }
+
+      function renderVocab() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("cat_all")} (${VOCAB_DATA.length})` },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+
+        document.getElementById("vocabCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setVocabCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.vocabCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const q = normalizeSearch(state.vocabQuery);
+        const filtered = VOCAB_DATA.filter((item) => {
+          const matchCat =
+            state.vocabCategory === "all" || item.cat === state.vocabCategory;
+          if (!matchCat) return false;
+          if (!q) return true;
+          const haystack = normalizeSearch(
+            `${item.de} ${item.vi} ${item.en} ${item.rel_vi} ${item.rel_en} ${item.ex_de} ${item.ex_vi} ${item.ex_en}`,
+          );
+          return haystack.includes(q);
+        });
+
+        const grid = document.getElementById("vocabGrid");
+        if (filtered.length === 0) {
+          grid.innerHTML = `<div class="col-span-full bg-white rounded-2xl p-8 text-center text-sm text-slate-500 border border-slate-200">${t("noResults")}</div>`;
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map((item) => {
+            const typeStr = state.lang === "en" ? item.type_en : item.type_vi;
+            const meaningStr = state.lang === "en" ? item.en : item.vi;
+            const relStr = state.lang === "en" ? item.rel_en : item.rel_vi;
+            const exTrans = state.lang === "en" ? item.ex_en : item.ex_vi;
+            const wordBtnId = `vocab_${item.id}_word`;
+            const exBtnId = `vocab_${item.id}_ex`;
+
+            return `
+          <article class="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex flex-col justify-between gap-3.5">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">${item.de}</h2>
+                    <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-100">${typeStr}</span>
+                  </div>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">${item.ipa}</p>
+                  <p class="text-sm sm:text-base font-bold text-emerald-700 mt-1.5">${meaningStr}</p>
+                </div>
+                <div onclick="playAudioWithFallback('vocab_${item.id}_word.mp3', '${item.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="mt-2.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                <span class="font-semibold text-slate-700">${t("relatedPrefix")}</span> ${relStr}
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-rose-50/70 border border-rose-200/60 flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <p class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">${item.ex_de}</p>
+                <p class="text-xs text-slate-600 italic mt-0.5 leading-snug">${exTrans}</p>
+              </div>
+              <div onclick="playAudioWithFallback('vocab_${item.id}_ex.mp3', '${item.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')">
+                ${speakBtnHTML(exBtnId, "w-11 h-11 bg-rose-100/80 hover:bg-rose-200/80 text-rose-800 border-rose-200")}
+              </div>
+            </div>
+          </article>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setVocabCategory(cat) {
+        state.vocabCategory = cat;
+        renderVocab();
+      }
+
+      function handleVocabSearch(val) {
+        state.vocabQuery = val;
+        const clearBtn = document.getElementById("clearSearchBtn");
+        if (clearBtn) {
+          clearBtn.classList.toggle("hidden", !val);
+          clearBtn.classList.toggle("flex", Boolean(val));
+        }
+        renderVocab();
+      }
+
+      function clearVocabSearch() {
+        const input = document.getElementById("vocabSearchInput");
+        if (input) input.value = "";
+        handleVocabSearch("");
+      }
+
+      function renderPhrases() {
+        const countPCat = (cat) =>
+          PHRASES_DATA.filter((p) => p.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("pcat_all")} (${PHRASES_DATA.length})` },
+          { id: "2.1", label: `${t("pcat_2_1")} (${countPCat("2.1")})` },
+          { id: "2.2", label: `${t("pcat_2_2")} (${countPCat("2.2")})` },
+          { id: "2.3", label: `${t("pcat_2_3")} (${countPCat("2.3")})` },
+          { id: "2.4", label: `${t("pcat_2_4")} (${countPCat("2.4")})` },
+        ];
+
+        document.getElementById("phraseCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setPhraseCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.phraseCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const filtered = PHRASES_DATA.filter(
+          (p) =>
+            state.phraseCategory === "all" || p.cat === state.phraseCategory,
+        );
+        document.getElementById("phrasesList").innerHTML = filtered
+          .map((p) => {
+            const trans = state.lang === "en" ? p.en : p.vi;
+            const btnId = `phrase_${p.id}`;
+            return `
+          <div class="bg-white rounded-2xl p-4 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex items-center justify-between gap-3.5">
+            <div class="min-w-0">
+              <span class="inline-block text-[11px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md mb-1">${p.cat}</span>
+              <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${p.de}</p>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">${trans}</p>
+            </div>
+            <div onclick="playAudioWithFallback('phrase_${p.id}.mp3', '${p.de.replace(/'/g, "\'")}', state.globalVoice, '${btnId}')">
+              ${speakBtnHTML(btnId, "w-11 h-11")}
+            </div>
+          </div>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setPhraseCategory(cat) {
+        state.phraseCategory = cat;
+        renderPhrases();
+      }
+
+      function renderDialogues() {
+        document.getElementById("dialogueTabs").innerHTML = DIALOGUES_DATA.map(
+          (d) => {
+            const label = state.lang === "en" ? d.tab_en : d.tab_vi;
+            const active = d.id === state.activeDialogueId;
+            return `
+          <button type="button" onclick="selectDialogue(${d.id})"
+            class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition cursor-pointer ${active ? "bg-slate-900 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+            ${label}
+          </button>
+        `;
+          },
+        ).join("");
+
+        const dlg =
+          DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId) ||
+          DIALOGUES_DATA[0];
+        const title = state.lang === "en" ? dlg.title_en : dlg.title_vi;
+        const context = state.lang === "en" ? dlg.context_en : dlg.context_vi;
+
+        document.getElementById("dialogueContainer").innerHTML = `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-slate-900">${title}</h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">${context}</p>
+          </div>
+          <button id="playFullDialogueBtn" type="button" onclick="toggleFullDialogue()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 shadow-xs transition cursor-pointer">
+            <span>▶</span> <span>${t("playFullDialogue")}</span>
+          </button>
+        </div>
+
+        <div class="space-y-3">
+          ${dlg.lines
+            .map((line, idx) => {
+              const lineNum = idx + 1;
+              const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+              const speakerName =
+                state.lang === "en" ? line.name_en : line.name_vi;
+              const lineTrans = state.lang === "en" ? line.en : line.vi;
+              const isWorker = line.role === "worker";
+              const voiceForLine = isWorker
+                ? state.workerVoice
+                : state.partnerVoice;
+
+              return `
+              <div id="row_${btnId}" class="p-3.5 sm:p-4 rounded-2xl border transition flex items-start justify-between gap-3 ${isWorker ? "bg-slate-50/90 border-slate-200/80" : "bg-rose-50/50 border-rose-200/60"}">
+                <div class="min-w-0">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold mb-1 ${isWorker ? "bg-blue-100 text-blue-800" : "bg-rose-100 text-rose-900"}">
+                    ${speakerName}
+                  </span>
+                  <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${line.de}</p>
+                  <p class="text-xs sm:text-sm text-slate-600 mt-1">${lineTrans}</p>
+                </div>
+                <div onclick="playAudioWithFallback('dialog_${dlg.id}_line_${lineNum}.mp3', '${line.de.replace(/'/g, "\'")}', '${voiceForLine}', '${btnId}')">
+                  ${speakBtnHTML(btnId, "w-11 h-11")}
+                </div>
+              </div>
+            `;
+            })
+            .join("")}
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function selectDialogue(id) {
+        stopAllAudio(true);
+        state.activeDialogueId = id;
+        renderDialogues();
+      }
+
+      function renderFlashcardControls() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cardUnit = state.lang === "en" ? "cards" : "thẻ";
+        const opts = [
+          {
+            id: "all",
+            label: `${t("fcAllCategories")} (${VOCAB_DATA.length} ${cardUnit})`,
+          },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+        document.getElementById("fcCategorySelect").innerHTML = opts
+          .map(
+            (o) => `
+        <option value="${o.id}" ${o.id === state.fcCategory ? "selected" : ""}>${o.label}</option>
+      `,
+          )
+          .join("");
+      }
+
+      function renderFlashcard() {
+        renderFlashcardControls();
+        if (state.fcDeck.length === 0) state.fcDeck = [...VOCAB_DATA];
+        if (state.fcIndex >= state.fcDeck.length) state.fcIndex = 0;
+
+        const card = state.fcDeck[state.fcIndex];
+        const typeStr = state.lang === "en" ? card.type_en : card.type_vi;
+        const meaningStr = state.lang === "en" ? card.en : card.vi;
+        const relStr = state.lang === "en" ? card.rel_en : card.rel_vi;
+        const exTrans = state.lang === "en" ? card.ex_en : card.ex_vi;
+        const isMastered = state.masteredIds.includes(card.id);
+
+        document.getElementById("fcCounter").textContent =
+          `${state.fcIndex + 1} / ${state.fcDeck.length}`;
+
+        const masterBtn = document.getElementById("fcMasterBtn");
+        if (isMastered) {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-bold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>✓</span> <span>${t("fcMastered")}</span>`;
+        } else {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-semibold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>○</span> <span>${t("fcMarkMastered")}</span>`;
+        }
+
+        const wordBtnId = `fc_word_${card.id}`;
+        const exBtnId = `fc_ex_${card.id}`;
+
+        document.getElementById("flashcardStage").innerHTML = `
+        <div onclick="flipFlashcard()" class="relative w-full min-h-[310px] sm:min-h-[340px] cursor-pointer select-none">
+          <div class="w-full min-h-[310px] sm:min-h-[340px] transform-style-3d ${state.fcFlipped ? "rotate-y-180" : ""}">
+            
+            <!-- FRONT -->
+            <div class="absolute inset-0 backface-hidden bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 flex flex-col items-center justify-between text-center">
+              <div class="w-full flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-50 text-rose-800">${typeStr}</span>
+                <div onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="my-auto py-4">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${card.de}</h2>
+                <p class="text-sm font-mono text-slate-400 mt-2">${card.ipa}</p>
+              </div>
+
+              <p class="text-xs font-medium text-slate-400">${t("fcFrontHint")}</p>
+            </div>
+
+            <!-- BACK -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-800 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <p class="text-xs font-semibold text-amber-400 uppercase tracking-wider">${card.de}</p>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-1">${meaningStr}</h3>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')"
+                    class="h-10 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shrink-0 cursor-pointer">
+                    <span>🔊</span> <span>${t("fcWordBtn")}</span>
+                  </button>
+                </div>
+
+                <p class="text-xs text-slate-300 bg-slate-800/80 p-3 rounded-xl mt-3 leading-relaxed">
+                  <span class="font-semibold text-amber-300">${t("relatedPrefix")}</span> ${relStr}
+                </p>
+
+                <div class="mt-3 p-3.5 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="text-xs sm:text-sm font-semibold text-white leading-snug">${card.ex_de}</p>
+                    <p class="text-xs text-slate-300 italic mt-1">${exTrans}</p>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_ex.mp3', '${card.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')"
+                    class="w-11 h-11 shrink-0 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center justify-center font-bold cursor-pointer">
+                    🔊
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-center text-xs text-slate-400 mt-3">${t("fcBackHint")}</p>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function flipFlashcard() {
+        state.fcFlipped = !state.fcFlipped;
+        renderFlashcard();
+      }
+
+      function nextFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex = (state.fcIndex + 1) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function prevFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex =
+          (state.fcIndex - 1 + state.fcDeck.length) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function setFlashcardCategory(cat) {
+        state.fcCategory = cat;
+        state.fcFlipped = false;
+        state.fcIndex = 0;
+        state.fcDeck =
+          cat === "all"
+            ? [...VOCAB_DATA]
+            : VOCAB_DATA.filter((v) => v.cat === cat);
+        renderFlashcard();
+      }
+
+      function shuffleFlashcards() {
+        for (let i = state.fcDeck.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [state.fcDeck[i], state.fcDeck[j]] = [
+            state.fcDeck[j],
+            state.fcDeck[i],
+          ];
+        }
+        state.fcIndex = 0;
+        state.fcFlipped = false;
+        renderFlashcard();
+      }
+
+      function toggleFlashcardMastered() {
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+        const idx = state.masteredIds.indexOf(card.id);
+        if (idx >= 0) {
+          state.masteredIds.splice(idx, 1);
+        } else {
+          state.masteredIds.push(card.id);
+        }
+        localStorage.setItem(
+          "fd_mastered_dieuduong",
+          JSON.stringify(state.masteredIds),
+        );
+        renderFlashcard();
+      }
+
+      function renderNursingNotes() {
+        document.getElementById("notesHeading").textContent = t("notesHeading");
+        const items = t("notes") || [];
+        document.getElementById("notesList").innerHTML = items
+          .map(
+            (n) => `
+        <li class="p-3 rounded-xl bg-slate-50 border border-slate-100">${n}</li>
+      `,
+          )
+          .join("");
+      }
+
+      // =========================================================================
+      // 7. LANGUAGE SWITCHER (100% UI + CONTENT LOCALIZATION)
+      // =========================================================================
+      function setLanguage(lang) {
+        state.lang = lang;
+        localStorage.setItem("fd_lang", lang);
+        document.documentElement.lang = lang;
+        document.title = t("pageTitle");
+
+        const viBtn = document.getElementById("langBtnVi");
+        const enBtn = document.getElementById("langBtnEn");
+        if (lang === "vi") {
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        } else {
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        }
+
+        document.getElementById("backHomeText").textContent = t("backHomeText");
+        document.getElementById("brandTitle").textContent = t("brandTitle");
+        document.getElementById("popoverTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("sheetTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("vocabSearchInput").placeholder =
+          t("searchPlaceholder");
+        document.getElementById("workerVoiceLabel").textContent =
+          t("workerVoiceLabel");
+        document.getElementById("partnerVoiceLabel").textContent =
+          t("partnerVoiceLabel");
+        document.getElementById("fcShuffleText").textContent = t("fcShuffle");
+        document.getElementById("fcPrevText").textContent = t("fcPrev");
+        document.getElementById("fcNextText").textContent = t("fcNext");
+        document.getElementById("fcShortcutHint").textContent =
+          t("fcShortcutHint");
+
+        renderNavigation();
+        renderVoiceForms();
+        renderVocab();
+        renderPhrases();
+        renderDialogues();
+        renderFlashcard();
+        renderNursingNotes();
+      }
+
+      // =========================================================================
+      // 8. KEYBOARD SHORTCUTS
+      // =========================================================================
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && state.voiceDrawerOpen) {
+          closeVoiceDrawer();
+          return;
+        }
+        if (
+          ["INPUT", "SELECT", "TEXTAREA"].includes(
+            document.activeElement.tagName,
+          )
+        )
+          return;
+        if (state.activeTab !== "flashcards") return;
+
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+
+        if (e.code === "Space") {
+          e.preventDefault();
+          flipFlashcard();
+        } else if (e.key === "ArrowRight") {
+          nextFlashcard();
+        } else if (e.key === "ArrowLeft") {
+          prevFlashcard();
+        } else if (e.key.toLowerCase() === "s") {
+          playAudioWithFallback(
+            `vocab_${card.id}_word.mp3`,
+            card.de,
+            state.globalVoice,
+            `fc_word_${card.id}`,
+          );
+        } else if (e.key.toLowerCase() === "e") {
+          playAudioWithFallback(
+            `vocab_${card.id}_ex.mp3`,
+            card.ex_de,
+            state.globalVoice,
+            `fc_ex_${card.id}`,
+          );
+        }
+      });
+
+      // =========================================================================
+      // 9. INITIALIZE APP
+      // =========================================================================
+      setLanguage(state.lang);
+    </script>
+  </body>
+</html>
