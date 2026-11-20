@@ -1,0 +1,3812 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>
+      Fachdeutsch — Tiếng Đức Ngành Chế Biến Thực Phẩm (Lebensmitteltechnik) |
+      VietDe Hub
+    </title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='14'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Crect width='64' height='21.34' y='0' fill='%23111827'/%3E%3Crect width='64' height='21.34' y='21.33' fill='%23DC2626'/%3E%3Crect width='64' height='21.34' y='42.66' fill='%23FACC15'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: #f1f5f9;
+        color: #0f172a;
+        min-height: 100dvh;
+        padding-bottom: calc(76px + var(--safe-bottom));
+      }
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 40px;
+        }
+      }
+      .bottom-nav-safe {
+        padding-bottom: calc(6px + var(--safe-bottom));
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+      @keyframes pulseRing {
+        0% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45);
+        }
+        70% {
+          box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        }
+      }
+      .btn-playing {
+        background-color: #ef4444 !important;
+        color: #ffffff !important;
+        border-color: #ef4444 !important;
+        animation: pulseRing 1.4s infinite;
+      }
+      @keyframes sheetSlideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .animate-sheet-up {
+        animation: sheetSlideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes popoverFade {
+        from {
+          opacity: 0;
+          transform: translateY(-6px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-popover {
+        animation: popoverFade 0.18s ease-out;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-orange-200 selection:text-slate-900">
+    <!-- =====================================================================
+       ADAPTIVE STICKY TOP BAR (Back to Hub + Compact Mobile + 1-Row Desktop)
+       ===================================================================== -->
+    <header
+      class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-3 sm:px-6 h-14 flex items-center justify-between gap-2"
+      >
+        <!-- Left: Back to Hub + Brand + Desktop Navigation Tabs -->
+        <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
+          <a
+            href="index.html"
+            id="backHomeBtn"
+            title="Trang chủ / Home"
+            class="h-9 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center gap-1 shrink-0 transition"
+          >
+            <span>←</span>
+            <span id="backHomeText" class="hidden sm:inline">Trang chủ</span>
+          </a>
+
+          <div class="flex items-center gap-2 min-w-0">
+            <div
+              class="w-8 h-8 rounded-lg bg-orange-500 text-white flex items-center justify-center font-extrabold shadow-inner shrink-0"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
+                />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span
+                  id="brandTitle"
+                  class="font-bold text-sm sm:text-base tracking-tight truncate"
+                  >Chế Biến Thực Phẩm</span
+                >
+                <span
+                  class="hidden xl:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-orange-500/20 text-orange-300 border border-orange-500/30"
+                  >HACCP & Fleischer</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Single-Row Navigation Tabs (Hidden on Mobile) -->
+          <nav
+            id="desktopNav"
+            class="hidden md:flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-slate-700/70"
+            aria-label="Primary Navigation"
+          ></nav>
+        </div>
+
+        <!-- Right: Voice Settings Trigger Pill + VI/EN Switch -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0 relative">
+          <button
+            id="voiceTriggerBtn"
+            type="button"
+            onclick="toggleVoiceDrawer()"
+            class="h-9 px-2.5 sm:px-3 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 border border-slate-700 text-xs font-medium text-slate-100 flex items-center gap-1.5 transition cursor-pointer"
+          >
+            <span class="text-amber-400">🎙</span>
+            <span
+              id="voicePillLabel"
+              class="max-w-[105px] sm:max-w-[160px] lg:max-w-[210px] truncate"
+              >Piper Chuẩn Đức • 1.0x</span
+            >
+            <svg
+              class="w-3.5 h-3.5 text-slate-400 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <!-- Language Switcher VI | EN -->
+          <div
+            class="h-9 bg-slate-800 p-0.5 rounded-xl border border-slate-700 flex items-center"
+            role="group"
+            aria-label="Language Switch"
+          >
+            <button
+              id="langBtnVi"
+              type="button"
+              onclick="setLanguage('vi')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              VI
+            </button>
+            <button
+              id="langBtnEn"
+              type="button"
+              onclick="setLanguage('en')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              EN
+            </button>
+          </div>
+
+          <!-- DESKTOP POPOVER: Voice & Speed Controls -->
+          <div
+            id="desktopVoicePopover"
+            class="hidden md:hidden absolute right-0 top-12 w-80 bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200 p-4 z-50 animate-popover"
+          >
+            <div
+              class="flex items-center justify-between pb-2.5 mb-3 border-b border-slate-100"
+            >
+              <span
+                id="popoverTitle"
+                class="text-xs font-bold uppercase tracking-wider text-slate-500"
+                >Cài đặt Giọng đọc & Tốc độ</span
+              >
+              <button
+                type="button"
+                onclick="closeVoiceDrawer()"
+                class="w-7 h-7 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+            <div id="desktopVoiceForm"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subtle Non-Blocking Audio Fallback / Status Banner -->
+    <div
+      id="statusToast"
+      class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-50 max-w-[92vw] sm:max-w-md bg-slate-900/95 text-white text-xs px-3.5 py-2 rounded-full shadow-lg border border-slate-700 flex items-center gap-2"
+    >
+      <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+      <span id="statusToastText" class="truncate"></span>
+    </div>
+
+    <!-- =====================================================================
+       MAIN CONTENT AREA
+       ===================================================================== -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6">
+      <!-- TAB 1: VOCABULARY -->
+      <section id="section-vocab" class="space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 space-y-3"
+        >
+          <div class="relative">
+            <svg
+              class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z"
+              />
+            </svg>
+            <input
+              id="vocabSearchInput"
+              type="search"
+              oninput="handleVocabSearch(this.value)"
+              placeholder="Tìm từ tiếng Đức, nghĩa tiếng Việt..."
+              class="w-full h-11 pl-10 pr-9 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
+            />
+            <button
+              id="clearSearchBtn"
+              type="button"
+              onclick="clearVocabSearch()"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-xs items-center justify-center hover:bg-slate-300 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div
+            id="vocabCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5"
+          ></div>
+        </div>
+
+        <div
+          id="vocabGrid"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"
+        ></div>
+      </section>
+
+      <!-- TAB 2: FOOD PROCESSING PHRASES -->
+      <section id="section-phrases" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80"
+        >
+          <div
+            id="phraseCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar"
+          ></div>
+        </div>
+        <div
+          id="phrasesList"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3"
+        ></div>
+      </section>
+
+      <!-- TAB 3: DIALOGUES -->
+      <section id="section-dialogues" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3.5 sm:p-5 shadow-sm border border-slate-200/80 space-y-4"
+        >
+          <div
+            id="dialogueTabs"
+            class="flex items-center gap-2 overflow-x-auto no-scrollbar"
+          ></div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100"
+          >
+            <div>
+              <label
+                id="workerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Công nhân thực phẩm (Đức)</label
+              >
+              <select
+                id="workerVoiceSelect"
+                onchange="updateDialogueVoice('worker', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+            <div>
+              <label
+                id="partnerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Trưởng ca / Đồng nghiệp</label
+              >
+              <select
+                id="partnerVoiceSelect"
+                onchange="updateDialogueVoice('partner', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="dialogueContainer"
+          class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200/80"
+        ></div>
+      </section>
+
+      <!-- TAB 4: FLASHCARDS -->
+      <section
+        id="section-flashcards"
+        class="hidden space-y-4 max-w-2xl mx-auto"
+      >
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 flex flex-wrap items-center justify-between gap-2"
+        >
+          <select
+            id="fcCategorySelect"
+            onchange="setFlashcardCategory(this.value)"
+            class="h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></select>
+          <div class="flex items-center gap-2">
+            <span
+              id="fcCounter"
+              class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-2 rounded-xl"
+              >1 / 84</span
+            >
+            <button
+              id="fcShuffleBtn"
+              type="button"
+              onclick="shuffleFlashcards()"
+              class="h-10 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <span>🔀</span>
+              <span id="fcShuffleText">Trộn thẻ</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="flashcardStage" class="perspective-1000"></div>
+
+        <div class="flex items-center justify-between gap-2">
+          <button
+            type="button"
+            onclick="prevFlashcard()"
+            class="h-11 px-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>←</span>
+            <span id="fcPrevText">Trước</span>
+          </button>
+
+          <button
+            id="fcMasterBtn"
+            type="button"
+            onclick="toggleFlashcardMastered()"
+            class="h-11 px-4 rounded-xl border text-xs sm:text-sm font-semibold shadow-sm flex items-center gap-1.5 transition cursor-pointer"
+          ></button>
+
+          <button
+            type="button"
+            onclick="nextFlashcard()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-sm font-semibold text-white shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span id="fcNextText">Tiếp</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <p
+          id="fcShortcutHint"
+          class="hidden md:block text-center text-xs text-slate-400"
+        >
+          Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe
+          ví dụ)
+        </p>
+      </section>
+
+      <!-- PRACTICAL FOOD PROCESSING NOTES CARD (FROM GOOGLE DOC) -->
+      <section
+        id="section-food-notes"
+        class="mt-6 bg-white rounded-2xl p-4 sm:p-6 shadow-xs border border-slate-200/80"
+      >
+        <h2
+          id="notesHeading"
+          class="text-base sm:text-lg font-extrabold text-slate-900 mb-3"
+        ></h2>
+        <ul
+          id="notesList"
+          class="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed"
+        ></ul>
+      </section>
+    </main>
+
+    <!-- MOBILE BOTTOM NAVIGATION BAR -->
+    <nav
+      id="mobileBottomNav"
+      class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-[0_-4px_16px_rgba(15,23,42,0.06)] bottom-nav-safe"
+      aria-label="Mobile Navigation"
+    >
+      <div id="mobileNavGrid" class="grid grid-cols-4 h-14"></div>
+    </nav>
+
+    <!-- MOBILE BOTTOM SHEET: VOICE & SPEED SETTINGS -->
+    <div
+      id="mobileVoiceBackdrop"
+      onclick="closeVoiceDrawer()"
+      class="hidden md:hidden fixed inset-0 z-50 bg-slate-950/50 backdrop-blur-xs transition-opacity"
+    ></div>
+    <div
+      id="mobileVoiceSheet"
+      class="hidden md:hidden fixed inset-x-0 bottom-0 z-50 bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 p-5 pb-[calc(20px+var(--safe-bottom))] animate-sheet-up"
+    >
+      <div class="w-10 h-1.5 rounded-full bg-slate-300 mx-auto mb-4"></div>
+      <div class="flex items-center justify-between mb-3">
+        <h3 id="sheetTitle" class="text-base font-bold text-slate-900">
+          Cài đặt Giọng đọc & Tốc độ
+        </h3>
+        <button
+          type="button"
+          onclick="closeVoiceDrawer()"
+          class="w-9 h-9 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold"
+        >
+          ✕
+        </button>
+      </div>
+      <div id="mobileVoiceForm"></div>
+    </div>
+
+    <script>
+      // =========================================================================
+      // 0. AUDIO FOLDER PREFIX FOR FOOD PROCESSING MODULE
+      // =========================================================================
+      const AUDIO_BASE_PATH = "audio/chebienthucpham";
+
+      // =========================================================================
+      // 1. VOICE CATALOG (4 VOICES: PIPER OFFLINE + EDGE NEURAL) & I18N
+      // =========================================================================
+      const VOICE_CATALOG = [
+        {
+          id: "piper_hochdeutsch",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Chuẩn Đức (High)",
+          label_en: "Piper Thorsten — Standard German (High)",
+          short_vi: "Piper Chuẩn Đức",
+          short_en: "Piper Standard",
+        },
+        {
+          id: "piper_rostock",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Miền Bắc / Rostock",
+          label_en: "Piper Thorsten — Northern / Rostock",
+          short_vi: "Piper Rostock",
+          short_en: "Piper Rostock",
+        },
+        {
+          id: "edge_hochdeutsch",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Chuẩn Đức (Nữ Katja)",
+          label_en: "Edge Neural — Standard German (Female Katja)",
+          short_vi: "Edge Katja",
+          short_en: "Edge Katja",
+        },
+        {
+          id: "edge_rostock",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Miền Bắc (Nam Conrad)",
+          label_en: "Edge Neural — Northern German (Male Conrad)",
+          short_vi: "Edge Conrad",
+          short_en: "Edge Conrad",
+        },
+      ];
+
+      function sanitizeVoiceId(savedId, fallbackId) {
+        return VOICE_CATALOG.some((v) => v.id === savedId)
+          ? savedId
+          : fallbackId;
+      }
+
+      const I18N = {
+        vi: {
+          pageTitle:
+            "Fachdeutsch — Tiếng Đức Ngành Chế Biến Thực Phẩm (Lebensmitteltechnik) | VietDe Hub",
+          backHomeText: "Trang chủ",
+          brandTitle: "Chế Biến Thực Phẩm",
+          nav_vocab_desktop: "1. Từ vựng",
+          nav_phrases_desktop: "2. Mẫu câu nhà máy",
+          nav_dialogues_desktop: "3. Hội thoại",
+          nav_flashcards_desktop: "4. Thẻ Flashcard",
+          nav_vocab_mobile: "Từ vựng",
+          nav_phrases_mobile: "Mẫu câu",
+          nav_dialogues_mobile: "Hội thoại",
+          nav_flashcards_mobile: "Thẻ nhớ",
+          voiceSettingsTitle: "Cài đặt Giọng đọc & Tốc độ",
+          selectVoiceLabel: "Chọn giọng đọc mặc định (4 giọng)",
+          previewVoiceBtn: "Nghe thử giọng",
+          stopPreviewBtn: "Dừng nghe thử",
+          speedLabel: "Tốc độ phát âm",
+          speedSlow: "Chậm 0.75x",
+          speedNormal: "Chuẩn 1.0x",
+          speedFast: "Nhanh 1.25x",
+          searchPlaceholder: "Tìm từ tiếng Đức, nghĩa tiếng Việt...",
+          cat_all: "Tất cả",
+          cat_1_1: "1.1 Nguyên liệu, Pha lóc & Chế biến",
+          cat_1_2: "1.2 Dây chuyền, Máy & Đóng gói",
+          cat_1_3: "1.3 Vệ sinh, HACCP & Chuỗi lạnh",
+          cat_1_4: "1.4 Kho vận, Chất lượng & An toàn",
+          cat_1_5: "1.5 Động từ & Tính từ chuyên ngành",
+          relatedPrefix: "Từ liên quan:",
+          noResults: "Không tìm thấy từ vựng phù hợp.",
+          pcat_all: "Tất cả mẫu câu",
+          pcat_2_1: "2.1 Vệ sinh cá nhân & HACCP",
+          pcat_2_2: "2.2 Vận hành chuyền & Đóng gói",
+          pcat_2_3: "2.3 Chất lượng, Kho lạnh & Sự cố",
+          pcat_2_4: "2.4 Giao tiếp hằng ngày tại xưởng",
+          workerVoiceLabel: "Giọng Công nhân thực phẩm (Đức)",
+          partnerVoiceLabel: "Giọng Trưởng ca / Đồng nghiệp",
+          playFullDialogue: "Nghe cả hội thoại",
+          stopFullDialogue: "Dừng hội thoại",
+          fcAllCategories: "Tất cả chủ đề",
+          fcShuffle: "Trộn thẻ",
+          fcPrev: "Trước",
+          fcNext: "Tiếp",
+          fcFrontHint: "Chạm thẻ để xem nghĩa & ví dụ",
+          fcBackHint: "Chạm thẻ để quay lại mặt trước",
+          fcWordBtn: "Nghe từ",
+          fcExBtn: "Nghe ví dụ",
+          fcMastered: "Đã thuộc",
+          fcMarkMastered: "Đánh dấu đã thuộc",
+          fcShortcutHint:
+            "Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe ví dụ)",
+          fallbackNotice: "Đang dùng giọng dự phòng Piper Offline cho câu này.",
+          notesHeading: "Ghi chú Thực tế Ngành Chế Biến Thực Phẩm tại Đức",
+          notes: [
+            "<strong>Luật Phòng chống lây nhiễm (Infektionsschutzgesetz — IfSG § 43):</strong> Mọi nhân viên làm việc trực tiếp với thực phẩm tươi sống tại Đức bắt buộc phải tham gia buổi tập huấn và nhận giấy chứng nhận của Sở Y tế (<em>Gesundheitsamt</em>) trước ngày đi làm đầu tiên, đồng thời khai báo ngay nếu mắc bệnh tiêu chảy, sốt, nôn mửa hoặc có vết thương nhiễm trùng.",
+            '<strong>Phân biệt MHD và Verbrauchsdatum:</strong> <em>Mindesthaltbarkeitsdatum (MHD)</em> là hạn sử dụng tối thiểu (sản phẩm vẫn có thể ăn được sau ngày này nếu bảo quản tốt), còn <em>Verbrauchsdatum</em> ("zu verbrauchen bis...") áp dụng cho thịt tươi, thịt xay, cá tươi — tuyệt đối không được phép bán hoặc chế biến sau ngày này.',
+            "<strong>Điểm kiểm soát tới hạn HACCP (CCPs):</strong> Ba thông số sống còn trong nhà máy thực phẩm Đức gồm: duy trì chuỗi lạnh (<em>Kühlkette</em> ≤ 4°C hoặc -18°C), nhiệt độ tâm làm chín (<em>Kerntemperatur</em> ≥ 72°C) và kiểm tra máy dò kim loại (<em>Metalldetektor</em>) định kỳ theo từng lô.",
+          ],
+        },
+        en: {
+          pageTitle:
+            "Fachdeutsch — Food Processing (Lebensmitteltechnik & Fleischer) | VietDe Hub",
+          backHomeText: "Home",
+          brandTitle: "Food Processing",
+          nav_vocab_desktop: "1. Vocabulary",
+          nav_phrases_desktop: "2. Plant Phrases",
+          nav_dialogues_desktop: "3. Dialogues",
+          nav_flashcards_desktop: "4. Flashcards",
+          nav_vocab_mobile: "Vocab",
+          nav_phrases_mobile: "Phrases",
+          nav_dialogues_mobile: "Dialogues",
+          nav_flashcards_mobile: "Cards",
+          voiceSettingsTitle: "Voice & Playback Speed",
+          selectVoiceLabel: "Default AI Voice (4 Voices)",
+          previewVoiceBtn: "Preview Voice",
+          stopPreviewBtn: "Stop Preview",
+          speedLabel: "Playback Speed",
+          speedSlow: "Slow 0.75x",
+          speedNormal: "Normal 1.0x",
+          speedFast: "Fast 1.25x",
+          searchPlaceholder: "Search German words, English meanings...",
+          cat_all: "All",
+          cat_1_1: "1.1 Raw Goods, Cutting & Process",
+          cat_1_2: "1.2 Lines, Machines & Packaging",
+          cat_1_3: "1.3 Hygiene, HACCP & Cold Chain",
+          cat_1_4: "1.4 Logistics, QA & Safety",
+          cat_1_5: "1.5 Food Verbs & Adjectives",
+          relatedPrefix: "Related words:",
+          noResults: "No matching vocabulary found.",
+          pcat_all: "All Phrases",
+          pcat_2_1: "2.1 Personal Hygiene & HACCP",
+          pcat_2_2: "2.2 Line Operation & Packaging",
+          pcat_2_3: "2.3 QA, Cold Storage & Faults",
+          pcat_2_4: "2.4 Daily Plant Talk",
+          workerVoiceLabel: "Food Worker Voice (Duc)",
+          partnerVoiceLabel: "Shift Supervisor / Colleague Voice",
+          playFullDialogue: "Play Full Dialogue",
+          stopFullDialogue: "Stop Dialogue",
+          fcAllCategories: "All Categories",
+          fcShuffle: "Shuffle",
+          fcPrev: "Previous",
+          fcNext: "Next",
+          fcFrontHint: "Tap card to reveal meaning & example",
+          fcBackHint: "Tap card to flip back",
+          fcWordBtn: "Speak Word",
+          fcExBtn: "Speak Example",
+          fcMastered: "Mastered",
+          fcMarkMastered: "Mark as Mastered",
+          fcShortcutHint:
+            "Shortcuts: Space (Flip) • ← / → (Navigate) • S (Word) • E (Example)",
+          fallbackNotice: "Using offline Piper fallback voice for this line.",
+          notesHeading: "Practical Food Processing Notes in Germany",
+          notes: [
+            "<strong>Infection Protection Act (Infektionsschutzgesetz — IfSG § 43):</strong> All staff handling fresh food in Germany must complete instruction and receive certification from the local health authority (<em>Gesundheitsamt</em>) before starting work, and immediately report diarrhea, fever, vomiting, or infected wounds.",
+            '<strong>MHD vs. Verbrauchsdatum:</strong> <em>Mindesthaltbarkeitsdatum (MHD)</em> is the best-before date, whereas <em>Verbrauchsdatum</em> ("zu verbrauchen bis...") applies to fresh meat, minced meat, and fresh fish and must never be sold or processed past that date.',
+            "<strong>HACCP Critical Control Points (CCPs):</strong> Key controls in German food plants include maintaining the cold chain (<em>Kühlkette</em> ≤ 4°C or -18°C), core cooking temperature (<em>Kerntemperatur</em> ≥ 72°C), and regular metal detector (<em>Metalldetektor</em>) checks per batch.",
+          ],
+        },
+      };
+
+      // =========================================================================
+      // 2. COMPLETE BILINGUAL DATASET (84 VOCAB, 36 PHRASES, 6 DIALOGUES)
+      // =========================================================================
+      const VOCAB_DATA = [
+        {
+          id: 1,
+          cat: "1.1",
+          de: "der Rohstoff (-e)",
+          ipa: "/deːɐ̯ ˈʁoːˌʃtɔf/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Nguyên liệu thô đầu vào",
+          en: "Raw material",
+          rel_vi:
+            "die Rohware (dt: hàng nguyên liệu tươi), prüfen (đt: kiểm tra)",
+          rel_en:
+            "die Rohware (n: raw food stock), prüfen (v: to inspect/check)",
+          ex_de:
+            "Bei der Warenannahme prüfen wir zuerst die Qualität und Temperatur der Rohstoffe.",
+          ex_vi:
+            "Khi nhận hàng đầu vào, trước tiên chúng tôi kiểm tra chất lượng và nhiệt độ của nguyên liệu thô.",
+          ex_en:
+            "At goods receipt, we first check the quality and temperature of the raw materials.",
+        },
+        {
+          id: 2,
+          cat: "1.1",
+          de: "die Zutat (-en)",
+          ipa: "/diː ˈtsuːˌtaːt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thành phần nguyên liệu / Phụ gia chế biến",
+          en: "Ingredient / recipe component",
+          rel_vi:
+            "die Rezeptur (dt: công thức phối trộn), dosieren (đt: định lượng)",
+          rel_en:
+            "die Rezeptur (n: formulation/recipe), dosieren (v: to dose/meter)",
+          ex_de: "Alle Zutaten müssen genau nach Rezeptur abgewogen werden.",
+          ex_vi:
+            "Tất cả nguyên liệu thành phần phải được cân chính xác theo công thức.",
+          ex_en:
+            "All ingredients must be weighed out accurately according to the formulation.",
+        },
+        {
+          id: 3,
+          cat: "1.1",
+          de: "die Rezeptur (-en)",
+          ipa: "/diː ʁetsɛpˈtuːɐ̯/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Công thức phối trộn sản xuất chuẩn",
+          en: "Production recipe / formulation",
+          rel_vi: "das Rezept (dt: công thức nấu/chế biến)",
+          rel_en: "das Rezept (n: recipe)",
+          ex_de: "Halte dich beim Mischen exakt an die vorgegebene Rezeptur.",
+          ex_vi: "Khi phối trộn hãy tuân thủ chính xác công thức đã quy định.",
+          ex_en: "Follow the specified formulation exactly when mixing.",
+        },
+        {
+          id: 4,
+          cat: "1.1",
+          de: "die Gewürzmischung (-en)",
+          ipa: "/diː ɡəˈvʏʁtsˌmɪʃʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hỗn hợp gia vị chế biến thực phẩm",
+          en: "Spice blend / seasoning mix",
+          rel_vi:
+            "das Pökelsalz (dt: muối ướp bảo quản thịt Nitritpökelsalz), würzen (đt: nêm gia vị), pökeln (đt: ướp muối)",
+          rel_en:
+            "das Pökelsalz (n: curing salt), würzen (v: to season), pökeln (v: to cure)",
+          ex_de:
+            "Für die Wurstherstellung mischen wir das Fleisch mit Pökelsalz und Gewürzen.",
+          ex_vi: "Để làm xúc xích chúng tôi trộn thịt với muối ướp và gia vị.",
+          ex_en:
+            "For sausage production, we mix the meat with curing salt and spices.",
+        },
+        {
+          id: 5,
+          cat: "1.1",
+          de: "das Frischfleisch",
+          ipa: "/das ˈfʁɪʃˌflaɪʃ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Thịt tươi sống",
+          en: "Fresh meat",
+          rel_vi:
+            "das Geflügel (dt: thịt gia cầm), das Schweinefleisch (dt: thịt lợn), das Rindfleisch (dt: thịt bò)",
+          rel_en:
+            "das Geflügel (n: poultry), das Schweinefleisch (n: pork), das Rindfleisch (n: beef)",
+          ex_de:
+            "Frischfleisch und Geflügel müssen streng getrennt verarbeitet werden.",
+          ex_vi:
+            "Thịt tươi và thịt gia cầm phải được chế biến tách biệt nghiêm ngặt.",
+          ex_en:
+            "Fresh meat and poultry must be processed in strict separation.",
+        },
+        {
+          id: 6,
+          cat: "1.1",
+          de: "die Zerlegung",
+          ipa: "/diː tsɛɐ̯ˈleːɡʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Công đoạn pha lóc thịt",
+          en: "Meat cutting / butchering breakdown",
+          rel_vi:
+            "das Ausbeinen (dt: lọc xương), zerlegen (đt: pha lóc), das Teilstück (dt: phần thịt pha lóc)",
+          rel_en:
+            "das Ausbeinen (n: deboning), zerlegen (v: to cut/break down), das Teilstück (n: primal/cut piece)",
+          ex_de:
+            "In der Zerlegung trennen die Fleischer das Fleisch sauber vom Knochen.",
+          ex_vi:
+            "Tại khu vực pha lóc, thợ thịt tách phần thịt sạch khỏi xương.",
+          ex_en:
+            "In the cutting area, the butchers cleanly separate the meat from the bone.",
+        },
+        {
+          id: 7,
+          cat: "1.1",
+          de: "der Kutter (-)",
+          ipa: "/deːɐ̯ ˈkʊtɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Máy xay nhuyễn làm giò chả / xúc xích",
+          en: "Bowl chopper / food cutter (for sausage emulsion)",
+          rel_vi:
+            "kuttern (đt: xay nhuyễn), das Brät (dt: hỗn hợp thịt xay nhuyễn làm xúc xích)",
+          rel_en:
+            "kuttern (v: to bowl-chop/emulsify), das Brät (n: finely chopped sausage meat batter)",
+          ex_de: "Im Kutter wird das Fleisch zu feinem Brät verarbeitet.",
+          ex_vi:
+            "Trong máy xay nhuyễn, thịt được chế biến thành hỗn hợp nhũ tương mịn.",
+          ex_en:
+            "In the bowl chopper, the meat is processed into a fine sausage batter.",
+        },
+        {
+          id: 8,
+          cat: "1.1",
+          de: "der Fleischwolf (-e)",
+          ipa: "/deːɐ̯ ˈflaɪʃˌvɔlf/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Máy xay thịt công nghiệp",
+          en: "Industrial meat grinder / mincer",
+          rel_vi: "wolfen (đt: xay thịt qua máy đùn)",
+          rel_en: "wolfen (v: to grind/mince meat)",
+          ex_de:
+            "Wir lassen das gekühlte Fleisch zuerst durch den Fleischwolf laufen.",
+          ex_vi:
+            "Trước tiên chúng tôi cho thịt đã làm lạnh chạy qua máy xay thịt.",
+          ex_en: "We first run the chilled meat through the meat grinder.",
+        },
+        {
+          id: 9,
+          cat: "1.1",
+          de: "die Wursthülle (-n)",
+          ipa: "/diː ˈvʊʁstˌhʏlə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Vỏ nhồi xúc xích (ruột tự nhiên hoặc vỏ nhân tạo)",
+          en: "Sausage casing",
+          rel_vi:
+            "der Darm (dt: ruột/vỏ nhồi), abfüllen (đt: nhồi vào vỏ), der Wurstfüller (dt: máy đùn nhồi xúc xích)",
+          rel_en:
+            "der Darm (n: casing/gut), abfüllen (v: to stuff/fill), der Wurstfüller (n: sausage stuffer)",
+          ex_de:
+            "Die Füllmaschine füllt das Brät gleichmäßig in die Wursthülle.",
+          ex_vi: "Máy nhồi đùn hỗn hợp thịt đều đặn vào vỏ xúc xích.",
+          ex_en:
+            "The filling machine stuffs the batter evenly into the sausage casing.",
+        },
+        {
+          id: 10,
+          cat: "1.1",
+          de: "die Räucherkammer (-n)",
+          ipa: "/diː ˈʁɔʏ̯çɐˌkamɐ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Buồng xông khói thực phẩm",
+          en: "Smoking chamber / smokehouse",
+          rel_vi:
+            "räuchern (đt: xông khói), der Rauch (dt: khói), die Garzeit (dt: thời gian làm chín)",
+          rel_en:
+            "räuchern (v: to smoke), der Rauch (n: smoke), die Garzeit (n: cooking time)",
+          ex_de:
+            "Nach dem Füllen kommen die Würste zum Garen und Räuchern in die Räucherkammer.",
+          ex_vi:
+            "Sau khi nhồi, xúc xích được đưa vào buồng xông khói để làm chín và hun khói.",
+          ex_en:
+            "After stuffing, the sausages go into the smoking chamber for cooking and smoking.",
+        },
+        {
+          id: 11,
+          cat: "1.1",
+          de: "das Pasteurisieren",
+          ipa: "/das pastɔʁiˈziːʁən/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Thanh trùng nhiệt diệt khuẩn",
+          en: "Pasteurization",
+          rel_vi:
+            "das Blanchieren (dt: chần qua nước sôi), erhitzen (đt: gia nhiệt)",
+          rel_en: "das Blanchieren (n: blanching), erhitzen (v: to heat)",
+          ex_de:
+            "Durch das Pasteurisieren wird die Haltbarkeit der Lebensmittel deutlich verlängert.",
+          ex_vi:
+            "Nhờ thanh trùng nhiệt, hạn sử dụng của thực phẩm được kéo dài rõ rệt.",
+          ex_en:
+            "Pasteurization significantly extends the shelf life of food products.",
+        },
+        {
+          id: 12,
+          cat: "1.1",
+          de: "die Kerntemperatur (-en)",
+          ipa: "/diː ˈkɛʁntempəʁaˌtuːɐ̯/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nhiệt độ tâm bên trong khối thực phẩm (điểm kiểm soát tới hạn CCP)",
+          en: "Core temperature (critical control point CCP)",
+          rel_vi: "das Einstichthermometer (dt: nhiệt kế đầu nhọn đo tâm)",
+          rel_en: "das Einstichthermometer (n: probe thermometer)",
+          ex_de:
+            "Prüfe mit dem Einstichthermometer, ob die Kerntemperatur 72 Grad erreicht hat.",
+          ex_vi:
+            "Hãy kiểm tra bằng nhiệt kế đầu nhọn xem nhiệt độ tâm đã đạt 72 độ C chưa.",
+          ex_en:
+            "Check with the probe thermometer whether the core temperature has reached 72 degrees.",
+        },
+        {
+          id: 13,
+          cat: "1.1",
+          de: "der Teig (-e)",
+          ipa: "/deːɐ̯ taɪk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bột nhào chế biến thực phẩm / bánh",
+          en: "Dough / batter",
+          rel_vi:
+            "die Backware (dt: sản phẩm bánh nướng), kneten (đt: nhào bột), backen (đt: nướng bánh)",
+          rel_en:
+            "die Backware (n: baked goods), kneten (v: to knead), backen (v: to bake)",
+          ex_de: "Der Teig muss nach dem Kneten dreißig Minuten ruhen.",
+          ex_vi: "Khối bột sau khi nhào cần nghỉ 30 phút.",
+          ex_en: "After kneading, the dough needs to rest for thirty minutes.",
+        },
+        {
+          id: 14,
+          cat: "1.1",
+          de: "die Molkerei (-en)",
+          ipa: "/diː mɔlkəˈʁaɪ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nhà máy chế biến sữa",
+          en: "Dairy plant / creamery",
+          rel_vi:
+            "das Milchprodukt (dt: chế phẩm từ sữa), die Milch (dt: sữa), der Käse (dt: phô mai)",
+          rel_en:
+            "das Milchprodukt (n: dairy product), die Milch (n: milk), der Käse (n: cheese)",
+          ex_de:
+            "In der Molkerei gelten besonders strenge Hygienevorschriften.",
+          ex_vi:
+            "Trong nhà máy sữa áp dụng các quy định vệ sinh đặc biệt nghiêm ngặt.",
+          ex_en: "Particularly strict hygiene rules apply in the dairy plant.",
+        },
+        {
+          id: 15,
+          cat: "1.1",
+          de: "die Tiefkühlkost",
+          ipa: "/diː ˈtiːfkyːlˌkɔst/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thực phẩm đông lạnh sâu",
+          en: "Deep-frozen food",
+          rel_vi:
+            "schockfrosten (đt: cấp đông nhanh siêu tốc), einfrieren (đt: cấp đông), auftauen (đt: rã đông)",
+          rel_en:
+            "schockfrosten (v: to blast-freeze), einfrieren (v: to freeze), auftauen (v: to thaw)",
+          ex_de:
+            "Fertige Produkte werden sofort bei minus 35 Grad schockgefrostet.",
+          ex_vi: "Thành phẩm được cấp đông nhanh ngay lập tức ở âm 35 độ C.",
+          ex_en:
+            "Finished products are blast-frozen immediately at minus 35 degrees.",
+        },
+        {
+          id: 16,
+          cat: "1.1",
+          de: "das Allergen (-e)",
+          ipa: "/das alɛʁˈɡeːn/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Chất gây dị ứng thực phẩm (14 nhóm bắt buộc khai báo tại Đức/EU)",
+          en: "Food allergen (14 mandatory declaration groups in Germany/EU)",
+          rel_vi:
+            "kennzeichnen (đt: ghi nhãn cảnh báo), die Kreuzkontamination (dt: nhiễm chéo)",
+          rel_en:
+            "kennzeichnen (v: to label/declare), die Kreuzkontamination (n: cross-contamination)",
+          ex_de:
+            "Produkte mit Allergenen wie Sellerie oder Senf müssen klar gekennzeichnet sein.",
+          ex_vi:
+            "Sản phẩm chứa chất gây dị ứng như cần tây hoặc mù tạt phải được ghi nhãn rõ ràng.",
+          ex_en:
+            "Products containing allergens such as celery or mustard must be clearly labeled.",
+        },
+        {
+          id: 17,
+          cat: "1.1",
+          de: "das Halbfabrikat (-e)",
+          ipa: "/das ˈhalpfabʁiˌkaːt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Bán thành phẩm",
+          en: "Semi-finished product / intermediate goods",
+          rel_vi:
+            "das Fertigprodukt (dt: thành phẩm hoàn chỉnh), weiterverarbeiten (đt: chế biến tiếp)",
+          rel_en:
+            "das Fertigprodukt (n: finished product), weiterverarbeiten (v: to process further)",
+          ex_de:
+            "Die Halbfabrikate gehen auf dem Förderband weiter zur Verpackungslinie.",
+          ex_vi:
+            "Bán thành phẩm chạy trên băng tải tiếp sang dây chuyền đóng gói.",
+          ex_en:
+            "The semi-finished products move along the conveyor to the packaging line.",
+        },
+        {
+          id: 18,
+          cat: "1.1",
+          de: "der Ausschuss",
+          ipa: "/deːɐ̯ ˈaʊsˌʃʊs/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Hàng lỗi loại bỏ / Sản phẩm không đạt quy cách",
+          en: "Rejects / scrap / defective production batch",
+          rel_vi:
+            "die Fehlproduktion (dt: sản phẩm lỗi), aussortieren (đt: phân loại bỏ ra)",
+          rel_en:
+            "die Fehlproduktion (n: production defect), aussortieren (v: to sort out/reject)",
+          ex_de:
+            "Beschädigte Packungen werden sofort als Ausschuss aussortiert.",
+          ex_vi: "Các gói hàng bị rách hỏng được loại bỏ ngay lập tức.",
+          ex_en: "Damaged packages are sorted out immediately as rejects.",
+        },
+        {
+          id: 19,
+          cat: "1.2",
+          de: "die Produktionslinie (-n)",
+          ipa: "/diː pʁodʊkˈtsi̯oːnsˌliːniə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dây chuyền sản xuất",
+          en: "Production line",
+          rel_vi:
+            "das Förderband (dt: băng tải chuyền hàng), laufen (đt: chạy), anhalten (đt: dừng băng tải)",
+          rel_en:
+            "das Förderband (n: conveyor belt), laufen (v: to run), anhalten (v: to stop)",
+          ex_de:
+            "Stelle die Geschwindigkeit am Förderband etwas langsamer ein.",
+          ex_vi: "Hãy chỉnh tốc độ băng tải chậm lại một chút.",
+          ex_en: "Set the speed on the conveyor belt a little slower.",
+        },
+        {
+          id: 20,
+          cat: "1.2",
+          de: "die Abfüllanlage (-n)",
+          ipa: "/diː ˈapfʏlʔanˌlaːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dây chuyền chiết rót / định lượng đóng gói tự động",
+          en: "Filling / dosing line",
+          rel_vi: "abfüllen (đt: chiết rót/đóng gói)",
+          rel_en: "abfüllen (v: to fill/dispense)",
+          ex_de:
+            "An der Abfüllanlage kontrollieren wir regelmäßig das Füllgewicht.",
+          ex_vi:
+            "Tại dây chuyền chiết rót chúng tôi kiểm tra định kỳ trọng lượng tịnh.",
+          ex_en: "At the filling line, we regularly check the fill weight.",
+        },
+        {
+          id: 21,
+          cat: "1.2",
+          de: "die Verpackungsmaschine (-n)",
+          ipa: "/diː fɛɐ̯ˈpakʊŋsmaˌʃiːnə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Máy đóng gói công nghiệp",
+          en: "Packaging machine",
+          rel_vi: "verpacken (đt: đóng gói), die Folie (dt: màng bọc đóng gói)",
+          rel_en: "verpacken (v: to pack/wrap), die Folie (n: packaging film)",
+          ex_de:
+            "Wenn die Folienrolle leer ist, müssen wir die Verpackungsmaschine kurz stoppen.",
+          ex_vi:
+            "Khi cuộn màng bọc hết, chúng ta phải dừng máy đóng gói một lát.",
+          ex_en:
+            "When the film roll is empty, we have to stop the packaging machine briefly.",
+        },
+        {
+          id: 22,
+          cat: "1.2",
+          de: "die Vakuumverpackung (-en)",
+          ipa: "/diː ˈvaːkuʊmfɛɐ̯ˌpakʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Đóng gói hút chân không",
+          en: "Vacuum packaging",
+          rel_vi: "vakuumieren (đt: hút chân không)",
+          rel_en: "vakuumieren (v: to vacuum-pack)",
+          ex_de:
+            "Prüfe bei jeder Vakuumverpackung, ob die Schweißnaht komplett dicht ist.",
+          ex_vi:
+            "Kiểm tra từng gói hút chân không xem đường hàn miệng túi đã kín hoàn toàn chưa.",
+          ex_en:
+            "Check every vacuum package to see whether the seal seam is completely tight.",
+        },
+        {
+          id: 23,
+          cat: "1.2",
+          de: "die Schutzatmosphäre (MAP)",
+          ipa: "/diː ˈʃʊtsʔatmoˌsfɛːʁə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Đóng gói trong môi trường khí bảo vệ (Modified Atmosphere Packaging)",
+          en: "Modified Atmosphere Packaging (MAP)",
+          rel_vi: "die Schale (dt: khay nhựa đựng thực phẩm)",
+          rel_en: "die Schale (n: food tray)",
+          ex_de:
+            "Frischfleisch wird oft in Schalen unter Schutzatmosphäre verpackt.",
+          ex_vi: "Thịt tươi thường được đóng gói trong khay có khí bảo vệ.",
+          ex_en:
+            "Fresh meat is often packed in trays under a protective atmosphere.",
+        },
+        {
+          id: 24,
+          cat: "1.2",
+          de: "der Etikettierer (-)",
+          ipa: "/deːɐ̯ etikɛˈtiːʁɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Máy dán nhãn sản phẩm",
+          en: "Labeling machine / labeler",
+          rel_vi:
+            "das Etikett (dt: tem nhãn), etikettieren (đt: dán nhãn), der Barcode (dt: mã vạch)",
+          rel_en:
+            "das Etikett (n: label), etikettieren (v: to label), der Barcode (n: barcode)",
+          ex_de:
+            "Auf dem Etikett müssen Zutaten, Gewicht, Charge und MHD gut lesbar sein.",
+          ex_vi:
+            "Trên nhãn sản phẩm phải in rõ thành phần, trọng lượng, số lô và hạn sử dụng.",
+          ex_en:
+            "Ingredients, weight, batch number, and best-before date must be clearly legible on the label.",
+        },
+        {
+          id: 25,
+          cat: "1.2",
+          de: "das Mindesthaltbarkeitsdatum (MHD)",
+          ipa: "/das ˈmɪndəstˌhaltbaːɐ̯kaɪtsˌdaːtʊm/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Hạn sử dụng tối thiểu (dùng cho đồ khô, đồ hộp, sữa chua)",
+          en: "Best-before date (MHD)",
+          rel_vi:
+            "das Verbrauchsdatum (dt: hạn sử dụng tuyệt đối 'zu verbrauchen bis' cho thịt/cá tươi)",
+          rel_en: "das Verbrauchsdatum (n: use-by date for fresh meat/fish)",
+          ex_de:
+            "Bei frischem Hackfleisch gilt ein strenges Verbrauchsdatum statt eines MHD.",
+          ex_vi:
+            "Với thịt xay tươi áp dụng hạn sử dụng tuyệt đối thay vì hạn sử dụng tối thiểu.",
+          ex_en:
+            "For fresh minced meat, a strict use-by date applies instead of a best-before date.",
+        },
+        {
+          id: 26,
+          cat: "1.2",
+          de: "die Chargennummer (-n)",
+          ipa: "/diː ˈʃaʁʒn̩ˌnʊmɐ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Số lô sản xuất (để truy xuất nguồn gốc sản phẩm)",
+          en: "Batch / lot number (for traceability)",
+          rel_vi:
+            "die Charge (dt: lô sản xuất), die Rückverfolgbarkeit (dt: khả năng truy xuất nguồn gốc)",
+          rel_en:
+            "die Charge (n: production batch), die Rückverfolgbarkeit (n: traceability)",
+          ex_de: "Wir notieren jede Chargennummer im Produktionsprotokoll.",
+          ex_vi: "Chúng tôi ghi lại từng số lô sản xuất vào biên bản sản xuất.",
+          ex_en: "We record every batch number in the production log.",
+        },
+        {
+          id: 27,
+          cat: "1.2",
+          de: "der Metalldetektor (-en)",
+          ipa: "/deːɐ̯ meˈtaldeˌtɛktoːɐ̯/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Máy dò kim loại cuối dây chuyền đóng gói (điểm kiểm soát CCP bắt buộc)",
+          en: "Metal detector at end of packaging line (mandatory CCP)",
+          rel_vi: "der Prüfkörper (dt: mẫu thử chuẩn kiểm tra máy dò)",
+          rel_en: "der Prüfkörper (n: test piece / calibration sample)",
+          ex_de: "Jede fertige Packung läuft am Ende durch den Metalldetektor.",
+          ex_vi:
+            "Mỗi gói thành phẩm ở cuối chuyền đều chạy qua máy dò kim loại.",
+          ex_en:
+            "Every finished package passes through the metal detector at the end.",
+        },
+        {
+          id: 28,
+          cat: "1.2",
+          de: "die Kontrollwaage (-n)",
+          ipa: "/diː kɔnˈtʁɔlˌvaːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Cân kiểm tra trọng lượng tự động trên băng chuyền",
+          en: "Checkweigher / inline check scale",
+          rel_vi: "wiegen (đt: cân), das Nettogewicht (dt: khối lượng tịnh)",
+          rel_en: "wiegen (v: to weigh), das Nettogewicht (n: net weight)",
+          ex_de:
+            "Die Kontrollwaage sortiert zu leichte Packungen automatisch aus.",
+          ex_vi: "Cân kiểm tra tự động loại bỏ các gói hàng bị thiếu cân.",
+          ex_en: "The checkweigher automatically rejects underweight packages.",
+        },
+        {
+          id: 29,
+          cat: "1.2",
+          de: "der Kutterwagen (-)",
+          ipa: "/deːɐ̯ ˈkʊtɐˌvaːɡn̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Xe đẩy inox chứa thịt/nguyên liệu (200L)",
+          en: "Stainless steel cutter buggy / meat trolley (200L)",
+          rel_vi:
+            "die Eurokiste (dt: thùng nhựa chuẩn E2), transportieren (đt: vận chuyển nội bộ)",
+          rel_en:
+            "die Eurokiste (n: E2 euro crate), transportieren (v: to transport)",
+          ex_de: "Fahre den vollen Kutterwagen vorsichtig zur Abfüllmaschine.",
+          ex_vi: "Hãy đẩy xe inox đầy nguyên liệu cẩn thận tới máy chiết rót.",
+          ex_en: "Move the full cutter buggy carefully to the filling machine.",
+        },
+        {
+          id: 30,
+          cat: "1.2",
+          de: "das Ausbeinmesser (-)",
+          ipa: "/das ˈaʊsbaɪnˌmɛsɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Dao lọc xương chuyên dụng",
+          en: "Boning knife",
+          rel_vi:
+            "der Wetzstahl (dt: cây liếc mài dao), scharf (tt: sắc bén), schärfen (đt: liếc sắc dao)",
+          rel_en:
+            "der Wetzstahl (n: honing steel), scharf (adj: sharp), schärfen (v: to hone/sharpen)",
+          ex_de:
+            "Halte dein Messer mit dem Wetzstahl immer gut scharf, das ist sicherer.",
+          ex_vi:
+            "Luôn giữ dao sắc bén bằng cây liếc dao, như vậy sẽ an toàn hơn.",
+          ex_en: "Keep your knife sharp with the honing steel; that is safer.",
+        },
+        {
+          id: 31,
+          cat: "1.2",
+          de: "der Stechschutzhandschuh (-e)",
+          ipa: "/deːɐ̯ ˈʃtɛçʃʊtsˌhantʃuː/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Găng tay lưới thép chống đâm cắt (bắt buộc khi pha lóc bằng dao)",
+          en: "Chainmail / cut- and stab-resistant glove",
+          rel_vi:
+            "die Stechschutzschürze (dt: tạp dề lưới thép bảo hộ ngực bụng)",
+          rel_en: "die Stechschutzschürze (n: chainmail apron)",
+          ex_de:
+            "Beim Ausbeinen musst du an der freien Hand immer einen Stechschutzhandschuh tragen.",
+          ex_vi:
+            "Khi lọc xương, tay không cầm dao bắt buộc phải đeo găng tay lưới thép chống đâm.",
+          ex_en:
+            "When boning, you must always wear a chainmail glove on your free hand.",
+        },
+        {
+          id: 32,
+          cat: "1.2",
+          de: "der Not-Aus-Schalter (-)",
+          ipa: "/deːɐ̯ ˈnoːtʔaʊsˌʃaltɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Nút dừng khẩn cấp trên máy chế biến",
+          en: "Emergency stop button",
+          rel_vi: "abschalten (đt: ngắt điện khẩn cấp)",
+          rel_en: "abschalten (v: to shut off)",
+          ex_de:
+            "Bei einer Störung oder Gefahr drücke sofort den roten Not-Aus-Schalter!",
+          ex_vi:
+            "Khi có sự cố hoặc nguy hiểm hãy bấm ngay nút dừng khẩn cấp màu đỏ!",
+          ex_en:
+            "In case of a malfunction or danger, press the red emergency stop button immediately!",
+        },
+        {
+          id: 33,
+          cat: "1.2",
+          de: "die Bedienungsanleitung (-en)",
+          ipa: "/diː bəˈdiːnʊŋsˌʔanlaɪtʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hướng dẫn vận hành máy",
+          en: "Operating manual",
+          rel_vi: "bedienen (đt: vận hành máy)",
+          rel_en: "bedienen (v: to operate)",
+          ex_de:
+            "Vor dem ersten Start der Anlage lesen wir die Bedienungsanleitung.",
+          ex_vi:
+            "Trước khi khởi động máy lần đầu chúng ta đọc kỹ hướng dẫn vận hành.",
+          ex_en:
+            "Before starting the equipment for the first time, we read the operating manual.",
+        },
+        {
+          id: 34,
+          cat: "1.2",
+          de: "die Europalette (-n)",
+          ipa: "/diː ɔʏ̯ʁopaˈlɛtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Pallet gỗ chuẩn châu Âu",
+          en: "Euro pallet",
+          rel_vi:
+            "der Palettierer (dt: máy xếp hàng lên pallet), stapeln (đt: xếp chồng thùng), einwickeln (đt: quấn màng co pallet)",
+          rel_en:
+            "der Palettierer (n: palletizer), stapeln (v: to stack), einwickeln (v: to stretch-wrap)",
+          ex_de:
+            "Die fertigen Kartons werden auf Europaletten gestapelt und ins Kühllager gebracht.",
+          ex_vi:
+            "Các thùng thành phẩm được xếp lên pallet châu Âu và đưa vào kho lạnh.",
+          ex_en:
+            "The finished cartons are stacked on Euro pallets and moved to cold storage.",
+        },
+        {
+          id: 35,
+          cat: "1.2",
+          de: "die Schaumkanone (-n)",
+          ipa: "/diː ˈʃaʊmkaˌnoːnə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Súng phun bọt tẩy rửa vệ sinh xưởng",
+          en: "Foam lance / foam cleaning gun",
+          rel_vi:
+            "der Hochdruckreiniger (dt: máy xịt rửa áp lực cao), schäumen (đt: phun bọt vệ sinh), abspülen (đt: xịt tráng nước sạch)",
+          rel_en:
+            "der Hochdruckreiniger (n: high-pressure washer), schäumen (v: to apply cleaning foam), abspülen (v: to rinse off)",
+          ex_de:
+            "Nach Produktionsende schäumen wir alle Maschinen und Böden gründlich ein.",
+          ex_vi:
+            "Sau khi kết thúc ca sản xuất chúng tôi phun bọt vệ sinh kỹ toàn bộ máy móc và sàn xưởng.",
+          ex_en:
+            "After production ends, we foam all machines and floors thoroughly.",
+        },
+        {
+          id: 36,
+          cat: "1.2",
+          de: "die CIP-Reinigung (Cleaning in Place)",
+          ipa: "/diː siːʔaɪˈpiːˌʁaɪnɪɡʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hệ thống vệ sinh khép kín tự động bên trong đường ống & bồn chứa",
+          en: "Cleaning in Place (CIP) automated pipeline cleaning",
+          rel_vi: "durchspülen (đt: súc rửa tuần hoàn)",
+          rel_en: "durchspülen (v: to flush through)",
+          ex_de:
+            "Die geschlossenen Rohrleitungen werden automatisch per CIP-Reinigung gesäubert.",
+          ex_vi:
+            "Các đường ống khép kín được làm sạch tự động bằng hệ thống vệ sinh tại chỗ CIP.",
+          ex_en:
+            "The closed pipelines are cleaned automatically via CIP cleaning.",
+        },
+        {
+          id: 37,
+          cat: "1.3",
+          de: "das HACCP-Konzept",
+          ipa: "/das haːʔaːtseːˈpeː kɔnˈtsɛpt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Hệ thống quản lý an toàn thực phẩm phân tích mối nguy & điểm kiểm soát tới hạn",
+          en: "HACCP food safety management system",
+          rel_vi: "der kritische Kontrollpunkt (CCP: điểm kiểm soát tới hạn)",
+          rel_en: "der kritische Kontrollpunkt (n: Critical Control Point CCP)",
+          ex_de:
+            "Jeder Mitarbeiter im Lebensmittelbetrieb muss die Regeln des HACCP-Konzepts einhalten.",
+          ex_vi:
+            "Mọi nhân viên trong cơ sở thực phẩm đều phải tuân thủ quy tắc của hệ thống HACCP.",
+          ex_en:
+            "Every employee in a food business must follow the rules of the HACCP concept.",
+        },
+        {
+          id: 38,
+          cat: "1.3",
+          de: "die Kühlkette (-n)",
+          ipa: "/diː ˈkyːlˌkɛtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Chuỗi cung ứng & bảo quản lạnh liên tục (tuyệt đối không để đứt gãy)",
+          en: "Cold chain (continuous refrigerated storage)",
+          rel_vi:
+            "unterbrechen (đt: làm gián đoạn), gekühlt (tt: được làm lạnh)",
+          rel_en:
+            "unterbrechen (v: to interrupt/break), gekühlt (adj: chilled/refrigerated)",
+          ex_de:
+            "Die Kühlkette darf vom Wareneingang bis zum Versand nie unterbrochen werden.",
+          ex_vi:
+            "Chuỗi lạnh tuyệt đối không được phép bị gián đoạn từ lúc nhập nguyên liệu đến khi xuất hàng.",
+          ex_en:
+            "The cold chain must never be broken from goods receipt to dispatch.",
+        },
+        {
+          id: 39,
+          cat: "1.3",
+          de: "das Kühllager (-)",
+          ipa: "/das ˈkyːlˌlaːɡɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Kho lạnh bảo quản (thường 0°C đến +4°C hoặc +7°C)",
+          en: "Cold storage / refrigerated warehouse",
+          rel_vi:
+            "das Kühlhaus (dt: kho lạnh), das Tiefkühllager (dt: kho đông lạnh âm sâu -18°C đến -25°C)",
+          rel_en:
+            "das Kühlhaus (n: cold store), das Tiefkühllager (n: deep-freeze warehouse)",
+          ex_de:
+            "Schließe die Tür vom Kühllager immer sofort wieder, damit die Temperatur stabil bleibt.",
+          ex_vi: "Luôn đóng ngay cửa kho lạnh lại để nhiệt độ giữ ổn định.",
+          ex_en:
+            "Always close the cold storage door immediately so the temperature stays stable.",
+        },
+        {
+          id: 40,
+          cat: "1.3",
+          de: "die Temperaturkontrolle (-n)",
+          ipa: "/diː tempəʁaˈtuːɐ̯kɔnˌtʁɔlə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kiểm tra và ghi chép nhiệt độ định kỳ",
+          en: "Temperature monitoring / check",
+          rel_vi: "messen (đt: đo), dokumentieren (đt: ghi biên bản)",
+          rel_en: "messen (v: to measure), dokumentieren (v: to log/document)",
+          ex_de:
+            "Wir führen zweimal pro Schicht eine Temperaturkontrolle im Kühlraum durch.",
+          ex_vi:
+            "Chúng tôi thực hiện kiểm tra nhiệt độ trong phòng lạnh hai lần mỗi ca.",
+          ex_en:
+            "We perform a temperature check in the cold room twice per shift.",
+        },
+        {
+          id: 41,
+          cat: "1.3",
+          de: "die Personalhygiene",
+          ipa: "/diː pɛʁzoˈnaːlhyˌɡi̯eːnə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Vệ sinh cá nhân của người lao động trong xưởng thực phẩm",
+          en: "Personal hygiene",
+          rel_vi: "sauber (tt: sạch sẽ)",
+          rel_en: "sauber (adj: clean)",
+          ex_de:
+            "Zur Personalhygiene gehören saubere Arbeitskleidung, Haarnetz und kurze Fingernägel.",
+          ex_vi:
+            "Vệ sinh cá nhân gồm quần áo bảo hộ sạch, lưới trùm tóc và móng tay cắt ngắn.",
+          ex_en:
+            "Personal hygiene includes clean workwear, a hairnet, and short fingernails.",
+        },
+        {
+          id: 42,
+          cat: "1.3",
+          de: "die Hygieneschleuse (-n)",
+          ipa: "/diː hyˈɡi̯eːnəˌʃlɔʏ̯zə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Trạm kiểm soát vệ sinh bắt buộc trước khi bước vào khu sản xuất",
+          en: "Hygiene airlock / hand & boot hygiene station",
+          rel_vi: "passieren (đt: đi qua trạm)",
+          rel_en: "passieren (v: to pass through)",
+          ex_de:
+            "Jeder muss vor dem Betreten der Produktionshalle durch die Hygieneschleuse gehen.",
+          ex_vi:
+            "Mọi người trước khi bước vào xưởng sản xuất đều phải đi qua trạm kiểm soát vệ sinh.",
+          ex_en:
+            "Everyone must go through the hygiene station before entering the production hall.",
+        },
+        {
+          id: 43,
+          cat: "1.3",
+          de: "das Haarnetz (-e)",
+          ipa: "/das ˈhaːɐ̯ˌnɛts/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Lưới trùm kín tóc (che cả hai tai)",
+          en: "Hairnet / hair cap",
+          rel_vi:
+            "der Bartschutz (dt: lưới bọc râu), bedecken (đt: che phủ kín)",
+          rel_en: "der Bartschutz (n: beard cover), bedecken (v: to cover)",
+          ex_de:
+            "Das Haarnetz muss alle Haare und beide Ohren vollständig bedecken.",
+          ex_vi: "Lưới trùm tóc phải che kín toàn bộ tóc và cả hai tai.",
+          ex_en: "The hairnet must cover all hair and both ears completely.",
+        },
+        {
+          id: 44,
+          cat: "1.3",
+          de: "die Hygienekleidung",
+          ipa: "/diː hyˈɡi̯eːnəˌklaɪdʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Quần áo bảo hộ vệ sinh thực phẩm",
+          en: "Hygienic workwear / food-grade protective clothing",
+          rel_vi: "der Kittel (dt: áo choàng), wechseln (đt: thay đồ bảo hộ)",
+          rel_en: "der Kittel (n: coat/smock), wechseln (v: to change)",
+          ex_de:
+            "Mit Hygienekleidung darf man das Werksgelände oder die Raucherzone nicht betreten.",
+          ex_vi:
+            "Mặc quần áo vệ sinh xưởng thực phẩm thì không được đi ra ngoài khuôn viên hay khu hút thuốc.",
+          ex_en:
+            "You may not leave the premises or enter the smoking area in hygienic workwear.",
+        },
+        {
+          id: 45,
+          cat: "1.3",
+          de: "die weißen Hygienestiefel (Pl.)",
+          ipa: "/diː ˈvaɪsn̩ hyˈɡi̯eːnəˌʃtiːfl̩/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Ủng bảo hộ chống trượt chuyên dụng màu trắng",
+          en: "White hygienic safety boots",
+          rel_vi:
+            "rutschfest (tt: chống trơn trượt), die Sohlenreinigung (dt: máy chà rửa đế ủng)",
+          rel_en:
+            "rutschfest (adj: slip-resistant), die Sohlenreinigung (n: sole cleaning)",
+          ex_de:
+            "Reinige deine Hygienestiefel in der Stiefelwaschanlage der Hygieneschleuse.",
+          ex_vi: "Hãy rửa sạch ủng bảo hộ trong máy rửa ủng tại trạm vệ sinh.",
+          ex_en:
+            "Clean your hygienic boots in the boot washer at the hygiene station.",
+        },
+        {
+          id: 46,
+          cat: "1.3",
+          de: "das Schmuckverbot",
+          ipa: "/das ˈʃmʊkfɛɐ̯ˌboːt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Quy định cấm đeo trang sức (nhẫn, đồng hồ, vòng tay, khuyên tai) trong xưởng thực phẩm",
+          en: "Ban on wearing jewelry / watches in production",
+          rel_vi: "ablegen (đt: tháo bỏ ra)",
+          rel_en: "ablegen (v: to take off / remove)",
+          ex_de:
+            "Im gesamten Produktionsbereich gilt striktes Schmuck- und Uhrenverbot.",
+          ex_vi:
+            "Trong toàn bộ khu vực sản xuất áp dụng lệnh cấm nghiêm ngặt đeo trang sức và đồng hồ.",
+          ex_en:
+            "A strict ban on jewelry and watches applies throughout the entire production area.",
+        },
+        {
+          id: 47,
+          cat: "1.3",
+          de: "die Kreuzkontamination (-en)",
+          ipa: "/diː ˈkʁɔʏ̯tskɔntaminaˌtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Sự nhiễm chéo vi khuẩn giữa thực phẩm sống và thực phẩm chín",
+          en: "Cross-contamination",
+          rel_vi: "trennen (đt: tách biệt khu vực & dụng cụ)",
+          rel_en: "trennen (v: to separate)",
+          ex_de:
+            "Durch getrennte Schneidebretter verhindern wir eine Kreuzkontamination.",
+          ex_vi:
+            "Nhờ dùng thớt tách biệt chúng ta ngăn ngừa được sự nhiễm chéo vi khuẩn.",
+          ex_en: "Using separate cutting boards prevents cross-contamination.",
+        },
+        {
+          id: 48,
+          cat: "1.3",
+          de: "die Trennung von rein und unrein",
+          ipa: "/diː ˈtʁɛnʊŋ fɔn ʁaɪn ʊnt ˈʊnʁaɪn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nguyên tắc phân tách một chiều giữa khu vực sạch và khu vực bẩn",
+          en: "Separation of clean and unclean zones",
+          rel_vi: "die Schwarz-Weiß-Trennung (dt: phân khu đen - trắng)",
+          rel_en:
+            "die Schwarz-Weiß-Trennung (n: black-and-white zone separation)",
+          ex_de:
+            "Die strenge Trennung von rein und unrein schützt vor Keimübertragung.",
+          ex_vi:
+            "Sự phân tách nghiêm ngặt giữa khu sạch và khu bẩn giúp ngăn lây lan vi khuẩn.",
+          ex_en:
+            "Strict separation of clean and unclean areas protects against germ transfer.",
+        },
+        {
+          id: 49,
+          cat: "1.3",
+          de: "der Fremdkörper (-)",
+          ipa: "/deːɐ̯ ˈfʁɛmtˌkœʁpɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Dị vật lẫn trong thực phẩm (mảnh nhựa, kim loại, thủy tinh, tóc)",
+          en: "Foreign body / contaminant in food",
+          rel_vi: "das Glasverbot (dt: lệnh cấm mang đồ thủy tinh vào xưởng)",
+          rel_en: "das Glasverbot (n: glass ban)",
+          ex_de:
+            "Im Produktionsbereich sind Glasflaschen wegen der Fremdkörpergefahr verboten.",
+          ex_vi:
+            "Trong khu vực sản xuất cấm mang chai thủy tinh vì nguy cơ rơi vỡ tạo dị vật.",
+          ex_en:
+            "Glass bottles are prohibited in the production area due to foreign-body hazard.",
+        },
+        {
+          id: 50,
+          cat: "1.3",
+          de: "die IfSG-Belehrung",
+          ipa: "/diː iːʔɛfʔɛsˈɡeː bəˌleːʁʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Giấy chứng nhận tập huấn vệ sinh & sức khỏe thực phẩm (theo Luật Phòng chống lây nhiễm § 43 IfSG của Đức)",
+          en: "Infection Protection Act instruction certificate (IfSG § 43)",
+          rel_vi:
+            "das Gesundheitszeugnis (dt: giấy chứng nhận sức khỏe thực phẩm), das Gesundheitsamt (dt: Sở Y tế địa phương)",
+          rel_en:
+            "das Gesundheitszeugnis (n: health clearance certificate), das Gesundheitsamt (n: local health authority)",
+          ex_de:
+            "Vor dem Arbeitsbeginn in der Lebensmittelbranche braucht man eine Belehrung nach dem Infektionsschutzgesetz.",
+          ex_vi:
+            "Trước khi bắt đầu làm việc trong ngành thực phẩm cần có giấy chứng nhận tập huấn theo Luật Phòng chống lây nhiễm.",
+          ex_en:
+            "Before starting work in the food sector, instruction under the Infection Protection Act is required.",
+        },
+        {
+          id: 51,
+          cat: "1.3",
+          de: "die Meldepflicht bei Krankheiten",
+          ipa: "/diː ˈmɛldəˌpflɪçt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nghĩa vụ khai báo ngay khi mắc bệnh truyền nhiễm / tiêu chảy / vết thương hở",
+          en: "Duty to report illness / gastrointestinal symptoms",
+          rel_vi:
+            "der Durchfall (dt: tiêu chảy), die offene Wunde (dt: vết thương hở)",
+          rel_en:
+            "der Durchfall (n: diarrhea), die offene Wunde (n: open wound)",
+          ex_de:
+            "Bei Durchfall, Erbrechen oder Fieber besteht sofortige Meldepflicht beim Vorgesetzten.",
+          ex_vi:
+            "Khi bị tiêu chảy, nôn mửa hoặc sốt, người lao động có nghĩa vụ báo ngay cho quản lý.",
+          ex_en:
+            "In case of diarrhea, vomiting, or fever, immediate reporting to the supervisor is mandatory.",
+        },
+        {
+          id: 52,
+          cat: "1.3",
+          de: "das blaue Pflaster",
+          ipa: "/das ˈblaʊə ˈpflastɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Băng cá nhân màu xanh dương có lõi kim loại (dễ phát hiện bằng mắt và máy dò kim loại)",
+          en: "Blue detectable plaster (with metal strip)",
+          rel_vi: "detektierbar (tt: có thể phát hiện qua máy dò)",
+          rel_en: "detektierbar (adj: detectable)",
+          ex_de:
+            "Kleine Schnittwunden an den Fingern müssen mit einem blauen, detektierbaren Pflaster und Handschuh abgedeckt werden.",
+          ex_vi:
+            "Các vết đứt nhỏ ở ngón tay phải được dán băng cá nhân màu xanh phát hiện được bằng máy dò và đeo găng tay phủ ngoài.",
+          ex_en:
+            "Small cuts on fingers must be covered with a blue detectable plaster and a glove.",
+        },
+        {
+          id: 53,
+          cat: "1.3",
+          de: "der Reinigungs- und Desinfektionsplan",
+          ipa: "/deːɐ̯ ˈʁaɪnɪɡʊŋs ʊnt desɪnfɛkˈtsi̯oːnsˌplaːn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bảng kế hoạch làm sạch & khử khuẩn chuẩn của nhà máy",
+          en: "Cleaning and disinfection schedule / plan",
+          rel_vi: "die Einwirkzeit (dt: thời gian ngấm thuốc khử khuẩn)",
+          rel_en: "die Einwirkzeit (n: contact/dwell time)",
+          ex_de:
+            "Im Reinigungsplan steht genau, welches Mittel und welche Einwirkzeit genutzt werden.",
+          ex_vi:
+            "Trong kế hoạch vệ sinh ghi rõ dùng hóa chất nào và thời gian ngấm thuốc bao lâu.",
+          ex_en:
+            "The cleaning plan states exactly which agent and contact time are used.",
+        },
+        {
+          id: 54,
+          cat: "1.3",
+          de: "die Rückstellprobe (-n)",
+          ipa: "/diː ˈʁʏkʃtɛlˌpʁoːbə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Mẫu lưu kiểm nghiệm đối chứng của từng lô sản xuất",
+          en: "Retention sample / reference sample per batch",
+          rel_vi: "die Qualitätssicherung (dt: phòng đảm bảo chất lượng QA)",
+          rel_en: "die Qualitätssicherung (n: quality assurance QA)",
+          ex_de:
+            "Die Qualitätssicherung entnimmt von jeder Charge eine Rückstellprobe.",
+          ex_vi:
+            "Bộ phận đảm bảo chất lượng lấy một mẫu lưu đối chứng từ mỗi lô hàng.",
+          ex_en: "Quality assurance takes a retention sample from each batch.",
+        },
+        {
+          id: 55,
+          cat: "1.4",
+          de: "die Warenannahme",
+          ipa: "/diː ˈvaːʁənʔanˌnaːmə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khu vực tiếp nhận nguyên liệu đầu vào",
+          en: "Goods receipt / receiving area",
+          rel_vi:
+            "der Wareneingang (dt: khu vực nhập hàng), der Lieferschein (dt: phiếu giao hàng)",
+          rel_en:
+            "der Wareneingang (n: incoming goods), der Lieferschein (n: delivery note)",
+          ex_de:
+            "Bei der Warenannahme kontrollieren wir Lieferschein, MHD und Kerntemperatur.",
+          ex_vi:
+            "Khi nhận hàng đầu vào chúng tôi kiểm tra phiếu giao hàng, hạn sử dụng và nhiệt độ tâm.",
+          ex_en:
+            "At goods receipt, we check the delivery note, best-before date, and core temperature.",
+        },
+        {
+          id: 56,
+          cat: "1.4",
+          de: "das FIFO-Prinzip (First In, First Out)",
+          ipa: "/das ˈfiːfoː pʁɪnˈtsiːp/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Nguyên tắc nhập trước – xuất trước (hàng cũ dùng trước, hàng mới dùng sau)",
+          en: "FIFO principle (First In, First Out)",
+          rel_vi: "verbrauchen (đt: tiêu thụ/sử dụng hết)",
+          rel_en: "verbrauchen (v: to use up/consume)",
+          ex_de: "Im Rohstofflager arbeiten wir streng nach dem FIFO-Prinzip.",
+          ex_vi:
+            "Trong kho nguyên liệu chúng tôi làm việc nghiêm ngặt theo nguyên tắc nhập trước xuất trước.",
+          ex_en:
+            "In the raw material warehouse, we strictly follow the FIFO principle.",
+        },
+        {
+          id: 57,
+          cat: "1.4",
+          de: "die Qualitätssicherung (QS)",
+          ipa: "/diː kvaliˈtɛːtsˌzɪçəʁʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bộ phận Đảm bảo Chất lượng (QA/QC)",
+          en: "Quality Assurance (QA)",
+          rel_vi: "die Stichprobe (dt: kiểm tra lấy mẫu ngẫu nhiên)",
+          rel_en: "die Stichprobe (n: random sample check)",
+          ex_de:
+            "Die Qualitätssicherung prüft regelmäßig Gewicht, Etikett und Dichtheit der Verpackung.",
+          ex_vi:
+            "Phòng đảm bảo chất lượng thường xuyên kiểm tra trọng lượng, nhãn mác và độ kín của bao bì.",
+          ex_en:
+            "Quality assurance regularly checks weight, labeling, and package seal integrity.",
+        },
+        {
+          id: 58,
+          cat: "1.4",
+          de: "das Produktionsprotokoll (-e)",
+          ipa: "/das pʁodʊkˈtsi̯oːnspʁotoˌkɔl/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Biên bản nhật ký theo dõi sản xuất theo ca",
+          en: "Production log / batch record",
+          rel_vi:
+            "ausfüllen (đt: điền biên bản), unterschreiben (đt: ký xác nhận)",
+          rel_en: "ausfüllen (v: to fill out), unterschreiben (v: to sign)",
+          ex_de:
+            "Am Ende der Schicht unterschreibt der Linienführer das Produktionsprotokoll.",
+          ex_vi:
+            "Cuối ca làm việc, tổ trưởng dây chuyền ký xác nhận vào biên bản sản xuất.",
+          ex_en:
+            "At the end of the shift, the line leader signs the production log.",
+        },
+        {
+          id: 59,
+          cat: "1.4",
+          de: "die Kälteschutzkleidung",
+          ipa: "/diː ˈkɛltəʃʊtsˌklaɪdʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Quần áo bảo hộ chống rét (khi làm việc trong kho lạnh/kho đông)",
+          en: "Cold-protection workwear / freezer gear",
+          rel_vi:
+            "die Thermojacke (dt: áo khoác giữ nhiệt), die Kälte (dt: cái lạnh)",
+          rel_en: "die Thermojacke (n: thermal jacket), die Kälte (n: cold)",
+          ex_de:
+            "Für Arbeiten im Tiefkühllager bekommst du spezielle Kälteschutzkleidung.",
+          ex_vi:
+            "Để làm việc trong kho đông lạnh bạn sẽ được cấp quần áo bảo hộ chống rét chuyên dụng.",
+          ex_en:
+            "For work in the deep-freeze warehouse, you get special cold-protection clothing.",
+        },
+        {
+          id: 60,
+          cat: "1.4",
+          de: "der Gehörschutz",
+          ipa: "/deːɐ̯ ɡəˈhøːɐ̯ˌʃʊts/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Nút bịt tai / Chụp tai chống ồn trong xưởng máy",
+          en: "Hearing protection / ear defenders",
+          rel_vi: "der Lärm (dt: tiếng ồn lớn)",
+          rel_en: "der Lärm (n: loud noise)",
+          ex_de: "An den lauten Verpackungsmaschinen ist Gehörschutz Pflicht.",
+          ex_vi:
+            "Ở khu vực máy đóng gói ồn lớn bắt buộc phải đeo đồ bảo vệ thính giác.",
+          ex_en:
+            "Hearing protection is mandatory at the noisy packaging machines.",
+        },
+        {
+          id: 61,
+          cat: "1.4",
+          de: "die Rutschgefahr (-en)",
+          ipa: "/diː ˈʁʊtʃɡəˌfaːɐ̯/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nguy cơ trơn trượt (do sàn ướt nước/dầu mỡ khi vệ sinh xưởng)",
+          en: "Slip hazard",
+          rel_vi:
+            "ausrutschen (đt: bị trượt ngã), rutschfest (tt: chống trượt)",
+          rel_en: "ausrutschen (v: to slip), rutschfest (adj: slip-resistant)",
+          ex_de:
+            "Vorsicht beim Reinigen der Halle, auf nassem Boden besteht Rutschgefahr!",
+          ex_vi:
+            "Cẩn thận khi vệ sinh nhà xưởng, trên sàn ướt có nguy cơ trơn trượt!",
+          ex_en:
+            "Careful when cleaning the hall; there is a slip hazard on wet floors!",
+        },
+        {
+          id: 62,
+          cat: "1.4",
+          de: "die Schnittverletzung (-en)",
+          ipa: "/diː ˈʃnɪtfɛɐ̯ˌlɛtsʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Vết thương đứt tay do dao/lưỡi cắt",
+          en: "Cut injury / laceration",
+          rel_vi: "der Verbandskasten (dt: hộp sơ cứu y tế)",
+          rel_en: "der Verbandskasten (n: first-aid kit)",
+          ex_de:
+            "Jede kleine Schnittverletzung muss sofort versorgt und im Verbandbuch eingetragen werden.",
+          ex_vi:
+            "Mọi vết đứt tay nhỏ đều phải được sơ cứu ngay và ghi vào sổ sơ cứu.",
+          ex_en:
+            "Every minor cut must be treated immediately and recorded in the first-aid log.",
+        },
+        {
+          id: 63,
+          cat: "1.4",
+          de: "der Schichtleiter (-)",
+          ipa: "/deːɐ̯ ˈʃɪçtˌlaɪtɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Trưởng ca sản xuất",
+          en: "Shift supervisor / shift leader",
+          rel_vi:
+            "der Vorarbeiter (dt: tổ trưởng dây chuyền), die Schichtübergabe (dt: bàn giao ca)",
+          rel_en:
+            "der Vorarbeiter (n: team leader), die Schichtübergabe (n: shift handover)",
+          ex_de:
+            "Bei technischen Störungen an der Linie informieren wir sofort den Schichtleiter.",
+          ex_vi:
+            "Khi có sự cố kỹ thuật trên dây chuyền chúng tôi báo ngay cho trưởng ca.",
+          ex_en:
+            "In case of technical malfunctions on the line, we inform the shift supervisor right away.",
+        },
+        {
+          id: 64,
+          cat: "1.4",
+          de: "die Frühschicht / Spätschicht / Nachtschicht",
+          ipa: "/diː ˈfʁyːˌʃɪçt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Ca sáng / Ca chiều / Ca đêm (làm việc theo ca kíp)",
+          en: "Early / late / night shift",
+          rel_vi: "der Schichtplan (dt: lịch phân ca)",
+          rel_en: "der Schichtplan (n: shift schedule)",
+          ex_de:
+            "Nächste Woche bin ich für die Frühschicht an der Verpackungslinie eingeteilt.",
+          ex_vi:
+            "Tuần tới tôi được phân công làm ca sáng tại dây chuyền đóng gói.",
+          ex_en:
+            "Next week I am scheduled for the early shift on the packaging line.",
+        },
+        {
+          id: 65,
+          cat: "1.4",
+          de: "die Umkleide (-n)",
+          ipa: "/diː ˈʊmˌklaɪdə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Phòng thay đồ bảo hộ (tủ đồ sạch – bẩn riêng biệt)",
+          en: "Changing room / locker room",
+          rel_vi:
+            "der Pausenraum (dt: phòng nghỉ giải lao), der Spind (dt: tủ đồ cá nhân)",
+          rel_en: "der Pausenraum (n: break room), der Spind (n: locker)",
+          ex_de:
+            "Straßenschuhe und Hygienestiefel werden in der Umkleide getrennt aufbewahrt.",
+          ex_vi:
+            "Giày đi đường và ủng vệ sinh xưởng được để tách biệt trong phòng thay đồ.",
+          ex_en:
+            "Street shoes and hygienic boots are kept separately in the changing room.",
+        },
+        {
+          id: 66,
+          cat: "1.4",
+          de: "der Schädlingsbekämpfungsplan",
+          ipa: "/deːɐ̯ ˈʃɛːtlɪŋsbəˌkɛmpfʊŋsˌplaːn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Kế hoạch kiểm soát côn trùng & động vật gây hại trong nhà máy thực phẩm",
+          en: "Pest control plan",
+          rel_vi: "geschlossen halten (đt: giữ cửa luôn đóng kín)",
+          rel_en: "geschlossen halten (v: to keep closed)",
+          ex_de:
+            "Halte Außentüren und Fenster immer geschlossen, damit keine Schädlinge eindringen.",
+          ex_vi:
+            "Luôn giữ cửa ngoài và cửa sổ đóng kín để côn trùng gây hại không lọt vào.",
+          ex_en: "Keep outer doors and windows closed so pests cannot enter.",
+        },
+        {
+          id: 67,
+          cat: "1.4",
+          de: "der Bioabfall",
+          ipa: "/deːɐ̯ ˈbiːoʔapˌfal/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Rác thải hữu cơ thực phẩm / Phế phẩm chế biến",
+          en: "Organic food waste / food scraps",
+          rel_vi:
+            "die Speisereste (dt: thức ăn thừa/phế phẩm), entsorgen (đt: thu gom xử lý)",
+          rel_en:
+            "die Speisereste (n: food trimmings/scraps), entsorgen (v: to dispose of)",
+          ex_de:
+            "Verdorbene Lebensmittel werden sofort im gekennzeichneten Bioabfall-Behälter entsorgt.",
+          ex_vi:
+            "Thực phẩm hỏng được bỏ ngay vào thùng rác hữu cơ có dán nhãn riêng.",
+          ex_en:
+            "Spoiled food is disposed of immediately in the marked organic waste bin.",
+        },
+        {
+          id: 68,
+          cat: "1.4",
+          de: "die Versandabteilung (-en)",
+          ipa: "/diː fɛɐ̯ˈzantʔapˌtaɪlʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bộ phận xuất hàng / Giao nhận kho lạnh",
+          en: "Dispatch / shipping department",
+          rel_vi: "verladen (đt: bốc xếp lên xe lạnh)",
+          rel_en: "verladen (v: to load onto vehicles)",
+          ex_de:
+            "Die geprüften Paletten werden in der Versandabteilung auf den Kühl-LKW verladen.",
+          ex_vi:
+            "Các pallet đã kiểm tra được bốc xếp lên xe tải lạnh tại bộ phận xuất hàng.",
+          ex_en:
+            "Inspected pallets are loaded onto the refrigerated truck in the dispatch department.",
+        },
+        {
+          id: 69,
+          cat: "1.5",
+          de: "verarbeiten",
+          ipa: "/fɛɐ̯ˈʔaʁbaɪtn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Chế biến, gia công thực phẩm",
+          en: "To process / manufacture food",
+          rel_vi: "die Verarbeitung (dt: quá trình chế biến)",
+          rel_en: "die Verarbeitung (n: processing)",
+          ex_de: "Wir verarbeiten täglich mehrere Tonnen frisches Fleisch.",
+          ex_vi: "Hằng ngày chúng tôi chế biến hàng tấn thịt tươi.",
+          ex_en: "We process several tons of fresh meat every day.",
+        },
+        {
+          id: 70,
+          cat: "1.5",
+          de: "zerkleinern / schneiden",
+          ipa: "/tsɛɐ̯ˈklaɪnɐn/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Cắt nhỏ / Thái lát",
+          en: "To chop / dice / cut",
+          rel_vi: "der Schnitt (dt: lát cắt)",
+          rel_en: "der Schnitt (n: cut)",
+          ex_de: "Das Gemüse wird vor dem Blanchieren gleichmäßig zerkleinert.",
+          ex_vi: "Rau củ được cắt nhỏ đồng đều trước khi chần.",
+          ex_en: "The vegetables are chopped evenly before blanching.",
+        },
+        {
+          id: 71,
+          cat: "1.5",
+          de: "mischen / mengen",
+          ipa: "/ˈmɪʃn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Trộn đều nguyên liệu & gia vị",
+          en: "To mix / blend",
+          rel_vi: "die Mischung (dt: hỗn hợp)",
+          rel_en: "die Mischung (n: mixture)",
+          ex_de:
+            "Mische das Fleisch und die Gewürze fünf Minuten lang gründlich durch.",
+          ex_vi: "Trộn đều thịt và gia vị kỹ lưỡng trong vòng năm phút.",
+          ex_en: "Mix the meat and spices thoroughly for five minutes.",
+        },
+        {
+          id: 72,
+          cat: "1.5",
+          de: "abfüllen / dosieren",
+          ipa: "/ˈapˌfʏlən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Chiết rót / Định lượng vào bao bì",
+          en: "To fill / dose into packaging",
+          rel_vi: "die Abfüllung (dt: công đoạn chiết rót)",
+          rel_en: "die Abfüllung (n: filling/dosing)",
+          ex_de: "Die Maschine füllt exakt 500 Gramm pro Becher ab.",
+          ex_vi: "Máy định lượng chiết rót chính xác 500 gram mỗi hũ.",
+          ex_en: "The machine fills exactly 500 grams per cup.",
+        },
+        {
+          id: 73,
+          cat: "1.5",
+          de: "vakuumieren / verschweißen",
+          ipa: "/vakuuˈmiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Hút chân không / Hàn kín miệng túi bao bì",
+          en: "To vacuum-pack / heat-seal",
+          rel_vi: "luftdicht (tt: kín khí)",
+          rel_en: "luftdicht (adj: airtight)",
+          ex_de: "Nach dem Vakuumieren wird die Folie luftdicht verschweißt.",
+          ex_vi: "Sau khi hút chân không, màng túi được hàn kín khí.",
+          ex_en: "After vacuuming, the film is heat-sealed airtight.",
+        },
+        {
+          id: 74,
+          cat: "1.5",
+          de: "etikettieren / auszeichnen",
+          ipa: "/etikɛˈtiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Dán nhãn / In thông tin lên bao bì",
+          en: "To label / mark packages",
+          rel_vi: "das Etikett (dt: nhãn mác)",
+          rel_en: "das Etikett (n: label)",
+          ex_de:
+            "Jede Schale muss vor dem Verpacken in Kartons richtig etikettiert sein.",
+          ex_vi:
+            "Mỗi khay hàng phải được dán nhãn đúng trước khi đóng vào thùng các-tông.",
+          ex_en:
+            "Every tray must be properly labeled before packing into cartons.",
+        },
+        {
+          id: 75,
+          cat: "1.5",
+          de: "kühlen / einfrieren",
+          ipa: "/ˈkyːlən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Làm mát bảo quản lạnh / Cấp đông",
+          en: "To chill / freeze",
+          rel_vi: "die Kühlung (dt: hệ thống làm lạnh)",
+          rel_en: "die Kühlung (n: refrigeration/cooling)",
+          ex_de: "Kühle die gekochte Ware sofort auf unter vier Grad herunter.",
+          ex_vi: "Hãy làm nguội nhanh hàng đã nấu chín xuống dưới 4 độ C.",
+          ex_en:
+            "Chill the cooked product down below four degrees immediately.",
+        },
+        {
+          id: 76,
+          cat: "1.5",
+          de: "reinigen / desinfizieren",
+          ipa: "/ˈʁaɪnɪɡn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Làm sạch / Khử khuẩn thiết bị & bề mặt",
+          en: "To clean / disinfect",
+          rel_vi: "die Reinigung (dt: việc vệ sinh)",
+          rel_en: "die Reinigung (n: cleaning)",
+          ex_de:
+            "Nach jedem Produktwechsel reinigen und desinfizieren wir das Förderband.",
+          ex_vi:
+            "Sau mỗi lần đổi mã sản phẩm chúng tôi làm sạch và khử khuẩn băng tải.",
+          ex_en:
+            "After every product change, we clean and disinfect the conveyor belt.",
+        },
+        {
+          id: 77,
+          cat: "1.5",
+          de: "aussortieren / kontrollieren",
+          ipa: "/ˈaʊsˌzɔʁtiːʁən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Phân loại loại bỏ hàng lỗi / Kiểm tra chất lượng",
+          en: "To reject / sort out defective items / inspect",
+          rel_vi: "die Kontrolle (dt: sự kiểm tra)",
+          rel_en: "die Kontrolle (n: check/inspection)",
+          ex_de:
+            "Sortiere verformte oder undichte Packungen sofort vom Band aus.",
+          ex_vi:
+            "Hãy loại bỏ ngay các gói hàng bị móp méo hoặc hở mép ra khỏi băng chuyền.",
+          ex_en:
+            "Sort out deformed or leaking packages from the belt right away.",
+        },
+        {
+          id: 78,
+          cat: "1.5",
+          de: "dokumentieren",
+          ipa: "/dokumɛnˈtiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Ghi chép vào biên bản kiểm soát HACCP",
+          en: "To document in HACCP logs",
+          rel_vi: "das Protokoll (dt: biên bản)",
+          rel_en: "das Protokoll (n: log/protocol)",
+          ex_de:
+            "Alle Messwerte der Metalldetektor-Prüfung werden genau dokumentiert.",
+          ex_vi:
+            "Mọi kết quả kiểm tra máy dò kim loại đều được ghi chép chính xác.",
+          ex_en: "All metal detector test readings are documented accurately.",
+        },
+        {
+          id: 79,
+          cat: "1.5",
+          de: "frisch / verdorben",
+          ipa: "/fʁɪʃ/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Tươi mới / Bị ôi thiu, hư hỏng",
+          en: "Fresh / spoiled",
+          rel_vi: "die Frische (dt: độ tươi)",
+          rel_en: "die Frische (n: freshness)",
+          ex_de: "Verdorbene Rohware darf niemals in die Produktion gelangen.",
+          ex_vi:
+            "Nguyên liệu bị hư hỏng tuyệt đối không được đưa vào sản xuất.",
+          ex_en: "Spoiled raw material must never enter production.",
+        },
+        {
+          id: 80,
+          cat: "1.5",
+          de: "gekühlt / tiefgefroren",
+          ipa: "/ɡəˈkyːlt/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Đã làm lạnh (0–4°C) / Đã cấp đông sâu (-18°C)",
+          en: "Chilled / deep-frozen",
+          rel_vi: "kalt (tt: lạnh)",
+          rel_en: "kalt (adj: cold)",
+          ex_de: "Lagere die Milchprodukte sofort im gekühlten Bereich ein.",
+          ex_vi: "Hãy cất ngay các sản phẩm từ sữa vào khu vực làm lạnh.",
+          ex_en: "Store the dairy products in the chilled area immediately.",
+        },
+        {
+          id: 81,
+          cat: "1.5",
+          de: "hygienisch / keimfrei",
+          ipa: "/hyˈɡi̯eːnɪʃ/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Hợp vệ sinh / Vô trùng không vi khuẩn",
+          en: "Hygienic / germ-free",
+          rel_vi: "sauber (tt: sạch sẽ)",
+          rel_en: "sauber (adj: clean)",
+          ex_de:
+            "Hygienisches Arbeiten schützt die Gesundheit der Verbraucher.",
+          ex_vi:
+            "Làm việc hợp vệ sinh giúp bảo vệ sức khỏe của người tiêu dùng.",
+          ex_en: "Hygienic work protects consumer health.",
+        },
+        {
+          id: 82,
+          cat: "1.5",
+          de: "luftdicht / undicht",
+          ipa: "/ˈlʊftˌdɪçt/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Kín khí hoàn toàn / Bị hở, xì khí",
+          en: "Airtight / leaking",
+          rel_vi: "dicht (tt: kín)",
+          rel_en: "dicht (adj: tight/sealed)",
+          ex_de: "Diese Vakuumpackung hat Luft gezogen und ist undicht.",
+          ex_vi: "Gói hút chân không này bị lọt khí vào và đã bị hở.",
+          ex_en: "This vacuum package has drawn air and is leaking.",
+        },
+        {
+          id: 83,
+          cat: "1.5",
+          de: "haltbar",
+          ipa: "/ˈhaltbaːɐ̯/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Bảo quản được lâu",
+          en: "Shelf-stable / long-lasting",
+          rel_vi: "die Haltbarkeit (dt: thời hạn sử dụng)",
+          rel_en: "die Haltbarkeit (n: shelf life)",
+          ex_de: "Durch Vakuum und Kühlung bleibt das Fleisch länger haltbar.",
+          ex_vi:
+            "Nhờ hút chân không và làm lạnh, thịt giữ được tươi ngon lâu hơn.",
+          ex_en:
+            "With vacuum packing and chilling, the meat stays good longer.",
+        },
+        {
+          id: 84,
+          cat: "1.5",
+          de: "rutschfest",
+          ipa: "/ˈʁʊtʃˌfɛst/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Chống trơn trượt",
+          en: "Slip-resistant / non-slip",
+          rel_vi: "sicher (tt: an toàn)",
+          rel_en: "sicher (adj: safe)",
+          ex_de:
+            "Auf nassen Fliesen brauchen wir unbedingt rutschfeste Hygienestiefel.",
+          ex_vi:
+            "Trên nền gạch ướt chúng ta nhất định phải đi ủng bảo hộ chống trơn trượt.",
+          ex_en:
+            "On wet tiles, we definitely need slip-resistant hygienic boots.",
+        },
+      ];
+
+      const PHRASES_DATA = [
+        {
+          id: 1,
+          cat: "2.1",
+          de: "Hast du vor dem Betreten der Halle die Hände gewaschen und desinfiziert?",
+          vi: "Trước khi vào xưởng bạn đã rửa tay và sát khuẩn tay chưa?",
+          en: "Did you wash and disinfect your hands before entering the hall?",
+        },
+        {
+          id: 2,
+          cat: "2.1",
+          de: "Bitte zieh dein Haarnetz über beide Ohren und lege Uhr und Ringe im Spind ab.",
+          vi: "Vui lòng kéo lưới trùm tóc che kín cả hai tai và cất đồng hồ, nhẫn vào tủ đồ nhé.",
+          en: "Please pull your hairnet over both ears and leave your watch and rings in the locker.",
+        },
+        {
+          id: 3,
+          cat: "2.1",
+          de: "Ich habe mich am Finger geschnitten, ich brauche schnell ein blaues Pflaster und einen Handschuh.",
+          vi: "Tôi lỡ bị đứt tay nhẹ ở ngón tay, tôi cần gấp băng cá nhân màu xanh dương và găng tay.",
+          en: "I cut my finger; I quickly need a blue detectable plaster and a glove.",
+        },
+        {
+          id: 4,
+          cat: "2.1",
+          de: "Bitte trenne rohes Geflügel und fertige Produkte strikt voneinander, damit keine Kreuzkontamination entsteht.",
+          vi: "Vui lòng tách biệt nghiêm ngặt thịt gia cầm sống và thành phẩm để tránh nhiễm chéo vi khuẩn.",
+          en: "Please keep raw poultry and finished products strictly separated to prevent cross-contamination.",
+        },
+        {
+          id: 5,
+          cat: "2.1",
+          de: "Wir dürfen die Kühlkette nicht unterbrechen, die Ware muss sofort ins Kühllager.",
+          vi: "Chúng ta không được làm gián đoạn chuỗi lạnh, hàng phải được đưa ngay vào kho lạnh.",
+          en: "We must not break the cold chain; the goods must go into cold storage right away.",
+        },
+        {
+          id: 6,
+          cat: "2.1",
+          de: "Wie hoch ist aktuell die Temperatur im Kühlraum und im Produktkern?",
+          vi: "Hiện tại nhiệt độ trong phòng lạnh và nhiệt độ tâm sản phẩm là bao nhiêu?",
+          en: "What is the current temperature in the cold room and in the product core?",
+        },
+        {
+          id: 7,
+          cat: "2.1",
+          de: "Nach dem Produktwechsel müssen wir das Förderband zuerst reinigen und desinfizieren.",
+          vi: "Sau khi đổi mã sản phẩm chúng ta phải làm sạch và khử khuẩn băng tải trước.",
+          en: "After the product changeover, we must clean and disinfect the conveyor belt first.",
+        },
+        {
+          id: 8,
+          cat: "2.1",
+          de: "Bitte beachte die Einwirkzeit von fünfzehn Minuten beim Desinfektionsmittel.",
+          vi: "Vui lòng tuân thủ thời gian ngấm thuốc khử khuẩn là 15 phút.",
+          en: "Please observe the fifteen-minute contact time for the disinfectant.",
+        },
+        {
+          id: 9,
+          cat: "2.1",
+          de: "Wenn sich jemand krank fühlt oder Durchfall hat, muss er das sofort dem Schichtleiter melden.",
+          vi: "Nếu ai thấy trong người bị ốm hoặc tiêu chảy thì phải báo ngay cho trưởng ca.",
+          en: "If anyone feels sick or has diarrhea, they must report it to the shift supervisor immediately.",
+        },
+        {
+          id: 10,
+          cat: "2.2",
+          de: "Welche Charge und welches Produkt fahren wir heute auf Linie 2?",
+          vi: "Hôm nay chúng ta chạy lô hàng nào và sản phẩm gì trên dây chuyền số 2?",
+          en: "Which batch and product are we running on Line 2 today?",
+        },
+        {
+          id: 11,
+          cat: "2.2",
+          de: "Wie viel Kilogramm Fleisch und Gewürzmischung brauchen wir laut Rezeptur?",
+          vi: "Theo công thức phối trộn thì chúng ta cần bao nhiêu kg thịt và hỗn hợp gia vị?",
+          en: "How many kilograms of meat and spice blend do we need according to the recipe?",
+        },
+        {
+          id: 12,
+          cat: "2.2",
+          de: "Beim Ausbeinen immer den Stechschutzhandschuh anziehen und das Messer vom Körper wegführen!",
+          vi: "Khi lọc xương luôn đeo găng tay lưới thép chống đâm và đưa lưỡi dao hướng ra xa cơ thể!",
+          en: "When boning, always wear the chainmail glove and cut away from your body!",
+        },
+        {
+          id: 13,
+          cat: "2.2",
+          de: "Die Folienrolle an der Verpackungsmaschine ist leer, ich lege eine neue Rolle ein.",
+          vi: "Cuộn màng bọc trên máy đóng gói đã hết, tôi đang lắp cuộn mới vào.",
+          en: "The film roll on the packaging machine is empty; I'm loading a new roll.",
+        },
+        {
+          id: 14,
+          cat: "2.2",
+          de: "Bitte prüfe bei den Vakuumverpackungen regelmäßig, ob die Schweißnaht dicht ist.",
+          vi: "Vui lòng kiểm tra thường xuyên các gói hút chân không xem đường hàn miệng túi đã kín chưa.",
+          en: "Please check the vacuum packages regularly to see if the seal is tight.",
+        },
+        {
+          id: 15,
+          cat: "2.2",
+          de: "Stimmen Chargennummer, Gewicht und Mindesthaltbarkeitsdatum auf dem Etikett?",
+          vi: "Số lô sản xuất, trọng lượng và hạn sử dụng trên nhãn đã khớp chính xác chưa?",
+          en: "Do the batch number, weight, and best-before date on the label match?",
+        },
+        {
+          id: 16,
+          cat: "2.2",
+          de: "Ich habe den Metalldetektor mit den Prüfkörpern getestet, das Gerät funktioniert einwandfrei.",
+          vi: "Tôi đã kiểm tra máy dò kim loại bằng các mẫu thử chuẩn, máy hoạt động hoàn hảo.",
+          en: "I tested the metal detector with the test pieces; the unit works properly.",
+        },
+        {
+          id: 17,
+          cat: "2.2",
+          de: "Hier sind drei Packungen undicht, ich sortiere sie sofort als Ausschuss aus.",
+          vi: "Ở đây có ba gói bị hở khí, tôi loại bỏ ngay sang khay hàng lỗi đây.",
+          en: "Here are three leaking packages; I'm sorting them out as rejects right away.",
+        },
+        {
+          id: 18,
+          cat: "2.2",
+          de: "Die Europalette ist voll gestapelt, ich wickle sie jetzt mit Folie ein und bringe sie in den Versand.",
+          vi: "Pallet đã xếp đầy thùng rồi, bây giờ tôi quấn màng co và đưa sang khu xuất hàng.",
+          en: "The Euro pallet is stacked full; I'll stretch-wrap it now and take it to dispatch.",
+        },
+        {
+          id: 19,
+          cat: "2.3",
+          de: "Bei der Warenannahme liegt die Kerntemperatur vom Frischfleisch bei zwei Grad Celsius.",
+          vi: "Khi nhận hàng đầu vào, nhiệt độ tâm của thịt tươi ở mức 2 độ C.",
+          en: "At goods receipt, the core temperature of the fresh meat is two degrees Celsius.",
+        },
+        {
+          id: 20,
+          cat: "2.3",
+          de: "Bitte nimm im Kühllager immer zuerst die älteren Kisten nach dem FIFO-Prinzip.",
+          vi: "Trong kho lạnh vui lòng luôn lấy các thùng hàng cũ trước theo nguyên tắc nhập trước xuất trước.",
+          en: "In cold storage, please always take the older crates first following the FIFO principle.",
+        },
+        {
+          id: 21,
+          cat: "2.3",
+          de: "Die Qualitätssicherung braucht noch zwei Rückstellproben von der aktuellen Charge.",
+          vi: "Bộ phận đảm bảo chất lượng cần thêm hai mẫu lưu đối chứng của lô hàng hiện tại.",
+          en: "Quality assurance still needs two retention samples from the current batch.",
+        },
+        {
+          id: 22,
+          cat: "2.3",
+          de: "Achtung, auf dem Förderband hat sich ein Karton verklemmt! Ich stoppe kurz die Linie.",
+          vi: "Chú ý, trên băng tải có một thùng hàng bị kẹt! Tôi dừng dây chuyền một chút nhé.",
+          en: "Watch out, a carton is jammed on the conveyor belt! I'm stopping the line briefly.",
+        },
+        {
+          id: 23,
+          cat: "2.3",
+          de: "Kannst du mir bitte helfen, den vollen Kutterwagen zum Fleischwolf zu schieben?",
+          vi: "Bạn giúp tôi một tay đẩy xe inox đầy nguyên liệu tới máy xay thịt được không?",
+          en: "Can you please help me push the full cutter buggy to the meat grinder?",
+        },
+        {
+          id: 24,
+          cat: "2.3",
+          de: "Vorsicht beim Abspritzen mit dem Hochdruckreiniger, der Boden ist sehr rutschig!",
+          vi: "Cẩn thận khi xịt rửa bằng máy áp lực cao, sàn nhà đang rất trơn trượt!",
+          en: "Careful when spraying with the high-pressure washer; the floor is very slippery!",
+        },
+        {
+          id: 25,
+          cat: "2.3",
+          de: "Wir brauchen an Linie 1 noch leere Eurokisten, Etikettenrollen und Einmalhandschuhe.",
+          vi: "Ở dây chuyền số 1 chúng ta cần thêm thùng nhựa E2 rỗng, cuộn tem nhãn và găng tay dùng một lần.",
+          en: "On Line 1, we still need empty Euro crates, label rolls, and disposable gloves.",
+        },
+        {
+          id: 26,
+          cat: "2.3",
+          de: "Ich habe alle Temperaturwerte und die Metalldetektor-Kontrolle im Produktionsprotokoll eingetragen.",
+          vi: "Tôi đã ghi đầy đủ toàn bộ chỉ số nhiệt độ và kiểm tra máy dò kim loại vào biên bản sản xuất.",
+          en: "I have entered all temperature readings and the metal detector check in the production log.",
+        },
+        {
+          id: 27,
+          cat: "2.3",
+          de: "Können Sie die neue Charge vor dem Start bitte kurz freigeben?",
+          vi: "Anh/Chị có thể kiểm tra ký duyệt lô hàng mới trước khi chạy máy được không?",
+          en: "Could you please approve/release the new batch briefly before startup?",
+        },
+        {
+          id: 28,
+          cat: "2.4",
+          de: "Guten Morgen, Kollegen! Welche Schicht habt ihr diese Woche?",
+          vi: "Chào buổi sáng anh em đồng nghiệp! Tuần này mọi người làm ca nào?",
+          en: "Good morning, colleagues! Which shift do you have this week?",
+        },
+        {
+          id: 29,
+          cat: "2.4",
+          de: "Können Sie mir bitte kurz zeigen, wie ich die Maschine richtig einstelle?",
+          vi: "Anh/Chị có thể chỉ ngắn gọn cho tôi cách chỉnh máy đúng được không?",
+          en: "Could you please show me briefly how to set the machine properly?",
+        },
+        {
+          id: 30,
+          cat: "2.4",
+          de: "Ich habe das nicht ganz verstanden. Können Sie das bitte etwas langsamer wiederholen?",
+          vi: "Tôi chưa hiểu rõ lắm. Anh/Chị có thể nhắc lại chậm hơn một chút được không?",
+          en: "I didn't quite understand that. Could you please repeat that a little more slowly?",
+        },
+        {
+          id: 31,
+          cat: "2.4",
+          de: "Alles klar, ich erledige das sofort.",
+          vi: "Rõ rồi, tôi sẽ làm ngay.",
+          en: "All clear, I'll take care of that right away.",
+        },
+        {
+          id: 32,
+          cat: "2.4",
+          de: "Wann machen wir heute unsere Pause?",
+          vi: "Hôm nay mấy giờ chúng ta nghỉ giải lao?",
+          en: "When are we taking our break today?",
+        },
+        {
+          id: 33,
+          cat: "2.4",
+          de: "Denke daran, vor der Pause die Hygienekleidung auszuziehen.",
+          vi: "Nhớ cởi bỏ quần áo bảo hộ vệ sinh xưởng trước khi ra khu nghỉ giải lao nhé.",
+          en: "Remember to take off your hygienic workwear before the break.",
+        },
+        {
+          id: 34,
+          cat: "2.4",
+          de: "Ich gehe kurz ins Tiefkühllager und ziehe mir die Kälteschutzkleidung an.",
+          vi: "Tôi vào kho đông lạnh một lát nên tôi mặc thêm quần áo chống rét nhé.",
+          en: "I'm going into the deep-freeze warehouse briefly and putting on cold-protection gear.",
+        },
+        {
+          id: 35,
+          cat: 2.4,
+          de: "Die Übergabe für die Spätschicht ist fertig, die Linie läuft stabil.",
+          vi: "Phần bàn giao cho ca chiều đã xong, dây chuyền đang chạy ổn định.",
+          en: "The handover for the late shift is done; the line is running steadily.",
+        },
+        {
+          id: 36,
+          cat: "2.4",
+          de: "Vielen Dank für die gute Zusammenarbeit! Schönen Feierabend!",
+          vi: "Cảm ơn mọi người đã phối hợp tốt! Chúc tan ca vui vẻ!",
+          en: "Thanks for the great teamwork! Have a nice evening!",
+        },
+      ];
+
+      const DIALOGUES_DATA = [
+        {
+          id: 1,
+          tab_vi: "Hội thoại 1: Trạm khử khuẩn",
+          tab_en: "Dialogue 1: Hygiene Station",
+          title_vi:
+            "Hội thoại 1: Kiểm tra vệ sinh đầu ca & Đi qua trạm khử khuẩn (An der Hygieneschleuse)",
+          title_en:
+            "Dialogue 1: Start-of-Shift Hygiene Check & Passing the Hygiene Station",
+          context_vi:
+            "Đầu ca sáng trước khi bước vào xưởng chế biến thực phẩm, trưởng ca (Schichtleiter) nhắc nhở công nhân mới (Đức) kiểm tra đầy đủ vệ sinh cá nhân theo chuẩn HACCP.",
+          context_en:
+            "Early morning before entering the food processing hall, the shift supervisor (Schichtleiter) reminds new worker Đức about personal hygiene per HACCP.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Guten Morgen, Meister! Ich bin bereit für die Frühschicht. Wo soll ich heute arbeiten?",
+              vi: "Chào buổi sáng tổ trưởng! Em đã sẵn sàng cho ca sáng. Hôm nay em làm ở vị trí nào ạ?",
+              en: "Good morning, Meister! I'm ready for the early shift. Where am I working today?",
+            },
+            {
+              role: "partner",
+              name_vi: "Schichtleiter (Trưởng ca)",
+              name_en: "Schichtleiter (Shift Lead)",
+              de: "Guten Morgen, Đức! Heute bist du an der Verpackungslinie 2 eingeteilt. Hast du schon deine Hygienekleidung an?",
+              vi: "Chào buổi sáng Đức! Hôm nay cậu được phân công ở dây chuyền đóng gói số 2. Cậu đã mặc quần áo bảo hộ vệ sinh chưa?",
+              en: "Good morning, Đức! Today you're assigned to Packaging Line 2. Are you already wearing your hygienic workwear?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Ja, ich habe auch das Haarnetz über beide Ohren gezogen und meine Uhr sowie meinen Ring im Spind gelassen.",
+              vi: "Dạ rồi, em cũng đã kéo lưới trùm tóc che kín cả hai tai và cất đồng hồ, nhẫn vào tủ đồ rồi ạ.",
+              en: "Yes, I also pulled the hairnet over both ears and left my watch and ring in the locker.",
+            },
+            {
+              role: "partner",
+              name_vi: "Schichtleiter (Trưởng ca)",
+              name_en: "Schichtleiter (Shift Lead)",
+              de: "Sehr gut! Gehe jetzt bitte durch die Hygieneschleuse: zuerst Stiefel reinigen, dann Hände gründlich waschen und dreißig Sekunden desinfizieren.",
+              vi: "Rất tốt! Bây giờ cậu đi qua trạm kiểm soát vệ sinh nhé: đầu tiên rửa ủng, sau đó rửa tay kỹ và sát khuẩn tay trong 30 giây.",
+              en: "Very good! Please go through the hygiene station now: first clean your boots, then wash your hands thoroughly and disinfect for thirty seconds.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Alles klar! Danach ziehe ich die Einmalhandschuhe an und komme direkt an Linie 2.",
+              vi: "Em rõ rồi! Sau đó em đeo găng tay dùng một lần và tới ngay dây chuyền số 2 ạ.",
+              en: "All clear! Afterward, I'll put on disposable gloves and come right to Line 2.",
+            },
+          ],
+        },
+        {
+          id: 2,
+          tab_vi: "Hội thoại 2: Nhận hàng & Chuỗi lạnh",
+          tab_en: "Dialogue 2: Goods & Cold Chain",
+          title_vi:
+            "Hội thoại 2: Tiếp nhận nguyên liệu đầu vào & Kiểm tra chuỗi lạnh (Bei der Warenannahme)",
+          title_en:
+            "Dialogue 2: Receiving Raw Materials & Checking the Cold Chain (Bei der Warenannahme)",
+          context_vi:
+            "Tại khu vực nhập hàng (Wareneingang), Đức phối hợp với đồng nghiệp kiểm tra lô thịt tươi mới giao tới trước khi đưa vào kho lạnh.",
+          context_en:
+            "At goods receipt (Wareneingang), Đức works with a colleague to check a fresh meat delivery before moving it into cold storage.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Đức, der Kühl-LKW mit dem frischen Schweinefleisch ist gerade angekommen. Hilfst du mir kurz bei der Warenannahme?",
+              vi: "Đức ơi, xe tải lạnh chở thịt lợn tươi vừa tới rồi. Cậu giúp mình một tay ở khâu nhận hàng nhé?",
+              en: "Đức, the refrigerated truck with fresh pork just arrived. Will you help me briefly at goods receipt?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Gerne! Ich bringe sofort das Einstichthermometer und den Lieferschein mit.",
+              vi: "Được chứ! Mình mang ngay nhiệt kế đầu nhọn và phiếu giao hàng ra đây.",
+              en: "Gladly! I'll bring the probe thermometer and delivery note right over.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Super. Miss bitte die Kerntemperatur in mehreren Kisten, sie darf maximal vier Grad betragen.",
+              vi: "Tuyệt quá. Cậu đo giúp nhiệt độ tâm ở vài thùng hàng nhé, tối đa chỉ được phép ở mức 4 độ C thôi.",
+              en: "Great. Please measure the core temperature in several crates; it may be at most four degrees.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Ich habe gemessen: Alle Kisten liegen zwischen zwei und drei Grad, und die Verpackung ist sauber und unbeschädigt.",
+              vi: "Mình đo xong rồi: Tất cả các thùng đều từ 2 đến 3 độ C, bao bì sạch sẽ và nguyên vẹn.",
+              en: "I measured: all crates are between two and three degrees, and the packaging is clean and undamaged.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Perfekt! Dann fahren wir die Paletten sofort ins Kühllager und sortieren sie nach dem FIFO-Prinzip ein, damit die Kühlkette nicht unterbrochen wird.",
+              vi: "Hoàn hảo! Vậy chúng ta đẩy ngay các pallet vào kho lạnh và xếp theo nguyên tắc nhập trước xuất trước để không làm gián đoạn chuỗi lạnh nhé.",
+              en: "Perfect! Then we'll move the pallets into cold storage immediately and sort them by the FIFO principle so the cold chain isn't broken.",
+            },
+          ],
+        },
+        {
+          id: 3,
+          tab_vi: "Hội thoại 3: Pha lóc & Găng lưới thép",
+          tab_en: "Dialogue 3: Deboning & Safety",
+          title_vi:
+            "Hội thoại 3: Pha lóc thịt & An toàn sử dụng dao / găng tay lưới thép (In der Zerlegung)",
+          title_en:
+            "Dialogue 3: Meat Cutting & Knife / Chainmail Glove Safety (In der Zerlegung)",
+          context_vi:
+            "Tại khu vực pha lóc, tổ trưởng kiểm tra trang bị bảo hộ chống cắt cho Đức trước khi thao tác lọc xương.",
+          context_en:
+            "In the cutting room, the supervisor checks cut-protection gear for Đức before deboning work.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Schichtleiter (Trưởng ca)",
+              name_en: "Schichtleiter (Shift Lead)",
+              de: "Đức, heute hilfst du beim Ausbeinen der Teilstücke. Hast du deinen Stechschutzhandschuh und die Stechschutzschürze angelegt?",
+              vi: "Đức ơi, hôm nay cậu hỗ trợ lọc xương các phần thịt pha lóc. Cậu đã đeo găng tay lưới thép chống đâm và tạp dề bảo hộ chưa?",
+              en: "Đức, today you're helping with deboning the cuts. Have you put on your chainmail glove and cut-resistant apron?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Ja, der Stechschutzhandschuh sitzt fest an meiner linken Hand, und mein Ausbeinmesser habe ich gerade mit dem Wetzstahl geschärft.",
+              vi: "Dạ rồi, găng tay lưới thép đã đeo chắc ở tay trái của em, còn dao lọc xương em cũng vừa liếc sắc bằng cây liếc dao rồi ạ.",
+              en: "Yes, the chainmail glove fits tightly on my left hand, and I just honed my boning knife with the honing steel.",
+            },
+            {
+              role: "partner",
+              name_vi: "Schichtleiter (Trưởng ca)",
+              name_en: "Schichtleiter (Shift Lead)",
+              de: "Sehr gut. Denke daran, immer vom Körper weg zu schneiden und die Reste sauber in die blauen Kisten zu trennen.",
+              vi: "Rất tốt. Nhớ luôn cắt hướng dao ra xa cơ thể và phân loại phần thịt lọc gọn gàng vào các thùng xanh nhé.",
+              en: "Very good. Remember to always cut away from your body and separate the trimmings cleanly into the blue crates.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Verstanden! Falls ich mir doch einmal leicht in den Finger schneide, melde ich mich sofort und nehme ein blaues Pflaster.",
+              vi: "Em hiểu rồi! Nếu lỡ bị đứt tay nhẹ, em sẽ báo ngay và dán băng cá nhân màu xanh dương ạ.",
+              en: "Understood! If I ever nick my finger slightly, I'll report it immediately and use a blue plaster.",
+            },
+          ],
+        },
+        {
+          id: 4,
+          tab_vi: "Hội thoại 4: Đóng gói & Dò kim loại",
+          tab_en: "Dialogue 4: Packaging & Metal Check",
+          title_vi:
+            "Hội thoại 4: Vận hành máy đóng gói hút chân không & Kiểm tra tem nhãn (An der Verpackungslinie)",
+          title_en:
+            "Dialogue 4: Operating Vacuum Packaging & Checking Labels / Metal Detector",
+          context_vi:
+            "Trên dây chuyền đóng gói, Đức kiểm tra độ kín bao bì hút chân không, hạn sử dụng và máy dò kim loại cuối chuyền.",
+          context_en:
+            "On the packaging line, Đức checks vacuum seal tightness, shelf-life dates, and the end-of-line metal detector.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Entschuldigung, Schichtleiter, ich habe die neue Rolle Etiketten eingelegt. Können Sie bitte die erste Packung kontrollieren?",
+              vi: "Xin lỗi trưởng ca, em đã lắp cuộn tem nhãn mới rồi ạ. Anh kiểm tra giúp em gói hàng đầu tiên được không ạ?",
+              en: "Excuse me, shift supervisor, I loaded the new roll of labels. Could you check the first package, please?",
+            },
+            {
+              role: "partner",
+              name_vi: "Schichtleiter (Trưởng ca)",
+              name_en: "Schichtleiter (Shift Lead)",
+              de: "Schauen wir mal: Das Nettogewicht von 500 Gramm stimmt, das Verbrauchsdatum und die Chargennummer sind klar gedruckt.",
+              vi: "Để xem nào: Trọng lượng tịnh 500 gram chính xác, hạn sử dụng và số lô sản xuất in rất rõ nét.",
+              en: "Let's see: the net weight of 500 grams is right, and the use-by date and batch number are printed clearly.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Und die Schweißnaht der Vakuumverpackung ist auch komplett luftdicht. Soll ich jetzt den Metalldetektor mit den Prüfkörpern testen?",
+              vi: "Và đường hàn của gói hút chân không cũng kín khí hoàn toàn rồi ạ. Bây giờ em kiểm tra máy dò kim loại bằng các mẫu thử chuẩn nhé?",
+              en: "And the seal seam on the vacuum package is completely airtight too. Should I test the metal detector with the test pieces now?",
+            },
+            {
+              role: "partner",
+              name_vi: "Schichtleiter (Trưởng ca)",
+              name_en: "Schichtleiter (Shift Lead)",
+              de: "Ja, bitte mach den Test für Eisen, Edelstahl und Nichteisenmetall und trage das Ergebnis ins Produktionsprotokoll ein.",
+              vi: "Có, hãy chạy thử với mẫu sắt, inox và kim loại màu rồi ghi kết quả vào biên bản sản xuất nhé.",
+              en: "Yes, please run the test for iron, stainless steel, and non-ferrous metal and record the result in the production log.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Mache ich sofort! Danach gebe ich die Qualitätssicherung zwei Rückstellproben ab.",
+              vi: "Em làm ngay đây ạ! Sau đó em sẽ gửi hai mẫu lưu đối chứng cho phòng đảm bảo chất lượng.",
+              en: "I'll do that right away! Afterward, I'll give quality assurance two retention samples.",
+            },
+          ],
+        },
+        {
+          id: 5,
+          tab_vi: "Hội thoại 5: Sự cố chuyền & Hàng lỗi",
+          tab_en: "Dialogue 5: Line Jam & Rejects",
+          title_vi:
+            "Hội thoại 5: Xử lý sự cố kẹt băng chuyền & Loại bỏ hàng lỗi (Störung & Qualitätskontrolle)",
+          title_en: "Dialogue 5: Handling a Conveyor Jam & Sorting Out Rejects",
+          context_vi:
+            "Máy đóng gói báo lỗi kẹt khay hàng và làm hở màng bọc, Đức phối hợp xử lý an toàn.",
+          context_en:
+            "The packaging machine has a tray jam and torn film; Đức coordinates a safe response.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Achtung, Kollege! An der Verpackungsmaschine hat sich eine Schale verklemmt. Ich drücke kurz den Stopp-Knopf!",
+              vi: "Chú ý đồng nghiệp ơi! Trên máy đóng gói có một khay hàng bị kẹt rồi. Tôi bấm nút dừng máy một chút nhé!",
+              en: "Watch out, buddy! A tray got jammed on the packaging machine. I'm pressing the stop button briefly!",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Gut reagiert! Greife niemals bei laufendem Band in die Maschine. Ich öffne kurz die Schutzhaube und nehme die verklemmte Schale heraus.",
+              vi: "Phản ứng tốt lắm! Tuyệt đối không thò tay vào máy khi băng tải đang chạy. Để mình mở nắp chắn bảo vệ và lấy khay bị kẹt ra.",
+              en: "Good reaction! Never reach into the machine while the belt is running. I'll open the guard briefly and take out the jammed tray.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Danke! Bei diesen vier Packungen hier ist die Folie eingerissen und nicht mehr luftdicht. Ich sortiere sie sofort als Ausschuss aus.",
+              vi: "Cảm ơn bạn! Bốn gói hàng ở đây bị rách màng bọc và không còn kín khí nữa. Mình loại bỏ ngay sang khay hàng lỗi đây.",
+              en: "Thanks! On these four packages here, the film is torn and no longer airtight. I'm sorting them out as rejects right away.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Genau richtig. Danach starten wir die Linie wieder und achten darauf, dass die Schalen gerade auf dem Förderband liegen.",
+              vi: "Đúng rồi đấy. Sau đó chúng ta khởi động lại dây chuyền và chú ý xếp các khay thẳng hàng trên băng tải nhé.",
+              en: "Exactly right. Then we'll restart the line and make sure the trays sit straight on the conveyor belt.",
+            },
+          ],
+        },
+        {
+          id: 6,
+          tab_vi: "Hội thoại 6: Vệ sinh & Khử khuẩn cuối ca",
+          tab_en: "Dialogue 6: End-of-Shift Cleaning",
+          title_vi:
+            "Hội thoại 6: Vệ sinh & Khử khuẩn xưởng cuối ca sản xuất (Reinigung & Desinfektion)",
+          title_en:
+            "Dialogue 6: End-of-Shift Cleaning & Disinfection of the Processing Hall",
+          context_vi:
+            "Cuối ca chiều, tổ sản xuất tiến hành phun bọt tẩy rửa, khử khuẩn thiết bị và súc rửa hệ thống ống hút theo kế hoạch vệ sinh.",
+          context_en:
+            "At the end of the afternoon shift, the team applies cleaning foam and disinfects equipment per the cleaning plan.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Schichtleiter (Trưởng ca)",
+              name_en: "Schichtleiter (Shift Lead)",
+              de: "Männer, wir haben die letzte Charge verpackt. Jetzt beginnen wir mit der Reinigung nach dem Reinigungs- und Desinfektionsplan.",
+              vi: "Anh em ơi, chúng ta đã đóng gói xong lô hàng cuối cùng rồi. Bây giờ chúng ta bắt đầu vệ sinh xưởng theo bảng kế hoạch làm sạch và khử khuẩn nhé.",
+              en: "Guys, we've packed the last batch. Now we start cleaning according to the cleaning and disinfection plan.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Alles klar! Ich schalte zuerst die Maschinen aus und räume alle restlichen Rohstoffe zurück ins Kühllager.",
+              vi: "Rõ rồi ạ! Trước tiên em tắt các máy và cất toàn bộ nguyên liệu còn dư trở lại kho lạnh.",
+              en: "All clear! First I'll switch off the machines and put all remaining raw materials back into cold storage.",
+            },
+            {
+              role: "partner",
+              name_vi: "Schichtleiter (Trưởng ca)",
+              name_en: "Schichtleiter (Shift Lead)",
+              de: "Prima. Danach spritzt du das Förderband und den Arbeitstisch mit dem Hochdruckreiniger ab und schäumst alles gründlich ein.",
+              vi: "Tốt lắm. Sau đó cậu xịt rửa băng tải và bàn thao tác bằng máy áp lực cao rồi phun bọt vệ sinh thật kỹ nhé.",
+              en: "Great. After that, spray down the conveyor belt and worktable with the high-pressure washer and foam everything thoroughly.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Verstanden! Und wie lange muss das Desinfektionsmittel einwirken, bevor ich es mit klarem Wasser abspüle?",
+              vi: "Em hiểu rồi! Và dung dịch khử khuẩn cần ngấm trong bao lâu trước khi em xịt tráng lại bằng nước sạch ạ?",
+              en: "Understood! And how long does the disinfectant need to act before I rinse it off with clean water?",
+            },
+            {
+              role: "partner",
+              name_vi: "Schichtleiter (Trưởng ca)",
+              name_en: "Schichtleiter (Shift Lead)",
+              de: "Fünfzehn Minuten Einwirkzeit. Denke auch an deine rutschfesten Hygienestiefel, weil der Boden nass ist.",
+              vi: "Thời gian ngấm thuốc là 15 phút. Nhớ đi ủng bảo hộ chống trơn trượt vì sàn nhà đang ướt nhé.",
+              en: "Fifteen minutes contact time. Also remember your slip-resistant hygienic boots because the floor is wet.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Công nhân thực phẩm)",
+              name_en: "Đức (Food Worker)",
+              de: "Alles klar, wird erledigt! Schönen Feierabend später!",
+              vi: "Rõ rồi ạ, em làm ngay đây! Chúc anh lát nữa tan ca vui vẻ!",
+              en: "All clear, will do! Have a great evening later!",
+            },
+          ],
+        },
+      ];
+
+      // =========================================================================
+      // 3. APPLICATION STATE & PERSISTENCE (localStorage)
+      // =========================================================================
+      const state = {
+        lang: localStorage.getItem("fd_lang") || "vi",
+        activeTab: "vocab",
+        globalVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_globalVoice"),
+          "piper_hochdeutsch",
+        ),
+        workerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_workerVoice"),
+          "piper_hochdeutsch",
+        ),
+        partnerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_partnerVoice"),
+          "piper_rostock",
+        ),
+        speed: parseFloat(localStorage.getItem("fd_speed")) || 1.0,
+        vocabCategory: "all",
+        vocabQuery: "",
+        phraseCategory: "all",
+        activeDialogueId: 1,
+        fcCategory: "all",
+        fcDeck: [...VOCAB_DATA],
+        fcIndex: 0,
+        fcFlipped: false,
+        masteredIds: JSON.parse(
+          localStorage.getItem("fd_mastered_chebienthucpham") || "[]",
+        ),
+        voiceDrawerOpen: false,
+      };
+
+      const audioCtrl = {
+        element: null,
+        activeBtnId: null,
+        isFullDialoguePlaying: false,
+        dialogueStopFlag: false,
+        toastTimer: null,
+      };
+
+      function t(key) {
+        return (
+          (I18N[state.lang] && I18N[state.lang][key]) || I18N.vi[key] || key
+        );
+      }
+
+      function getVoiceObj(voiceId) {
+        return VOICE_CATALOG.find((v) => v.id === voiceId) || VOICE_CATALOG[0];
+      }
+
+      function showToast(msg) {
+        const box = document.getElementById("statusToast");
+        const txt = document.getElementById("statusToastText");
+        if (!box || !txt) return;
+        txt.textContent = msg;
+        box.classList.remove("hidden");
+        clearTimeout(audioCtrl.toastTimer);
+        audioCtrl.toastTimer = setTimeout(() => {
+          box.classList.add("hidden");
+        }, 3000);
+      }
+
+      // =========================================================================
+      // 4. AUDIO ENGINE WITH FALLBACK (audio/chebienthucpham/<voice>/<file>)
+      // =========================================================================
+      function syncPlayingButtonUI() {
+        document.querySelectorAll("[data-audio-btn]").forEach((btn) => {
+          const id = btn.getAttribute("data-audio-btn");
+          const isCurrent = audioCtrl.activeBtnId === id;
+          const iconPlay = btn.querySelector(".icon-play");
+          const iconStop = btn.querySelector(".icon-stop");
+          if (isCurrent) {
+            btn.classList.add("btn-playing");
+            if (iconPlay) iconPlay.classList.add("hidden");
+            if (iconStop) iconStop.classList.remove("hidden");
+          } else {
+            btn.classList.remove("btn-playing");
+            if (iconPlay) iconPlay.classList.remove("hidden");
+            if (iconStop) iconStop.classList.add("hidden");
+          }
+        });
+
+        const fullBtn = document.getElementById("playFullDialogueBtn");
+        if (fullBtn) {
+          if (audioCtrl.isFullDialoguePlaying) {
+            fullBtn.classList.add("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>■</span> <span>${t("stopFullDialogue")}</span>`;
+          } else {
+            fullBtn.classList.remove("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.add("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>▶</span> <span>${t("playFullDialogue")}</span>`;
+          }
+        }
+
+        document.querySelectorAll("[data-preview-btn]").forEach((btn) => {
+          const isPrev = audioCtrl.activeBtnId === "preview_sample";
+          if (isPrev) {
+            btn.classList.add("bg-red-600", "text-white");
+            btn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            btn.innerHTML = `<span>■</span> <span>${t("stopPreviewBtn")}</span>`;
+          } else {
+            btn.classList.remove("bg-red-600");
+            btn.classList.add("bg-blue-600", "hover:bg-blue-700", "text-white");
+            btn.innerHTML = `<span>🔊</span> <span>${t("previewVoiceBtn")}</span>`;
+          }
+        });
+      }
+
+      function stopAllAudio(resetDialogue = true) {
+        if (resetDialogue) {
+          audioCtrl.dialogueStopFlag = true;
+          audioCtrl.isFullDialoguePlaying = false;
+        }
+        if (audioCtrl.element) {
+          audioCtrl.element.pause();
+          audioCtrl.element.src = "";
+          audioCtrl.element = null;
+        }
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+        }
+        audioCtrl.activeBtnId = null;
+        document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+          el.classList.remove(
+            "dialogue-line-active",
+            "ring-2",
+            "ring-blue-500",
+            "bg-blue-50/70",
+          );
+        });
+        syncPlayingButtonUI();
+      }
+
+      function playAudioWithFallback(
+        fileName,
+        fallbackText,
+        voiceId,
+        btnId,
+        onEndedCallback = null,
+      ) {
+        if (audioCtrl.activeBtnId === btnId) {
+          stopAllAudio(true);
+          return;
+        }
+
+        stopAllAudio(false);
+        audioCtrl.activeBtnId = btnId;
+        syncPlayingButtonUI();
+
+        const chain = [voiceId, "piper_hochdeutsch", "edge_hochdeutsch"].filter(
+          (v, idx, arr) => v && arr.indexOf(v) === idx,
+        );
+        let attemptIdx = 0;
+
+        const finishPlayback = () => {
+          audioCtrl.activeBtnId = null;
+          audioCtrl.element = null;
+          syncPlayingButtonUI();
+          if (onEndedCallback) onEndedCallback();
+        };
+
+        const tryNextSource = () => {
+          if (attemptIdx >= chain.length) {
+            if ("speechSynthesis" in window && fallbackText) {
+              const utter = new SpeechSynthesisUtterance(fallbackText);
+              utter.lang = "de-DE";
+              utter.rate = state.speed;
+              utter.onend = finishPlayback;
+              utter.onerror = finishPlayback;
+              window.speechSynthesis.speak(utter);
+            } else {
+              finishPlayback();
+            }
+            return;
+          }
+
+          const currentVoice = chain[attemptIdx];
+          const src = `${AUDIO_BASE_PATH}/${currentVoice}/${fileName}`;
+          const audio = new Audio(src);
+          audio.playbackRate = state.speed;
+          audioCtrl.element = audio;
+
+          audio.onended = finishPlayback;
+          audio.onerror = () => {
+            if (attemptIdx === 0 && currentVoice !== "piper_hochdeutsch") {
+              showToast(t("fallbackNotice"));
+            }
+            attemptIdx++;
+            tryNextSource();
+          };
+
+          audio.play().catch(() => {
+            attemptIdx++;
+            tryNextSource();
+          });
+        };
+
+        tryNextSource();
+      }
+
+      async function toggleFullDialogue() {
+        if (audioCtrl.isFullDialoguePlaying) {
+          stopAllAudio(true);
+          return;
+        }
+        const dlg = DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId);
+        if (!dlg) return;
+
+        stopAllAudio(true);
+        audioCtrl.isFullDialoguePlaying = true;
+        audioCtrl.dialogueStopFlag = false;
+        syncPlayingButtonUI();
+
+        for (let i = 0; i < dlg.lines.length; i++) {
+          if (audioCtrl.dialogueStopFlag) break;
+          const line = dlg.lines[i];
+          const lineNum = i + 1;
+          const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+          const voice =
+            line.role === "worker" ? state.workerVoice : state.partnerVoice;
+
+          document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+            el.classList.remove(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+          });
+          const rowEl = document.getElementById(`row_${btnId}`);
+          if (rowEl) {
+            rowEl.classList.add(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+            rowEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+
+          await new Promise((resolve) => {
+            playAudioWithFallback(
+              `dialog_${dlg.id}_line_${lineNum}.mp3`,
+              line.de,
+              voice,
+              btnId,
+              resolve,
+            );
+          });
+
+          if (!audioCtrl.dialogueStopFlag && i < dlg.lines.length - 1) {
+            await new Promise((r) => setTimeout(r, 350));
+          }
+        }
+
+        stopAllAudio(true);
+      }
+
+      // =========================================================================
+      // 5. VOICE DRAWER / POPOVER CONTROLS
+      // =========================================================================
+      function buildVoiceOptionsHTML(selectedId) {
+        const groups = {};
+        VOICE_CATALOG.forEach((v) => {
+          const g = state.lang === "en" ? v.group_en : v.group_vi;
+          if (!groups[g]) groups[g] = [];
+          groups[g].push(v);
+        });
+        return Object.entries(groups)
+          .map(
+            ([groupLabel, items]) => `
+        <optgroup label="${groupLabel}">
+          ${items
+            .map(
+              (v) => `
+            <option value="${v.id}" ${v.id === selectedId ? "selected" : ""}>
+              ${state.lang === "en" ? v.label_en : v.label_vi}
+            </option>
+          `,
+            )
+            .join("")}
+        </optgroup>
+      `,
+          )
+          .join("");
+      }
+
+      function renderVoiceForms() {
+        const formHTML = `
+        <div class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("selectVoiceLabel")}</label>
+            <select onchange="setGlobalVoice(this.value)"
+              class="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              ${buildVoiceOptionsHTML(state.globalVoice)}
+            </select>
+          </div>
+
+          <button type="button" data-preview-btn onclick="playAudioWithFallback('sample.mp3', 'Guten Morgen! Ich bin bereit für die Frühschicht.', state.globalVoice, 'preview_sample')"
+            class="w-full h-10 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer">
+            <span>🔊</span> <span>${t("previewVoiceBtn")}</span>
+          </button>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("speedLabel")}</label>
+            <div class="grid grid-cols-3 gap-1.5 bg-slate-100 p-1 rounded-xl">
+              ${[
+                { val: 0.75, label: t("speedSlow") },
+                { val: 1.0, label: t("speedNormal") },
+                { val: 1.25, label: t("speedFast") },
+              ]
+                .map(
+                  (sp) => `
+                <button type="button" onclick="setPlaybackSpeed(${sp.val})"
+                  class="h-9 rounded-lg text-xs font-bold transition cursor-pointer ${state.speed === sp.val ? "bg-amber-500 text-slate-950 shadow-xs" : "text-slate-600 hover:text-slate-900"}">
+                  ${sp.label}
+                </button>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+        </div>
+      `;
+
+        const dForm = document.getElementById("desktopVoiceForm");
+        const mForm = document.getElementById("mobileVoiceForm");
+        if (dForm) dForm.innerHTML = formHTML;
+        if (mForm) mForm.innerHTML = formHTML;
+
+        const vObj = getVoiceObj(state.globalVoice);
+        const shortName = state.lang === "en" ? vObj.short_en : vObj.short_vi;
+        const pill = document.getElementById("voicePillLabel");
+        if (pill) pill.textContent = `${shortName} • ${state.speed}x`;
+
+        const wSel = document.getElementById("workerVoiceSelect");
+        const pSel = document.getElementById("partnerVoiceSelect");
+        if (wSel) wSel.innerHTML = buildVoiceOptionsHTML(state.workerVoice);
+        if (pSel) pSel.innerHTML = buildVoiceOptionsHTML(state.partnerVoice);
+
+        syncPlayingButtonUI();
+      }
+
+      function toggleVoiceDrawer() {
+        state.voiceDrawerOpen = !state.voiceDrawerOpen;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+
+        if (state.voiceDrawerOpen) {
+          renderVoiceForms();
+          popover.classList.remove("md:hidden");
+          popover.classList.add("md:block");
+          sheet.classList.remove("hidden");
+          backdrop.classList.remove("hidden");
+        } else {
+          closeVoiceDrawer();
+        }
+      }
+
+      function closeVoiceDrawer() {
+        state.voiceDrawerOpen = false;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+        popover.classList.add("md:hidden");
+        popover.classList.remove("md:block");
+        sheet.classList.add("hidden");
+        backdrop.classList.add("hidden");
+      }
+
+      document.addEventListener("click", (e) => {
+        if (!state.voiceDrawerOpen) return;
+        const popover = document.getElementById("desktopVoicePopover");
+        const trigger = document.getElementById("voiceTriggerBtn");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        if (
+          !popover.contains(e.target) &&
+          !trigger.contains(e.target) &&
+          !sheet.contains(e.target)
+        ) {
+          closeVoiceDrawer();
+        }
+      });
+
+      function setGlobalVoice(voiceId) {
+        state.globalVoice = voiceId;
+        localStorage.setItem("fd_globalVoice", voiceId);
+        renderVoiceForms();
+      }
+
+      function updateDialogueVoice(role, voiceId) {
+        if (role === "worker") {
+          state.workerVoice = voiceId;
+          localStorage.setItem("fd_workerVoice", voiceId);
+        } else {
+          state.partnerVoice = voiceId;
+          localStorage.setItem("fd_partnerVoice", voiceId);
+        }
+      }
+
+      function setPlaybackSpeed(newSpeed) {
+        state.speed = newSpeed;
+        localStorage.setItem("fd_speed", String(newSpeed));
+        if (audioCtrl.element) {
+          audioCtrl.element.playbackRate = newSpeed;
+        }
+        renderVoiceForms();
+      }
+
+      // =========================================================================
+      // 6. SMART NORMALIZATION & RENDERERS (100% VI <-> EN)
+      // =========================================================================
+      function normalizeSearch(str) {
+        return (str || "")
+          .toLowerCase()
+          .replace(/ä/g, "a")
+          .replace(/ö/g, "o")
+          .replace(/ü/g, "u")
+          .replace(/ß/g, "ss")
+          .normalize("NFD")
+          .replace(/[̀-ͯ]/g, "")
+          .replace(/đ/g, "d");
+      }
+
+      function renderNavigation() {
+        const tabs = [
+          {
+            id: "vocab",
+            dLabel: `${t("nav_vocab_desktop")} (${VOCAB_DATA.length})`,
+            mLabel: t("nav_vocab_mobile"),
+            icon: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25",
+          },
+          {
+            id: "phrases",
+            dLabel: `${t("nav_phrases_desktop")} (${PHRASES_DATA.length})`,
+            mLabel: t("nav_phrases_mobile"),
+            icon: "M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z",
+          },
+          {
+            id: "dialogues",
+            dLabel: `${t("nav_dialogues_desktop")} (${DIALOGUES_DATA.length})`,
+            mLabel: t("nav_dialogues_mobile"),
+            icon: "M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155",
+          },
+          {
+            id: "flashcards",
+            dLabel: t("nav_flashcards_desktop"),
+            mLabel: t("nav_flashcards_mobile"),
+            icon: "M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3",
+          },
+        ];
+
+        document.getElementById("desktopNav").innerHTML = tabs
+          .map(
+            (tab) => `
+        <button type="button" onclick="switchTab('${tab.id}')"
+          class="px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${state.activeTab === tab.id ? "bg-white text-slate-900 shadow-xs" : "text-slate-300 hover:text-white hover:bg-slate-700/60"}">
+          ${tab.dLabel}
+        </button>
+      `,
+          )
+          .join("");
+
+        document.getElementById("mobileNavGrid").innerHTML = tabs
+          .map((tab) => {
+            const active = state.activeTab === tab.id;
+            return `
+          <button type="button" onclick="switchTab('${tab.id}')"
+            class="flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition cursor-pointer ${active ? "text-blue-600" : "text-slate-500 hover:text-slate-800"}">
+            <svg class="w-5 h-5 ${active ? "stroke-[2.3]" : "stroke-[1.8]"}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="${tab.icon}" />
+            </svg>
+            <span>${tab.mLabel}</span>
+          </button>
+        `;
+          })
+          .join("");
+      }
+
+      function switchTab(tabId) {
+        state.activeTab = tabId;
+        ["vocab", "phrases", "dialogues", "flashcards"].forEach((id) => {
+          const el = document.getElementById(`section-${id}`);
+          if (el) el.classList.toggle("hidden", id !== tabId);
+        });
+        renderNavigation();
+        if (tabId === "flashcards") renderFlashcard();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function speakBtnHTML(btnId, sizeClass = "w-11 h-11") {
+        return `
+        <button type="button" data-audio-btn="${btnId}"
+          class="${sizeClass} shrink-0 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200/80 flex items-center justify-center transition cursor-pointer active:scale-95"
+          aria-label="Play audio">
+          <svg class="icon-play w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+          </svg>
+          <span class="icon-stop hidden text-xs font-extrabold">■</span>
+        </button>
+      `;
+      }
+
+      function renderVocab() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("cat_all")} (${VOCAB_DATA.length})` },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+
+        document.getElementById("vocabCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setVocabCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.vocabCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const q = normalizeSearch(state.vocabQuery);
+        const filtered = VOCAB_DATA.filter((item) => {
+          const matchCat =
+            state.vocabCategory === "all" || item.cat === state.vocabCategory;
+          if (!matchCat) return false;
+          if (!q) return true;
+          const haystack = normalizeSearch(
+            `${item.de} ${item.vi} ${item.en} ${item.rel_vi} ${item.rel_en} ${item.ex_de} ${item.ex_vi} ${item.ex_en}`,
+          );
+          return haystack.includes(q);
+        });
+
+        const grid = document.getElementById("vocabGrid");
+        if (filtered.length === 0) {
+          grid.innerHTML = `<div class="col-span-full bg-white rounded-2xl p-8 text-center text-sm text-slate-500 border border-slate-200">${t("noResults")}</div>`;
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map((item) => {
+            const typeStr = state.lang === "en" ? item.type_en : item.type_vi;
+            const meaningStr = state.lang === "en" ? item.en : item.vi;
+            const relStr = state.lang === "en" ? item.rel_en : item.rel_vi;
+            const exTrans = state.lang === "en" ? item.ex_en : item.ex_vi;
+            const wordBtnId = `vocab_${item.id}_word`;
+            const exBtnId = `vocab_${item.id}_ex`;
+
+            return `
+          <article class="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex flex-col justify-between gap-3.5">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">${item.de}</h2>
+                    <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-100">${typeStr}</span>
+                  </div>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">${item.ipa}</p>
+                  <p class="text-sm sm:text-base font-bold text-emerald-700 mt-1.5">${meaningStr}</p>
+                </div>
+                <div onclick="playAudioWithFallback('vocab_${item.id}_word.mp3', '${item.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="mt-2.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                <span class="font-semibold text-slate-700">${t("relatedPrefix")}</span> ${relStr}
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-orange-50/70 border border-orange-200/60 flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <p class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">${item.ex_de}</p>
+                <p class="text-xs text-slate-600 italic mt-0.5 leading-snug">${exTrans}</p>
+              </div>
+              <div onclick="playAudioWithFallback('vocab_${item.id}_ex.mp3', '${item.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')">
+                ${speakBtnHTML(exBtnId, "w-11 h-11 bg-orange-100/80 hover:bg-orange-200/80 text-orange-900 border-orange-200")}
+              </div>
+            </div>
+          </article>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setVocabCategory(cat) {
+        state.vocabCategory = cat;
+        renderVocab();
+      }
+
+      function handleVocabSearch(val) {
+        state.vocabQuery = val;
+        const clearBtn = document.getElementById("clearSearchBtn");
+        if (clearBtn) {
+          clearBtn.classList.toggle("hidden", !val);
+          clearBtn.classList.toggle("flex", Boolean(val));
+        }
+        renderVocab();
+      }
+
+      function clearVocabSearch() {
+        const input = document.getElementById("vocabSearchInput");
+        if (input) input.value = "";
+        handleVocabSearch("");
+      }
+
+      function renderPhrases() {
+        const countPCat = (cat) =>
+          PHRASES_DATA.filter((p) => p.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("pcat_all")} (${PHRASES_DATA.length})` },
+          { id: "2.1", label: `${t("pcat_2_1")} (${countPCat("2.1")})` },
+          { id: "2.2", label: `${t("pcat_2_2")} (${countPCat("2.2")})` },
+          { id: "2.3", label: `${t("pcat_2_3")} (${countPCat("2.3")})` },
+          { id: "2.4", label: `${t("pcat_2_4")} (${countPCat("2.4")})` },
+        ];
+
+        document.getElementById("phraseCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setPhraseCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.phraseCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const filtered = PHRASES_DATA.filter(
+          (p) =>
+            state.phraseCategory === "all" || p.cat === state.phraseCategory,
+        );
+        document.getElementById("phrasesList").innerHTML = filtered
+          .map((p) => {
+            const trans = state.lang === "en" ? p.en : p.vi;
+            const btnId = `phrase_${p.id}`;
+            return `
+          <div class="bg-white rounded-2xl p-4 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex items-center justify-between gap-3.5">
+            <div class="min-w-0">
+              <span class="inline-block text-[11px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md mb-1">${p.cat}</span>
+              <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${p.de}</p>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">${trans}</p>
+            </div>
+            <div onclick="playAudioWithFallback('phrase_${p.id}.mp3', '${p.de.replace(/'/g, "\'")}', state.globalVoice, '${btnId}')">
+              ${speakBtnHTML(btnId, "w-11 h-11")}
+            </div>
+          </div>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setPhraseCategory(cat) {
+        state.phraseCategory = cat;
+        renderPhrases();
+      }
+
+      function renderDialogues() {
+        document.getElementById("dialogueTabs").innerHTML = DIALOGUES_DATA.map(
+          (d) => {
+            const label = state.lang === "en" ? d.tab_en : d.tab_vi;
+            const active = d.id === state.activeDialogueId;
+            return `
+          <button type="button" onclick="selectDialogue(${d.id})"
+            class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition cursor-pointer ${active ? "bg-slate-900 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+            ${label}
+          </button>
+        `;
+          },
+        ).join("");
+
+        const dlg =
+          DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId) ||
+          DIALOGUES_DATA[0];
+        const title = state.lang === "en" ? dlg.title_en : dlg.title_vi;
+        const context = state.lang === "en" ? dlg.context_en : dlg.context_vi;
+
+        document.getElementById("dialogueContainer").innerHTML = `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-slate-900">${title}</h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">${context}</p>
+          </div>
+          <button id="playFullDialogueBtn" type="button" onclick="toggleFullDialogue()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 shadow-xs transition cursor-pointer">
+            <span>▶</span> <span>${t("playFullDialogue")}</span>
+          </button>
+        </div>
+
+        <div class="space-y-3">
+          ${dlg.lines
+            .map((line, idx) => {
+              const lineNum = idx + 1;
+              const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+              const speakerName =
+                state.lang === "en" ? line.name_en : line.name_vi;
+              const lineTrans = state.lang === "en" ? line.en : line.vi;
+              const isWorker = line.role === "worker";
+              const voiceForLine = isWorker
+                ? state.workerVoice
+                : state.partnerVoice;
+
+              return `
+              <div id="row_${btnId}" class="p-3.5 sm:p-4 rounded-2xl border transition flex items-start justify-between gap-3 ${isWorker ? "bg-slate-50/90 border-slate-200/80" : "bg-orange-50/50 border-orange-200/60"}">
+                <div class="min-w-0">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold mb-1 ${isWorker ? "bg-blue-100 text-blue-800" : "bg-orange-100 text-orange-900"}">
+                    ${speakerName}
+                  </span>
+                  <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${line.de}</p>
+                  <p class="text-xs sm:text-sm text-slate-600 mt-1">${lineTrans}</p>
+                </div>
+                <div onclick="playAudioWithFallback('dialog_${dlg.id}_line_${lineNum}.mp3', '${line.de.replace(/'/g, "\'")}', '${voiceForLine}', '${btnId}')">
+                  ${speakBtnHTML(btnId, "w-11 h-11")}
+                </div>
+              </div>
+            `;
+            })
+            .join("")}
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function selectDialogue(id) {
+        stopAllAudio(true);
+        state.activeDialogueId = id;
+        renderDialogues();
+      }
+
+      function renderFlashcardControls() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cardUnit = state.lang === "en" ? "cards" : "thẻ";
+        const opts = [
+          {
+            id: "all",
+            label: `${t("fcAllCategories")} (${VOCAB_DATA.length} ${cardUnit})`,
+          },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+        document.getElementById("fcCategorySelect").innerHTML = opts
+          .map(
+            (o) => `
+        <option value="${o.id}" ${o.id === state.fcCategory ? "selected" : ""}>${o.label}</option>
+      `,
+          )
+          .join("");
+      }
+
+      function renderFlashcard() {
+        renderFlashcardControls();
+        if (state.fcDeck.length === 0) state.fcDeck = [...VOCAB_DATA];
+        if (state.fcIndex >= state.fcDeck.length) state.fcIndex = 0;
+
+        const card = state.fcDeck[state.fcIndex];
+        const typeStr = state.lang === "en" ? card.type_en : card.type_vi;
+        const meaningStr = state.lang === "en" ? card.en : card.vi;
+        const relStr = state.lang === "en" ? card.rel_en : card.rel_vi;
+        const exTrans = state.lang === "en" ? card.ex_en : card.ex_vi;
+        const isMastered = state.masteredIds.includes(card.id);
+
+        document.getElementById("fcCounter").textContent =
+          `${state.fcIndex + 1} / ${state.fcDeck.length}`;
+
+        const masterBtn = document.getElementById("fcMasterBtn");
+        if (isMastered) {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-bold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>✓</span> <span>${t("fcMastered")}</span>`;
+        } else {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-semibold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>○</span> <span>${t("fcMarkMastered")}</span>`;
+        }
+
+        const wordBtnId = `fc_word_${card.id}`;
+        const exBtnId = `fc_ex_${card.id}`;
+
+        document.getElementById("flashcardStage").innerHTML = `
+        <div onclick="flipFlashcard()" class="relative w-full min-h-[310px] sm:min-h-[340px] cursor-pointer select-none">
+          <div class="w-full min-h-[310px] sm:min-h-[340px] transform-style-3d ${state.fcFlipped ? "rotate-y-180" : ""}">
+            
+            <!-- FRONT -->
+            <div class="absolute inset-0 backface-hidden bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 flex flex-col items-center justify-between text-center">
+              <div class="w-full flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-orange-50 text-orange-900">${typeStr}</span>
+                <div onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="my-auto py-4">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${card.de}</h2>
+                <p class="text-sm font-mono text-slate-400 mt-2">${card.ipa}</p>
+              </div>
+
+              <p class="text-xs font-medium text-slate-400">${t("fcFrontHint")}</p>
+            </div>
+
+            <!-- BACK -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-800 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <p class="text-xs font-semibold text-amber-400 uppercase tracking-wider">${card.de}</p>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-1">${meaningStr}</h3>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')"
+                    class="h-10 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shrink-0 cursor-pointer">
+                    <span>🔊</span> <span>${t("fcWordBtn")}</span>
+                  </button>
+                </div>
+
+                <p class="text-xs text-slate-300 bg-slate-800/80 p-3 rounded-xl mt-3 leading-relaxed">
+                  <span class="font-semibold text-amber-300">${t("relatedPrefix")}</span> ${relStr}
+                </p>
+
+                <div class="mt-3 p-3.5 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="text-xs sm:text-sm font-semibold text-white leading-snug">${card.ex_de}</p>
+                    <p class="text-xs text-slate-300 italic mt-1">${exTrans}</p>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_ex.mp3', '${card.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')"
+                    class="w-11 h-11 shrink-0 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center justify-center font-bold cursor-pointer">
+                    🔊
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-center text-xs text-slate-400 mt-3">${t("fcBackHint")}</p>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function flipFlashcard() {
+        state.fcFlipped = !state.fcFlipped;
+        renderFlashcard();
+      }
+
+      function nextFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex = (state.fcIndex + 1) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function prevFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex =
+          (state.fcIndex - 1 + state.fcDeck.length) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function setFlashcardCategory(cat) {
+        state.fcCategory = cat;
+        state.fcFlipped = false;
+        state.fcIndex = 0;
+        state.fcDeck =
+          cat === "all"
+            ? [...VOCAB_DATA]
+            : VOCAB_DATA.filter((v) => v.cat === cat);
+        renderFlashcard();
+      }
+
+      function shuffleFlashcards() {
+        for (let i = state.fcDeck.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [state.fcDeck[i], state.fcDeck[j]] = [
+            state.fcDeck[j],
+            state.fcDeck[i],
+          ];
+        }
+        state.fcIndex = 0;
+        state.fcFlipped = false;
+        renderFlashcard();
+      }
+
+      function toggleFlashcardMastered() {
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+        const idx = state.masteredIds.indexOf(card.id);
+        if (idx >= 0) {
+          state.masteredIds.splice(idx, 1);
+        } else {
+          state.masteredIds.push(card.id);
+        }
+        localStorage.setItem(
+          "fd_mastered_chebienthucpham",
+          JSON.stringify(state.masteredIds),
+        );
+        renderFlashcard();
+      }
+
+      function renderFoodNotes() {
+        document.getElementById("notesHeading").textContent = t("notesHeading");
+        const items = t("notes") || [];
+        document.getElementById("notesList").innerHTML = items
+          .map(
+            (n) => `
+        <li class="p-3 rounded-xl bg-slate-50 border border-slate-100">${n}</li>
+      `,
+          )
+          .join("");
+      }
+
+      // =========================================================================
+      // 7. LANGUAGE SWITCHER (100% UI + CONTENT LOCALIZATION)
+      // =========================================================================
+      function setLanguage(lang) {
+        state.lang = lang;
+        localStorage.setItem("fd_lang", lang);
+        document.documentElement.lang = lang;
+        document.title = t("pageTitle");
+
+        const viBtn = document.getElementById("langBtnVi");
+        const enBtn = document.getElementById("langBtnEn");
+        if (lang === "vi") {
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        } else {
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        }
+
+        document.getElementById("backHomeText").textContent = t("backHomeText");
+        document.getElementById("brandTitle").textContent = t("brandTitle");
+        document.getElementById("popoverTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("sheetTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("vocabSearchInput").placeholder =
+          t("searchPlaceholder");
+        document.getElementById("workerVoiceLabel").textContent =
+          t("workerVoiceLabel");
+        document.getElementById("partnerVoiceLabel").textContent =
+          t("partnerVoiceLabel");
+        document.getElementById("fcShuffleText").textContent = t("fcShuffle");
+        document.getElementById("fcPrevText").textContent = t("fcPrev");
+        document.getElementById("fcNextText").textContent = t("fcNext");
+        document.getElementById("fcShortcutHint").textContent =
+          t("fcShortcutHint");
+
+        renderNavigation();
+        renderVoiceForms();
+        renderVocab();
+        renderPhrases();
+        renderDialogues();
+        renderFlashcard();
+        renderFoodNotes();
+      }
+
+      // =========================================================================
+      // 8. KEYBOARD SHORTCUTS
+      // =========================================================================
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && state.voiceDrawerOpen) {
+          closeVoiceDrawer();
+          return;
+        }
+        if (
+          ["INPUT", "SELECT", "TEXTAREA"].includes(
+            document.activeElement.tagName,
+          )
+        )
+          return;
+        if (state.activeTab !== "flashcards") return;
+
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+
+        if (e.code === "Space") {
+          e.preventDefault();
+          flipFlashcard();
+        } else if (e.key === "ArrowRight") {
+          nextFlashcard();
+        } else if (e.key === "ArrowLeft") {
+          prevFlashcard();
+        } else if (e.key.toLowerCase() === "s") {
+          playAudioWithFallback(
+            `vocab_${card.id}_word.mp3`,
+            card.de,
+            state.globalVoice,
+            `fc_word_${card.id}`,
+          );
+        } else if (e.key.toLowerCase() === "e") {
+          playAudioWithFallback(
+            `vocab_${card.id}_ex.mp3`,
+            card.ex_de,
+            state.globalVoice,
+            `fc_ex_${card.id}`,
+          );
+        }
+      });
+
+      // =========================================================================
+      // 9. INITIALIZE APP
+      // =========================================================================
+      setLanguage(state.lang);
+    </script>
+  </body>
+</html>

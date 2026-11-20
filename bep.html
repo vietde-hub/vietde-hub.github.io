@@ -1,0 +1,3856 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>
+      Fachdeutsch — Tiếng Đức Ngành Bếp & Phụ Bếp (Koch & Küchenhilfe) | VietDe
+      Hub
+    </title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='14'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Crect width='64' height='21.34' y='0' fill='%23111827'/%3E%3Crect width='64' height='21.34' y='21.33' fill='%23DC2626'/%3E%3Crect width='64' height='21.34' y='42.66' fill='%23FACC15'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: #f1f5f9;
+        color: #0f172a;
+        min-height: 100dvh;
+        padding-bottom: calc(76px + var(--safe-bottom));
+      }
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 40px;
+        }
+      }
+      .bottom-nav-safe {
+        padding-bottom: calc(6px + var(--safe-bottom));
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+      @keyframes pulseRing {
+        0% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45);
+        }
+        70% {
+          box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        }
+      }
+      .btn-playing {
+        background-color: #ef4444 !important;
+        color: #ffffff !important;
+        border-color: #ef4444 !important;
+        animation: pulseRing 1.4s infinite;
+      }
+      @keyframes sheetSlideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .animate-sheet-up {
+        animation: sheetSlideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes popoverFade {
+        from {
+          opacity: 0;
+          transform: translateY(-6px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-popover {
+        animation: popoverFade 0.18s ease-out;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-amber-200 selection:text-slate-900">
+    <!-- =====================================================================
+       ADAPTIVE STICKY TOP BAR (Back to Hub + Compact Mobile + 1-Row Desktop)
+       ===================================================================== -->
+    <header
+      class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-3 sm:px-6 h-14 flex items-center justify-between gap-2"
+      >
+        <!-- Left: Back to Hub + Brand + Desktop Navigation Tabs -->
+        <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
+          <a
+            href="index.html"
+            id="backHomeBtn"
+            title="Trang chủ / Home"
+            class="h-9 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center gap-1 shrink-0 transition"
+          >
+            <span>←</span>
+            <span id="backHomeText" class="hidden sm:inline">Trang chủ</span>
+          </a>
+
+          <div class="flex items-center gap-2 min-w-0">
+            <div
+              class="w-8 h-8 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center font-extrabold shadow-inner shrink-0"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"
+                />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span
+                  id="brandTitle"
+                  class="font-bold text-sm sm:text-base tracking-tight truncate"
+                  >Bếp & Phụ Bếp</span
+                >
+                <span
+                  class="hidden xl:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30"
+                  >Koch & Küchenhilfe</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Single-Row Navigation Tabs (Hidden on Mobile) -->
+          <nav
+            id="desktopNav"
+            class="hidden md:flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-slate-700/70"
+            aria-label="Primary Navigation"
+          ></nav>
+        </div>
+
+        <!-- Right: Voice Settings Trigger Pill + VI/EN Switch -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0 relative">
+          <button
+            id="voiceTriggerBtn"
+            type="button"
+            onclick="toggleVoiceDrawer()"
+            class="h-9 px-2.5 sm:px-3 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 border border-slate-700 text-xs font-medium text-slate-100 flex items-center gap-1.5 transition cursor-pointer"
+          >
+            <span class="text-amber-400">🎙</span>
+            <span
+              id="voicePillLabel"
+              class="max-w-[105px] sm:max-w-[160px] lg:max-w-[210px] truncate"
+              >Piper Chuẩn Đức • 1.0x</span
+            >
+            <svg
+              class="w-3.5 h-3.5 text-slate-400 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <!-- Language Switcher VI | EN -->
+          <div
+            class="h-9 bg-slate-800 p-0.5 rounded-xl border border-slate-700 flex items-center"
+            role="group"
+            aria-label="Language Switch"
+          >
+            <button
+              id="langBtnVi"
+              type="button"
+              onclick="setLanguage('vi')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              VI
+            </button>
+            <button
+              id="langBtnEn"
+              type="button"
+              onclick="setLanguage('en')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              EN
+            </button>
+          </div>
+
+          <!-- DESKTOP POPOVER: Voice & Speed Controls -->
+          <div
+            id="desktopVoicePopover"
+            class="hidden md:hidden absolute right-0 top-12 w-80 bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200 p-4 z-50 animate-popover"
+          >
+            <div
+              class="flex items-center justify-between pb-2.5 mb-3 border-b border-slate-100"
+            >
+              <span
+                id="popoverTitle"
+                class="text-xs font-bold uppercase tracking-wider text-slate-500"
+                >Cài đặt Giọng đọc & Tốc độ</span
+              >
+              <button
+                type="button"
+                onclick="closeVoiceDrawer()"
+                class="w-7 h-7 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+            <div id="desktopVoiceForm"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subtle Non-Blocking Audio Fallback / Status Banner -->
+    <div
+      id="statusToast"
+      class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-50 max-w-[92vw] sm:max-w-md bg-slate-900/95 text-white text-xs px-3.5 py-2 rounded-full shadow-lg border border-slate-700 flex items-center gap-2"
+    >
+      <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+      <span id="statusToastText" class="truncate"></span>
+    </div>
+
+    <!-- =====================================================================
+       MAIN CONTENT AREA
+       ===================================================================== -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6">
+      <!-- TAB 1: VOCABULARY -->
+      <section id="section-vocab" class="space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 space-y-3"
+        >
+          <div class="relative">
+            <svg
+              class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z"
+              />
+            </svg>
+            <input
+              id="vocabSearchInput"
+              type="search"
+              oninput="handleVocabSearch(this.value)"
+              placeholder="Tìm từ tiếng Đức, nghĩa tiếng Việt..."
+              class="w-full h-11 pl-10 pr-9 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
+            />
+            <button
+              id="clearSearchBtn"
+              type="button"
+              onclick="clearVocabSearch()"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-xs items-center justify-center hover:bg-slate-300 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div
+            id="vocabCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5"
+          ></div>
+        </div>
+
+        <div
+          id="vocabGrid"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"
+        ></div>
+      </section>
+
+      <!-- TAB 2: KITCHEN PHRASES -->
+      <section id="section-phrases" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80"
+        >
+          <div
+            id="phraseCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar"
+          ></div>
+        </div>
+        <div
+          id="phrasesList"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3"
+        ></div>
+      </section>
+
+      <!-- TAB 3: DIALOGUES -->
+      <section id="section-dialogues" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3.5 sm:p-5 shadow-sm border border-slate-200/80 space-y-4"
+        >
+          <div
+            id="dialogueTabs"
+            class="flex items-center gap-2 overflow-x-auto no-scrollbar"
+          ></div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100"
+          >
+            <div>
+              <label
+                id="workerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Bếp / Phụ bếp (Đức)</label
+              >
+              <select
+                id="workerVoiceSelect"
+                onchange="updateDialogueVoice('worker', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+            <div>
+              <label
+                id="partnerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Bếp trưởng / Đồng nghiệp</label
+              >
+              <select
+                id="partnerVoiceSelect"
+                onchange="updateDialogueVoice('partner', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="dialogueContainer"
+          class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200/80"
+        ></div>
+      </section>
+
+      <!-- TAB 4: FLASHCARDS -->
+      <section
+        id="section-flashcards"
+        class="hidden space-y-4 max-w-2xl mx-auto"
+      >
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 flex flex-wrap items-center justify-between gap-2"
+        >
+          <select
+            id="fcCategorySelect"
+            onchange="setFlashcardCategory(this.value)"
+            class="h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></select>
+          <div class="flex items-center gap-2">
+            <span
+              id="fcCounter"
+              class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-2 rounded-xl"
+              >1 / 86</span
+            >
+            <button
+              id="fcShuffleBtn"
+              type="button"
+              onclick="shuffleFlashcards()"
+              class="h-10 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <span>🔀</span>
+              <span id="fcShuffleText">Trộn thẻ</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="flashcardStage" class="perspective-1000"></div>
+
+        <div class="flex items-center justify-between gap-2">
+          <button
+            type="button"
+            onclick="prevFlashcard()"
+            class="h-11 px-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>←</span>
+            <span id="fcPrevText">Trước</span>
+          </button>
+
+          <button
+            id="fcMasterBtn"
+            type="button"
+            onclick="toggleFlashcardMastered()"
+            class="h-11 px-4 rounded-xl border text-xs sm:text-sm font-semibold shadow-sm flex items-center gap-1.5 transition cursor-pointer"
+          ></button>
+
+          <button
+            type="button"
+            onclick="nextFlashcard()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-sm font-semibold text-white shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span id="fcNextText">Tiếp</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <p
+          id="fcShortcutHint"
+          class="hidden md:block text-center text-xs text-slate-400"
+        >
+          Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe
+          ví dụ)
+        </p>
+      </section>
+
+      <!-- PRACTICAL KITCHEN NOTES CARD (FROM GOOGLE DOC) -->
+      <section
+        id="section-kitchen-notes"
+        class="mt-6 bg-white rounded-2xl p-4 sm:p-6 shadow-xs border border-slate-200/80"
+      >
+        <h2
+          id="notesHeading"
+          class="text-base sm:text-lg font-extrabold text-slate-900 mb-3"
+        ></h2>
+        <ul
+          id="notesList"
+          class="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed"
+        ></ul>
+      </section>
+    </main>
+
+    <!-- MOBILE BOTTOM NAVIGATION BAR -->
+    <nav
+      id="mobileBottomNav"
+      class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-[0_-4px_16px_rgba(15,23,42,0.06)] bottom-nav-safe"
+      aria-label="Mobile Navigation"
+    >
+      <div id="mobileNavGrid" class="grid grid-cols-4 h-14"></div>
+    </nav>
+
+    <!-- MOBILE BOTTOM SHEET: VOICE & SPEED SETTINGS -->
+    <div
+      id="mobileVoiceBackdrop"
+      onclick="closeVoiceDrawer()"
+      class="hidden md:hidden fixed inset-0 z-50 bg-slate-950/50 backdrop-blur-xs transition-opacity"
+    ></div>
+    <div
+      id="mobileVoiceSheet"
+      class="hidden md:hidden fixed inset-x-0 bottom-0 z-50 bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 p-5 pb-[calc(20px+var(--safe-bottom))] animate-sheet-up"
+    >
+      <div class="w-10 h-1.5 rounded-full bg-slate-300 mx-auto mb-4"></div>
+      <div class="flex items-center justify-between mb-3">
+        <h3 id="sheetTitle" class="text-base font-bold text-slate-900">
+          Cài đặt Giọng đọc & Tốc độ
+        </h3>
+        <button
+          type="button"
+          onclick="closeVoiceDrawer()"
+          class="w-9 h-9 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold"
+        >
+          ✕
+        </button>
+      </div>
+      <div id="mobileVoiceForm"></div>
+    </div>
+
+    <script>
+      // =========================================================================
+      // 0. AUDIO FOLDER PREFIX FOR KITCHEN & CULINARY MODULE
+      // =========================================================================
+      const AUDIO_BASE_PATH = "audio/bep";
+
+      // =========================================================================
+      // 1. VOICE CATALOG (4 VOICES: PIPER OFFLINE + EDGE NEURAL) & I18N
+      // =========================================================================
+      const VOICE_CATALOG = [
+        {
+          id: "piper_hochdeutsch",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Chuẩn Đức (High)",
+          label_en: "Piper Thorsten — Standard German (High)",
+          short_vi: "Piper Chuẩn Đức",
+          short_en: "Piper Standard",
+        },
+        {
+          id: "piper_rostock",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Miền Bắc / Rostock",
+          label_en: "Piper Thorsten — Northern / Rostock",
+          short_vi: "Piper Rostock",
+          short_en: "Piper Rostock",
+        },
+        {
+          id: "edge_hochdeutsch",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Chuẩn Đức (Nữ Katja)",
+          label_en: "Edge Neural — Standard German (Female Katja)",
+          short_vi: "Edge Katja",
+          short_en: "Edge Katja",
+        },
+        {
+          id: "edge_rostock",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Miền Bắc (Nam Conrad)",
+          label_en: "Edge Neural — Northern German (Male Conrad)",
+          short_vi: "Edge Conrad",
+          short_en: "Edge Conrad",
+        },
+      ];
+
+      function sanitizeVoiceId(savedId, fallbackId) {
+        return VOICE_CATALOG.some((v) => v.id === savedId)
+          ? savedId
+          : fallbackId;
+      }
+
+      const I18N = {
+        vi: {
+          pageTitle:
+            "Fachdeutsch — Tiếng Đức Ngành Bếp & Phụ Bếp (Koch & Küchenhilfe) | VietDe Hub",
+          backHomeText: "Trang chủ",
+          brandTitle: "Bếp & Phụ Bếp",
+          nav_vocab_desktop: "1. Từ vựng",
+          nav_phrases_desktop: "2. Mẫu câu nhà bếp",
+          nav_dialogues_desktop: "3. Hội thoại",
+          nav_flashcards_desktop: "4. Thẻ Flashcard",
+          nav_vocab_mobile: "Từ vựng",
+          nav_phrases_mobile: "Mẫu câu",
+          nav_dialogues_mobile: "Hội thoại",
+          nav_flashcards_mobile: "Thẻ nhớ",
+          voiceSettingsTitle: "Cài đặt Giọng đọc & Tốc độ",
+          selectVoiceLabel: "Chọn giọng đọc mặc định (4 giọng)",
+          previewVoiceBtn: "Nghe thử giọng",
+          stopPreviewBtn: "Dừng nghe thử",
+          speedLabel: "Tốc độ phát âm",
+          speedSlow: "Chậm 0.75x",
+          speedNormal: "Chuẩn 1.0x",
+          speedFast: "Nhanh 1.25x",
+          searchPlaceholder: "Tìm từ tiếng Đức, nghĩa tiếng Việt...",
+          cat_all: "Tất cả",
+          cat_1_1: "1.1 Sơ chế, Nguyên liệu & Gia vị",
+          cat_1_2: "1.2 Dụng cụ, Thiết bị & Khu rửa",
+          cat_1_3: "1.3 Chế biến & Cắt thái bếp Đức",
+          cat_1_4: "1.4 Vị trí bếp, Ca & Vệ sinh",
+          cat_1_5: "1.5 Động từ & Tính từ hương vị",
+          relatedPrefix: "Từ liên quan:",
+          noResults: "Không tìm thấy từ vựng phù hợp.",
+          pcat_all: "Tất cả mẫu câu",
+          pcat_2_1: "2.1 Sơ chế đầu ca (Mise en Place)",
+          pcat_2_2: "2.2 Nấu nướng & Kỹ thuật bếp",
+          pcat_2_3: "2.3 Ca phục vụ & Quầy Pass",
+          pcat_2_4: "2.4 Khu rửa, Vệ sinh & An toàn",
+          workerVoiceLabel: "Giọng Bếp / Phụ bếp (Đức)",
+          partnerVoiceLabel: "Giọng Bếp trưởng / Đồng nghiệp",
+          playFullDialogue: "Nghe cả hội thoại",
+          stopFullDialogue: "Dừng hội thoại",
+          fcAllCategories: "Tất cả chủ đề",
+          fcShuffle: "Trộn thẻ",
+          fcPrev: "Trước",
+          fcNext: "Tiếp",
+          fcFrontHint: "Chạm thẻ để xem nghĩa & ví dụ",
+          fcBackHint: "Chạm thẻ để quay lại mặt trước",
+          fcWordBtn: "Nghe từ",
+          fcExBtn: "Nghe ví dụ",
+          fcMastered: "Đã thuộc",
+          fcMarkMastered: "Đánh dấu đã thuộc",
+          fcShortcutHint:
+            "Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe ví dụ)",
+          fallbackNotice: "Đang dùng giọng dự phòng Piper Offline cho câu này.",
+          notesHeading:
+            "Ghi chú Thực tế Ngành Bếp tại Đức (Koch & Küchenhilfe)",
+          notes: [
+            "<strong>Quy chuẩn mã màu thớt HACCP (Farbcodierung der Schneidebretter):</strong> Trong bếp chuyên nghiệp tại Đức, thớt thái được phân màu nghiêm ngặt để chống nhiễm chéo: Đỏ (thịt sống), Vàng (thịt gia cầm sống), Xanh dương (cá & hải sản), Xanh lá (rau củ & trái cây), Trắng (bánh mì & chế phẩm sữa), Nâu (thịt đã nấu chín).",
+            '<strong>Khẩu lệnh an toàn & giao tiếp bếp ("Heiß hinter dir!" & "Service bitte!"):</strong> Vì không gian bếp nóng chật hẹp và di chuyển nhanh, khi bưng nồi nóng hoặc cầm dao đi phía sau đồng nghiệp bắt buộc phải hô to cảnh báo (<em>"Heiß hinter dir!"</em> / <em>"Vorsicht, Messer!"</em>); khi món hoàn thành đặt lên quầy ra món thì hô <em>"Service bitte!"</em> kèm số bàn.',
+            "<strong>Quy tắc rã đông & giữ nóng HACCP:</strong> Thực phẩm đông lạnh tuyệt đối không rã đông ở nhiệt độ phòng mà phải rã đông trong tủ mát (≤ 4°C); món ăn giữ nóng trên quầy <em>Bain-Marie</em> phải duy trì liên tục ở mức ≥ 65°C.",
+          ],
+        },
+        en: {
+          pageTitle:
+            "Fachdeutsch — Kitchen & Culinary (Koch & Küchenhilfe) | VietDe Hub",
+          backHomeText: "Home",
+          brandTitle: "Kitchen & Culinary",
+          nav_vocab_desktop: "1. Vocabulary",
+          nav_phrases_desktop: "2. Kitchen Phrases",
+          nav_dialogues_desktop: "3. Dialogues",
+          nav_flashcards_desktop: "4. Flashcards",
+          nav_vocab_mobile: "Vocab",
+          nav_phrases_mobile: "Phrases",
+          nav_dialogues_mobile: "Dialogues",
+          nav_flashcards_mobile: "Cards",
+          voiceSettingsTitle: "Voice & Playback Speed",
+          selectVoiceLabel: "Default AI Voice (4 Voices)",
+          previewVoiceBtn: "Preview Voice",
+          stopPreviewBtn: "Stop Preview",
+          speedLabel: "Playback Speed",
+          speedSlow: "Slow 0.75x",
+          speedNormal: "Normal 1.0x",
+          speedFast: "Fast 1.25x",
+          searchPlaceholder: "Search German words, English meanings...",
+          cat_all: "All",
+          cat_1_1: "1.1 Prep, Ingredients & Spices",
+          cat_1_2: "1.2 Tools, Equipment & Dish Area",
+          cat_1_3: "1.3 Cooking & Knife Techniques",
+          cat_1_4: "1.4 Stations, Shifts & Hygiene",
+          cat_1_5: "1.5 Kitchen Verbs & Flavors",
+          relatedPrefix: "Related words:",
+          noResults: "No matching vocabulary found.",
+          pcat_all: "All Phrases",
+          pcat_2_1: "2.1 Start-of-Shift Prep (Mise en Place)",
+          pcat_2_2: "2.2 Cooking & Kitchen Methods",
+          pcat_2_3: "2.3 Service Rush & Kitchen Pass",
+          pcat_2_4: "2.4 Dish Area, Cleaning & Safety",
+          workerVoiceLabel: "Cook / Helper Voice (Duc)",
+          partnerVoiceLabel: "Head Chef / Colleague Voice",
+          playFullDialogue: "Play Full Dialogue",
+          stopFullDialogue: "Stop Dialogue",
+          fcAllCategories: "All Categories",
+          fcShuffle: "Shuffle",
+          fcPrev: "Previous",
+          fcNext: "Next",
+          fcFrontHint: "Tap card to reveal meaning & example",
+          fcBackHint: "Tap card to flip back",
+          fcWordBtn: "Speak Word",
+          fcExBtn: "Speak Example",
+          fcMastered: "Mastered",
+          fcMarkMastered: "Mark as Mastered",
+          fcShortcutHint:
+            "Shortcuts: Space (Flip) • ← / → (Navigate) • S (Word) • E (Example)",
+          fallbackNotice: "Using offline Piper fallback voice for this line.",
+          notesHeading:
+            "Practical Kitchen Notes in Germany (Koch & Küchenhilfe)",
+          notes: [
+            "<strong>HACCP Board Color Coding (Farbcodierung der Schneidebretter):</strong> In German professional kitchens, cutting boards are strictly color-coded to prevent cross-contamination: Red (raw meat), Yellow (raw poultry), Blue (fish & seafood), Green (vegetables & fruit), White (bread & dairy), Brown (cooked meat).",
+            '<strong>Kitchen Safety & Service Calls ("Heiß hinter dir!" & "Service bitte!"):</strong> Because hot kitchens are tight and fast-paced, staff must call out warnings when carrying hot pots or knives behind colleagues (<em>"Heiß hinter dir!"</em> / <em>"Vorsicht, Messer!"</em>) and call <em>"Service bitte!"</em> with the table number when dishes are ready at the pass.',
+            "<strong>HACCP Thawing & Hot-Holding Rules:</strong> Frozen food must never be thawed at room temperature and must thaw in the refrigerator (≤ 4°C); hot food held on the <em>Bain-Marie</em> must stay continuously at ≥ 65°C.",
+          ],
+        },
+      };
+
+      // =========================================================================
+      // 2. COMPLETE BILINGUAL DATASET (86 VOCAB, 36 PHRASES, 6 DIALOGUES)
+      // =========================================================================
+      const VOCAB_DATA = [
+        {
+          id: 1,
+          cat: "1.1",
+          de: "das Mise en Place",
+          ipa: "/ˌmiːz ɑ̃ ˈplas/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Công tác chuẩn bị đầy đủ nguyên liệu, dụng cụ và gia vị trước giờ phục vụ",
+          en: "Mise en place (pre-service prep of ingredients, tools & seasonings)",
+          rel_vi: "vorbereiten (đt: chuẩn bị trước)",
+          rel_en: "vorbereiten (v: to prepare in advance)",
+          ex_de:
+            "Bis siebzehn Uhr muss das komplette Mise en Place auf allen Posten fertig sein.",
+          ex_vi:
+            "Trước 17 giờ, toàn bộ khâu chuẩn bị trước ca ở mọi vị trí bếp phải hoàn tất.",
+          ex_en:
+            "By 5 PM, the complete mise en place on all stations must be ready.",
+        },
+        {
+          id: 2,
+          cat: "1.1",
+          de: "die Zutat (-en)",
+          ipa: "/diː ˈtsuːˌtaːt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nguyên liệu thành phần của món ăn",
+          en: "Ingredient",
+          rel_vi: "das Rezept (dt: công thức nấu ăn)",
+          rel_en: "das Rezept (n: recipe)",
+          ex_de:
+            "Prüfe morgens zuerst, ob alle frischen Zutaten für das Tagesmenü da sind.",
+          ex_vi:
+            "Buổi sáng trước tiên hãy kiểm tra xem đủ tất cả nguyên liệu tươi cho thực đơn trong ngày chưa.",
+          ex_en:
+            "First thing in the morning, check whether all fresh ingredients for the daily menu are there.",
+        },
+        {
+          id: 3,
+          cat: "1.1",
+          de: "die Beilage (-n)",
+          ipa: "/diː ˈbaɪˌlaːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Món ăn kèm (khoai tây chiên, khoai tây nghiền, cơm, mì Spätzle, rau củ)",
+          en: "Side dish (fries, mashed potatoes, rice, Spätzle, vegetables)",
+          rel_vi: "die Hauptspeise (dt: món chính)",
+          rel_en: "die Hauptspeise (n: main course)",
+          ex_de:
+            "Als Beilage servieren wir heute Bratkartoffeln und grüne Bohnen.",
+          ex_vi:
+            "Hôm nay chúng tôi phục vụ món ăn kèm là khoai tây áp chảo và đậu cô ve xanh.",
+          ex_en:
+            "As a side dish today we serve pan-fried potatoes and green beans.",
+        },
+        {
+          id: 4,
+          cat: "1.1",
+          de: "die Soße (-n)",
+          ipa: "/diː ˈzoːsə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nước xốt (nước xốt thịt nướng, xốt kem nấm, xốt Hollandaise)",
+          en: "Sauce / gravy",
+          rel_vi:
+            "die Sauce (dt: nước xốt), binden (đt: làm sánh nước xốt), abschmecken (đt: nêm nếm lại)",
+          rel_en:
+            "die Sauce (n: sauce), binden (v: to thicken sauce), abschmecken (v: to season to taste)",
+          ex_de:
+            "Bitte schmecke die Bratensoße noch einmal mit Salz und Pfeffer ab.",
+          ex_vi:
+            "Vui lòng nêm nếm lại nước xốt thịt nướng với muối và tiêu nhé.",
+          ex_en:
+            "Please season the roast gravy once more with salt and pepper.",
+        },
+        {
+          id: 5,
+          cat: "1.1",
+          de: "die Brühe (-n)",
+          ipa: "/diː ˈbʁyːə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nước dùng / Nước hầm",
+          en: "Broth / stock",
+          rel_vi:
+            "der Fond (dt: nước hầm xương cô đặc), die Gemüsebrühe (dt: nước dùng rau củ), die Rinderbrühe (dt: nước dùng bò)",
+          rel_en:
+            "der Fond (n: concentrated stock), die Gemüsebrühe (n: vegetable broth), die Rinderbrühe (n: beef broth)",
+          ex_de: "Wir setzen morgens einen großen Topf frische Gemüsebrühe an.",
+          ex_vi: "Buổi sáng chúng tôi bắc một nồi lớn nước dùng rau củ tươi.",
+          ex_en:
+            "In the morning, we put on a large pot of fresh vegetable broth.",
+        },
+        {
+          id: 6,
+          cat: "1.1",
+          de: "die Marinade (-n)",
+          ipa: "/maʁiˈnaːdə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nước ướp gia vị thực phẩm",
+          en: "Marinade",
+          rel_vi: "marinieren (đt: tẩm ướp thịt cá), einlegen (đt: ngâm ướp)",
+          rel_en: "marinieren (v: to marinate), einlegen (v: to soak/pickle)",
+          ex_de:
+            "Das Schweinefilet wird über Nacht in Kräutern und Öl mariniert.",
+          ex_vi: "Thịt thăn lợn được ướp qua đêm với thảo mộc và dầu.",
+          ex_en: "The pork tenderloin is marinated overnight in herbs and oil.",
+        },
+        {
+          id: 7,
+          cat: "1.1",
+          de: "die Panade (-n)",
+          ipa: "/paˈnaːdə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Lớp bột tẩm chiên giòn (bột mì – trứng – vụn bánh mì Semmelbrösel)",
+          en: "Breading / breadcrumbed coating",
+          rel_vi:
+            "panieren (đt: tẩm bột chiên), die Semmelbrösel (dt: vụn bánh mì khô tẩm chiên)",
+          rel_en:
+            "panieren (v: to bread/coat), die Semmelbrösel (n: breadcrumbs)",
+          ex_de:
+            "Für das Wiener Schnitzel panieren wir das Kalbfleisch frisch vor dem Braten.",
+          ex_vi:
+            "Đối với món Schnitzel kiểu Viên, chúng tôi tẩm bột thịt bê tươi ngay trước khi chiên.",
+          ex_en:
+            "For Wiener Schnitzel, we bread the veal fresh right before frying.",
+        },
+        {
+          id: 8,
+          cat: "1.1",
+          de: "das Fleisch",
+          ipa: "/das flaɪʃ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Thịt gia súc (bò, lợn, bê)",
+          en: "Meat (beef, pork, veal)",
+          rel_vi:
+            "das Geflügel (dt: thịt gia cầm), das Rindfleisch (dt: thịt bò), das Schweinefleisch (dt: thịt lợn)",
+          rel_en:
+            "das Geflügel (n: poultry), das Rindfleisch (n: beef), das Schweinefleisch (n: pork)",
+          ex_de:
+            "Geflügel wird in der Küche immer auf einem separaten Brett geschnitten.",
+          ex_vi:
+            "Thịt gia cầm trong bếp luôn được cắt trên một chiếc thớt riêng biệt.",
+          ex_en: "Poultry is always cut on a separate board in the kitchen.",
+        },
+        {
+          id: 9,
+          cat: "1.1",
+          de: "der Fisch (-e)",
+          ipa: "/deːɐ̯ fɪʃ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Cá",
+          en: "Fish",
+          rel_vi:
+            "die Meeresfrüchte (dt: hải sản), filetieren (đt: lọc phi-lê cá), die Gräte (dt: xương cá)",
+          rel_en:
+            "die Meeresfrüchte (n: seafood), filetieren (v: to fillet), die Gräte (n: fish bone)",
+          ex_de:
+            "Beim Filetieren von Lachs entfernen wir alle Gräten sorgfältig.",
+          ex_vi:
+            "Khi lọc phi-lê cá hồi chúng tôi nhổ sạch toàn bộ xương dăm cẩn thận.",
+          ex_en: "When filleting salmon, we remove all pin bones carefully.",
+        },
+        {
+          id: 10,
+          cat: "1.1",
+          de: "das Gemüse",
+          ipa: "/das ɡəˈmyːzə/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Rau củ",
+          en: "Vegetables",
+          rel_vi:
+            "die Kräuter (dt: rau thơm thảo mộc), die Petersilie (dt: rau mùi tây), der Schnittlauch (dt: hành tăm/hẹ)",
+          rel_en:
+            "die Kräuter (n: herbs), die Petersilie (n: parsley), der Schnittlauch (n: chives)",
+          ex_de:
+            "Schneide bitte zwei Bund frische Petersilie fein für die Garnitur.",
+          ex_vi:
+            "Vui lòng thái nhỏ hai bó rau mùi tây tươi để trang trí món ăn.",
+          ex_en: "Please finely chop two bunches of fresh parsley for garnish.",
+        },
+        {
+          id: 11,
+          cat: "1.1",
+          de: "die Kartoffel (-n)",
+          ipa: "/diː kaʁˈtɔfl̩/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khoai tây (nguyên liệu chủ lực trong ẩm thực Đức)",
+          en: "Potato",
+          rel_vi:
+            "schälen (đt: gọt vỏ), die Bratkartoffeln (dt: khoai tây chiên áp chảo), der Kartoffelsalat (dt: salad khoai tây)",
+          rel_en:
+            "schälen (v: to peel), die Bratkartoffeln (n: pan-fried potatoes), der Kartoffelsalat (n: potato salad)",
+          ex_de:
+            "Für den Kartoffelsalat kochen wir festkochende Kartoffeln mit Schale.",
+          ex_vi:
+            "Để làm salad khoai tây chúng tôi luộc cả vỏ loại khoai tây bở chắc không nát.",
+          ex_en:
+            "For potato salad, we boil firm waxy potatoes with their skins on.",
+        },
+        {
+          id: 12,
+          cat: "1.1",
+          de: "die Zwiebel (-n)",
+          ipa: "/diː ˈtsviːbl̩/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hành tây",
+          en: "Onion",
+          rel_vi:
+            "der Knoblauch (dt: tỏi), würfeln (đt: thái hạt lựu), in Ringe schneiden (đt: thái khoanh tròn)",
+          rel_en:
+            "der Knoblauch (n: garlic), würfeln (v: to dice), in Ringe schneiden (v: to slice into rings)",
+          ex_de:
+            "Wir brauchen zwei Schüsseln fein gewürfelte Zwiebeln für die Küche.",
+          ex_vi: "Chúng tôi cần hai bát hành tây thái hạt lựu nhỏ cho bếp.",
+          ex_en: "We need two bowls of finely diced onions for the kitchen.",
+        },
+        {
+          id: 13,
+          cat: "1.1",
+          de: "das Mehl",
+          ipa: "/das meːl/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Bột mì",
+          en: "Flour",
+          rel_vi:
+            "die Speisestärke (dt: bột năng/bột bắp tạo độ sánh), das Paniermehl (dt: bột chiên xù)",
+          rel_en:
+            "die Speisestärke (n: food starch/cornstarch), das Paniermehl (n: breadcrumbs)",
+          ex_de: "Binde die Soße mit etwas angerührter Speisestärke ab.",
+          ex_vi: "Làm sánh nước xốt bằng một chút bột bắp hòa nước.",
+          ex_en: "Thicken the sauce with a little mixed cornstarch.",
+        },
+        {
+          id: 14,
+          cat: "1.1",
+          de: "die Sahne",
+          ipa: "/diː ˈzaːnə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kem tươi béo (Schlagsahne / Kochsahne)",
+          en: "Cream",
+          rel_vi:
+            "die Butter (dt: bơ), das Speiseöl (dt: dầu ăn), das Butterschmalz (dt: bơ đun lọc để chiên)",
+          rel_en:
+            "die Butter (n: butter), das Speiseöl (n: cooking oil), das Butterschmalz (n: clarified butter)",
+          ex_de: "Wir braten das Schnitzel goldbraun in heißem Butterschmalz.",
+          ex_vi:
+            "Chúng tôi chiên miếng Schnitzel vàng giòn trong bơ đun lọc nóng.",
+          ex_en: "We fry the schnitzel golden brown in hot clarified butter.",
+        },
+        {
+          id: 15,
+          cat: "1.1",
+          de: "das Gewürz (-e)",
+          ipa: "/das ɡəˈvʏʁts/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Gia vị (muối, tiêu, bột ớt ngọt Paprika, nhục đậu khấu Muskat)",
+          en: "Spice / seasoning",
+          rel_vi:
+            "würzen (đt: nêm gia vị), salzen (đt: nêm muối), pfeffern (đt: rắc tiêu)",
+          rel_en:
+            "würzen (v: to season), salzen (v: to salt), pfeffern (v: to pepper)",
+          ex_de:
+            "Kartoffelpüree würzen wir klassisch mit Salz, weißem Pfeffer und etwas Muskat.",
+          ex_vi:
+            "Khoai tây nghiền được nêm theo kiểu truyền thống với muối, tiêu trắng và một chút nhục đậu khấu.",
+          ex_en:
+            "We season mashed potatoes classically with salt, white pepper, and a touch of nutmeg.",
+        },
+        {
+          id: 16,
+          cat: "1.1",
+          de: "die Garnitur (-en)",
+          ipa: "/ɡaʁniˈtuːɐ̯/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Đồ trang trí món ăn",
+          en: "Garnish",
+          rel_vi:
+            "anrichten (đt: trình bày món ra đĩa), dekorieren (đt: trang trí)",
+          rel_en:
+            "anrichten (v: to plate/arrange), dekorieren (v: to decorate)",
+          ex_de:
+            "Bitte richte den Teller sauber an und wische den Tellerrand ab.",
+          ex_vi: "Vui lòng bày đĩa thật sạch đẹp và lau sạch viền đĩa.",
+          ex_en: "Please plate the dish neatly and wipe the rim of the plate.",
+        },
+        {
+          id: 17,
+          cat: "1.1",
+          de: "die Portion (-en)",
+          ipa: "/diː pɔʁˈtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khẩu phần ăn (suất ăn tiêu chuẩn)",
+          en: "Portion / serving",
+          rel_vi: "portionieren (đt: chia khẩu phần)",
+          rel_en: "portionieren (v: to portion out)",
+          ex_de: "Wiege für jedes Steak genau 220 Gramm pro Portion ab.",
+          ex_vi: "Cân chính xác 220 gram mỗi phần cho từng miếng bít tết.",
+          ex_en: "Weigh out exactly 220 grams per portion for each steak.",
+        },
+        {
+          id: 18,
+          cat: "1.1",
+          de: "das Allergen (-e)",
+          ipa: "/das alɛʁˈɡeːn/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Thành phần gây dị ứng (Gluten, Lactose, hạt, trứng...)",
+          en: "Allergen (gluten, lactose, nuts, eggs...)",
+          rel_vi:
+            "die Unverträglichkeit (dt: chứng không dung nạp), glutenfrei (tt: không chứa Gluten), laktosefrei (tt: không chứa Lactose)",
+          rel_en:
+            "die Unverträglichkeit (n: intolerance), glutenfrei (adj: gluten-free), laktosefrei (adj: lactose-free)",
+          ex_de:
+            "Achtung, Tisch 4 hat eine starke Nussallergie, bitte sauberes Werkzeug benutzen!",
+          ex_vi:
+            "Chú ý, bàn số 4 bị dị ứng hạt rất nặng, vui lòng dùng dụng cụ sạch riêng!",
+          ex_en:
+            "Attention, Table 4 has a severe nut allergy; please use clean separate utensils!",
+        },
+        {
+          id: 19,
+          cat: "1.2",
+          de: "das Kochmesser (-)",
+          ipa: "/das ˈkɔxˌmɛsɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Dao đầu bếp bản lớn",
+          en: "Chef's knife",
+          rel_vi:
+            "das Schälmesser (dt: dao gọt vỏ nhỏ), scharf (tt: sắc bén), der Messerschärfer (dt: dụng cụ mài dao)",
+          rel_en:
+            "das Schälmesser (n: paring knife), scharf (adj: sharp), der Messerschärfer (n: knife sharpener)",
+          ex_de:
+            "Ein scharfes Kochmesser ist das wichtigste Werkzeug in der Küche.",
+          ex_vi:
+            "Một con dao đầu bếp sắc bén là dụng cụ quan trọng nhất trong bếp.",
+          ex_en:
+            "A sharp chef's knife is the most important tool in the kitchen.",
+        },
+        {
+          id: 20,
+          cat: "1.2",
+          de: "das Schneidebrett (-er)",
+          ipa: "/das ˈʃnaɪdəˌbʁɛt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Thớt thái thực phẩm (phân mã màu chuẩn HACCP Đức)",
+          en: "Cutting board (color-coded per German HACCP)",
+          rel_vi:
+            "die Farbcodierung (dt: mã màu thớt), die Unterlage (dt: tấm lót chống trượt dưới thớt)",
+          rel_en:
+            "die Farbcodierung (n: color coding), die Unterlage (n: non-slip mat)",
+          ex_de:
+            "Lege ein feuchtes Tuch unter das Schneidebrett, damit es nicht wegrutscht.",
+          ex_vi: "Hãy lót một chiếc khăn ẩm dưới thớt để thớt không bị trượt.",
+          ex_en:
+            "Place a damp cloth under the cutting board so it doesn't slip.",
+        },
+        {
+          id: 21,
+          cat: "1.2",
+          de: "der Gastronorm-Behälter (-)",
+          ipa: "/deːɐ̯ ɡastʁoˈnɔʁm bəˌhɛltɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Khay inox tiêu chuẩn bếp công nghiệp GN (GN 1/1, 1/2, 1/3...)",
+          en: "Gastronorm (GN) stainless steel container",
+          rel_vi: "der Deckel (dt: nắp khay GN)",
+          rel_en: "der Deckel (n: GN lid)",
+          ex_de:
+            "Fülle die geschnittenen Karotten in einen GN-Behälter und decke ihn ab.",
+          ex_vi: "Cho cà rốt đã thái vào khay inox GN và đậy nắp lại.",
+          ex_en: "Put the cut carrots into a GN container and cover it.",
+        },
+        {
+          id: 22,
+          cat: "1.2",
+          de: "der Topf (-e) / die Pfanne (-n)",
+          ipa: "/deːɐ̯ tɔpf/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Nồi nấu / Chảo chiên xào",
+          en: "Pot / frying pan",
+          rel_vi:
+            "der Kochtopf (dt: nồi nấu lớn), die Bratpfanne (dt: chảo rán)",
+          rel_en:
+            "der Kochtopf (n: cooking pot), die Bratpfanne (n: skillet/frying pan)",
+          ex_de:
+            "Erhitze etwas Öl in der großen Bratpfanne, bevor du das Fleisch hineinlegst.",
+          ex_vi:
+            "Làm nóng một chút dầu trong chảo rán lớn trước khi cho thịt vào.",
+          ex_en:
+            "Heat a little oil in the large frying pan before putting the meat in.",
+        },
+        {
+          id: 23,
+          cat: "1.2",
+          de: "der Schneebesen (-)",
+          ipa: "/deːɐ̯ ˈʃneːˌbeːzn̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Cây phới lồng đánh trứng / xốt",
+          en: "Whisk",
+          rel_vi:
+            "der Kochlöffel (dt: muôi gỗ khuấy bếp), rühren (đt: khuấy đều), schlagen (đt: đánh bông)",
+          rel_en:
+            "der Kochlöffel (n: wooden spoon), rühren (v: to stir), schlagen (v: to whip/beat)",
+          ex_de:
+            "Rühre die Soße ständig mit dem Schneebesen um, damit sie nicht anbrennt.",
+          ex_vi:
+            "Khuấy đều nước xốt liên tục bằng phới lồng để không bị cháy đáy.",
+          ex_en:
+            "Stir the sauce continuously with the whisk so it doesn't burn.",
+        },
+        {
+          id: 24,
+          cat: "1.2",
+          de: "die Schöpfkelle (-n) / der Schaumlöffel (-)",
+          ipa: "/diː ˈʃœpfˌkɛlə/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Muôi múc canh/xốt / Muôi thủng vớt bọt & đồ chiên",
+          en: "Ladle / slotted skimmer spoon",
+          rel_vi: "abschöpfen (đt: hớt bọt), schöpfen (đt: múc)",
+          rel_en: "abschöpfen (v: to skim), schöpfen (v: to ladle/scoop)",
+          ex_de:
+            "Hole die gekochten Klöße vorsichtig mit dem Schaumlöffel aus dem Wasser.",
+          ex_vi:
+            "Vớt những viên bánh khoai đã chín ra khỏi nước nhẹ nhàng bằng muôi thủng.",
+          ex_en:
+            "Carefully lift the cooked dumplings out of the water with the slotted spoon.",
+        },
+        {
+          id: 25,
+          cat: "1.2",
+          de: "das Sieb (-e) / der Durchschlag (-e)",
+          ipa: "/das ziːp/",
+          type_vi: "Danh từ (n./m.)",
+          type_en: "Noun (n./m.)",
+          vi: "Rây lọc mịn / Rổ inox chắt nước",
+          en: "Fine sieve / colander",
+          rel_vi:
+            "abgießen (đt: chắt bỏ nước), passieren (đt: lọc mịn nước xốt)",
+          rel_en:
+            "abgießen (v: to drain/pour off), passieren (v: to pass through a sieve)",
+          ex_de:
+            "Gieße die Nudeln im großen Durchschlag ab und schrecke sie kurz kalt ab.",
+          ex_vi: "Chắt bỏ nước mì qua rổ inox lớn và xả nhanh qua nước lạnh.",
+          ex_en:
+            "Drain the pasta in the large colander and rinse it briefly with cold water.",
+        },
+        {
+          id: 26,
+          cat: "1.2",
+          de: "die Küchenwaage (-n)",
+          ipa: "/diː ˈkʏçn̩ˌvaːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Cân điện tử nhà bếp",
+          en: "Kitchen scale",
+          rel_vi:
+            "der Messbecher (dt: ca đong dung tích), abwiegen (đt: cân định lượng), abmessen (đt: đong đo)",
+          rel_en:
+            "der Messbecher (n: measuring cup), abwiegen (v: to weigh out), abmessen (v: to measure)",
+          ex_de: "Wiege die Zutaten genau auf der digitalen Küchenwaage ab.",
+          ex_vi: "Cân chính xác nguyên liệu trên cân điện tử nhà bếp.",
+          ex_en:
+            "Weigh the ingredients accurately on the digital kitchen scale.",
+        },
+        {
+          id: 27,
+          cat: "1.2",
+          de: "der Kombidämpfer (-)",
+          ipa: "/deːɐ̯ ˈkɔmbiˌdɛmpfɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Lò hấp nướng đa năng công nghiệp (thiết bị trung tâm trong mọi bếp Đức)",
+          en: "Combi steamer / combination oven",
+          rel_vi:
+            "der Konvektomat (dt: lò hấp nướng đối lưu), dämpfen (đt: hấp hơi nước), Heißluft (dt: nướng đối lưu khí nóng)",
+          rel_en:
+            "der Konvektomat (n: convection steamer), dämpfen (v: to steam), Heißluft (n: convection hot air)",
+          ex_de:
+            "Das Gemüse garen wir zehn Minuten im Kombidämpfer auf Dampf-Programm.",
+          ex_vi:
+            "Chúng ta làm chín rau củ 10 phút trong lò hấp nướng đa năng ở chế độ hấp hơi.",
+          ex_en:
+            "We cook the vegetables for ten minutes in the combi steamer on the steam program.",
+        },
+        {
+          id: 28,
+          cat: "1.2",
+          de: "der Herd (-e)",
+          ipa: "/deːɐ̯ heːɐ̯t/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bếp nấu chính",
+          en: "Stove / cooker / range",
+          rel_vi:
+            "das Induktionsfeld (dt: bếp từ công nghiệp), die Kochplatte (dt: mặt bếp nấu)",
+          rel_en:
+            "das Induktionsfeld (n: induction hob), die Kochplatte (n: hotplate/burner)",
+          ex_de: "Schalte nach Dienstschluss alle Herdplatten und Geräte aus.",
+          ex_vi: "Tắt toàn bộ bếp nấu và thiết bị sau khi hết ca làm việc.",
+          ex_en:
+            "Turn off all stove burners and appliances after the shift ends.",
+        },
+        {
+          id: 29,
+          cat: "1.2",
+          de: "die Fritteuse (-n)",
+          ipa: "/diː fʁɪˈtøːzə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bếp chiên nhúng dầu công nghiệp",
+          en: "Deep fryer",
+          rel_vi:
+            "das Frittierfett (dt: dầu chiên nhúng), der Frittierkorb (dt: giỏ lưới chiên)",
+          rel_en:
+            "das Frittierfett (n: frying oil/fat), der Frittierkorb (n: fryer basket)",
+          ex_de:
+            "Die Pommes frites brauchen bei 175 Grad etwa vier Minuten in der Fritteuse.",
+          ex_vi:
+            "Khoai tây chiên cần khoảng 4 phút trong bếp chiên nhúng ở 175 độ C.",
+          ex_en:
+            "The French fries take about four minutes in the deep fryer at 175 degrees.",
+        },
+        {
+          id: 30,
+          cat: "1.2",
+          de: "der Salamander (-)",
+          ipa: "/deːɐ̯ zalaˈmandɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Lò nướng lửa trên chuyên làm vàng mặt / đút lò phô mai",
+          en: "Salamander grill / overhead broiler",
+          rel_vi: "gratinieren (đt: nướng đút lò vàng mặt)",
+          rel_en: "gratinieren (v: to gratinate/brown under broiler)",
+          ex_de: "Schiebe die Zwiebelsuppe mit Käse kurz unter den Salamander.",
+          ex_vi:
+            "Đẩy bát súp hành tây phủ phô mai vào dưới lò nướng lửa trên một lát.",
+          ex_en:
+            "Slide the onion soup with cheese under the salamander briefly.",
+        },
+        {
+          id: 31,
+          cat: "1.2",
+          de: "die Bain-Marie",
+          ipa: "/diː bɛ̃ maˈʁiː/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bếp giữ nóng cách thủy (giữ nóng xốt, súp, thức ăn trên khay GN)",
+          en: "Bain-marie / water bath warmer",
+          rel_vi:
+            "das Wasserbad (dt: bể cách thủy), warmhalten (đt: giữ nóng thức ăn)",
+          rel_en: "das Wasserbad (n: water bath), warmhalten (v: to keep warm)",
+          ex_de:
+            "Halte die Soßen während des Mittagsgeschäfts in der Bain-Marie bei 70 Grad warm.",
+          ex_vi:
+            "Giữ ấm các loại nước xốt trong bếp cách thủy ở 70 độ C suốt giờ phục vụ trưa.",
+          ex_en:
+            "Keep the sauces warm at 70 degrees in the bain-marie during lunch service.",
+        },
+        {
+          id: 32,
+          cat: "1.2",
+          de: "die Aufschnittmaschine (-n)",
+          ipa: "/diː ˈaʊfʃnɪtmaˌʃiːnə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Máy thái lát thịt nguội – phô mai",
+          en: "Food slicer / deli slicer",
+          rel_vi:
+            "der Stabmixer (dt: máy xay cầm tay công nghiệp), pürieren (đt: xay nhuyễn súp), die Schutzvorrichtung (dt: tấm chắn an toàn lưỡi dao)",
+          rel_en:
+            "der Stabmixer (n: immersion blender), pürieren (v: to puree), die Schutzvorrichtung (n: safety guard)",
+          ex_de:
+            "Vor dem Reinigen der Aufschnittmaschine immer zuerst den Netzstecker ziehen!",
+          ex_vi:
+            "Trước khi vệ sinh máy thái lát luôn phải rút phích cắm điện trước tiên!",
+          ex_en:
+            "Before cleaning the slicer, always unplug the power cord first!",
+        },
+        {
+          id: 33,
+          cat: "1.2",
+          de: "das Kühlhaus (-er)",
+          ipa: "/das ˈkyːlˌhaʊs/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Phòng lạnh bảo quản thực phẩm (0–4°C)",
+          en: "Walk-in cooler / cold room (0–4°C)",
+          rel_vi:
+            "der Kühlschrank (dt: tủ mát bếp), der Tiefkühler (dt: tủ đông -18°C)",
+          rel_en:
+            "der Kühlschrank (n: refrigerator), der Tiefkühler (n: freezer -18°C)",
+          ex_de: "Räume die frische Lieferung sofort ins Kühlhaus ein.",
+          ex_vi: "Cất ngay lô hàng tươi vừa giao vào phòng lạnh.",
+          ex_en: "Put the fresh delivery away into the cold room immediately.",
+        },
+        {
+          id: 34,
+          cat: "1.2",
+          de: "die Dunstabzugshaube (-n)",
+          ipa: "/diː ˈdʊnstʔaptsuːksˌhaʊbə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Chụp hút khói & mùi dầu mỡ trên bếp",
+          en: "Kitchen exhaust hood",
+          rel_vi: "der Fettfilter (dt: lưới lọc mỡ)",
+          rel_en: "der Fettfilter (n: grease filter)",
+          ex_de:
+            "Wir reinigen die Fettfilter der Dunstabzugshaube jede Woche gründlich.",
+          ex_vi: "Chúng tôi vệ sinh kỹ lưới lọc mỡ của chụp hút mùi hằng tuần.",
+          ex_en:
+            "We clean the grease filters of the exhaust hood thoroughly every week.",
+        },
+        {
+          id: 35,
+          cat: "1.2",
+          de: "die Spülküche (-n)",
+          ipa: "/diː ˈʃpyːlˌkʏçə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khu vực rửa bát đĩa & dụng cụ bếp",
+          en: "Dishwashing area / scullery",
+          rel_vi:
+            "die Spülmaschine (dt: máy rửa bát công nghiệp), vorspülen (đt: tráng sơ thức ăn thừa), einräumen (đt: xếp vào khay rửa)",
+          rel_en:
+            "die Spülmaschine (n: commercial dishwasher), vorspülen (v: to pre-rinse), einräumen (v: to load into rack)",
+          ex_de:
+            "In der Spülküche trennen wir schmutziges Geschirr strikt von sauberen Tellern.",
+          ex_vi:
+            "Tại khu vực rửa chúng tôi tách biệt nghiêm ngặt bát đĩa bẩn với đĩa sạch.",
+          ex_en:
+            "In the dishwashing area, we strictly separate dirty dishes from clean plates.",
+        },
+        {
+          id: 36,
+          cat: "1.2",
+          de: "der Pass (-e)",
+          ipa: "/deːɐ̯ pas/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Quầy ra món nóng có đèn giữ nhiệt (nơi bếp giao món cho nhân viên phục vụ)",
+          en: "Kitchen pass / plating counter",
+          rel_vi:
+            "die Durchreiche (dt: ô cửa/quầy chuyền món), anrichten (đt: ra món), abholen (đt: nhân viên bàn bưng món đi)",
+          rel_en:
+            "die Durchreiche (n: service pass-through), anrichten (v: to plate up), abholen (v: to pick up)",
+          ex_de:
+            "Drei Schnitzel und zwei Salat sind fertig am Pass, Service bitte!",
+          ex_vi:
+            "Ba phần Schnitzel và hai salad đã xong ở quầy ra món, phục vụ bàn ơi!",
+          ex_en:
+            "Three schnitzels and two salads are ready at the pass, service please!",
+        },
+        {
+          id: 37,
+          cat: "1.3",
+          de: "anbraten",
+          ipa: "/ˈanˌbʁaːtn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Áp chảo lửa lớn cho xém cạnh săn mặt thịt",
+          en: "To sear / pan-fry initially over high heat",
+          rel_vi:
+            "braten (đt: chiên/rán), scharf anbraten (đt: áp chảo lửa thật lớn)",
+          rel_en:
+            "braten (v: to pan-fry/roast), scharf anbraten (v: to sear hard)",
+          ex_de:
+            "Brate das Rindfleisch in der heißen Pfanne von beiden Seiten scharf an.",
+          ex_vi:
+            "Áp chảo thịt bò trên chảo nóng lửa lớn cho xém vàng đều hai mặt.",
+          ex_en: "Sear the beef hard on both sides in the hot pan.",
+        },
+        {
+          id: 38,
+          cat: "1.3",
+          de: "schmoren",
+          ipa: "/ˈʃmoːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Kho / Hầm nhỏ lửa có đậy nắp (món Gulasch, Rinderbraten)",
+          en: "To braise / stew slowly",
+          rel_vi: "der Schmorbraten (dt: thịt hầm nhừ kiểu Đức)",
+          rel_en: "der Schmorbraten (n: braised roast)",
+          ex_de:
+            "Das Gulasch muss zwei Stunden langsam im Topf schmoren, bis das Fleisch zart ist.",
+          ex_vi:
+            "Món thịt hầm Gulasch cần hầm nhỏ lửa trong nồi 2 tiếng cho tới khi thịt mềm nhừ.",
+          ex_en:
+            "The goulash needs to braise slowly in the pot for two hours until the meat is tender.",
+        },
+        {
+          id: 39,
+          cat: "1.3",
+          de: "dünsten",
+          ipa: "/ˈdʏnstn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Xào hấp chín tới trong ít chất lỏng/bơ có đậy vung (rau củ, cá)",
+          en: "To sweat / braise gently in a little liquid/butter",
+          rel_vi: "glasig dünsten (dt: xào hành tây trong suốt mềm thơm)",
+          rel_en: "glasig dünsten (v: to sweat translucent)",
+          ex_de:
+            "Dünste die Zwiebelwürfel in etwas Butter glasig, ohne sie braun werden zu lassen.",
+          ex_vi:
+            "Xào hành tây thái hạt lựu với một chút bơ cho mềm trong suốt mà không bị cháy vàng.",
+          ex_en:
+            "Sweat the diced onions in a little butter until translucent without browning them.",
+        },
+        {
+          id: 40,
+          cat: "1.3",
+          de: "kochen / sieden",
+          ipa: "/ˈkɔxn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Luộc / Nấu sôi / Đun sôi lăn tăn dưới 100°C (sieden)",
+          en: "To boil / simmer just below boiling (sieden)",
+          rel_vi:
+            "aufkochen (đt: đun sôi bùng lên), köcheln lassen (đt: đun sôi liu riu)",
+          rel_en:
+            "aufkochen (v: to bring to a boil), köcheln lassen (v: to let simmer)",
+          ex_de:
+            "Lass die Suppe einmal kurz aufkochen und dann auf kleiner Stufe weiterköcheln.",
+          ex_vi:
+            "Đun sôi bùng nồi súp một chút rồi hạ nhỏ lửa cho sôi liu riu.",
+          ex_en:
+            "Bring the soup to a brief boil and then let it simmer on low heat.",
+        },
+        {
+          id: 41,
+          cat: "1.3",
+          de: "blanchieren",
+          ipa: "/blɑ̃ˈʃiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Chần qua nước sôi rồi ngâm ngay vào nước đá (giữ màu xanh giòn của rau củ)",
+          en: "To blanch (briefly boil & shock in ice water)",
+          rel_vi: "abschrecken (đt: dội/ngâm nước lạnh đột ngột)",
+          rel_en: "abschrecken (v: to shock in cold water)",
+          ex_de:
+            "Blanchiere den Brokkoli zwei Minuten in Salzwasser und schrecke ihn in Eiswasser ab.",
+          ex_vi:
+            "Chần bông cải xanh hai phút trong nước muối sôi rồi vớt ngay vào nước đá lạnh.",
+          ex_en:
+            "Blanch the broccoli in salted water for two minutes and shock it in ice water.",
+        },
+        {
+          id: 42,
+          cat: "1.3",
+          de: "dämpfen",
+          ipa: "/ˈdɛmpfn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Hấp chín bằng hơi nước",
+          en: "To steam",
+          rel_vi: "der Dampf (dt: hơi nước)",
+          rel_en: "der Dampf (n: steam)",
+          ex_de:
+            "Gedämpftes Gemüse behält seine Vitamine und seine frische Farbe.",
+          ex_vi: "Rau củ hấp giữ nguyên được vitamin và màu sắc tươi ngon.",
+          ex_en: "Steamed vegetables retain their vitamins and fresh color.",
+        },
+        {
+          id: 43,
+          cat: "1.3",
+          de: "frittieren",
+          ipa: "/fʁɪˈtiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Chiên ngập dầu",
+          en: "To deep-fry",
+          rel_vi: "knusprig (tt: giòn rụm)",
+          rel_en: "knusprig (adj: crispy)",
+          ex_de:
+            "Frittiere die Pommes goldgelb und knusprig, danach gut abtropfen lassen.",
+          ex_vi: "Chiên khoai tây vàng giòn rụm, sau đó để ráo dầu kỹ.",
+          ex_en:
+            "Deep-fry the fries golden yellow and crispy, then drain well.",
+        },
+        {
+          id: 44,
+          cat: "1.3",
+          de: "überbacken (gratinieren)",
+          ipa: "/yːbɐˈbakn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Nướng phủ phô mai / xốt vàng mặt trong lò",
+          en: "To bake with a melted cheese/crumb topping (gratinate)",
+          rel_vi: "backen (đt: nướng bánh), der Backofen (dt: lò nướng)",
+          rel_en: "backen (v: to bake), der Backofen (n: oven)",
+          ex_de:
+            "Wir überbacken den Auflauf zwölf Minuten bei 200 Grad im Ofen.",
+          ex_vi:
+            "Chúng ta nướng vàng mặt món đút lò 12 phút ở 200 độ C trong lò.",
+          ex_en:
+            "We gratinate the casserole in the oven for twelve minutes at 200 degrees.",
+        },
+        {
+          id: 45,
+          cat: "1.3",
+          de: "grillen",
+          ipa: "/ˈɡʁɪlən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Nướng trên vỉ nướng / bàn nướng nhiệt",
+          en: "To grill",
+          rel_vi: "die Grillplatte (dt: mặt bàn nướng phẳng)",
+          rel_en: "die Grillplatte (n: grill plate/griddle)",
+          ex_de: "Das Steak wird medium gegrillt und muss danach kurz ruhen.",
+          ex_vi:
+            "Miếng bít tết được nướng chín vừa và sau đó cần nghỉ vài phút.",
+          ex_en: "The steak is grilled medium and must rest briefly afterward.",
+        },
+        {
+          id: 46,
+          cat: "1.3",
+          de: "pochieren",
+          ipa: "/poˈʃiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Chần chín nhẹ trong nước/nước dùng nóng không sôi bùng (trứng chần, phi-lê cá)",
+          en: "To poach gently below boiling",
+          rel_vi: "knapp unter dem Siedepunkt (ngay dưới điểm sôi)",
+          rel_en: "knapp unter dem Siedepunkt (just below boiling point)",
+          ex_de:
+            "Fischfilet lässt sich hervorragend in Weißweinfond pochieren.",
+          ex_vi:
+            "Phi-lê cá rất thích hợp để chần chín nhẹ trong nước dùng vang trắng.",
+          ex_en: "Fish fillet poaches wonderfully in white wine stock.",
+        },
+        {
+          id: 47,
+          cat: "1.3",
+          de: "reduzieren / einkochen",
+          ipa: "/ʁeduˈtsiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Đun cô đặc nước xốt để dậy vị sánh mịn",
+          en: "To reduce / boil down a sauce",
+          rel_vi: "die Reduktion (dt: nước xốt cô đặc)",
+          rel_en: "die Reduktion (n: reduction)",
+          ex_de:
+            "Reduziere den Rotweinfond auf die Hälfte, damit die Soße kräftig schmeckt.",
+          ex_vi:
+            "Đun cô đặc nước dùng vang đỏ còn một nửa để nước xốt đậm đà hương vị.",
+          ex_en: "Reduce the red wine stock by half so the sauce tastes rich.",
+        },
+        {
+          id: 48,
+          cat: "1.3",
+          de: "pürieren / passieren",
+          ipa: "/pyˈʁiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Xay nhuyễn mịn / Lọc qua rây cho mượt",
+          en: "To puree / pass through a sieve",
+          rel_vi: "cremig (tt: sánh mịn như kem)",
+          rel_en: "cremig (adj: creamy/smooth)",
+          ex_de: "Püriere die Kürbissuppe mit dem Stabmixer schön cremig.",
+          ex_vi: "Xay nhuyễn súp bí đỏ bằng máy xay cầm tay cho thật sánh mịn.",
+          ex_en:
+            "Puree the pumpkin soup nicely creamy with the immersion blender.",
+        },
+        {
+          id: 49,
+          cat: "1.3",
+          de: "schälen / putzen",
+          ipa: "/ˈʃɛːlən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Gọt vỏ (khoai tây, cà rốt, hành) / Nhặt rửa làm sạch rau củ",
+          en: "To peel / trim and clean vegetables",
+          rel_vi: "der Sparschäler (dt: dao bào gọt vỏ)",
+          rel_en: "der Sparschäler (n: vegetable peeler)",
+          ex_de:
+            "Bitte schäle zehn Kilogramm Kartoffeln und lege sie in kaltes Wasser.",
+          ex_vi: "Vui lòng gọt vỏ 10 kg khoai tây và ngâm vào nước lạnh nhé.",
+          ex_en:
+            "Please peel ten kilograms of potatoes and put them in cold water.",
+        },
+        {
+          id: 50,
+          cat: "1.3",
+          de: "würfeln",
+          ipa: "/ˈvʏʁfl̩n/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Thái hạt lựu (nhỏ, vừa, to)",
+          en: "To dice into cubes",
+          rel_vi: "der Würfel (dt: khối vuông hạt lựu)",
+          rel_en: "der Würfel (n: cube/dice)",
+          ex_de:
+            "Würfle die Paprika und Zucchini in gleichmäßige kleine Stücke.",
+          ex_vi:
+            "Thái hạt lựu ớt chuông và bí ngòi thành các miếng nhỏ đều nhau.",
+          ex_en: "Dice the bell pepper and zucchini into uniform small pieces.",
+        },
+        {
+          id: 51,
+          cat: "1.3",
+          de: "in Scheiben / in Streifen schneiden",
+          ipa: "/ɪn ˈʃaɪbn̩ ˈʃnaɪdn̩/",
+          type_vi: "Cụm động từ",
+          type_en: "Verb phrase",
+          vi: "Thái lát mỏng / Thái sợi chỉ (Julienne)",
+          en: "To slice / cut into strips (julienne)",
+          rel_vi: "die Scheibe (dt: lát), der Streifen (dt: sợi/dải)",
+          rel_en: "die Scheibe (n: slice), der Streifen (n: strip)",
+          ex_de:
+            "Schneide die Champignons in dünne Scheiben und die Karotten in feine Streifen.",
+          ex_vi: "Thái nấm mỡ thành lát mỏng và cà rốt thành sợi nhỏ.",
+          ex_en:
+            "Slice the button mushrooms thinly and cut the carrots into fine strips.",
+        },
+        {
+          id: 52,
+          cat: "1.3",
+          de: "hacken",
+          ipa: "/ˈhakn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Băm nhỏ (rau thơm, tỏi, hành, hạt)",
+          en: "To chop / mince",
+          rel_vi: "fein gehackt (tt: băm nhuyễn)",
+          rel_en: "fein gehackt (adj: finely chopped)",
+          ex_de: "Hacke den Knoblauch und die Kräuter sehr fein.",
+          ex_vi: "Băm thật nhuyễn tỏi và các loại rau thơm.",
+          ex_en: "Chop the garlic and herbs very finely.",
+        },
+        {
+          id: 53,
+          cat: "1.3",
+          de: "abschmecken",
+          ipa: "/ˈapˌʃmɛkn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Nêm nếm kiểm tra lại hương vị lần cuối trước khi ra món",
+          en: "To season and taste-adjust before serving",
+          rel_vi: "der Geschmack (dt: hương vị)",
+          rel_en: "der Geschmack (n: flavor/taste)",
+          ex_de:
+            "Jeder Koch muss jede Soße und Suppe vor dem Schicken selbst abschmecken.",
+          ex_vi:
+            "Mỗi đầu bếp phải tự nêm nếm lại từng loại xốt và súp trước khi ra món.",
+          ex_en:
+            "Every cook must taste and season every sauce and soup themselves before sending out.",
+        },
+        {
+          id: 54,
+          cat: "1.3",
+          de: "anrichten / schicken",
+          ipa: "/ˈanˌʁɪçtn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Trình bày lên đĩa / Ra món cho phục vụ bàn bưng đi",
+          en: "To plate up / send out dishes to service",
+          rel_vi:
+            "der Gang (dt: lượt món ăn — khai vị, món chính, tráng miệng)",
+          rel_en: "der Gang (n: course — starter, main, dessert)",
+          ex_de:
+            "Tisch 7 ist bereit — wir können jetzt die Hauptgänge schicken!",
+          ex_vi:
+            "Bàn số 7 đã sẵn sàng — bây giờ chúng ta có thể ra các món chính!",
+          ex_en: "Table 7 is ready—we can send out the main courses now!",
+        },
+        {
+          id: 55,
+          cat: "1.4",
+          de: "der Küchenchef (-s)",
+          ipa: "/deːɐ̯ ˈkʏçn̩ˌʃɛf/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bếp trưởng điều hành",
+          en: "Head chef / executive chef",
+          rel_vi:
+            "der Souschef (dt: bếp phó), die Küchenbrigade (dt: đội ngũ phân công vị trí trong bếp)",
+          rel_en:
+            "der Souschef (n: sous chef), die Küchenbrigade (n: kitchen brigade)",
+          ex_de:
+            "Der Küchenchef kontrolliert am Pass jeden Teller vor dem Servieren.",
+          ex_vi:
+            "Bếp trưởng kiểm tra từng đĩa thức ăn ở quầy ra món trước khi phục vụ.",
+          ex_en: "The head chef checks every plate at the pass before serving.",
+        },
+        {
+          id: 56,
+          cat: "1.4",
+          de: "der Koch / die Köchin",
+          ipa: "/deːɐ̯ kɔx/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Đầu bếp chuyên nghiệp",
+          en: "Chef / cook",
+          rel_vi: "kochen (đt: nấu ăn)",
+          rel_en: "kochen (v: to cook)",
+          ex_de:
+            "Unsere Köche arbeiten Hand in Hand während des Abendservices.",
+          ex_vi:
+            "Các đầu bếp của chúng tôi phối hợp nhịp nhàng trong suốt ca phục vụ tối.",
+          ex_en: "Our cooks work hand in hand during evening service.",
+        },
+        {
+          id: 57,
+          cat: "1.4",
+          de: "die Küchenhilfe (-n)",
+          ipa: "/diː ˈkʏçn̩ˌhɪlfə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Phụ bếp / Nhân viên hỗ trợ sơ chế & dọn rửa",
+          en: "Kitchen helper / prep & dish assistant",
+          rel_vi:
+            "der Beikoch (dt: phụ bếp), zuarbeiten (đt: hỗ trợ sơ chế cho bếp chính)",
+          rel_en: "der Beikoch (n: prep cook), zuarbeiten (v: to prep/assist)",
+          ex_de:
+            "Die Küchenhilfe unterstützt beim Gemüseputzen, Salatmachen und Spülen.",
+          ex_vi: "Phụ bếp hỗ trợ nhặt rửa rau củ, làm salad và rửa dụng cụ.",
+          ex_en:
+            "The kitchen helper assists with cleaning vegetables, making salads, and washing up.",
+        },
+        {
+          id: 58,
+          cat: "1.4",
+          de: "der Posten (-)",
+          ipa: "/deːɐ̯ ˈpɔstn̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Vị trí / Khu vực phụ trách trong bếp (bếp nóng, bếp nguội, bánh ngọt, rửa)",
+          en: "Kitchen station (hot, cold, pastry, dish)",
+          rel_vi:
+            "die kalte Küche (dt: bếp nguội/salad), die warme Küche (dt: bếp nóng)",
+          rel_en:
+            "die kalte Küche (n: cold kitchen), die warme Küche (n: hot kitchen)",
+          ex_de: "Ich arbeite heute Abend auf dem Posten der kalten Küche.",
+          ex_vi: "Tối nay tôi làm việc ở vị trí bếp nguội.",
+          ex_en: "Tonight I'm working on the cold kitchen station.",
+        },
+        {
+          id: 59,
+          cat: "1.4",
+          de: "die Speisekarte (-n)",
+          ipa: "/diː ˈʃpaɪzəˌkaʁtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thực đơn chính của nhà hàng",
+          en: "Restaurant menu",
+          rel_vi:
+            "das Tagesmenü (dt: thực đơn đặc biệt trong ngày), das Gericht (dt: món ăn)",
+          rel_en:
+            "das Tagesmenü (n: daily menu/specials), das Gericht (n: dish)",
+          ex_de:
+            "Auf unserer Speisekarte stehen klassische deutsche Gerichte und vegetarische Speisen.",
+          ex_vi:
+            "Trong thực đơn của chúng tôi có các món Đức truyền thống và món chay.",
+          ex_en:
+            "Our menu features classic German dishes and vegetarian meals.",
+        },
+        {
+          id: 60,
+          cat: "1.4",
+          de: "die Vorspeise / die Hauptspeise / das Dessert",
+          ipa: "/diː ˈfoːɐ̯ˌʃpaɪzə/",
+          type_vi: "Danh từ (f./n.)",
+          type_en: "Noun (f./n.)",
+          vi: "Món khai vị / Món chính / Món tráng miệng",
+          en: "Starter / main course / dessert",
+          rel_vi: "der Gang (dt: lượt món trong bữa)",
+          rel_en: "der Gang (n: course)",
+          ex_de:
+            "Nach der Vorspeise machen wir zehn Minuten Pause bis zur Hauptspeise.",
+          ex_vi: "Sau món khai vị chúng ta đợi 10 phút rồi mới ra món chính.",
+          ex_en:
+            "After the starter, we take a ten-minute break before the main course.",
+        },
+        {
+          id: 61,
+          cat: "1.4",
+          de: "der Bon (-s)",
+          ipa: "/deːɐ̯ bɔ̃/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Phiếu gọi món in ra từ máy POS trong bếp",
+          en: "Kitchen order ticket / docket",
+          rel_vi:
+            "die Bestellung (dt: đơn đặt món), abrufen (đt: gọi ra món tiếp theo), stornieren (đt: hủy món)",
+          rel_en:
+            "die Bestellung (n: order), abrufen (v: to call up/fire next course), stornieren (v: to cancel item)",
+          ex_de:
+            "Ein neuer Bon für Tisch 12 ist gerade aus dem Drucker gekommen!",
+          ex_vi: "Một phiếu gọi món mới cho bàn số 12 vừa in ra từ máy rồi!",
+          ex_en:
+            "A new order ticket for Table 12 just came out of the printer!",
+        },
+        {
+          id: 62,
+          cat: "1.4",
+          de: "das Abendgeschäft",
+          ipa: "/das ˈaːbn̩tɡəˌʃɛft/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Cao điểm phục vụ bữa tối (Á-la-carte)",
+          en: "Evening service rush",
+          rel_vi:
+            "das Mittagsgeschäft (dt: cao điểm bữa trưa), der Hochbetrieb (dt: giờ cao điểm đông khách)",
+          rel_en:
+            "das Mittagsgeschäft (n: lunch rush), der Hochbetrieb (n: peak busy period)",
+          ex_de:
+            "Zwischen 18:30 und 20:30 Uhr herrscht in der Küche Hochbetrieb.",
+          ex_vi:
+            "Từ 18h30 đến 20h30 trong bếp là giờ cao điểm đông khách nhất.",
+          ex_en: "Between 6:30 PM and 8:30 PM, the kitchen is in full rush.",
+        },
+        {
+          id: 63,
+          cat: "1.4",
+          de: "die Kochjacke (-n) / die Kochschürze (-n)",
+          ipa: "/diː ˈkɔxˌjakə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Áo đầu bếp / Tạp dề bếp",
+          en: "Chef jacket / kitchen apron",
+          rel_vi:
+            "die Kochmütze (dt: mũ đầu bếp), das Grubentuch (dt: khăn lau tay/bưng nồi nóng của đầu bếp)",
+          rel_en:
+            "die Kochmütze (n: chef hat), das Grubentuch (n: kitchen/pot towel)",
+          ex_de:
+            "Trage in der Küche immer saubere Kochkleidung und rutschfeste Arbeitsschuhe.",
+          ex_vi:
+            "Trong bếp luôn mặc đồng phục bếp sạch sẽ và giày bảo hộ chống trơn trượt.",
+          ex_en:
+            "Always wear clean kitchen attire and slip-resistant safety shoes in the kitchen.",
+        },
+        {
+          id: 64,
+          cat: "1.4",
+          de: "der Fettbrand (-e)",
+          ipa: "/deːɐ̯ ˈfɛtˌbʁant/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Cháy dầu mỡ trên chảo hoặc bếp chiên",
+          en: "Grease / cooking oil fire",
+          rel_vi:
+            "die Verbrennung (dt: bỏng nhiệt trong bếp), der Feuerlöscher (dt: bình chữa cháy chuyên dụng Fettbrandlöscher)",
+          rel_en:
+            "die Verbrennung (n: burn), der Feuerlöscher (n: fire extinguisher)",
+          ex_de:
+            "Achtung: Einen Fettbrand niemals mit Wasser löschen, sondern mit Deckel oder Löschdecke ersticken!",
+          ex_vi:
+            "Chú ý: Tuyệt đối không dập cháy dầu mỡ bằng nước, mà phải đậy nắp hoặc phủ chăn chống cháy!",
+          ex_en:
+            "Attention: never put out a grease fire with water; smother it with a lid or fire blanket!",
+        },
+        {
+          id: 65,
+          cat: "1.4",
+          de: "die Warmhaltetemperatur",
+          ipa: "/diː ˈvaʁmhaltətempəʁaˌtuːɐ̯/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nhiệt độ giữ nóng thức ăn (≥ 65°C)",
+          en: "Hot-holding temperature (≥ 65°C)",
+          rel_vi:
+            "die Kühltemperatur (dt: nhiệt độ bảo quản lạnh ≤ 4–7°C), die Temperaturliste (dt: bảng theo dõi nhiệt độ HACCP)",
+          rel_en:
+            "die Kühltemperatur (n: chilling temperature), die Temperaturliste (n: HACCP temperature log)",
+          ex_de:
+            "Warme Speisen müssen bei mindestens 65 Grad warmgehalten werden.",
+          ex_vi: "Thức ăn nóng phải được giữ ở nhiệt độ tối thiểu 65 độ C.",
+          ex_en: "Hot food must be kept warm at a minimum of 65 degrees.",
+        },
+        {
+          id: 66,
+          cat: "1.4",
+          de: "die Kennzeichnung",
+          ipa: "/diː ˈkɛnˌtsaɪçnʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dán nhãn ngày chế biến & hạn dùng lên hộp thực phẩm trong tủ lạnh bếp",
+          en: "Date & product labeling on kitchen containers",
+          rel_vi: "das Etikettieren (dt: dán nhãn), das Datum (dt: ngày tháng)",
+          rel_en: "das Etikettieren (n: labeling), das Datum (n: date)",
+          ex_de:
+            "Jede angebrochene Packung und jedes vorbereitete Gericht im Kühlhaus braucht ein Etikett mit Datum.",
+          ex_vi:
+            "Mỗi gói thực phẩm đã mở và mỗi món sơ chế trong phòng lạnh đều phải dán nhãn ghi ngày.",
+          ex_en:
+            "Every opened package and every prepped dish in the cold room needs a date label.",
+        },
+        {
+          id: 67,
+          cat: "1.4",
+          de: "die Lebensmittelverschwendung",
+          ipa: "/diː ˈleːbn̩smɪtl̩fɛɐ̯ˌʃvɛndʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Sự lãng phí thực phẩm",
+          en: "Food waste",
+          rel_vi:
+            "die Resteverwertung (dt: tận dụng nguyên liệu dư hợp lý), kalkulieren (đt: tính toán định lượng)",
+          rel_en:
+            "die Resteverwertung (n: leftover utilization), kalkulieren (v: to calculate quantities)",
+          ex_de:
+            "Wir kalkulieren die Mengen genau, um Lebensmittelverschwendung zu vermeiden.",
+          ex_vi:
+            "Chúng tôi tính toán định lượng chính xác để tránh lãng phí thực phẩm.",
+          ex_en: "We calculate quantities accurately to avoid food waste.",
+        },
+        {
+          id: 68,
+          cat: "1.4",
+          de: "die Grundreinigung",
+          ipa: "/diː ˈɡʁʊntˌʁaɪnɪɡʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tổng vệ sinh sâu khu bếp cuối ca / cuối tuần",
+          en: "Deep cleaning of the kitchen",
+          rel_vi: "desinfizieren (đt: khử khuẩn), wischen (đt: lau sàn)",
+          rel_en: "desinfizieren (v: to disinfect), wischen (v: to mop/wipe)",
+          ex_de:
+            "Nach dem Abendservice machen wir gemeinsam die Grundreinigung der Küche.",
+          ex_vi: "Sau ca phục vụ tối chúng tôi cùng nhau tổng vệ sinh khu bếp.",
+          ex_en:
+            "After evening service, we do the deep cleaning of the kitchen together.",
+        },
+        {
+          id: 69,
+          cat: "1.4",
+          de: "der Fettabscheider (-)",
+          ipa: "/deːɐ̯ ˈfɛtʔapˌʃaɪdɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bể tách dầu mỡ dưới hệ thống thoát nước sàn bếp",
+          en: "Grease trap / separator",
+          rel_vi: "der Bodenablauf (dt: phễu thoát nước sàn)",
+          rel_en: "der Bodenablauf (n: floor drain)",
+          ex_de:
+            "Grobe Speisereste gehören in die Biotonne und nicht in den Bodenablauf.",
+          ex_vi:
+            "Thức ăn thừa thô phải bỏ vào thùng rác hữu cơ chứ không đổ xuống lỗ thoát nước sàn.",
+          ex_en:
+            "Coarse food scraps belong in the organic bin and not in the floor drain.",
+        },
+        {
+          id: 70,
+          cat: "1.4",
+          de: "der Teildienst / der Durchdienst",
+          ipa: "/deːɐ̯ ˈtaɪlˌdiːnst/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Ca làm việc chia đôi (làm trưa + nghỉ chiều + làm tối) / Ca làm liền mạch",
+          en: "Split shift / straight-through shift",
+          rel_vi:
+            "der Dienstplan (dt: lịch phân ca), der Ruhetag (dt: ngày nghỉ đóng cửa hàng tuần của quán)",
+          rel_en:
+            "der Dienstplan (n: duty roster), der Ruhetag (n: weekly closing day)",
+          ex_de:
+            "Unser Restaurant hat montags Ruhetag und am Wochenende meistens Teildienst.",
+          ex_vi:
+            "Nhà hàng chúng tôi nghỉ thứ Hai hằng tuần và cuối tuần thường làm ca chia đôi.",
+          ex_en:
+            "Our restaurant is closed on Mondays and mostly works split shifts on weekends.",
+        },
+        {
+          id: 71,
+          cat: "1.4",
+          de: "das Trinkgeld",
+          ipa: "/das ˈtʁɪŋkˌɡɛlt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Tiền boa của khách (thường chia đều cho cả bàn và bếp tại Đức)",
+          en: "Tip / gratuity (often shared across service & kitchen in Germany)",
+          rel_vi: "aufteilen (đt: chia đều)",
+          rel_en: "aufteilen (v: to split/share)",
+          ex_de:
+            "Am Monatsende wird das gesammelte Trinkgeld fair zwischen Service und Küche aufgeteilt.",
+          ex_vi:
+            "Cuối tháng tiền boa thu được sẽ chia công bằng giữa bộ phận bàn và bếp.",
+          ex_en:
+            "At the end of the month, collected tips are split fairly between service and kitchen.",
+        },
+        {
+          id: 72,
+          cat: "1.4",
+          de: "die Bestandsaufnahme",
+          ipa: "/diː bəˈʃtantsʔaʊfˌnaːmə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kiểm kê hàng tồn kho bếp",
+          en: "Inventory count / stocktake",
+          rel_vi:
+            "bestellen (đt: đặt hàng nhà cung cấp), der Lieferant (dt: nhà cung cấp thực phẩm)",
+          rel_en: "bestellen (v: to order), der Lieferant (n: food supplier)",
+          ex_de:
+            "Nach dem Abendservice prüfen wir den Bestand und bestellen frische Ware für morgen.",
+          ex_vi:
+            "Sau ca tối chúng tôi kiểm tra tồn kho và đặt hàng tươi cho ngày mai.",
+          ex_en:
+            "After evening service, we check stock and order fresh goods for tomorrow.",
+        },
+        {
+          id: 73,
+          cat: "1.5",
+          de: "garen",
+          ipa: "/ˈɡaːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Làm chín thực phẩm (thuật ngữ chung cho mọi cách nấu chín)",
+          en: "To cook / bring to doneness",
+          rel_vi: "gar (tt: đã chín tới), roh (tt: còn sống)",
+          rel_en: "gar (adj: cooked/done), roh (adj: raw)",
+          ex_de: "Das Hähnchenfleisch muss immer vollständig durchgegart sein.",
+          ex_vi: "Thịt gà luôn phải được nấu chín kỹ hoàn toàn.",
+          ex_en: "Chicken meat must always be cooked through completely.",
+        },
+        {
+          id: 74,
+          cat: "1.5",
+          de: "abschmecken / würzen",
+          ipa: "/ˈapˌʃmɛkn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Nêm nếm điều chỉnh vị / Cho gia vị",
+          en: "To taste-season / season",
+          rel_vi: "nachwürzen (đt: nêm thêm gia vị)",
+          rel_en: "nachwürzen (v: to add more seasoning)",
+          ex_de:
+            "Schmecke die Suppe vor dem Servieren noch einmal ab, vielleicht fehlt etwas Salz.",
+          ex_vi:
+            "Nêm lại món súp trước khi phục vụ nhé, có lẽ còn thiếu chút muối.",
+          ex_en:
+            "Taste and season the soup once more before serving; maybe a little salt is missing.",
+        },
+        {
+          id: 75,
+          cat: "1.5",
+          de: "vermengen / verrühren",
+          ipa: "/fɛɐ̯ˈmɛŋən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Trộn đều / Khuấy tan hỗn hợp",
+          en: "To blend / stir together",
+          rel_vi: "unterheben (đt: trộn nhẹ tay từ dưới lên)",
+          rel_en: "unterheben (v: to fold in gently)",
+          ex_de: "Verrühre Eigelb, Sahne und Gewürze zu einer glatten Masse.",
+          ex_vi:
+            "Khuấy đều lòng đỏ trứng, kem tươi và gia vị thành hỗn hợp mịn.",
+          ex_en: "Stir egg yolks, cream, and seasonings into a smooth mixture.",
+        },
+        {
+          id: 76,
+          cat: "1.5",
+          de: "auftauen / einfrieren",
+          ipa: "/ˈaʊfˌtaʊən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Rã đông (luôn rã đông trong tủ mát) / Cấp đông",
+          en: "To thaw (always in fridge) / to freeze",
+          rel_vi: "tiefgekühlt (tt: đông lạnh)",
+          rel_en: "tiefgekühlt (adj: deep-frozen)",
+          ex_de:
+            "Taue Fisch und Fleisch immer langsam im Kühlschrank und niemals bei Zimmertemperatur auf!",
+          ex_vi:
+            "Luôn rã đông cá và thịt từ từ trong tủ mát và tuyệt đối không rã đông ở nhiệt độ phòng!",
+          ex_en:
+            "Always thaw fish and meat slowly in the refrigerator and never at room temperature!",
+        },
+        {
+          id: 77,
+          cat: "1.5",
+          de: "abspülen / trocknen",
+          ipa: "/ˈapˌʃpyːlən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Rửa sạch dưới vòi nước / Làm ráo, lau khô",
+          en: "To rinse off / to dry",
+          rel_vi: "waschen (đt: rửa)",
+          rel_en: "waschen (v: to wash)",
+          ex_de:
+            "Wasche den Blattsalat gründlich und schleudere ihn anschließend trocken.",
+          ex_vi: "Rửa kỹ rau xà lách rồi quay cho thật ráo nước.",
+          ex_en: "Wash the leaf lettuce thoroughly and spin it dry afterward.",
+        },
+        {
+          id: 78,
+          cat: "1.5",
+          de: "aufwärmen / warmhalten",
+          ipa: "/ˈaʊfˌvɛʁmən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Hâm nóng lại / Giữ nóng liên tục",
+          en: "To reheat / to keep warm",
+          rel_vi: "heiß (tt: nóng), lauwarm (tt: âm ấm)",
+          rel_en: "heiß (adj: hot), lauwarm (adj: lukewarm)",
+          ex_de:
+            "Wir halten die Soßen im Wasserbad heiß, damit sie sofort einsatzbereit sind.",
+          ex_vi:
+            "Chúng tôi giữ nóng các loại xốt trong bếp cách thủy để sẵn sàng dùng ngay.",
+          ex_en:
+            "We keep the sauces hot in the water bath so they are ready for immediate use.",
+        },
+        {
+          id: 79,
+          cat: "1.5",
+          de: "zart / saftig",
+          ipa: "/tsaːɐ̯t/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Mềm tan / Mọng nước không bị khô",
+          en: "Tender / juicy",
+          rel_vi: "trocken (tt: bị khô), zäh (tt: bị dai)",
+          rel_en: "trocken (adj: dry), zäh (adj: tough)",
+          ex_de:
+            "Durch das langsame Schmoren ist der Rinderbraten butterzart und saftig.",
+          ex_vi:
+            "Nhờ hầm nhỏ lửa từ từ, món thịt bò hầm mềm tan như bơ và mọng nước.",
+          ex_en:
+            "Thanks to slow braising, the beef roast is butter-tender and juicy.",
+        },
+        {
+          id: 80,
+          cat: "1.5",
+          de: "knusprig / kross",
+          ipa: "/ˈknʊspʁɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Giòn rụm (da heo quay, Schnitzel, khoai tây chiên)",
+          en: "Crispy / crunchy",
+          rel_vi: "weich (tt: mềm/ỉu)",
+          rel_en: "weich (adj: soft/limp)",
+          ex_de: "Die Schweinshaxe hat eine herrlich knusprige Kruste.",
+          ex_vi: "Món chân giò heo nướng có lớp bì giòn rụm tuyệt hảo.",
+          ex_en: "The pork knuckle has a wonderfully crispy crust.",
+        },
+        {
+          id: 81,
+          cat: "1.5",
+          de: "salzig / würzig / scharf",
+          ipa: "/ˈzaltsɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Mặn / Đậm đà thơm gia vị / Cay nồng",
+          en: "Salty / savory & aromatic / spicy",
+          rel_vi: "mild (tt: dịu nhẹ), fad (tt: nhạt nhẽo)",
+          rel_en: "mild (adj: mild), fad (adj: bland)",
+          ex_de: "Die Gulaschsuppe ist schön würzig und leicht scharf.",
+          ex_vi: "Súp Gulasch rất đậm đà hương vị và hơi cay nhẹ.",
+          ex_en: "The goulash soup is nicely savory and slightly spicy.",
+        },
+        {
+          id: 82,
+          cat: "1.5",
+          de: "süß / sauer / bitter",
+          ipa: "/zyːs/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Ngọt / Chua / Đắng",
+          en: "Sweet / sour / bitter",
+          rel_vi: "süß-sauer (tt: chua ngọt)",
+          rel_en: "süß-sauer (adj: sweet-and-sour)",
+          ex_de:
+            "Ein Spritzer Zitronensaft gibt der Soße eine angenehme säuerliche Note.",
+          ex_vi:
+            "Một chút nước cốt chanh tạo cho nước xốt vị chua thanh dễ chịu.",
+          ex_en:
+            "A squeeze of lemon juice gives the sauce a pleasant tangy note.",
+        },
+        {
+          id: 83,
+          cat: "1.5",
+          de: "blutig / medium / durchgebraten",
+          ipa: "/ˈbluːtɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Tái sống (Rare) / Chín vừa hồng tâm (Medium) / Chín kỹ hoàn toàn (Well-done)",
+          en: "Rare / medium / well-done",
+          rel_vi: "die Garstufe (dt: mức độ chín của thịt bít tết)",
+          rel_en: "die Garstufe (n: steak doneness level)",
+          ex_de:
+            "Der Gast an Tisch 5 möchte sein Rumpsteak genau medium gebraten.",
+          ex_vi:
+            "Khách ở bàn số 5 muốn miếng bít tết thăn ngoại của mình chín vừa đúng chuẩn medium.",
+          ex_en:
+            "The guest at Table 5 wants their sirloin steak cooked exactly medium.",
+        },
+        {
+          id: 84,
+          cat: "1.5",
+          de: "vegetarisch / vegan",
+          ipa: "/veɡeˈtaːʁɪʃ/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Ăn chay (có trứng/sữa) / Thuần chay (không dùng sản phẩm động vật)",
+          en: "Vegetarian / vegan",
+          rel_vi: "fleischlos (tt: không thịt)",
+          rel_en: "fleischlos (adj: meatless)",
+          ex_de:
+            "Wir bieten auf der Karte auch mehrere vegane und vegetarische Hauptgerichte an.",
+          ex_vi:
+            "Trên thực đơn chúng tôi cũng phục vụ nhiều món chính thuần chay và ăn chay.",
+          ex_en:
+            "We also offer several vegan and vegetarian main courses on the menu.",
+        },
+        {
+          id: 85,
+          cat: "1.5",
+          de: "frisch / verdorben",
+          ipa: "/fʁɪʃ/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Tươi ngon / Bị ôi thiu, hỏng",
+          en: "Fresh / spoiled",
+          rel_vi: "knackig (tt: tươi giòn)",
+          rel_en: "knackig (adj: crisp/fresh)",
+          ex_de: "Wir verarbeiten nur frische Zutaten aus der Region.",
+          ex_vi: "Chúng tôi chỉ chế biến nguyên liệu tươi ngon từ địa phương.",
+          ex_en: "We process only fresh local ingredients.",
+        },
+        {
+          id: 86,
+          cat: "1.5",
+          de: "sauber / ordentlich",
+          ipa: "/ˈzaʊbɐ/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Sạch sẽ / Gọn gàng ngăn nắp",
+          en: "Clean / neat and tidy",
+          rel_vi: "die Sauberkeit (dt: sự sạch sẽ)",
+          rel_en: "die Sauberkeit (n: cleanliness)",
+          ex_de:
+            "Halte deinen Arbeitsplatz während des gesamten Dienstes sauber und ordentlich.",
+          ex_vi:
+            "Giữ khu vực làm việc của bạn luôn sạch sẽ và gọn gàng trong suốt ca trực.",
+          ex_en:
+            "Keep your workstation clean and tidy throughout the entire shift.",
+        },
+      ];
+
+      const PHRASES_DATA = [
+        {
+          id: 1,
+          cat: "2.1",
+          de: "Guten Morgen, Chef! Was steht heute beim Mise en Place als Erstes auf dem Plan?",
+          vi: "Chào buổi sáng bếp trưởng! Hôm nay trong phần chuẩn bị đầu ca thì việc gì làm đầu tiên ạ?",
+          en: "Good morning, Chef! What is first on the plan for mise en place today?",
+        },
+        {
+          id: 2,
+          cat: "2.1",
+          de: "Bitte schäle fünf Kilogramm Kartoffeln und schneide zwei Kilogramm Zwiebeln in feine Würfel.",
+          vi: "Vui lòng gọt vỏ 5 kg khoai tây và thái hạt lựu nhỏ 2 kg hành tây nhé.",
+          en: "Please peel five kilograms of potatoes and cut two kilograms of onions into fine cubes.",
+        },
+        {
+          id: 3,
+          cat: "2.1",
+          de: "Auf welchem Schneidebrett soll ich das Hähnchenfleisch schneiden — auf dem gelben Brett?",
+          vi: "Tôi nên thái thịt gà trên chiếc thớt nào — trên thớt màu vàng đúng không ạ?",
+          en: "Which cutting board should I cut the chicken on—the yellow board?",
+        },
+        {
+          id: 4,
+          cat: "2.1",
+          de: "Ich habe die Gemüsebrühe angesetzt und die Soße schon einmal abgeschmeckt.",
+          vi: "Tôi đã bắc nồi nước dùng rau củ và đã nêm nếm thử nước xốt rồi.",
+          en: "I've started the vegetable broth and already seasoned the sauce to taste.",
+        },
+        {
+          id: 5,
+          cat: "2.1",
+          de: "Bitte fülle alle geschnittenen Zutaten in saubere GN-Behälter und stelle sie ins Kühlhaus.",
+          vi: "Vui lòng cho toàn bộ nguyên liệu đã thái vào khay inox GN sạch và cất vào phòng lạnh.",
+          en: "Please put all cut ingredients into clean GN containers and place them in the cold room.",
+        },
+        {
+          id: 6,
+          cat: "2.1",
+          de: "Vergiss nicht, auf jeden Behälter ein Etikett mit dem heutigen Datum zu kleben.",
+          vi: "Đừng quên dán nhãn ghi ngày hôm nay lên mỗi hộp/khay thực phẩm nhé.",
+          en: "Don't forget to stick a label with today's date on every container.",
+        },
+        {
+          id: 7,
+          cat: "2.1",
+          de: "Uns fehlen auf meinem Posten noch frische Petersilie, Sahne und Semmelbrösel.",
+          vi: "Ở vị trí bếp của tôi đang thiếu rau mùi tây tươi, kem béo và vụn bánh mì tẩm chiên.",
+          en: "On my station, we're still missing fresh parsley, cream, and breadcrumbs.",
+        },
+        {
+          id: 8,
+          cat: "2.1",
+          de: "Das Fleisch muss langsam im Kühlschrank auftauen, nicht draußen bei Zimmertemperatur.",
+          vi: "Thịt phải được rã đông từ từ trong tủ mát, không để ngoài nhiệt độ phòng.",
+          en: "The meat must thaw slowly in the refrigerator, not outside at room temperature.",
+        },
+        {
+          id: 9,
+          cat: "2.1",
+          de: "Mein Posten ist komplett vorbereitet, wir können pünktlich mit dem Service starten!",
+          vi: "Vị trí bếp của tôi đã chuẩn bị xong hoàn toàn, chúng ta có thể bắt đầu ca phục vụ đúng giờ!",
+          en: "My station is completely prepped; we can start service right on time!",
+        },
+        {
+          id: 10,
+          cat: "2.2",
+          de: "Bitte brate das Fleisch in der Pfanne scharf an und lass es danach im Ofen fertig garen.",
+          vi: "Vui lòng áp chảo thịt lửa lớn cho săn mặt rồi cho vào lò nướng chín tới nhé.",
+          en: "Please sear the meat hard in the pan and then let it finish cooking in the oven.",
+        },
+        {
+          id: 11,
+          cat: "2.2",
+          de: "Blanchiere die grünen Bohnen drei Minuten und schrecke sie danach sofort in Eiswasser ab.",
+          vi: "Chần đậu cô ve xanh 3 phút rồi vớt ngay vào nước đá lạnh nhé.",
+          en: "Blanch the green beans for three minutes and shock them in ice water right after.",
+        },
+        {
+          id: 12,
+          cat: "2.2",
+          de: "Kannst du bitte die Kürbissuppe mit dem Stabmixer pürieren und noch etwas Sahne dazugeben?",
+          vi: "Bạn giúp mình xay nhuyễn súp bí đỏ bằng máy xay cầm tay và thêm một chút kem tươi được không?",
+          en: "Could you please puree the pumpkin soup with the immersion blender and add a little cream?",
+        },
+        {
+          id: 13,
+          cat: "2.2",
+          de: "Die Bratensoße ist noch etwas zu dünn, ich binde sie mit ein wenig Speisestärke ab.",
+          vi: "Nước xốt thịt nướng còn hơi loãng, tôi làm sánh lại bằng một chút bột bắp đây.",
+          en: "The roast gravy is still a bit thin; I'm thickening it with a little cornstarch.",
+        },
+        {
+          id: 14,
+          cat: "2.2",
+          de: "Probier mal bitte die Soße — braucht sie noch etwas Salz, Pfeffer oder einen Spritzer Zitrone?",
+          vi: "Nếm thử giúp mình nước xốt này xem — có cần thêm chút muối, tiêu hay nước cốt chanh không?",
+          en: "Taste the sauce please—does it need a bit more salt, pepper, or a squeeze of lemon?",
+        },
+        {
+          id: 15,
+          cat: "2.2",
+          de: "Achtung, die Fritteuse ist auf 175 Grad aufgeheizt, gib die Pommes vorsichtig hinein!",
+          vi: "Chú ý, bếp chiên nhúng đã nóng tới 175 độ C rồi, thả khoai tây vào cẩn thận nhé!",
+          en: "Watch out, the deep fryer is heated to 175 degrees; put the fries in carefully!",
+        },
+        {
+          id: 16,
+          cat: "2.2",
+          de: "Schiebe bitte das Gratin für fünf Minuten unter den Salamander, bis der Käse goldbraun ist.",
+          vi: "Đẩy giúp đĩa đút lò vào dưới lò nướng lửa trên 5 phút cho tới khi phô mai vàng ruộm nhé.",
+          en: "Please slide the gratin under the salamander for five minutes until the cheese is golden brown.",
+        },
+        {
+          id: 17,
+          cat: "2.2",
+          de: "Prüfe mit dem Einstichthermometer, ob das Hähnchen vollständig durchgegart ist.",
+          vi: "Kiểm tra bằng nhiệt kế đầu nhọn xem thịt gà đã chín kỹ hoàn toàn chưa.",
+          en: "Check with the probe thermometer whether the chicken is cooked through completely.",
+        },
+        {
+          id: 18,
+          cat: "2.2",
+          de: "Vorsicht beim Öffnen vom Kombidämpfer — es kommt heißer Dampf heraus!",
+          vi: "Cẩn thận khi mở cửa lò hấp nướng đa năng — hơi nước rất nóng phả ra đấy!",
+          en: "Careful when opening the combi steamer—hot steam is coming out!",
+        },
+        {
+          id: 19,
+          cat: "2.3",
+          de: "Neuer Bon für Tisch 8: zweimal Rinderbraten mit Klößen und einmal Lachsfilet mit Gemüse!",
+          vi: "Phiếu gọi món mới cho bàn số 8: hai phần bò hầm kèm bánh khoai và một phần phi-lê cá hồi kèm rau củ!",
+          en: "New ticket for Table 8: two beef roasts with dumplings and one salmon fillet with vegetables!",
+        },
+        {
+          id: 20,
+          cat: "2.3",
+          de: "Wie lange brauchst du noch für das Rumpsteak medium auf Tisch 4?",
+          vi: "Bạn cần bao lâu nữa cho phần bít tết thăn ngoại chín vừa của bàn số 4?",
+          en: "How much longer do you need for the medium sirloin steak on Table 4?",
+        },
+        {
+          id: 21,
+          cat: "2.3",
+          de: "Noch drei Minuten, dann ist das Steak fertig und kann zusammen mit den Beilagen geschickt werden!",
+          vi: "Còn 3 phút nữa là bít tết xong và có thể ra món cùng đồ ăn kèm!",
+          en: "Three more minutes, then the steak is done and can be sent out with the sides!",
+        },
+        {
+          id: 22,
+          cat: "2.3",
+          de: "Achtung Allergie auf Tisch 6: Der Gast hat eine Glutenunverträglichkeit, bitte keine Soße mit Mehl!",
+          vi: "Chú ý dị ứng ở bàn số 6: Khách không dung nạp Gluten, tuyệt đối không dùng nước xốt có bột mì!",
+          en: "Allergy alert on Table 6: the guest has gluten intolerance; no sauce with flour please!",
+        },
+        {
+          id: 23,
+          cat: "2.3",
+          de: "Tisch 3 hat die Vorspeisen beendet, wir können jetzt die Hauptspeisen abrufen und anrichten.",
+          vi: "Bàn số 3 đã dùng xong món khai vị, bây giờ chúng ta có thể làm và ra món chính.",
+          en: "Table 3 has finished starters; we can call up and plate the mains now.",
+        },
+        {
+          id: 24,
+          cat: "2.3",
+          de: "Bitte wische den Tellerrand noch einmal sauber ab, bevor du den Teller an den Pass stellst.",
+          vi: "Vui lòng lau sạch viền đĩa một lần nữa trước khi đặt đĩa lên quầy ra món.",
+          en: "Please wipe the plate rim clean once more before placing the plate at the pass.",
+        },
+        {
+          id: 25,
+          cat: "2.3",
+          de: "Service bitte! Tisch 8 und Tisch 10 sind abholbereit am Pass!",
+          vi: "Phục vụ bàn ơi! Món của bàn số 8 và bàn số 10 đã sẵn sàng ở quầy ra món rồi!",
+          en: "Service please! Table 8 and Table 10 are ready for pickup at the pass!",
+        },
+        {
+          id: 26,
+          cat: "2.3",
+          de: "Leider sind die Schweinshaxen für heute Abend ausverkauft, gib bitte dem Service Bescheid.",
+          vi: "Tiếc quá, món chân giò heo nướng tối nay đã bán hết rồi, báo giúp bộ phận bàn nhé.",
+          en: "Unfortunately, the pork knuckles are sold out for tonight; please let service know.",
+        },
+        {
+          id: 27,
+          cat: "2.3",
+          de: "Das Abendgeschäft ist geschafft — tolle Teamarbeit heute in der Küche!",
+          vi: "Cao điểm phục vụ tối đã hoàn thành — hôm nay cả bếp phối hợp rất tuyệt vời!",
+          en: "Evening service is done—great teamwork in the kitchen today!",
+        },
+        {
+          id: 28,
+          cat: "2.4",
+          de: "Bitte räume das schmutzige Geschirr in die Spülkörbe ein und spüle grobe Reste vorher ab.",
+          vi: "Vui lòng xếp bát đĩa bẩn vào rổ máy rửa và tráng sơ thức ăn thừa trước nhé.",
+          en: "Please load the dirty dishes into the wash racks and pre-rinse coarse scraps first.",
+        },
+        {
+          id: 29,
+          cat: "2.4",
+          de: "Die Spülmaschine ist fertig, ich räume die sauberen Teller mit sauberen Händen aus.",
+          vi: "Máy rửa bát chạy xong rồi, tôi rửa sạch tay rồi lấy đĩa sạch ra đây.",
+          en: "The dishwasher is finished; I'm unloading the clean plates with clean hands.",
+        },
+        {
+          id: 30,
+          cat: "2.4",
+          de: "Vorsicht, ich komme von hinten mit einem heißen Topf — heiß hinter dir!",
+          vi: "Cẩn thận, tôi đi phía sau với nồi nước rất nóng — nóng phía sau bạn nhé!",
+          en: "Careful, I'm coming from behind with a hot pot—hot behind you!",
+        },
+        {
+          id: 31,
+          cat: "2.4",
+          de: "Auf dem Boden bei der Spülküche ist Wasser verschüttet, ich wische es sofort trocken.",
+          vi: "Trên sàn chỗ khu rửa bị đổ nước, tôi lau khô ngay lập tức đây.",
+          en: "Water was spilled on the floor near the dish area; I'm wiping it dry right away.",
+        },
+        {
+          id: 32,
+          cat: "2.4",
+          de: "Zieh bitte immer den Netzstecker, bevor du die Aufschnittmaschine reinigst!",
+          vi: "Luôn rút phích cắm điện trước khi vệ sinh máy thái lát nhé!",
+          en: "Always unplug the power cord before cleaning the slicer!",
+        },
+        {
+          id: 33,
+          cat: "2.4",
+          de: "Nach Dienstschluss reinigen und desinfizieren wir alle Arbeitsflächen, Schneidebretter und Maschinen.",
+          vi: "Sau khi hết ca chúng ta làm sạch và khử khuẩn toàn bộ mặt bàn, thớt và máy móc.",
+          en: "After shift ends, we clean and disinfect all work surfaces, cutting boards, and machines.",
+        },
+        {
+          id: 34,
+          cat: "2.4",
+          de: "Bitte bringe den Bioabfall raus und stelle frische Müllbeutel in die Behälter.",
+          vi: "Vui lòng mang rác hữu cơ ra ngoài và lồng túi rác mới vào thùng nhé.",
+          en: "Please take the organic waste out and put fresh trash bags in the bins.",
+        },
+        {
+          id: 35,
+          cat: "2.4",
+          de: "Ich schalte jetzt die Dunstabzugshaube und die Geräte aus und prüfe die Kühlhaustüren.",
+          vi: "Bây giờ tôi tắt chụp hút mùi cùng các thiết bị và kiểm tra lại cửa phòng lạnh.",
+          en: "I'm turning off the exhaust hood and appliances now and checking the cold room doors.",
+        },
+        {
+          id: 36,
+          cat: "2.4",
+          de: "Danke für deine Hilfe heute! Bis morgen zur Frühschicht und schönen Feierabend!",
+          vi: "Cảm ơn sự hỗ trợ của bạn hôm nay! Hẹn gặp lại vào ca sáng mai và chúc tan ca vui vẻ!",
+          en: "Thanks for your help today! See you tomorrow for the early shift and have a nice evening!",
+        },
+      ];
+
+      const DIALOGUES_DATA = [
+        {
+          id: 1,
+          tab_vi: "Hội thoại 1: Mise en Place & Thớt",
+          tab_en: "Dialogue 1: Mise en Place & Boards",
+          title_vi:
+            "Hội thoại 1: Phân công chuẩn bị đầu ca (Mise en Place & Farbcodierung)",
+          title_en:
+            "Dialogue 1: Assigning Start-of-Shift Prep (Mise en Place & Color Coding)",
+          context_vi:
+            "Buổi sáng tại bếp nhà hàng Đức, bếp trưởng (Küchenchef) giao việc sơ chế đầu ca cho phụ bếp mới (Đức) và nhắc quy tắc mã màu thớt HACCP.",
+          context_en:
+            "Morning in a German restaurant kitchen: the head chef (Küchenchef) assigns prep tasks to new kitchen helper Đức and reminds him of HACCP board color coding.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Phụ bếp)",
+              name_en: "Đức (Kitchen Helper)",
+              de: "Guten Morgen, Chef! Ich bin umgezogen und habe die Hände gewaschen. Womit soll ich beim Mise en Place anfangen?",
+              vi: "Chào buổi sáng bếp trưởng! Em đã thay đồng phục và rửa tay rồi ạ. Em nên bắt đầu việc chuẩn bị đầu ca từ đâu ạ?",
+              en: "Good morning, Chef! I've changed clothes and washed my hands. Where should I start with mise en place?",
+            },
+            {
+              role: "partner",
+              name_vi: "Küchenchef (Bếp trưởng)",
+              name_en: "Küchenchef (Head Chef)",
+              de: "Guten Morgen, Đức! Bitte schäle zuerst vier Kilogramm Kartoffeln für den Kartoffelsalat und würfle danach zwei Schüsseln Zwiebeln.",
+              vi: "Chào buổi sáng Đức! Trước tiên em gọt vỏ 4 kg khoai tây để làm salad khoai tây và sau đó thái hạt lựu hai bát hành tây nhé.",
+              en: "Good morning, Đức! First peel four kilograms of potatoes for potato salad and then dice two bowls of onions.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Phụ bếp)",
+              name_en: "Đức (Kitchen Helper)",
+              de: "Alles klar! Und danach soll ich das Hähnchenbrustfilet schneiden — nehme ich dafür das gelbe Schneidebrett?",
+              vi: "Em rõ rồi ạ! Và sau đó em thái phi-lê ức gà — em dùng chiếc thớt màu vàng đúng không ạ?",
+              en: "All clear! And after that I'm cutting the chicken breast fillet—do I use the yellow cutting board for that?",
+            },
+            {
+              role: "partner",
+              name_vi: "Küchenchef (Bếp trưởng)",
+              name_en: "Küchenchef (Head Chef)",
+              de: "Ganz genau, gelb ist für Geflügel! Lege ein feuchtes Tuch unter das Brett, packe das geschnittene Fleisch in einen GN-Behälter mit Datumsetikett und stelle es sofort ins Kühlhaus.",
+              vi: "Chính xác, màu vàng dùng cho thịt gia cầm! Lót một khăn ẩm dưới thớt, cho thịt đã thái vào khay inox GN có dán nhãn ngày và cất ngay vào phòng lạnh nhé.",
+              en: "Spot on, yellow is for poultry! Put a damp cloth under the board, pack the cut meat into a GN container with a date label, and put it in the cold room right away.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Phụ bếp)",
+              name_en: "Đức (Kitchen Helper)",
+              de: "Verstanden, Chef! Ich erledige das sofort.",
+              vi: "Em hiểu rồi thưa bếp trưởng! Em làm ngay đây ạ.",
+              en: "Understood, Chef! I'll get right on it.",
+            },
+          ],
+        },
+        {
+          id: 2,
+          tab_vi: "Hội thoại 2: Xốt & Nêm nếm",
+          tab_en: "Dialogue 2: Sauce & Seasoning",
+          title_vi:
+            "Hội thoại 2: Nấu nước xốt & Nêm nếm trước giờ mở cửa (Kochen & Abschmecken)",
+          title_en:
+            "Dialogue 2: Cooking Sauce & Seasoning Before Opening (Kochen & Abschmecken)",
+          context_vi:
+            "Đầu bếp chính và Đức chuẩn bị nước xốt và rau củ trước giờ mở cửa đón khách buổi trưa.",
+          context_en:
+            "The main cook and Đức prepare sauce and vegetables before lunch service opens.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Koch (Đầu bếp chính)",
+              name_en: "Koch (Main Cook)",
+              de: "Đức, ich habe die Rinderbraten-Soße reduziert. Kannst du sie bitte einmal probieren und abschmecken?",
+              vi: "Đức ơi, mình đã đun cô đặc nước xốt bò hầm rồi. Cậu nếm thử và nêm nếm lại giúp mình một chút được không?",
+              en: "Đức, I reduced the beef roast sauce. Can you please taste it and adjust the seasoning?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Phụ bếp / Bếp)",
+              name_en: "Đức (Cook / Helper)",
+              de: "Gerne! Hmm, sie schmeckt schon sehr kräftig, aber es fehlt noch eine Prise Salz und etwas schwarzer Pfeffer.",
+              vi: "Được chứ! Hmm, vị đã rất đậm đà rồi, nhưng vẫn thiếu một nhúm muối và một chút tiêu đen.",
+              en: "Gladly! Hmm, it already tastes very rich, but it's still missing a pinch of salt and a bit of black pepper.",
+            },
+            {
+              role: "partner",
+              name_vi: "Koch (Đầu bếp chính)",
+              name_en: "Koch (Main Cook)",
+              de: "Stimmt, ich würze noch leicht nach und binde sie mit etwas Speisestärke ab. Hast du den Brokkoli schon blanchiert?",
+              vi: "Đúng thật, mình nêm thêm chút gia vị và làm sánh bằng một ít bột bắp. Cậu đã chần bông cải xanh chưa?",
+              en: "True, I'll season lightly more and thicken it with a little cornstarch. Have you blanched the broccoli yet?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Phụ bếp / Bếp)",
+              name_en: "Đức (Cook / Helper)",
+              de: "Ja, ich habe ihn zwei Minuten in Salzwasser blanchiert und sofort in Eiswasser abgeschreckt, damit er schön grün und knackig bleibt.",
+              vi: "Rồi, mình đã chần hai phút trong nước muối sôi và vớt ngay vào nước đá lạnh để giữ màu xanh tươi và độ giòn.",
+              en: "Yes, I blanched it for two minutes in salted water and shocked it in ice water right away so it stays nice and green and crisp.",
+            },
+            {
+              role: "partner",
+              name_vi: "Koch (Đầu bếp chính)",
+              name_en: "Koch (Main Cook)",
+              de: "Super Arbeit! Dann füllen wir die Soße jetzt in die Bain-Marie um.",
+              vi: "Làm tốt lắm! Vậy bây giờ chúng ta chuyển nước xốt sang bếp giữ nóng cách thủy nhé.",
+              en: "Great work! Then let's transfer the sauce into the bain-marie now.",
+            },
+          ],
+        },
+        {
+          id: 3,
+          tab_vi: "Hội thoại 3: Ca tối & Quầy Pass",
+          tab_en: "Dialogue 3: Evening & Pass",
+          title_vi:
+            "Hội thoại 3: Cao điểm phục vụ tối & Ra món tại quầy Pass (Im Abendservice am Pass)",
+          title_en:
+            "Dialogue 3: Evening Service Rush & Plating at the Pass (Im Abendservice am Pass)",
+          context_vi:
+            "Giờ cao điểm buổi tối, phiếu gọi món (Bon) in ra liên tục, bếp trưởng điều phối ra món tại quầy Pass với Đức.",
+          context_en:
+            "Evening rush hour: order tickets (Bon) keep printing, and the head chef coordinates plating at the pass with Đức.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Küchenchef (Bếp trưởng)",
+              name_en: "Küchenchef (Head Chef)",
+              de: "Achtung Posten, neuer Bon für Tisch 9: zweimal Wiener Schnitzel mit Bratkartoffeln und einmal Rumpsteak medium!",
+              vi: "Chú ý các vị trí bếp, phiếu gọi món mới cho bàn số 9: hai phần Schnitzel kiểu Viên kèm khoai tây áp chảo và một phần bít tết thăn ngoại chín vừa!",
+              en: "Stations alert, new ticket for Table 9: two Wiener Schnitzels with pan-fried potatoes and one medium sirloin steak!",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Đầu bếp / Phụ bếp)",
+              name_en: "Đức (Cook / Helper)",
+              de: "Verstanden! Ich paniere die zwei Schnitzel frisch und brate sie in Butterschmalz goldbraun. Die Bratkartoffeln brauchen vier Minuten.",
+              vi: "Em rõ rồi! Em tẩm bột tươi hai miếng Schnitzel và chiên vàng giòn trong bơ đun lọc. Khoai tây áp chảo cần 4 phút ạ.",
+              en: "Understood! I'll bread the two schnitzels fresh and fry them golden brown in clarified butter. The pan-fried potatoes take four minutes.",
+            },
+            {
+              role: "partner",
+              name_vi: "Küchenchef (Bếp trưởng)",
+              name_en: "Küchenchef (Head Chef)",
+              de: "Perfekt, das Rumpsteak braucht auch genau vier Minuten. Achtet bitte auf Tisch 6 — dort hat ein Gast eine starke Laktoseunverträglichkeit, also keine Sahne und keine Butter verwenden!",
+              vi: "Hoàn hảo, miếng bít tết thăn ngoại cũng cần đúng 4 phút. Nhớ chú ý bàn số 6 — khách ở đó bị không dung nạp Lactose nặng, nên tuyệt đối không dùng kem tươi hay bơ nhé!",
+              en: "Perfect, the sirloin steak also takes exactly four minutes. Watch out for Table 6—a guest there has severe lactose intolerance, so don't use any cream or butter!",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Đầu bếp / Phụ bếp)",
+              name_en: "Đức (Cook / Helper)",
+              de: "Alles klar, für Tisch 6 brate ich das Gemüse nur in Olivenöl! Meine beiden Schnitzel und die Bratkartoffeln sind jetzt fertig zum Anrichten.",
+              vi: "Em rõ rồi, cho bàn số 6 em chỉ xào rau bằng dầu ô-liu thôi ạ! Hai miếng Schnitzel và khoai tây áp chảo của em đã sẵn sàng bày đĩa rồi.",
+              en: "All clear, for Table 6 I'll fry the vegetables only in olive oil! My two schnitzels and the pan-fried potatoes are ready to plate now.",
+            },
+            {
+              role: "partner",
+              name_vi: "Küchenchef (Bếp trưởng)",
+              name_en: "Küchenchef (Head Chef)",
+              de: "Sehr gut! Teller abwischen und ab an den Pass — Service bitte, Tisch 9 ist fertig!",
+              vi: "Rất tốt! Lau sạch viền đĩa và đặt lên quầy ra món — Phục vụ bàn ơi, bàn số 9 xong rồi!",
+              en: "Very good! Wipe the plates and over to the pass—service please, Table 9 is ready!",
+            },
+          ],
+        },
+        {
+          id: 4,
+          tab_vi: "Hội thoại 4: An toàn bếp nóng",
+          tab_en: "Dialogue 4: Hot Kitchen Safety",
+          title_vi:
+            "Hội thoại 4: An toàn lao động trong bếp nóng & Xử lý tình huống khẩn cấp (Sicherheit in der Küche)",
+          title_en:
+            "Dialogue 4: Hot Kitchen Safety & Emergency Handling (Sicherheit in der Küche)",
+          context_vi:
+            "Đức di chuyển nồi nước dùng nóng qua hành lang bếp đông người và nhắc đồng nghiệp nguyên tắc an toàn.",
+          context_en:
+            "Đức carries a hot broth pot through a busy kitchen aisle and reminds a colleague about safety rules.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên bếp)",
+              name_en: "Đức (Kitchen Staff)",
+              de: "Vorsicht, heiß hinter dir! Ich gehe mit dem großen Topf Brühe zum Herd!",
+              vi: "Cẩn thận, nóng phía sau bạn nhé! Tôi đang bưng nồi nước dùng lớn đi qua chỗ bếp nấu!",
+              en: "Careful, hot behind you! I'm carrying the big pot of broth to the stove!",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Danke für die Warnung, Đức! Ich mache sofort Platz. Gut, dass du trockene Grubentücher benutzt, mit nassen Tüchern verbrennt man sich sofort.",
+              vi: "Cảm ơn đã báo trước nhé Đức! Mình tránh đường ngay đây. Tốt quá vì cậu dùng khăn bếp khô, dùng khăn ướt bưng nồi nóng là bị bỏng ngay lập tức.",
+              en: "Thanks for the warning, Đức! I'll make room right away. Good that you're using dry pot towels; with wet towels you burn yourself immediately.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên bếp)",
+              name_en: "Đức (Kitchen Staff)",
+              de: "Ja, das stimmt! Und denk auch daran, den Deckel für die große Pfanne griffbereit zu lassen, falls sich einmal Öl überhitzt.",
+              vi: "Đúng vậy! Và cũng nhớ để sẵn nắp vung cho chảo lớn phòng khi dầu ăn bị quá nhiệt bốc cháy.",
+              en: "Yes, that's true! And also remember to keep the lid for the large pan within reach in case oil ever overheats.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Genau, bei einem Fettbrand niemals Wasser nehmen, sondern sofort mit dem Deckel ersticken.",
+              vi: "Chính xác, khi cháy dầu mỡ tuyệt đối không dùng nước mà phải đậy nắp lại ngay để dập lửa.",
+              en: "Exactly—never use water on a grease fire, just smother it immediately with the lid.",
+            },
+          ],
+        },
+        {
+          id: 5,
+          tab_vi: "Hội thoại 5: Khu rửa bát Spülküche",
+          tab_en: "Dialogue 5: Dishwashing Area",
+          title_vi:
+            "Hội thoại 5: Vận hành khu rửa bát đĩa công nghiệp (In der Spülküche)",
+          title_en:
+            "Dialogue 5: Operating the Commercial Dishwashing Area (In der Spülküche)",
+          context_vi:
+            "Tại khu vực rửa (Spülküche), Đức hướng dẫn nhân viên mới quy trình phân loại và vận hành máy rửa bát công nghiệp đúng chuẩn vệ sinh.",
+          context_en:
+            "In the dishwashing area (Spülküche), Đức guides a new colleague on sorting and operating the commercial dishwasher hygienically.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên bếp)",
+              name_en: "Đức (Kitchen Staff)",
+              de: "Hallo! Heute arbeiten wir zusammen in der Spülküche. Wichtig ist, dass wir schmutzige Teller und sauberes Geschirr nie verwechseln.",
+              vi: "Chào bạn! Hôm nay chúng ta làm chung ở khu vực rửa bát đĩa. Điều quan trọng là không bao giờ để lẫn đĩa bẩn với bát đĩa sạch.",
+              en: "Hello! Today we're working together in the dishwashing area. It's important that we never mix up dirty plates and clean dishes.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Alles klar. Soll ich die Essensreste zuerst mit der Handbrause abspülen, bevor ich die Körbe in die Spülmaschine schiebe?",
+              vi: "Mình rõ rồi. Mình có cần xịt tráng sạch thức ăn thừa bằng vòi xịt trước khi đẩy rổ vào máy rửa bát không?",
+              en: "All clear. Should I rinse off food scraps with the spray hose first before sliding the racks into the dishwasher?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên bếp)",
+              name_en: "Đức (Kitchen Staff)",
+              de: "Ja, genau! Grobe Reste kommen in den Bioabfall, dann vorspülen und die Teller mit Abstand in den Korb stellen.",
+              vi: "Đúng chính xác! Thức ăn thừa thô bỏ vào thùng rác hữu cơ, sau đó tráng sơ và xếp đĩa có khoảng cách vào rổ.",
+              en: "Yes, exactly! Coarse scraps go into organic waste, then pre-rinse and place the plates spaced out in the rack.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Und wann räume ich die sauberen Teller wieder aus?",
+              vi: "Và khi nào mình lấy đĩa sạch ra khỏi máy?",
+              en: "And when do I unload the clean plates?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên bếp)",
+              name_en: "Đức (Kitchen Staff)",
+              de: "Sobald das Programm fertig ist, wäschst du dir kurz die Hände, nimmst die heißen Teller heraus und stapelst sie auf dem sauberen Wagen.",
+              vi: "Ngay khi máy chạy xong chương trình, bạn rửa sạch tay một chút, lấy đĩa nóng ra và xếp chồng lên xe đẩy sạch nhé.",
+              en: "As soon as the program finishes, wash your hands briefly, take out the hot plates, and stack them on the clean cart.",
+            },
+          ],
+        },
+        {
+          id: 6,
+          tab_vi: "Hội thoại 6: Tổng vệ sinh cuối ca",
+          tab_en: "Dialogue 6: Closing & Cleaning",
+          title_vi:
+            "Hội thoại 6: Tổng vệ sinh bếp cuối ca & Bàn giao (Küchenschluss & Grundreinigung)",
+          title_en:
+            "Dialogue 6: End-of-Shift Kitchen Cleaning & Sign-Off (Küchenschluss & Grundreinigung)",
+          context_vi:
+            "Sau khi khách cuối cùng dùng bữa xong, bếp trưởng và đội ngũ tiến hành vệ sinh bếp và kiểm tra thiết bị trước khi ra về.",
+          context_en:
+            "After the last guests finish dining, the head chef and team clean the kitchen and check equipment before leaving.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Küchenchef (Bếp trưởng)",
+              name_en: "Küchenchef (Head Chef)",
+              de: "Leute, die Küche ist geschlossen! Wir beginnen jetzt mit der Reinigung. Đức, kannst du bitte die Arbeitsflächen und Schneidebretter reinigen und desinfizieren?",
+              vi: "Mọi người ơi, bếp đóng cửa nhận món rồi! Bây giờ chúng ta bắt đầu vệ sinh bếp. Đức ơi, em làm sạch và khử khuẩn mặt bàn thao tác cùng thớt thái nhé?",
+              en: "Folks, the kitchen is closed! We're starting cleaning now. Đức, can you clean and disinfect the work surfaces and cutting boards please?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên bếp)",
+              name_en: "Đức (Kitchen Staff)",
+              de: "Mache ich sofort, Chef! Soll ich auch die Aufschnittmaschine sauber machen?",
+              vi: "Em làm ngay thưa bếp trưởng! Em có vệ sinh luôn máy thái lát không ạ?",
+              en: "I'll do that right away, Chef! Should I clean the slicer too?",
+            },
+            {
+              role: "partner",
+              name_vi: "Küchenchef (Bếp trưởng)",
+              name_en: "Küchenchef (Head Chef)",
+              de: "Ja, bitte, aber zieh unbedingt zuerst den Netzstecker und sei vorsichtig am Messer! Ich prüfe derweil die Temperaturen im Kühlhaus.",
+              vi: "Có, làm giúp anh, nhưng nhớ nhất định rút phích cắm điện trước và cẩn thận với lưỡi dao nhé! Trong lúc đó anh kiểm tra nhiệt độ trong phòng lạnh.",
+              en: "Yes, please, but definitely unplug the power cord first and be careful around the blade! Meanwhile I'll check the temperatures in the cold room.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên bếp)",
+              name_en: "Đức (Kitchen Staff)",
+              de: "Alles erledigt! Die Arbeitsflächen sind desinfiziert, der Müll ist draußen und alle Herdplatten sind ausgeschaltet.",
+              vi: "Mọi thứ xong xuôi hết rồi ạ! Mặt bàn đã khử khuẩn, rác đã mang ra ngoài và toàn bộ bếp nấu đều đã tắt.",
+              en: "All done! The work surfaces are disinfected, the trash is out, and all stove burners are turned off.",
+            },
+            {
+              role: "partner",
+              name_vi: "Küchenchef (Bếp trưởng)",
+              name_en: "Küchenchef (Head Chef)",
+              de: "Vielen Dank für euren starken Einsatz heute! Kommt gut nach Hause und bis morgen!",
+              vi: "Cảm ơn sự nỗ lực hết mình của mọi người hôm nay! Về nhà an toàn và hẹn gặp lại ngày mai nhé!",
+              en: "Thank you very much for your strong effort today! Get home safely and see you tomorrow!",
+            },
+          ],
+        },
+      ];
+
+      // =========================================================================
+      // 3. APPLICATION STATE & PERSISTENCE (localStorage)
+      // =========================================================================
+      const state = {
+        lang: localStorage.getItem("fd_lang") || "vi",
+        activeTab: "vocab",
+        globalVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_globalVoice"),
+          "piper_hochdeutsch",
+        ),
+        workerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_workerVoice"),
+          "piper_hochdeutsch",
+        ),
+        partnerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_partnerVoice"),
+          "piper_rostock",
+        ),
+        speed: parseFloat(localStorage.getItem("fd_speed")) || 1.0,
+        vocabCategory: "all",
+        vocabQuery: "",
+        phraseCategory: "all",
+        activeDialogueId: 1,
+        fcCategory: "all",
+        fcDeck: [...VOCAB_DATA],
+        fcIndex: 0,
+        fcFlipped: false,
+        masteredIds: JSON.parse(
+          localStorage.getItem("fd_mastered_bep") || "[]",
+        ),
+        voiceDrawerOpen: false,
+      };
+
+      const audioCtrl = {
+        element: null,
+        activeBtnId: null,
+        isFullDialoguePlaying: false,
+        dialogueStopFlag: false,
+        toastTimer: null,
+      };
+
+      function t(key) {
+        return (
+          (I18N[state.lang] && I18N[state.lang][key]) || I18N.vi[key] || key
+        );
+      }
+
+      function getVoiceObj(voiceId) {
+        return VOICE_CATALOG.find((v) => v.id === voiceId) || VOICE_CATALOG[0];
+      }
+
+      function showToast(msg) {
+        const box = document.getElementById("statusToast");
+        const txt = document.getElementById("statusToastText");
+        if (!box || !txt) return;
+        txt.textContent = msg;
+        box.classList.remove("hidden");
+        clearTimeout(audioCtrl.toastTimer);
+        audioCtrl.toastTimer = setTimeout(() => {
+          box.classList.add("hidden");
+        }, 3000);
+      }
+
+      // =========================================================================
+      // 4. AUDIO ENGINE WITH FALLBACK (audio/bep/<voice>/<file>)
+      // =========================================================================
+      function syncPlayingButtonUI() {
+        document.querySelectorAll("[data-audio-btn]").forEach((btn) => {
+          const id = btn.getAttribute("data-audio-btn");
+          const isCurrent = audioCtrl.activeBtnId === id;
+          const iconPlay = btn.querySelector(".icon-play");
+          const iconStop = btn.querySelector(".icon-stop");
+          if (isCurrent) {
+            btn.classList.add("btn-playing");
+            if (iconPlay) iconPlay.classList.add("hidden");
+            if (iconStop) iconStop.classList.remove("hidden");
+          } else {
+            btn.classList.remove("btn-playing");
+            if (iconPlay) iconPlay.classList.remove("hidden");
+            if (iconStop) iconStop.classList.add("hidden");
+          }
+        });
+
+        const fullBtn = document.getElementById("playFullDialogueBtn");
+        if (fullBtn) {
+          if (audioCtrl.isFullDialoguePlaying) {
+            fullBtn.classList.add("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>■</span> <span>${t("stopFullDialogue")}</span>`;
+          } else {
+            fullBtn.classList.remove("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.add("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>▶</span> <span>${t("playFullDialogue")}</span>`;
+          }
+        }
+
+        document.querySelectorAll("[data-preview-btn]").forEach((btn) => {
+          const isPrev = audioCtrl.activeBtnId === "preview_sample";
+          if (isPrev) {
+            btn.classList.add("bg-red-600", "text-white");
+            btn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            btn.innerHTML = `<span>■</span> <span>${t("stopPreviewBtn")}</span>`;
+          } else {
+            btn.classList.remove("bg-red-600");
+            btn.classList.add("bg-blue-600", "hover:bg-blue-700", "text-white");
+            btn.innerHTML = `<span>🔊</span> <span>${t("previewVoiceBtn")}</span>`;
+          }
+        });
+      }
+
+      function stopAllAudio(resetDialogue = true) {
+        if (resetDialogue) {
+          audioCtrl.dialogueStopFlag = true;
+          audioCtrl.isFullDialoguePlaying = false;
+        }
+        if (audioCtrl.element) {
+          audioCtrl.element.pause();
+          audioCtrl.element.src = "";
+          audioCtrl.element = null;
+        }
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+        }
+        audioCtrl.activeBtnId = null;
+        document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+          el.classList.remove(
+            "dialogue-line-active",
+            "ring-2",
+            "ring-blue-500",
+            "bg-blue-50/70",
+          );
+        });
+        syncPlayingButtonUI();
+      }
+
+      function playAudioWithFallback(
+        fileName,
+        fallbackText,
+        voiceId,
+        btnId,
+        onEndedCallback = null,
+      ) {
+        if (audioCtrl.activeBtnId === btnId) {
+          stopAllAudio(true);
+          return;
+        }
+
+        stopAllAudio(false);
+        audioCtrl.activeBtnId = btnId;
+        syncPlayingButtonUI();
+
+        const chain = [voiceId, "piper_hochdeutsch", "edge_hochdeutsch"].filter(
+          (v, idx, arr) => v && arr.indexOf(v) === idx,
+        );
+        let attemptIdx = 0;
+
+        const finishPlayback = () => {
+          audioCtrl.activeBtnId = null;
+          audioCtrl.element = null;
+          syncPlayingButtonUI();
+          if (onEndedCallback) onEndedCallback();
+        };
+
+        const tryNextSource = () => {
+          if (attemptIdx >= chain.length) {
+            if ("speechSynthesis" in window && fallbackText) {
+              const utter = new SpeechSynthesisUtterance(fallbackText);
+              utter.lang = "de-DE";
+              utter.rate = state.speed;
+              utter.onend = finishPlayback;
+              utter.onerror = finishPlayback;
+              window.speechSynthesis.speak(utter);
+            } else {
+              finishPlayback();
+            }
+            return;
+          }
+
+          const currentVoice = chain[attemptIdx];
+          const src = `${AUDIO_BASE_PATH}/${currentVoice}/${fileName}`;
+          const audio = new Audio(src);
+          audio.playbackRate = state.speed;
+          audioCtrl.element = audio;
+
+          audio.onended = finishPlayback;
+          audio.onerror = () => {
+            if (attemptIdx === 0 && currentVoice !== "piper_hochdeutsch") {
+              showToast(t("fallbackNotice"));
+            }
+            attemptIdx++;
+            tryNextSource();
+          };
+
+          audio.play().catch(() => {
+            attemptIdx++;
+            tryNextSource();
+          });
+        };
+
+        tryNextSource();
+      }
+
+      async function toggleFullDialogue() {
+        if (audioCtrl.isFullDialoguePlaying) {
+          stopAllAudio(true);
+          return;
+        }
+        const dlg = DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId);
+        if (!dlg) return;
+
+        stopAllAudio(true);
+        audioCtrl.isFullDialoguePlaying = true;
+        audioCtrl.dialogueStopFlag = false;
+        syncPlayingButtonUI();
+
+        for (let i = 0; i < dlg.lines.length; i++) {
+          if (audioCtrl.dialogueStopFlag) break;
+          const line = dlg.lines[i];
+          const lineNum = i + 1;
+          const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+          const voice =
+            line.role === "worker" ? state.workerVoice : state.partnerVoice;
+
+          document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+            el.classList.remove(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+          });
+          const rowEl = document.getElementById(`row_${btnId}`);
+          if (rowEl) {
+            rowEl.classList.add(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+            rowEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+
+          await new Promise((resolve) => {
+            playAudioWithFallback(
+              `dialog_${dlg.id}_line_${lineNum}.mp3`,
+              line.de,
+              voice,
+              btnId,
+              resolve,
+            );
+          });
+
+          if (!audioCtrl.dialogueStopFlag && i < dlg.lines.length - 1) {
+            await new Promise((r) => setTimeout(r, 350));
+          }
+        }
+
+        stopAllAudio(true);
+      }
+
+      // =========================================================================
+      // 5. VOICE DRAWER / POPOVER CONTROLS
+      // =========================================================================
+      function buildVoiceOptionsHTML(selectedId) {
+        const groups = {};
+        VOICE_CATALOG.forEach((v) => {
+          const g = state.lang === "en" ? v.group_en : v.group_vi;
+          if (!groups[g]) groups[g] = [];
+          groups[g].push(v);
+        });
+        return Object.entries(groups)
+          .map(
+            ([groupLabel, items]) => `
+        <optgroup label="${groupLabel}">
+          ${items
+            .map(
+              (v) => `
+            <option value="${v.id}" ${v.id === selectedId ? "selected" : ""}>
+              ${state.lang === "en" ? v.label_en : v.label_vi}
+            </option>
+          `,
+            )
+            .join("")}
+        </optgroup>
+      `,
+          )
+          .join("");
+      }
+
+      function renderVoiceForms() {
+        const formHTML = `
+        <div class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("selectVoiceLabel")}</label>
+            <select onchange="setGlobalVoice(this.value)"
+              class="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              ${buildVoiceOptionsHTML(state.globalVoice)}
+            </select>
+          </div>
+
+          <button type="button" data-preview-btn onclick="playAudioWithFallback('sample.mp3', 'Guten Morgen, Chef! Was steht heute beim Mise en Place auf dem Plan?', state.globalVoice, 'preview_sample')"
+            class="w-full h-10 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer">
+            <span>🔊</span> <span>${t("previewVoiceBtn")}</span>
+          </button>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("speedLabel")}</label>
+            <div class="grid grid-cols-3 gap-1.5 bg-slate-100 p-1 rounded-xl">
+              ${[
+                { val: 0.75, label: t("speedSlow") },
+                { val: 1.0, label: t("speedNormal") },
+                { val: 1.25, label: t("speedFast") },
+              ]
+                .map(
+                  (sp) => `
+                <button type="button" onclick="setPlaybackSpeed(${sp.val})"
+                  class="h-9 rounded-lg text-xs font-bold transition cursor-pointer ${state.speed === sp.val ? "bg-amber-500 text-slate-950 shadow-xs" : "text-slate-600 hover:text-slate-900"}">
+                  ${sp.label}
+                </button>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+        </div>
+      `;
+
+        const dForm = document.getElementById("desktopVoiceForm");
+        const mForm = document.getElementById("mobileVoiceForm");
+        if (dForm) dForm.innerHTML = formHTML;
+        if (mForm) mForm.innerHTML = formHTML;
+
+        const vObj = getVoiceObj(state.globalVoice);
+        const shortName = state.lang === "en" ? vObj.short_en : vObj.short_vi;
+        const pill = document.getElementById("voicePillLabel");
+        if (pill) pill.textContent = `${shortName} • ${state.speed}x`;
+
+        const wSel = document.getElementById("workerVoiceSelect");
+        const pSel = document.getElementById("partnerVoiceSelect");
+        if (wSel) wSel.innerHTML = buildVoiceOptionsHTML(state.workerVoice);
+        if (pSel) pSel.innerHTML = buildVoiceOptionsHTML(state.partnerVoice);
+
+        syncPlayingButtonUI();
+      }
+
+      function toggleVoiceDrawer() {
+        state.voiceDrawerOpen = !state.voiceDrawerOpen;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+
+        if (state.voiceDrawerOpen) {
+          renderVoiceForms();
+          popover.classList.remove("md:hidden");
+          popover.classList.add("md:block");
+          sheet.classList.remove("hidden");
+          backdrop.classList.remove("hidden");
+        } else {
+          closeVoiceDrawer();
+        }
+      }
+
+      function closeVoiceDrawer() {
+        state.voiceDrawerOpen = false;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+        popover.classList.add("md:hidden");
+        popover.classList.remove("md:block");
+        sheet.classList.add("hidden");
+        backdrop.classList.add("hidden");
+      }
+
+      document.addEventListener("click", (e) => {
+        if (!state.voiceDrawerOpen) return;
+        const popover = document.getElementById("desktopVoicePopover");
+        const trigger = document.getElementById("voiceTriggerBtn");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        if (
+          !popover.contains(e.target) &&
+          !trigger.contains(e.target) &&
+          !sheet.contains(e.target)
+        ) {
+          closeVoiceDrawer();
+        }
+      });
+
+      function setGlobalVoice(voiceId) {
+        state.globalVoice = voiceId;
+        localStorage.setItem("fd_globalVoice", voiceId);
+        renderVoiceForms();
+      }
+
+      function updateDialogueVoice(role, voiceId) {
+        if (role === "worker") {
+          state.workerVoice = voiceId;
+          localStorage.setItem("fd_workerVoice", voiceId);
+        } else {
+          state.partnerVoice = voiceId;
+          localStorage.setItem("fd_partnerVoice", voiceId);
+        }
+      }
+
+      function setPlaybackSpeed(newSpeed) {
+        state.speed = newSpeed;
+        localStorage.setItem("fd_speed", String(newSpeed));
+        if (audioCtrl.element) {
+          audioCtrl.element.playbackRate = newSpeed;
+        }
+        renderVoiceForms();
+      }
+
+      // =========================================================================
+      // 6. SMART NORMALIZATION & RENDERERS (100% VI <-> EN)
+      // =========================================================================
+      function normalizeSearch(str) {
+        return (str || "")
+          .toLowerCase()
+          .replace(/ä/g, "a")
+          .replace(/ö/g, "o")
+          .replace(/ü/g, "u")
+          .replace(/ß/g, "ss")
+          .normalize("NFD")
+          .replace(/[̀-ͯ]/g, "")
+          .replace(/đ/g, "d");
+      }
+
+      function renderNavigation() {
+        const tabs = [
+          {
+            id: "vocab",
+            dLabel: `${t("nav_vocab_desktop")} (${VOCAB_DATA.length})`,
+            mLabel: t("nav_vocab_mobile"),
+            icon: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25",
+          },
+          {
+            id: "phrases",
+            dLabel: `${t("nav_phrases_desktop")} (${PHRASES_DATA.length})`,
+            mLabel: t("nav_phrases_mobile"),
+            icon: "M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z",
+          },
+          {
+            id: "dialogues",
+            dLabel: `${t("nav_dialogues_desktop")} (${DIALOGUES_DATA.length})`,
+            mLabel: t("nav_dialogues_mobile"),
+            icon: "M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155",
+          },
+          {
+            id: "flashcards",
+            dLabel: t("nav_flashcards_desktop"),
+            mLabel: t("nav_flashcards_mobile"),
+            icon: "M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3",
+          },
+        ];
+
+        document.getElementById("desktopNav").innerHTML = tabs
+          .map(
+            (tab) => `
+        <button type="button" onclick="switchTab('${tab.id}')"
+          class="px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${state.activeTab === tab.id ? "bg-white text-slate-900 shadow-xs" : "text-slate-300 hover:text-white hover:bg-slate-700/60"}">
+          ${tab.dLabel}
+        </button>
+      `,
+          )
+          .join("");
+
+        document.getElementById("mobileNavGrid").innerHTML = tabs
+          .map((tab) => {
+            const active = state.activeTab === tab.id;
+            return `
+          <button type="button" onclick="switchTab('${tab.id}')"
+            class="flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition cursor-pointer ${active ? "text-blue-600" : "text-slate-500 hover:text-slate-800"}">
+            <svg class="w-5 h-5 ${active ? "stroke-[2.3]" : "stroke-[1.8]"}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="${tab.icon}" />
+            </svg>
+            <span>${tab.mLabel}</span>
+          </button>
+        `;
+          })
+          .join("");
+      }
+
+      function switchTab(tabId) {
+        state.activeTab = tabId;
+        ["vocab", "phrases", "dialogues", "flashcards"].forEach((id) => {
+          const el = document.getElementById(`section-${id}`);
+          if (el) el.classList.toggle("hidden", id !== tabId);
+        });
+        renderNavigation();
+        if (tabId === "flashcards") renderFlashcard();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function speakBtnHTML(btnId, sizeClass = "w-11 h-11") {
+        return `
+        <button type="button" data-audio-btn="${btnId}"
+          class="${sizeClass} shrink-0 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200/80 flex items-center justify-center transition cursor-pointer active:scale-95"
+          aria-label="Play audio">
+          <svg class="icon-play w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+          </svg>
+          <span class="icon-stop hidden text-xs font-extrabold">■</span>
+        </button>
+      `;
+      }
+
+      function renderVocab() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("cat_all")} (${VOCAB_DATA.length})` },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+
+        document.getElementById("vocabCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setVocabCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.vocabCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const q = normalizeSearch(state.vocabQuery);
+        const filtered = VOCAB_DATA.filter((item) => {
+          const matchCat =
+            state.vocabCategory === "all" || item.cat === state.vocabCategory;
+          if (!matchCat) return false;
+          if (!q) return true;
+          const haystack = normalizeSearch(
+            `${item.de} ${item.vi} ${item.en} ${item.rel_vi} ${item.rel_en} ${item.ex_de} ${item.ex_vi} ${item.ex_en}`,
+          );
+          return haystack.includes(q);
+        });
+
+        const grid = document.getElementById("vocabGrid");
+        if (filtered.length === 0) {
+          grid.innerHTML = `<div class="col-span-full bg-white rounded-2xl p-8 text-center text-sm text-slate-500 border border-slate-200">${t("noResults")}</div>`;
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map((item) => {
+            const typeStr = state.lang === "en" ? item.type_en : item.type_vi;
+            const meaningStr = state.lang === "en" ? item.en : item.vi;
+            const relStr = state.lang === "en" ? item.rel_en : item.rel_vi;
+            const exTrans = state.lang === "en" ? item.ex_en : item.ex_vi;
+            const wordBtnId = `vocab_${item.id}_word`;
+            const exBtnId = `vocab_${item.id}_ex`;
+
+            return `
+          <article class="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex flex-col justify-between gap-3.5">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">${item.de}</h2>
+                    <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-100">${typeStr}</span>
+                  </div>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">${item.ipa}</p>
+                  <p class="text-sm sm:text-base font-bold text-emerald-700 mt-1.5">${meaningStr}</p>
+                </div>
+                <div onclick="playAudioWithFallback('vocab_${item.id}_word.mp3', '${item.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="mt-2.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                <span class="font-semibold text-slate-700">${t("relatedPrefix")}</span> ${relStr}
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/60 flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <p class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">${item.ex_de}</p>
+                <p class="text-xs text-slate-600 italic mt-0.5 leading-snug">${exTrans}</p>
+              </div>
+              <div onclick="playAudioWithFallback('vocab_${item.id}_ex.mp3', '${item.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')">
+                ${speakBtnHTML(exBtnId, "w-11 h-11 bg-amber-100/80 hover:bg-amber-200/80 text-amber-900 border-amber-200")}
+              </div>
+            </div>
+          </article>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setVocabCategory(cat) {
+        state.vocabCategory = cat;
+        renderVocab();
+      }
+
+      function handleVocabSearch(val) {
+        state.vocabQuery = val;
+        const clearBtn = document.getElementById("clearSearchBtn");
+        if (clearBtn) {
+          clearBtn.classList.toggle("hidden", !val);
+          clearBtn.classList.toggle("flex", Boolean(val));
+        }
+        renderVocab();
+      }
+
+      function clearVocabSearch() {
+        const input = document.getElementById("vocabSearchInput");
+        if (input) input.value = "";
+        handleVocabSearch("");
+      }
+
+      function renderPhrases() {
+        const countPCat = (cat) =>
+          PHRASES_DATA.filter((p) => p.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("pcat_all")} (${PHRASES_DATA.length})` },
+          { id: "2.1", label: `${t("pcat_2_1")} (${countPCat("2.1")})` },
+          { id: "2.2", label: `${t("pcat_2_2")} (${countPCat("2.2")})` },
+          { id: "2.3", label: `${t("pcat_2_3")} (${countPCat("2.3")})` },
+          { id: "2.4", label: `${t("pcat_2_4")} (${countPCat("2.4")})` },
+        ];
+
+        document.getElementById("phraseCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setPhraseCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.phraseCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const filtered = PHRASES_DATA.filter(
+          (p) =>
+            state.phraseCategory === "all" || p.cat === state.phraseCategory,
+        );
+        document.getElementById("phrasesList").innerHTML = filtered
+          .map((p) => {
+            const trans = state.lang === "en" ? p.en : p.vi;
+            const btnId = `phrase_${p.id}`;
+            return `
+          <div class="bg-white rounded-2xl p-4 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex items-center justify-between gap-3.5">
+            <div class="min-w-0">
+              <span class="inline-block text-[11px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md mb-1">${p.cat}</span>
+              <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${p.de}</p>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">${trans}</p>
+            </div>
+            <div onclick="playAudioWithFallback('phrase_${p.id}.mp3', '${p.de.replace(/'/g, "\'")}', state.globalVoice, '${btnId}')">
+              ${speakBtnHTML(btnId, "w-11 h-11")}
+            </div>
+          </div>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setPhraseCategory(cat) {
+        state.phraseCategory = cat;
+        renderPhrases();
+      }
+
+      function renderDialogues() {
+        document.getElementById("dialogueTabs").innerHTML = DIALOGUES_DATA.map(
+          (d) => {
+            const label = state.lang === "en" ? d.tab_en : d.tab_vi;
+            const active = d.id === state.activeDialogueId;
+            return `
+          <button type="button" onclick="selectDialogue(${d.id})"
+            class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition cursor-pointer ${active ? "bg-slate-900 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+            ${label}
+          </button>
+        `;
+          },
+        ).join("");
+
+        const dlg =
+          DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId) ||
+          DIALOGUES_DATA[0];
+        const title = state.lang === "en" ? dlg.title_en : dlg.title_vi;
+        const context = state.lang === "en" ? dlg.context_en : dlg.context_vi;
+
+        document.getElementById("dialogueContainer").innerHTML = `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-slate-900">${title}</h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">${context}</p>
+          </div>
+          <button id="playFullDialogueBtn" type="button" onclick="toggleFullDialogue()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 shadow-xs transition cursor-pointer">
+            <span>▶</span> <span>${t("playFullDialogue")}</span>
+          </button>
+        </div>
+
+        <div class="space-y-3">
+          ${dlg.lines
+            .map((line, idx) => {
+              const lineNum = idx + 1;
+              const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+              const speakerName =
+                state.lang === "en" ? line.name_en : line.name_vi;
+              const lineTrans = state.lang === "en" ? line.en : line.vi;
+              const isWorker = line.role === "worker";
+              const voiceForLine = isWorker
+                ? state.workerVoice
+                : state.partnerVoice;
+
+              return `
+              <div id="row_${btnId}" class="p-3.5 sm:p-4 rounded-2xl border transition flex items-start justify-between gap-3 ${isWorker ? "bg-slate-50/90 border-slate-200/80" : "bg-amber-50/50 border-amber-200/60"}">
+                <div class="min-w-0">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold mb-1 ${isWorker ? "bg-blue-100 text-blue-800" : "bg-amber-100 text-amber-900"}">
+                    ${speakerName}
+                  </span>
+                  <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${line.de}</p>
+                  <p class="text-xs sm:text-sm text-slate-600 mt-1">${lineTrans}</p>
+                </div>
+                <div onclick="playAudioWithFallback('dialog_${dlg.id}_line_${lineNum}.mp3', '${line.de.replace(/'/g, "\'")}', '${voiceForLine}', '${btnId}')">
+                  ${speakBtnHTML(btnId, "w-11 h-11")}
+                </div>
+              </div>
+            `;
+            })
+            .join("")}
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function selectDialogue(id) {
+        stopAllAudio(true);
+        state.activeDialogueId = id;
+        renderDialogues();
+      }
+
+      function renderFlashcardControls() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cardUnit = state.lang === "en" ? "cards" : "thẻ";
+        const opts = [
+          {
+            id: "all",
+            label: `${t("fcAllCategories")} (${VOCAB_DATA.length} ${cardUnit})`,
+          },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+        document.getElementById("fcCategorySelect").innerHTML = opts
+          .map(
+            (o) => `
+        <option value="${o.id}" ${o.id === state.fcCategory ? "selected" : ""}>${o.label}</option>
+      `,
+          )
+          .join("");
+      }
+
+      function renderFlashcard() {
+        renderFlashcardControls();
+        if (state.fcDeck.length === 0) state.fcDeck = [...VOCAB_DATA];
+        if (state.fcIndex >= state.fcDeck.length) state.fcIndex = 0;
+
+        const card = state.fcDeck[state.fcIndex];
+        const typeStr = state.lang === "en" ? card.type_en : card.type_vi;
+        const meaningStr = state.lang === "en" ? card.en : card.vi;
+        const relStr = state.lang === "en" ? card.rel_en : card.rel_vi;
+        const exTrans = state.lang === "en" ? card.ex_en : card.ex_vi;
+        const isMastered = state.masteredIds.includes(card.id);
+
+        document.getElementById("fcCounter").textContent =
+          `${state.fcIndex + 1} / ${state.fcDeck.length}`;
+
+        const masterBtn = document.getElementById("fcMasterBtn");
+        if (isMastered) {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-bold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>✓</span> <span>${t("fcMastered")}</span>`;
+        } else {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-semibold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>○</span> <span>${t("fcMarkMastered")}</span>`;
+        }
+
+        const wordBtnId = `fc_word_${card.id}`;
+        const exBtnId = `fc_ex_${card.id}`;
+
+        document.getElementById("flashcardStage").innerHTML = `
+        <div onclick="flipFlashcard()" class="relative w-full min-h-[310px] sm:min-h-[340px] cursor-pointer select-none">
+          <div class="w-full min-h-[310px] sm:min-h-[340px] transform-style-3d ${state.fcFlipped ? "rotate-y-180" : ""}">
+            
+            <!-- FRONT -->
+            <div class="absolute inset-0 backface-hidden bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 flex flex-col items-center justify-between text-center">
+              <div class="w-full flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-50 text-amber-900">${typeStr}</span>
+                <div onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="my-auto py-4">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${card.de}</h2>
+                <p class="text-sm font-mono text-slate-400 mt-2">${card.ipa}</p>
+              </div>
+
+              <p class="text-xs font-medium text-slate-400">${t("fcFrontHint")}</p>
+            </div>
+
+            <!-- BACK -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-800 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <p class="text-xs font-semibold text-amber-400 uppercase tracking-wider">${card.de}</p>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-1">${meaningStr}</h3>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')"
+                    class="h-10 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shrink-0 cursor-pointer">
+                    <span>🔊</span> <span>${t("fcWordBtn")}</span>
+                  </button>
+                </div>
+
+                <p class="text-xs text-slate-300 bg-slate-800/80 p-3 rounded-xl mt-3 leading-relaxed">
+                  <span class="font-semibold text-amber-300">${t("relatedPrefix")}</span> ${relStr}
+                </p>
+
+                <div class="mt-3 p-3.5 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="text-xs sm:text-sm font-semibold text-white leading-snug">${card.ex_de}</p>
+                    <p class="text-xs text-slate-300 italic mt-1">${exTrans}</p>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_ex.mp3', '${card.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')"
+                    class="w-11 h-11 shrink-0 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center justify-center font-bold cursor-pointer">
+                    🔊
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-center text-xs text-slate-400 mt-3">${t("fcBackHint")}</p>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function flipFlashcard() {
+        state.fcFlipped = !state.fcFlipped;
+        renderFlashcard();
+      }
+
+      function nextFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex = (state.fcIndex + 1) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function prevFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex =
+          (state.fcIndex - 1 + state.fcDeck.length) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function setFlashcardCategory(cat) {
+        state.fcCategory = cat;
+        state.fcFlipped = false;
+        state.fcIndex = 0;
+        state.fcDeck =
+          cat === "all"
+            ? [...VOCAB_DATA]
+            : VOCAB_DATA.filter((v) => v.cat === cat);
+        renderFlashcard();
+      }
+
+      function shuffleFlashcards() {
+        for (let i = state.fcDeck.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [state.fcDeck[i], state.fcDeck[j]] = [
+            state.fcDeck[j],
+            state.fcDeck[i],
+          ];
+        }
+        state.fcIndex = 0;
+        state.fcFlipped = false;
+        renderFlashcard();
+      }
+
+      function toggleFlashcardMastered() {
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+        const idx = state.masteredIds.indexOf(card.id);
+        if (idx >= 0) {
+          state.masteredIds.splice(idx, 1);
+        } else {
+          state.masteredIds.push(card.id);
+        }
+        localStorage.setItem(
+          "fd_mastered_bep",
+          JSON.stringify(state.masteredIds),
+        );
+        renderFlashcard();
+      }
+
+      function renderKitchenNotes() {
+        document.getElementById("notesHeading").textContent = t("notesHeading");
+        const items = t("notes") || [];
+        document.getElementById("notesList").innerHTML = items
+          .map(
+            (n) => `
+        <li class="p-3 rounded-xl bg-slate-50 border border-slate-100">${n}</li>
+      `,
+          )
+          .join("");
+      }
+
+      // =========================================================================
+      // 7. LANGUAGE SWITCHER (100% UI + CONTENT LOCALIZATION)
+      // =========================================================================
+      function setLanguage(lang) {
+        state.lang = lang;
+        localStorage.setItem("fd_lang", lang);
+        document.documentElement.lang = lang;
+        document.title = t("pageTitle");
+
+        const viBtn = document.getElementById("langBtnVi");
+        const enBtn = document.getElementById("langBtnEn");
+        if (lang === "vi") {
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        } else {
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        }
+
+        document.getElementById("backHomeText").textContent = t("backHomeText");
+        document.getElementById("brandTitle").textContent = t("brandTitle");
+        document.getElementById("popoverTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("sheetTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("vocabSearchInput").placeholder =
+          t("searchPlaceholder");
+        document.getElementById("workerVoiceLabel").textContent =
+          t("workerVoiceLabel");
+        document.getElementById("partnerVoiceLabel").textContent =
+          t("partnerVoiceLabel");
+        document.getElementById("fcShuffleText").textContent = t("fcShuffle");
+        document.getElementById("fcPrevText").textContent = t("fcPrev");
+        document.getElementById("fcNextText").textContent = t("fcNext");
+        document.getElementById("fcShortcutHint").textContent =
+          t("fcShortcutHint");
+
+        renderNavigation();
+        renderVoiceForms();
+        renderVocab();
+        renderPhrases();
+        renderDialogues();
+        renderFlashcard();
+        renderKitchenNotes();
+      }
+
+      // =========================================================================
+      // 8. KEYBOARD SHORTCUTS
+      // =========================================================================
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && state.voiceDrawerOpen) {
+          closeVoiceDrawer();
+          return;
+        }
+        if (
+          ["INPUT", "SELECT", "TEXTAREA"].includes(
+            document.activeElement.tagName,
+          )
+        )
+          return;
+        if (state.activeTab !== "flashcards") return;
+
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+
+        if (e.code === "Space") {
+          e.preventDefault();
+          flipFlashcard();
+        } else if (e.key === "ArrowRight") {
+          nextFlashcard();
+        } else if (e.key === "ArrowLeft") {
+          prevFlashcard();
+        } else if (e.key.toLowerCase() === "s") {
+          playAudioWithFallback(
+            `vocab_${card.id}_word.mp3`,
+            card.de,
+            state.globalVoice,
+            `fc_word_${card.id}`,
+          );
+        } else if (e.key.toLowerCase() === "e") {
+          playAudioWithFallback(
+            `vocab_${card.id}_ex.mp3`,
+            card.ex_de,
+            state.globalVoice,
+            `fc_ex_${card.id}`,
+          );
+        }
+      });
+
+      // =========================================================================
+      // 9. INITIALIZE APP
+      // =========================================================================
+      setLanguage(state.lang);
+    </script>
+  </body>
+</html>

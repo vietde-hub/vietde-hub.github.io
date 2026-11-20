@@ -142,7 +142,7 @@
               <span
                 id="statTradesVal"
                 class="text-sm sm:text-base font-extrabold text-emerald-400 leading-none"
-                >6/11</span
+                >9/11</span
               >
               <span
                 id="statTradesLabel"
@@ -157,7 +157,7 @@
               <span
                 id="statTermsVal"
                 class="text-sm sm:text-base font-extrabold text-amber-400 leading-none"
-                >486</span
+                >742</span
               >
               <span
                 id="statTermsLabel"
@@ -172,7 +172,7 @@
               <span
                 id="statDialoguesVal"
                 class="text-sm sm:text-base font-extrabold text-sky-400 leading-none"
-                >34</span
+                >52</span
               >
               <span
                 id="statDialoguesLabel"
@@ -299,13 +299,16 @@
         },
       };
 
-      // 6 chuyên mục đầu tiên đã sẵn sàng học:
+      // 9 chuyên mục đầu tiên đã sẵn sàng học:
       // 1. Tiếng Đức Đời Sống & Hòa Nhập (hoinhapduc.html)
       // 2. Ngành Sơn Công Nghiệp (thoson.html)
       // 3. Kỹ Thuật Viên Cốt Thép / Thợ buộc sắt (thobuocsat.html)
       // 4. Ngành Thợ Hàn Công Nghiệp (thohan.html)
       // 5. Ngành Điều Dưỡng & Chăm Sóc Y Tế (dieuduong.html)
       // 6. Ngành Trợ Lý Nha Khoa (trolynhakhoa.html)
+      // 7. Ngành Chế Biến Thực Phẩm (chebienthucpham.html)
+      // 8. Ngành Bếp & Phụ Bếp (bep.html)
+      // 9. Ngành Nhà Hàng & Khách Sạn (nhahangkhachsan.html)
       const COURSES_DATA = [
         {
           id: "doisong",
@@ -423,8 +426,8 @@
         },
         {
           id: "chebienthucpham",
-          href: "#",
-          ready: false,
+          href: "chebienthucpham.html",
+          ready: true,
           accent: "orange",
           icon: "🥩",
           germanTitle: "Lebensmittelverarbeitung & Fleischer",
@@ -433,17 +436,17 @@
           tag_vi: "Dây chuyền thực phẩm, Vệ sinh HACCP & Đóng gói",
           tag_en: "Food Production Lines, HACCP Hygiene & Packaging",
           desc_vi:
-            "Thuật ngữ dây chuyền chế biến thực phẩm, tiêu chuẩn vệ sinh an toàn thực phẩm (Hygiene / HACCP), bảo quản lạnh, kiểm soát chất lượng và đóng gói.",
+            "84 từ vựng chế biến thực phẩm & pha lóc độc lập (HACCP, chuỗi lạnh Kühlkette, đóng gói chân không/MAP, máy dò kim loại, luật IfSG § 43), 36 mẫu câu và 6 hội thoại.",
           desc_en:
-            "Food processing lines, HACCP hygiene standards, cold chain storage, quality checks, and packaging.",
-          vocabCount: 0,
-          phraseCount: 0,
-          dialogueCount: 0,
+            "84 standalone food processing & meat cutting terms (HACCP, cold chain, vacuum/MAP packaging, metal detector, IfSG § 43), 36 phrases, and 6 dialogues.",
+          vocabCount: 84,
+          phraseCount: 36,
+          dialogueCount: 6,
         },
         {
           id: "bep",
-          href: "#",
-          ready: false,
+          href: "bep.html",
+          ready: true,
           accent: "amber",
           icon: "👨‍🍳",
           germanTitle: "Koch & Küchenhilfe",
@@ -452,17 +455,17 @@
           tag_vi: "Sơ chế, Chế biến món ăn & An toàn vệ sinh bếp",
           tag_en: "Prep, Cooking Methods & Kitchen Hygiene",
           desc_vi:
-            "Từ vựng nguyên liệu, kỹ thuật sơ chế/cắt thái/nấu nướng (schneiden, anbraten, kochen, würzen), thiết bị bếp công nghiệp và an toàn thực phẩm.",
+            "86 từ vựng bếp chuyên nghiệp độc lập (Mise en Place, kỹ thuật nấu & cắt thái, lò Kombidämpfer, mã màu thớt HACCP, ca phục vụ Pass), 36 mẫu câu và 6 hội thoại.",
           desc_en:
-            "Ingredients, prep & cooking verbs (schneiden, anbraten, kochen, würzen), kitchen appliances, and food safety.",
-          vocabCount: 0,
-          phraseCount: 0,
-          dialogueCount: 0,
+            "86 standalone professional kitchen terms (Mise en Place, cooking & knife techniques, combi steamer, HACCP color boards, service pass), 36 phrases, and 6 dialogues.",
+          vocabCount: 86,
+          phraseCount: 36,
+          dialogueCount: 6,
         },
         {
           id: "nhahangkhachsan",
-          href: "#",
-          ready: false,
+          href: "nhahangkhachsan.html",
+          ready: true,
           accent: "indigo",
           icon: "🏨",
           germanTitle: "Hotellerie & Gastronomie (Service)",
@@ -471,12 +474,12 @@
           tag_vi: "Lễ tân, Buồng phòng & Phục vụ bàn nhà hàng",
           tag_en: "Front Desk, Housekeeping & Restaurant Service",
           desc_vi:
-            "Mẫu câu đón tiếp khách, nhận/trả phòng (Check-in / Check-out), phục vụ bàn, gọi món, xử lý yêu cầu khách hàng và tiêu chuẩn dịch vụ tại Đức.",
+            "86 từ vựng khách sạn & nhà hàng độc lập (Check-in/Check-out, phiếu Meldeschein, khăn 4 màu Housekeeping, gọi món & thanh toán 'Zusammen oder getrennt?'), 36 mẫu câu và 6 hội thoại.",
           desc_en:
-            "Guest greeting, check-in/check-out, table service, ordering, handling guest requests, and hospitality standards.",
-          vocabCount: 0,
-          phraseCount: 0,
-          dialogueCount: 0,
+            "86 standalone hotel & restaurant terms (Check-in/out, Meldeschein, 4-color housekeeping cloths, table service & billing), 36 phrases, and 6 dialogues.",
+          vocabCount: 86,
+          phraseCount: 36,
+          dialogueCount: 6,
         },
         {
           id: "nail",

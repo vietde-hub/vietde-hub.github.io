@@ -1,0 +1,3843 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>
+      Fachdeutsch — Tiếng Đức Ngành Nhà Hàng & Khách Sạn (Hotellerie &
+      Gastronomie) | VietDe Hub
+    </title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='14'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Crect width='64' height='21.34' y='0' fill='%23111827'/%3E%3Crect width='64' height='21.34' y='21.33' fill='%23DC2626'/%3E%3Crect width='64' height='21.34' y='42.66' fill='%23FACC15'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: #f1f5f9;
+        color: #0f172a;
+        min-height: 100dvh;
+        padding-bottom: calc(76px + var(--safe-bottom));
+      }
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 40px;
+        }
+      }
+      .bottom-nav-safe {
+        padding-bottom: calc(6px + var(--safe-bottom));
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+      @keyframes pulseRing {
+        0% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45);
+        }
+        70% {
+          box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        }
+      }
+      .btn-playing {
+        background-color: #ef4444 !important;
+        color: #ffffff !important;
+        border-color: #ef4444 !important;
+        animation: pulseRing 1.4s infinite;
+      }
+      @keyframes sheetSlideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .animate-sheet-up {
+        animation: sheetSlideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes popoverFade {
+        from {
+          opacity: 0;
+          transform: translateY(-6px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-popover {
+        animation: popoverFade 0.18s ease-out;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-indigo-200 selection:text-slate-900">
+    <!-- =====================================================================
+       ADAPTIVE STICKY TOP BAR (Back to Hub + Compact Mobile + 1-Row Desktop)
+       ===================================================================== -->
+    <header
+      class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-3 sm:px-6 h-14 flex items-center justify-between gap-2"
+      >
+        <!-- Left: Back to Hub + Brand + Desktop Navigation Tabs -->
+        <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
+          <a
+            href="index.html"
+            id="backHomeBtn"
+            title="Trang chủ / Home"
+            class="h-9 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center gap-1 shrink-0 transition"
+          >
+            <span>←</span>
+            <span id="backHomeText" class="hidden sm:inline">Trang chủ</span>
+          </a>
+
+          <div class="flex items-center gap-2 min-w-0">
+            <div
+              class="w-8 h-8 rounded-lg bg-indigo-500 text-white flex items-center justify-center font-extrabold shadow-inner shrink-0"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"
+                />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span
+                  id="brandTitle"
+                  class="font-bold text-sm sm:text-base tracking-tight truncate"
+                  >Nhà Hàng & Khách Sạn</span
+                >
+                <span
+                  class="hidden xl:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30"
+                  >Hotellerie & Service</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Single-Row Navigation Tabs (Hidden on Mobile) -->
+          <nav
+            id="desktopNav"
+            class="hidden md:flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-slate-700/70"
+            aria-label="Primary Navigation"
+          ></nav>
+        </div>
+
+        <!-- Right: Voice Settings Trigger Pill + VI/EN Switch -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0 relative">
+          <button
+            id="voiceTriggerBtn"
+            type="button"
+            onclick="toggleVoiceDrawer()"
+            class="h-9 px-2.5 sm:px-3 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 border border-slate-700 text-xs font-medium text-slate-100 flex items-center gap-1.5 transition cursor-pointer"
+          >
+            <span class="text-amber-400">🎙</span>
+            <span
+              id="voicePillLabel"
+              class="max-w-[105px] sm:max-w-[160px] lg:max-w-[210px] truncate"
+              >Piper Chuẩn Đức • 1.0x</span
+            >
+            <svg
+              class="w-3.5 h-3.5 text-slate-400 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <!-- Language Switcher VI | EN -->
+          <div
+            class="h-9 bg-slate-800 p-0.5 rounded-xl border border-slate-700 flex items-center"
+            role="group"
+            aria-label="Language Switch"
+          >
+            <button
+              id="langBtnVi"
+              type="button"
+              onclick="setLanguage('vi')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              VI
+            </button>
+            <button
+              id="langBtnEn"
+              type="button"
+              onclick="setLanguage('en')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              EN
+            </button>
+          </div>
+
+          <!-- DESKTOP POPOVER: Voice & Speed Controls -->
+          <div
+            id="desktopVoicePopover"
+            class="hidden md:hidden absolute right-0 top-12 w-80 bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200 p-4 z-50 animate-popover"
+          >
+            <div
+              class="flex items-center justify-between pb-2.5 mb-3 border-b border-slate-100"
+            >
+              <span
+                id="popoverTitle"
+                class="text-xs font-bold uppercase tracking-wider text-slate-500"
+                >Cài đặt Giọng đọc & Tốc độ</span
+              >
+              <button
+                type="button"
+                onclick="closeVoiceDrawer()"
+                class="w-7 h-7 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+            <div id="desktopVoiceForm"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subtle Non-Blocking Audio Fallback / Status Banner -->
+    <div
+      id="statusToast"
+      class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-50 max-w-[92vw] sm:max-w-md bg-slate-900/95 text-white text-xs px-3.5 py-2 rounded-full shadow-lg border border-slate-700 flex items-center gap-2"
+    >
+      <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+      <span id="statusToastText" class="truncate"></span>
+    </div>
+
+    <!-- =====================================================================
+       MAIN CONTENT AREA
+       ===================================================================== -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6">
+      <!-- TAB 1: VOCABULARY -->
+      <section id="section-vocab" class="space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 space-y-3"
+        >
+          <div class="relative">
+            <svg
+              class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z"
+              />
+            </svg>
+            <input
+              id="vocabSearchInput"
+              type="search"
+              oninput="handleVocabSearch(this.value)"
+              placeholder="Tìm từ tiếng Đức, nghĩa tiếng Việt..."
+              class="w-full h-11 pl-10 pr-9 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
+            />
+            <button
+              id="clearSearchBtn"
+              type="button"
+              onclick="clearVocabSearch()"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-xs items-center justify-center hover:bg-slate-300 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div
+            id="vocabCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5"
+          ></div>
+        </div>
+
+        <div
+          id="vocabGrid"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"
+        ></div>
+      </section>
+
+      <!-- TAB 2: HOSPITALITY PHRASES -->
+      <section id="section-phrases" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80"
+        >
+          <div
+            id="phraseCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar"
+          ></div>
+        </div>
+        <div
+          id="phrasesList"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3"
+        ></div>
+      </section>
+
+      <!-- TAB 3: DIALOGUES -->
+      <section id="section-dialogues" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3.5 sm:p-5 shadow-sm border border-slate-200/80 space-y-4"
+        >
+          <div
+            id="dialogueTabs"
+            class="flex items-center gap-2 overflow-x-auto no-scrollbar"
+          ></div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100"
+          >
+            <div>
+              <label
+                id="workerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Nhân viên khách sạn – nhà hàng (Đức)</label
+              >
+              <select
+                id="workerVoiceSelect"
+                onchange="updateDialogueVoice('worker', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+            <div>
+              <label
+                id="partnerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Khách hàng / Đồng nghiệp</label
+              >
+              <select
+                id="partnerVoiceSelect"
+                onchange="updateDialogueVoice('partner', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="dialogueContainer"
+          class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200/80"
+        ></div>
+      </section>
+
+      <!-- TAB 4: FLASHCARDS -->
+      <section
+        id="section-flashcards"
+        class="hidden space-y-4 max-w-2xl mx-auto"
+      >
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 flex flex-wrap items-center justify-between gap-2"
+        >
+          <select
+            id="fcCategorySelect"
+            onchange="setFlashcardCategory(this.value)"
+            class="h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></select>
+          <div class="flex items-center gap-2">
+            <span
+              id="fcCounter"
+              class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-2 rounded-xl"
+              >1 / 86</span
+            >
+            <button
+              id="fcShuffleBtn"
+              type="button"
+              onclick="shuffleFlashcards()"
+              class="h-10 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <span>🔀</span>
+              <span id="fcShuffleText">Trộn thẻ</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="flashcardStage" class="perspective-1000"></div>
+
+        <div class="flex items-center justify-between gap-2">
+          <button
+            type="button"
+            onclick="prevFlashcard()"
+            class="h-11 px-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>←</span>
+            <span id="fcPrevText">Trước</span>
+          </button>
+
+          <button
+            id="fcMasterBtn"
+            type="button"
+            onclick="toggleFlashcardMastered()"
+            class="h-11 px-4 rounded-xl border text-xs sm:text-sm font-semibold shadow-sm flex items-center gap-1.5 transition cursor-pointer"
+          ></button>
+
+          <button
+            type="button"
+            onclick="nextFlashcard()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-sm font-semibold text-white shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span id="fcNextText">Tiếp</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <p
+          id="fcShortcutHint"
+          class="hidden md:block text-center text-xs text-slate-400"
+        >
+          Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe
+          ví dụ)
+        </p>
+      </section>
+
+      <!-- PRACTICAL HOSPITALITY NOTES CARD (FROM GOOGLE DOC) -->
+      <section
+        id="section-hospitality-notes"
+        class="mt-6 bg-white rounded-2xl p-4 sm:p-6 shadow-xs border border-slate-200/80"
+      >
+        <h2
+          id="notesHeading"
+          class="text-base sm:text-lg font-extrabold text-slate-900 mb-3"
+        ></h2>
+        <ul
+          id="notesList"
+          class="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed"
+        ></ul>
+      </section>
+    </main>
+
+    <!-- MOBILE BOTTOM NAVIGATION BAR -->
+    <nav
+      id="mobileBottomNav"
+      class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-[0_-4px_16px_rgba(15,23,42,0.06)] bottom-nav-safe"
+      aria-label="Mobile Navigation"
+    >
+      <div id="mobileNavGrid" class="grid grid-cols-4 h-14"></div>
+    </nav>
+
+    <!-- MOBILE BOTTOM SHEET: VOICE & SPEED SETTINGS -->
+    <div
+      id="mobileVoiceBackdrop"
+      onclick="closeVoiceDrawer()"
+      class="hidden md:hidden fixed inset-0 z-50 bg-slate-950/50 backdrop-blur-xs transition-opacity"
+    ></div>
+    <div
+      id="mobileVoiceSheet"
+      class="hidden md:hidden fixed inset-x-0 bottom-0 z-50 bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 p-5 pb-[calc(20px+var(--safe-bottom))] animate-sheet-up"
+    >
+      <div class="w-10 h-1.5 rounded-full bg-slate-300 mx-auto mb-4"></div>
+      <div class="flex items-center justify-between mb-3">
+        <h3 id="sheetTitle" class="text-base font-bold text-slate-900">
+          Cài đặt Giọng đọc & Tốc độ
+        </h3>
+        <button
+          type="button"
+          onclick="closeVoiceDrawer()"
+          class="w-9 h-9 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold"
+        >
+          ✕
+        </button>
+      </div>
+      <div id="mobileVoiceForm"></div>
+    </div>
+
+    <script>
+      // =========================================================================
+      // 0. AUDIO FOLDER PREFIX FOR HOSPITALITY & RESTAURANT MODULE
+      // =========================================================================
+      const AUDIO_BASE_PATH = "audio/nhahangkhachsan";
+
+      // =========================================================================
+      // 1. VOICE CATALOG (4 VOICES: PIPER OFFLINE + EDGE NEURAL) & I18N
+      // =========================================================================
+      const VOICE_CATALOG = [
+        {
+          id: "piper_hochdeutsch",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Chuẩn Đức (High)",
+          label_en: "Piper Thorsten — Standard German (High)",
+          short_vi: "Piper Chuẩn Đức",
+          short_en: "Piper Standard",
+        },
+        {
+          id: "piper_rostock",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Miền Bắc / Rostock",
+          label_en: "Piper Thorsten — Northern / Rostock",
+          short_vi: "Piper Rostock",
+          short_en: "Piper Rostock",
+        },
+        {
+          id: "edge_hochdeutsch",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Chuẩn Đức (Nữ Katja)",
+          label_en: "Edge Neural — Standard German (Female Katja)",
+          short_vi: "Edge Katja",
+          short_en: "Edge Katja",
+        },
+        {
+          id: "edge_rostock",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Miền Bắc (Nam Conrad)",
+          label_en: "Edge Neural — Northern German (Male Conrad)",
+          short_vi: "Edge Conrad",
+          short_en: "Edge Conrad",
+        },
+      ];
+
+      function sanitizeVoiceId(savedId, fallbackId) {
+        return VOICE_CATALOG.some((v) => v.id === savedId)
+          ? savedId
+          : fallbackId;
+      }
+
+      const I18N = {
+        vi: {
+          pageTitle:
+            "Fachdeutsch — Tiếng Đức Ngành Nhà Hàng & Khách Sạn (Hotellerie & Gastronomie) | VietDe Hub",
+          backHomeText: "Trang chủ",
+          brandTitle: "Nhà Hàng & Khách Sạn",
+          nav_vocab_desktop: "1. Từ vựng",
+          nav_phrases_desktop: "2. Mẫu câu dịch vụ",
+          nav_dialogues_desktop: "3. Hội thoại",
+          nav_flashcards_desktop: "4. Thẻ Flashcard",
+          nav_vocab_mobile: "Từ vựng",
+          nav_phrases_mobile: "Mẫu câu",
+          nav_dialogues_mobile: "Hội thoại",
+          nav_flashcards_mobile: "Thẻ nhớ",
+          voiceSettingsTitle: "Cài đặt Giọng đọc & Tốc độ",
+          selectVoiceLabel: "Chọn giọng đọc mặc định (4 giọng)",
+          previewVoiceBtn: "Nghe thử giọng",
+          stopPreviewBtn: "Dừng nghe thử",
+          speedLabel: "Tốc độ phát âm",
+          speedSlow: "Chậm 0.75x",
+          speedNormal: "Chuẩn 1.0x",
+          speedFast: "Nhanh 1.25x",
+          searchPlaceholder: "Tìm từ tiếng Đức, nghĩa tiếng Việt...",
+          cat_all: "Tất cả",
+          cat_1_1: "1.1 Lễ tân, Đặt phòng & Thanh toán",
+          cat_1_2: "1.2 Buồng phòng & Housekeeping",
+          cat_1_3: "1.3 Phục vụ bàn, Buffet & Bar",
+          cat_1_4: "1.4 Hiếu khách & Phối hợp ca",
+          cat_1_5: "1.5 Động từ & Tính từ dịch vụ",
+          relatedPrefix: "Từ liên quan:",
+          noResults: "Không tìm thấy từ vựng phù hợp.",
+          pcat_all: "Tất cả mẫu câu",
+          pcat_2_1: "2.1 Lễ tân Check-in & Check-out",
+          pcat_2_2: "2.2 Buồng phòng Housekeeping",
+          pcat_2_3: "2.3 Phục vụ nhà hàng & Gọi món",
+          pcat_2_4: "2.4 Xử lý phàn nàn & Đồng nghiệp",
+          workerVoiceLabel: "Giọng Nhân viên khách sạn – nhà hàng (Đức)",
+          partnerVoiceLabel: "Giọng Khách hàng / Đồng nghiệp",
+          playFullDialogue: "Nghe cả hội thoại",
+          stopFullDialogue: "Dừng hội thoại",
+          fcAllCategories: "Tất cả chủ đề",
+          fcShuffle: "Trộn thẻ",
+          fcPrev: "Trước",
+          fcNext: "Tiếp",
+          fcFrontHint: "Chạm thẻ để xem nghĩa & ví dụ",
+          fcBackHint: "Chạm thẻ để quay lại mặt trước",
+          fcWordBtn: "Nghe từ",
+          fcExBtn: "Nghe ví dụ",
+          fcMastered: "Đã thuộc",
+          fcMarkMastered: "Đánh dấu đã thuộc",
+          fcShortcutHint:
+            "Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe ví dụ)",
+          fallbackNotice: "Đang dùng giọng dự phòng Piper Offline cho câu này.",
+          notesHeading: "Ghi chú Thực tế Ngành Nhà Hàng & Khách Sạn tại Đức",
+          notes: [
+            "<strong>Phiếu đăng ký lưu trú (Meldeschein theo Luật BMG):</strong> Tại Đức, mọi khách lưu trú (kể cả khách nội địa hay quốc tế) khi check-in khách sạn đều phải điền và ký xác nhận vào <em>Meldeschein</em> ghi họ tên, ngày sinh, quốc tịch và địa chỉ thường trú; khách sạn có nghĩa vụ lưu giữ biểu mẫu này theo quy định pháp luật.",
+            "<strong>Hệ thống khăn lau 4 màu trong Housekeeping (Vier-Farben-System):</strong> Bắt buộc tuân thủ để ngăn ngừa nhiễm chéo vi khuẩn giữa phòng vệ sinh và phòng ngủ: Đỏ (bồn cầu & bồn tiểu), Vàng (chậu rửa mặt, vòi sen, gương & gạch men phòng tắm), Xanh dương (bàn ghế, tủ, bề mặt nội thất phòng ngủ), Xanh lá (khu vực bếp nhỏ / minibar).",
+            '<strong>Văn hóa thanh toán & tiền boa tại Đức ("Zusammen oder getrennt?" & Trinkgeld):</strong> Ở nhà hàng Đức, phục vụ bàn luôn hỏi <em>"Zusammen oder getrennt?"</em> trước khi tính tiền. Khi trả tiền, khách Đức thường đọc luôn tổng số tiền làm tròn đã bao gồm tiền boa (thường 5–10%) — ví dụ hóa đơn 24,50 € khách nói <em>"Machen Sie bitte 27 Euro!"</em> và nhân viên trả lại tiền thừa trên mốc 27 € chứ không tự ý giữ tiền lẻ nếu khách chưa nói.',
+          ],
+        },
+        en: {
+          pageTitle:
+            "Fachdeutsch — Hospitality & Restaurant (Hotellerie & Gastronomie) | VietDe Hub",
+          backHomeText: "Home",
+          brandTitle: "Hospitality & Service",
+          nav_vocab_desktop: "1. Vocabulary",
+          nav_phrases_desktop: "2. Service Phrases",
+          nav_dialogues_desktop: "3. Dialogues",
+          nav_flashcards_desktop: "4. Flashcards",
+          nav_vocab_mobile: "Vocab",
+          nav_phrases_mobile: "Phrases",
+          nav_dialogues_mobile: "Dialogues",
+          nav_flashcards_mobile: "Cards",
+          voiceSettingsTitle: "Voice & Playback Speed",
+          selectVoiceLabel: "Default AI Voice (4 Voices)",
+          previewVoiceBtn: "Preview Voice",
+          stopPreviewBtn: "Stop Preview",
+          speedLabel: "Playback Speed",
+          speedSlow: "Slow 0.75x",
+          speedNormal: "Normal 1.0x",
+          speedFast: "Fast 1.25x",
+          searchPlaceholder: "Search German words, English meanings...",
+          cat_all: "All",
+          cat_1_1: "1.1 Front Desk, Booking & Billing",
+          cat_1_2: "1.2 Housekeeping & Rooms",
+          cat_1_3: "1.3 Table Service, Buffet & Bar",
+          cat_1_4: "1.4 Hospitality & Teamwork",
+          cat_1_5: "1.5 Service Verbs & Adjectives",
+          relatedPrefix: "Related words:",
+          noResults: "No matching vocabulary found.",
+          pcat_all: "All Phrases",
+          pcat_2_1: "2.1 Front Desk Check-In & Out",
+          pcat_2_2: "2.2 Housekeeping & Rooms",
+          pcat_2_3: "2.3 Restaurant Service & Orders",
+          pcat_2_4: "2.4 Complaints & Team Shift",
+          workerVoiceLabel: "Hotel & Restaurant Staff Voice (Duc)",
+          partnerVoiceLabel: "Guest / Colleague Voice",
+          playFullDialogue: "Play Full Dialogue",
+          stopFullDialogue: "Stop Dialogue",
+          fcAllCategories: "All Categories",
+          fcShuffle: "Shuffle",
+          fcPrev: "Previous",
+          fcNext: "Next",
+          fcFrontHint: "Tap card to reveal meaning & example",
+          fcBackHint: "Tap card to flip back",
+          fcWordBtn: "Speak Word",
+          fcExBtn: "Speak Example",
+          fcMastered: "Mastered",
+          fcMarkMastered: "Mark as Mastered",
+          fcShortcutHint:
+            "Shortcuts: Space (Flip) • ← / → (Navigate) • S (Word) • E (Example)",
+          fallbackNotice: "Using offline Piper fallback voice for this line.",
+          notesHeading:
+            "Practical Hospitality Notes in Germany (Hotellerie & Gastronomie)",
+          notes: [
+            "<strong>Hotel Registration Form (Meldeschein under BMG):</strong> In Germany, guests checking into a hotel must complete and sign a <em>Meldeschein</em> with name, date of birth, nationality, and home address, which the hotel is legally required to retain.",
+            "<strong>Four-Color Housekeeping Cloths (Vier-Farben-System):</strong> Strictly followed to prevent cross-contamination: Red (toilet & urinal), Yellow (sink, shower, mirror & bath tiles), Blue (bedroom furniture & surfaces), Green (kitchenette / minibar area).",
+            '<strong>Billing & Tipping Culture in Germany ("Zusammen oder getrennt?" & Trinkgeld):</strong> Servers routinely ask <em>"Zusammen oder getrennt?"</em> before billing. Guests often state a rounded total including tip (typically 5–10%)—for example, on a €24.50 bill saying <em>"Machen Sie bitte 27 Euro!"</em>—and change is given based on that stated amount.',
+          ],
+        },
+      };
+
+      // =========================================================================
+      // 2. COMPLETE BILINGUAL DATASET (86 VOCAB, 36 PHRASES, 6 DIALOGUES)
+      // =========================================================================
+      const VOCAB_DATA = [
+        {
+          id: 1,
+          cat: "1.1",
+          de: "die Rezeption / der Empfang",
+          ipa: "/diː ʁetsɛpˈtsi̯oːn/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Quầy lễ tân khách sạn",
+          en: "Hotel front desk / reception",
+          rel_vi: "der Empfangschef (dt: trưởng bộ phận lễ tân)",
+          rel_en: "der Empfangschef (n: front office manager)",
+          ex_de: "Die Rezeption ist rund um die Uhr, also 24 Stunden besetzt.",
+          ex_vi: "Quầy lễ tân trực suốt 24/24 giờ.",
+          ex_en:
+            "The front desk is staffed around the clock, that is 24 hours.",
+        },
+        {
+          id: 2,
+          cat: "1.1",
+          de: "der Gast (-e) / die Stammgäste (Pl.)",
+          ipa: "/deːɐ̯ ɡast/",
+          type_vi: "Danh từ (m./Pl.)",
+          type_en: "Noun (m./Pl.)",
+          vi: "Khách lưu trú / Khách quen thân thiết",
+          en: "Guest / regular repeat guests",
+          rel_vi: "willkommen heißen (đt: chào đón khách)",
+          rel_en: "willkommen heißen (v: to welcome)",
+          ex_de: "Wir heißen unsere Gäste herzlich im Hotel willkommen.",
+          ex_vi: "Chúng tôi nhiệt liệt chào đón quý khách đến với khách sạn.",
+          ex_en: "We warmly welcome our guests to the hotel.",
+        },
+        {
+          id: 3,
+          cat: "1.1",
+          de: "die Reservierung (-en) / die Buchung (-en)",
+          ipa: "/diː ʁezɛʁˈviːʁʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Đặt phòng / Đặt bàn trước",
+          en: "Reservation / booking",
+          rel_vi: "reservieren (đt: đặt trước), stornieren (đt: hủy đặt chỗ)",
+          rel_en: "reservieren (v: to reserve/book), stornieren (v: to cancel)",
+          ex_de:
+            "Ich habe eine Reservierung auf den Namen Müller für drei Nächte.",
+          ex_vi: "Tôi có đặt phòng trước dưới tên Müller cho ba đêm.",
+          ex_en: "I have a reservation under the name Müller for three nights.",
+        },
+        {
+          id: 4,
+          cat: "1.1",
+          de: "der Check-in / der Check-out",
+          ipa: "/deːɐ̯ ˈtʃɛkʔɪn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Thủ tục nhận phòng / Thủ tục trả phòng",
+          en: "Check-in / check-out",
+          rel_vi: "einchecken (đt: nhận phòng), auschecken (đt: trả phòng)",
+          rel_en: "einchecken (v: to check in), auschecken (v: to check out)",
+          ex_de:
+            "Der Check-in ist ab 15 Uhr möglich und der Check-out bis 11 Uhr.",
+          ex_vi: "Nhận phòng từ 15 giờ và trả phòng trước 11 giờ trưa.",
+          ex_en: "Check-in is possible from 3 PM and check-out until 11 AM.",
+        },
+        {
+          id: 5,
+          cat: "1.1",
+          de: "der Meldeschein (-e)",
+          ipa: "/deːɐ̯ ˈmɛldəˌʃaɪn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Phiếu đăng ký lưu trú (bắt buộc theo Luật Đăng ký cư trú Đức BMG)",
+          en: "Hotel registration form (mandatory under German registration law BMG)",
+          rel_vi:
+            "der Personalausweis (dt: căn cước công dân), der Reisepass (dt: hộ chiếu)",
+          rel_en:
+            "der Personalausweis (n: ID card), der Reisepass (n: passport)",
+          ex_de:
+            "Bitte füllen Sie diesen Meldeschein aus und unterschreiben Sie unten.",
+          ex_vi:
+            "Quý khách vui lòng điền phiếu đăng ký lưu trú này và ký tên ở phía dưới ạ.",
+          ex_en:
+            "Please fill out this registration form and sign at the bottom.",
+        },
+        {
+          id: 6,
+          cat: "1.1",
+          de: "die Zimmerkarte (-n) / der Zimmerschlüssel (-)",
+          ipa: "/diː ˈtsɪmɐˌkaʁtə/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Thẻ từ mở cửa phòng / Chìa khóa phòng",
+          en: "Room keycard / room key",
+          rel_vi: "freischalten (đt: kích hoạt thẻ từ)",
+          rel_en: "freischalten (v: to activate/encode keycard)",
+          ex_de: "Hier ist Ihre Zimmerkarte für Zimmer 304 im dritten Stock.",
+          ex_vi: "Đây là thẻ phòng của quý khách cho phòng 304 ở tầng ba ạ.",
+          ex_en: "Here is your room card for Room 304 on the third floor.",
+        },
+        {
+          id: 7,
+          cat: "1.1",
+          de: "das Einzelzimmer / das Doppelzimmer",
+          ipa: "/das ˈaɪntsl̩ˌtsɪmɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Phòng đơn / Phòng đôi",
+          en: "Single room / double room",
+          rel_vi:
+            "die Suite (dt: phòng hạng sang), das Zustellbett (dt: giường phụ)",
+          rel_en: "die Suite (n: suite), das Zustellbett (n: extra bed)",
+          ex_de:
+            "Wir haben ein ruhiges Doppelzimmer mit Balkon für Sie reserviert.",
+          ex_vi:
+            "Chúng tôi đã giữ sẵn một phòng đôi yên tĩnh có ban công cho quý khách.",
+          ex_en: "We have reserved a quiet double room with a balcony for you.",
+        },
+        {
+          id: 8,
+          cat: "1.1",
+          de: "die Übernachtung (-en) / die Halbpension",
+          ipa: "/diː yːbɐˈnaxtʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Lưu trú qua đêm / Gói ăn nửa bữa (sáng + tối)",
+          en: "Overnight stay / half board (breakfast + dinner)",
+          rel_vi:
+            "die Vollpension (dt: ăn 3 bữa), inklusive Frühstück (đã gồm bữa sáng)",
+          rel_en:
+            "die Vollpension (n: full board), inklusive Frühstück (breakfast included)",
+          ex_de:
+            "Das Frühstücksbuffet ist bei Ihrer Buchung bereits inklusive.",
+          ex_vi:
+            "Tiệc buffet sáng đã bao gồm trong đặt phòng của quý khách rồi ạ.",
+          ex_en: "The breakfast buffet is already included in your booking.",
+        },
+        {
+          id: 9,
+          cat: "1.1",
+          de: "die Kurtaxe / die Bettensteuer",
+          ipa: "/diː ˈkuːɐ̯ˌtaksə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thuế du lịch / Thuế lưu trú địa phương tại Đức",
+          en: "Tourist tax / local overnight accommodation tax in Germany",
+          rel_vi: "die Gästekarte (dt: thẻ ưu đãi du khách địa phương)",
+          rel_en: "die Gästekarte (n: local guest/visitor pass)",
+          ex_de:
+            "Vor Ort fällt noch eine Kurtaxe von zwei Euro pro Person und Nacht an.",
+          ex_vi:
+            "Tại địa phương có thu thêm thuế du lịch 2 Euro mỗi người một đêm ạ.",
+          ex_en:
+            "A tourist tax of two euros per person and night applies locally.",
+        },
+        {
+          id: 10,
+          cat: "1.1",
+          de: "die Rechnung (-en) / die Kostenübernahme",
+          ipa: "/diː ˈʁɛçnʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hóa đơn thanh toán / Giấy công ty bảo lãnh thanh toán (cho khách công tác)",
+          en: "Invoice / company cost-coverage confirmation (for business guests)",
+          rel_vi:
+            "die Quittung (dt: biên lai), die Mehrwertsteuer (dt: thuế VAT)",
+          rel_en: "die Quittung (n: receipt), die Mehrwertsteuer (n: VAT)",
+          ex_de:
+            "Brauchen Sie die Rechnung auf Ihren privaten Namen oder auf Ihre Firma?",
+          ex_vi:
+            "Quý khách cần xuất hóa đơn theo tên cá nhân hay tên công ty ạ?",
+          ex_en:
+            "Do you need the invoice under your private name or your company?",
+        },
+        {
+          id: 11,
+          cat: "1.1",
+          de: "die Kaution (-en)",
+          ipa: "/diː kaʊˈtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tiền đặt cọc đảm bảo",
+          en: "Security deposit",
+          rel_vi: "hinterlegen (đt: đặt cọc)",
+          rel_en: "hinterlegen (v: to place/authorize a deposit)",
+          ex_de:
+            "Beim Check-in hinterlegen wir fünfzig Euro Kaution auf Ihrer Kreditkarte.",
+          ex_vi:
+            "Khi nhận phòng chúng tôi tạm giữ 50 Euro tiền cọc trên thẻ tín dụng của quý khách.",
+          ex_en:
+            "At check-in, we place a fifty-euro deposit hold on your credit card.",
+        },
+        {
+          id: 12,
+          cat: "1.1",
+          de: "der Aufzug (-e) / das Treppenhaus (-er)",
+          ipa: "/deːɐ̯ ˈaʊfˌtsuːk/",
+          type_vi: "Danh từ (m./n.)",
+          type_en: "Noun (m./n.)",
+          vi: "Thang máy / Cầu thang bộ",
+          en: "Elevator / stairwell",
+          rel_vi: "der Stock / die Etage (dt: tầng lầu)",
+          rel_en: "der Stock / die Etage (n: floor)",
+          ex_de: "Der Aufzug befindet sich gleich rechts hinter der Rezeption.",
+          ex_vi: "Thang máy nằm ngay bên phải phía sau quầy lễ tân ạ.",
+          ex_en: "The elevator is right behind the front desk on the right.",
+        },
+        {
+          id: 13,
+          cat: "1.1",
+          de: "der WLAN-Code / das Passwort (-er)",
+          ipa: "/deːɐ̯ ˈveːlaːn koːt/",
+          type_vi: "Danh từ (m./n.)",
+          type_en: "Noun (m./n.)",
+          vi: "Mật khẩu truy cập Wi-Fi khách sạn",
+          en: "Hotel Wi-Fi access code / password",
+          rel_vi: "kostenlos (tt: miễn phí)",
+          rel_en: "kostenlos (adj: free of charge)",
+          ex_de:
+            "Das WLAN ist im gesamten Hotel kostenlos, das Passwort steht auf Ihrer Kartenhülle.",
+          ex_vi:
+            "Wi-Fi miễn phí trong toàn bộ khách sạn, mật khẩu có in trên bao đựng thẻ phòng ạ.",
+          ex_en:
+            "Wi-Fi is free throughout the hotel; the password is printed on your keycard sleeve.",
+        },
+        {
+          id: 14,
+          cat: "1.1",
+          de: "die Gepäckaufbewahrung",
+          ipa: "/diː ɡəˈpɛkʔaʊfbəˌvaːʁʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dịch vụ gửi giữ hành lý",
+          en: "Luggage storage / left-luggage room",
+          rel_vi:
+            "der Koffer (dt: va-li), der Gepäckwagen (dt: xe đẩy hành lý)",
+          rel_en: "der Koffer (n: suitcase), der Gepäckwagen (n: luggage cart)",
+          ex_de:
+            "Gerne können Sie Ihre Koffer bis zur Abreise in unserer Gepäckaufbewahrung lassen.",
+          ex_vi:
+            "Quý khách có thể gửi va-li tại phòng giữ hành lý của chúng tôi cho đến giờ khởi hành ạ.",
+          ex_en:
+            "You are welcome to leave your suitcases in our luggage storage until departure.",
+        },
+        {
+          id: 15,
+          cat: "1.1",
+          de: "der Weckruf (-e)",
+          ipa: "/deːɐ̯ ˈvɛkˌʁuːf/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Dịch vụ gọi điện báo thức buổi sáng",
+          en: "Wake-up call",
+          rel_vi: "wecken (đt: đánh thức)",
+          rel_en: "wecken (v: to wake up)",
+          ex_de:
+            "Soll ich Ihnen für morgen früh um 6:30 Uhr einen Weckruf einstellen?",
+          ex_vi:
+            "Tôi có cần cài cuộc gọi báo thức lúc 6 giờ 30 sáng mai cho quý khách không ạ?",
+          ex_en:
+            "Shall I set a wake-up call for you tomorrow morning at 6:30 AM?",
+        },
+        {
+          id: 16,
+          cat: "1.1",
+          de: "der Zimmerservice",
+          ipa: "/deːɐ̯ ˈtsɪmɐˌsøːɐ̯vɪs/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Dịch vụ phục vụ ăn uống tại phòng",
+          en: "Room service",
+          rel_vi: "bestellen (đt: gọi món)",
+          rel_en: "bestellen (v: to order)",
+          ex_de:
+            "Der Zimmerservice bringt Ihnen das Abendessen gerne direkt aufs Zimmer.",
+          ex_vi: "Dịch vụ phòng sẽ mang bữa tối lên tận phòng cho quý khách ạ.",
+          ex_en: "Room service will gladly bring dinner straight to your room.",
+        },
+        {
+          id: 17,
+          cat: "1.1",
+          de: "der Wellnessbereich / die Sauna",
+          ipa: "/deːɐ̯ ˈvɛlnəsbəˌʁaɪç/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Khu spa thư giãn / Phòng xông hơi khô",
+          en: "Wellness / spa area / sauna",
+          rel_vi:
+            "der Bademantel (dt: áo choàng tắm), die Öffnungszeiten (dt: giờ mở cửa)",
+          rel_en:
+            "der Bademantel (n: bathrobe), die Öffnungszeiten (n: opening hours)",
+          ex_de:
+            "Der Wellnessbereich ist täglich von 14 bis 21 Uhr für unsere Hotelgäste geöffnet.",
+          ex_vi: "Khu spa mở cửa hằng ngày từ 14h đến 21h cho khách lưu trú ạ.",
+          ex_en:
+            "The wellness area is open daily from 2 PM to 9 PM for our hotel guests.",
+        },
+        {
+          id: 18,
+          cat: "1.1",
+          de: "der Parkplatz (-e) / die Tiefgarage (-n)",
+          ipa: "/deːɐ̯ ˈpaʁkˌplats/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Bãi đỗ xe / Hầm gửi xe khách sạn",
+          en: "Parking space / underground parking garage",
+          rel_vi: "parken (đt: đỗ xe)",
+          rel_en: "parken (v: to park)",
+          ex_de: "Sie können Ihr Auto gerne in unserer Tiefgarage parken.",
+          ex_vi: "Quý khách có thể đỗ xe trong hầm gửi xe của khách sạn ạ.",
+          ex_en: "You are welcome to park your car in our underground garage.",
+        },
+        {
+          id: 19,
+          cat: "1.2",
+          de: "das Housekeeping / die Hausdame (-n)",
+          ipa: "/das ˈhaʊskiːpɪŋ/",
+          type_vi: "Danh từ (n./f.)",
+          type_en: "Noun (n./f.)",
+          vi: "Bộ phận buồng phòng / Trưởng bộ phận buồng phòng",
+          en: "Housekeeping / executive housekeeper",
+          rel_vi: "das Zimmermädchen (dt: nhân viên dọn phòng)",
+          rel_en: "das Zimmermädchen (n: room attendant)",
+          ex_de:
+            "Die Hausdame prüft nach der Reinigung die Sauberkeit aller Zimmer.",
+          ex_vi:
+            "Trưởng bộ phận buồng phòng kiểm tra độ sạch của tất cả các phòng sau khi dọn.",
+          ex_en:
+            "The executive housekeeper checks the cleanliness of all rooms after cleaning.",
+        },
+        {
+          id: 20,
+          cat: "1.2",
+          de: "das Abreisezimmer / das Bleibezimmer",
+          ipa: "/das ˈapʁaɪzəˌtsɪmɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Phòng khách đã trả (dọn tổng thể, thay toàn bộ ga gối) / Phòng khách đang ở tiếp (dọn nhẹ hằng ngày)",
+          en: "Departure/check-out room (full turnover) / stay-over room (daily refresh)",
+          rel_vi: "reinigen (đt: làm sạch)",
+          rel_en: "reinigen (v: to clean)",
+          ex_de:
+            "Bei einem Abreisezimmer wechseln wir immer die komplette Bettwäsche.",
+          ex_vi:
+            "Với phòng khách đã trả chúng tôi luôn thay toàn bộ chăn ga gối.",
+          ex_en:
+            "For a departure room, we always change the complete bed linen.",
+        },
+        {
+          id: 21,
+          cat: "1.2",
+          de: "der Etagenwagen (-)",
+          ipa: "/deːɐ̯ eˈtaːʒn̩ˌvaːɡn̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Xe đẩy làm buồng phòng trên tầng",
+          en: "Housekeeping trolley / room cart",
+          rel_vi: "bestücken (đt: xếp đầy đồ lên xe đẩy)",
+          rel_en: "bestücken (v: to stock/load cart)",
+          ex_de:
+            "Stelle den Etagenwagen ordentlich an die Wand, damit der Flur frei bleibt.",
+          ex_vi:
+            "Đặt xe đẩy buồng phòng gọn sát tường để hành lang luôn thông thoáng.",
+          ex_en:
+            "Place the housekeeping cart neatly against the wall so the hallway stays clear.",
+        },
+        {
+          id: 22,
+          cat: "1.2",
+          de: "die Bettwäsche / das Bettlaken (-)",
+          ipa: "/diː ˈbɛtˌvɛʃə/",
+          type_vi: "Danh từ (f./n.)",
+          type_en: "Noun (f./n.)",
+          vi: "Bộ vỏ chăn gối / Ga trải giường",
+          en: "Bed linen / bedsheet",
+          rel_vi:
+            "beziehen (đt: bọc ga gối mới), abziehen (đt: tháo ga gối bẩn)",
+          rel_en:
+            "beziehen (v: to put on fresh linen), abziehen (v: to strip used linen)",
+          ex_de:
+            "Wir beziehen alle Betten faltenfrei mit frischer, weißer Bettwäsche.",
+          ex_vi:
+            "Chúng tôi bọc ga gối trắng sạch sẽ phẳng phiu cho tất cả giường.",
+          ex_en: "We make all beds wrinkle-free with fresh white bed linen.",
+        },
+        {
+          id: 23,
+          cat: "1.2",
+          de: "das Handtuch (-er) / das Duschtuch (-er)",
+          ipa: "/das ˈhantˌtuːx/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Khăn mặt / Khăn tắm lớn",
+          en: "Hand towel / bath towel",
+          rel_vi: "die Badematte (dt: thảm chân phòng tắm)",
+          rel_en: "die Badematte (n: bath mat)",
+          ex_de:
+            "Handtücher, die auf dem Boden liegen, werden von uns frisch ausgetauscht.",
+          ex_vi:
+            "Khăn tắm đặt dưới sàn sẽ được chúng tôi thay bằng khăn mới sạch.",
+          ex_en:
+            "Towels lying on the floor are replaced by us with fresh ones.",
+        },
+        {
+          id: 24,
+          cat: "1.2",
+          de: "die Schmutzwäsche / die Frischwäsche",
+          ipa: "/diː ˈʃmʊtsˌvɛʃə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Đồ vải bẩn đã dùng / Đồ vải sạch mới giặt",
+          en: "Soiled linen / fresh clean linen",
+          rel_vi: "der Wäschesack (dt: túi đựng đồ vải bẩn)",
+          rel_en: "der Wäschesack (n: laundry bag)",
+          ex_de:
+            "Trenne Schmutzwäsche und Frischwäsche auf dem Etagenwagen strikt voneinander.",
+          ex_vi:
+            "Tách biệt nghiêm ngặt đồ vải bẩn và đồ vải sạch trên xe đẩy buồng phòng.",
+          ex_en:
+            "Keep soiled linen and fresh linen strictly separated on the housekeeping cart.",
+        },
+        {
+          id: 25,
+          cat: "1.2",
+          de: "das Badezimmer (-) / die Sanitäranlagen (Pl.)",
+          ipa: "/das ˈbaːdəˌtsɪmɐ/",
+          type_vi: "Danh từ (n./Pl.)",
+          type_en: "Noun (n./Pl.)",
+          vi: "Phòng tắm / Thiết bị vệ sinh (bồn cầu, chậu rửa, vòi sen)",
+          en: "Bathroom / sanitary fixtures",
+          rel_vi:
+            "entkalken (đt: tẩy cặn vôi), polieren (đt: lau bóng gương & vòi inox)",
+          rel_en:
+            "entkalken (v: to descale), polieren (v: to polish mirrors & fixtures)",
+          ex_de:
+            "Im Badezimmer desinfizieren wir Toilette, Waschbecken und Dusche gründlich.",
+          ex_vi:
+            "Trong phòng tắm chúng tôi khử khuẩn kỹ bồn cầu, chậu rửa và buồng tắm đứng.",
+          ex_en:
+            "In the bathroom, we thoroughly disinfect the toilet, sink, and shower.",
+        },
+        {
+          id: 26,
+          cat: "1.2",
+          de: "das Vier-Farben-System",
+          ipa: "/das ˈfiːɐ̯ ˈfaʁbn̩ zʏsˌteːm/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Hệ thống khăn lau 4 màu chống nhiễm chéo tại Đức (Đỏ: bồn cầu; Vàng: chậu rửa/gương; Xanh dương: nội thất phòng; Xanh lá: bếp/minibar)",
+          en: "Four-color cleaning cloth system (Red: toilet; Yellow: sink/mirror; Blue: room furniture; Green: kitchen/minibar)",
+          rel_vi: "der Putzlappen (dt: khăn lau vệ sinh)",
+          rel_en: "der Putzlappen (n: cleaning cloth)",
+          ex_de:
+            "Nach dem Vier-Farben-System nehmen wir für die Toilette nur das rote Tuch.",
+          ex_vi:
+            "Theo hệ thống 4 màu, đối với bồn cầu chúng ta chỉ dùng khăn màu đỏ.",
+          ex_en:
+            "Under the four-color system, we use only the red cloth for the toilet.",
+        },
+        {
+          id: 27,
+          cat: "1.2",
+          de: "der Staubsauger (-) / staubsaugen",
+          ipa: "/deːɐ̯ ˈʃtaʊpˌzaʊɡɐ/",
+          type_vi: "Danh từ (m.) / Động từ",
+          type_en: "Noun (m.) / Verb",
+          vi: "Máy hút bụi / Hút bụi thảm & sàn",
+          en: "Vacuum cleaner / to vacuum",
+          rel_vi: "wischen (đt: lau ẩm sàn nhà)",
+          rel_en: "wischen (v: to wipe/damp-mop)",
+          ex_de:
+            "Nach dem Staubsaugen wischen wir das Bad und den Eingangsbereich feucht durch.",
+          ex_vi:
+            "Sau khi hút bụi chúng tôi lau ẩm phòng tắm và khu vực cửa ra vào.",
+          ex_en: "After vacuuming, we damp-mop the bathroom and entrance area.",
+        },
+        {
+          id: 28,
+          cat: "1.2",
+          de: "die Pflegeartikel (Pl.) / der Toilettenpapier-Vorrat",
+          ipa: "/diː ˈpfleːɡəʔaʁˌtiːkl̩/",
+          type_vi: "Danh từ (Pl./m.)",
+          type_en: "Noun (Pl./m.)",
+          vi: "Đồ dùng vệ sinh cá nhân miễn phí (sữa tắm, dầu gội, xà phòng) / Giấy vệ sinh dự phòng",
+          en: "Toiletries / toilet paper supply",
+          rel_vi: "auffüllen (đt: bổ sung thêm cho đầy)",
+          rel_en: "auffüllen (v: to replenish/refill)",
+          ex_de:
+            "Fülle bitte Duschgel, Seife und Toilettenpapier im Bad wieder auf.",
+          ex_vi:
+            "Vui lòng bổ sung thêm sữa tắm, xà phòng và giấy vệ sinh trong phòng tắm nhé.",
+          ex_en:
+            "Please replenish shower gel, soap, and toilet paper in the bathroom.",
+        },
+        {
+          id: 29,
+          cat: "1.2",
+          de: "die Minibar (-s)",
+          ipa: "/diː ˈmiːniˌbaːɐ̯/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tủ lạnh nhỏ đựng đồ uống trong phòng khách",
+          en: "Minibar",
+          rel_vi: "kontrollieren (đt: kiểm tra tiêu dùng)",
+          rel_en: "kontrollieren (v: to check consumption)",
+          ex_de:
+            "Prüfe beim Abreisezimmer, ob der Gast etwas aus der Minibar genommen hat.",
+          ex_vi:
+            "Kiểm tra ở phòng khách trả xem khách có dùng đồ gì trong tủ minibar không.",
+          ex_en:
+            "Check in a departure room whether the guest took anything from the minibar.",
+        },
+        {
+          id: 30,
+          cat: "1.2",
+          de: "das Türschild ('Bitte nicht stören')",
+          ipa: "/das ˈtyːɐ̯ˌʃɪlt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Thẻ treo tay nắm cửa ('Xin đừng làm phiền' / 'Xin hãy dọn phòng')",
+          en: "Do-not-disturb / make-up-room door hanger",
+          rel_vi: "anklopfen (đt: gõ cửa phòng)",
+          rel_en: "anklopfen (v: to knock on door)",
+          ex_de:
+            "Wenn das Schild 'Bitte nicht stören' an der Tür hängt, klopfen wir nicht an.",
+          ex_vi:
+            "Khi biển 'Xin đừng làm phiền' treo ở cửa thì chúng tôi không gõ cửa.",
+          ex_en:
+            "When the 'Do not disturb' sign hangs on the door, we do not knock.",
+        },
+        {
+          id: 31,
+          cat: "1.2",
+          de: "die Fundsache (-n)",
+          ipa: "/diː ˈfʊntˌzaxə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Đồ khách bỏ quên trong phòng (sạc điện thoại, kính mắt, quần áo)",
+          en: "Lost-and-found item",
+          rel_vi: "abgeben (đt: nộp lại cho lễ tân/quản lý)",
+          rel_en: "abgeben (v: to hand in to reception/housekeeping)",
+          ex_de:
+            "Gefundene Gegenstände melden wir sofort mit Zimmernummer an der Rezeption.",
+          ex_vi: "Đồ vật tìm thấy được báo ngay kèm số phòng cho quầy lễ tân.",
+          ex_en:
+            "Found items are reported to reception immediately with the room number.",
+        },
+        {
+          id: 32,
+          cat: "1.2",
+          de: "der Mangel (-) / die Reparatur (-en)",
+          ipa: "/deːɐ̯ ˈmaŋl̩/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Hư hỏng kỹ thuật trong phòng (bóng đèn cháy, vòi nước rò rỉ, điều hòa) / Sửa chữa",
+          en: "Room defect / maintenance repair",
+          rel_vi: "der Hausmeister (dt: nhân viên kỹ thuật bảo trì khách sạn)",
+          rel_en: "der Hausmeister (n: maintenance technician / janitor)",
+          ex_de:
+            "In Zimmer 208 tropft der Wasserhahn, ich melde das sofort dem Hausmeister.",
+          ex_vi:
+            "Ở phòng 208 vòi nước bị nhỏ giọt, tôi báo ngay cho nhân viên kỹ thuật bảo trì.",
+          ex_en:
+            "In Room 208 the faucet is dripping; I'm reporting it to maintenance right away.",
+        },
+        {
+          id: 33,
+          cat: "1.2",
+          de: "die Klimaanlage (-n) / die Heizung (-en)",
+          ipa: "/diː ˈkliːmaʔanˌlaːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Điều hòa không khí / Hệ thống sưởi",
+          en: "Air conditioning / heating system",
+          rel_vi: "regulieren (đt: điều chỉnh nhiệt độ)",
+          rel_en: "regulieren (v: to regulate/adjust)",
+          ex_de:
+            "Stellen Sie die Heizung im Zimmer beim Lüften bitte kurz herunter.",
+          ex_vi:
+            "Khi mở cửa thông gió phòng vui lòng vặn nhỏ hệ thống sưởi một lát nhé.",
+          ex_en:
+            "Please turn down the heating in the room briefly while airing it out.",
+        },
+        {
+          id: 34,
+          cat: "1.2",
+          de: "der Safe (-s) / der Zimmersafe",
+          ipa: "/deːɐ̯ seːf/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Két sắt an toàn trong phòng",
+          en: "In-room safe",
+          rel_vi: "aufbewahren (đt: cất giữ tài sản quý)",
+          rel_en: "aufbewahren (v: to store/keep valuables)",
+          ex_de:
+            "Wertsachen können Sie sicher im kostenlosen Zimmersafe einschließen.",
+          ex_vi:
+            "Quý khách có thể khóa cất đồ có giá trị an toàn trong két sắt miễn phí của phòng ạ.",
+          ex_en: "You can safely lock valuables in the free room safe.",
+        },
+        {
+          id: 35,
+          cat: "1.2",
+          de: "der Rauchmelder (-) / das Rauchverbot",
+          ipa: "/deːɐ̯ ˈʁaʊxˌmɛldɐ/",
+          type_vi: "Danh từ (m./n.)",
+          type_en: "Noun (m./n.)",
+          vi: "Đầu báo khói / Quy định cấm hút thuốc trong phòng",
+          en: "Smoke detector / no-smoking rule",
+          rel_vi: "das Nichtraucherzimmer (dt: phòng không hút thuốc)",
+          rel_en: "das Nichtraucherzimmer (n: non-smoking room)",
+          ex_de:
+            "Alle unsere Hotelzimmer sind Nichtraucherzimmer mit Rauchmeldern.",
+          ex_vi:
+            "Tất cả phòng khách sạn của chúng tôi đều là phòng không hút thuốc và có lắp đầu báo khói.",
+          ex_en: "All our hotel rooms are non-smoking with smoke detectors.",
+        },
+        {
+          id: 36,
+          cat: "1.2",
+          de: "lüften",
+          ipa: "/ˈlʏftn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Mở cửa sổ thông gió làm thoáng khí phòng",
+          en: "To air out / ventilate",
+          rel_vi: "frische Luft (không khí trong lành)",
+          rel_en: "frische Luft (fresh air)",
+          ex_de:
+            "Öffne beim Reinigen des Zimmers immer weit das Fenster zum Lüften.",
+          ex_vi: "Khi dọn phòng luôn mở rộng cửa sổ để thông gió thoáng khí.",
+          ex_en:
+            "When cleaning the room, always open the window wide to air it out.",
+        },
+        {
+          id: 37,
+          cat: "1.3",
+          de: "der Kellner (-) / die Kellnerin (-nen)",
+          ipa: "/deːɐ̯ ˈkɛlnɐ/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Nhân viên phục vụ bàn nam / nữ",
+          en: "Waiter / waitress",
+          rel_vi:
+            "die Servicekraft (dt: nhân viên phục vụ), bedienen (đt: phục vụ bàn)",
+          rel_en:
+            "die Servicekraft (n: service server), bedienen (v: to wait on/serve)",
+          ex_de:
+            "Ein freundlicher Kellner begrüßt die Gäste sofort am Eingang des Restaurants.",
+          ex_vi:
+            "Một nhân viên phục vụ thân thiện chào đón khách ngay tại lối vào nhà hàng.",
+          ex_en:
+            "A friendly waiter greets the guests right at the entrance of the restaurant.",
+        },
+        {
+          id: 38,
+          cat: "1.3",
+          de: "die Tischreservierung (-en)",
+          ipa: "/diː ˈtɪʃʁezɛʁˌviːʁʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Đặt bàn ăn trước",
+          en: "Table reservation",
+          rel_vi: "der Tischplan (dt: sơ đồ bố trí bàn)",
+          rel_en: "der Tischplan (n: seating/table chart)",
+          ex_de: "Habt Ihr einen Tisch auf Ihren Namen reserviert?",
+          ex_vi: "Quý khách có đặt bàn trước dưới tên của mình không ạ?",
+          ex_en: "Have you reserved a table under your name?",
+        },
+        {
+          id: 39,
+          cat: "1.3",
+          de: "das Besteck / das Geschirr / das Glas (-er)",
+          ipa: "/das bəˈʃtɛk/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Bộ dao dĩa thìa / Bát đĩa / Ly cốc thủy tinh",
+          en: "Cutlery / tableware / glassware",
+          rel_vi:
+            "eindecken (đt: bày bàn ăn chuẩn), polieren (đt: lau bóng ly & dao dĩa)",
+          rel_en:
+            "eindecken (v: to set a table), polieren (v: to polish glasses & cutlery)",
+          ex_de:
+            "Wir decken die Tische für das Abendessen mit Stoffservietten und polierten Gläsern ein.",
+          ex_vi:
+            "Chúng tôi bày bàn cho bữa tối với khăn ăn vải và ly cốc đã lau sáng bóng.",
+          ex_en:
+            "We set the tables for dinner with cloth napkins and polished glasses.",
+        },
+        {
+          id: 40,
+          cat: "1.3",
+          de: "die Speisekarte (-n) / die Getränkekarte (-n)",
+          ipa: "/diː ˈʃpaɪzəˌkaʁtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thực đơn món ăn / Danh mục đồ uống",
+          en: "Food menu / drinks list",
+          rel_vi: "empfehlen (đt: giới thiệu gợi ý món)",
+          rel_en: "empfehlen (v: to recommend)",
+          ex_de:
+            "Hier ist unsere Speisekarte — heute empfehlen wir besonders den frischen Spargel.",
+          ex_vi:
+            "Đây là thực đơn của nhà hàng — hôm nay chúng tôi đặc biệt giới thiệu món măng tây tươi ạ.",
+          ex_en:
+            "Here is our menu—today we especially recommend the fresh asparagus.",
+        },
+        {
+          id: 41,
+          cat: "1.3",
+          de: "der Aperitif (-s) / der Digestif (-s)",
+          ipa: "/apeʁiˈtiːf/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Đồ uống khai vị trước bữa ăn / Đồ uống hỗ trợ tiêu hóa sau bữa ăn",
+          en: "Aperitif (pre-meal drink) / digestif (after-meal drink)",
+          rel_vi:
+            "der Sekt (dt: rượu vang sủi Đức), der Espresso (dt: cà phê Espresso)",
+          rel_en:
+            "der Sekt (n: German sparkling wine), der Espresso (n: espresso)",
+          ex_de:
+            "Darf ich Ihnen vorab einen Aperitif oder ein Glas Wasser bringen?",
+          ex_vi:
+            "Tôi có thể mang trước cho quý khách một ly khai vị hay một ly nước không ạ?",
+          ex_en: "May I bring you an aperitif or a glass of water first?",
+        },
+        {
+          id: 42,
+          cat: "1.3",
+          de: "die Bestellung aufnehmen",
+          ipa: "/diː bəˈʃtɛlʊŋ ˈaʊfˌneːmən/",
+          type_vi: "Cụm động từ",
+          type_en: "Verb phrase",
+          vi: "Ghi nhận gọi món của khách",
+          en: "To take a guest's order",
+          rel_vi:
+            "bestellen (đt: gọi món), der Sonderwunsch (dt: yêu cầu riêng của khách)",
+          rel_en:
+            "bestellen (v: to order), der Sonderwunsch (n: special request)",
+          ex_de: "Haben Sie schon gewählt oder brauchen Sie noch einen Moment?",
+          ex_vi: "Quý khách đã chọn được món chưa hay cần thêm một lát nữa ạ?",
+          ex_en: "Have you decided yet or do you need another moment?",
+        },
+        {
+          id: 43,
+          cat: "1.3",
+          de: "das Frühstücksbuffet (-s)",
+          ipa: "/das ˈfʁyːʃtʏksbʏˌfeː/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Tiệc tự chọn bữa sáng khách sạn",
+          en: "Hotel breakfast buffet",
+          rel_vi:
+            "nachlegen (đt: châm thêm đồ ăn lên khay buffet), abräumen (đt: thu dọn đĩa bẩn)",
+          rel_en:
+            "nachlegen (v: to top up/refill buffet), abräumen (v: to clear plates)",
+          ex_de:
+            "Bitte lege am Frühstücksbuffet frische Brötchen, Rührei und Orangensaft nach.",
+          ex_vi:
+            "Vui lòng châm thêm bánh mì tròn tươi, trứng bác và nước cam lên quầy buffet sáng nhé.",
+          ex_en:
+            "Please top up fresh bread rolls, scrambled eggs, and orange juice at the breakfast buffet.",
+        },
+        {
+          id: 44,
+          cat: "1.3",
+          de: "die Kaffeespezialität (-en)",
+          ipa: "/diː ˈkafeʃpetsi̯aliˌtɛːt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Các loại cà phê đặc trưng (Filterkaffee, Cappuccino, Latte Macchiato, Milchkaffee)",
+          en: "Coffee specialties (filter coffee, cappuccino, latte macchiato, milk coffee)",
+          rel_vi: "die Kaffeemaschine (dt: máy pha cà phê)",
+          rel_en: "die Kaffeemaschine (n: coffee machine)",
+          ex_de:
+            "Möchten Sie zum Frühstück lieber Filterkaffee, Cappuccino oder Tee?",
+          ex_vi:
+            "Bữa sáng quý khách thích dùng cà phê phin Đức, Cappuccino hay trà ạ?",
+          ex_en:
+            "For breakfast, would you prefer filter coffee, cappuccino, or tea?",
+        },
+        {
+          id: 45,
+          cat: "1.3",
+          de: "das Fassbier / das alkoholfreie Bier",
+          ipa: "/das ˈfasˌbiːɐ̯/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Bia tươi rót vòi (Pils, Weizen/Weißbier) / Bia không cồn",
+          en: "Draft beer on tap (Pils, Weizen) / non-alcoholic beer",
+          rel_vi: "zapfen (đt: rót bia tươi từ vòi)",
+          rel_en: "zapfen (v: to pour draft beer from tap)",
+          ex_de:
+            "Ein frisch gezapftes Pils und ein alkoholfreies Weizen kommen sofort!",
+          ex_vi:
+            "Một ly bia tươi Pils mới rót và một ly bia lúa mì không cồn sẽ có ngay ạ!",
+          ex_en:
+            "A freshly tapped Pils and a non-alcoholic wheat beer are coming right up!",
+        },
+        {
+          id: 46,
+          cat: "1.3",
+          de: "der Weißwein / der Rotwein / die Weinschorle",
+          ipa: "/deːɐ̯ ˈvaɪsˌvaɪn/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Rượu vang trắng / Vang đỏ / Vang pha nước khoáng có ga (đặc sản Đức)",
+          en: "White wine / red wine / wine spritzer with sparkling water",
+          rel_vi:
+            "trocken (tt: vang chát không ngọt), halbtrocken (tt: vang hơi ngọt dịu)",
+          rel_en: "trocken (adj: dry wine), halbtrocken (adj: semi-dry wine)",
+          ex_de: "Möchten Sie den Riesling lieber trocken oder halbtrocken?",
+          ex_vi:
+            "Quý khách thích rượu vang Riesling loại chát hay hơi ngọt dịu ạ?",
+          ex_en: "Would you prefer the Riesling dry or semi-dry?",
+        },
+        {
+          id: 47,
+          cat: "1.3",
+          de: "das Leitungswasser / das Mineralwasser",
+          ipa: "/das ˈlaɪtʊŋsˌvasɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Nước máy / Nước khoáng đóng chai (có ga Sprudel hoặc không ga Still)",
+          en: "Tap water / mineral water (sparkling or still)",
+          rel_vi: "mit Kohlensäure (có ga), ohne Kohlensäure (không ga)",
+          rel_en:
+            "mit Kohlensäure (sparkling/carbonated), ohne Kohlensäure (still/non-carbonated)",
+          ex_de: "Möchten Sie Ihr Mineralwasser mit oder ohne Kohlensäure?",
+          ex_vi: "Quý khách dùng nước khoáng có ga hay không ga ạ?",
+          ex_en:
+            "Would you like your mineral water with or without carbonation?",
+        },
+        {
+          id: 48,
+          cat: "1.3",
+          de: "servieren / abräumen",
+          ipa: "/zɛʁˈviːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Bưng món phục vụ ra bàn / Thu dọn bát đĩa đã dùng xong",
+          en: "To serve dishes / to clear plates",
+          rel_vi: "das Tablett (dt: khay bưng đồ)",
+          rel_en: "das Tablett (n: serving tray)",
+          ex_de:
+            "Wir servieren die Speisen immer von rechts und räumen leere Teller von rechts ab.",
+          ex_vi:
+            "Chúng tôi luôn phục vụ món ăn từ bên phải và thu dọn đĩa trống từ bên phải.",
+          ex_en:
+            "We always serve dishes from the right and clear empty plates from the right.",
+        },
+        {
+          id: 49,
+          cat: "1.3",
+          de: "'Zusammen oder getrennt?'",
+          ipa: "/tsuˈzamən ˈoːdɐ ɡəˈtʁɛnt/",
+          type_vi: "Cụm câu chuẩn Đức",
+          type_en: "German phrase",
+          vi: "'Thanh toán chung một hóa đơn hay tách riêng từng người ạ?' (câu hỏi kinh điển tại nhà hàng Đức)",
+          en: "'Together or separately?' (classic German restaurant billing question)",
+          rel_vi:
+            "bar bezahlen (trả tiền mặt), mit Karte zahlen (trả bằng thẻ)",
+          rel_en:
+            "bar bezahlen (to pay cash), mit Karte zahlen (to pay by card)",
+          ex_de: "Möchten Sie zusammen oder getrennt bezahlen?",
+          ex_vi: "Quý khách muốn thanh toán chung hay tách riêng ạ?",
+          ex_en: "Would you like to pay together or separately?",
+        },
+        {
+          id: 50,
+          cat: "1.3",
+          de: "die Reklamation (-en) / die Beschwerde (-n)",
+          ipa: "/diː ʁeklamaˈtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Lời phàn nàn / Khiếu nại của khách về món ăn hoặc phòng ở",
+          en: "Guest complaint / claim regarding food or room",
+          rel_vi:
+            "sich entschuldigen (đt: xin lỗi khách), austauschen (đt: đổi lại món mới)",
+          rel_en:
+            "sich entschuldigen (v: to apologize), austauschen (v: to replace/swap)",
+          ex_de:
+            "Bei einer Reklamation hören wir dem Gast ruhig zu und bieten sofort eine Lösung an.",
+          ex_vi:
+            "Khi có phàn nàn của khách chúng tôi bình tĩnh lắng nghe và đưa ra giải pháp ngay lập tức.",
+          ex_en:
+            "When there is a complaint, we listen calmly to the guest and offer a solution right away.",
+        },
+        {
+          id: 51,
+          cat: "1.3",
+          de: "die Allergenkennzeichnung",
+          ipa: "/diː alɛʁˈɡeːnkɛnˌtsaɪçnʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bảng ký hiệu chất gây dị ứng trên thực đơn nhà hàng",
+          en: "Allergen labeling on the menu",
+          rel_vi: "die Zusatzstoffe (dt: phụ gia thực phẩm)",
+          rel_en: "die Zusatzstoffe (n: food additives)",
+          ex_de:
+            "In unserer Speisekarte sind alle Allergene mit Buchstaben gekennzeichnet.",
+          ex_vi:
+            "Trong thực đơn của chúng tôi tất cả chất gây dị ứng đều được đánh dấu bằng chữ cái.",
+          ex_en: "In our menu, all allergens are marked with letters.",
+        },
+        {
+          id: 52,
+          cat: "1.3",
+          de: "die Tischdecke (-n) / die Stoffserviette (-n)",
+          ipa: "/diː ˈtɪʃˌdɛkə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khăn trải bàn / Khăn ăn bằng vải",
+          en: "Tablecloth / cloth napkin",
+          rel_vi: "falten (đt: gấp khăn ăn)",
+          rel_en: "falten (v: to fold napkins)",
+          ex_de: "Wechsle die Tischdecke sofort, wenn ein Fleck darauf ist.",
+          ex_vi: "Hãy thay khăn trải bàn ngay lập tức nếu có vết bẩn trên đó.",
+          ex_en: "Change the tablecloth immediately if there is a stain on it.",
+        },
+        {
+          id: 53,
+          cat: "1.3",
+          de: "das Bankett / die Veranstaltung (-en)",
+          ipa: "/das baŋˈkɛt/",
+          type_vi: "Danh từ (n./f.)",
+          type_en: "Noun (n./f.)",
+          vi: "Tiệc hội nghị / Sự kiện đặt tiệc đoàn",
+          en: "Banquet / event function",
+          rel_vi: "der Tagungsraum (dt: phòng hội nghị)",
+          rel_en: "der Tagungsraum (n: conference/meeting room)",
+          ex_de:
+            "Am Samstag haben wir ein großes Hochzeitsbankett mit achtzig Gästen.",
+          ex_vi: "Thứ Bảy này chúng tôi có một tiệc cưới lớn với 80 khách.",
+          ex_en:
+            "On Saturday we have a large wedding banquet with eighty guests.",
+        },
+        {
+          id: 54,
+          cat: "1.3",
+          de: "der Stammgast (-e)",
+          ipa: "/deːɐ̯ ˈʃtamˌɡast/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Khách hàng quen thuộc thường xuyên ghé quán",
+          en: "Regular guest / frequent patron",
+          rel_vi: "begrüßen (đt: chào hỏi thân tình)",
+          rel_en: "begrüßen (v: to greet warmly)",
+          ex_de:
+            "Herr Schneider ist ein Stammgast und trinkt immer einen doppelten Espresso.",
+          ex_vi:
+            "Ông Schneider là khách quen và luôn uống một ly Espresso đúp.",
+          ex_en:
+            "Mr. Schneider is a regular guest and always drinks a double espresso.",
+        },
+        {
+          id: 55,
+          cat: "1.4",
+          de: "die Gastfreundschaft",
+          ipa: "/diː ˈɡastˌfʁɔʏntʃaft/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Lòng hiếu khách & tinh thần phục vụ tận tâm",
+          en: "Hospitality",
+          rel_vi: "gastfreundlich (tt: hiếu khách)",
+          rel_en: "gastfreundlich (adj: hospitable)",
+          ex_de:
+            "Herzliche Gastfreundschaft sorgt dafür, dass unsere Gäste gerne wiederkommen.",
+          ex_vi:
+            "Lòng hiếu khách chân thành giúp khách hàng luôn muốn quay trở lại.",
+          ex_en: "Warm hospitality ensures that our guests love coming back.",
+        },
+        {
+          id: 56,
+          cat: "1.4",
+          de: "das Beschwerdemanagement",
+          ipa: "/das bəˈʃveːɐ̯dəˌmɛnɪdʒmənt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Quy trình xử lý phàn nàn khách hàng chuyên nghiệp",
+          en: "Complaint management",
+          rel_vi: "lösen (đt: giải quyết ổn thỏa)",
+          rel_en: "lösen (v: to resolve)",
+          ex_de:
+            "Ein gutes Beschwerdemanagement verwandelt unzufriedene Gäste in zufriedene Stammgäste.",
+          ex_vi:
+            "Cách xử lý khiếu nại tốt sẽ biến khách chưa hài lòng thành khách quen hài lòng.",
+          ex_en:
+            "Good complaint management turns dissatisfied guests into satisfied regulars.",
+        },
+        {
+          id: 57,
+          cat: "1.4",
+          de: "die Schichtübergabe (-n)",
+          ipa: "/diː ˈʃɪçtʔyːbɐˌɡaːbə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bàn giao ca tại quầy lễ tân hoặc nhà hàng",
+          en: "Shift handover",
+          rel_vi: "das Übergabebuch (dt: sổ bàn giao ca lễ tân)",
+          rel_en: "das Übergabebuch (n: handover logbook)",
+          ex_de:
+            "Bei der Schichtübergabe an der Rezeption besprechen wir alle offenen Anreisen.",
+          ex_vi:
+            "Khi bàn giao ca ở lễ tân chúng tôi trao đổi về tất cả khách sắp đến nhận phòng.",
+          ex_en:
+            "During shift handover at reception, we discuss all pending arrivals.",
+        },
+        {
+          id: 58,
+          cat: "1.4",
+          de: "die Zimmerliste (-n) / der Reinigungsplan",
+          ipa: "/diː ˈtsɪmɐˌlɪstə/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Danh sách phân công dọn phòng theo tầng / Kế hoạch dọn phòng",
+          en: "Room status list / cleaning schedule",
+          rel_vi: "abhaken (đt: đánh dấu tích đã hoàn thành)",
+          rel_en: "abhaken (v: to check off)",
+          ex_de:
+            "Auf der Zimmerliste siehst du genau, welche Zimmer Abreisen und welche Bleiber sind.",
+          ex_vi:
+            "Trên danh sách phòng bạn thấy rõ phòng nào là khách trả và phòng nào là khách ở tiếp.",
+          ex_en:
+            "On the room list, you can see clearly which rooms are departures and which are stay-overs.",
+        },
+        {
+          id: 59,
+          cat: "1.4",
+          de: "die Auslastung",
+          ipa: "/diː ˈaʊsˌlastʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Công suất lấp đầy phòng của khách sạn",
+          en: "Occupancy rate",
+          rel_vi: "ausgebucht (tt: đã kín hết phòng)",
+          rel_en: "ausgebucht (adj: fully booked)",
+          ex_de:
+            "Am Messewochenende ist unser Hotel zu 100 Prozent ausgebucht.",
+          ex_vi:
+            "Vào cuối tuần có hội chợ triển lãm, khách sạn chúng tôi kín 100% phòng.",
+          ex_en:
+            "On the trade fair weekend, our hotel is 100 percent booked out.",
+        },
+        {
+          id: 60,
+          cat: "1.4",
+          de: "die Empfehlung (-en)",
+          ipa: "/diː ɛmˈpfeːlʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Lời giới thiệu / Gợi ý món ăn hoặc điểm tham quan cho khách",
+          en: "Recommendation (dish or local sight)",
+          rel_vi: "empfehlen (đt: gợi ý/khuyên dùng)",
+          rel_en: "empfehlen (v: to recommend)",
+          ex_de:
+            "Können Sie uns ein gutes Restaurant oder eine Sehenswürdigkeit in der Altstadt empfehlen?",
+          ex_vi:
+            "Anh/Chị có thể giới thiệu cho chúng tôi một nhà hàng ngon hay điểm tham quan ở phố cổ không ạ?",
+          ex_en:
+            "Can you recommend a good restaurant or sight in the old town?",
+        },
+        {
+          id: 61,
+          cat: "1.4",
+          de: "die Wegbeschreibung (-en)",
+          ipa: "/diː ˈveːkbəˌʃʁaɪbʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Chỉ đường cho khách (ra ga tàu, trung tâm, bãi đỗ xe)",
+          en: "Directions (to station, center, parking)",
+          rel_vi: "der Stadtplan (dt: bản đồ thành phố)",
+          rel_en: "der Stadtplan (n: city map)",
+          ex_de:
+            "Gerne zeichne ich Ihnen den kurzen Weg zum Bahnhof auf dem Stadtplan ein.",
+          ex_vi:
+            "Tôi rất sẵn lòng vẽ đường đi ngắn nhất ra nhà ga trên bản đồ thành phố cho quý khách ạ.",
+          ex_en:
+            "I'll gladly trace the short route to the train station on the city map for you.",
+        },
+        {
+          id: 62,
+          cat: "1.4",
+          de: "die Kulanz",
+          ipa: "/diː kuˈlants/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Sự linh hoạt thiện chí hỗ trợ khách (tặng cà phê/tráng miệng xin lỗi hoặc cho trả phòng muộn)",
+          en: "Goodwill / flexible courtesy gesture",
+          rel_vi: "entgegenkommen (đt: tạo điều kiện linh hoạt cho khách)",
+          rel_en: "entgegenkommen (v: to accommodate/meet halfway)",
+          ex_de:
+            "Aus Kulanz laden wir Sie heute herzlich auf einen Kaffee und ein Dessert ein.",
+          ex_vi:
+            "Với thiện chí phục vụ, hôm nay chúng tôi xin trân trọng mời quý khách một ly cà phê và món tráng miệng ạ.",
+          ex_en:
+            "As a goodwill gesture today, we warmly invite you for a coffee and dessert.",
+        },
+        {
+          id: 63,
+          cat: "1.4",
+          de: "der Late Check-out / der Early Check-in",
+          ipa: "/deːɐ̯ leɪt ˈtʃɛkʔaʊt/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Trả phòng muộn / Nhận phòng sớm",
+          en: "Late check-out / early check-in",
+          rel_vi: "die Verfügbarkeit (dt: tình trạng phòng trống)",
+          rel_en: "die Verfügbarkeit (n: availability)",
+          ex_de:
+            "Ein Late Check-out bis 14 Uhr ist nach Verfügbarkeit möglich.",
+          ex_vi:
+            "Trả phòng muộn đến 14 giờ có thể sắp xếp tùy theo tình trạng phòng trống ạ.",
+          ex_en:
+            "A late check-out until 2 PM is possible subject to availability.",
+        },
+        {
+          id: 64,
+          cat: "1.4",
+          de: "die Stoßzeit (-en)",
+          ipa: "/diː ˈʃtoːsˌtsaɪt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Giờ cao điểm đông khách nhất (ăn sáng, trả phòng 10–11h, ăn tối 19–21h)",
+          en: "Peak rush hour (breakfast, check-out, dinner)",
+          rel_vi: "der Andrang (dt: lượng khách dồn đông)",
+          rel_en: "der Andrang (n: rush/crowds)",
+          ex_de:
+            "Während der Stoßzeit am Frühstücksbuffet helfen alle zusammen beim Abräumen.",
+          ex_vi:
+            "Trong giờ cao điểm ở tiệc buffet sáng, mọi người cùng nhau hỗ trợ dọn bàn.",
+          ex_en:
+            "During peak time at the breakfast buffet, everyone helps clear tables together.",
+        },
+        {
+          id: 65,
+          cat: "1.4",
+          de: "die Barzahlung / die Kartenzahlung",
+          ipa: "/diː ˈbaːɐ̯ˌtsaːlʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thanh toán tiền mặt / Thanh toán bằng thẻ ngân hàng hoặc thẻ tín dụng",
+          en: "Cash payment / card payment",
+          rel_vi: "das Kartenlesegerät (dt: máy quẹt thẻ POS)",
+          rel_en: "das Kartenlesegerät (n: card terminal)",
+          ex_de:
+            "Selbstverständlich können Sie bei uns mit EC-Karte, Kreditkarte oder bar bezahlen.",
+          ex_vi:
+            "Tất nhiên quý khách có thể thanh toán bằng thẻ ngân hàng Đức, thẻ tín dụng hoặc tiền mặt ạ.",
+          ex_en:
+            "Of course you can pay with EC card, credit card, or cash with us.",
+        },
+        {
+          id: 66,
+          cat: "1.4",
+          de: "die Quittung (-en) / der Bewirtungsbeleg (-e)",
+          ipa: "/diː ˈkvɪtʊŋ/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Biên lai thanh toán / Hóa đơn tiếp khách khấu trừ thuế doanh nghiệp tại Đức",
+          en: "Receipt / tax-deductible business entertainment receipt in Germany",
+          rel_vi: "ausstellen (đt: xuất hóa đơn)",
+          rel_en: "ausstellen (v: to issue a receipt/invoice)",
+          ex_de:
+            "Für Geschäftsessen stellen wir Ihnen gerne einen offiziellen Bewirtungsbeleg aus.",
+          ex_vi:
+            "Đối với bữa ăn tiếp khách công việc, chúng tôi sẵn sàng xuất hóa đơn tiếp khách hợp lệ cho quý khách.",
+          ex_en:
+            "For business meals, we gladly issue an official entertainment receipt for you.",
+        },
+        {
+          id: 67,
+          cat: "1.4",
+          de: "die Dienstkleidung / das Namensschild (-er)",
+          ipa: "/diː ˈdiːnstˌklaɪdʊŋ/",
+          type_vi: "Danh từ (f./n.)",
+          type_en: "Noun (f./n.)",
+          vi: "Đồng phục nhân viên khách sạn-nhà hàng / Bảng tên đeo ngực",
+          en: "Service uniform / name badge",
+          rel_vi: "gepflegt (tt: chỉn chu, gọn gàng)",
+          rel_en: "gepflegt (adj: well-groomed/neat)",
+          ex_de:
+            "Im Service tragen wir immer gepflegte Dienstkleidung und unser Namensschild.",
+          ex_vi:
+            "Trong bộ phận phục vụ chúng tôi luôn mặc đồng phục chỉn chu và đeo bảng tên.",
+          ex_en:
+            "In service, we always wear a neat uniform and our name badge.",
+        },
+        {
+          id: 68,
+          cat: "1.4",
+          de: "die Barrierefreiheit",
+          ipa: "/diː baˈʁi̯eːʁəˌfʁaɪhaɪt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thiết kế thuận tiện cho người khuyết tật / xe lăn",
+          en: "Accessibility (wheelchair / step-free access)",
+          rel_vi: "barrierefrei (tt: không rào cản, có lối đi xe lăn)",
+          rel_en: "barrierefrei (adj: barrier-free/accessible)",
+          ex_de:
+            "Unser Hotel verfügt über einen Aufzug und zwei barrierefreie Zimmer im Erdgeschoss.",
+          ex_vi:
+            "Khách sạn chúng tôi có thang máy và hai phòng thiết kế cho người đi xe lăn ở tầng trệt.",
+          ex_en:
+            "Our hotel has an elevator and two accessible rooms on the ground floor.",
+        },
+        {
+          id: 69,
+          cat: "1.4",
+          de: "der Nachtportier (-s)",
+          ipa: "/deːɐ̯ ˈnaxtˌpɔʁti̯eː/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Nhân viên lễ tân trực ca đêm",
+          en: "Night porter / night receptionist",
+          rel_vi: "die Nachtschicht (dt: ca đêm)",
+          rel_en: "die Nachtschicht (n: night shift)",
+          ex_de:
+            "Unser Nachtportier ist ab 22 Uhr für späte Anreisen und Notfälle da.",
+          ex_vi:
+            "Nhân viên lễ tân ca đêm của chúng tôi trực từ 22 giờ để đón khách đến muộn và xử lý tình huống khẩn cấp.",
+          ex_en:
+            "Our night porter is there from 10 PM for late arrivals and emergencies.",
+        },
+        {
+          id: 70,
+          cat: "1.4",
+          de: "die Gästebewertung (-en)",
+          ipa: "/diː ˈɡɛstəbəˌveːɐ̯tʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Đánh giá phản hồi của khách lưu trú",
+          en: "Guest review / rating",
+          rel_vi: "das Feedback (dt: phản hồi)",
+          rel_en: "das Feedback (n: feedback)",
+          ex_de:
+            "Wir freuen uns sehr, wenn Sie uns nach Ihrem Aufenthalt eine positive Bewertung hinterlassen.",
+          ex_vi:
+            "Chúng tôi rất vui nếu quý khách để lại đánh giá tích cực sau kỳ lưu trú ạ.",
+          ex_en:
+            "We are very pleased if you leave us a positive review after your stay.",
+        },
+        {
+          id: 71,
+          cat: "1.5",
+          de: "begrüßen / verabschieden",
+          ipa: "/bəˈɡʁyːsn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Chào đón khách / Tiễn chào tạm biệt khách",
+          en: "To greet / to bid farewell",
+          rel_vi: "die Begrüßung (dt: lời chào đón)",
+          rel_en: "die Begrüßung (n: greeting)",
+          ex_de:
+            "Wir begrüßen jeden Gast mit einem freundlichen Lächeln und Blickkontakt.",
+          ex_vi:
+            "Chúng tôi chào đón mỗi vị khách bằng nụ cười thân thiện và ánh mắt cởi mở.",
+          ex_en: "We greet every guest with a friendly smile and eye contact.",
+        },
+        {
+          id: 72,
+          cat: "1.5",
+          de: "reservieren / stornieren",
+          ipa: "/ʁezɛʁˈviːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Đặt giữ chỗ trước / Hủy đặt chỗ",
+          en: "To reserve / to cancel",
+          rel_vi: "die Stornierung (dt: việc hủy đặt phòng/bàn)",
+          rel_en: "die Stornierung (n: cancellation)",
+          ex_de:
+            "Bis 18 Uhr am Vortag können Sie das Zimmer kostenlos stornieren.",
+          ex_vi:
+            "Quý khách có thể hủy phòng miễn phí trước 18 giờ ngày hôm trước.",
+          ex_en:
+            "You can cancel the room free of charge until 6 PM the day before.",
+        },
+        {
+          id: 73,
+          cat: "1.5",
+          de: "einchecken / auschecken",
+          ipa: "/ˈaɪnˌtʃɛkn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Làm thủ tục nhận phòng / Làm thủ tục trả phòng",
+          en: "To check in / to check out",
+          rel_vi: "der Check-in / Check-out",
+          rel_en: "der Check-in / Check-out",
+          ex_de:
+            "Möchten Sie jetzt schon auschecken und Ihre Rechnung begleichen?",
+          ex_vi:
+            "Quý khách có muốn làm thủ tục trả phòng và thanh toán hóa đơn ngay bây giờ không ạ?",
+          ex_en: "Would you like to check out now and settle your bill?",
+        },
+        {
+          id: 74,
+          cat: "1.5",
+          de: "empfehlen",
+          ipa: "/ɛmˈpfeːlən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Giới thiệu, gợi ý lựa chọn phù hợp cho khách",
+          en: "To recommend",
+          rel_vi: "die Empfehlung (dt: lời gợi ý)",
+          rel_en: "die Empfehlung (n: recommendation)",
+          ex_de:
+            "Als Hauptgericht empfehle ich Ihnen heute unseren frischen Zander aus der Region.",
+          ex_vi:
+            "Đối với món chính hôm nay tôi xin giới thiệu món cá vược tươi đánh bắt tại vùng này ạ.",
+          ex_en:
+            "For the main course today, I recommend our fresh local zander.",
+        },
+        {
+          id: 75,
+          cat: "1.5",
+          de: "servieren / bringen",
+          ipa: "/zɛʁˈviːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Phục vụ bưng món ra bàn / Mang đồ tới cho khách",
+          en: "To serve / to bring",
+          rel_vi: "der Service (dt: dịch vụ phục vụ)",
+          rel_en: "der Service (n: service)",
+          ex_de:
+            "Ich serviere Ihnen sofort die Getränke und bringe gleich frisches Brot dazu.",
+          ex_vi:
+            "Tôi sẽ phục vụ đồ uống ngay và mang thêm bánh mì tươi ra cho quý khách ạ.",
+          ex_en:
+            "I'll serve your drinks right away and bring fresh bread with them.",
+        },
+        {
+          id: 76,
+          cat: "1.5",
+          de: "abräumen / eindecken",
+          ipa: "/ˈapˌʁɔʏ̯mən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Thu dọn bàn / Bày biện bàn ăn",
+          en: "To clear plates / to lay/set the table",
+          rel_vi: "der Tisch (dt: bàn ăn)",
+          rel_en: "der Tisch (n: table)",
+          ex_de:
+            "Darf ich die leeren Teller schon abräumen? — Hat es Ihnen geschmeckt?",
+          ex_vi:
+            "Tôi có thể thu dọn đĩa trống được chưa ạ? — Quý khách dùng bữa có ngon miệng không ạ?",
+          ex_en: "May I clear the empty plates? — Did you enjoy your meal?",
+        },
+        {
+          id: 77,
+          cat: "1.5",
+          de: "nachlegen / auffüllen",
+          ipa: "/ˈnaːxˌleːɡn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Châm thêm đồ ăn lên quầy buffet / Bổ sung đồ dùng phòng",
+          en: "To replenish buffet items / to refill room supplies",
+          rel_vi: "das Buffet (dt: quầy tự chọn)",
+          rel_en: "das Buffet (n: buffet)",
+          ex_de:
+            "Ich lege sofort frischen Käse und Aufschnitt am Frühstücksbuffet nach.",
+          ex_vi:
+            "Tôi sẽ châm thêm ngay phô mai tươi và thịt nguội lên quầy buffet sáng ạ.",
+          ex_en:
+            "I'll top up fresh cheese and cold cuts at the breakfast buffet right away.",
+        },
+        {
+          id: 78,
+          cat: "1.5",
+          de: "beziehen / wechseln",
+          ipa: "/bəˈtsiːən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Thay bọc ga gối mới / Thay thế đồ vải sạch",
+          en: "To put on fresh bed linen / to change/replace",
+          rel_vi: "die Bettwäsche (dt: ga gối)",
+          rel_en: "die Bettwäsche (n: bed linen)",
+          ex_de: "Bitte beziehe die Betten in Zimmer 105 und 106 frisch.",
+          ex_vi:
+            "Vui lòng thay bọc ga gối mới cho giường ở phòng 105 và 106 nhé.",
+          ex_en: "Please put fresh linen on the beds in Rooms 105 and 106.",
+        },
+        {
+          id: 79,
+          cat: "1.5",
+          de: "reinigen / desinfizieren",
+          ipa: "/ˈʁaɪnɪɡn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Làm sạch / Khử khuẩn bề mặt & phòng tắm",
+          en: "To clean / to disinfect",
+          rel_vi: "die Reinigung (dt: việc dọn vệ sinh)",
+          rel_en: "die Reinigung (n: cleaning)",
+          ex_de:
+            "Wir reinigen alle Kontaktflächen wie Türklinken und Lichtschalter besonders gründlich.",
+          ex_vi:
+            "Chúng tôi làm sạch đặc biệt kỹ mọi bề mặt tiếp xúc như tay nắm cửa và công tắc đèn.",
+          ex_en:
+            "We clean all high-touch surfaces like door handles and light switches especially thoroughly.",
+        },
+        {
+          id: 80,
+          cat: "1.5",
+          de: "sich entschuldigen",
+          ipa: "/zɪç ɛntˈʃʊldɪɡn̩/",
+          type_vi: "Động từ phản thân",
+          type_en: "Reflexive verb",
+          vi: "Xin lỗi khách một cách lịch sự, chân thành",
+          en: "To apologize",
+          rel_vi: "die Entschuldigung (dt: lời xin lỗi)",
+          rel_en: "die Entschuldigung (n: apology)",
+          ex_de:
+            "Ich entschuldige mich vielmals für die Wartezeit und kümmere mich sofort darum.",
+          ex_vi:
+            "Tôi thành thật xin lỗi quý khách vì thời gian chờ đợi và sẽ xử lý ngay lập tức ạ.",
+          ex_en:
+            "I sincerely apologize for the wait and will take care of it immediately.",
+        },
+        {
+          id: 81,
+          cat: "1.5",
+          de: "höflich / zuvorkommend",
+          ipa: "/ˈhøːflɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Lịch sự / Ân cần, chu đáo",
+          en: "Polite / attentive and courteous",
+          rel_vi: "die Höflichkeit (dt: sự lịch thiệp)",
+          rel_en: "die Höflichkeit (n: politeness)",
+          ex_de:
+            "Ein zuvorkommender Service macht den Aufenthalt für den Gast unvergesslich.",
+          ex_vi:
+            "Phong cách phục vụ ân cần chu đáo tạo nên kỳ nghỉ đáng nhớ cho khách.",
+          ex_en:
+            "Attentive service makes the stay unforgettable for the guest.",
+        },
+        {
+          id: 82,
+          cat: "1.5",
+          de: "ordentlich / makellos",
+          ipa: "/ˈɔʁdn̩tlɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Gọn gàng ngăn nắp / Sạch không tì vết",
+          en: "Neat and tidy / spotless",
+          rel_vi: "sauber (tt: sạch sẽ)",
+          rel_en: "sauber (adj: clean)",
+          ex_de: "Das Zimmer muss vor der Freigabe makellos sauber sein.",
+          ex_vi:
+            "Căn phòng phải sạch không tì vết trước khi báo sẵn sàng đón khách.",
+          ex_en: "The room must be spotlessly clean before release.",
+        },
+        {
+          id: 83,
+          cat: "1.5",
+          de: "verfügbar / ausgebucht",
+          ipa: "/fɛɐ̯ˈfyːkbaːɐ̯/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Còn phòng/bàn trống / Đã kín hết chỗ",
+          en: "Available / fully booked",
+          rel_vi: "frei (tt: trống)",
+          rel_en: "frei (adj: free/vacant)",
+          ex_de:
+            "Für heute Abend haben wir leider keinen freien Tisch mehr, wir sind komplett ausgebucht.",
+          ex_vi:
+            "Tối nay tiếc là chúng tôi không còn bàn trống nào nữa, nhà hàng đã kín chỗ hoàn toàn ạ.",
+          ex_en:
+            "For tonight we unfortunately have no free table left; we are completely booked out.",
+        },
+        {
+          id: 84,
+          cat: "1.5",
+          de: "gemütlich / ruhig",
+          ipa: "/ɡəˈmyːtlɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Ấm cúng, dễ chịu / Yên tĩnh",
+          en: "Cozy / quiet",
+          rel_vi: "angenehm (tt: thoải mái)",
+          rel_en: "angenehm (adj: pleasant)",
+          ex_de:
+            "Unsere Gäste schätzen die ruhige Lage und die gemütliche Atmosphäre im Restaurant.",
+          ex_vi:
+            "Khách hàng rất thích vị trí yên tĩnh và bầu không khí ấm cúng trong nhà hàng.",
+          ex_en:
+            "Our guests appreciate the quiet location and cozy atmosphere in the restaurant.",
+        },
+        {
+          id: 85,
+          cat: "1.5",
+          de: "frisch / heiß / gekühlt",
+          ipa: "/fʁɪʃ/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Tươi mới / Nóng hổi / Ướp lạnh mát",
+          en: "Fresh / hot / chilled",
+          rel_vi: "kalt (tt: lạnh)",
+          rel_en: "kalt (adj: cold)",
+          ex_de:
+            "Das Bier wird gut gekühlt und die Speisen werden heiß serviert.",
+          ex_vi:
+            "Bia được phục vụ ướp lạnh mát và món ăn được bưng ra nóng hổi.",
+          ex_en:
+            "The beer is served well chilled and the dishes are served hot.",
+        },
+        {
+          id: 86,
+          cat: "1.5",
+          de: "zufrieden",
+          ipa: "/tsuˈfʁiːdn̩/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Hài lòng",
+          en: "Satisfied",
+          rel_vi: "die Zufriedenheit (dt: sự hài lòng)",
+          rel_en: "die Zufriedenheit (n: satisfaction)",
+          ex_de: "Waren Sie mit Ihrem Aufenthalt bei uns rundum zufrieden?",
+          ex_vi:
+            "Quý khách có hoàn toàn hài lòng với kỳ lưu trú tại khách sạn chúng tôi không ạ?",
+          ex_en: "Were you completely satisfied with your stay with us?",
+        },
+      ];
+
+      const PHRASES_DATA = [
+        {
+          id: 1,
+          cat: "2.1",
+          de: "Herzlich willkommen in unserem Hotel! Haben Sie eine Reservierung auf Ihren Namen?",
+          vi: "Nhiệt liệt chào mừng quý khách đến với khách sạn! Quý khách có đặt phòng trước dưới tên mình không ạ?",
+          en: "Welcome to our hotel! Do you have a reservation under your name?",
+        },
+        {
+          id: 2,
+          cat: "2.1",
+          de: "Darf ich bitte Ihren Personalausweis oder Reisepass kurz sehen?",
+          vi: "Cho tôi xin xem qua căn cước công dân hoặc hộ chiếu của quý khách một chút được không ạ?",
+          en: "May I please see your ID card or passport briefly?",
+        },
+        {
+          id: 3,
+          cat: "2.1",
+          de: "Bitte füllen Sie diesen Meldeschein kurz aus und unterschreiben Sie hier unten.",
+          vi: "Quý khách vui lòng điền nhanh phiếu đăng ký lưu trú này và ký tên ở phía dưới đây ạ.",
+          en: "Please fill out this registration form briefly and sign at the bottom here.",
+        },
+        {
+          id: 4,
+          cat: "2.1",
+          de: "Hier ist Ihre Zimmerkarte für Zimmer 214 im zweiten Stock. Der Aufzug ist gleich rechts.",
+          vi: "Đây là thẻ từ mở cửa phòng 214 ở tầng hai của quý khách. Thang máy ở ngay bên phải ạ.",
+          en: "Here is your room card for Room 214 on the second floor. The elevator is right on the right.",
+        },
+        {
+          id: 5,
+          cat: "2.1",
+          de: "Das Frühstück wird täglich von 7:00 bis 10:30 Uhr im Restaurant im Erdgeschoss serviert.",
+          vi: "Bữa sáng được phục vụ hằng ngày từ 7h00 đến 10h30 tại nhà hàng ở tầng trệt ạ.",
+          en: "Breakfast is served daily from 7:00 AM to 10:30 AM in the restaurant on the ground floor.",
+        },
+        {
+          id: 6,
+          cat: "2.1",
+          de: "Das WLAN ist im gesamten Haus kostenlos, das Passwort finden Sie auf der Kartenhülle.",
+          vi: "Wi-Fi miễn phí trong toàn bộ khách sạn, mật khẩu có ghi trên bao đựng thẻ phòng ạ.",
+          en: "Wi-Fi is free throughout the building; you'll find the password on the keycard sleeve.",
+        },
+        {
+          id: 7,
+          cat: "2.1",
+          de: "Hatten Sie einen angenehmen Aufenthalt bei uns? Möchten Sie jetzt auschecken?",
+          vi: "Quý khách có một kỳ lưu trú dễ chịu tại khách sạn chúng tôi chứ ạ? Quý khách muốn trả phòng ngay bây giờ phải không ạ?",
+          en: "Did you have a pleasant stay with us? Would you like to check out now?",
+        },
+        {
+          id: 8,
+          cat: "2.1",
+          de: "Möchten Sie die Rechnung bar, mit EC-Karte oder mit Kreditkarte bezahlen?",
+          vi: "Quý khách muốn thanh toán hóa đơn bằng tiền mặt, thẻ ngân hàng Đức hay thẻ tín dụng ạ?",
+          en: "Would you like to pay the bill in cash, with EC card, or by credit card?",
+        },
+        {
+          id: 9,
+          cat: "2.1",
+          de: "Vielen Dank für Ihren Besuch und eine gute Heimreise! Wir freuen uns auf ein Wiedersehen!",
+          vi: "Chân thành cảm ơn quý khách đã ghé thăm và chúc quý khách thượng lộ bình an! Rất mong được đón tiếp quý khách lần sau!",
+          en: "Thank you very much for your visit and have a safe trip home! We look forward to seeing you again!",
+        },
+        {
+          id: 10,
+          cat: "2.2",
+          de: "Klopf, klopf! Housekeeping — darf ich bitte kurz hereinkommen und das Zimmer reinigen?",
+          vi: "Cốc, cốc! Bộ phận buồng phòng đây ạ — tôi có thể vào dọn phòng một lát được không ạ?",
+          en: "Knock, knock! Housekeeping—may I come in briefly and clean the room?",
+        },
+        {
+          id: 11,
+          cat: "2.2",
+          de: "Entschuldigen Sie die Störung! Wann passt es Ihnen am besten, wenn ich das Zimmer mache?",
+          vi: "Xin lỗi đã làm phiền quý khách! Khi nào thì thuận tiện nhất để tôi vào dọn phòng ạ?",
+          en: "Sorry for the disturbance! When is the best time for me to service the room?",
+        },
+        {
+          id: 12,
+          cat: "2.2",
+          de: "Ich wechsle jetzt die Handtücher und fülle Duschgel und Toilettenpapier wieder auf.",
+          vi: "Bây giờ tôi thay khăn tắm mới và bổ sung thêm sữa tắm cùng giấy vệ sinh ạ.",
+          en: "I'm changing the towels now and refilling shower gel and toilet paper.",
+        },
+        {
+          id: 13,
+          cat: "2.2",
+          de: "In Zimmer 305 ist ein Abreisezimmer, wir müssen die komplette Bettwäsche frisch beziehen.",
+          vi: "Phòng 305 là phòng khách đã trả, chúng ta phải thay mới toàn bộ chăn ga gối.",
+          en: "Room 305 is a departure room; we need to put fresh bed linen on all beds.",
+        },
+        {
+          id: 14,
+          cat: "2.2",
+          de: "Denke bitte an das Vier-Farben-System: das rote Tuch ist nur für die Toilette!",
+          vi: "Nhớ áp dụng hệ thống khăn 4 màu nhé: khăn màu đỏ chỉ dùng riêng cho bồn cầu thôi!",
+          en: "Please remember the four-color system: the red cloth is only for the toilet!",
+        },
+        {
+          id: 15,
+          cat: "2.2",
+          de: "Ich habe in Zimmer 112 ein Ladekabel gefunden und gebe es gleich an der Rezeption ab.",
+          vi: "Tôi tìm thấy một dây sạc điện thoại trong phòng 112 và mang nộp ngay cho quầy lễ tân đây.",
+          en: "I found a charging cable in Room 112 and am handing it in at reception right away.",
+        },
+        {
+          id: 16,
+          cat: "2.2",
+          de: "Auf dem Etagenwagen fehlen uns noch frische Duschtücher, Badematten und Müllbeutel.",
+          vi: "Trên xe đẩy buồng phòng của chúng ta đang thiếu khăn tắm lớn sạch, thảm chân phòng tắm và túi rác.",
+          en: "On the housekeeping cart, we're still missing fresh bath towels, bath mats, and trash bags.",
+        },
+        {
+          id: 17,
+          cat: "2.2",
+          de: "In Zimmer 204 funktioniert die Nachttischlampe nicht, ich sage dem Hausmeister Bescheid.",
+          vi: "Ở phòng 204 đèn ngủ đầu giường không sáng, tôi báo cho nhân viên kỹ thuật bảo trì ngay đây.",
+          en: "In Room 204 the bedside lamp isn't working; I'll let maintenance know.",
+        },
+        {
+          id: 18,
+          cat: "2.2",
+          de: "Alle Zimmer auf der dritten Etage sind sauber und bereit für die neuen Gäste!",
+          vi: "Tất cả các phòng trên tầng ba đã dọn sạch sẽ và sẵn sàng đón khách mới rồi!",
+          en: "All rooms on the third floor are clean and ready for the new guests!",
+        },
+        {
+          id: 19,
+          cat: "2.3",
+          de: "Guten Abend und herzlich willkommen! Haben Sie einen Tisch reserviert oder für wie viele Personen suchen Sie einen Platz?",
+          vi: "Chào buổi tối và chào mừng quý khách! Quý khách đã đặt bàn trước chưa hay đang tìm bàn cho mấy người ạ?",
+          en: "Good evening and welcome! Have you reserved a table or for how many people are you looking for a seat?",
+        },
+        {
+          id: 20,
+          cat: "2.3",
+          de: "Bitte folgen Sie mir, ich bringe Sie zu Ihrem Tisch am Fenster. Hier sind die Speisekarten.",
+          vi: "Mời quý khách đi theo tôi, tôi đưa quý khách tới bàn cạnh cửa sổ ạ. Đây là thực đơn của nhà hàng.",
+          en: "Please follow me; I'll take you to your table by the window. Here are the menus.",
+        },
+        {
+          id: 21,
+          cat: "2.3",
+          de: "Darf ich Ihnen schon etwas zu trinken bringen — vielleicht ein Mineralwasser oder ein frisch gezapftes Bier?",
+          vi: "Tôi có thể mang trước đồ uống cho quý khách không ạ — một chai nước khoáng hay một ly bia tươi mới rót nhé?",
+          en: "May I bring you something to drink already—perhaps a mineral water or a freshly tapped beer?",
+        },
+        {
+          id: 22,
+          cat: "2.3",
+          de: "Haben Sie schon gewählt? Als Tagesempfehlung haben wir heute frischen Lachs mit Spargel.",
+          vi: "Quý khách đã chọn được món chưa ạ? Món đặc biệt gợi ý hôm nay của nhà hàng là cá hồi tươi kèm măng tây ạ.",
+          en: "Have you chosen yet? As today's special recommendation we have fresh salmon with asparagus.",
+        },
+        {
+          id: 23,
+          cat: "2.3",
+          de: "Habt Ihr eventuelle Allergien oder Unverträglichkeiten, auf die unsere Küche achten soll?",
+          vi: "Quý khách có bị dị ứng hay không dung nạp thực phẩm nào để bếp lưu ý không ạ?",
+          en: "Do you have any allergies or intolerances that our kitchen should watch out for?",
+        },
+        {
+          id: 24,
+          cat: "2.3",
+          de: "Guten Appetit! Bitte sagen Sie Bescheid, falls Ihnen noch etwas fehlt.",
+          vi: "Chúc quý khách ngon miệng! Vui lòng báo cho tôi nếu quý khách cần thêm bất cứ thứ gì ạ.",
+          en: "Enjoy your meal! Please let me know if you're missing anything.",
+        },
+        {
+          id: 25,
+          cat: "2.3",
+          de: "Hat es Ihnen geschmeckt? Darf ich die leeren Teller schon abräumen?",
+          vi: "Quý khách dùng bữa có ngon miệng không ạ? Tôi có thể thu dọn các đĩa trống được chưa ạ?",
+          en: "Did you enjoy it? May I clear the empty plates?",
+        },
+        {
+          id: 26,
+          cat: "2.3",
+          de: "Möchten Sie noch einen Espresso oder einen Blick in unsere Dessertkarte werfen?",
+          vi: "Quý khách có muốn dùng thêm một ly Espresso hay xem qua thực đơn món tráng miệng không ạ?",
+          en: "Would you like another espresso or a look at our dessert menu?",
+        },
+        {
+          id: 27,
+          cat: "2.3",
+          de: "Möchten Sie zusammen oder getrennt bezahlen? — Zahlen Sie bar oder mit Karte?",
+          vi: "Quý khách muốn thanh toán chung hay tách riêng ạ? — Quý khách trả tiền mặt hay bằng thẻ ạ?",
+          en: "Would you like to pay together or separately? — Are you paying cash or by card?",
+        },
+        {
+          id: 28,
+          cat: "2.4",
+          de: "Es tut mir sehr leid, dass das Steak zu stark durchgebraten ist. Ich lasse es Ihnen sofort frisch zubereiten!",
+          vi: "Tôi rất xin lỗi vì miếng bít tết bị chín kỹ quá. Tôi sẽ nhờ bếp làm lại ngay một phần tươi mới cho quý khách ạ!",
+          en: "I'm very sorry that the steak is too well-done. I'll have a fresh one prepared for you right away!",
+        },
+        {
+          id: 29,
+          cat: "2.4",
+          de: "Ich entschuldige mich vielmals für die lange Wartezeit, im Restaurant ist heute sehr viel los.",
+          vi: "Tôi thành thật xin lỗi quý khách vì đã phải chờ lâu, hôm nay nhà hàng đang rất đông khách ạ.",
+          en: "I sincerely apologize for the long wait; the restaurant is very busy today.",
+        },
+        {
+          id: 30,
+          cat: "2.4",
+          de: "Als kleine Entschuldigung laden wir Sie gerne auf einen Kaffee oder ein Dessert aufs Haus ein.",
+          vi: "Như một lời xin lỗi nhỏ, nhà hàng xin trân trọng mời quý khách một ly cà phê hoặc món tráng miệng miễn phí ạ.",
+          en: "As a small apology, we gladly invite you for a coffee or dessert on the house.",
+        },
+        {
+          id: 31,
+          cat: "2.4",
+          de: "Ich kümmere mich sofort darum, dass die Heizung in Ihrem Zimmer überprüft wird.",
+          vi: "Tôi sẽ xử lý ngay để kỹ thuật viên kiểm tra lại hệ thống sưởi trong phòng của quý khách ạ.",
+          en: "I'll take care right away of having the heating in your room checked.",
+        },
+        {
+          id: 32,
+          cat: "2.4",
+          de: "Kannst du mir bitte kurz helfen, das Frühstücksbuffet abzuräumen und frische Tassen hinzustellen?",
+          vi: "Bạn giúp mình một tay thu dọn quầy buffet sáng và xếp thêm tách sạch ra nhé?",
+          en: "Could you briefly help me clear the breakfast buffet and put out fresh cups?",
+        },
+        {
+          id: 33,
+          cat: "2.4",
+          de: "Achtung, Tisch 5 möchte getrennt bezahlen — ich rechne die Getränke einzeln ab.",
+          vi: "Chú ý, bàn số 5 muốn thanh toán tách riêng — tôi tính tiền đồ uống riêng từng người đây.",
+          en: "Heads up, Table 5 wants to pay separately—I'm billing the drinks individually.",
+        },
+        {
+          id: 34,
+          cat: "2.4",
+          de: "Wir haben für heute Abend eine Gruppenreservierung mit zwanzig Personen im Nebenraum.",
+          vi: "Tối nay chúng ta có một đoàn đặt bàn 20 người ở phòng tiệc bên cạnh.",
+          en: "Tonight we have a group reservation of twenty people in the side room.",
+        },
+        {
+          id: 35,
+          cat: "2.4",
+          de: "Die Schichtübergabe an der Rezeption ist erledigt, alle Reservierungen sind eingetragen.",
+          vi: "Phần bàn giao ca ở quầy lễ tân đã xong, tất cả đặt phòng đều đã nhập hệ thống.",
+          en: "Shift handover at reception is done; all reservations are entered.",
+        },
+        {
+          id: 36,
+          cat: "2.4",
+          de: "Vielen Dank für die tolle Schicht zusammen! Schönen Feierabend!",
+          vi: "Cảm ơn mọi người đã có một ca làm việc thật ăn ý! Chúc tan ca vui vẻ!",
+          en: "Thanks for the great shift together! Have a nice evening!",
+        },
+      ];
+
+      const DIALOGUES_DATA = [
+        {
+          id: 1,
+          tab_vi: "Hội thoại 1: Nhận phòng Check-in",
+          tab_en: "Dialogue 1: Hotel Check-In",
+          title_vi:
+            "Hội thoại 1: Làm thủ tục nhận phòng cho khách tại quầy Lễ tân (Check-in an der Rezeption)",
+          title_en:
+            "Dialogue 1: Checking In a Guest at the Front Desk (Check-in an der Rezeption)",
+          context_vi:
+            "Buổi chiều tại quầy lễ tân khách sạn Đức, nhân viên lễ tân (Đức) đón tiếp và làm thủ tục nhận phòng cho khách lưu trú (Herr Weber).",
+          context_en:
+            "Afternoon at a German hotel front desk: receptionist Đức welcomes guest Mr. Weber and completes his check-in.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Lễ tân khách sạn)",
+              name_en: "Đức (Front Desk)",
+              de: "Guten Tag und herzlich willkommen im Hotel Ostseeblick! Wie kann ich Ihnen helfen?",
+              vi: "Xin chào và nhiệt liệt chào mừng quý khách đến với khách sạn Ostseeblick! Tôi có thể giúp gì cho quý khách ạ?",
+              en: "Good day and welcome to Hotel Ostseeblick! How can I help you?",
+            },
+            {
+              role: "partner",
+              name_vi: "Herr Weber (Khách lưu trú)",
+              name_en: "Mr. Weber (Guest)",
+              de: "Guten Tag! Ich habe ein Einzelzimmer für zwei Nächte auf den Namen Weber reserviert.",
+              vi: "Xin chào! Tôi có đặt một phòng đơn cho hai đêm dưới tên Weber.",
+              en: "Good day! I reserved a single room for two nights under the name Weber.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Lễ tân khách sạn)",
+              name_en: "Đức (Front Desk)",
+              de: "Einen Moment bitte, Herr Weber... Ja, genau, ein ruhiges Einzelzimmer inklusive Frühstück. Darf ich bitte kurz Ihren Personalausweis sehen und bitten, diesen Meldeschein zu unterschreiben?",
+              vi: "Quý khách vui lòng đợi một lát ạ, ông Weber... Vâng đúng rồi, một phòng đơn yên tĩnh đã bao gồm bữa sáng. Cho tôi xin xem qua căn cước công dân và phiền ông ký vào phiếu đăng ký lưu trú này nhé?",
+              en: "One moment please, Mr. Weber... Yes, right, a quiet single room including breakfast. May I briefly see your ID card and ask you to sign this registration form?",
+            },
+            {
+              role: "partner",
+              name_vi: "Herr Weber (Khách lưu trú)",
+              name_en: "Mr. Weber (Guest)",
+              de: "Gerne, hier ist mein Ausweis und der unterschriebene Meldeschein. Wann gibt es morgens Frühstück?",
+              vi: "Vâng, đây là căn cước của tôi và phiếu đăng ký đã ký. Buổi sáng mấy giờ phục vụ bữa sáng vậy anh?",
+              en: "Gladly, here is my ID and the signed registration form. When is breakfast served in the morning?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Lễ tân khách sạn)",
+              name_en: "Đức (Front Desk)",
+              de: "Das Frühstücksbuffet ist von 7:00 bis 10:00 Uhr im Restaurant im Erdgeschoss geöffnet. Hier ist Ihre Zimmerkarte für Zimmer 308 — der Aufzug ist gleich rechts. Ich wünsche Ihnen einen angenehmen Aufenthalt!",
+              vi: "Tiệc buffet sáng mở cửa từ 7h00 đến 10h00 tại nhà hàng ở tầng trệt ạ. Đây là thẻ phòng 308 của ông — thang máy ngay bên phải. Chúc ông có một kỳ lưu trú thật dễ chịu!",
+              en: "The breakfast buffet is open from 7:00 AM to 10:00 AM in the restaurant on the ground floor. Here is your keycard for Room 308—the elevator is right on the right. I wish you a pleasant stay!",
+            },
+          ],
+        },
+        {
+          id: 2,
+          tab_vi: "Hội thoại 2: Trả phòng & Hóa đơn",
+          tab_en: "Dialogue 2: Check-Out & Billing",
+          title_vi:
+            "Hội thoại 2: Làm thủ tục trả phòng & Thanh toán hóa đơn công tác (Check-out & Rechnung)",
+          title_en:
+            "Dialogue 2: Check-Out & Business Invoice Payment (Check-out & Rechnung)",
+          context_vi:
+            "Sáng hôm sau khi trả phòng, Đức kiểm tra hóa đơn, thuế lưu trú (Kurtaxe) và xuất hóa đơn công ty cho khách.",
+          context_en:
+            "The next morning at check-out, Đức checks the bill and tourist tax (Kurtaxe) and issues a company invoice for the guest.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Lễ tân khách sạn)",
+              name_en: "Đức (Front Desk)",
+              de: "Guten Morgen, Herr Weber! Hatten Sie eine angenehme Nacht bei uns?",
+              vi: "Chào buổi sáng ông Weber! Đêm qua ông nghỉ tại khách sạn có thoải mái không ạ?",
+              en: "Good morning, Mr. Weber! Did you have a pleasant night with us?",
+            },
+            {
+              role: "partner",
+              name_vi: "Herr Weber (Khách lưu trú)",
+              name_en: "Mr. Weber (Guest)",
+              de: "Guten Morgen! Ja, vielen Dank, alles war super. Ich möchte jetzt gerne auschecken.",
+              vi: "Chào buổi sáng! Có, cảm ơn anh, mọi thứ đều tuyệt vời. Bây giờ tôi muốn làm thủ tục trả phòng ạ.",
+              en: "Good morning! Yes, thank you, everything was great. I would like to check out now.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Lễ tân khách sạn)",
+              name_en: "Đức (Front Desk)",
+              de: "Sehr gerne! Hatten Sie noch etwas aus der Minibar?",
+              vi: "Vâng ạ! Ông có dùng thêm đồ gì trong tủ minibar không ạ?",
+              en: "With pleasure! Did you have anything else from the minibar?",
+            },
+            {
+              role: "partner",
+              name_vi: "Herr Weber (Khách lưu trú)",
+              name_en: "Mr. Weber (Guest)",
+              de: "Nein, nichts. Können Sie die Rechnung bitte auf meine Firma ausstellen? Ich zahle mit Kreditkarte.",
+              vi: "Không, tôi không dùng gì cả. Anh có thể xuất hóa đơn theo tên công ty của tôi được không? Tôi thanh toán bằng thẻ tín dụng.",
+              en: "No, nothing. Can you please issue the invoice under my company? I'm paying by credit card.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Lễ tân khách sạn)",
+              name_en: "Đức (Front Desk)",
+              de: "Selbstverständlich, hier ist Ihre Firmenrechnung inklusive Mehrwertsteuer und Kurtaxe. Bitte halten Sie Ihre Karte kurz an das Lesegerät. Vielen Dank und eine gute Heimreise!",
+              vi: "Tất nhiên rồi ạ, đây là hóa đơn công ty đã bao gồm thuế VAT và thuế lưu trú của ông. Ông vui lòng chạm thẻ vào máy quẹt thẻ nhé. Cảm ơn ông rất nhiều và chúc ông thượng lộ bình an!",
+              en: "Of course, here is your company invoice including VAT and tourist tax. Please hold your card briefly to the reader. Thank you very much and have a safe trip home!",
+            },
+          ],
+        },
+        {
+          id: 3,
+          tab_vi: "Hội thoại 3: Buồng phòng Housekeeping",
+          tab_en: "Dialogue 3: Housekeeping",
+          title_vi:
+            "Hội thoại 3: Nhân viên Buồng phòng xin phép dọn phòng & Phân công trên tầng (Housekeeping)",
+          title_en:
+            "Dialogue 3: Housekeeping Asking to Clean & Floor Coordination (Housekeeping)",
+          context_vi:
+            "Buổi sáng trên hành lang tầng 2, Đức gõ cửa phòng khách đang lưu trú (Bleibezimmer) và trao đổi với đồng nghiệp buồng phòng.",
+          context_en:
+            "Morning on the second-floor corridor: Đức knocks on a stay-over guest's room and coordinates with a housekeeping colleague.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên buồng phòng)",
+              name_en: "Đức (Housekeeping)",
+              de: "Klopf, klopf! Guten Morgen, Housekeeping — darf ich kurz hereinkommen und Ihr Zimmer reinigen?",
+              vi: "Cốc, cốc! Chào buổi sáng, bộ phận buồng phòng đây ạ — tôi có thể vào dọn phòng một lát được không ạ?",
+              en: "Knock, knock! Good morning, housekeeping—may I come in briefly and clean your room?",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Becker (Khách lưu trú)",
+              name_en: "Mrs. Becker (Guest)",
+              de: "Guten Morgen! Ich gehe gerade zum Frühstück, Sie können das Zimmer jetzt sehr gerne machen.",
+              vi: "Chào buổi sáng! Tôi vừa đi ăn sáng đây, anh cứ tự nhiên vào dọn phòng bây giờ nhé.",
+              en: "Good morning! I'm heading to breakfast right now; you're very welcome to do the room now.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên buồng phòng)",
+              name_en: "Đức (Housekeeping)",
+              de: "Vielen Dank, Frau Becker! Ich lüfte das Zimmer kurz, wechsle die Handtücher und fülle das Wasser wieder auf.",
+              vi: "Cảm ơn bà Becker ạ! Tôi sẽ mở thông gió phòng một chút, thay khăn tắm mới và bổ sung nước uống ạ.",
+              en: "Thank you, Mrs. Becker! I'll air out the room briefly, change the towels, and refill the water.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp buồng phòng)",
+              name_en: "Colleague (Housekeeping)",
+              de: "Đức, Zimmer 205 nebenan ist ein Abreisezimmer. Ich habe schon die Bettwäsche abgezogen. Denke im Bad an das rote Tuch für die Toilette!",
+              vi: "Đức ơi, phòng 205 bên cạnh là phòng khách trả đấy. Mình đã tháo ga gối bẩn ra rồi. Trong phòng tắm nhớ dùng khăn màu đỏ riêng cho bồn cầu nhé!",
+              en: "Đức, Room 205 next door is a departure room. I've already stripped the bed linen. Remember the red cloth for the toilet in the bathroom!",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên buồng phòng)",
+              name_en: "Đức (Housekeeping)",
+              de: "Alles klar! Ich beziehe zuerst die Betten frisch und desinfiziere danach das komplette Badezimmer.",
+              vi: "Rõ rồi! Mình bọc ga gối sạch mới trước rồi sau đó khử khuẩn toàn bộ phòng tắm nhé.",
+              en: "All clear! I'll put fresh linen on the beds first and then disinfect the entire bathroom.",
+            },
+          ],
+        },
+        {
+          id: 4,
+          tab_vi: "Hội thoại 4: Đón khách & Gọi món",
+          tab_en: "Dialogue 4: Greeting & Ordering",
+          title_vi:
+            "Hội thoại 4: Đón khách tại Nhà hàng & Ghi nhận gọi món (Im Restaurant)",
+          title_en:
+            "Dialogue 4: Greeting Guests at the Restaurant & Taking Orders (Im Restaurant)",
+          context_vi:
+            "Buổi tối tại nhà hàng Đức, nhân viên phục vụ (Đức) đón khách vào bàn, giới thiệu thực đơn và hỏi lưu ý dị ứng.",
+          context_en:
+            "Evening in a German restaurant: server Đức seats guests, introduces the menu, and asks about allergies.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên phục vụ)",
+              name_en: "Đức (Server)",
+              de: "Guten Abend und herzlich willkommen! Haben Sie einen Tisch reserviert?",
+              vi: "Chào buổi tối và chào mừng quý khách! Quý khách có đặt bàn trước không ạ?",
+              en: "Good evening and welcome! Have you reserved a table?",
+            },
+            {
+              role: "partner",
+              name_vi: "Gast (Khách hàng)",
+              name_en: "Gast (Guest)",
+              de: "Guten Abend! Wir haben keinen Tisch reserviert — haben Sie noch einen Platz für zwei Personen?",
+              vi: "Chào buổi tối! Chúng tôi chưa đặt bàn trước — nhà hàng còn bàn cho hai người không anh?",
+              en: "Good evening! We haven't reserved a table—do you still have a spot for two people?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên phục vụ)",
+              name_en: "Đức (Server)",
+              de: "Ja, sehr gerne! Folgen Sie mir bitte zu diesem gemütlichen Tisch am Fenster. Hier sind die Speise- und Getränkekarten. Darf ich Ihnen vorab etwas zu trinken bringen?",
+              vi: "Dạ có ạ! Mời quý khách đi theo tôi tới chiếc bàn ấm cúng cạnh cửa sổ này. Đây là thực đơn đồ ăn và đồ uống. Tôi có thể mang trước đồ uống cho quý khách không ạ?",
+              en: "Yes, gladly! Please follow me to this cozy table by the window. Here are the food and drink menus. May I bring you something to drink first?",
+            },
+            {
+              role: "partner",
+              name_vi: "Gast (Khách hàng)",
+              name_en: "Gast (Guest)",
+              de: "Gerne eine große Flasche Mineralwasser mit Kohlensäure und ein frisch gezapftes Pils. Als Hauptgericht nehmen wir zweimal Wiener Schnitzel mit Bratkartoffeln.",
+              vi: "Cho chúng tôi một chai nước khoáng lớn có ga và một ly bia tươi Pils mới rót. Món chính chúng tôi gọi hai phần Schnitzel kiểu Viên kèm khoai tây áp chảo.",
+              en: "A large bottle of sparkling mineral water and a freshly tapped Pils, please. For the main course, we'll have two Wiener Schnitzels with pan-fried potatoes.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên phục vụ)",
+              name_en: "Đức (Server)",
+              de: "Sehr gute Wahl! Haben Sie noch besondere Wünsche oder Allergien, auf die die Küche achten soll?",
+              vi: "Lựa chọn rất tuyệt ạ! Quý khách có yêu cầu riêng hay dị ứng thực phẩm nào để nhà bếp lưu ý không ạ?",
+              en: "Very good choice! Do you have any special requests or allergies that the kitchen should watch out for?",
+            },
+            {
+              role: "partner",
+              name_vi: "Gast (Khách hàng)",
+              name_en: "Gast (Guest)",
+              de: "Nein, alles bestens, vielen Dank!",
+              vi: "Không, mọi thứ đều ổn, cảm ơn anh nhiều!",
+              en: "No, everything's great, thank you!",
+            },
+          ],
+        },
+        {
+          id: 5,
+          tab_vi: "Hội thoại 5: Thanh toán & Tiền boa",
+          tab_en: "Dialogue 5: Billing & Tipping",
+          title_vi:
+            "Hội thoại 5: Thanh toán tại Nhà hàng ('Zusammen oder getrennt?')",
+          title_en:
+            "Dialogue 5: Paying at the Restaurant ('Zusammen oder getrennt?')",
+          context_vi:
+            "Sau bữa tối, hai vị khách gọi thanh toán và Đức thực hiện quy trình tính tiền chuẩn mực tại nhà hàng Đức.",
+          context_en:
+            "After dinner, two guests ask for the bill and Đức handles payment according to German restaurant practice.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Gast (Khách hàng)",
+              name_en: "Gast (Guest)",
+              de: "Entschuldigung, wir möchten gerne bezahlen!",
+              vi: "Xin lỗi, chúng tôi muốn thanh toán ạ!",
+              en: "Excuse me, we would like to pay!",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên phục vụ)",
+              name_en: "Đức (Server)",
+              de: "Sehr gerne! Hat es Ihnen gut geschmeckt?",
+              vi: "Vâng ạ! Quý khách dùng bữa có ngon miệng không ạ?",
+              en: "With pleasure! Did you enjoy your meal?",
+            },
+            {
+              role: "partner",
+              name_vi: "Gast (Khách hàng)",
+              name_en: "Gast (Guest)",
+              de: "Ja, das Schnitzel war wunderbar knusprig und der Service sehr freundlich.",
+              vi: "Có, món Schnitzel giòn ngon tuyệt vời và phục vụ rất thân thiện.",
+              en: "Yes, the schnitzel was wonderfully crispy and the service very friendly.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên phục vụ)",
+              name_en: "Đức (Server)",
+              de: "Das freut mich sehr! Möchten Sie zusammen oder getrennt bezahlen?",
+              vi: "Tôi rất vui khi nghe vậy ạ! Quý khách muốn thanh toán chung hay tách riêng từng người ạ?",
+              en: "I'm very glad to hear that! Would you like to pay together or separately?",
+            },
+            {
+              role: "partner",
+              name_vi: "Gast (Khách hàng)",
+              name_en: "Gast (Guest)",
+              de: "Bitte getrennt. Ich hatte ein Schnitzel und das Pils — machen Sie bitte 28 Euro inklusive Trinkgeld!",
+              vi: "Tách riêng giúp tôi. Tôi dùng một Schnitzel và bia Pils — anh tính tròn 28 Euro bao gồm cả tiền boa nhé!",
+              en: "Separately please. I had a schnitzel and the Pils—make it 28 euros including tip, please!",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên phục vụ)",
+              name_en: "Đức (Server)",
+              de: "Herzlichen Dank für das großzügige Trinkgeld! Hier ist Ihr Beleg. Ich wünsche Ihnen noch einen schönen Abend!",
+              vi: "Chân thành cảm ơn khoản tiền boa hào phóng của quý khách! Đây là biên lai của quý khách ạ. Chúc quý khách một buổi tối thật vui vẻ!",
+              en: "Many thanks for the generous tip! Here is your receipt. I wish you a pleasant rest of the evening!",
+            },
+          ],
+        },
+        {
+          id: 6,
+          tab_vi: "Hội thoại 6: Xử lý phàn nàn",
+          tab_en: "Dialogue 6: Handling Complaints",
+          title_vi:
+            "Hội thoại 6: Xử lý phàn nàn của khách một cách chuyên nghiệp (Reklamationsmanagement)",
+          title_en:
+            "Dialogue 6: Handling a Guest Complaint Professionally (Reklamationsmanagement)",
+          context_vi:
+            "Khách phản ánh món ăn mang ra hơi nguội, Đức lắng nghe lịch sự, xin lỗi và xử lý nhanh gọn khiến khách hài lòng.",
+          context_en:
+            "A guest mentions their soup arrived lukewarm; Đức listens politely, apologizes, and resolves it promptly.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Gast (Khách hàng)",
+              name_en: "Gast (Guest)",
+              de: "Entschuldigung, ich muss leider etwas sagen: Meine Suppe ist nur lauwarm und nicht richtig heiß.",
+              vi: "Xin lỗi, tiếc là tôi phải góp ý một chút: Món súp của tôi chỉ âm ấm chứ không nóng hổi.",
+              en: "Excuse me, I unfortunately have to say something: my soup is only lukewarm and not really hot.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên phục vụ)",
+              name_en: "Đức (Server)",
+              de: "Oh, das tut mir außerordentlich leid! Bitte entschuldigen Sie vielmals, das darf natürlich nicht passieren.",
+              vi: "Ôi, tôi vô cùng xin lỗi quý khách! Thành thật mong quý khách thông cảm, điều này tất nhiên không được phép xảy ra ạ.",
+              en: "Oh, I'm extraordinarily sorry! Please excuse me sincerely; of course that must not happen.",
+            },
+            {
+              role: "partner",
+              name_vi: "Gast (Khách hàng)",
+              name_en: "Gast (Guest)",
+              de: "Danke, es wäre schön, wenn ich eine heiße Suppe bekommen könnte.",
+              vi: "Cảm ơn anh, nếu tôi được đổi một bát súp nóng thì tốt quá.",
+              en: "Thanks, it would be nice if I could get a hot soup.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên phục vụ)",
+              name_en: "Đức (Server)",
+              de: "Selbstverständlich! Ich bringe die Suppe sofort zurück in die Küche und serviere Ihnen in zwei Minuten eine frisch aufgekochte, heiße Portion. Als kleine Entschuldigung laden wir Sie danach gerne auf einen Espresso aufs Haus ein!",
+              vi: "Tất nhiên rồi ạ! Tôi mang bát súp này vào bếp ngay và sẽ phục vụ quý khách một phần súp mới nấu nóng hổi trong hai phút nữa. Như một lời xin lỗi nhỏ, sau bữa ăn nhà hàng xin trân trọng mời quý khách một ly Espresso miễn phí ạ!",
+              en: "Of course! I'll take the soup right back to the kitchen and serve you a freshly heated hot portion in two minutes. As a small apology, we'll gladly invite you to an espresso on the house afterward!",
+            },
+            {
+              role: "partner",
+              name_vi: "Gast (Khách hàng)",
+              name_en: "Gast (Guest)",
+              de: "Vielen Dank für die schnelle und freundliche Reaktion!",
+              vi: "Cảm ơn anh rất nhiều vì phản hồi nhanh chóng và lịch sự!",
+              en: "Thank you very much for the quick and friendly response!",
+            },
+          ],
+        },
+      ];
+
+      // =========================================================================
+      // 3. APPLICATION STATE & PERSISTENCE (localStorage)
+      // =========================================================================
+      const state = {
+        lang: localStorage.getItem("fd_lang") || "vi",
+        activeTab: "vocab",
+        globalVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_globalVoice"),
+          "piper_hochdeutsch",
+        ),
+        workerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_workerVoice"),
+          "piper_hochdeutsch",
+        ),
+        partnerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_partnerVoice"),
+          "piper_rostock",
+        ),
+        speed: parseFloat(localStorage.getItem("fd_speed")) || 1.0,
+        vocabCategory: "all",
+        vocabQuery: "",
+        phraseCategory: "all",
+        activeDialogueId: 1,
+        fcCategory: "all",
+        fcDeck: [...VOCAB_DATA],
+        fcIndex: 0,
+        fcFlipped: false,
+        masteredIds: JSON.parse(
+          localStorage.getItem("fd_mastered_nhahangkhachsan") || "[]",
+        ),
+        voiceDrawerOpen: false,
+      };
+
+      const audioCtrl = {
+        element: null,
+        activeBtnId: null,
+        isFullDialoguePlaying: false,
+        dialogueStopFlag: false,
+        toastTimer: null,
+      };
+
+      function t(key) {
+        return (
+          (I18N[state.lang] && I18N[state.lang][key]) || I18N.vi[key] || key
+        );
+      }
+
+      function getVoiceObj(voiceId) {
+        return VOICE_CATALOG.find((v) => v.id === voiceId) || VOICE_CATALOG[0];
+      }
+
+      function showToast(msg) {
+        const box = document.getElementById("statusToast");
+        const txt = document.getElementById("statusToastText");
+        if (!box || !txt) return;
+        txt.textContent = msg;
+        box.classList.remove("hidden");
+        clearTimeout(audioCtrl.toastTimer);
+        audioCtrl.toastTimer = setTimeout(() => {
+          box.classList.add("hidden");
+        }, 3000);
+      }
+
+      // =========================================================================
+      // 4. AUDIO ENGINE WITH FALLBACK (audio/nhahangkhachsan/<voice>/<file>)
+      // =========================================================================
+      function syncPlayingButtonUI() {
+        document.querySelectorAll("[data-audio-btn]").forEach((btn) => {
+          const id = btn.getAttribute("data-audio-btn");
+          const isCurrent = audioCtrl.activeBtnId === id;
+          const iconPlay = btn.querySelector(".icon-play");
+          const iconStop = btn.querySelector(".icon-stop");
+          if (isCurrent) {
+            btn.classList.add("btn-playing");
+            if (iconPlay) iconPlay.classList.add("hidden");
+            if (iconStop) iconStop.classList.remove("hidden");
+          } else {
+            btn.classList.remove("btn-playing");
+            if (iconPlay) iconPlay.classList.remove("hidden");
+            if (iconStop) iconStop.classList.add("hidden");
+          }
+        });
+
+        const fullBtn = document.getElementById("playFullDialogueBtn");
+        if (fullBtn) {
+          if (audioCtrl.isFullDialoguePlaying) {
+            fullBtn.classList.add("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>■</span> <span>${t("stopFullDialogue")}</span>`;
+          } else {
+            fullBtn.classList.remove("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.add("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>▶</span> <span>${t("playFullDialogue")}</span>`;
+          }
+        }
+
+        document.querySelectorAll("[data-preview-btn]").forEach((btn) => {
+          const isPrev = audioCtrl.activeBtnId === "preview_sample";
+          if (isPrev) {
+            btn.classList.add("bg-red-600", "text-white");
+            btn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            btn.innerHTML = `<span>■</span> <span>${t("stopPreviewBtn")}</span>`;
+          } else {
+            btn.classList.remove("bg-red-600");
+            btn.classList.add("bg-blue-600", "hover:bg-blue-700", "text-white");
+            btn.innerHTML = `<span>🔊</span> <span>${t("previewVoiceBtn")}</span>`;
+          }
+        });
+      }
+
+      function stopAllAudio(resetDialogue = true) {
+        if (resetDialogue) {
+          audioCtrl.dialogueStopFlag = true;
+          audioCtrl.isFullDialoguePlaying = false;
+        }
+        if (audioCtrl.element) {
+          audioCtrl.element.pause();
+          audioCtrl.element.src = "";
+          audioCtrl.element = null;
+        }
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+        }
+        audioCtrl.activeBtnId = null;
+        document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+          el.classList.remove(
+            "dialogue-line-active",
+            "ring-2",
+            "ring-blue-500",
+            "bg-blue-50/70",
+          );
+        });
+        syncPlayingButtonUI();
+      }
+
+      function playAudioWithFallback(
+        fileName,
+        fallbackText,
+        voiceId,
+        btnId,
+        onEndedCallback = null,
+      ) {
+        if (audioCtrl.activeBtnId === btnId) {
+          stopAllAudio(true);
+          return;
+        }
+
+        stopAllAudio(false);
+        audioCtrl.activeBtnId = btnId;
+        syncPlayingButtonUI();
+
+        const chain = [voiceId, "piper_hochdeutsch", "edge_hochdeutsch"].filter(
+          (v, idx, arr) => v && arr.indexOf(v) === idx,
+        );
+        let attemptIdx = 0;
+
+        const finishPlayback = () => {
+          audioCtrl.activeBtnId = null;
+          audioCtrl.element = null;
+          syncPlayingButtonUI();
+          if (onEndedCallback) onEndedCallback();
+        };
+
+        const tryNextSource = () => {
+          if (attemptIdx >= chain.length) {
+            if ("speechSynthesis" in window && fallbackText) {
+              const utter = new SpeechSynthesisUtterance(fallbackText);
+              utter.lang = "de-DE";
+              utter.rate = state.speed;
+              utter.onend = finishPlayback;
+              utter.onerror = finishPlayback;
+              window.speechSynthesis.speak(utter);
+            } else {
+              finishPlayback();
+            }
+            return;
+          }
+
+          const currentVoice = chain[attemptIdx];
+          const src = `${AUDIO_BASE_PATH}/${currentVoice}/${fileName}`;
+          const audio = new Audio(src);
+          audio.playbackRate = state.speed;
+          audioCtrl.element = audio;
+
+          audio.onended = finishPlayback;
+          audio.onerror = () => {
+            if (attemptIdx === 0 && currentVoice !== "piper_hochdeutsch") {
+              showToast(t("fallbackNotice"));
+            }
+            attemptIdx++;
+            tryNextSource();
+          };
+
+          audio.play().catch(() => {
+            attemptIdx++;
+            tryNextSource();
+          });
+        };
+
+        tryNextSource();
+      }
+
+      async function toggleFullDialogue() {
+        if (audioCtrl.isFullDialoguePlaying) {
+          stopAllAudio(true);
+          return;
+        }
+        const dlg = DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId);
+        if (!dlg) return;
+
+        stopAllAudio(true);
+        audioCtrl.isFullDialoguePlaying = true;
+        audioCtrl.dialogueStopFlag = false;
+        syncPlayingButtonUI();
+
+        for (let i = 0; i < dlg.lines.length; i++) {
+          if (audioCtrl.dialogueStopFlag) break;
+          const line = dlg.lines[i];
+          const lineNum = i + 1;
+          const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+          const voice =
+            line.role === "worker" ? state.workerVoice : state.partnerVoice;
+
+          document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+            el.classList.remove(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+          });
+          const rowEl = document.getElementById(`row_${btnId}`);
+          if (rowEl) {
+            rowEl.classList.add(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+            rowEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+
+          await new Promise((resolve) => {
+            playAudioWithFallback(
+              `dialog_${dlg.id}_line_${lineNum}.mp3`,
+              line.de,
+              voice,
+              btnId,
+              resolve,
+            );
+          });
+
+          if (!audioCtrl.dialogueStopFlag && i < dlg.lines.length - 1) {
+            await new Promise((r) => setTimeout(r, 350));
+          }
+        }
+
+        stopAllAudio(true);
+      }
+
+      // =========================================================================
+      // 5. VOICE DRAWER / POPOVER CONTROLS
+      // =========================================================================
+      function buildVoiceOptionsHTML(selectedId) {
+        const groups = {};
+        VOICE_CATALOG.forEach((v) => {
+          const g = state.lang === "en" ? v.group_en : v.group_vi;
+          if (!groups[g]) groups[g] = [];
+          groups[g].push(v);
+        });
+        return Object.entries(groups)
+          .map(
+            ([groupLabel, items]) => `
+        <optgroup label="${groupLabel}">
+          ${items
+            .map(
+              (v) => `
+            <option value="${v.id}" ${v.id === selectedId ? "selected" : ""}>
+              ${state.lang === "en" ? v.label_en : v.label_vi}
+            </option>
+          `,
+            )
+            .join("")}
+        </optgroup>
+      `,
+          )
+          .join("");
+      }
+
+      function renderVoiceForms() {
+        const formHTML = `
+        <div class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("selectVoiceLabel")}</label>
+            <select onchange="setGlobalVoice(this.value)"
+              class="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              ${buildVoiceOptionsHTML(state.globalVoice)}
+            </select>
+          </div>
+
+          <button type="button" data-preview-btn onclick="playAudioWithFallback('sample.mp3', 'Guten Tag und herzlich willkommen in unserem Hotel!', state.globalVoice, 'preview_sample')"
+            class="w-full h-10 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer">
+            <span>🔊</span> <span>${t("previewVoiceBtn")}</span>
+          </button>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("speedLabel")}</label>
+            <div class="grid grid-cols-3 gap-1.5 bg-slate-100 p-1 rounded-xl">
+              ${[
+                { val: 0.75, label: t("speedSlow") },
+                { val: 1.0, label: t("speedNormal") },
+                { val: 1.25, label: t("speedFast") },
+              ]
+                .map(
+                  (sp) => `
+                <button type="button" onclick="setPlaybackSpeed(${sp.val})"
+                  class="h-9 rounded-lg text-xs font-bold transition cursor-pointer ${state.speed === sp.val ? "bg-amber-500 text-slate-950 shadow-xs" : "text-slate-600 hover:text-slate-900"}">
+                  ${sp.label}
+                </button>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+        </div>
+      `;
+
+        const dForm = document.getElementById("desktopVoiceForm");
+        const mForm = document.getElementById("mobileVoiceForm");
+        if (dForm) dForm.innerHTML = formHTML;
+        if (mForm) mForm.innerHTML = formHTML;
+
+        const vObj = getVoiceObj(state.globalVoice);
+        const shortName = state.lang === "en" ? vObj.short_en : vObj.short_vi;
+        const pill = document.getElementById("voicePillLabel");
+        if (pill) pill.textContent = `${shortName} • ${state.speed}x`;
+
+        const wSel = document.getElementById("workerVoiceSelect");
+        const pSel = document.getElementById("partnerVoiceSelect");
+        if (wSel) wSel.innerHTML = buildVoiceOptionsHTML(state.workerVoice);
+        if (pSel) pSel.innerHTML = buildVoiceOptionsHTML(state.partnerVoice);
+
+        syncPlayingButtonUI();
+      }
+
+      function toggleVoiceDrawer() {
+        state.voiceDrawerOpen = !state.voiceDrawerOpen;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+
+        if (state.voiceDrawerOpen) {
+          renderVoiceForms();
+          popover.classList.remove("md:hidden");
+          popover.classList.add("md:block");
+          sheet.classList.remove("hidden");
+          backdrop.classList.remove("hidden");
+        } else {
+          closeVoiceDrawer();
+        }
+      }
+
+      function closeVoiceDrawer() {
+        state.voiceDrawerOpen = false;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+        popover.classList.add("md:hidden");
+        popover.classList.remove("md:block");
+        sheet.classList.add("hidden");
+        backdrop.classList.add("hidden");
+      }
+
+      document.addEventListener("click", (e) => {
+        if (!state.voiceDrawerOpen) return;
+        const popover = document.getElementById("desktopVoicePopover");
+        const trigger = document.getElementById("voiceTriggerBtn");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        if (
+          !popover.contains(e.target) &&
+          !trigger.contains(e.target) &&
+          !sheet.contains(e.target)
+        ) {
+          closeVoiceDrawer();
+        }
+      });
+
+      function setGlobalVoice(voiceId) {
+        state.globalVoice = voiceId;
+        localStorage.setItem("fd_globalVoice", voiceId);
+        renderVoiceForms();
+      }
+
+      function updateDialogueVoice(role, voiceId) {
+        if (role === "worker") {
+          state.workerVoice = voiceId;
+          localStorage.setItem("fd_workerVoice", voiceId);
+        } else {
+          state.partnerVoice = voiceId;
+          localStorage.setItem("fd_partnerVoice", voiceId);
+        }
+      }
+
+      function setPlaybackSpeed(newSpeed) {
+        state.speed = newSpeed;
+        localStorage.setItem("fd_speed", String(newSpeed));
+        if (audioCtrl.element) {
+          audioCtrl.element.playbackRate = newSpeed;
+        }
+        renderVoiceForms();
+      }
+
+      // =========================================================================
+      // 6. SMART NORMALIZATION & RENDERERS (100% VI <-> EN)
+      // =========================================================================
+      function normalizeSearch(str) {
+        return (str || "")
+          .toLowerCase()
+          .replace(/ä/g, "a")
+          .replace(/ö/g, "o")
+          .replace(/ü/g, "u")
+          .replace(/ß/g, "ss")
+          .normalize("NFD")
+          .replace(/[̀-ͯ]/g, "")
+          .replace(/đ/g, "d");
+      }
+
+      function renderNavigation() {
+        const tabs = [
+          {
+            id: "vocab",
+            dLabel: `${t("nav_vocab_desktop")} (${VOCAB_DATA.length})`,
+            mLabel: t("nav_vocab_mobile"),
+            icon: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25",
+          },
+          {
+            id: "phrases",
+            dLabel: `${t("nav_phrases_desktop")} (${PHRASES_DATA.length})`,
+            mLabel: t("nav_phrases_mobile"),
+            icon: "M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z",
+          },
+          {
+            id: "dialogues",
+            dLabel: `${t("nav_dialogues_desktop")} (${DIALOGUES_DATA.length})`,
+            mLabel: t("nav_dialogues_mobile"),
+            icon: "M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155",
+          },
+          {
+            id: "flashcards",
+            dLabel: t("nav_flashcards_desktop"),
+            mLabel: t("nav_flashcards_mobile"),
+            icon: "M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3",
+          },
+        ];
+
+        document.getElementById("desktopNav").innerHTML = tabs
+          .map(
+            (tab) => `
+        <button type="button" onclick="switchTab('${tab.id}')"
+          class="px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${state.activeTab === tab.id ? "bg-white text-slate-900 shadow-xs" : "text-slate-300 hover:text-white hover:bg-slate-700/60"}">
+          ${tab.dLabel}
+        </button>
+      `,
+          )
+          .join("");
+
+        document.getElementById("mobileNavGrid").innerHTML = tabs
+          .map((tab) => {
+            const active = state.activeTab === tab.id;
+            return `
+          <button type="button" onclick="switchTab('${tab.id}')"
+            class="flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition cursor-pointer ${active ? "text-blue-600" : "text-slate-500 hover:text-slate-800"}">
+            <svg class="w-5 h-5 ${active ? "stroke-[2.3]" : "stroke-[1.8]"}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="${tab.icon}" />
+            </svg>
+            <span>${tab.mLabel}</span>
+          </button>
+        `;
+          })
+          .join("");
+      }
+
+      function switchTab(tabId) {
+        state.activeTab = tabId;
+        ["vocab", "phrases", "dialogues", "flashcards"].forEach((id) => {
+          const el = document.getElementById(`section-${id}`);
+          if (el) el.classList.toggle("hidden", id !== tabId);
+        });
+        renderNavigation();
+        if (tabId === "flashcards") renderFlashcard();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function speakBtnHTML(btnId, sizeClass = "w-11 h-11") {
+        return `
+        <button type="button" data-audio-btn="${btnId}"
+          class="${sizeClass} shrink-0 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200/80 flex items-center justify-center transition cursor-pointer active:scale-95"
+          aria-label="Play audio">
+          <svg class="icon-play w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+          </svg>
+          <span class="icon-stop hidden text-xs font-extrabold">■</span>
+        </button>
+      `;
+      }
+
+      function renderVocab() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("cat_all")} (${VOCAB_DATA.length})` },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+
+        document.getElementById("vocabCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setVocabCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.vocabCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const q = normalizeSearch(state.vocabQuery);
+        const filtered = VOCAB_DATA.filter((item) => {
+          const matchCat =
+            state.vocabCategory === "all" || item.cat === state.vocabCategory;
+          if (!matchCat) return false;
+          if (!q) return true;
+          const haystack = normalizeSearch(
+            `${item.de} ${item.vi} ${item.en} ${item.rel_vi} ${item.rel_en} ${item.ex_de} ${item.ex_vi} ${item.ex_en}`,
+          );
+          return haystack.includes(q);
+        });
+
+        const grid = document.getElementById("vocabGrid");
+        if (filtered.length === 0) {
+          grid.innerHTML = `<div class="col-span-full bg-white rounded-2xl p-8 text-center text-sm text-slate-500 border border-slate-200">${t("noResults")}</div>`;
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map((item) => {
+            const typeStr = state.lang === "en" ? item.type_en : item.type_vi;
+            const meaningStr = state.lang === "en" ? item.en : item.vi;
+            const relStr = state.lang === "en" ? item.rel_en : item.rel_vi;
+            const exTrans = state.lang === "en" ? item.ex_en : item.ex_vi;
+            const wordBtnId = `vocab_${item.id}_word`;
+            const exBtnId = `vocab_${item.id}_ex`;
+
+            return `
+          <article class="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex flex-col justify-between gap-3.5">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">${item.de}</h2>
+                    <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-100">${typeStr}</span>
+                  </div>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">${item.ipa}</p>
+                  <p class="text-sm sm:text-base font-bold text-emerald-700 mt-1.5">${meaningStr}</p>
+                </div>
+                <div onclick="playAudioWithFallback('vocab_${item.id}_word.mp3', '${item.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="mt-2.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                <span class="font-semibold text-slate-700">${t("relatedPrefix")}</span> ${relStr}
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-indigo-50/70 border border-indigo-200/60 flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <p class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">${item.ex_de}</p>
+                <p class="text-xs text-slate-600 italic mt-0.5 leading-snug">${exTrans}</p>
+              </div>
+              <div onclick="playAudioWithFallback('vocab_${item.id}_ex.mp3', '${item.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')">
+                ${speakBtnHTML(exBtnId, "w-11 h-11 bg-indigo-100/80 hover:bg-indigo-200/80 text-indigo-900 border-indigo-200")}
+              </div>
+            </div>
+          </article>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setVocabCategory(cat) {
+        state.vocabCategory = cat;
+        renderVocab();
+      }
+
+      function handleVocabSearch(val) {
+        state.vocabQuery = val;
+        const clearBtn = document.getElementById("clearSearchBtn");
+        if (clearBtn) {
+          clearBtn.classList.toggle("hidden", !val);
+          clearBtn.classList.toggle("flex", Boolean(val));
+        }
+        renderVocab();
+      }
+
+      function clearVocabSearch() {
+        const input = document.getElementById("vocabSearchInput");
+        if (input) input.value = "";
+        handleVocabSearch("");
+      }
+
+      function renderPhrases() {
+        const countPCat = (cat) =>
+          PHRASES_DATA.filter((p) => p.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("pcat_all")} (${PHRASES_DATA.length})` },
+          { id: "2.1", label: `${t("pcat_2_1")} (${countPCat("2.1")})` },
+          { id: "2.2", label: `${t("pcat_2_2")} (${countPCat("2.2")})` },
+          { id: "2.3", label: `${t("pcat_2_3")} (${countPCat("2.3")})` },
+          { id: "2.4", label: `${t("pcat_2_4")} (${countPCat("2.4")})` },
+        ];
+
+        document.getElementById("phraseCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setPhraseCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.phraseCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const filtered = PHRASES_DATA.filter(
+          (p) =>
+            state.phraseCategory === "all" || p.cat === state.phraseCategory,
+        );
+        document.getElementById("phrasesList").innerHTML = filtered
+          .map((p) => {
+            const trans = state.lang === "en" ? p.en : p.vi;
+            const btnId = `phrase_${p.id}`;
+            return `
+          <div class="bg-white rounded-2xl p-4 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex items-center justify-between gap-3.5">
+            <div class="min-w-0">
+              <span class="inline-block text-[11px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md mb-1">${p.cat}</span>
+              <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${p.de}</p>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">${trans}</p>
+            </div>
+            <div onclick="playAudioWithFallback('phrase_${p.id}.mp3', '${p.de.replace(/'/g, "\'")}', state.globalVoice, '${btnId}')">
+              ${speakBtnHTML(btnId, "w-11 h-11")}
+            </div>
+          </div>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setPhraseCategory(cat) {
+        state.phraseCategory = cat;
+        renderPhrases();
+      }
+
+      function renderDialogues() {
+        document.getElementById("dialogueTabs").innerHTML = DIALOGUES_DATA.map(
+          (d) => {
+            const label = state.lang === "en" ? d.tab_en : d.tab_vi;
+            const active = d.id === state.activeDialogueId;
+            return `
+          <button type="button" onclick="selectDialogue(${d.id})"
+            class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition cursor-pointer ${active ? "bg-slate-900 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+            ${label}
+          </button>
+        `;
+          },
+        ).join("");
+
+        const dlg =
+          DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId) ||
+          DIALOGUES_DATA[0];
+        const title = state.lang === "en" ? dlg.title_en : dlg.title_vi;
+        const context = state.lang === "en" ? dlg.context_en : dlg.context_vi;
+
+        document.getElementById("dialogueContainer").innerHTML = `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-slate-900">${title}</h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">${context}</p>
+          </div>
+          <button id="playFullDialogueBtn" type="button" onclick="toggleFullDialogue()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 shadow-xs transition cursor-pointer">
+            <span>▶</span> <span>${t("playFullDialogue")}</span>
+          </button>
+        </div>
+
+        <div class="space-y-3">
+          ${dlg.lines
+            .map((line, idx) => {
+              const lineNum = idx + 1;
+              const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+              const speakerName =
+                state.lang === "en" ? line.name_en : line.name_vi;
+              const lineTrans = state.lang === "en" ? line.en : line.vi;
+              const isWorker = line.role === "worker";
+              const voiceForLine = isWorker
+                ? state.workerVoice
+                : state.partnerVoice;
+
+              return `
+              <div id="row_${btnId}" class="p-3.5 sm:p-4 rounded-2xl border transition flex items-start justify-between gap-3 ${isWorker ? "bg-slate-50/90 border-slate-200/80" : "bg-indigo-50/50 border-indigo-200/60"}">
+                <div class="min-w-0">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold mb-1 ${isWorker ? "bg-blue-100 text-blue-800" : "bg-indigo-100 text-indigo-900"}">
+                    ${speakerName}
+                  </span>
+                  <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${line.de}</p>
+                  <p class="text-xs sm:text-sm text-slate-600 mt-1">${lineTrans}</p>
+                </div>
+                <div onclick="playAudioWithFallback('dialog_${dlg.id}_line_${lineNum}.mp3', '${line.de.replace(/'/g, "\'")}', '${voiceForLine}', '${btnId}')">
+                  ${speakBtnHTML(btnId, "w-11 h-11")}
+                </div>
+              </div>
+            `;
+            })
+            .join("")}
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function selectDialogue(id) {
+        stopAllAudio(true);
+        state.activeDialogueId = id;
+        renderDialogues();
+      }
+
+      function renderFlashcardControls() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cardUnit = state.lang === "en" ? "cards" : "thẻ";
+        const opts = [
+          {
+            id: "all",
+            label: `${t("fcAllCategories")} (${VOCAB_DATA.length} ${cardUnit})`,
+          },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+        document.getElementById("fcCategorySelect").innerHTML = opts
+          .map(
+            (o) => `
+        <option value="${o.id}" ${o.id === state.fcCategory ? "selected" : ""}>${o.label}</option>
+      `,
+          )
+          .join("");
+      }
+
+      function renderFlashcard() {
+        renderFlashcardControls();
+        if (state.fcDeck.length === 0) state.fcDeck = [...VOCAB_DATA];
+        if (state.fcIndex >= state.fcDeck.length) state.fcIndex = 0;
+
+        const card = state.fcDeck[state.fcIndex];
+        const typeStr = state.lang === "en" ? card.type_en : card.type_vi;
+        const meaningStr = state.lang === "en" ? card.en : card.vi;
+        const relStr = state.lang === "en" ? card.rel_en : card.rel_vi;
+        const exTrans = state.lang === "en" ? card.ex_en : card.ex_vi;
+        const isMastered = state.masteredIds.includes(card.id);
+
+        document.getElementById("fcCounter").textContent =
+          `${state.fcIndex + 1} / ${state.fcDeck.length}`;
+
+        const masterBtn = document.getElementById("fcMasterBtn");
+        if (isMastered) {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-bold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>✓</span> <span>${t("fcMastered")}</span>`;
+        } else {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-semibold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>○</span> <span>${t("fcMarkMastered")}</span>`;
+        }
+
+        const wordBtnId = `fc_word_${card.id}`;
+        const exBtnId = `fc_ex_${card.id}`;
+
+        document.getElementById("flashcardStage").innerHTML = `
+        <div onclick="flipFlashcard()" class="relative w-full min-h-[310px] sm:min-h-[340px] cursor-pointer select-none">
+          <div class="w-full min-h-[310px] sm:min-h-[340px] transform-style-3d ${state.fcFlipped ? "rotate-y-180" : ""}">
+            
+            <!-- FRONT -->
+            <div class="absolute inset-0 backface-hidden bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 flex flex-col items-center justify-between text-center">
+              <div class="w-full flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-indigo-50 text-indigo-900">${typeStr}</span>
+                <div onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="my-auto py-4">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${card.de}</h2>
+                <p class="text-sm font-mono text-slate-400 mt-2">${card.ipa}</p>
+              </div>
+
+              <p class="text-xs font-medium text-slate-400">${t("fcFrontHint")}</p>
+            </div>
+
+            <!-- BACK -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-800 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <p class="text-xs font-semibold text-amber-400 uppercase tracking-wider">${card.de}</p>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-1">${meaningStr}</h3>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')"
+                    class="h-10 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shrink-0 cursor-pointer">
+                    <span>🔊</span> <span>${t("fcWordBtn")}</span>
+                  </button>
+                </div>
+
+                <p class="text-xs text-slate-300 bg-slate-800/80 p-3 rounded-xl mt-3 leading-relaxed">
+                  <span class="font-semibold text-amber-300">${t("relatedPrefix")}</span> ${relStr}
+                </p>
+
+                <div class="mt-3 p-3.5 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="text-xs sm:text-sm font-semibold text-white leading-snug">${card.ex_de}</p>
+                    <p class="text-xs text-slate-300 italic mt-1">${exTrans}</p>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_ex.mp3', '${card.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')"
+                    class="w-11 h-11 shrink-0 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center justify-center font-bold cursor-pointer">
+                    🔊
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-center text-xs text-slate-400 mt-3">${t("fcBackHint")}</p>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function flipFlashcard() {
+        state.fcFlipped = !state.fcFlipped;
+        renderFlashcard();
+      }
+
+      function nextFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex = (state.fcIndex + 1) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function prevFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex =
+          (state.fcIndex - 1 + state.fcDeck.length) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function setFlashcardCategory(cat) {
+        state.fcCategory = cat;
+        state.fcFlipped = false;
+        state.fcIndex = 0;
+        state.fcDeck =
+          cat === "all"
+            ? [...VOCAB_DATA]
+            : VOCAB_DATA.filter((v) => v.cat === cat);
+        renderFlashcard();
+      }
+
+      function shuffleFlashcards() {
+        for (let i = state.fcDeck.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [state.fcDeck[i], state.fcDeck[j]] = [
+            state.fcDeck[j],
+            state.fcDeck[i],
+          ];
+        }
+        state.fcIndex = 0;
+        state.fcFlipped = false;
+        renderFlashcard();
+      }
+
+      function toggleFlashcardMastered() {
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+        const idx = state.masteredIds.indexOf(card.id);
+        if (idx >= 0) {
+          state.masteredIds.splice(idx, 1);
+        } else {
+          state.masteredIds.push(card.id);
+        }
+        localStorage.setItem(
+          "fd_mastered_nhahangkhachsan",
+          JSON.stringify(state.masteredIds),
+        );
+        renderFlashcard();
+      }
+
+      function renderHospitalityNotes() {
+        document.getElementById("notesHeading").textContent = t("notesHeading");
+        const items = t("notes") || [];
+        document.getElementById("notesList").innerHTML = items
+          .map(
+            (n) => `
+        <li class="p-3 rounded-xl bg-slate-50 border border-slate-100">${n}</li>
+      `,
+          )
+          .join("");
+      }
+
+      // =========================================================================
+      // 7. LANGUAGE SWITCHER (100% UI + CONTENT LOCALIZATION)
+      // =========================================================================
+      function setLanguage(lang) {
+        state.lang = lang;
+        localStorage.setItem("fd_lang", lang);
+        document.documentElement.lang = lang;
+        document.title = t("pageTitle");
+
+        const viBtn = document.getElementById("langBtnVi");
+        const enBtn = document.getElementById("langBtnEn");
+        if (lang === "vi") {
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        } else {
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        }
+
+        document.getElementById("backHomeText").textContent = t("backHomeText");
+        document.getElementById("brandTitle").textContent = t("brandTitle");
+        document.getElementById("popoverTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("sheetTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("vocabSearchInput").placeholder =
+          t("searchPlaceholder");
+        document.getElementById("workerVoiceLabel").textContent =
+          t("workerVoiceLabel");
+        document.getElementById("partnerVoiceLabel").textContent =
+          t("partnerVoiceLabel");
+        document.getElementById("fcShuffleText").textContent = t("fcShuffle");
+        document.getElementById("fcPrevText").textContent = t("fcPrev");
+        document.getElementById("fcNextText").textContent = t("fcNext");
+        document.getElementById("fcShortcutHint").textContent =
+          t("fcShortcutHint");
+
+        renderNavigation();
+        renderVoiceForms();
+        renderVocab();
+        renderPhrases();
+        renderDialogues();
+        renderFlashcard();
+        renderHospitalityNotes();
+      }
+
+      // =========================================================================
+      // 8. KEYBOARD SHORTCUTS
+      // =========================================================================
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && state.voiceDrawerOpen) {
+          closeVoiceDrawer();
+          return;
+        }
+        if (
+          ["INPUT", "SELECT", "TEXTAREA"].includes(
+            document.activeElement.tagName,
+          )
+        )
+          return;
+        if (state.activeTab !== "flashcards") return;
+
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+
+        if (e.code === "Space") {
+          e.preventDefault();
+          flipFlashcard();
+        } else if (e.key === "ArrowRight") {
+          nextFlashcard();
+        } else if (e.key === "ArrowLeft") {
+          prevFlashcard();
+        } else if (e.key.toLowerCase() === "s") {
+          playAudioWithFallback(
+            `vocab_${card.id}_word.mp3`,
+            card.de,
+            state.globalVoice,
+            `fc_word_${card.id}`,
+          );
+        } else if (e.key.toLowerCase() === "e") {
+          playAudioWithFallback(
+            `vocab_${card.id}_ex.mp3`,
+            card.ex_de,
+            state.globalVoice,
+            `fc_ex_${card.id}`,
+          );
+        }
+      });
+
+      // =========================================================================
+      // 9. INITIALIZE APP
+      // =========================================================================
+      setLanguage(state.lang);
+    </script>
+  </body>
+</html>
