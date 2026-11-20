@@ -1,0 +1,3739 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>
+      Fachdeutsch — Tiếng Đức Ngành Thợ Hàn Công Nghiệp (Schweißer) | VietDe Hub
+    </title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='14'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Crect width='64' height='21.34' y='0' fill='%23111827'/%3E%3Crect width='64' height='21.34' y='21.33' fill='%23DC2626'/%3E%3Crect width='64' height='21.34' y='42.66' fill='%23FACC15'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: #f1f5f9;
+        color: #0f172a;
+        min-height: 100dvh;
+        padding-bottom: calc(76px + var(--safe-bottom));
+      }
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 40px;
+        }
+      }
+      .bottom-nav-safe {
+        padding-bottom: calc(6px + var(--safe-bottom));
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+      @keyframes pulseRing {
+        0% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45);
+        }
+        70% {
+          box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        }
+      }
+      .btn-playing {
+        background-color: #ef4444 !important;
+        color: #ffffff !important;
+        border-color: #ef4444 !important;
+        animation: pulseRing 1.4s infinite;
+      }
+      @keyframes sheetSlideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .animate-sheet-up {
+        animation: sheetSlideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes popoverFade {
+        from {
+          opacity: 0;
+          transform: translateY(-6px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-popover {
+        animation: popoverFade 0.18s ease-out;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-amber-200 selection:text-slate-900">
+    <!-- =====================================================================
+       ADAPTIVE STICKY TOP BAR (Back to Hub + Compact Mobile + 1-Row Desktop)
+       ===================================================================== -->
+    <header
+      class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-3 sm:px-6 h-14 flex items-center justify-between gap-2"
+      >
+        <!-- Left: Back to Hub + Brand + Desktop Navigation Tabs -->
+        <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
+          <a
+            href="index.html"
+            id="backHomeBtn"
+            title="Trang chủ / Home"
+            class="h-9 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center gap-1 shrink-0 transition"
+          >
+            <span>←</span>
+            <span id="backHomeText" class="hidden sm:inline">Trang chủ</span>
+          </a>
+
+          <div class="flex items-center gap-2 min-w-0">
+            <div
+              class="w-8 h-8 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center font-extrabold shadow-inner shrink-0"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+                />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span
+                  id="brandTitle"
+                  class="font-bold text-sm sm:text-base tracking-tight truncate"
+                  >Ngành Thợ Hàn</span
+                >
+                <span
+                  class="hidden xl:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30"
+                  >MAG / WIG / E-Hand</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Single-Row Navigation Tabs (Hidden on Mobile) -->
+          <nav
+            id="desktopNav"
+            class="hidden md:flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-slate-700/70"
+            aria-label="Primary Navigation"
+          ></nav>
+        </div>
+
+        <!-- Right: Voice Settings Trigger Pill + VI/EN Switch -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0 relative">
+          <button
+            id="voiceTriggerBtn"
+            type="button"
+            onclick="toggleVoiceDrawer()"
+            class="h-9 px-2.5 sm:px-3 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 border border-slate-700 text-xs font-medium text-slate-100 flex items-center gap-1.5 transition cursor-pointer"
+          >
+            <span class="text-amber-400">🎙</span>
+            <span
+              id="voicePillLabel"
+              class="max-w-[105px] sm:max-w-[160px] lg:max-w-[210px] truncate"
+              >Piper Chuẩn Đức • 1.0x</span
+            >
+            <svg
+              class="w-3.5 h-3.5 text-slate-400 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <!-- Language Switcher VI | EN -->
+          <div
+            class="h-9 bg-slate-800 p-0.5 rounded-xl border border-slate-700 flex items-center"
+            role="group"
+            aria-label="Language Switch"
+          >
+            <button
+              id="langBtnVi"
+              type="button"
+              onclick="setLanguage('vi')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              VI
+            </button>
+            <button
+              id="langBtnEn"
+              type="button"
+              onclick="setLanguage('en')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              EN
+            </button>
+          </div>
+
+          <!-- DESKTOP POPOVER: Voice & Speed Controls -->
+          <div
+            id="desktopVoicePopover"
+            class="hidden md:hidden absolute right-0 top-12 w-80 bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200 p-4 z-50 animate-popover"
+          >
+            <div
+              class="flex items-center justify-between pb-2.5 mb-3 border-b border-slate-100"
+            >
+              <span
+                id="popoverTitle"
+                class="text-xs font-bold uppercase tracking-wider text-slate-500"
+                >Cài đặt Giọng đọc & Tốc độ</span
+              >
+              <button
+                type="button"
+                onclick="closeVoiceDrawer()"
+                class="w-7 h-7 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+            <div id="desktopVoiceForm"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subtle Non-Blocking Audio Fallback / Status Banner -->
+    <div
+      id="statusToast"
+      class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-50 max-w-[92vw] sm:max-w-md bg-slate-900/95 text-white text-xs px-3.5 py-2 rounded-full shadow-lg border border-slate-700 flex items-center gap-2"
+    >
+      <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+      <span id="statusToastText" class="truncate"></span>
+    </div>
+
+    <!-- =====================================================================
+       MAIN CONTENT AREA
+       ===================================================================== -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6">
+      <!-- TAB 1: VOCABULARY -->
+      <section id="section-vocab" class="space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 space-y-3"
+        >
+          <div class="relative">
+            <svg
+              class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z"
+              />
+            </svg>
+            <input
+              id="vocabSearchInput"
+              type="search"
+              oninput="handleVocabSearch(this.value)"
+              placeholder="Tìm từ tiếng Đức, nghĩa tiếng Việt..."
+              class="w-full h-11 pl-10 pr-9 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
+            />
+            <button
+              id="clearSearchBtn"
+              type="button"
+              onclick="clearVocabSearch()"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-xs items-center justify-center hover:bg-slate-300 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div
+            id="vocabCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5"
+          ></div>
+        </div>
+
+        <div
+          id="vocabGrid"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"
+        ></div>
+      </section>
+
+      <!-- TAB 2: WORKSHOP PHRASES -->
+      <section id="section-phrases" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80"
+        >
+          <div
+            id="phraseCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar"
+          ></div>
+        </div>
+        <div
+          id="phrasesList"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3"
+        ></div>
+      </section>
+
+      <!-- TAB 3: DIALOGUES -->
+      <section id="section-dialogues" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3.5 sm:p-5 shadow-sm border border-slate-200/80 space-y-4"
+        >
+          <div
+            id="dialogueTabs"
+            class="flex items-center gap-2 overflow-x-auto no-scrollbar"
+          ></div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100"
+          >
+            <div>
+              <label
+                id="workerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Thợ hàn (Đức)</label
+              >
+              <select
+                id="workerVoiceSelect"
+                onchange="updateDialogueVoice('worker', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+            <div>
+              <label
+                id="partnerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Tổ trưởng / Đồng nghiệp</label
+              >
+              <select
+                id="partnerVoiceSelect"
+                onchange="updateDialogueVoice('partner', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="dialogueContainer"
+          class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200/80"
+        ></div>
+      </section>
+
+      <!-- TAB 4: FLASHCARDS -->
+      <section
+        id="section-flashcards"
+        class="hidden space-y-4 max-w-2xl mx-auto"
+      >
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 flex flex-wrap items-center justify-between gap-2"
+        >
+          <select
+            id="fcCategorySelect"
+            onchange="setFlashcardCategory(this.value)"
+            class="h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></select>
+          <div class="flex items-center gap-2">
+            <span
+              id="fcCounter"
+              class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-2 rounded-xl"
+              >1 / 86</span
+            >
+            <button
+              id="fcShuffleBtn"
+              type="button"
+              onclick="shuffleFlashcards()"
+              class="h-10 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <span>🔀</span>
+              <span id="fcShuffleText">Trộn thẻ</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="flashcardStage" class="perspective-1000"></div>
+
+        <div class="flex items-center justify-between gap-2">
+          <button
+            type="button"
+            onclick="prevFlashcard()"
+            class="h-11 px-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>←</span>
+            <span id="fcPrevText">Trước</span>
+          </button>
+
+          <button
+            id="fcMasterBtn"
+            type="button"
+            onclick="toggleFlashcardMastered()"
+            class="h-11 px-4 rounded-xl border text-xs sm:text-sm font-semibold shadow-sm flex items-center gap-1.5 transition cursor-pointer"
+          ></button>
+
+          <button
+            type="button"
+            onclick="nextFlashcard()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-sm font-semibold text-white shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span id="fcNextText">Tiếp</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <p
+          id="fcShortcutHint"
+          class="hidden md:block text-center text-xs text-slate-400"
+        >
+          Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe
+          ví dụ)
+        </p>
+      </section>
+
+      <!-- TECHNICAL & FIRE SAFETY NOTES CARD (FROM GOOGLE DOC) -->
+      <section
+        id="section-technical-notes"
+        class="mt-6 bg-white rounded-2xl p-4 sm:p-6 shadow-xs border border-slate-200/80"
+      >
+        <h2
+          id="notesHeading"
+          class="text-base sm:text-lg font-extrabold text-slate-900 mb-3"
+        ></h2>
+        <ul
+          id="notesList"
+          class="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed"
+        ></ul>
+      </section>
+    </main>
+
+    <!-- MOBILE BOTTOM NAVIGATION BAR -->
+    <nav
+      id="mobileBottomNav"
+      class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-[0_-4px_16px_rgba(15,23,42,0.06)] bottom-nav-safe"
+      aria-label="Mobile Navigation"
+    >
+      <div id="mobileNavGrid" class="grid grid-cols-4 h-14"></div>
+    </nav>
+
+    <!-- MOBILE BOTTOM SHEET: VOICE & SPEED SETTINGS -->
+    <div
+      id="mobileVoiceBackdrop"
+      onclick="closeVoiceDrawer()"
+      class="hidden md:hidden fixed inset-0 z-50 bg-slate-950/50 backdrop-blur-xs transition-opacity"
+    ></div>
+    <div
+      id="mobileVoiceSheet"
+      class="hidden md:hidden fixed inset-x-0 bottom-0 z-50 bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 p-5 pb-[calc(20px+var(--safe-bottom))] animate-sheet-up"
+    >
+      <div class="w-10 h-1.5 rounded-full bg-slate-300 mx-auto mb-4"></div>
+      <div class="flex items-center justify-between mb-3">
+        <h3 id="sheetTitle" class="text-base font-bold text-slate-900">
+          Cài đặt Giọng đọc & Tốc độ
+        </h3>
+        <button
+          type="button"
+          onclick="closeVoiceDrawer()"
+          class="w-9 h-9 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold"
+        >
+          ✕
+        </button>
+      </div>
+      <div id="mobileVoiceForm"></div>
+    </div>
+
+    <script>
+      // =========================================================================
+      // 0. AUDIO FOLDER PREFIX FOR INDUSTRIAL WELDING MODULE
+      // =========================================================================
+      const AUDIO_BASE_PATH = "audio/thohan";
+
+      // =========================================================================
+      // 1. VOICE CATALOG (4 VOICES: PIPER OFFLINE + EDGE NEURAL) & I18N
+      // =========================================================================
+      const VOICE_CATALOG = [
+        {
+          id: "piper_hochdeutsch",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Chuẩn Đức (High)",
+          label_en: "Piper Thorsten — Standard German (High)",
+          short_vi: "Piper Chuẩn Đức",
+          short_en: "Piper Standard",
+        },
+        {
+          id: "piper_rostock",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Miền Bắc / Rostock",
+          label_en: "Piper Thorsten — Northern / Rostock",
+          short_vi: "Piper Rostock",
+          short_en: "Piper Rostock",
+        },
+        {
+          id: "edge_hochdeutsch",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Chuẩn Đức (Nữ Katja)",
+          label_en: "Edge Neural — Standard German (Female Katja)",
+          short_vi: "Edge Katja",
+          short_en: "Edge Katja",
+        },
+        {
+          id: "edge_rostock",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Miền Bắc (Nam Conrad)",
+          label_en: "Edge Neural — Northern German (Male Conrad)",
+          short_vi: "Edge Conrad",
+          short_en: "Edge Conrad",
+        },
+      ];
+
+      function sanitizeVoiceId(savedId, fallbackId) {
+        return VOICE_CATALOG.some((v) => v.id === savedId)
+          ? savedId
+          : fallbackId;
+      }
+
+      const I18N = {
+        vi: {
+          pageTitle:
+            "Fachdeutsch — Tiếng Đức Ngành Thợ Hàn Công Nghiệp (Schweißer) | VietDe Hub",
+          backHomeText: "Trang chủ",
+          brandTitle: "Ngành Thợ Hàn",
+          nav_vocab_desktop: "1. Từ vựng",
+          nav_phrases_desktop: "2. Mẫu câu xưởng hàn",
+          nav_dialogues_desktop: "3. Hội thoại",
+          nav_flashcards_desktop: "4. Thẻ Flashcard",
+          nav_vocab_mobile: "Từ vựng",
+          nav_phrases_mobile: "Mẫu câu",
+          nav_dialogues_mobile: "Hội thoại",
+          nav_flashcards_mobile: "Thẻ nhớ",
+          voiceSettingsTitle: "Cài đặt Giọng đọc & Tốc độ",
+          selectVoiceLabel: "Chọn giọng đọc mặc định (4 giọng)",
+          previewVoiceBtn: "Nghe thử giọng",
+          stopPreviewBtn: "Dừng nghe thử",
+          speedLabel: "Tốc độ phát âm",
+          speedSlow: "Chậm 0.75x",
+          speedNormal: "Chuẩn 1.0x",
+          speedFast: "Nhanh 1.25x",
+          searchPlaceholder: "Tìm từ tiếng Đức, nghĩa tiếng Việt...",
+          cat_all: "Tất cả",
+          cat_1_1: "1.1 Phương pháp, Vật liệu & Khí",
+          cat_1_2: "1.2 Thiết bị, Phụ kiện & Dụng cụ",
+          cat_1_3: "1.3 Kỹ thuật, Mối hàn & Lỗi hàn",
+          cat_1_4: "1.4 Đồ bảo hộ & An toàn cháy nổ",
+          cat_1_5: "1.5 Động từ & Tính từ chuyên ngành",
+          relatedPrefix: "Từ liên quan:",
+          noResults: "Không tìm thấy từ vựng phù hợp.",
+          pcat_all: "Tất cả mẫu câu",
+          pcat_2_1: "2.1 Nhận việc, Bản vẽ & WPS",
+          pcat_2_2: "2.2 Chuẩn bị phôi & Vận hành",
+          pcat_2_3: "2.3 Lỗi mối hàn & An toàn cháy nổ",
+          pcat_2_4: "2.4 Giao tiếp xưởng cơ khí",
+          workerVoiceLabel: "Giọng Thợ hàn (Đức)",
+          partnerVoiceLabel: "Giọng Tổ trưởng / Đồng nghiệp",
+          playFullDialogue: "Nghe cả hội thoại",
+          stopFullDialogue: "Dừng hội thoại",
+          fcAllCategories: "Tất cả chủ đề",
+          fcShuffle: "Trộn thẻ",
+          fcPrev: "Trước",
+          fcNext: "Tiếp",
+          fcFrontHint: "Chạm thẻ để xem nghĩa & ví dụ",
+          fcBackHint: "Chạm thẻ để quay lại mặt trước",
+          fcWordBtn: "Nghe từ",
+          fcExBtn: "Nghe ví dụ",
+          fcMastered: "Đã thuộc",
+          fcMarkMastered: "Đánh dấu đã thuộc",
+          fcShortcutHint:
+            "Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe ví dụ)",
+          fallbackNotice: "Đang dùng giọng dự phòng Piper Offline cho câu này.",
+          notesHeading: "Ghi chú Kỹ thuật & An toàn Xưởng hàn tại Đức",
+          notes: [
+            "<strong>Quy trình hàn (WPS - Schweißanweisung):</strong> Mọi thông số cường độ dòng điện (Ampere), điện áp (Volt), tốc độ cấp dây và lưu lượng khí bảo vệ phải tuân thủ đúng bảng WPS của từng mối hàn.",
+            "<strong>Ký hiệu mối hàn trên bản vẽ Đức:</strong> <em>Kehlnaht</em> (mối hàn góc, ký hiệu tam giác kèm kích thước <em>a-Maß</em>), <em>Stumpfnaht / V-Naht</em> (mối hàn giáp mối vát chữ V), <em>umlaufend</em> (hàn vòng quanh chu vi, ký hiệu vòng tròn tại nút giao).",
+            "<strong>An toàn tia hồ quang & Khói hàn:</strong> Luôn kéo rèm chắn tia hàn (<em>Schweißvorhang</em>), bật hệ thống hút khói (<em>Absauganlage</em>) trước khi mồi hồ quang và đeo kính bảo hộ trong suốt khi mài hoặc gõ xỉ hàn.",
+            "<strong>Phòng chống cháy nổ (Brandschutz):</strong> Khi hàn ngoài khu vực bàn hàn cố định, bắt buộc phải có giấy phép hàn cắt (<em>Schweißerlaubnis</em>), bình chữa cháy (<em>Feuerlöscher</em>) tại chỗ và kiểm tra tàn lửa sau khi kết thúc công việc.",
+          ],
+        },
+        en: {
+          pageTitle:
+            "Fachdeutsch — Industrial Welding Technician (Schweißer) | VietDe Hub",
+          backHomeText: "Home",
+          brandTitle: "Industrial Welding",
+          nav_vocab_desktop: "1. Vocabulary",
+          nav_phrases_desktop: "2. Workshop Phrases",
+          nav_dialogues_desktop: "3. Dialogues",
+          nav_flashcards_desktop: "4. Flashcards",
+          nav_vocab_mobile: "Vocab",
+          nav_phrases_mobile: "Phrases",
+          nav_dialogues_mobile: "Dialogues",
+          nav_flashcards_mobile: "Cards",
+          voiceSettingsTitle: "Voice & Playback Speed",
+          selectVoiceLabel: "Default AI Voice (4 Voices)",
+          previewVoiceBtn: "Preview Voice",
+          stopPreviewBtn: "Stop Preview",
+          speedLabel: "Playback Speed",
+          speedSlow: "Slow 0.75x",
+          speedNormal: "Normal 1.0x",
+          speedFast: "Fast 1.25x",
+          searchPlaceholder: "Search German words, English meanings...",
+          cat_all: "All",
+          cat_1_1: "1.1 Processes, Filler & Gases",
+          cat_1_2: "1.2 Equipment, Torches & Tools",
+          cat_1_3: "1.3 Techniques, Welds & Defects",
+          cat_1_4: "1.4 PPE & Fire Safety",
+          cat_1_5: "1.5 Welding Verbs & Adjectives",
+          relatedPrefix: "Related words:",
+          noResults: "No matching vocabulary found.",
+          pcat_all: "All Phrases",
+          pcat_2_1: "2.1 Tasks, Plans & WPS",
+          pcat_2_2: "2.2 Prep, Setup & Progress",
+          pcat_2_3: "2.3 Defects & Fire Safety",
+          pcat_2_4: "2.4 Daily Welding Shop Talk",
+          workerVoiceLabel: "Welder Voice (Duc)",
+          partnerVoiceLabel: "Supervisor / Colleague Voice",
+          playFullDialogue: "Play Full Dialogue",
+          stopFullDialogue: "Stop Dialogue",
+          fcAllCategories: "All Categories",
+          fcShuffle: "Shuffle",
+          fcPrev: "Previous",
+          fcNext: "Next",
+          fcFrontHint: "Tap card to reveal meaning & example",
+          fcBackHint: "Tap card to flip back",
+          fcWordBtn: "Speak Word",
+          fcExBtn: "Speak Example",
+          fcMastered: "Mastered",
+          fcMarkMastered: "Mark as Mastered",
+          fcShortcutHint:
+            "Shortcuts: Space (Flip) • ← / → (Navigate) • S (Word) • E (Example)",
+          fallbackNotice: "Using offline Piper fallback voice for this line.",
+          notesHeading:
+            "Technical & Fire Safety Notes for German Welding Shops",
+          notes: [
+            "<strong>Welding Procedure Specification (WPS):</strong> All parameters including amperage, voltage, wire feed speed, and shielding gas flow rate must strictly follow the WPS for each joint.",
+            "<strong>German Drawing Weld Symbols:</strong> <em>Kehlnaht</em> (fillet weld, triangle symbol with throat thickness <em>a-Maß</em>), <em>Stumpfnaht / V-Naht</em> (single-V butt weld), <em>umlaufend</em> (weld all around, circle symbol at the reference line elbow).",
+            "<strong>Arc Radiation & Fume Safety:</strong> Always draw the welding curtain (<em>Schweißvorhang</em>), switch on the fume extractor (<em>Absauganlage</em>) before striking an arc, and wear clear safety glasses when grinding or chipping slag.",
+            "<strong>Fire Protection (Brandschutz):</strong> When welding outside designated welding bays, a written hot-work permit (<em>Schweißerlaubnis</em>), on-site fire extinguisher (<em>Feuerlöscher</em>), and post-work fire watch are mandatory.",
+          ],
+        },
+      };
+
+      // =========================================================================
+      // 2. COMPLETE BILINGUAL DATASET (86 VOCAB, 36 PHRASES, 6 DIALOGUES)
+      // =========================================================================
+      const VOCAB_DATA = [
+        {
+          id: 1,
+          cat: "1.1",
+          de: "das MAG-Schweißen (Metall-Aktivgasschweißen)",
+          ipa: "/das ɛmʔaːˈɡeːˌʃvaɪsn̩/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Hàn hồ quang kim loại trong môi trường khí hoạt tính (hàn MIG/MAG thép kết cấu)",
+          en: "Metal Active Gas welding (MAG welding for structural steel)",
+          rel_vi: "schweißen (đt: hàn), der Schweißer (dt: thợ hàn)",
+          rel_en: "schweißen (v: to weld), der Schweißer (n: welder)",
+          ex_de:
+            "Für dicken Baustahl nutzen wir in der Halle meistens das MAG-Schweißen.",
+          ex_vi:
+            "Đối với thép kết cấu dày, trong xưởng chúng tôi chủ yếu dùng hàn MAG.",
+          ex_en:
+            "For thick structural steel, we mostly use MAG welding in the workshop.",
+        },
+        {
+          id: 2,
+          cat: "1.1",
+          de: "das WIG-Schweißen (Wolfram-Inertgasschweißen)",
+          ipa: "/das vɪkˈʃvaɪsn̩/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Hàn TIG (hàn hồ quang điện cực Vonfram trong khí trơ)",
+          en: "TIG welding (Tungsten Inert Gas welding)",
+          rel_vi: "die Wolframelektrode (dt: điện cực Vonfram)",
+          rel_en: "die Wolframelektrode (n: tungsten electrode)",
+          ex_de:
+            "Edelstahlrohre schweißen wir sehr sauber mit dem WIG-Schweißen.",
+          ex_vi:
+            "Các ống thép không gỉ chúng tôi hàn rất sạch bằng phương pháp hàn TIG.",
+          ex_en:
+            "We weld stainless steel pipes very cleanly using TIG welding.",
+        },
+        {
+          id: 3,
+          cat: "1.1",
+          de: "das E-Hand-Schweißen (Lichtbogenhandschweißen)",
+          ipa: "/das ˈeːhantˌʃvaɪsn̩/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Hàn que thủ công (hàn hồ quang tay)",
+          en: "Manual metal arc welding / Stick welding (SMAW)",
+          rel_vi: "die Stabelektrode (dt: que hàn bọc thuốc)",
+          rel_en: "die Stabelektrode (n: stick electrode)",
+          ex_de:
+            "Auf der Baustelle draußen wird oft das E-Hand-Schweißen eingesetzt.",
+          ex_vi:
+            "Ngoài công trường lộ thiên thường sử dụng phương pháp hàn que thủ công.",
+          ex_en:
+            "Outdoors on the construction site, stick welding is often used.",
+        },
+        {
+          id: 4,
+          cat: "1.1",
+          de: "der Schweißdraht (-e)",
+          ipa: "/deːɐ̯ ˈʃvaɪsˌdʁaːt/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Dây hàn (cuộn dây hàn MAG/MIG)",
+          en: "Welding wire (MIG/MAG wire spool)",
+          rel_vi: "die Drahtrolle (dt: cuộn dây hàn)",
+          rel_en: "die Drahtrolle (n: wire spool)",
+          ex_de: "Lege bitte eine neue Rolle Schweißdraht in das Gerät ein.",
+          ex_vi: "Vui lòng lắp một cuộn dây hàn mới vào máy.",
+          ex_en: "Please insert a new spool of welding wire into the machine.",
+        },
+        {
+          id: 5,
+          cat: "1.1",
+          de: "die Stabelektrode (-n)",
+          ipa: "/diː ˈʃtaːpʔelɛkˌtʁoːdə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Que hàn bọc thuốc",
+          en: "Coated stick electrode",
+          rel_vi:
+            "die Elektrode (dt: điện cực), trocken lagern (đt: bảo quản khô)",
+          rel_en:
+            "die Elektrode (n: electrode), trocken lagern (v: to store dry)",
+          ex_de: "Die Stabelektroden müssen trocken im Köcher gelagert werden.",
+          ex_vi:
+            "Các que hàn bọc thuốc phải được bảo quản khô ráo trong ống đựng.",
+          ex_en: "The stick electrodes must be stored dry in a quiver.",
+        },
+        {
+          id: 6,
+          cat: "1.1",
+          de: "die Wolframelektrode (-n)",
+          ipa: "/diː ˈvɔlfʁamʔelɛkˌtʁoːdə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kim hàn / Điện cực Vonfram (dùng cho hàn TIG)",
+          en: "Tungsten electrode (for TIG welding)",
+          rel_vi: "anschleifen (đt: mài nhọn đầu kim hàn)",
+          rel_en: "anschleifen (v: to grind tip)",
+          ex_de: "Schleife die Spitze der Wolframelektrode längs an.",
+          ex_vi: "Hãy mài nhọn đầu kim hàn Vonfram theo chiều dọc.",
+          ex_en: "Grind the tip of the tungsten electrode lengthwise.",
+        },
+        {
+          id: 7,
+          cat: "1.1",
+          de: "der Schweißstab (-e)",
+          ipa: "/deːɐ̯ ˈʃvaɪsˌʃtaːp/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Que bù hàn TIG",
+          en: "TIG welding filler rod",
+          rel_vi: "zuführen (đt: đưa que bù vào vùng hàn)",
+          rel_en: "zuführen (v: to feed filler rod)",
+          ex_de:
+            "Beim WIG-Schweißen führst du den Schweißstab gleichmäßig von Hand zu.",
+          ex_vi: "Khi hàn TIG bạn đưa que bù vào đều đặn bằng tay.",
+          ex_en: "When TIG welding, you feed the filler rod evenly by hand.",
+        },
+        {
+          id: 8,
+          cat: "1.1",
+          de: "das Schutzgas (-e)",
+          ipa: "/das ˈʃʊtsˌɡaːs/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Khí bảo vệ mối hàn",
+          en: "Shielding gas",
+          rel_vi: "das Gas (dt: khí), schützen (đt: bảo vệ)",
+          rel_en: "das Gas (n: gas), schützen (v: to protect)",
+          ex_de: "Ohne Schutzgas oxidiert die Schweißnaht sofort.",
+          ex_vi: "Không có khí bảo vệ thì mối hàn sẽ bị ô-xy hóa ngay lập tức.",
+          ex_en: "Without shielding gas, the weld seam oxidizes immediately.",
+        },
+        {
+          id: 9,
+          cat: "1.1",
+          de: "das Mischgas (-e)",
+          ipa: "/das ˈmɪʃˌɡaːs/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Khí trộn bảo vệ (thường gồm 82% Argon và 18% CO2 cho hàn MAG)",
+          en: "Mixed shielding gas (typically 82% Argon / 18% CO2 for MAG)",
+          rel_vi: "mischen (đt: trộn)",
+          rel_en: "mischen (v: to mix)",
+          ex_de:
+            "Für unlegierten Stahl verwenden wir Mischgas aus Argon und Kohlendioxid.",
+          ex_vi:
+            "Đối với thép không hợp kim chúng tôi dùng khí trộn từ Argon và CO2.",
+          ex_en:
+            "For unalloyed steel, we use mixed gas of argon and carbon dioxide.",
+        },
+        {
+          id: 10,
+          cat: "1.1",
+          de: "das Argon",
+          ipa: "/das ˈaʁɡɔn/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Khí trơ Argon (dùng cho hàn TIG và nhôm/inox)",
+          en: "Argon inert gas (for TIG, aluminum, and stainless steel)",
+          rel_vi: "das Inertgas (dt: khí trơ)",
+          rel_en: "das Inertgas (n: inert gas)",
+          ex_de:
+            "Für das WIG-Schweißen brauchst du reines Argon als Schutzgas.",
+          ex_vi: "Đối với hàn TIG bạn cần khí Argon tinh khiết làm khí bảo vệ.",
+          ex_en: "For TIG welding, you need pure argon as shielding gas.",
+        },
+        {
+          id: 11,
+          cat: "1.1",
+          de: "die Gasflasche (-n)",
+          ipa: "/diː ˈɡaːsˌflaʃə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bình chứa khí hàn",
+          en: "Welding gas cylinder",
+          rel_vi: "die Flasche (dt: bình/chai), sichern (đt: xích cố định)",
+          rel_en: "die Flasche (n: cylinder/bottle), sichern (v: to secure)",
+          ex_de:
+            "Die Gasflasche muss immer mit einer Kette gegen Umfallen gesichert sein.",
+          ex_vi:
+            "Bình khí hàn phải luôn được cố định bằng dây xích để chống đổ ngã.",
+          ex_en:
+            "The gas cylinder must always be secured with a chain against tipping over.",
+        },
+        {
+          id: 12,
+          cat: "1.1",
+          de: "der Baustahl (-e)",
+          ipa: "/deːɐ̯ ˈbaʊˌʃtaːl/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Thép kết cấu xây dựng (ví dụ S235, S355)",
+          en: "Structural steel (e.g., S235, S355)",
+          rel_vi: "der Stahl (dt: thép)",
+          rel_en: "der Stahl (n: steel)",
+          ex_de: "Dieser Träger besteht aus hochfestem Baustahl.",
+          ex_vi: "Thanh dầm này làm bằng thép kết cấu cường độ cao.",
+          ex_en: "This beam is made of high-strength structural steel.",
+        },
+        {
+          id: 13,
+          cat: "1.1",
+          de: "der Edelstahl (-e)",
+          ipa: "/deːɐ̯ ˈeːdl̩ˌʃtaːl/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Thép không gỉ (Inox)",
+          en: "Stainless steel",
+          rel_vi: "rostfrei (tt: không gỉ)",
+          rel_en: "rostfrei (adj: rust-free / stainless)",
+          ex_de:
+            "Bei Edelstahl darf man nur saubere Bürsten aus Edelstahl verwenden.",
+          ex_vi:
+            "Với thép không gỉ chỉ được phép dùng bàn chải sạch bằng inox.",
+          ex_en:
+            "With stainless steel, only clean stainless steel brushes may be used.",
+        },
+        {
+          id: 14,
+          cat: "1.1",
+          de: "das Blech (-e)",
+          ipa: "/das blɛç/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Thép tấm / Tôn tấm",
+          en: "Steel plate / sheet metal",
+          rel_vi: "die Blechdicke (dt: độ dày tấm thép)",
+          rel_en: "die Blechdicke (n: plate/sheet thickness)",
+          ex_de:
+            "Wir schweißen heute zwei Stahlbleche mit 10 Millimeter Dicke zusammen.",
+          ex_vi:
+            "Hôm nay chúng ta hàn ghép hai tấm thép dày 10 mm lại với nhau.",
+          ex_en:
+            "Today we are welding two 10-millimeter-thick steel plates together.",
+        },
+        {
+          id: 15,
+          cat: "1.1",
+          de: "das Profil (-e) / der Träger (-)",
+          ipa: "/das pʁoˈfiːl/",
+          type_vi: "Danh từ (n./m.)",
+          type_en: "Noun (n./m.)",
+          vi: "Thép hình (chữ I, H, U, L) / Dầm thép kết cấu",
+          en: "Steel profile / structural beam (I, H, U, L section)",
+          rel_vi: "der Doppel-T-Träger (dt: dầm chữ I/H)",
+          rel_en: "der Doppel-T-Träger (n: I-beam / H-beam)",
+          ex_de: "Die schweren Stahlträger werden in der Halle verschweißt.",
+          ex_vi: "Các dầm thép nặng được hàn nối ở trong nhà xưởng.",
+          ex_en: "The heavy steel beams are welded together inside the hall.",
+        },
+        {
+          id: 16,
+          cat: "1.1",
+          de: "das Rohr (-e)",
+          ipa: "/das ʁoːɐ̯/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Ống thép",
+          en: "Steel pipe / tube",
+          rel_vi: "die Rohrleitung (dt: đường ống)",
+          rel_en: "die Rohrleitung (n: pipeline/piping)",
+          ex_de:
+            "Beim Rohrschweißen muss die Wurzel sauber durchgeschweißt sein.",
+          ex_vi: "Khi hàn ống thì lớp lót đáy phải được hàn ngấu đều sạch sẽ.",
+          ex_en: "In pipe welding, the root pass must be cleanly penetrated.",
+        },
+        {
+          id: 17,
+          cat: "1.1",
+          de: "die Schweißnaht (-e)",
+          ipa: "/diː ˈʃvaɪsˌnaːt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Mối hàn / Đường hàn",
+          en: "Weld seam / weld bead",
+          rel_vi: "die Naht (dt: đường nối)",
+          rel_en: "die Naht (n: seam)",
+          ex_de: "Die Schweißnaht sieht gleichmäßig und sauber aus.",
+          ex_vi: "Mối hàn trông rất đều và sạch đẹp.",
+          ex_en: "The weld seam looks uniform and clean.",
+        },
+        {
+          id: 18,
+          cat: "1.1",
+          de: "die Schweißanweisung (WPS)",
+          ipa: "/diː ˈʃvaɪsʔanˌvaɪzʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Quy trình hàn tiêu chuẩn (bảng thông số kỹ thuật bắt buộc tuân thủ)",
+          en: "Welding Procedure Specification (WPS)",
+          rel_vi: "die Anweisung (dt: hướng dẫn kỹ thuật)",
+          rel_en: "die Anweisung (n: technical instruction)",
+          ex_de:
+            "Alle Parameter wie Stromstärke und Drahtvorschub stehen in der WPS.",
+          ex_vi:
+            "Mọi thông số như cường độ dòng điện và tốc độ cấp dây đều ghi trong bảng WPS.",
+          ex_en:
+            "All parameters such as amperage and wire feed speed are listed in the WPS.",
+        },
+        {
+          id: 19,
+          cat: "1.2",
+          de: "das Schweißgerät (-e)",
+          ipa: "/das ˈʃvaɪsɡəˌʁɛːt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Máy hàn",
+          en: "Welding machine / power source",
+          rel_vi: "einschalten (đt: bật máy), einstellen (đt: chỉnh thông số)",
+          rel_en:
+            "einschalten (v: to switch on), einstellen (v: to adjust/set)",
+          ex_de: "Stelle die Stromstärke am Schweißgerät auf 180 Ampere ein.",
+          ex_vi: "Hãy chỉnh cường độ dòng điện trên máy hàn ở mức 180 Ampe.",
+          ex_en: "Set the amperage on the welding machine to 180 amps.",
+        },
+        {
+          id: 20,
+          cat: "1.2",
+          de: "der Schweißbrenner (-)",
+          ipa: "/deːɐ̯ ˈʃvaɪsˌbʁɛnɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Súng hàn / Mỏ hàn",
+          en: "Welding torch / welding gun",
+          rel_vi: "der Brenner (dt: mỏ đốt/súng hàn)",
+          rel_en: "der Brenner (n: torch)",
+          ex_de: "Halte den Schweißbrenner im richtigen Winkel zum Werkstück.",
+          ex_vi: "Hãy giữ súng hàn đúng góc nghiêng so với phôi hàn.",
+          ex_en: "Hold the welding torch at the proper angle to the workpiece.",
+        },
+        {
+          id: 21,
+          cat: "1.2",
+          de: "die Gasdüse (-n)",
+          ipa: "/diː ˈɡaːsˌdyːzə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Chụp khí của súng hàn",
+          en: "Gas nozzle / shroud",
+          rel_vi: "die Düse (dt: đầu phun/chụp)",
+          rel_en: "die Düse (n: nozzle)",
+          ex_de: "Reinige die Gasdüse regelmäßig von Schweißspritzern.",
+          ex_vi: "Hãy vệ sinh chụp khí thường xuyên khỏi các hạt xỉ bắn tóe.",
+          ex_en: "Clean spatter out of the gas nozzle regularly.",
+        },
+        {
+          id: 22,
+          cat: "1.2",
+          de: "die Stromdüse (-n)",
+          ipa: "/diː ˈʃtʁoːmˌdyːzə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bép hàn (đầu tiếp điện dẫn dây hàn)",
+          en: "Contact tip (current nozzle)",
+          rel_vi: "der Strom (dt: dòng điện)",
+          rel_en: "der Strom (n: electrical current)",
+          ex_de: "Wenn der Draht klemmt, muss man die Stromdüse wechseln.",
+          ex_vi: "Nếu dây hàn bị kẹt thì phải thay bép hàn mới.",
+          ex_en: "If the wire jams, you must replace the contact tip.",
+        },
+        {
+          id: 23,
+          cat: "1.2",
+          de: "das Schlauchpaket (-e)",
+          ipa: "/das ˈʃlaʊxpaˌkeːt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Bộ dây cáp súng hàn (dẫn điện, khí và dây hàn)",
+          en: "Welding torch hose assembly / cable pack",
+          rel_vi: "der Schlauch (dt: ống dẫn)",
+          rel_en: "der Schlauch (n: hose/conduit)",
+          ex_de:
+            "Lege das Schlauchpaket gerade aus, damit der Draht gut läuft.",
+          ex_vi: "Hãy trải thẳng bộ cáp súng hàn để dây hàn chạy trơn tru.",
+          ex_en:
+            "Lay out the torch hose assembly straight so the wire feeds smoothly.",
+        },
+        {
+          id: 24,
+          cat: "1.2",
+          de: "die Masseklemme (-n)",
+          ipa: "/diː ˈmasəˌklɛmə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kẹp mát (kẹp nối đất vào phôi hàn)",
+          en: "Ground clamp / earth clamp",
+          rel_vi: "die Masse (dt: cực mát), klemmen (đt: kẹp chặt)",
+          rel_en: "die Masse (n: ground/earth), klemmen (v: to clamp)",
+          ex_de: "Befestige die Masseklemme fest am sauberen Metall.",
+          ex_vi: "Hãy kẹp chặt kẹp mát vào phần kim loại sạch.",
+          ex_en: "Attach the ground clamp firmly to clean bare metal.",
+        },
+        {
+          id: 25,
+          cat: "1.2",
+          de: "der Druckminderer (-)",
+          ipa: "/deːɐ̯ ˈdʁʊkˌmɪndəʁɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Đồng hồ giảm áp bình khí hàn",
+          en: "Gas pressure regulator",
+          rel_vi: "der Druck (dt: áp suất)",
+          rel_en: "der Druck (n: pressure)",
+          ex_de:
+            "Prüfe am Druckminderer, wie viel Gas noch in der Flasche ist.",
+          ex_vi:
+            "Hãy kiểm tra trên đồng hồ giảm áp xem trong bình còn bao nhiêu khí.",
+          ex_en:
+            "Check the pressure regulator to see how much gas is left in the cylinder.",
+        },
+        {
+          id: 26,
+          cat: "1.2",
+          de: "der Durchflussmesser (-)",
+          ipa: "/deːɐ̯ ˈdʊʁçflʊsˌmɛsɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Đồng hồ đo lưu lượng khí bảo vệ (lít/phút)",
+          en: "Gas flowmeter (liters per minute)",
+          rel_vi: "der Durchfluss (dt: lưu lượng dòng chảy)",
+          rel_en: "der Durchfluss (n: flow rate)",
+          ex_de: "Stelle den Gasdurchfluss auf 14 Liter pro Minute ein.",
+          ex_vi: "Hãy chỉnh lưu lượng khí ở mức 14 lít mỗi phút.",
+          ex_en: "Set the gas flow rate to 14 liters per minute.",
+        },
+        {
+          id: 27,
+          cat: "1.2",
+          de: "der Drahtvorschub",
+          ipa: "/deːɐ̯ ˈdʁaːtfoːɐ̯ˌʃuːp/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bộ đẩy dây / Tốc độ cấp dây hàn",
+          en: "Wire feed / wire feed speed",
+          rel_vi: "der Vorschub (dt: bước tiến/tốc độ cấp)",
+          rel_en: "der Vorschub (n: feed rate)",
+          ex_de: "Der Drahtvorschub ist noch zu hoch, reduziere ihn etwas.",
+          ex_vi: "Tốc độ cấp dây vẫn hơi cao, hãy giảm xuống một chút.",
+          ex_en: "The wire feed speed is still too high; reduce it slightly.",
+        },
+        {
+          id: 28,
+          cat: "1.2",
+          de: "der Schweißerhammer (-)",
+          ipa: "/deːɐ̯ ˈʃvaɪsɐˌhamɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Búa gõ xỉ hàn",
+          en: "Chipping hammer (slag hammer)",
+          rel_vi: "die Schlacke (dt: xỉ hàn), abschlagen (đt: gõ bong xỉ)",
+          rel_en: "die Schlacke (n: slag), abschlagen (v: to chip off)",
+          ex_de:
+            "Schlage die Schlacke nach dem Schweißen mit dem Schweißerhammer ab.",
+          ex_vi: "Hãy gõ sạch lớp xỉ sau khi hàn bằng búa gõ xỉ.",
+          ex_en: "Chip off the slag after welding using the chipping hammer.",
+        },
+        {
+          id: 29,
+          cat: "1.2",
+          de: "die Drahtbürste (-n)",
+          ipa: "/diː ˈdʁaːtˌbʏʁstə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bàn chải sắt đánh sạch mối hàn",
+          en: "Wire brush",
+          rel_vi: "bürsten (đt: chải sạch)",
+          rel_en: "bürsten (v: to brush)",
+          ex_de:
+            "Bürste die Naht zwischen den Lagen gründlich mit der Drahtbürste ab.",
+          ex_vi: "Hãy đánh sạch đường hàn giữa các lớp bằng bàn chải sắt.",
+          ex_en:
+            "Brush the weld seam thoroughly between passes with the wire brush.",
+        },
+        {
+          id: 30,
+          cat: "1.2",
+          de: "die Schweißerzange (-n)",
+          ipa: "/diː ˈʃvaɪsɐˌtsaŋə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kìm đa năng thợ hàn (cắt dây, tháo chụp khí, gắp phôi nóng)",
+          en: "Welper / MIG welding pliers",
+          rel_vi: "die Zange (dt: cái kìm)",
+          rel_en: "die Zange (n: pliers)",
+          ex_de:
+            "Mit der Schweißerzange schneidest du den Draht vor dem Zünden kurz ab.",
+          ex_vi: "Dùng kìm thợ hàn để cắt ngắn đầu dây trước khi mồi hồ quang.",
+          ex_en:
+            "Use the welding pliers to snip the wire short before striking the arc.",
+        },
+        {
+          id: 31,
+          cat: "1.2",
+          de: "die Schraubzwinge (-n)",
+          ipa: "/diː ˈʃʁaʊpˌtsvɪŋə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Cảo kẹp cố định phôi hàn",
+          en: "Screw clamp / C-clamp / F-clamp",
+          rel_vi: "festspannen (đt: kẹp chặt phôi)",
+          rel_en: "festspannen (v: to clamp tightly)",
+          ex_de:
+            "Spanne die beiden Bleche mit der Schraubzwinge fest auf dem Tisch ein.",
+          ex_vi: "Hãy kẹp chặt hai tấm thép lên bàn bằng cảo kẹp.",
+          ex_en:
+            "Clamp both plates firmly onto the table using the screw clamp.",
+        },
+        {
+          id: 32,
+          cat: "1.2",
+          de: "der Winkelschleifer (-) / die Flex",
+          ipa: "/deːɐ̯ ˈvɪŋkl̩ˌʃlaɪfɐ/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Máy mài góc cầm tay (cắt, mài vát mép, làm sạch mối hàn)",
+          en: "Angle grinder",
+          rel_vi:
+            "die Trennscheibe (dt: đĩa cắt), die Schruppscheibe (dt: đĩa mài phá)",
+          rel_en:
+            "die Trennscheibe (n: cutting disc), die Schruppscheibe (n: grinding wheel)",
+          ex_de:
+            "Schleife die Kanten vor dem Schweißen mit dem Winkelschleifer metallisch blank.",
+          ex_vi: "Hãy mài sạch mép hàn tới sáng bóng kim loại trước khi hàn.",
+          ex_en:
+            "Grind the edges down to bright bare metal with the angle grinder before welding.",
+        },
+        {
+          id: 33,
+          cat: "1.2",
+          de: "die Schweißnahtlehre (-n)",
+          ipa: "/diː ˈʃvaɪsnaːtˌleːʁə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thước dưỡng kiểm tra kích thước mối hàn (đo chiều cao cạnh a, góc vát)",
+          en: "Weld fillet gauge / welding inspection gauge",
+          rel_vi: "das a-Maß (dt: chiều cao tiết diện mối hàn góc)",
+          rel_en: "das a-Maß (n: fillet weld throat thickness)",
+          ex_de:
+            "Mit der Schweißnahtlehre kontrollieren wir das a-Maß der Kehlnaht.",
+          ex_vi:
+            "Bằng thước dưỡng mối hàn chúng ta kiểm tra kích thước cạnh a của mối hàn góc.",
+          ex_en:
+            "We check the throat thickness of the fillet weld with the weld gauge.",
+        },
+        {
+          id: 34,
+          cat: "1.2",
+          de: "der Schweißtisch (-e)",
+          ipa: "/deːɐ̯ ˈʃvaɪsˌtɪʃ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bàn gá hàn công nghiệp",
+          en: "Welding table / fixture table",
+          rel_vi: "das Werkstück (dt: phôi hàn/chi tiết gia công)",
+          rel_en: "das Werkstück (n: workpiece)",
+          ex_de:
+            "Lege die Bauteile genau nach Zeichnung auf dem Schweißtisch aus.",
+          ex_vi: "Hãy xếp các chi tiết đúng theo bản vẽ trên bàn gá hàn.",
+          ex_en:
+            "Lay out the components accurately according to the drawing on the welding table.",
+        },
+        {
+          id: 35,
+          cat: "1.2",
+          de: "die Absauganlage (-n)",
+          ipa: "/diː ˈapzaʊkʔanˌlaːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hệ thống hút khói hàn tại chỗ",
+          en: "Fume extraction system",
+          rel_vi:
+            "der Schweißrauch (dt: khói hàn độc hại), absaugen (đt: hút sạch)",
+          rel_en:
+            "der Schweißrauch (n: welding fumes), absaugen (v: to extract)",
+          ex_de: "Schalte vor dem Schweißen unbedingt die Absauganlage ein.",
+          ex_vi: "Trước khi hàn nhất định phải bật hệ thống hút khói hàn.",
+          ex_en: "Always turn on the fume extraction system before welding.",
+        },
+        {
+          id: 36,
+          cat: "1.2",
+          de: "die Schweißkabine (-n) / der Schweißvorhang",
+          ipa: "/diː ˈʃvaɪskaˌbiːnə/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Buồng hàn / Rèm chắn tia hồ quang",
+          en: "Welding booth / welding arc curtain",
+          rel_vi: "blenden (đt: làm chói mắt)",
+          rel_en: "blenden (v: to dazzle/flash eyes)",
+          ex_de: "Ziehe den Schweißvorhang zu, damit niemand geblendet wird.",
+          ex_vi: "Hãy kéo rèm chắn tia hàn lại để không ai bị chói mắt.",
+          ex_en: "Draw the welding curtain closed so nobody gets arc-flashed.",
+        },
+        {
+          id: 37,
+          cat: "1.2",
+          de: "die Schweißzeichnung (-en)",
+          ipa: "/diː ˈʃvaɪsˌtsaɪçnʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bản vẽ kỹ thuật kết cấu hàn",
+          en: "Welding engineering drawing",
+          rel_vi: "das Schweißsymbol (dt: ký hiệu mối hàn trên bản vẽ)",
+          rel_en: "das Schweißsymbol (n: welding symbol)",
+          ex_de: "Lies alle Schweißsymbole sorgfältig in der Schweißzeichnung.",
+          ex_vi: "Hãy đọc kỹ mọi ký hiệu hàn trên bản vẽ kết cấu hàn.",
+          ex_en: "Read all welding symbols carefully in the welding drawing.",
+        },
+        {
+          id: 38,
+          cat: "1.2",
+          de: "das Werkstück (-e)",
+          ipa: "/das ˈvɛʁkˌʃtʏk/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Phôi hàn / Chi tiết gia công",
+          en: "Workpiece / fabricated part",
+          rel_vi: "bearbeiten (đt: gia công)",
+          rel_en: "bearbeiten (v: to machine/fabricate)",
+          ex_de: "Das Werkstück ist nach dem Schweißen noch sehr heiß.",
+          ex_vi: "Phôi hàn sau khi hàn vẫn còn rất nóng.",
+          ex_en: "The workpiece is still very hot after welding.",
+        },
+        {
+          id: 39,
+          cat: "1.3",
+          de: "die Kehlnaht (-e)",
+          ipa: "/diː ˈkeːlˌnaːt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Mối hàn góc (mối hàn chữ T hoặc chồng mí)",
+          en: "Fillet weld (T-joint or lap joint)",
+          rel_vi: "das a-Maß (dt: chiều cao cạnh mối hàn góc)",
+          rel_en: "das a-Maß (n: throat thickness)",
+          ex_de:
+            "Diese Verbindung wird mit einer 6-Millimeter-Kehlnaht geschweißt.",
+          ex_vi: "Liên kết này được hàn bằng mối hàn góc dày 6 mm.",
+          ex_en: "This joint is welded with a 6-millimeter fillet weld.",
+        },
+        {
+          id: 40,
+          cat: "1.3",
+          de: "die Stumpfnaht (-e)",
+          ipa: "/diː ˈʃtʊmpfˌnaːt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Mối hàn giáp mối (hàn đối đầu hai mép tấm thép)",
+          en: "Butt weld",
+          rel_vi: "die V-Naht (dt: mối hàn giáp mối vát chữ V)",
+          rel_en: "die V-Naht (n: single-V butt weld)",
+          ex_de:
+            "Bei dicken Blechen bereiten wir eine V-Naht als Stumpfnaht vor.",
+          ex_vi:
+            "Với thép tấm dày chúng ta vát mép chuẩn bị mối hàn giáp mối chữ V.",
+          ex_en:
+            "For thick plates, we prepare a single-V groove as a butt weld.",
+        },
+        {
+          id: 41,
+          cat: "1.3",
+          de: "die Wurzel / die Wurzellage",
+          ipa: "/diː ˈvʊʁtsl̩/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Lớp hàn lót đáy (đường hàn đầu tiên ở đáy rãnh hàn)",
+          en: "Root pass / root run",
+          rel_vi: "durchschweißen (đt: hàn ngấu thấu đáy)",
+          rel_en: "durchschweißen (v: to achieve full penetration)",
+          ex_de:
+            "Die Wurzellage muss sauber und ohne Bindefehler durchgeschweißt sein.",
+          ex_vi:
+            "Lớp hàn lót đáy phải ngấu thấu sạch sẽ và không bị lỗi không ngấu.",
+          ex_en:
+            "The root pass must be cleanly penetrated without lack of fusion.",
+        },
+        {
+          id: 42,
+          cat: "1.3",
+          de: "die Decklage (-n)",
+          ipa: "/diː ˈdɛkˌlaːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Lớp hàn phủ bề mặt (lớp hàn hoàn thiện ngoài cùng)",
+          en: "Cap pass / cover pass",
+          rel_vi: "die Zwischenlage (dt: lớp hàn trung gian)",
+          rel_en: "die Zwischenlage (n: filler/intermediate pass)",
+          ex_de: "Die Decklage bildet den sauberen Abschluss der Schweißnaht.",
+          ex_vi: "Lớp hàn phủ tạo nên bề mặt hoàn thiện sạch đẹp cho mối hàn.",
+          ex_en: "The cap pass forms the clean final layer of the weld seam.",
+        },
+        {
+          id: 43,
+          cat: "1.3",
+          de: "der Heftpunkt (-e) / die Heftnaht",
+          ipa: "/deːɐ̯ ˈhɛftˌpʊŋkt/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Mối hàn đính (hàn gá tạm định vị phôi)",
+          en: "Tack weld",
+          rel_vi: "heften (đt: hàn đính)",
+          rel_en: "heften (v: to tack weld)",
+          ex_de: "Setze zuerst alle 20 Zentimeter einen stabilen Heftpunkt.",
+          ex_vi:
+            "Trước tiên hãy chấm một mối hàn đính chắc chắn cách nhau mỗi 20 cm.",
+          ex_en: "First place a solid tack weld every 20 centimeters.",
+        },
+        {
+          id: 44,
+          cat: "1.3",
+          de: "der Lichtbogen (-)",
+          ipa: "/deːɐ̯ ˈlɪçtˌboːɡn̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Hồ quang điện hàn",
+          en: "Welding arc",
+          rel_vi: "zünden (đt: mồi hồ quang)",
+          rel_en: "zünden (v: to strike an arc)",
+          ex_de: "Halte den Lichtbogen kurz und ruhig.",
+          ex_vi: "Hãy giữ hồ quang ngắn và ổn định.",
+          ex_en: "Keep the welding arc short and steady.",
+        },
+        {
+          id: 45,
+          cat: "1.3",
+          de: "die Stromstärke (Ampere)",
+          ipa: "/diː ˈʃtʁoːmˌʃtɛʁkə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Cường độ dòng điện hàn (Ampe)",
+          en: "Welding current / amperage",
+          rel_vi: "die Spannung (dt: điện áp Volt)",
+          rel_en: "die Spannung (n: voltage)",
+          ex_de: "Wenn die Stromstärke zu hoch ist, brennt das Blech durch.",
+          ex_vi: "Nếu cường độ dòng điện quá cao, tấm thép sẽ bị cháy thủng.",
+          ex_en:
+            "If the amperage is too high, the sheet metal will burn through.",
+        },
+        {
+          id: 46,
+          cat: "1.3",
+          de: "der Einbrand",
+          ipa: "/deːɐ̯ ˈaɪnˌbʁant/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Độ ngấu của mối hàn vào kim loại cơ bản",
+          en: "Weld penetration",
+          rel_vi: "einbrennen (đt: ngấu sâu)",
+          rel_en: "einbrennen (v: to penetrate)",
+          ex_de: "Ein guter Einbrand sorgt für hohe Festigkeit der Verbindung.",
+          ex_vi: "Độ ngấu tốt đảm bảo độ bền chắc cao cho mối nối.",
+          ex_en: "Good penetration ensures high strength of the joint.",
+        },
+        {
+          id: 47,
+          cat: "1.3",
+          de: "die Pore (-n) / die Porosität",
+          ipa: "/diː ˈpoːʁə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Rỗ khí trong mối hàn (khuyết tật lỗ rỗng li ti)",
+          en: "Gas pore / porosity (weld defect)",
+          rel_vi: "porös (tt: bị rỗ khí)",
+          rel_en: "porös (adj: porous)",
+          ex_de:
+            "Zu wenig Schutzgas oder Zugluft verursacht Poren in der Naht.",
+          ex_vi: "Thiếu khí bảo vệ hoặc gió lùa sẽ gây rỗ khí trong mối hàn.",
+          ex_en:
+            "Insufficient shielding gas or drafts cause pores in the weld seam.",
+        },
+        {
+          id: 48,
+          cat: "1.3",
+          de: "der Riss (-e)",
+          ipa: "/deːɐ̯ ʁɪs/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Vết nứt mối hàn (khuyết tật nghiêm trọng)",
+          en: "Weld crack (critical defect)",
+          rel_vi: "reißen (đt: bị nứt)",
+          rel_en: "reißen (v: to crack/tear)",
+          ex_de: "Risse in der Schweißnaht sind absolut unzulässig.",
+          ex_vi: "Các vết nứt trong mối hàn là tuyệt đối không được phép.",
+          ex_en: "Cracks in the weld seam are strictly unacceptable.",
+        },
+        {
+          id: 49,
+          cat: "1.3",
+          de: "der Bindefehler (-)",
+          ipa: "/deːɐ̯ ˈbɪndəˌfeːlɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Khuyết tật không ngấu / không bám dính kim loại",
+          en: "Lack of fusion / incomplete fusion",
+          rel_vi: "der Fehler (dt: lỗi/khuyết tật)",
+          rel_en: "der Fehler (n: defect/flaw)",
+          ex_de: "Bei zu geringer Energie entsteht leicht ein Bindefehler.",
+          ex_vi: "Khi nhiệt lượng quá thấp sẽ dễ phát sinh lỗi không ngấu.",
+          ex_en: "Lack of fusion easily occurs when heat input is too low.",
+        },
+        {
+          id: 50,
+          cat: "1.3",
+          de: "der Schlackeneinschluss (-e)",
+          ipa: "/deːɐ̯ ˈʃlakn̩ˌʔaɪnʃlʊs/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Khuyết tật ngậm xỉ bên trong mối hàn",
+          en: "Slag inclusion",
+          rel_vi: "die Schlacke (dt: xỉ hàn)",
+          rel_en: "die Schlacke (n: slag)",
+          ex_de:
+            "Entferne die Schlacke vollständig, damit kein Schlackeneinschluss entsteht.",
+          ex_vi: "Hãy làm sạch hết xỉ hàn để không gây ra lỗi ngậm xỉ.",
+          ex_en: "Remove all slag completely so no slag inclusion forms.",
+        },
+        {
+          id: 51,
+          cat: "1.3",
+          de: "die Einbrandkerbe (-n)",
+          ipa: "/diː ˈaɪnbʁantˌkɛʁbə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khuyết tật cháy cạnh / lẹm chân mối hàn",
+          en: "Undercut (weld toe groove defect)",
+          rel_vi: "die Kerbe (dt: vết lõm/rãnh khuyết)",
+          rel_en: "die Kerbe (n: notch/groove)",
+          ex_de:
+            "Achte am Rand der Naht darauf, dass keine Einbrandkerbe entsteht.",
+          ex_vi: "Chú ý ở mép đường hàn để không tạo ra vết cháy lẹm cạnh.",
+          ex_en: "Watch the edge of the weld seam so no undercut forms.",
+        },
+        {
+          id: 52,
+          cat: "1.3",
+          de: "der Schweißspritzer (-)",
+          ipa: "/deːɐ̯ ˈʃvaɪsˌʃpʁɪtsɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Hạt xỉ bắn tóe bám xung quanh mối hàn",
+          en: "Weld spatter",
+          rel_vi: "das Trennspray (dt: dung dịch xịt chống dính xỉ hàn)",
+          rel_en: "das Trennspray (n: anti-spatter spray)",
+          ex_de:
+            "Sprühe das Werkstück mit Trennspray ein, damit weniger Schweißspritzer haften.",
+          ex_vi:
+            "Hãy xịt dung dịch chống dính lên phôi để ít hạt xỉ bắn tóe bám vào.",
+          ex_en:
+            "Spray the workpiece with anti-spatter spray so less spatter sticks.",
+        },
+        {
+          id: 53,
+          cat: "1.3",
+          de: "der Verzug",
+          ipa: "/deːɐ̯ fɛɐ̯ˈtsuːk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Sự cong vênh, biến dạng nhiệt sau khi hàn",
+          en: "Thermal distortion / warping",
+          rel_vi: "sich verziehen (đt: bị cong vênh)",
+          rel_en: "sich verziehen (v: to warp/distort)",
+          ex_de:
+            "Durch richtiges Heften und symmetrisches Schweißen vermeidet man Verzug.",
+          ex_vi:
+            "Nhờ hàn đính đúng cách và hàn đối xứng sẽ tránh được biến dạng cong vênh.",
+          ex_en:
+            "Proper tacking and symmetrical welding prevent thermal distortion.",
+        },
+        {
+          id: 54,
+          cat: "1.3",
+          de: "der Luftspalt (-e) / das Spaltmaß",
+          ipa: "/deːɐ̯ ˈlʊftˌʃpalt/",
+          type_vi: "Danh từ (m./n.)",
+          type_en: "Noun (m./n.)",
+          vi: "Khe hở chân mối hàn",
+          en: "Root gap / joint clearance",
+          rel_vi: "der Spalt (dt: khe hở)",
+          rel_en: "der Spalt (n: gap)",
+          ex_de:
+            "Der Luftspalt zwischen den beiden Blechen soll 2 Millimeter betragen.",
+          ex_vi: "Khe hở giữa hai tấm thép phải đạt 2 mm.",
+          ex_en: "The root gap between the two plates should be 2 millimeters.",
+        },
+        {
+          id: 55,
+          cat: "1.3",
+          de: "die Sichtprüfung (VT)",
+          ipa: "/diː ˈzɪçtˌpʁyːfʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kiểm tra ngoại quan mối hàn bằng mắt thường & thước dưỡng",
+          en: "Visual Testing / Visual Weld Inspection (VT)",
+          rel_vi: "prüfen (đt: kiểm tra)",
+          rel_en: "prüfen (v: to inspect/test)",
+          ex_de:
+            "Nach dem Bürsten führen wir zuerst eine genaue Sichtprüfung durch.",
+          ex_vi:
+            "Sau khi đánh sạch, trước tiên chúng ta thực hiện kiểm tra ngoại quan kỹ lưỡng.",
+          ex_en:
+            "After brushing, we first perform a thorough visual inspection.",
+        },
+        {
+          id: 56,
+          cat: "1.3",
+          de: "die Schweißerprüfung (-en)",
+          ipa: "/diː ˈʃvaɪsɐˌpʁyːfʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kỳ thi cấp chứng chỉ tay nghề thợ hàn (theo chuẩn ISO 9606)",
+          en: "Welder qualification test / certification (ISO 9606)",
+          rel_vi: "das Schweißerzertifikat (dt: chứng chỉ thợ hàn)",
+          rel_en: "das Schweißerzertifikat (n: welder certificate)",
+          ex_de:
+            "Für den Einsatz im Stahlbau braucht man eine gültige Schweißerprüfung.",
+          ex_vi:
+            "Để làm việc trong kết cấu thép cần có chứng chỉ tay nghề thợ hàn còn hiệu lực.",
+          ex_en:
+            "To work in structural steel construction, you need a valid welder certification.",
+        },
+        {
+          id: 57,
+          cat: "1.4",
+          de: "der Schweißhelm (-e) (Automatikhelm)",
+          ipa: "/deːɐ̯ ˈʃvaɪsˌhɛlm/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Mũ hàn tự động tối kính (bảo vệ mắt & mặt khỏi tia hồ quang)",
+          en: "Auto-darkening welding helmet",
+          rel_vi: "abdunkeln (đt: tự động tối kính)",
+          rel_en: "abdunkeln (v: to darken/tint)",
+          ex_de:
+            "Prüfe vor dem Zünden die Batterie und Einstellung am Automatik-Schweißhelm.",
+          ex_vi:
+            "Trước khi mồi hồ quang hãy kiểm tra pin và độ tối kính của mũ hàn tự động.",
+          ex_en:
+            "Check the battery and shade setting on the auto-darkening helmet before striking an arc.",
+        },
+        {
+          id: 58,
+          cat: "1.4",
+          de: "die Schweißerhandschuhe (Pl.)",
+          ipa: "/diː ˈʃvaɪsɐˌhantʃuːə/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Găng tay da dài tay chịu nhiệt chuyên dụng cho thợ hàn",
+          en: "Heat-resistant leather welding gauntlets / gloves",
+          rel_vi: "hitzebeständig (tt: chịu nhiệt cao)",
+          rel_en: "hitzebeständig (adj: heat-resistant)",
+          ex_de:
+            "Trage immer lange Schweißerhandschuhe aus Leder gegen Hitze und Funken.",
+          ex_vi:
+            "Luôn đeo găng tay da dài tay của thợ hàn để chống nóng và tia lửa.",
+          ex_en:
+            "Always wear long leather welding gloves against heat and sparks.",
+        },
+        {
+          id: 59,
+          cat: "1.4",
+          de: "die Schweißerschürze (-n)",
+          ipa: "/diː ˈʃvaɪsɐˌʃʏʁtsə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tạp dề da bảo hộ chống tia lửa & bức xạ nhiệt",
+          en: "Leather welding apron",
+          rel_vi: "die Schutzkleidung (dt: quần áo bảo hộ)",
+          rel_en: "die Schutzkleidung (n: protective clothing)",
+          ex_de:
+            "Bei Überkopfarbeiten schützt die Lederschürze deine Arbeitskleidung.",
+          ex_vi:
+            "Khi hàn tư thế trần, tạp dề da bảo vệ quần áo bảo hộ của bạn.",
+          ex_en:
+            "During overhead welding, the leather apron protects your workwear.",
+        },
+        {
+          id: 60,
+          cat: "1.4",
+          de: "die flammhemmende Arbeitskleidung",
+          ipa: "/diː ˈflamhɛməndə ˈaʁbaɪtsˌklaɪdʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Quần áo bảo hộ chống cháy lan",
+          en: "Flame-retardant workwear",
+          rel_vi: "brennbar (tt: dễ cháy)",
+          rel_en: "brennbar (adj: flammable)",
+          ex_de:
+            "In der Schweißerei darf man nur flammhemmende Arbeitskleidung tragen.",
+          ex_vi:
+            "Trong xưởng hàn chỉ được phép mặc quần áo bảo hộ chống cháy lan.",
+          ex_en:
+            "Only flame-retardant workwear may be worn in the welding shop.",
+        },
+        {
+          id: 61,
+          cat: "1.4",
+          de: "die Sicherheitsschuhe (Pl.) (S3)",
+          ipa: "/diː ˈzɪçɐhaɪtsˌʃuːə/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Giày bảo hộ chống đinh, mũi thép & chịu nhiệt",
+          en: "S3 heat- and puncture-resistant safety boots",
+          rel_vi: "der Funkenflug (dt: tia lửa bắn tóe)",
+          rel_en: "der Funkenflug (n: flying sparks)",
+          ex_de:
+            "Gute Sicherheitsschuhe schützen die Füße vor herabfallendem Stahl und Funken.",
+          ex_vi:
+            "Giày bảo hộ tốt bảo vệ bàn chân khỏi thép rơi và tia lửa hàn.",
+          ex_en:
+            "Good safety boots protect your feet from falling steel and sparks.",
+        },
+        {
+          id: 62,
+          cat: "1.4",
+          de: "die Schutzbrille (-n)",
+          ipa: "/diː ˈʃʊtsˌbʁɪlə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kính bảo hộ trong suốt (bắt buộc đeo khi mài & gõ xỉ hàn)",
+          en: "Clear safety glasses (required when grinding & chipping slag)",
+          rel_vi: "die Schleifscheibe (dt: đá mài)",
+          rel_en: "die Schleifscheibe (n: grinding disc)",
+          ex_de:
+            "Setze beim Flexen und Schlackeabschlagen immer die klare Schutzbrille auf.",
+          ex_vi: "Khi mài máy và gõ xỉ hàn luôn đeo kính bảo hộ trong suốt.",
+          ex_en:
+            "Always put on clear safety glasses when grinding and chipping slag.",
+        },
+        {
+          id: 63,
+          cat: "1.4",
+          de: "der Gehörschutz",
+          ipa: "/deːɐ̯ ɡəˈhøːɐ̯ˌʃʊts/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Đồ bảo vệ thính giác / Chụp tai chống ồn",
+          en: "Hearing protection / ear defenders",
+          rel_vi: "der Lärm (dt: tiếng ồn lớn)",
+          rel_en: "der Lärm (n: loud noise)",
+          ex_de: "Beim Schleifen und Hämmern ist Gehörschutz Pflicht.",
+          ex_vi: "Khi mài và gõ búa bắt buộc phải đeo đồ bảo vệ thính giác.",
+          ex_en: "Hearing protection is mandatory when grinding and hammering.",
+        },
+        {
+          id: 64,
+          cat: "1.4",
+          de: "die Atemschutzmaske (-n)",
+          ipa: "/diː ˈaːtəmʃʊtsˌmaskə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Khẩu trang / Mặt nạ lọc khói hàn & bụi kim loại",
+          en: "Welding fume respirator mask",
+          rel_vi: "der Partikelfilter (dt: phin lọc bụi mịn/khói)",
+          rel_en: "der Partikelfilter (n: particulate filter)",
+          ex_de:
+            "Bei verzinktem Stahl schützt eine Atemschutzmaske vor giftigem Rauch.",
+          ex_vi:
+            "Khi hàn thép mạ kẽm, mặt nạ lọc khí bảo vệ bạn khỏi khói độc.",
+          ex_en:
+            "When welding galvanized steel, a respirator protects against toxic fumes.",
+        },
+        {
+          id: 65,
+          cat: "1.4",
+          de: "der Feuerlöscher (-)",
+          ipa: "/deːɐ̯ ˈfɔʏɐˌlœʃɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bình chữa cháy",
+          en: "Fire extinguisher",
+          rel_vi: "löschen (đt: dập lửa), der Brand (dt: đám cháy)",
+          rel_en: "löschen (v: to extinguish), der Brand (n: fire)",
+          ex_de:
+            "Jeder Schweißer muss wissen, wo der nächste Feuerlöscher hängt.",
+          ex_vi:
+            "Mọi thợ hàn đều phải biết bình chữa cháy gần nhất treo ở đâu.",
+          ex_en:
+            "Every welder must know where the nearest fire extinguisher is located.",
+        },
+        {
+          id: 66,
+          cat: "1.4",
+          de: "die Löschdecke (-n)",
+          ipa: "/diː ˈlœʃˌdɛkə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Chăn chống cháy / Tấm bạt dập lửa",
+          en: "Fire blanket / welding fire-retardant tarp",
+          rel_vi: "abdecken (đt: phủ kín dập lửa)",
+          rel_en: "abdecken (v: to cover/smother)",
+          ex_de:
+            "Mit einer Löschdecke kann man kleine Entstehungsbrände sofort ersticken.",
+          ex_vi:
+            "Bằng chăn chống cháy có thể dập tắt ngay các đám cháy nhỏ mới phát sinh.",
+          ex_en:
+            "Small incipient fires can be smothered immediately with a fire blanket.",
+        },
+        {
+          id: 67,
+          cat: "1.4",
+          de: "die Schweißerlaubnis (-se)",
+          ipa: "/diː ˈʃvaɪsʔɛɐ̯ˌlaʊpnɪs/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Giấy phép thi công hàn cắt (bắt buộc khi hàn ngoài xưởng có nguy cơ cháy)",
+          en: "Hot work / welding permit",
+          rel_vi: "die Brandwache (dt: người trực giám sát chống cháy)",
+          rel_en: "die Brandwache (n: fire watch)",
+          ex_de:
+            "Außerhalb der Werkstatt braucht man eine schriftliche Schweißerlaubnis.",
+          ex_vi:
+            "Bên ngoài khu vực xưởng cố định cần có giấy phép hàn cắt bằng văn bản.",
+          ex_en:
+            "Outside the permanent workshop, a written hot-work permit is required.",
+        },
+        {
+          id: 68,
+          cat: "1.4",
+          de: "die Verbrennungsgefahr (-en)",
+          ipa: "/diː fɛɐ̯ˈbʁɛnʊŋsɡəˌfaːɐ̯/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nguy cơ bỏng nhiệt (do phôi hàn còn nóng)",
+          en: "Burn hazard (hot workpieces)",
+          rel_vi: "heiß (tt: nóng), verbrennen (đt: bị bỏng)",
+          rel_en: "heiß (adj: hot), verbrennen (v: to burn)",
+          ex_de:
+            "Kennzeichne heiße Werkstücke deutlich wegen der Verbrennungsgefahr!",
+          ex_vi: "Hãy đánh dấu rõ các phôi hàn còn nóng vì nguy cơ gây bỏng!",
+          ex_en: "Mark hot workpieces clearly due to the burn hazard!",
+        },
+        {
+          id: 69,
+          cat: "1.5",
+          de: "schweißen",
+          ipa: "/ˈʃvaɪsn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Hàn kim loại",
+          en: "To weld",
+          rel_vi: "zusammenschweißen (đt: hàn ghép lại)",
+          rel_en: "zusammenschweißen (v: to weld together)",
+          ex_de: "Heute schweißen wir die Kopfplatten an die Stahlträger.",
+          ex_vi: "Hôm nay chúng ta hàn các bản mã đầu cột vào dầm thép.",
+          ex_en: "Today we are welding the end plates onto the steel beams.",
+        },
+        {
+          id: 70,
+          cat: "1.5",
+          de: "heften",
+          ipa: "/ˈhɛftn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Hàn đính / Hàn gá tạm",
+          en: "To tack weld",
+          rel_vi: "der Heftpunkt (dt: mối hàn đính)",
+          rel_en: "der Heftpunkt (n: tack weld)",
+          ex_de:
+            "Hefte das Bauteil zuerst an vier Stellen, bevor du durchschweißt.",
+          ex_vi: "Hãy hàn đính chi tiết ở bốn điểm trước khi hàn kín toàn bộ.",
+          ex_en:
+            "Tack weld the component at four spots first before welding it through.",
+        },
+        {
+          id: 71,
+          cat: "1.5",
+          de: "durchschweißen",
+          ipa: "/ˈdʊʁçˌʃvaɪsn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Hàn kín toàn bộ đường hàn / Hàn ngấu thấu",
+          en: "To weld continuously / achieve full penetration",
+          rel_vi: "die Naht (dt: đường hàn)",
+          rel_en: "die Naht (n: weld seam)",
+          ex_de:
+            "Nachdem der Polier die Maße geprüft hat, darfst du die Naht durchschweißen.",
+          ex_vi:
+            "Sau khi đốc công kiểm tra kích thước xong, bạn được phép hàn kín đường hàn.",
+          ex_en:
+            "After the supervisor checks the dimensions, you may weld the seam completely.",
+        },
+        {
+          id: 72,
+          cat: "1.5",
+          de: "zünden",
+          ipa: "/ˈtsʏndn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Mồi hồ quang hàn",
+          en: "To strike / ignite the welding arc",
+          rel_vi: "die Zündung (dt: sự mồi hồ quang)",
+          rel_en: "die Zündung (n: ignition/striking)",
+          ex_de: "Zünde den Lichtbogen immer direkt in der Schweißfuge.",
+          ex_vi: "Luôn mồi hồ quang trực tiếp bên trong rãnh hàn.",
+          ex_en: "Always strike the arc directly inside the weld groove.",
+        },
+        {
+          id: 73,
+          cat: "1.5",
+          de: "vorwärmen",
+          ipa: "/ˈfoːɐ̯ˌvɛʁmən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Gia nhiệt sơ bộ trước khi hàn (cho thép dày/thép hợp kim cao)",
+          en: "To preheat before welding",
+          rel_vi: "die Vorwärmtemperatur (dt: nhiệt độ gia nhiệt trước)",
+          rel_en: "die Vorwärmtemperatur (n: preheat temperature)",
+          ex_de:
+            "Dicker Stahl muss vor dem Schweißen auf 150 Grad vorgewärmt werden.",
+          ex_vi:
+            "Thép dày phải được gia nhiệt trước tới 150 độ C trước khi hàn.",
+          ex_en: "Thick steel must be preheated to 150 degrees before welding.",
+        },
+        {
+          id: 74,
+          cat: "1.5",
+          de: "abkühlen",
+          ipa: "/ˈapˌkyːlən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Làm nguội tự nhiên sau khi hàn",
+          en: "To cool down after welding",
+          rel_vi: "kalt (tt: nguội/lạnh)",
+          rel_en: "kalt (adj: cold/cool)",
+          ex_de: "Lass die Schweißnaht langsam an der Luft abkühlen.",
+          ex_vi: "Hãy để mối hàn nguội từ từ trong không khí.",
+          ex_en: "Let the weld seam cool down slowly in air.",
+        },
+        {
+          id: 75,
+          cat: "1.5",
+          de: "schleifen / entgraten",
+          ipa: "/ˈʃlaɪfn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Mài nhẵn / Mài ba-via sắc cạnh",
+          en: "To grind smooth / deburr sharp edges",
+          rel_vi: "der Grat (dt: ba-via/cạnh sắc)",
+          rel_en: "der Grat (n: burr/sharp edge)",
+          ex_de: "Entgrate alle scharfen Kanten nach dem Schneiden.",
+          ex_vi: "Hãy mài sạch mọi cạnh sắc ba-via sau khi cắt.",
+          ex_en: "Deburr all sharp edges after cutting.",
+        },
+        {
+          id: 76,
+          cat: "1.5",
+          de: "anfasen",
+          ipa: "/ˈanˌfaːzn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Vát mép chuẩn bị rãnh hàn (vát chữ V, X)",
+          en: "To bevel / chamfer plate edges for weld prep",
+          rel_vi: "die Fase (dt: mặt vát mép)",
+          rel_en: "die Fase (n: bevel/chamfer)",
+          ex_de: "Wir müssen die Blechkanten auf 30 Grad anfasen.",
+          ex_vi: "Chúng ta phải vát mép tấm thép một góc 30 độ.",
+          ex_en: "We have to bevel the plate edges to 30 degrees.",
+        },
+        {
+          id: 77,
+          cat: "1.5",
+          de: "ausrichten",
+          ipa: "/ˈaʊsˌʁɪçtn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Căn chỉnh thẳng hàng / vuông góc",
+          en: "To align / square up parts",
+          rel_vi: "der Winkel (dt: góc vuông)",
+          rel_en: "der Winkel (n: right angle/square)",
+          ex_de: "Richte die Bauteile genau im rechten Winkel aus.",
+          ex_vi: "Hãy căn chỉnh các chi tiết chính xác theo góc vuông.",
+          ex_en: "Align the components accurately at a right angle.",
+        },
+        {
+          id: 78,
+          cat: "1.5",
+          de: "festspannen",
+          ipa: "/ˈfɛstˌʃpanən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Kẹp chặt cố định phôi trên bàn hàn",
+          en: "To clamp down tightly",
+          rel_vi: "die Schraubzwinge (dt: cảo kẹp)",
+          rel_en: "die Schraubzwinge (n: clamp)",
+          ex_de: "Spanne das Werkstück fest ein, damit es sich nicht verzieht.",
+          ex_vi: "Hãy kẹp chặt phôi hàn để nó không bị cong vênh.",
+          ex_en: "Clamp the workpiece tightly so it doesn't warp.",
+        },
+        {
+          id: 79,
+          cat: "1.5",
+          de: "reinigen",
+          ipa: "/ˈʁaɪnɪɡn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Làm sạch dầu mỡ, gỉ sét trước và sau khi hàn",
+          en: "To clean (oil, rust, mill scale)",
+          rel_vi: "sauber (tt: sạch sẽ)",
+          rel_en: "sauber (adj: clean)",
+          ex_de: "Reinige die Schweißstelle gründlich von Öl, Rost und Farbe.",
+          ex_vi: "Hãy làm sạch vị trí hàn kỹ lưỡng khỏi dầu mỡ, gỉ sét và sơn.",
+          ex_en: "Clean the weld zone thoroughly of oil, rust, and paint.",
+        },
+        {
+          id: 80,
+          cat: "1.5",
+          de: "nachbessern / ausschleifen",
+          ipa: "/ˈnaːxˌbɛsɐn/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Sửa chữa mối hàn lỗi / Mài bỏ khuyết tật để hàn lại",
+          en: "To repair / grind out a weld defect and reweld",
+          rel_vi: "die Nacharbeit (dt: việc sửa lại)",
+          rel_en: "die Nacharbeit (n: rework/repair)",
+          ex_de: "Diese Pore müssen wir ausschleifen und sauber nachschweißen.",
+          ex_vi: "Lỗ rỗ khí này chúng ta phải mài bỏ và hàn đắp lại sạch sẽ.",
+          ex_en: "We must grind out this pore and cleanly reweld it.",
+        },
+        {
+          id: 81,
+          cat: "1.5",
+          de: "gleichmäßig",
+          ipa: "/ˈɡlaɪçˌmɛːsɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Đều đặn, mượt mà (vảy hàn đều)",
+          en: "Uniform / steady / even",
+          rel_vi: "ruhig (tt: ổn định/đều tay)",
+          rel_en: "ruhig (adj: steady/calm)",
+          ex_de: "Führe den Brenner langsam und gleichmäßig über die Naht.",
+          ex_vi:
+            "Hãy di chuyển súng hàn chậm rãi và đều tay dọc theo đường hàn.",
+          ex_en: "Move the torch slowly and evenly along the seam.",
+        },
+        {
+          id: 82,
+          cat: "1.5",
+          de: "dicht",
+          ipa: "/dɪçt/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Kín khít (không rò rỉ khí/chất lỏng)",
+          en: "Pressure-tight / leak-proof",
+          rel_vi: "die Dichtheitsprüfung (dt: kiểm tra độ kín)",
+          rel_en: "die Dichtheitsprüfung (n: leak test)",
+          ex_de: "Die Rohrnaht muss absolut druckdicht geschweißt sein.",
+          ex_vi: "Mối hàn ống phải được hàn kín áp lực tuyệt đối.",
+          ex_en: "The pipe weld must be welded completely pressure-tight.",
+        },
+        {
+          id: 83,
+          cat: "1.5",
+          de: "verzogen",
+          ipa: "/fɛɐ̯ˈtsoːɡn̩/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Bị cong vênh, biến dạng do nhiệt",
+          en: "Warped / distorted by heat",
+          rel_vi: "der Verzug (dt: độ cong vênh)",
+          rel_en: "der Verzug (n: distortion)",
+          ex_de: "Ohne Heftnähte wäre das dünne Blech komplett verzogen.",
+          ex_vi:
+            "Nếu không có mối hàn đính thì tấm thép mỏng đã bị cong vênh hoàn toàn rồi.",
+          ex_en:
+            "Without tack welds, the thin sheet metal would be completely warped.",
+        },
+        {
+          id: 84,
+          cat: "1.5",
+          de: "heiß",
+          ipa: "/haɪs/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Rất nóng",
+          en: "Hot",
+          rel_vi: "die Hitze (dt: sức nóng)",
+          rel_en: "die Hitze (n: heat)",
+          ex_de: "Vorsicht, das frisch geschweißte Rohr ist noch extrem heiß!",
+          ex_vi: "Cẩn thận, ống thép vừa mới hàn vẫn còn cực kỳ nóng!",
+          ex_en: "Careful, the freshly welded pipe is still extremely hot!",
+        },
+        {
+          id: 85,
+          cat: "1.5",
+          de: "sauber",
+          ipa: "/ˈzaʊbɐ/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Sạch sẽ, không lẫn xỉ hay bắn tóe",
+          en: "Clean (free of slag and spatter)",
+          rel_vi: "die Sauberkeit (dt: sự sạch sẽ)",
+          rel_en: "die Sauberkeit (n: cleanliness)",
+          ex_de:
+            "Eine saubere Nahtvorbereitung ist die halbe Miete beim Schweißen.",
+          ex_vi:
+            "Chuẩn bị mép hàn sạch sẽ đã quyết định một nửa thành công khi hàn.",
+          ex_en: "Clean joint preparation is half the battle in welding.",
+        },
+        {
+          id: 86,
+          cat: "1.5",
+          de: "rissfrei",
+          ipa: "/ˈʁɪsˌfʁaɪ/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Không có vết nứt",
+          en: "Crack-free",
+          rel_vi: "der Riss (dt: vết nứt)",
+          rel_en: "der Riss (n: crack)",
+          ex_de:
+            "Die Prüfung bestätigt, dass alle Nähte komplett rissfrei sind.",
+          ex_vi:
+            "Kết quả kiểm tra xác nhận tất cả các mối hàn đều hoàn toàn không có vết nứt.",
+          ex_en:
+            "The inspection confirms that all welds are completely crack-free.",
+        },
+      ];
+
+      const PHRASES_DATA = [
+        {
+          id: 1,
+          cat: "2.1",
+          de: "Welche Bauteile muss ich heute heften und schweißen?",
+          vi: "Hôm nay tôi phải hàn đính và hàn hoàn thiện những chi tiết nào?",
+          en: "Which components do I need to tack and weld today?",
+        },
+        {
+          id: 2,
+          cat: "2.1",
+          de: "Welches Schweißverfahren nehmen wir hier: MAG oder WIG?",
+          vi: "Ở đây chúng ta dùng phương pháp hàn nào: MAG hay TIG?",
+          en: "Which welding process are we using here: MAG or TIG?",
+        },
+        {
+          id: 3,
+          cat: "2.1",
+          de: "Welches Schutzgas und welchen Schweißdraht brauchen wir für dieses Material?",
+          vi: "Chúng ta cần loại khí bảo vệ và dây hàn nào cho vật liệu này?",
+          en: "Which shielding gas and welding wire do we need for this material?",
+        },
+        {
+          id: 4,
+          cat: "2.1",
+          de: "Wie hoch soll ich die Stromstärke und den Drahtvorschub einstellen?",
+          vi: "Tôi nên chỉnh cường độ dòng điện và tốc độ cấp dây ở mức bao nhiêu?",
+          en: "How high should I set the amperage and wire feed speed?",
+        },
+        {
+          id: 5,
+          cat: "2.1",
+          de: "Wie groß muss das a-Maß bei dieser Kehlnaht sein?",
+          vi: "Chiều cao cạnh a của mối hàn góc này phải là bao nhiêu?",
+          en: "How large must the throat thickness (a-measure) be for this fillet weld?",
+        },
+        {
+          id: 6,
+          cat: "2.1",
+          de: "Müssen wir die Blechkanten vorher anfasen?",
+          vi: "Chúng ta có cần vát mép các tấm thép trước không?",
+          en: "Do we need to bevel the plate edges beforehand?",
+        },
+        {
+          id: 7,
+          cat: "2.1",
+          de: "Wie groß soll der Luftspalt zwischen den Teilen sein?",
+          vi: "Khe hở giữa các chi tiết phải để bao nhiêu milimet?",
+          en: "How wide should the root gap between the parts be?",
+        },
+        {
+          id: 8,
+          cat: "2.1",
+          de: "Müssen wir den dicken Stahl vor dem Schweißen vorwärmen?",
+          vi: "Chúng ta có cần gia nhiệt sơ bộ thép dày trước khi hàn không?",
+          en: "Do we need to preheat the thick steel before welding?",
+        },
+        {
+          id: 9,
+          cat: "2.1",
+          de: "Können Sie mir dieses Schweißsymbol auf der Zeichnung erklären?",
+          vi: "Anh/Chị có thể giải thích ký hiệu mối hàn này trên bản vẽ giúp tôi không?",
+          en: "Could you explain this welding symbol on the drawing to me?",
+        },
+        {
+          id: 10,
+          cat: "2.2",
+          de: "Ich habe alle Schweißstellen geschliffen und gereinigt.",
+          vi: "Tôi đã mài sạch và vệ sinh toàn bộ các vị trí hàn rồi.",
+          en: "I have ground and cleaned all weld zones.",
+        },
+        {
+          id: 11,
+          cat: "2.2",
+          de: "Die Bauteile sind ausgerichtet und mit Schraubzwingen festgespannt.",
+          vi: "Các chi tiết đã được căn chỉnh thẳng và kẹp chặt bằng cảo rồi.",
+          en: "The components are aligned and clamped down tightly.",
+        },
+        {
+          id: 12,
+          cat: "2.2",
+          de: "Ich bin mit dem Heften fertig. Können Sie die Maße vor dem Durchschweißen prüfen?",
+          vi: "Tôi đã hàn đính xong. Anh/Chị có thể kiểm tra kích thước trước khi tôi hàn kín không?",
+          en: "I am finished tacking. Can you check the dimensions before I weld through?",
+        },
+        {
+          id: 13,
+          cat: "2.2",
+          de: "Die Wurzellage ist fertig und sauber gebürstet.",
+          vi: "Lớp hàn lót đáy đã xong và được đánh sạch bằng bàn chải sắt rồi.",
+          en: "The root pass is done and brushed clean.",
+        },
+        {
+          id: 14,
+          cat: "2.2",
+          de: "Die Gasflasche ist fast leer, ich wechsle sie schnell aus.",
+          vi: "Bình khí hàn gần hết rồi, tôi sẽ thay bình mới ngay.",
+          en: "The gas cylinder is almost empty; I'll swap it out quickly.",
+        },
+        {
+          id: 15,
+          cat: "2.2",
+          de: "Die Drahtrolle im Schweißgerät ist zu Ende, ich lege eine neue ein.",
+          vi: "Cuộn dây hàn trong máy đã hết, tôi đang lắp cuộn mới vào.",
+          en: "The wire spool in the welder is empty; I'm putting in a new one.",
+        },
+        {
+          id: 16,
+          cat: "2.2",
+          de: "Ich brauche neue Stromdüsen, eine Gasdüse und Trennspray.",
+          vi: "Tôi cần thêm bép hàn mới, một chụp khí và bình xịt chống dính xỉ.",
+          en: "I need new contact tips, a gas nozzle, and anti-spatter spray.",
+        },
+        {
+          id: 17,
+          cat: "2.2",
+          de: "Alle Schweißnähte an diesem Träger sind fertig geschweißt und geputzt.",
+          vi: "Tất cả các đường hàn trên dầm thép này đã được hàn xong và làm sạch rồi.",
+          en: "All welds on this beam are finished and cleaned up.",
+        },
+        {
+          id: 18,
+          cat: "2.2",
+          de: "Ich habe das a-Maß mit der Schweißnahtlehre kontrolliert, alles passt.",
+          vi: "Tôi đã kiểm tra chiều cao cạnh a bằng thước dưỡng mối hàn, mọi thứ đều đạt chuẩn.",
+          en: "I checked the throat thickness with the weld gauge; everything fits spec.",
+        },
+        {
+          id: 19,
+          cat: "2.3",
+          de: "Hier gibt es ein paar Poren in der Naht, ich schleife sie aus und schweiße nach.",
+          vi: "Chỗ này có vài lỗ rỗ khí trong đường hàn, tôi sẽ mài bỏ và hàn đắp lại.",
+          en: "There are a few pores in the seam here; I'll grind them out and reweld.",
+        },
+        {
+          id: 20,
+          cat: "2.3",
+          de: "Der Drahtvorschub stockt, ich muss die Stromdüse reinigen oder wechseln.",
+          vi: "Dây hàn chạy bị khựng, tôi phải vệ sinh hoặc thay bép hàn.",
+          en: "The wire feed is stuttering; I need to clean or replace the contact tip.",
+        },
+        {
+          id: 21,
+          cat: "2.3",
+          de: "Bitte die Absauganlage einschalten, es entsteht viel Schweißrauch!",
+          vi: "Vui lòng bật hệ thống hút khói lên, đang có nhiều khói hàn!",
+          en: "Please turn on the fume extractor; a lot of welding smoke is building up!",
+        },
+        {
+          id: 22,
+          cat: "2.3",
+          de: "Achtung, bitte nicht hineinschauen, ich zünde gleich den Lichtbogen!",
+          vi: "Chú ý, xin đừng nhìn thẳng vào, tôi sắp mồi hồ quang hàn!",
+          en: "Watch out, please don't look directly at it—I'm about to strike the arc!",
+        },
+        {
+          id: 23,
+          cat: "2.3",
+          de: "Bitte den Schweißvorhang zuziehen, damit niemand geblendet wird.",
+          vi: "Vui lòng kéo rèm chắn tia hàn lại để không ai bị chói mắt.",
+          en: "Please pull the welding curtain closed so nobody gets arc-flashed.",
+        },
+        {
+          id: 24,
+          cat: "2.3",
+          de: "Vorsicht, das Werkstück hier ist frisch geschweißt und noch sehr heiß!",
+          vi: "Cẩn thận, phôi hàn ở đây vừa mới hàn xong và vẫn còn rất nóng!",
+          en: "Careful, this workpiece was just welded and is still very hot!",
+        },
+        {
+          id: 25,
+          cat: "2.3",
+          de: "Trage beim Flexen immer Schutzbrille und Gehörschutz!",
+          vi: "Khi mài bằng máy cắt cầm tay luôn đeo kính bảo hộ và chụp tai chống ồn!",
+          en: "Always wear safety glasses and hearing protection when grinding!",
+        },
+        {
+          id: 26,
+          cat: "2.3",
+          de: "Prüfe bitte, ob die Gasflasche fest mit der Kette gesichert ist.",
+          vi: "Hãy kiểm tra xem bình khí hàn đã được xích cố định chắc chắn chưa.",
+          en: "Please check whether the gas cylinder is securely chained.",
+        },
+        {
+          id: 27,
+          cat: "2.3",
+          de: "Haben wir eine schriftliche Schweißerlaubnis und einen Feuerlöscher für diese Stelle?",
+          vi: "Chúng ta đã có giấy phép hàn cắt và bình chữa cháy cho vị trí này chưa?",
+          en: "Do we have a written hot-work permit and a fire extinguisher for this spot?",
+        },
+        {
+          id: 28,
+          cat: "2.3",
+          de: "Können Sie die Schweißnaht bitte zur Sichtprüfung kontrollieren?",
+          vi: "Anh/Chị có thể kiểm tra ngoại quan mối hàn giúp tôi được không?",
+          en: "Could you please check the weld seam for visual inspection?",
+        },
+        {
+          id: 29,
+          cat: "2.4",
+          de: "Guten Morgen, Kollegen!",
+          vi: "Chào buổi sáng anh em đồng nghiệp!",
+          en: "Good morning, colleagues!",
+        },
+        {
+          id: 30,
+          cat: "2.4",
+          de: "Schönen Feierabend!",
+          vi: "Chúc tan ca vui vẻ!",
+          en: "Have a great evening after work!",
+        },
+        {
+          id: 31,
+          cat: "2.4",
+          de: "Können Sie das bitte etwas langsamer erklären?",
+          vi: "Anh/Chị có thể giải thích chậm lại một chút được không?",
+          en: "Could you please explain that a little more slowly?",
+        },
+        {
+          id: 32,
+          cat: "2.4",
+          de: "Ich habe das nicht ganz verstanden. Können Sie es mir auf der Zeichnung zeigen?",
+          vi: "Tôi chưa hiểu rõ lắm. Anh/Chị có thể chỉ cho tôi trên bản vẽ được không?",
+          en: "I didn't quite understand that. Could you show me on the drawing?",
+        },
+        {
+          id: 33,
+          cat: "2.4",
+          de: "Alles klar, erledige ich sofort.",
+          vi: "Rõ rồi, tôi sẽ làm ngay.",
+          en: "All clear, I will take care of that right away.",
+        },
+        {
+          id: 34,
+          cat: "2.4",
+          de: "Kannst du mir bitte kurz helfen, diesen schweren Träger zu wenden?",
+          vi: "Bạn giúp tôi một tay lật thanh dầm nặng này được không?",
+          en: "Can you briefly help me flip this heavy beam?",
+        },
+        {
+          id: 35,
+          cat: "2.4",
+          de: "Kannst du das Blech kurz festhalten, während ich den ersten Heftpunkt setze?",
+          vi: "Bạn giữ giúp tấm thép một chút trong lúc tôi chấm mối hàn đính đầu tiên nhé?",
+          en: "Can you hold the plate steady briefly while I place the first tack weld?",
+        },
+        {
+          id: 36,
+          cat: "2.4",
+          de: "Wann machen wir Frühstückspause oder Mittagspause?",
+          vi: "Khi nào chúng ta nghỉ ăn sáng hoặc nghỉ trưa?",
+          en: "When do we take our breakfast break or lunch break?",
+        },
+      ];
+
+      const DIALOGUES_DATA = [
+        {
+          id: 1,
+          tab_vi: "Hội thoại 1: Đầu ca & Bản vẽ",
+          tab_en: "Dialogue 1: Shift & Symbols",
+          title_vi:
+            "Hội thoại 1: Nhận nhiệm vụ đầu ca & Đọc ký hiệu bản vẽ kết cấu hàn",
+          title_en:
+            "Dialogue 1: Shift Briefing & Reading Structural Weld Symbols",
+          context_vi:
+            "Đầu giờ sáng tại xưởng cơ khí kết cấu thép, thợ hàn (Đức) trao đổi với tổ trưởng (Schweißaufsicht / Meister) về chi tiết cần hàn và thông số WPS.",
+          context_en:
+            "Early morning in the structural steel workshop: welder (Đức) discusses components and WPS parameters with the welding supervisor (Meister).",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Guten Morgen, Meister! Welche Bauteile soll ich heute schweißen?",
+              vi: "Chào buổi sáng tổ trưởng! Hôm nay em phải hàn những chi tiết nào ạ?",
+              en: "Good morning, Meister! Which components should I weld today?",
+            },
+            {
+              role: "partner",
+              name_vi: "Meister (Tổ trưởng hàn)",
+              name_en: "Meister (Supervisor)",
+              de: "Guten Morgen, Đức! Heute schweißt du die Kopfplatten an diese fünf Doppel-T-Träger. Schau mal hier in die Schweißzeichnung.",
+              vi: "Chào buổi sáng Đức! Hôm nay cậu hàn các bản mã đầu cột vào năm thanh dầm chữ I này. Nhìn vào bản vẽ kết cấu hàn ở đây nhé.",
+              en: "Good morning, Đức! Today you're welding the end plates onto these five I-beams. Look here in the welding drawing.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Alles klar. Welches Verfahren und welches a-Maß brauchen wir laut Zeichnung?",
+              vi: "Em rõ rồi. Theo bản vẽ thì chúng ta dùng phương pháp hàn nào và chiều cao cạnh a bao nhiêu ạ?",
+              en: "All clear. Which process and throat thickness (a-measure) do we need according to the drawing?",
+            },
+            {
+              role: "partner",
+              name_vi: "Meister (Tổ trưởng hàn)",
+              name_en: "Meister (Supervisor)",
+              de: "Wir arbeiten mit MAG-Schweißen und Mischgas. Die Kehlnaht rundherum braucht ein a-Maß von 6 Millimetern.",
+              vi: "Chúng ta dùng hàn MAG với khí trộn. Đường hàn góc xung quanh yêu cầu cạnh a dày 6 mm.",
+              en: "We are using MAG welding and mixed gas. The fillet weld all around needs a 6-millimeter throat thickness.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Verstanden. Soll ich die Kanten vorher mit dem Winkelschleifer blank schleifen?",
+              vi: "Em hiểu rồi. Em có cần mài sạch sáng bóng các mép hàn bằng máy mài góc trước không ạ?",
+              en: "Understood. Should I grind the edges down to bright metal with the angle grinder beforehand?",
+            },
+            {
+              role: "partner",
+              name_vi: "Meister (Tổ trưởng hàn)",
+              name_en: "Meister (Supervisor)",
+              de: "Ja, unbedingt! Schleife Rost und Zunder sauber ab, richte die Platte im rechten Winkel aus und hefte sie an vier Punkten.",
+              vi: "Có, nhất định rồi! Mài sạch gỉ sét và vảy cán thép, căn chỉnh bản mã vuông góc rồi hàn đính ở bốn điểm nhé.",
+              en: "Yes, definitely! Grind off rust and mill scale cleanly, align the plate at a right angle, and tack it at four spots.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Super, ich bereite die Werkstücke sofort auf dem Schweißtisch vor!",
+              vi: "Tuyệt vời, em đi chuẩn bị phôi trên bàn gá hàn ngay đây ạ!",
+              en: "Awesome, I'll prepare the workpieces on the welding table right away!",
+            },
+          ],
+        },
+        {
+          id: 2,
+          tab_vi: "Hội thoại 2: Máy MAG & Khí hàn",
+          tab_en: "Dialogue 2: MAG Setup & Gas",
+          title_vi:
+            "Hội thoại 2: Cài đặt thông số máy hàn MAG & Thay cuộn dây hàn / bình khí",
+          title_en:
+            "Dialogue 2: Setting Up the MAG Welder & Replacing Wire / Gas",
+          context_vi:
+            "Trong lúc hàn, cuộn dây hàn hết và bình khí bảo vệ báo sắp cạn, Đức trao đổi với đồng nghiệp và chỉnh lại thông số máy.",
+          context_en:
+            "During welding, the wire spool runs out and the gas cylinder runs low; Đức checks with a colleague and sets the machine.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Entschuldigung, Kollege, mein Schutzgas ist fast leer und die Drahtrolle im Schweißgerät ist zu Ende. Wo liegt Nachschub?",
+              vi: "Xin lỗi đồng nghiệp, khí bảo vệ của tôi gần hết và cuộn dây hàn trong máy cũng hết rồi. Vật tư bổ sung để ở đâu vậy?",
+              en: "Excuse me, buddy, my shielding gas is almost empty and the wire spool in the welder is out. Where are the replacements?",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Neue Rollen Schweißdraht mit 1,2 Millimeter findest du im Regal neben der Schweißaufsicht. Volle Gasflaschen stehen draußen im Gaslager.",
+              vi: "Cuộn dây hàn mới loại 1,2 mm cậu tìm ở kệ cạnh phòng giám sát hàn. Bình khí đầy để ở kho khí ngoài kia.",
+              en: "New 1.2-millimeter wire spools are on the shelf next to the welding office. Full gas cylinders are outside in the gas storage.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Danke! Soll ich auch gleich eine neue Stromdüse einsetzen? Der Draht lief vorhin etwas unruhig.",
+              vi: "Cảm ơn cậu! Tôi có nên thay luôn bép hàn mới không? Lúc nãy dây chạy hơi bị khựng.",
+              en: "Thanks! Should I also put in a new contact tip right away? The wire was feeding a bit unevenly earlier.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Ja, mach das! Reinige auch die Gasdüse mit Trennspray und prüfe am Durchflussmesser, dass 14 Liter pro Minute eingestellt sind.",
+              vi: "Có, thay luôn đi! Vệ sinh cả chụp khí với dung dịch chống dính và kiểm tra đồng hồ lưu lượng xem đã chỉnh ở mức 14 lít/phút chưa nhé.",
+              en: "Yes, do that! Clean the gas nozzle with anti-spatter spray too and check the flowmeter to make sure it's set to 14 liters per minute.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Alles klar, ich wechsle jetzt Gasflasche und Drahtrolle und mache eine kurze Probenaht.",
+              vi: "Rõ rồi, tôi đi thay bình khí và cuộn dây hàn rồi hàn thử một đường ngắn ngay.",
+              en: "All clear, I'll swap the gas cylinder and wire spool now and run a quick test bead.",
+            },
+          ],
+        },
+        {
+          id: 3,
+          tab_vi: "Hội thoại 3: Hàn đính & Hàn kín",
+          tab_en: "Dialogue 3: Tacking & Full Weld",
+          title_vi:
+            "Hội thoại 3: Kiểm tra kích thước sau khi hàn đính trước khi hàn kín (Durchschweißen)",
+          title_en:
+            "Dialogue 3: Dimensional Check After Tacking Before Full Welding",
+          context_vi:
+            "Sau khi căn chỉnh và hàn đính xong các chi tiết trên bàn gá, Đức mời tổ trưởng kiểm tra kích thước trước khi hàn hoàn thiện.",
+          context_en:
+            "After aligning and tacking the components on the welding table, Đức asks the supervisor to inspect dimensions before full welding.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Meister, haben Sie kurz Zeit? Ich habe alle fünf Träger ausgerichtet und geheftet. Können Sie die Maße vor dem Durchschweißen prüfen?",
+              vi: "Tổ trưởng ơi, anh có chút thời gian không ạ? Em đã căn chỉnh và hàn đính xong cả năm thanh dầm rồi. Anh kiểm tra kích thước trước khi em hàn kín được không ạ?",
+              en: "Meister, do you have a moment? I've aligned and tacked all five beams. Could you check the dimensions before I weld them through?",
+            },
+            {
+              role: "partner",
+              name_vi: "Meister (Tổ trưởng hàn)",
+              name_en: "Meister (Supervisor)",
+              de: "Klar, schauen wir mal. Die Winkel stimmen genau und der Luftspalt passt auch. Hast du die Bauteile gut festgespannt?",
+              vi: "Được chứ, để xem nào. Các góc vuông chuẩn xác và khe hở cũng đạt rồi. Cậu đã kẹp chặt các chi tiết chưa?",
+              en: "Sure, let's take a look. The angles are spot-on and the root gap fits too. Did you clamp the parts tightly?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Ja, alle Schraubzwingen sind fest angezogen, damit kein Verzug entsteht.",
+              vi: "Dạ rồi, tất cả các cảo kẹp đều đã siết chặt để không bị biến dạng cong vênh ạ.",
+              en: "Yes, all screw clamps are tightened firmly so no distortion occurs.",
+            },
+            {
+              role: "partner",
+              name_vi: "Meister (Tổ trưởng hàn)",
+              name_en: "Meister (Supervisor)",
+              de: "Sehr gut! Denke daran, symmetrisch zu schweißen: erst eine Seite, dann die gegenüberliegende Seite.",
+              vi: "Rất tốt! Nhớ hàn đối xứng nhé: hàn một bên trước, sau đó hàn phía đối diện.",
+              en: "Very good! Remember to weld symmetrically: one side first, then the opposite side.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Verstanden, ich schalte jetzt die Absauganlage ein und lege los!",
+              vi: "Em hiểu rồi, em bật hệ thống hút khói lên và bắt đầu ngay đây ạ!",
+              en: "Understood, I'll turn on the fume extractor now and get started!",
+            },
+          ],
+        },
+        {
+          id: 4,
+          tab_vi: "Hội thoại 4: Hàn TIG ống Inox",
+          tab_en: "Dialogue 4: TIG Stainless Pipe",
+          title_vi:
+            "Hội thoại 4: Hàn TIG (WIG) ống thép không gỉ & Chuẩn bị vát mép",
+          title_en:
+            "Dialogue 4: TIG (WIG) Welding Stainless Steel Pipes & Bevel Prep",
+          context_vi:
+            "Đức chuyển sang hàn ống thép không gỉ bằng phương pháp TIG và hỏi tổ trưởng về quy cách vát mép và kim hàn.",
+          context_en:
+            "Đức switches to TIG welding stainless steel pipes and asks the supervisor about beveling and amperage.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Für diese Edelstahlrohre nehmen wir das WIG-Schweißen mit reinem Argon, richtig?",
+              vi: "Đối với các ống thép không gỉ này chúng ta dùng phương pháp hàn TIG với khí Argon tinh khiết đúng không anh?",
+              en: "For these stainless steel pipes, we use TIG welding with pure argon, right?",
+            },
+            {
+              role: "partner",
+              name_vi: "Meister (Tổ trưởng hàn)",
+              name_en: "Meister (Supervisor)",
+              de: "Genau. Schleife die Wolframelektrode vorher spitz an und prüfe, ob die Rohrenden sauber angefast sind.",
+              vi: "Đúng vậy. Mài nhọn đầu kim hàn Vonfram trước và kiểm tra xem các đầu ống đã được vát mép sạch sẽ chưa.",
+              en: "Exactly. Grind the tungsten electrode to a point beforehand and check that the pipe ends are cleanly beveled.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Die V-Naht ist schon vorbereitet und mit Edelstahl-Drahtbürste gereinigt. Wie hoch stelle ich den Strom ein?",
+              vi: "Mối hàn chữ V đã chuẩn bị xong và đánh sạch bằng bàn chải inox rồi ạ. Em chỉnh dòng điện bao nhiêu ạ?",
+              en: "The V-groove is already prepared and cleaned with a stainless steel wire brush. What current should I set?",
+            },
+            {
+              role: "partner",
+              name_vi: "Meister (Tổ trưởng hàn)",
+              name_en: "Meister (Supervisor)",
+              de: "Für die Wurzellage reichen etwa 85 Ampere, damit du sauber durchschweißen kannst. Für die Decklage gehst du dann auf 110 Ampere hoch.",
+              vi: "Cho lớp hàn lót đáy thì khoảng 85 Ampe là đủ để cậu hàn ngấu thấu sạch sẽ. Đến lớp hàn phủ bề mặt thì tăng lên 110 Ampe.",
+              en: "For the root pass, about 85 amps is enough so you can penetrate cleanly. Then go up to 110 amps for the cap pass.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Alles klar, danke für die genaue Erklärung!",
+              vi: "Em rõ rồi, cảm ơn anh đã giải thích chi tiết ạ!",
+              en: "All clear, thanks for the detailed explanation!",
+            },
+          ],
+        },
+        {
+          id: 5,
+          tab_vi: "Hội thoại 5: Kiểm tra & Sửa lỗi",
+          tab_en: "Dialogue 5: Inspection & Repair",
+          title_vi:
+            "Hội thoại 5: Kiểm tra chất lượng mối hàn & Xử lý lỗi rỗ khí / xỉ hàn",
+          title_en: "Dialogue 5: Weld Quality Inspection & Repairing Porosity",
+          context_vi:
+            "Sau khi hàn xong, tổ trưởng kiểm tra ngoại quan mối hàn bằng thước dưỡng và hướng dẫn sửa một điểm bị rỗ khí nhỏ.",
+          context_en:
+            "After welding, the supervisor checks the weld visually with a weld gauge and instructs how to repair minor porosity.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Ich bin mit allen Schweißnähten fertig und habe sie gründlich abgebürstet. Können Sie bitte die Sichtprüfung machen?",
+              vi: "Em đã hàn xong tất cả các đường hàn và đánh sạch kỹ lưỡng rồi ạ. Anh kiểm tra ngoại quan giúp em được không ạ?",
+              en: "I'm finished with all welds and have brushed them thoroughly. Could you please do the visual inspection?",
+            },
+            {
+              role: "partner",
+              name_vi: "Meister (Tổ trưởng hàn)",
+              name_en: "Meister (Supervisor)",
+              de: "Schauen wir mit der Schweißnahtlehre nach. Das a-Maß von 6 Millimetern stimmt überall und es gibt keine Einbrandkerben.",
+              vi: "Để kiểm tra bằng thước dưỡng mối hàn nào. Cạnh a 6 mm đạt chuẩn ở mọi chỗ và không có vết cháy lẹm cạnh.",
+              en: "Let's check with the weld gauge. The 6-millimeter throat thickness is right everywhere and there is no undercut.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Prima! Passt alles für die Abnahme?",
+              vi: "Tuyệt quá! Mọi thứ đều đạt để nghiệm thu chứ ạ?",
+              en: "Great! Is everything good for sign-off?",
+            },
+            {
+              role: "partner",
+              name_vi: "Meister (Tổ trưởng hàn)",
+              name_en: "Meister (Supervisor)",
+              de: "Fast alles. Schau mal hier am Ende der Naht: Dort sind zwei kleine Poren. Schleife diese Stelle kurz mit dem Winkelschleifer aus und schweiße sie sauber nach.",
+              vi: "Gần như xong hết rồi. Nhìn chỗ cuối đường hàn này xem: Ở đó có hai lỗ rỗ khí nhỏ. Cậu mài bỏ nhanh chỗ này bằng máy mài góc rồi hàn đắp lại cho sạch nhé.",
+              en: "Almost everything. Look here at the end of the seam: there are two small pores. Briefly grind out that spot with the angle grinder and reweld it cleanly.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Oh, das habe ich gesehen. Ich schleife es sofort aus und bessere es nach!",
+              vi: "Ồ, em thấy chỗ đó rồi ạ. Em mài bỏ ngay và hàn sửa lại liền đây!",
+              en: "Oh, I see that spot. I'll grind it out right away and touch it up!",
+            },
+          ],
+        },
+        {
+          id: 6,
+          tab_vi: "Hội thoại 6: An toàn cháy nổ & Cẩu",
+          tab_en: "Dialogue 6: Fire Safety & Crane",
+          title_vi:
+            "Hội thoại 6: An toàn lao động, Phòng chống cháy nổ & Phối hợp lật dầm thép nặng",
+          title_en:
+            "Dialogue 6: Fire Safety, Hot-Work Permit & Flipping Heavy Beams",
+          context_vi:
+            "Trong xưởng hàn, Đức phối hợp cùng đồng nghiệp lật phôi nặng bằng cần trục và đảm bảo an toàn cháy nổ trước giờ nghỉ.",
+          context_en:
+            "In the welding shop, Đức works with a colleague to flip a heavy beam by crane and ensures fire safety for outdoor work.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Kannst du mir bitte kurz helfen, diesen schweren Träger mit dem Kran zu wenden? Alleine ist er zu schwer.",
+              vi: "Bạn giúp tôi một tay lật thanh dầm nặng này bằng cần cẩu được không? Một mình thì nặng quá.",
+              en: "Can you briefly help me flip this heavy beam with the crane? It's too heavy alone.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Klar, ich hänge die Anschlagkette ein. Tritt bitte kurz aus dem Gefahrenbereich, während wir anheben.",
+              vi: "Được chứ, tôi móc dây xích cẩu vào đây. Bạn bước ra khỏi vùng nguy hiểm một chút trong lúc chúng ta nâng nhé.",
+              en: "Sure, I'll hook up the lifting chain. Please step out of the danger zone briefly while we lift.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Danke! Danach muss ich noch an der Außentür eine Halterung anschweißen. Brauche ich dafür eine Schweißerlaubnis?",
+              vi: "Cảm ơn bạn! Sau đó tôi còn phải hàn thêm một giá đỡ ở cửa ngoài. Chỗ đó tôi có cần giấy phép hàn cắt không?",
+              en: "Thanks! Afterward, I still need to weld a bracket onto the exterior door. Do I need a hot-work permit for that?",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Ja, auf jeden Fall! Hole dir beim Meister die Schweißerlaubnis, stelle einen Feuerlöscher daneben und decke brennbare Teile mit der Löschdecke ab.",
+              vi: "Có, chắc chắn rồi! Ra chỗ tổ trưởng lấy giấy phép hàn cắt, đặt một bình chữa cháy ngay bên cạnh và phủ các vật dễ cháy bằng chăn chống cháy nhé.",
+              en: "Yes, definitely! Get the hot-work permit from the supervisor, place a fire extinguisher right next to it, and cover flammable parts with the fire blanket.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Thợ hàn)",
+              name_en: "Đức (Welder)",
+              de: "Alles klar, Sicherheit geht vor! Vielen Dank für deine Hilfe!",
+              vi: "Rõ rồi, an toàn là trên hết! Cảm ơn sự giúp đỡ của bạn rất nhiều!",
+              en: "All clear, safety first! Thank you very much for your help!",
+            },
+          ],
+        },
+      ];
+
+      // =========================================================================
+      // 3. APPLICATION STATE & PERSISTENCE (localStorage)
+      // =========================================================================
+      const state = {
+        lang: localStorage.getItem("fd_lang") || "vi",
+        activeTab: "vocab",
+        globalVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_globalVoice"),
+          "piper_hochdeutsch",
+        ),
+        workerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_workerVoice"),
+          "piper_hochdeutsch",
+        ),
+        partnerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_partnerVoice"),
+          "piper_rostock",
+        ),
+        speed: parseFloat(localStorage.getItem("fd_speed")) || 1.0,
+        vocabCategory: "all",
+        vocabQuery: "",
+        phraseCategory: "all",
+        activeDialogueId: 1,
+        fcCategory: "all",
+        fcDeck: [...VOCAB_DATA],
+        fcIndex: 0,
+        fcFlipped: false,
+        masteredIds: JSON.parse(
+          localStorage.getItem("fd_mastered_thohan") || "[]",
+        ),
+        voiceDrawerOpen: false,
+      };
+
+      const audioCtrl = {
+        element: null,
+        activeBtnId: null,
+        isFullDialoguePlaying: false,
+        dialogueStopFlag: false,
+        toastTimer: null,
+      };
+
+      function t(key) {
+        return (
+          (I18N[state.lang] && I18N[state.lang][key]) || I18N.vi[key] || key
+        );
+      }
+
+      function getVoiceObj(voiceId) {
+        return VOICE_CATALOG.find((v) => v.id === voiceId) || VOICE_CATALOG[0];
+      }
+
+      function showToast(msg) {
+        const box = document.getElementById("statusToast");
+        const txt = document.getElementById("statusToastText");
+        if (!box || !txt) return;
+        txt.textContent = msg;
+        box.classList.remove("hidden");
+        clearTimeout(audioCtrl.toastTimer);
+        audioCtrl.toastTimer = setTimeout(() => {
+          box.classList.add("hidden");
+        }, 3000);
+      }
+
+      // =========================================================================
+      // 4. AUDIO ENGINE WITH FALLBACK (audio/thohan/<voice>/<file>)
+      // =========================================================================
+      function syncPlayingButtonUI() {
+        document.querySelectorAll("[data-audio-btn]").forEach((btn) => {
+          const id = btn.getAttribute("data-audio-btn");
+          const isCurrent = audioCtrl.activeBtnId === id;
+          const iconPlay = btn.querySelector(".icon-play");
+          const iconStop = btn.querySelector(".icon-stop");
+          if (isCurrent) {
+            btn.classList.add("btn-playing");
+            if (iconPlay) iconPlay.classList.add("hidden");
+            if (iconStop) iconStop.classList.remove("hidden");
+          } else {
+            btn.classList.remove("btn-playing");
+            if (iconPlay) iconPlay.classList.remove("hidden");
+            if (iconStop) iconStop.classList.add("hidden");
+          }
+        });
+
+        const fullBtn = document.getElementById("playFullDialogueBtn");
+        if (fullBtn) {
+          if (audioCtrl.isFullDialoguePlaying) {
+            fullBtn.classList.add("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>■</span> <span>${t("stopFullDialogue")}</span>`;
+          } else {
+            fullBtn.classList.remove("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.add("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>▶</span> <span>${t("playFullDialogue")}</span>`;
+          }
+        }
+
+        document.querySelectorAll("[data-preview-btn]").forEach((btn) => {
+          const isPrev = audioCtrl.activeBtnId === "preview_sample";
+          if (isPrev) {
+            btn.classList.add("bg-red-600", "text-white");
+            btn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            btn.innerHTML = `<span>■</span> <span>${t("stopPreviewBtn")}</span>`;
+          } else {
+            btn.classList.remove("bg-red-600");
+            btn.classList.add("bg-blue-600", "hover:bg-blue-700", "text-white");
+            btn.innerHTML = `<span>🔊</span> <span>${t("previewVoiceBtn")}</span>`;
+          }
+        });
+      }
+
+      function stopAllAudio(resetDialogue = true) {
+        if (resetDialogue) {
+          audioCtrl.dialogueStopFlag = true;
+          audioCtrl.isFullDialoguePlaying = false;
+        }
+        if (audioCtrl.element) {
+          audioCtrl.element.pause();
+          audioCtrl.element.src = "";
+          audioCtrl.element = null;
+        }
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+        }
+        audioCtrl.activeBtnId = null;
+        document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+          el.classList.remove(
+            "dialogue-line-active",
+            "ring-2",
+            "ring-blue-500",
+            "bg-blue-50/70",
+          );
+        });
+        syncPlayingButtonUI();
+      }
+
+      function playAudioWithFallback(
+        fileName,
+        fallbackText,
+        voiceId,
+        btnId,
+        onEndedCallback = null,
+      ) {
+        if (audioCtrl.activeBtnId === btnId) {
+          stopAllAudio(true);
+          return;
+        }
+
+        stopAllAudio(false);
+        audioCtrl.activeBtnId = btnId;
+        syncPlayingButtonUI();
+
+        const chain = [voiceId, "piper_hochdeutsch", "edge_hochdeutsch"].filter(
+          (v, idx, arr) => v && arr.indexOf(v) === idx,
+        );
+        let attemptIdx = 0;
+
+        const finishPlayback = () => {
+          audioCtrl.activeBtnId = null;
+          audioCtrl.element = null;
+          syncPlayingButtonUI();
+          if (onEndedCallback) onEndedCallback();
+        };
+
+        const tryNextSource = () => {
+          if (attemptIdx >= chain.length) {
+            if ("speechSynthesis" in window && fallbackText) {
+              const utter = new SpeechSynthesisUtterance(fallbackText);
+              utter.lang = "de-DE";
+              utter.rate = state.speed;
+              utter.onend = finishPlayback;
+              utter.onerror = finishPlayback;
+              window.speechSynthesis.speak(utter);
+            } else {
+              finishPlayback();
+            }
+            return;
+          }
+
+          const currentVoice = chain[attemptIdx];
+          const src = `${AUDIO_BASE_PATH}/${currentVoice}/${fileName}`;
+          const audio = new Audio(src);
+          audio.playbackRate = state.speed;
+          audioCtrl.element = audio;
+
+          audio.onended = finishPlayback;
+          audio.onerror = () => {
+            if (attemptIdx === 0 && currentVoice !== "piper_hochdeutsch") {
+              showToast(t("fallbackNotice"));
+            }
+            attemptIdx++;
+            tryNextSource();
+          };
+
+          audio.play().catch(() => {
+            attemptIdx++;
+            tryNextSource();
+          });
+        };
+
+        tryNextSource();
+      }
+
+      async function toggleFullDialogue() {
+        if (audioCtrl.isFullDialoguePlaying) {
+          stopAllAudio(true);
+          return;
+        }
+        const dlg = DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId);
+        if (!dlg) return;
+
+        stopAllAudio(true);
+        audioCtrl.isFullDialoguePlaying = true;
+        audioCtrl.dialogueStopFlag = false;
+        syncPlayingButtonUI();
+
+        for (let i = 0; i < dlg.lines.length; i++) {
+          if (audioCtrl.dialogueStopFlag) break;
+          const line = dlg.lines[i];
+          const lineNum = i + 1;
+          const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+          const voice =
+            line.role === "worker" ? state.workerVoice : state.partnerVoice;
+
+          document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+            el.classList.remove(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+          });
+          const rowEl = document.getElementById(`row_${btnId}`);
+          if (rowEl) {
+            rowEl.classList.add(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+            rowEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+
+          await new Promise((resolve) => {
+            playAudioWithFallback(
+              `dialog_${dlg.id}_line_${lineNum}.mp3`,
+              line.de,
+              voice,
+              btnId,
+              resolve,
+            );
+          });
+
+          if (!audioCtrl.dialogueStopFlag && i < dlg.lines.length - 1) {
+            await new Promise((r) => setTimeout(r, 350));
+          }
+        }
+
+        stopAllAudio(true);
+      }
+
+      // =========================================================================
+      // 5. VOICE DRAWER / POPOVER CONTROLS
+      // =========================================================================
+      function buildVoiceOptionsHTML(selectedId) {
+        const groups = {};
+        VOICE_CATALOG.forEach((v) => {
+          const g = state.lang === "en" ? v.group_en : v.group_vi;
+          if (!groups[g]) groups[g] = [];
+          groups[g].push(v);
+        });
+        return Object.entries(groups)
+          .map(
+            ([groupLabel, items]) => `
+        <optgroup label="${groupLabel}">
+          ${items
+            .map(
+              (v) => `
+            <option value="${v.id}" ${v.id === selectedId ? "selected" : ""}>
+              ${state.lang === "en" ? v.label_en : v.label_vi}
+            </option>
+          `,
+            )
+            .join("")}
+        </optgroup>
+      `,
+          )
+          .join("");
+      }
+
+      function renderVoiceForms() {
+        const formHTML = `
+        <div class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("selectVoiceLabel")}</label>
+            <select onchange="setGlobalVoice(this.value)"
+              class="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              ${buildVoiceOptionsHTML(state.globalVoice)}
+            </select>
+          </div>
+
+          <button type="button" data-preview-btn onclick="playAudioWithFallback('sample.mp3', 'Guten Tag! Willkommen in der Schweißerei.', state.globalVoice, 'preview_sample')"
+            class="w-full h-10 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer">
+            <span>🔊</span> <span>${t("previewVoiceBtn")}</span>
+          </button>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("speedLabel")}</label>
+            <div class="grid grid-cols-3 gap-1.5 bg-slate-100 p-1 rounded-xl">
+              ${[
+                { val: 0.75, label: t("speedSlow") },
+                { val: 1.0, label: t("speedNormal") },
+                { val: 1.25, label: t("speedFast") },
+              ]
+                .map(
+                  (sp) => `
+                <button type="button" onclick="setPlaybackSpeed(${sp.val})"
+                  class="h-9 rounded-lg text-xs font-bold transition cursor-pointer ${state.speed === sp.val ? "bg-amber-500 text-slate-950 shadow-xs" : "text-slate-600 hover:text-slate-900"}">
+                  ${sp.label}
+                </button>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+        </div>
+      `;
+
+        const dForm = document.getElementById("desktopVoiceForm");
+        const mForm = document.getElementById("mobileVoiceForm");
+        if (dForm) dForm.innerHTML = formHTML;
+        if (mForm) mForm.innerHTML = formHTML;
+
+        const vObj = getVoiceObj(state.globalVoice);
+        const shortName = state.lang === "en" ? vObj.short_en : vObj.short_vi;
+        const pill = document.getElementById("voicePillLabel");
+        if (pill) pill.textContent = `${shortName} • ${state.speed}x`;
+
+        const wSel = document.getElementById("workerVoiceSelect");
+        const pSel = document.getElementById("partnerVoiceSelect");
+        if (wSel) wSel.innerHTML = buildVoiceOptionsHTML(state.workerVoice);
+        if (pSel) pSel.innerHTML = buildVoiceOptionsHTML(state.partnerVoice);
+
+        syncPlayingButtonUI();
+      }
+
+      function toggleVoiceDrawer() {
+        state.voiceDrawerOpen = !state.voiceDrawerOpen;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+
+        if (state.voiceDrawerOpen) {
+          renderVoiceForms();
+          popover.classList.remove("md:hidden");
+          popover.classList.add("md:block");
+          sheet.classList.remove("hidden");
+          backdrop.classList.remove("hidden");
+        } else {
+          closeVoiceDrawer();
+        }
+      }
+
+      function closeVoiceDrawer() {
+        state.voiceDrawerOpen = false;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+        popover.classList.add("md:hidden");
+        popover.classList.remove("md:block");
+        sheet.classList.add("hidden");
+        backdrop.classList.add("hidden");
+      }
+
+      document.addEventListener("click", (e) => {
+        if (!state.voiceDrawerOpen) return;
+        const popover = document.getElementById("desktopVoicePopover");
+        const trigger = document.getElementById("voiceTriggerBtn");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        if (
+          !popover.contains(e.target) &&
+          !trigger.contains(e.target) &&
+          !sheet.contains(e.target)
+        ) {
+          closeVoiceDrawer();
+        }
+      });
+
+      function setGlobalVoice(voiceId) {
+        state.globalVoice = voiceId;
+        localStorage.setItem("fd_globalVoice", voiceId);
+        renderVoiceForms();
+      }
+
+      function updateDialogueVoice(role, voiceId) {
+        if (role === "worker") {
+          state.workerVoice = voiceId;
+          localStorage.setItem("fd_workerVoice", voiceId);
+        } else {
+          state.partnerVoice = voiceId;
+          localStorage.setItem("fd_partnerVoice", voiceId);
+        }
+      }
+
+      function setPlaybackSpeed(newSpeed) {
+        state.speed = newSpeed;
+        localStorage.setItem("fd_speed", String(newSpeed));
+        if (audioCtrl.element) {
+          audioCtrl.element.playbackRate = newSpeed;
+        }
+        renderVoiceForms();
+      }
+
+      // =========================================================================
+      // 6. SMART NORMALIZATION & RENDERERS (100% VI <-> EN)
+      // =========================================================================
+      function normalizeSearch(str) {
+        return (str || "")
+          .toLowerCase()
+          .replace(/ä/g, "a")
+          .replace(/ö/g, "o")
+          .replace(/ü/g, "u")
+          .replace(/ß/g, "ss")
+          .normalize("NFD")
+          .replace(/[̀-ͯ]/g, "")
+          .replace(/đ/g, "d");
+      }
+
+      function renderNavigation() {
+        const tabs = [
+          {
+            id: "vocab",
+            dLabel: `${t("nav_vocab_desktop")} (${VOCAB_DATA.length})`,
+            mLabel: t("nav_vocab_mobile"),
+            icon: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25",
+          },
+          {
+            id: "phrases",
+            dLabel: `${t("nav_phrases_desktop")} (${PHRASES_DATA.length})`,
+            mLabel: t("nav_phrases_mobile"),
+            icon: "M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z",
+          },
+          {
+            id: "dialogues",
+            dLabel: `${t("nav_dialogues_desktop")} (${DIALOGUES_DATA.length})`,
+            mLabel: t("nav_dialogues_mobile"),
+            icon: "M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155",
+          },
+          {
+            id: "flashcards",
+            dLabel: t("nav_flashcards_desktop"),
+            mLabel: t("nav_flashcards_mobile"),
+            icon: "M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3",
+          },
+        ];
+
+        document.getElementById("desktopNav").innerHTML = tabs
+          .map(
+            (tab) => `
+        <button type="button" onclick="switchTab('${tab.id}')"
+          class="px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${state.activeTab === tab.id ? "bg-white text-slate-900 shadow-xs" : "text-slate-300 hover:text-white hover:bg-slate-700/60"}">
+          ${tab.dLabel}
+        </button>
+      `,
+          )
+          .join("");
+
+        document.getElementById("mobileNavGrid").innerHTML = tabs
+          .map((tab) => {
+            const active = state.activeTab === tab.id;
+            return `
+          <button type="button" onclick="switchTab('${tab.id}')"
+            class="flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition cursor-pointer ${active ? "text-blue-600" : "text-slate-500 hover:text-slate-800"}">
+            <svg class="w-5 h-5 ${active ? "stroke-[2.3]" : "stroke-[1.8]"}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="${tab.icon}" />
+            </svg>
+            <span>${tab.mLabel}</span>
+          </button>
+        `;
+          })
+          .join("");
+      }
+
+      function switchTab(tabId) {
+        state.activeTab = tabId;
+        ["vocab", "phrases", "dialogues", "flashcards"].forEach((id) => {
+          const el = document.getElementById(`section-${id}`);
+          if (el) el.classList.toggle("hidden", id !== tabId);
+        });
+        renderNavigation();
+        if (tabId === "flashcards") renderFlashcard();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function speakBtnHTML(btnId, sizeClass = "w-11 h-11") {
+        return `
+        <button type="button" data-audio-btn="${btnId}"
+          class="${sizeClass} shrink-0 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200/80 flex items-center justify-center transition cursor-pointer active:scale-95"
+          aria-label="Play audio">
+          <svg class="icon-play w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+          </svg>
+          <span class="icon-stop hidden text-xs font-extrabold">■</span>
+        </button>
+      `;
+      }
+
+      function renderVocab() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("cat_all")} (${VOCAB_DATA.length})` },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+
+        document.getElementById("vocabCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setVocabCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.vocabCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const q = normalizeSearch(state.vocabQuery);
+        const filtered = VOCAB_DATA.filter((item) => {
+          const matchCat =
+            state.vocabCategory === "all" || item.cat === state.vocabCategory;
+          if (!matchCat) return false;
+          if (!q) return true;
+          const haystack = normalizeSearch(
+            `${item.de} ${item.vi} ${item.en} ${item.rel_vi} ${item.rel_en} ${item.ex_de} ${item.ex_vi} ${item.ex_en}`,
+          );
+          return haystack.includes(q);
+        });
+
+        const grid = document.getElementById("vocabGrid");
+        if (filtered.length === 0) {
+          grid.innerHTML = `<div class="col-span-full bg-white rounded-2xl p-8 text-center text-sm text-slate-500 border border-slate-200">${t("noResults")}</div>`;
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map((item) => {
+            const typeStr = state.lang === "en" ? item.type_en : item.type_vi;
+            const meaningStr = state.lang === "en" ? item.en : item.vi;
+            const relStr = state.lang === "en" ? item.rel_en : item.rel_vi;
+            const exTrans = state.lang === "en" ? item.ex_en : item.ex_vi;
+            const wordBtnId = `vocab_${item.id}_word`;
+            const exBtnId = `vocab_${item.id}_ex`;
+
+            return `
+          <article class="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex flex-col justify-between gap-3.5">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">${item.de}</h2>
+                    <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-100">${typeStr}</span>
+                  </div>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">${item.ipa}</p>
+                  <p class="text-sm sm:text-base font-bold text-emerald-700 mt-1.5">${meaningStr}</p>
+                </div>
+                <div onclick="playAudioWithFallback('vocab_${item.id}_word.mp3', '${item.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="mt-2.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                <span class="font-semibold text-slate-700">${t("relatedPrefix")}</span> ${relStr}
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/60 flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <p class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">${item.ex_de}</p>
+                <p class="text-xs text-slate-600 italic mt-0.5 leading-snug">${exTrans}</p>
+              </div>
+              <div onclick="playAudioWithFallback('vocab_${item.id}_ex.mp3', '${item.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')">
+                ${speakBtnHTML(exBtnId, "w-11 h-11 bg-amber-100/80 hover:bg-amber-200/80 text-amber-800 border-amber-200")}
+              </div>
+            </div>
+          </article>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setVocabCategory(cat) {
+        state.vocabCategory = cat;
+        renderVocab();
+      }
+
+      function handleVocabSearch(val) {
+        state.vocabQuery = val;
+        const clearBtn = document.getElementById("clearSearchBtn");
+        if (clearBtn) {
+          clearBtn.classList.toggle("hidden", !val);
+          clearBtn.classList.toggle("flex", Boolean(val));
+        }
+        renderVocab();
+      }
+
+      function clearVocabSearch() {
+        const input = document.getElementById("vocabSearchInput");
+        if (input) input.value = "";
+        handleVocabSearch("");
+      }
+
+      function renderPhrases() {
+        const countPCat = (cat) =>
+          PHRASES_DATA.filter((p) => p.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("pcat_all")} (${PHRASES_DATA.length})` },
+          { id: "2.1", label: `${t("pcat_2_1")} (${countPCat("2.1")})` },
+          { id: "2.2", label: `${t("pcat_2_2")} (${countPCat("2.2")})` },
+          { id: "2.3", label: `${t("pcat_2_3")} (${countPCat("2.3")})` },
+          { id: "2.4", label: `${t("pcat_2_4")} (${countPCat("2.4")})` },
+        ];
+
+        document.getElementById("phraseCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setPhraseCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.phraseCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const filtered = PHRASES_DATA.filter(
+          (p) =>
+            state.phraseCategory === "all" || p.cat === state.phraseCategory,
+        );
+        document.getElementById("phrasesList").innerHTML = filtered
+          .map((p) => {
+            const trans = state.lang === "en" ? p.en : p.vi;
+            const btnId = `phrase_${p.id}`;
+            return `
+          <div class="bg-white rounded-2xl p-4 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex items-center justify-between gap-3.5">
+            <div class="min-w-0">
+              <span class="inline-block text-[11px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md mb-1">${p.cat}</span>
+              <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${p.de}</p>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">${trans}</p>
+            </div>
+            <div onclick="playAudioWithFallback('phrase_${p.id}.mp3', '${p.de.replace(/'/g, "\'")}', state.globalVoice, '${btnId}')">
+              ${speakBtnHTML(btnId, "w-11 h-11")}
+            </div>
+          </div>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setPhraseCategory(cat) {
+        state.phraseCategory = cat;
+        renderPhrases();
+      }
+
+      function renderDialogues() {
+        document.getElementById("dialogueTabs").innerHTML = DIALOGUES_DATA.map(
+          (d) => {
+            const label = state.lang === "en" ? d.tab_en : d.tab_vi;
+            const active = d.id === state.activeDialogueId;
+            return `
+          <button type="button" onclick="selectDialogue(${d.id})"
+            class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition cursor-pointer ${active ? "bg-slate-900 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+            ${label}
+          </button>
+        `;
+          },
+        ).join("");
+
+        const dlg =
+          DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId) ||
+          DIALOGUES_DATA[0];
+        const title = state.lang === "en" ? dlg.title_en : dlg.title_vi;
+        const context = state.lang === "en" ? dlg.context_en : dlg.context_vi;
+
+        document.getElementById("dialogueContainer").innerHTML = `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-slate-900">${title}</h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">${context}</p>
+          </div>
+          <button id="playFullDialogueBtn" type="button" onclick="toggleFullDialogue()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 shadow-xs transition cursor-pointer">
+            <span>▶</span> <span>${t("playFullDialogue")}</span>
+          </button>
+        </div>
+
+        <div class="space-y-3">
+          ${dlg.lines
+            .map((line, idx) => {
+              const lineNum = idx + 1;
+              const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+              const speakerName =
+                state.lang === "en" ? line.name_en : line.name_vi;
+              const lineTrans = state.lang === "en" ? line.en : line.vi;
+              const isWorker = line.role === "worker";
+              const voiceForLine = isWorker
+                ? state.workerVoice
+                : state.partnerVoice;
+
+              return `
+              <div id="row_${btnId}" class="p-3.5 sm:p-4 rounded-2xl border transition flex items-start justify-between gap-3 ${isWorker ? "bg-slate-50/90 border-slate-200/80" : "bg-amber-50/50 border-amber-200/60"}">
+                <div class="min-w-0">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold mb-1 ${isWorker ? "bg-blue-100 text-blue-800" : "bg-amber-200/80 text-amber-900"}">
+                    ${speakerName}
+                  </span>
+                  <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${line.de}</p>
+                  <p class="text-xs sm:text-sm text-slate-600 mt-1">${lineTrans}</p>
+                </div>
+                <div onclick="playAudioWithFallback('dialog_${dlg.id}_line_${lineNum}.mp3', '${line.de.replace(/'/g, "\'")}', '${voiceForLine}', '${btnId}')">
+                  ${speakBtnHTML(btnId, "w-11 h-11")}
+                </div>
+              </div>
+            `;
+            })
+            .join("")}
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function selectDialogue(id) {
+        stopAllAudio(true);
+        state.activeDialogueId = id;
+        renderDialogues();
+      }
+
+      function renderFlashcardControls() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cardUnit = state.lang === "en" ? "cards" : "thẻ";
+        const opts = [
+          {
+            id: "all",
+            label: `${t("fcAllCategories")} (${VOCAB_DATA.length} ${cardUnit})`,
+          },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+        document.getElementById("fcCategorySelect").innerHTML = opts
+          .map(
+            (o) => `
+        <option value="${o.id}" ${o.id === state.fcCategory ? "selected" : ""}>${o.label}</option>
+      `,
+          )
+          .join("");
+      }
+
+      function renderFlashcard() {
+        renderFlashcardControls();
+        if (state.fcDeck.length === 0) state.fcDeck = [...VOCAB_DATA];
+        if (state.fcIndex >= state.fcDeck.length) state.fcIndex = 0;
+
+        const card = state.fcDeck[state.fcIndex];
+        const typeStr = state.lang === "en" ? card.type_en : card.type_vi;
+        const meaningStr = state.lang === "en" ? card.en : card.vi;
+        const relStr = state.lang === "en" ? card.rel_en : card.rel_vi;
+        const exTrans = state.lang === "en" ? card.ex_en : card.ex_vi;
+        const isMastered = state.masteredIds.includes(card.id);
+
+        document.getElementById("fcCounter").textContent =
+          `${state.fcIndex + 1} / ${state.fcDeck.length}`;
+
+        const masterBtn = document.getElementById("fcMasterBtn");
+        if (isMastered) {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-bold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>✓</span> <span>${t("fcMastered")}</span>`;
+        } else {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-semibold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>○</span> <span>${t("fcMarkMastered")}</span>`;
+        }
+
+        const wordBtnId = `fc_word_${card.id}`;
+        const exBtnId = `fc_ex_${card.id}`;
+
+        document.getElementById("flashcardStage").innerHTML = `
+        <div onclick="flipFlashcard()" class="relative w-full min-h-[310px] sm:min-h-[340px] cursor-pointer select-none">
+          <div class="w-full min-h-[310px] sm:min-h-[340px] transform-style-3d ${state.fcFlipped ? "rotate-y-180" : ""}">
+            
+            <!-- FRONT -->
+            <div class="absolute inset-0 backface-hidden bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 flex flex-col items-center justify-between text-center">
+              <div class="w-full flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-50 text-amber-800">${typeStr}</span>
+                <div onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="my-auto py-4">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${card.de}</h2>
+                <p class="text-sm font-mono text-slate-400 mt-2">${card.ipa}</p>
+              </div>
+
+              <p class="text-xs font-medium text-slate-400">${t("fcFrontHint")}</p>
+            </div>
+
+            <!-- BACK -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-800 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <p class="text-xs font-semibold text-amber-400 uppercase tracking-wider">${card.de}</p>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-1">${meaningStr}</h3>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')"
+                    class="h-10 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shrink-0 cursor-pointer">
+                    <span>🔊</span> <span>${t("fcWordBtn")}</span>
+                  </button>
+                </div>
+
+                <p class="text-xs text-slate-300 bg-slate-800/80 p-3 rounded-xl mt-3 leading-relaxed">
+                  <span class="font-semibold text-amber-300">${t("relatedPrefix")}</span> ${relStr}
+                </p>
+
+                <div class="mt-3 p-3.5 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="text-xs sm:text-sm font-semibold text-white leading-snug">${card.ex_de}</p>
+                    <p class="text-xs text-slate-300 italic mt-1">${exTrans}</p>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_ex.mp3', '${card.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')"
+                    class="w-11 h-11 shrink-0 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center justify-center font-bold cursor-pointer">
+                    🔊
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-center text-xs text-slate-400 mt-3">${t("fcBackHint")}</p>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function flipFlashcard() {
+        state.fcFlipped = !state.fcFlipped;
+        renderFlashcard();
+      }
+
+      function nextFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex = (state.fcIndex + 1) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function prevFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex =
+          (state.fcIndex - 1 + state.fcDeck.length) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function setFlashcardCategory(cat) {
+        state.fcCategory = cat;
+        state.fcFlipped = false;
+        state.fcIndex = 0;
+        state.fcDeck =
+          cat === "all"
+            ? [...VOCAB_DATA]
+            : VOCAB_DATA.filter((v) => v.cat === cat);
+        renderFlashcard();
+      }
+
+      function shuffleFlashcards() {
+        for (let i = state.fcDeck.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [state.fcDeck[i], state.fcDeck[j]] = [
+            state.fcDeck[j],
+            state.fcDeck[i],
+          ];
+        }
+        state.fcIndex = 0;
+        state.fcFlipped = false;
+        renderFlashcard();
+      }
+
+      function toggleFlashcardMastered() {
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+        const idx = state.masteredIds.indexOf(card.id);
+        if (idx >= 0) {
+          state.masteredIds.splice(idx, 1);
+        } else {
+          state.masteredIds.push(card.id);
+        }
+        localStorage.setItem(
+          "fd_mastered_thohan",
+          JSON.stringify(state.masteredIds),
+        );
+        renderFlashcard();
+      }
+
+      function renderTechnicalNotes() {
+        document.getElementById("notesHeading").textContent = t("notesHeading");
+        const items = t("notes") || [];
+        document.getElementById("notesList").innerHTML = items
+          .map(
+            (n) => `
+        <li class="p-3 rounded-xl bg-slate-50 border border-slate-100">${n}</li>
+      `,
+          )
+          .join("");
+      }
+
+      // =========================================================================
+      // 7. LANGUAGE SWITCHER (100% UI + CONTENT LOCALIZATION)
+      // =========================================================================
+      function setLanguage(lang) {
+        state.lang = lang;
+        localStorage.setItem("fd_lang", lang);
+        document.documentElement.lang = lang;
+        document.title = t("pageTitle");
+
+        const viBtn = document.getElementById("langBtnVi");
+        const enBtn = document.getElementById("langBtnEn");
+        if (lang === "vi") {
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        } else {
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        }
+
+        document.getElementById("backHomeText").textContent = t("backHomeText");
+        document.getElementById("brandTitle").textContent = t("brandTitle");
+        document.getElementById("popoverTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("sheetTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("vocabSearchInput").placeholder =
+          t("searchPlaceholder");
+        document.getElementById("workerVoiceLabel").textContent =
+          t("workerVoiceLabel");
+        document.getElementById("partnerVoiceLabel").textContent =
+          t("partnerVoiceLabel");
+        document.getElementById("fcShuffleText").textContent = t("fcShuffle");
+        document.getElementById("fcPrevText").textContent = t("fcPrev");
+        document.getElementById("fcNextText").textContent = t("fcNext");
+        document.getElementById("fcShortcutHint").textContent =
+          t("fcShortcutHint");
+
+        renderNavigation();
+        renderVoiceForms();
+        renderVocab();
+        renderPhrases();
+        renderDialogues();
+        renderFlashcard();
+        renderTechnicalNotes();
+      }
+
+      // =========================================================================
+      // 8. KEYBOARD SHORTCUTS
+      // =========================================================================
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && state.voiceDrawerOpen) {
+          closeVoiceDrawer();
+          return;
+        }
+        if (
+          ["INPUT", "SELECT", "TEXTAREA"].includes(
+            document.activeElement.tagName,
+          )
+        )
+          return;
+        if (state.activeTab !== "flashcards") return;
+
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+
+        if (e.code === "Space") {
+          e.preventDefault();
+          flipFlashcard();
+        } else if (e.key === "ArrowRight") {
+          nextFlashcard();
+        } else if (e.key === "ArrowLeft") {
+          prevFlashcard();
+        } else if (e.key.toLowerCase() === "s") {
+          playAudioWithFallback(
+            `vocab_${card.id}_word.mp3`,
+            card.de,
+            state.globalVoice,
+            `fc_word_${card.id}`,
+          );
+        } else if (e.key.toLowerCase() === "e") {
+          playAudioWithFallback(
+            `vocab_${card.id}_ex.mp3`,
+            card.ex_de,
+            state.globalVoice,
+            `fc_ex_${card.id}`,
+          );
+        }
+      });
+
+      // =========================================================================
+      // 9. INITIALIZE APP
+      // =========================================================================
+      setLanguage(state.lang);
+    </script>
+  </body>
+</html>
