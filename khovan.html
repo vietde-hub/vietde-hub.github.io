@@ -1,0 +1,3773 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>
+      Fachdeutsch — Tiếng Đức Ngành Kho Vận & Logistics (Lagerlogistik) | VietDe
+      Hub
+    </title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='14'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Crect width='64' height='21.34' y='0' fill='%23111827'/%3E%3Crect width='64' height='21.34' y='21.33' fill='%23DC2626'/%3E%3Crect width='64' height='21.34' y='42.66' fill='%23FACC15'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: #f1f5f9;
+        color: #0f172a;
+        min-height: 100dvh;
+        padding-bottom: calc(76px + var(--safe-bottom));
+      }
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 40px;
+        }
+      }
+      .bottom-nav-safe {
+        padding-bottom: calc(6px + var(--safe-bottom));
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+      @keyframes pulseRing {
+        0% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45);
+        }
+        70% {
+          box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        }
+      }
+      .btn-playing {
+        background-color: #ef4444 !important;
+        color: #ffffff !important;
+        border-color: #ef4444 !important;
+        animation: pulseRing 1.4s infinite;
+      }
+      @keyframes sheetSlideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .animate-sheet-up {
+        animation: sheetSlideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes popoverFade {
+        from {
+          opacity: 0;
+          transform: translateY(-6px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-popover {
+        animation: popoverFade 0.18s ease-out;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-sky-200 selection:text-slate-900">
+    <!-- =====================================================================
+       ADAPTIVE STICKY TOP BAR (Back to Hub + Compact Mobile + 1-Row Desktop)
+       ===================================================================== -->
+    <header
+      class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-3 sm:px-6 h-14 flex items-center justify-between gap-2"
+      >
+        <!-- Left: Back to Hub + Brand + Desktop Navigation Tabs -->
+        <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
+          <a
+            href="index.html"
+            id="backHomeBtn"
+            title="Trang chủ / Home"
+            class="h-9 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center gap-1 shrink-0 transition"
+          >
+            <span>←</span>
+            <span id="backHomeText" class="hidden sm:inline">Trang chủ</span>
+          </a>
+
+          <div class="flex items-center gap-2 min-w-0">
+            <div
+              class="w-8 h-8 rounded-lg bg-sky-500 text-slate-950 flex items-center justify-center font-extrabold shadow-inner shrink-0"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+                />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span
+                  id="brandTitle"
+                  class="font-bold text-sm sm:text-base tracking-tight truncate"
+                  >Kho Vận & Logistics</span
+                >
+                <span
+                  class="hidden xl:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-sky-500/20 text-sky-300 border border-sky-500/30"
+                  >Lagerlogistik</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Single-Row Navigation Tabs (Hidden on Mobile) -->
+          <nav
+            id="desktopNav"
+            class="hidden md:flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-slate-700/70"
+            aria-label="Primary Navigation"
+          ></nav>
+        </div>
+
+        <!-- Right: Voice Settings Trigger Pill + VI/EN Switch -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0 relative">
+          <button
+            id="voiceTriggerBtn"
+            type="button"
+            onclick="toggleVoiceDrawer()"
+            class="h-9 px-2.5 sm:px-3 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 border border-slate-700 text-xs font-medium text-slate-100 flex items-center gap-1.5 transition cursor-pointer"
+          >
+            <span class="text-amber-400">🎙</span>
+            <span
+              id="voicePillLabel"
+              class="max-w-[105px] sm:max-w-[160px] lg:max-w-[210px] truncate"
+              >Piper Chuẩn Đức • 1.0x</span
+            >
+            <svg
+              class="w-3.5 h-3.5 text-slate-400 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <!-- Language Switcher VI | EN -->
+          <div
+            class="h-9 bg-slate-800 p-0.5 rounded-xl border border-slate-700 flex items-center"
+            role="group"
+            aria-label="Language Switch"
+          >
+            <button
+              id="langBtnVi"
+              type="button"
+              onclick="setLanguage('vi')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              VI
+            </button>
+            <button
+              id="langBtnEn"
+              type="button"
+              onclick="setLanguage('en')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              EN
+            </button>
+          </div>
+
+          <!-- DESKTOP POPOVER: Voice & Speed Controls -->
+          <div
+            id="desktopVoicePopover"
+            class="hidden md:hidden absolute right-0 top-12 w-80 bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200 p-4 z-50 animate-popover"
+          >
+            <div
+              class="flex items-center justify-between pb-2.5 mb-3 border-b border-slate-100"
+            >
+              <span
+                id="popoverTitle"
+                class="text-xs font-bold uppercase tracking-wider text-slate-500"
+                >Cài đặt Giọng đọc & Tốc độ</span
+              >
+              <button
+                type="button"
+                onclick="closeVoiceDrawer()"
+                class="w-7 h-7 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+            <div id="desktopVoiceForm"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subtle Non-Blocking Audio Fallback / Status Banner -->
+    <div
+      id="statusToast"
+      class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-50 max-w-[92vw] sm:max-w-md bg-slate-900/95 text-white text-xs px-3.5 py-2 rounded-full shadow-lg border border-slate-700 flex items-center gap-2"
+    >
+      <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+      <span id="statusToastText" class="truncate"></span>
+    </div>
+
+    <!-- =====================================================================
+       MAIN CONTENT AREA
+       ===================================================================== -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6">
+      <!-- TAB 1: VOCABULARY -->
+      <section id="section-vocab" class="space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 space-y-3"
+        >
+          <div class="relative">
+            <svg
+              class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z"
+              />
+            </svg>
+            <input
+              id="vocabSearchInput"
+              type="search"
+              oninput="handleVocabSearch(this.value)"
+              placeholder="Tìm từ tiếng Đức, nghĩa tiếng Việt..."
+              class="w-full h-11 pl-10 pr-9 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
+            />
+            <button
+              id="clearSearchBtn"
+              type="button"
+              onclick="clearVocabSearch()"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-xs items-center justify-center hover:bg-slate-300 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div
+            id="vocabCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5"
+          ></div>
+        </div>
+
+        <div
+          id="vocabGrid"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"
+        ></div>
+      </section>
+
+      <!-- TAB 2: WAREHOUSE PHRASES -->
+      <section id="section-phrases" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80"
+        >
+          <div
+            id="phraseCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar"
+          ></div>
+        </div>
+        <div
+          id="phrasesList"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3"
+        ></div>
+      </section>
+
+      <!-- TAB 3: DIALOGUES -->
+      <section id="section-dialogues" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3.5 sm:p-5 shadow-sm border border-slate-200/80 space-y-4"
+        >
+          <div
+            id="dialogueTabs"
+            class="flex items-center gap-2 overflow-x-auto no-scrollbar"
+          ></div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100"
+          >
+            <div>
+              <label
+                id="workerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Nhân viên kho (Đức)</label
+              >
+              <select
+                id="workerVoiceSelect"
+                onchange="updateDialogueVoice('worker', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+            <div>
+              <label
+                id="partnerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Trưởng nhóm / Đồng nghiệp / Tài xế</label
+              >
+              <select
+                id="partnerVoiceSelect"
+                onchange="updateDialogueVoice('partner', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="dialogueContainer"
+          class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200/80"
+        ></div>
+      </section>
+
+      <!-- TAB 4: FLASHCARDS -->
+      <section
+        id="section-flashcards"
+        class="hidden space-y-4 max-w-2xl mx-auto"
+      >
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 flex flex-wrap items-center justify-between gap-2"
+        >
+          <select
+            id="fcCategorySelect"
+            onchange="setFlashcardCategory(this.value)"
+            class="h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></select>
+          <div class="flex items-center gap-2">
+            <span
+              id="fcCounter"
+              class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-2 rounded-xl"
+              >1 / 86</span
+            >
+            <button
+              id="fcShuffleBtn"
+              type="button"
+              onclick="shuffleFlashcards()"
+              class="h-10 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <span>🔀</span>
+              <span id="fcShuffleText">Trộn thẻ</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="flashcardStage" class="perspective-1000"></div>
+
+        <div class="flex items-center justify-between gap-2">
+          <button
+            type="button"
+            onclick="prevFlashcard()"
+            class="h-11 px-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>←</span>
+            <span id="fcPrevText">Trước</span>
+          </button>
+
+          <button
+            id="fcMasterBtn"
+            type="button"
+            onclick="toggleFlashcardMastered()"
+            class="h-11 px-4 rounded-xl border text-xs sm:text-sm font-semibold shadow-sm flex items-center gap-1.5 transition cursor-pointer"
+          ></button>
+
+          <button
+            type="button"
+            onclick="nextFlashcard()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-sm font-semibold text-white shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span id="fcNextText">Tiếp</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <p
+          id="fcShortcutHint"
+          class="hidden md:block text-center text-xs text-slate-400"
+        >
+          Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe
+          ví dụ)
+        </p>
+      </section>
+
+      <!-- PRACTICAL WAREHOUSE NOTES CARD (FROM GOOGLE DOC) -->
+      <section
+        id="section-warehouse-notes"
+        class="mt-6 bg-white rounded-2xl p-4 sm:p-6 shadow-xs border border-slate-200/80"
+      >
+        <h2
+          id="notesHeading"
+          class="text-base sm:text-lg font-extrabold text-slate-900 mb-3"
+        ></h2>
+        <ul
+          id="notesList"
+          class="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed"
+        ></ul>
+      </section>
+    </main>
+
+    <!-- MOBILE BOTTOM NAVIGATION BAR -->
+    <nav
+      id="mobileBottomNav"
+      class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-[0_-4px_16px_rgba(15,23,42,0.06)] bottom-nav-safe"
+      aria-label="Mobile Navigation"
+    >
+      <div id="mobileNavGrid" class="grid grid-cols-4 h-14"></div>
+    </nav>
+
+    <!-- MOBILE BOTTOM SHEET: VOICE & SPEED SETTINGS -->
+    <div
+      id="mobileVoiceBackdrop"
+      onclick="closeVoiceDrawer()"
+      class="hidden md:hidden fixed inset-0 z-50 bg-slate-950/50 backdrop-blur-xs transition-opacity"
+    ></div>
+    <div
+      id="mobileVoiceSheet"
+      class="hidden md:hidden fixed inset-x-0 bottom-0 z-50 bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 p-5 pb-[calc(20px+var(--safe-bottom))] animate-sheet-up"
+    >
+      <div class="w-10 h-1.5 rounded-full bg-slate-300 mx-auto mb-4"></div>
+      <div class="flex items-center justify-between mb-3">
+        <h3 id="sheetTitle" class="text-base font-bold text-slate-900">
+          Cài đặt Giọng đọc & Tốc độ
+        </h3>
+        <button
+          type="button"
+          onclick="closeVoiceDrawer()"
+          class="w-9 h-9 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold"
+        >
+          ✕
+        </button>
+      </div>
+      <div id="mobileVoiceForm"></div>
+    </div>
+
+    <script>
+      // =========================================================================
+      // 0. AUDIO FOLDER PREFIX FOR WAREHOUSE & LOGISTICS MODULE
+      // =========================================================================
+      const AUDIO_BASE_PATH = "audio/khovan";
+
+      // =========================================================================
+      // 1. VOICE CATALOG (4 VOICES: PIPER OFFLINE + EDGE NEURAL) & I18N
+      // =========================================================================
+      const VOICE_CATALOG = [
+        {
+          id: "piper_hochdeutsch",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Chuẩn Đức (High)",
+          label_en: "Piper Thorsten — Standard German (High)",
+          short_vi: "Piper Chuẩn Đức",
+          short_en: "Piper Standard",
+        },
+        {
+          id: "piper_rostock",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Miền Bắc / Rostock",
+          label_en: "Piper Thorsten — Northern / Rostock",
+          short_vi: "Piper Rostock",
+          short_en: "Piper Rostock",
+        },
+        {
+          id: "edge_hochdeutsch",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Chuẩn Đức (Nữ Katja)",
+          label_en: "Edge Neural — Standard German (Female Katja)",
+          short_vi: "Edge Katja",
+          short_en: "Edge Katja",
+        },
+        {
+          id: "edge_rostock",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Miền Bắc (Nam Conrad)",
+          label_en: "Edge Neural — Northern German (Male Conrad)",
+          short_vi: "Edge Conrad",
+          short_en: "Edge Conrad",
+        },
+      ];
+
+      function sanitizeVoiceId(savedId, fallbackId) {
+        return VOICE_CATALOG.some((v) => v.id === savedId)
+          ? savedId
+          : fallbackId;
+      }
+
+      const I18N = {
+        vi: {
+          pageTitle:
+            "Fachdeutsch — Tiếng Đức Ngành Kho Vận & Logistics (Lagerlogistik) | VietDe Hub",
+          backHomeText: "Trang chủ",
+          brandTitle: "Kho Vận & Logistics",
+          nav_vocab_desktop: "1. Từ vựng",
+          nav_phrases_desktop: "2. Mẫu câu kho vận",
+          nav_dialogues_desktop: "3. Hội thoại",
+          nav_flashcards_desktop: "4. Thẻ Flashcard",
+          nav_vocab_mobile: "Từ vựng",
+          nav_phrases_mobile: "Mẫu câu",
+          nav_dialogues_mobile: "Hội thoại",
+          nav_flashcards_mobile: "Thẻ nhớ",
+          voiceSettingsTitle: "Cài đặt Giọng đọc & Tốc độ",
+          selectVoiceLabel: "Chọn giọng đọc mặc định (4 giọng)",
+          previewVoiceBtn: "Nghe thử giọng",
+          stopPreviewBtn: "Dừng nghe thử",
+          speedLabel: "Tốc độ phát âm",
+          speedSlow: "Chậm 0.75x",
+          speedNormal: "Chuẩn 1.0x",
+          speedFast: "Nhanh 1.25x",
+          searchPlaceholder: "Tìm từ tiếng Đức, nghĩa tiếng Việt...",
+          cat_all: "Tất cả",
+          cat_1_1: "1.1 Nhập kho, Soạn đơn & Xuất hàng",
+          cat_1_2: "1.2 Xe nâng, Thiết bị & Đóng gói",
+          cat_1_3: "1.3 An toàn lao động, PSA & Vệ sinh",
+          cat_1_4: "1.4 Nhân sự kho, Ca kíp & Phối hợp",
+          cat_1_5: "1.5 Động từ & Tính từ kho vận",
+          relatedPrefix: "Từ liên quan:",
+          noResults: "Không tìm thấy từ vựng phù hợp.",
+          pcat_all: "Tất cả mẫu câu",
+          pcat_2_1: "2.1 Nhập kho & Lưu kho",
+          pcat_2_2: "2.2 Soạn đơn, Đóng gói & Xuất kho",
+          pcat_2_3: "2.3 Xe nâng & An toàn kho",
+          pcat_2_4: "2.4 Kiểm kê, Bàn giao ca & Đồng nghiệp",
+          workerVoiceLabel: "Giọng Nhân viên kho (Đức)",
+          partnerVoiceLabel: "Giọng Trưởng nhóm / Đồng nghiệp / Tài xế",
+          playFullDialogue: "Nghe cả hội thoại",
+          stopFullDialogue: "Dừng hội thoại",
+          fcAllCategories: "Tất cả chủ đề",
+          fcShuffle: "Trộn thẻ",
+          fcPrev: "Trước",
+          fcNext: "Tiếp",
+          fcFrontHint: "Chạm thẻ để xem nghĩa & ví dụ",
+          fcBackHint: "Chạm thẻ để quay lại mặt trước",
+          fcWordBtn: "Nghe từ",
+          fcExBtn: "Nghe ví dụ",
+          fcMastered: "Đã thuộc",
+          fcMarkMastered: "Đánh dấu đã thuộc",
+          fcShortcutHint:
+            "Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe ví dụ)",
+          fallbackNotice: "Đang dùng giọng dự phòng Piper Offline cho câu này.",
+          notesHeading: "Ghi chú Thực tế Ngành Kho Vận & Logistics tại Đức",
+          notes: [
+            "<strong>Chứng chỉ lái xe nâng (Staplerschein / Fahrausweis für Flurförderzeuge theo DGUV Vorschrift 68):</strong> Tại Đức, để vận hành xe nâng hàng (<em>Gabelstapler / Stapler</em>) trong kho hoặc doanh nghiệp, người lao động bắt buộc phải được đào tạo bài bản và có chứng chỉ lái xe nâng hợp lệ (<em>Staplerschein</em>) cùng sự phân công bằng văn bản của đơn vị sử dụng lao động.",
+            "<strong>Bảo hộ lao động & An toàn lối đi kho (PSA, Fahrwege & Fluchtwege):</strong> Trong kho logistics tại Đức, giày bảo hộ (thường chuẩn S3 chống đâm xuyên & chống trơn trượt) và áo phản quang (<em>Warnweste</em>) được áp dụng nghiêm ngặt; mọi lối đi xe nâng (<em>Fahrwege</em>) và lối thoát hiểm (<em>Fluchtwege</em>) tuyệt đối không được để hàng hóa, pallet hay rác thải chắn ngang.",
+            "<strong>Chằng buộc hàng hóa & Nguyên tắc nhập xuất kho (Ladungssicherung & FIFO):</strong> Khi bốc hàng lên xe hoặc xếp pallet, cần chú ý phân bổ trọng tâm (hàng nặng đặt dưới, hàng nhẹ trên), quấn màng co / chằng dây cố định chắc chắn (<em>Ladungssicherung</em>) và tuân thủ thứ tự nhập trước – xuất trước (<em>FIFO</em>) đối với hàng có hạn sử dụng hoặc mã lô.",
+          ],
+        },
+        en: {
+          pageTitle:
+            "Fachdeutsch — Warehouse & Logistics (Lagerlogistik) | VietDe Hub",
+          backHomeText: "Home",
+          brandTitle: "Warehouse & Logistics",
+          nav_vocab_desktop: "1. Vocabulary",
+          nav_phrases_desktop: "2. Warehouse Phrases",
+          nav_dialogues_desktop: "3. Dialogues",
+          nav_flashcards_desktop: "4. Flashcards",
+          nav_vocab_mobile: "Vocab",
+          nav_phrases_mobile: "Phrases",
+          nav_dialogues_mobile: "Dialogues",
+          nav_flashcards_mobile: "Cards",
+          voiceSettingsTitle: "Voice & Playback Speed",
+          selectVoiceLabel: "Default AI Voice (4 Voices)",
+          previewVoiceBtn: "Preview Voice",
+          stopPreviewBtn: "Stop Preview",
+          speedLabel: "Playback Speed",
+          speedSlow: "Slow 0.75x",
+          speedNormal: "Normal 1.0x",
+          speedFast: "Fast 1.25x",
+          searchPlaceholder: "Search German words, English meanings...",
+          cat_all: "All",
+          cat_1_1: "1.1 Receipt, Picking & Shipping",
+          cat_1_2: "1.2 Forklift, Gear & Packing",
+          cat_1_3: "1.3 Safety, PPE & Cleanliness",
+          cat_1_4: "1.4 Staff, Shifts & Workflow",
+          cat_1_5: "1.5 Logistics Verbs & Adjectives",
+          relatedPrefix: "Related words:",
+          noResults: "No matching vocabulary found.",
+          pcat_all: "All Phrases",
+          pcat_2_1: "2.1 Goods Receipt & Storage",
+          pcat_2_2: "2.2 Picking, Packing & Dispatch",
+          pcat_2_3: "2.3 Forklift & Warehouse Safety",
+          pcat_2_4: "2.4 Stocktake, Handover & Team",
+          workerVoiceLabel: "Warehouse Worker Voice (Duc)",
+          partnerVoiceLabel: "Team Lead / Colleague / Driver Voice",
+          playFullDialogue: "Play Full Dialogue",
+          stopFullDialogue: "Stop Dialogue",
+          fcAllCategories: "All Categories",
+          fcShuffle: "Shuffle",
+          fcPrev: "Previous",
+          fcNext: "Next",
+          fcFrontHint: "Tap card to reveal meaning & example",
+          fcBackHint: "Tap card to flip back",
+          fcWordBtn: "Speak Word",
+          fcExBtn: "Speak Example",
+          fcMastered: "Mastered",
+          fcMarkMastered: "Mark as Mastered",
+          fcShortcutHint:
+            "Shortcuts: Space (Flip) • ← / → (Navigate) • S (Word) • E (Example)",
+          fallbackNotice: "Using offline Piper fallback voice for this line.",
+          notesHeading: "Practical Warehouse & Logistics Notes in Germany",
+          notes: [
+            "<strong>Forklift Operator License (Staplerschein under DGUV Vorschrift 68):</strong> In Germany, to operate a forklift truck (<em>Gabelstapler / Stapler</em>) in a warehouse or company, workers must complete formal training and hold a valid forklift license (<em>Staplerschein</em>) along with written authorization from the employer.",
+            "<strong>PPE & Warehouse Lane Safety (PSA, Fahrwege & Fluchtwege):</strong> In German logistics warehouses, safety shoes (typically S3) and high-visibility vests (<em>Warnweste</em>) are strictly enforced; all vehicle lanes (<em>Fahrwege</em>) and escape routes (<em>Fluchtwege</em>) must never be blocked by goods, pallets, or waste.",
+            "<strong>Load Securing & Stock Rotation (Ladungssicherung & FIFO):</strong> When loading trucks or stacking pallets, pay attention to center of gravity (heavy items below, light above), secure loads tightly with stretch wrap or straps (<em>Ladungssicherung</em>), and follow First-In, First-Out (<em>FIFO</em>) for dated or batch-tracked stock.",
+          ],
+        },
+      };
+
+      // =========================================================================
+      // 2. COMPLETE BILINGUAL DATASET (86 VOCAB, 36 PHRASES, 6 DIALOGUES)
+      // =========================================================================
+      const VOCAB_DATA = [
+        {
+          id: 1,
+          cat: "1.1",
+          de: 'das Lager ("-er)',
+          ipa: "/das ˈlaːɡɐ/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Kho hàng / Kho bãi",
+          en: "Warehouse / storage facility",
+          rel_vi:
+            "der Lagerist (dt: nhân viên kho), das Zentrallager (dt: kho trung tâm)",
+          rel_en:
+            "der Lagerist (n: warehouse worker), das Zentrallager (n: central warehouse)",
+          ex_de:
+            "Im Lager arbeiten wir mit klaren Regeln für Ordnung und Sicherheit.",
+          ex_vi:
+            "Trong kho chúng tôi làm việc theo các quy tắc rõ ràng về gọn gàng và an toàn.",
+          ex_en:
+            "In the warehouse, we work with clear rules for orderliness and safety.",
+        },
+        {
+          id: 2,
+          cat: "1.1",
+          de: "der Wareneingang / die Warenannahme",
+          ipa: "/deːɐ̯ ˈvaːʁənʔaɪnˌɡaŋ/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Khu vực tiếp nhận hàng nhập kho",
+          en: "Goods receipt / incoming goods area",
+          rel_vi: "annehmen (đt: tiếp nhận hàng)",
+          rel_en: "annehmen (v: to receive/accept goods)",
+          ex_de:
+            "Beim Wareneingang prüfen wir zuerst, ob die Lieferung vollständig ist.",
+          ex_vi:
+            "Tại khu vực nhập kho trước tiên chúng tôi kiểm tra xem lô hàng có đủ số lượng không.",
+          ex_en:
+            "At goods receipt, we first check whether the delivery is complete.",
+        },
+        {
+          id: 3,
+          cat: "1.1",
+          de: "der Warenausgang / die Versandabteilung (-en)",
+          ipa: "/deːɐ̯ ˈvaːʁənʔaʊsˌɡaŋ/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Khu vực xuất hàng đi giao",
+          en: "Goods dispatch / shipping department",
+          rel_vi:
+            "versenden (đt: gửi đi/xuất hàng), verladen (đt: bốc xếp lên xe)",
+          rel_en:
+            "versenden (v: to ship/dispatch), verladen (v: to load onto vehicle)",
+          ex_de:
+            "Die fertigen Paletten stehen im Warenausgang bereit zur Verladung.",
+          ex_vi:
+            "Các pallet hoàn chỉnh đang xếp sẵn ở khu xuất hàng để bốc lên xe.",
+          ex_en:
+            "The finished pallets are standing in goods dispatch ready for loading.",
+        },
+        {
+          id: 4,
+          cat: "1.1",
+          de: "der Lieferschein (-e)",
+          ipa: "/deːɐ̯ ˈliːfɐˌʃaɪn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Phiếu giao hàng đi kèm lô hàng",
+          en: "Delivery note / packing slip",
+          rel_vi: "abgleichen (đt: đối chiếu khớp dữ liệu)",
+          rel_en: "abgleichen (v: to reconcile/match data)",
+          ex_de:
+            "Ich vergleiche die Stückzahl auf dem Lieferschein mit den gelieferten Kartons.",
+          ex_vi:
+            "Tôi đối chiếu số lượng kiện trên phiếu giao hàng với số thùng hàng thực nhận.",
+          ex_en:
+            "I compare the piece count on the delivery note with the delivered cartons.",
+        },
+        {
+          id: 5,
+          cat: "1.1",
+          de: "die Kommissionierung",
+          ipa: "/diː kɔmis̯oˈniːʁʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Công đoạn soạn hàng / gom hàng theo đơn đặt hàng",
+          en: "Order picking / order assembly",
+          rel_vi:
+            "kommissionieren (đt: soạn đơn hàng), der Kommissionierer (dt: nhân viên soạn đơn)",
+          rel_en:
+            "kommissionieren (v: to pick orders), der Kommissionierer (n: order picker)",
+          ex_de:
+            "Für die Kommissionierung fahren wir die Regalplätze nach Auftrag ab.",
+          ex_vi: "Khi soạn đơn chúng tôi đi qua các ô kệ theo thứ tự đơn hàng.",
+          ex_en:
+            "For order picking, we drive through the rack locations by order.",
+        },
+        {
+          id: 6,
+          cat: "1.1",
+          de: 'der Pickschein (-e) / der Auftrag ("-e)',
+          ipa: "/deːɐ̯ ˈpɪkˌʃaɪn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Phiếu soạn hàng / Lệnh xuất đơn hàng",
+          en: "Picking list / order",
+          rel_vi: "abarbeiten (đt: xử lý hoàn tất đơn)",
+          rel_en: "abarbeiten (v: to work through / complete order)",
+          ex_de:
+            "Auf dem Pickschein stehen Artikelnummer, Menge und Regalplatz.",
+          ex_vi:
+            "Trên phiếu soạn hàng ghi rõ mã sản phẩm, số lượng và vị trí ô kệ.",
+          ex_en:
+            "The picking list shows article number, quantity, and rack location.",
+        },
+        {
+          id: 7,
+          cat: "1.1",
+          de: "das MDE-Gerät (-e) (Mobile Datenerfassung)",
+          ipa: "/das ɛm deː ˈeː ɡəˌʁɛːt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Thiết bị cầm tay quét mã vạch & nhập dữ liệu kho",
+          en: "Handheld barcode & mobile data capture terminal (MDE)",
+          rel_vi:
+            "der Barcode / der Scanner (dt: mã vạch / máy quét), scannen (đt: quét mã)",
+          rel_en:
+            "der Barcode / der Scanner (n: barcode / scanner), scannen (v: to scan)",
+          ex_de:
+            "Wir scannen jeden Artikel mit dem MDE-Gerät, damit der Bestand stimmt.",
+          ex_vi:
+            "Chúng tôi quét từng mặt hàng bằng thiết bị quét mã để tồn kho luôn chính xác.",
+          ex_en:
+            "We scan every item with the MDE device so inventory stays accurate.",
+        },
+        {
+          id: 8,
+          cat: "1.1",
+          de: 'der Regalplatz ("-e) / das Hochregallager (-)',
+          ipa: "/deːɐ̯ ʁeˈɡaːlˌplats/",
+          type_vi: "Danh từ (m./n.)",
+          type_en: "Noun (m./n.)",
+          vi: "Ô vị trí trên giá kệ / Kho giá kệ cao tầng",
+          en: "Rack location / high-bay warehouse",
+          rel_vi:
+            "einlagern (đt: đưa hàng vào lưu kho), auslagern (đt: lấy hàng ra khỏi kho)",
+          rel_en:
+            "einlagern (v: to put away/store), auslagern (v: to retrieve/pick out)",
+          ex_de:
+            "Die Palette kommt auf den Regalplatz B-04-12 im Hochregallager.",
+          ex_vi: "Pallet hàng được đưa lên vị trí kệ B-04-12 trong kho kệ cao.",
+          ex_en:
+            "The pallet goes onto rack location B-04-12 in the high-bay warehouse.",
+        },
+        {
+          id: 9,
+          cat: "1.1",
+          de: 'der Bestand ("-e) / der Lagerbestand',
+          ipa: "/deːɐ̯ bəˈʃtant/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Số lượng hàng tồn kho",
+          en: "Stock level / warehouse inventory",
+          rel_vi:
+            "nachbestellen (đt: đặt bổ sung hàng), der Mindestbestand (dt: tồn kho tối thiểu)",
+          rel_en:
+            "nachbestellen (v: to reorder), der Mindestbestand (n: minimum stock level)",
+          ex_de:
+            "Der Bestand an Kartons wird knapp, wir müssen rechtzeitig nachbestellen.",
+          ex_vi:
+            "Số lượng thùng các-tông sắp cạn, chúng ta cần đặt bổ sung kịp lúc.",
+          ex_en:
+            "The stock of cartons is running low; we need to reorder in time.",
+        },
+        {
+          id: 10,
+          cat: "1.1",
+          de: "die Inventur (-en)",
+          ipa: "/diː ɪnvɛnˈtuːɐ̯/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kiểm kê hàng tồn kho thực tế",
+          en: "Stocktake / physical inventory count",
+          rel_vi:
+            "zählen (đt: đếm số lượng), die Abweichung (dt: sự chênh lệch số liệu)",
+          rel_en:
+            "zählen (v: to count), die Abweichung (n: discrepancy/variance)",
+          ex_de:
+            "Bei der Inventur zählen wir den gesamten Lagerbestand genau nach.",
+          ex_vi:
+            "Khi kiểm kê chúng tôi đếm lại chính xác toàn bộ hàng tồn kho.",
+          ex_en:
+            "During stocktake, we count the entire warehouse inventory carefully.",
+        },
+        {
+          id: 11,
+          cat: "1.1",
+          de: "das FIFO-Prinzip / das LIFO-Prinzip",
+          ipa: "/das ˈfiːfoː pʁɪnˈtsiːp/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Nguyên tắc nhập trước – xuất trước (FIFO) / nhập sau – xuất trước (LIFO)",
+          en: "FIFO principle / LIFO principle",
+          rel_vi:
+            "das Mindesthaltbarkeitsdatum (dt: hạn sử dụng tối thiểu MHD)",
+          rel_en: "das Mindesthaltbarkeitsdatum (n: best-before date)",
+          ex_de: "Bei Ware mit MHD arbeiten wir streng nach dem FIFO-Prinzip.",
+          ex_vi:
+            "Với hàng có hạn sử dụng chúng tôi làm việc nghiêm ngặt theo nguyên tắc nhập trước xuất trước.",
+          ex_en:
+            "For goods with a best-before date, we strictly follow the FIFO principle.",
+        },
+        {
+          id: 12,
+          cat: "1.1",
+          de: "die Verpackung (-en) / verpacken",
+          ipa: "/diː fɛɐ̯ˈpakʊŋ/",
+          type_vi: "Danh từ (f.) / Động từ",
+          type_en: "Noun (f.) / Verb",
+          vi: "Bao bì đóng gói / Đóng gói hàng hóa",
+          en: "Packaging / to pack",
+          rel_vi:
+            "der Karton (dt: thùng các-tông), das Klebeband (dt: băng keo dán thùng)",
+          rel_en:
+            "der Karton (n: carton/box), das Klebeband (n: adhesive tape)",
+          ex_de:
+            "Wir verpacken die Ware sicher im Karton, damit nichts kaputtgeht.",
+          ex_vi:
+            "Chúng tôi đóng gói hàng chắc chắn trong thùng các-tông để không bị hư hỏng.",
+          ex_en: "We pack the goods securely in the carton so nothing breaks.",
+        },
+        {
+          id: 13,
+          cat: "1.1",
+          de: "die Ladungssicherung",
+          ipa: "/diː ˈlaːdʊŋsˌzɪçəʁʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Chằng buộc & cố định hàng hóa an toàn trên pallet hoặc xe tải",
+          en: "Cargo securing / load restraint",
+          rel_vi:
+            "der Spanngurt (dt: dây chằng hàng tăng đơ), die Stretchfolie (dt: màng quấn co pallet)",
+          rel_en:
+            "der Spanngurt (n: ratchet lashing strap), die Stretchfolie (n: stretch wrap film)",
+          ex_de:
+            "Eine gute Ladungssicherung verhindert, dass Paletten beim Fahren verrutschen.",
+          ex_vi:
+            "Chằng buộc hàng hóa tốt giúp pallet không bị xô lệch khi xe chạy.",
+          ex_en:
+            "Good load securing prevents pallets from shifting while driving.",
+        },
+        {
+          id: 14,
+          cat: "1.1",
+          de: "der LKW (-s) / der Spediteur (-e)",
+          ipa: "/deːɐ̯ ɛl kaː ˈveː/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Xe tải chở hàng / Đơn vị vận tải giao nhận",
+          en: "Truck / freight forwarder or carrier",
+          rel_vi:
+            "die Rampe / das Tor (dt: sàn nâng / cửa dock bốc xếp hàng), ankommen (đt: xe tới nơi)",
+          rel_en:
+            "die Rampe / das Tor (n: loading ramp / dock door), ankommen (v: to arrive)",
+          ex_de: "Der LKW steht an Rampe 3 und wartet auf die Beladung.",
+          ex_vi: "Xe tải đang đỗ ở cửa bốc hàng số 3 và chờ chất hàng lên xe.",
+          ex_en: "The truck is at Ramp 3 waiting to be loaded.",
+        },
+        {
+          id: 15,
+          cat: "1.1",
+          de: "die Beschädigung (-en) / der Transportschaden",
+          ipa: "/diː bəˈʃɛːdɪɡʊŋ/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Tình trạng hư hỏng / Hư hỏng do vận chuyển",
+          en: "Damage / transit damage",
+          rel_vi:
+            "reklamieren (đt: khiếu nại/ghi nhận hàng lỗi), beschädigt (tt: bị hư hỏng)",
+          rel_en:
+            "reklamieren (v: to claim/report defect), beschädigt (adj: damaged)",
+          ex_de:
+            "Wenn ein Karton beschädigt ist, vermerken wir den Transportschaden sofort.",
+          ex_vi:
+            "Nếu thùng hàng bị hư hỏng, chúng tôi ghi nhận ngay lỗi hư hỏng vận chuyển.",
+          ex_en:
+            "If a carton is damaged, we note the transit damage right away.",
+        },
+        {
+          id: 16,
+          cat: "1.1",
+          de: "die Retoure (-n)",
+          ipa: "/diː ʁəˈtuːʁə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Hàng trả lại từ khách hàng hoặc điểm giao",
+          en: "Returned goods / return",
+          rel_vi:
+            "prüfen (đt: kiểm tra phân loại), zurücksenden (đt: gửi trả lại)",
+          rel_en: "prüfen (v: to inspect/sort), zurücksenden (v: to return)",
+          ex_de:
+            "Die Retouren prüfen wir zuerst auf Vollständigkeit und Zustand.",
+          ex_vi:
+            "Hàng trả lại trước tiên chúng tôi kiểm tra xem có đủ số lượng và tình trạng ra sao.",
+          ex_en: "We first check returns for completeness and condition.",
+        },
+        {
+          id: 17,
+          cat: "1.1",
+          de: "die Kennzeichnung / das Etikett (-en)",
+          ipa: "/diː ˈkɛnˌtsaɪçnʊŋ/",
+          type_vi: "Danh từ (f./n.)",
+          type_en: "Noun (f./n.)",
+          vi: "Ghi nhãn dán tem / Nhãn mã hàng & địa chỉ",
+          en: "Labeling / shipping or product label",
+          rel_vi: "etikettieren (đt: dán tem nhãn), lesbar (tt: dễ đọc rõ nét)",
+          rel_en: "etikettieren (v: to label), lesbar (adj: legible)",
+          ex_de:
+            "Jede Palette braucht ein gut lesbares Etikett mit Ziel und Menge.",
+          ex_vi: "Mỗi pallet đều cần dán nhãn dễ đọc ghi nơi nhận và số lượng.",
+          ex_en:
+            "Every pallet needs a clearly legible label with destination and quantity.",
+        },
+        {
+          id: 18,
+          cat: "1.1",
+          de: 'der Versandauftrag ("-e)',
+          ipa: "/deːɐ̯ fɛɐ̯ˈzantʔaʊfˌtʁaːk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Lệnh xuất gửi hàng đi",
+          en: "Shipping order / dispatch order",
+          rel_vi: "freigeben (đt: phê duyệt xuất hàng)",
+          rel_en: "freigeben (v: to release/approve for dispatch)",
+          ex_de: "Nach der Kontrolle geben wir den Versandauftrag frei.",
+          ex_vi: "Sau khi kiểm tra xong chúng tôi phê duyệt lệnh xuất hàng.",
+          ex_en: "After inspection, we release the shipping order.",
+        },
+        {
+          id: 19,
+          cat: "1.2",
+          de: "der Gabelstapler (-) / der Stapler (-)",
+          ipa: "/deːɐ̯ ˈɡaːbl̩ˌʃtaːplɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Xe nâng hàng (thường gọi tắt là Stapler)",
+          en: "Forklift truck (commonly called Stapler)",
+          rel_vi:
+            "der Staplerfahrer (dt: tài xế lái xe nâng), der Staplerschein (dt: chứng chỉ vận hành xe nâng)",
+          rel_en:
+            "der Staplerfahrer (n: forklift operator), der Staplerschein (n: forklift license)",
+          ex_de:
+            "Mit dem Stapler heben wir die schweren Paletten sicher ins Regal.",
+          ex_vi: "Bằng xe nâng chúng tôi nâng các pallet nặng lên kệ an toàn.",
+          ex_en:
+            "With the forklift, we lift the heavy pallets safely onto the rack.",
+        },
+        {
+          id: 20,
+          cat: "1.2",
+          de: "der Staplerschein (-e) / der Fahrausweis",
+          ipa: "/deːɐ̯ ˈʃtaːplɐˌʃaɪn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bằng / chứng chỉ lái xe nâng hợp lệ tại Đức (DGUV Vorschrift 68)",
+          en: "Forklift operator license in Germany (DGUV Vorschrift 68)",
+          rel_vi: "berechtigt (tt: có thẩm quyền/chứng chỉ hợp lệ)",
+          rel_en: "berechtigt (adj: authorized/certified)",
+          ex_de:
+            "Zum Staplerfahren braucht man in Deutschland einen gültigen Staplerschein.",
+          ex_vi:
+            "Để lái xe nâng tại Đức cần có chứng chỉ lái xe nâng còn hiệu lực.",
+          ex_en:
+            "To drive a forklift in Germany, you need a valid forklift license.",
+        },
+        {
+          id: 21,
+          cat: "1.2",
+          de: "die Gabel (-n) / die Hubhöhe",
+          ipa: "/diː ˈɡaːbl̩/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Càng nâng của xe nâng / Chiều cao nâng tối đa",
+          en: "Forklift tines / lifting height",
+          rel_vi:
+            "absenken (đt: hạ càng nâng xuống), anheben (đt: nâng càng lên)",
+          rel_en: "absenken (v: to lower forks), anheben (v: to lift/raise)",
+          ex_de:
+            "Fahre die Gabeln beim Fahren immer tief, etwa 15 Zentimeter über dem Boden.",
+          ex_vi:
+            "Khi di chuyển luôn hạ càng nâng thấp, cách mặt sàn khoảng 15 cm.",
+          ex_en:
+            "Always keep the forks low while driving, about 15 centimeters above the floor.",
+        },
+        {
+          id: 22,
+          cat: "1.2",
+          de: "die Tragfähigkeit / die Nutzlast",
+          ipa: "/diː ˈtʁaːkfɛːɪçkaɪt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tải trọng nâng cho phép tối đa",
+          en: "Load capacity / payload limit",
+          rel_vi: "überladen (đt: chất quá tải)",
+          rel_en: "überladen (v: to overload)",
+          ex_de:
+            "Beachte immer die Tragfähigkeit von Stapler und Regal, nie überladen!",
+          ex_vi:
+            "Luôn tuân thủ tải trọng tối đa của xe nâng và giá kệ, tuyệt đối không chở quá tải!",
+          ex_en:
+            "Always observe the load capacity of forklift and rack; never overload!",
+        },
+        {
+          id: 23,
+          cat: "1.2",
+          de: "der Hubwagen (-) / die elektrische Ameise",
+          ipa: "/deːɐ̯ ˈhuːpˌvaːɡn̩/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Xe nâng tay kích pallet / Xe nâng điện thấp tầm",
+          en: "Pallet jack / electric low-lift pallet truck",
+          rel_vi: "ziehen (đt: kéo), schieben (đt: đẩy)",
+          rel_en: "ziehen (v: to pull), schieben (v: to push)",
+          ex_de:
+            "Mit dem Hubwagen ziehen wir die Palette schnell zum Packtisch.",
+          ex_vi:
+            "Bằng xe nâng tay chúng tôi kéo pallet nhanh tới bàn đóng gói.",
+          ex_en:
+            "With the pallet jack, we pull the pallet quickly to the packing table.",
+        },
+        {
+          id: 24,
+          cat: "1.2",
+          de: "die Europalette (-n) (EPAL)",
+          ipa: "/diː ɔʏ̯ʁopaˈlɛtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Pallet gỗ chuẩn châu Âu (1200 x 800 mm)",
+          en: "Euro pallet (1200 x 800 mm)",
+          rel_vi:
+            "die Einwegpalette (dt: pallet dùng một lần), stapeln (đt: xếp chồng lên nhau)",
+          rel_en:
+            "die Einwegpalette (n: disposable pallet), stapeln (v: to stack)",
+          ex_de: "Wir stapeln die Kartons bündig auf der Europalette.",
+          ex_vi:
+            "Chúng tôi xếp các thùng hàng ngay ngắn vừa khít trên pallet châu Âu.",
+          ex_en: "We stack the cartons flush on the Euro pallet.",
+        },
+        {
+          id: 25,
+          cat: "1.2",
+          de: 'die Gitterbox ("-er)',
+          ipa: "/diː ˈɡɪtɐˌbɔks/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thùng lưới sắt đựng hàng công nghiệp trên đế pallet",
+          en: "Steel mesh pallet box / stillage",
+          rel_vi: "die Klappe (dt: cửa lật của thùng lưới sắt)",
+          rel_en: "die Klappe (n: drop flap/gate)",
+          ex_de:
+            "Kleinteile und Ersatzteile lagern wir übersichtlich in Gitterboxen.",
+          ex_vi:
+            "Các linh kiện nhỏ và phụ tùng chúng tôi lưu gọn gàng trong thùng lưới sắt.",
+          ex_en:
+            "We store small parts and spare parts neatly in mesh pallet boxes.",
+        },
+        {
+          id: 26,
+          cat: "1.2",
+          de: "die Stretchfolie (-n) / einwickeln",
+          ipa: "/diː ˈʃtʁɛtʃˌfoːliə/",
+          type_vi: "Danh từ (f.) / Động từ",
+          type_en: "Noun (f.) / Verb",
+          vi: "Màng nhựa quấn co cố định pallet / Quấn màng co quanh kiện hàng",
+          en: "Stretch wrap film / to stretch-wrap",
+          rel_vi: "wickeln (đt: quấn)",
+          rel_en: "wickeln (v: to wrap)",
+          ex_de:
+            "Wickle die Palette fest mit Stretchfolie ein, damit nichts herunterfällt.",
+          ex_vi: "Quấn chặt pallet bằng màng co để hàng hóa không bị rơi đổ.",
+          ex_en:
+            "Wrap the pallet tightly with stretch film so nothing falls off.",
+        },
+        {
+          id: 27,
+          cat: "1.2",
+          de: 'das Umreifungsband ("-er) / das Umreifungsgerät',
+          ipa: "/das ˈʊmʁaɪfʊŋsˌbant/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Dây đai siết kiện hàng (nhựa hoặc thép) / Máy siết dây đai",
+          en: "Strapping band / strapping tool",
+          rel_vi: "spannen (đt: siết căng dây đai)",
+          rel_en: "spannen (v: to tension/tighten strap)",
+          ex_de:
+            "Mit dem Umreifungsband sichern wir schwere Pakete auf der Palette.",
+          ex_vi:
+            "Bằng dây đai chúng tôi cố định chắc chắn các kiện hàng nặng trên pallet.",
+          ex_en:
+            "With the strapping band, we secure heavy packages on the pallet.",
+        },
+        {
+          id: 28,
+          cat: "1.2",
+          de: 'der Packtisch (-e) / der Packplatz ("-e)',
+          ipa: "/deːɐ̯ ˈpakˌtɪʃ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bàn làm việc đóng gói hàng",
+          en: "Packing table / packing station",
+          rel_vi: "der Abroller (dt: giá đỡ cuộn băng keo/giấy gói)",
+          rel_en: "der Abroller (n: tape/paper dispenser)",
+          ex_de: "Am Packtisch legen wir Füllmaterial in die Kartons.",
+          ex_vi:
+            "Tại bàn đóng gói chúng tôi lót vật liệu chèn vào các thùng hàng.",
+          ex_en: "At the packing table, we put void fill into the cartons.",
+        },
+        {
+          id: 29,
+          cat: "1.2",
+          de: "das Füllmaterial / das Luftpolster (-) / das Packpapier",
+          ipa: "/das ˈfʏlmateˌʁi̯aːl/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Vật liệu chèn lót chống sốc / Đệm khí / Giấy gói chèn thùng",
+          en: "Void fill / bubble wrap / packing paper",
+          rel_vi: "polstern (đt: chèn đệm chống va đập)",
+          rel_en: "polstern (v: to cushion/pad)",
+          ex_de:
+            "Empfindliche Ware polstern wir gut mit Luftpolster und Packpapier.",
+          ex_vi: "Hàng dễ vỡ chúng tôi chèn kỹ bằng đệm khí và giấy gói.",
+          ex_en:
+            "We pad fragile goods well with bubble wrap and packing paper.",
+        },
+        {
+          id: 30,
+          cat: "1.2",
+          de: "der Handscanner (-) / der Barcodescanner (-)",
+          ipa: "/deːɐ̯ ˈhantˌskɛnɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Máy quét mã vạch cầm tay",
+          en: "Handheld scanner / barcode scanner",
+          rel_vi:
+            "der QR-Code (dt: mã QR), piepen (đt: tiếng bíp báo quét thành công)",
+          rel_en: "der QR-Code (n: QR code), piepen (v: to beep)",
+          ex_de: "Wenn der Scanner piept, wurde der Barcode richtig erfasst.",
+          ex_vi:
+            "Khi máy quét phát tiếng bíp nghĩa là mã vạch đã được đọc đúng.",
+          ex_en: "When the scanner beeps, the barcode was captured properly.",
+        },
+        {
+          id: 31,
+          cat: "1.2",
+          de: "die Bodenwaage (-n) / die Palettenwaage (-n)",
+          ipa: "/diː ˈboːdn̩ˌvaːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Cân đặt sàn / Cân pallet trọng tải lớn",
+          en: "Floor scale / pallet scale",
+          rel_vi: "wiegen (đt: cân trọng lượng), das Gewicht (dt: khối lượng)",
+          rel_en: "wiegen (v: to weigh), das Gewicht (n: weight)",
+          ex_de: "Wir wiegen jede fertige Palette auf der Bodenwaage ab.",
+          ex_vi:
+            "Chúng tôi cân trọng lượng từng pallet thành phẩm trên cân sàn.",
+          ex_en: "We weigh each finished pallet on the floor scale.",
+        },
+        {
+          id: 32,
+          cat: "1.2",
+          de: "der Rollcontainer (-)",
+          ipa: "/deːɐ̯ ˈʁɔlkɔnˌteːnɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Xe lồng lưới đẩy hàng có bánh xe",
+          en: "Roll cage / wheeled roll container",
+          rel_vi: "rollen (đt: đẩy lăn di chuyển)",
+          rel_en: "rollen (v: to roll)",
+          ex_de: "Die Rollcontainer bringen die Ware direkt in die Filialen.",
+          ex_vi:
+            "Các xe lồng đẩy chuyển hàng thẳng tới các chi nhánh/cửa hàng.",
+          ex_en:
+            "The roll containers bring the goods straight to the branches.",
+        },
+        {
+          id: 33,
+          cat: "1.2",
+          de: 'das Sicherheitsdatenblatt ("-er) (SDB)',
+          ipa: "/das ˈzɪçɐhaɪtsˌdaːtn̩blaːt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Bảng dữ liệu an toàn hóa chất (bắt buộc khi lưu kho hóa chất/vật tư nguy hiểm)",
+          en: "Safety data sheet (SDS)",
+          rel_vi: "die Gefahrstoffe (dt: chất nguy hiểm)",
+          rel_en: "die Gefahrstoffe (n: hazardous substances)",
+          ex_de:
+            "Bei Gefahrstoffen im Lager halten wir immer das Sicherheitsdatenblatt bereit.",
+          ex_vi:
+            "Với các chất nguy hiểm trong kho chúng tôi luôn chuẩn bị sẵn bảng dữ liệu an toàn.",
+          ex_en:
+            "For hazardous substances in the warehouse, we always keep the safety data sheet ready.",
+        },
+        {
+          id: 34,
+          cat: "1.2",
+          de: 'die Ladebordwand ("-e) / die Rampe (-n)',
+          ipa: "/diː ˈlaːdəˌbɔʁtvant/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bửng nâng thủy lực sau xe tải / Sàn bốc dỡ hàng",
+          en: "Tail lift / loading ramp",
+          rel_vi: "be- und entladen (bốc xếp lên và dỡ xuống)",
+          rel_en: "be- und entladen (to load and unload)",
+          ex_de:
+            "Beim Arbeiten an der Ladebordwand achten wir auf sicheren Stand.",
+          ex_vi:
+            "Khi làm việc ở bửng nâng xe tải chúng tôi chú ý tư thế đứng vững an toàn.",
+          ex_en:
+            "When working on the tail lift, we make sure of secure footing.",
+        },
+        {
+          id: 35,
+          cat: "1.2",
+          de: "der Fahrweg (-e) / die Fahrspur (-en)",
+          ipa: "/deːɐ̯ ˈfaːɐ̯ˌveːk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Lối đi dành cho xe nâng & xe đẩy trong kho / Làn đường di chuyển",
+          en: "Vehicle/forklift lane / driving lane",
+          rel_vi: "freihalten (đt: giữ lối đi luôn thông thoáng)",
+          rel_en: "freihalten (v: to keep clear)",
+          ex_de:
+            "Halte die Fahrwege und Fluchtwege im Lager immer komplett frei!",
+          ex_vi:
+            "Luôn giữ lối đi xe nâng và lối thoát hiểm trong kho thông thoáng hoàn toàn!",
+          ex_en:
+            "Keep the vehicle lanes and escape routes in the warehouse completely clear!",
+        },
+        {
+          id: 36,
+          cat: "1.2",
+          de: "der Schwenkarm / die Schutzgitter (Pl.)",
+          ipa: "/deːɐ̯ ˈʃvɛŋkˌaʁm/",
+          type_vi: "Danh từ (m./Pl.)",
+          type_en: "Noun (m./Pl.)",
+          vi: "Tay cần xoay / Lưới chắn bảo vệ kệ & khu vực nguy hiểm",
+          en: "Swivel arm / protective guard mesh",
+          rel_vi: "schützen (đt: bảo vệ an toàn)",
+          rel_en: "schützen (v: to protect)",
+          ex_de:
+            "Schutzgitter und Anfahrschutz schützen die Regale vor Staplerstößen.",
+          ex_vi:
+            "Lưới chắn và thanh chặn va chạm bảo vệ giá kệ khỏi bị xe nâng đâm vào.",
+          ex_en:
+            "Guard mesh and impact protection shield the racks from forklift bumps.",
+        },
+        {
+          id: 37,
+          cat: "1.3",
+          de: "die Persönliche Schutzausrüstung (PSA)",
+          ipa: "/diː pɛʁˈzøːnlɪçə ˈʃʊtsʔaʊsˌʁʏstʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Trang bị bảo hộ cá nhân (PPE)",
+          en: "Personal protective equipment (PPE)",
+          rel_vi: "tragen (đt: mặc/đeo trang bị bảo hộ)",
+          rel_en: "tragen (v: to wear)",
+          ex_de: "Im gesamten Lagerbereich ist das Tragen der PSA Pflicht.",
+          ex_vi:
+            "Trong toàn bộ khu vực kho, việc đeo bảo hộ cá nhân là bắt buộc.",
+          ex_en:
+            "Wearing PPE is mandatory throughout the entire warehouse area.",
+        },
+        {
+          id: 38,
+          cat: "1.3",
+          de: "die Sicherheitsschuhe (Pl.) (S3)",
+          ipa: "/diː ˈzɪçɐhaɪtsˌʃuːə/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Giày bảo hộ lao động mũi thép chống đâm xuyên (chuẩn S3)",
+          en: "Safety shoes (S3)",
+          rel_vi:
+            "rutschfest (tt: chống trơn trượt), die Zehenschutzkappe (dt: mũi bảo vệ ngón chân)",
+          rel_en:
+            "rutschfest (adj: slip-resistant), die Zehenschutzkappe (n: protective toe cap)",
+          ex_de:
+            "Sicherheitsschuhe schützen die Füße vor herabfallenden Teilen.",
+          ex_vi: "Giày bảo hộ bảo vệ đôi chân khỏi vật rơi.",
+          ex_en: "Safety shoes protect feet from falling objects.",
+        },
+        {
+          id: 39,
+          cat: "1.3",
+          de: "die Warnweste (-n)",
+          ipa: "/diː ˈvaʁnˌvɛstə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Áo phản quang cảnh báo an toàn trong kho & bãi xe",
+          en: "High-visibility safety vest",
+          rel_vi: "gut sichtbar (tt: dễ nhìn thấy rõ)",
+          rel_en: "gut sichtbar (adj: clearly visible)",
+          ex_de: "Mit der Warnweste bist du im Staplerverkehr gut sichtbar.",
+          ex_vi:
+            "Mặc áo phản quang giúp bạn được nhìn thấy rõ trong khu vực xe nâng qua lại.",
+          ex_en:
+            "With the high-vis vest, you are clearly visible in forklift traffic.",
+        },
+        {
+          id: 40,
+          cat: "1.3",
+          de: "die Arbeitshandschuhe (Pl.)",
+          ipa: "/diː ˈaʁbaɪtsˌhantʃuːə/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Găng tay bảo hộ lao động",
+          en: "Work gloves",
+          rel_vi: "schnittfest (tt: chống cắt)",
+          rel_en: "schnittfest (adj: cut-resistant)",
+          ex_de:
+            "Beim Umreifen und Hantieren mit Kartons ziehen wir Arbeitshandschuhe an.",
+          ex_vi:
+            "Khi siết dây đai và bốc xếp thùng hàng chúng tôi đeo găng tay bảo hộ.",
+          ex_en: "When strapping and handling cartons, we put on work gloves.",
+        },
+        {
+          id: 41,
+          cat: "1.3",
+          de: 'der Fluchtweg (-e) / der Notausgang ("-e)',
+          ipa: "/deːɐ̯ ˈflʊxtˌveːk/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Lối thoát hiểm / Cửa thoát hiểm khẩn cấp",
+          en: "Escape route / emergency exit",
+          rel_vi: "gekennzeichnet (tt: có biển chỉ dẫn rõ)",
+          rel_en: "gekennzeichnet (adj: clearly marked/signed)",
+          ex_de:
+            "Fluchtwege und Notausgänge müssen jederzeit frei zugänglich sein.",
+          ex_vi:
+            "Lối thoát hiểm và cửa thoát hiểm phải luôn mở thông thoáng bất cứ lúc nào.",
+          ex_en:
+            "Escape routes and emergency exits must be freely accessible at all times.",
+        },
+        {
+          id: 42,
+          cat: "1.3",
+          de: "der Brandschutz / der Feuerlöscher (-)",
+          ipa: "/deːɐ̯ ˈbʁantˌʃʊts/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Phòng cháy chữa cháy / Bình chữa cháy",
+          en: "Fire protection / fire extinguisher",
+          rel_vi: "brennbar (tt: dễ cháy), der Brandmelder (dt: đầu báo cháy)",
+          rel_en:
+            "brennbar (adj: flammable/combustible), der Brandmelder (n: smoke/fire detector)",
+          ex_de:
+            "Lagere brennbare Verpackungsmaterialien nicht direkt an Wärmequellen.",
+          ex_vi: "Không để vật liệu đóng gói dễ cháy ngay sát nguồn nhiệt.",
+          ex_en:
+            "Do not store flammable packaging materials directly next to heat sources.",
+        },
+        {
+          id: 43,
+          cat: "1.3",
+          de: "die Stolperfalle (-n)",
+          ipa: "/diː ˈʃtɔlpɐˌfalə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Mối nguy vấp ngã (dây, băng keo, pallet nhỏ, góc nhô ra)",
+          en: "Trip hazard",
+          rel_vi: "stolpern (đt: bị vấp ngã)",
+          rel_en: "stolpern (v: to trip/stumble)",
+          ex_de:
+            "Leere Folien und Kartons auf dem Boden sind eine gefährliche Stolperfalle.",
+          ex_vi:
+            "Màng bọc và thùng các-tông bỏ trên sàn là mối nguy vấp ngã nguy hiểm.",
+          ex_en:
+            "Empty film and cartons on the floor are a dangerous trip hazard.",
+        },
+        {
+          id: 44,
+          cat: "1.3",
+          de: "die Quetschgefahr (-en)",
+          ipa: "/diː ˈkvɛtʃɡəˌfaːɐ̯/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nguy cơ bị kẹp / đè nghiến tay chân (giữa càng nâng, pallet, cửa xe tải)",
+          en: "Crush / pinch hazard",
+          rel_vi: "quetschen (đt: làm kẹp/nghiến)",
+          rel_en: "quetschen (v: to crush/pinch)",
+          ex_de:
+            "Greife niemals zwischen Palette und Regal — dort besteht Quetschgefahr!",
+          ex_vi:
+            "Tuyệt đối không thò tay giữa pallet và giá kệ — ở đó có nguy cơ bị kẹp!",
+          ex_en:
+            "Never reach between a pallet and the rack—there is a crush hazard there!",
+        },
+        {
+          id: 45,
+          cat: "1.3",
+          de: "die Absturzgefahr (-en)",
+          ipa: "/diː ˈapʃtʊʁtsɡəˌfaːɐ̯/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nguy cơ rơi ngã từ trên cao (sàn bốc hàng, thang, giàn kệ)",
+          en: "Fall hazard (from height)",
+          rel_vi: "abstürzen (đt: rơi ngã từ trên cao)",
+          rel_en: "abstürzen (v: to fall from height)",
+          ex_de:
+            "An der Laderampe besteht Absturzgefahr, wenn kein Schutzgeländer zu ist.",
+          ex_vi:
+            "Ở sàn bốc hàng có nguy cơ rơi ngã nếu chưa có rào chắn bảo vệ.",
+          ex_en:
+            "There is a fall hazard at the loading ramp if no safety railing is closed.",
+        },
+        {
+          id: 46,
+          cat: "1.3",
+          de: "die Unübersichtlichkeit / der tote Winkel",
+          ipa: "/diː ˈʊnʔyːbɐˌzɪçtlɪçkaɪt/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Điểm khuất tầm nhìn / Góc khuất nguy hiểm",
+          en: "Poor visibility / blind spot",
+          rel_vi: "langsam fahren (đt: chạy xe chậm)",
+          rel_en: "langsam fahren (v: to drive slowly)",
+          ex_de:
+            "An unübersichtlichen Regalecken hupen wir kurz und fahren langsam.",
+          ex_vi:
+            "Ở các góc kệ khuất tầm nhìn chúng tôi bấm còi ngắn và chạy chậm.",
+          ex_en: "At blind rack corners, we honk briefly and drive slowly.",
+        },
+        {
+          id: 47,
+          cat: "1.3",
+          de: "die Sauberkeit / die Ordnung",
+          ipa: "/diː ˈzaʊbɐkaɪt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Sự sạch sẽ / Sự ngăn nắp trật tự",
+          en: "Cleanliness / orderliness",
+          rel_vi: "aufräumen (đt: dọn dẹp gọn gàng)",
+          rel_en: "aufräumen (v: to tidy up)",
+          ex_de:
+            "Sauberkeit und Ordnung im Lager sparen Zeit und vermeiden Unfälle.",
+          ex_vi:
+            "Sạch sẽ và gọn gàng trong kho giúp tiết kiệm thời gian và tránh tai nạn.",
+          ex_en:
+            "Cleanliness and order in the warehouse save time and prevent accidents.",
+        },
+        {
+          id: 48,
+          cat: "1.3",
+          de: "der Abfall / die Mülltrennung",
+          ipa: "/deːɐ̯ ˈapˌfal/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Rác thải / Phân loại rác thải",
+          en: "Waste / waste sorting",
+          rel_vi:
+            "das Altpapier (dt: giấy/các-tông phế liệu), die Folie (dt: màng nilon phế liệu)",
+          rel_en:
+            "das Altpapier (n: waste paper/cardboard), die Folie (n: waste plastic film)",
+          ex_de:
+            "Wir trennen Altpapier, Folie und Restmüll sauber nach Vorgabe.",
+          ex_vi:
+            "Chúng tôi phân loại giấy phế liệu, màng nilon và rác thải thông thường gọn gàng theo quy định.",
+          ex_en:
+            "We sort waste cardboard, film, and residual waste neatly per guidelines.",
+        },
+        {
+          id: 49,
+          cat: "1.3",
+          de: 'der Unfallbericht (-e) / der Erste-Hilfe-Kasten ("-er)',
+          ipa: "/deːɐ̯ ˈʊnfalˌbəʁɪçt/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Biên bản tai nạn lao động / Hộp sơ cứu y tế",
+          en: "Accident report / first-aid kit",
+          rel_vi: "der Ersthelfer (dt: nhân viên sơ cứu tại chỗ)",
+          rel_en: "der Ersthelfer (n: first aider)",
+          ex_de:
+            "Jeden Arbeitsunfall und jede kleine Verletzung melden wir sofort.",
+          ex_vi:
+            "Mọi tai nạn lao động và vết thương nhỏ đều được báo cáo ngay lập tức.",
+          ex_en: "We report every work accident and minor injury immediately.",
+        },
+        {
+          id: 50,
+          cat: "1.3",
+          de: "die Unterweisung (-en)",
+          ipa: "/diː ˈʊntɐˌvaɪzʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Buổi huấn luyện an toàn lao động & quy trình định kỳ",
+          en: "Safety instruction / briefing",
+          rel_vi: "unterweisen (đt: hướng dẫn huấn luyện an toàn)",
+          rel_en: "unterweisen (v: to instruct/brief)",
+          ex_de:
+            "Vor dem Arbeitsbeginn im Lager erhalten wir eine Sicherheitsunterweisung.",
+          ex_vi:
+            "Trước khi bắt đầu làm việc trong kho chúng tôi được tham gia buổi huấn luyện an toàn.",
+          ex_en:
+            "Before starting work in the warehouse, we receive a safety briefing.",
+        },
+        {
+          id: 51,
+          cat: "1.3",
+          de: "die Sichtprüfung / die Kontrolle (-n)",
+          ipa: "/diː ˈzɪçtˌpʁyːfʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kiểm tra bằng mắt thường / Kiểm tra định kỳ",
+          en: "Visual inspection / check",
+          rel_vi: "kontrollieren (đt: kiểm tra)",
+          rel_en: "kontrollieren (v: to check/inspect)",
+          ex_de: "Vor jeder Schicht machen wir eine Sichtprüfung am Stapler.",
+          ex_vi:
+            "Trước mỗi ca làm việc chúng tôi kiểm tra bằng mắt thường xe nâng.",
+          ex_en:
+            "Before every shift, we perform a visual inspection on the forklift.",
+        },
+        {
+          id: 52,
+          cat: "1.3",
+          de: "der Lärm / der Gehörschutz",
+          ipa: "/deːɐ̯ lɛʁm/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Tiếng ồn / Thiết bị bảo vệ thính giác",
+          en: "Noise / hearing protection",
+          rel_vi: "laut (tt: ồn ào lớn)",
+          rel_en: "laut (adj: loud/noisy)",
+          ex_de:
+            "In lauten Arbeitsbereichen tragen wir bei Bedarf Gehörschutz.",
+          ex_vi:
+            "Ở các khu vực làm việc ồn ào, khi cần chúng tôi đeo đồ bảo vệ thính giác.",
+          ex_en: "In noisy work areas, we wear hearing protection when needed.",
+        },
+        {
+          id: 53,
+          cat: "1.4",
+          de: "der Lagerleiter (-) / der Teamleiter (-)",
+          ipa: "/deːɐ̯ ˈlaːɡɐˌlaɪtɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Quản lý kho / Trưởng nhóm kho",
+          en: "Warehouse manager / team leader",
+          rel_vi: "die Schichtleitung (dt: ban điều hành ca)",
+          rel_en: "die Schichtleitung (n: shift management)",
+          ex_de: "Bei Fragen zum Auftrag wende ich mich an den Teamleiter.",
+          ex_vi: "Khi có thắc mắc về đơn hàng tôi trao đổi với trưởng nhóm.",
+          ex_en:
+            "If I have questions about the order, I turn to the team leader.",
+        },
+        {
+          id: 54,
+          cat: "1.4",
+          de: "die Fachkraft für Lagerlogistik",
+          ipa: "/diː ˈfaxkʁaft fyːɐ̯ ˈlaːɡɐloɡɪsˌtɪk/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kỹ thuật viên / Nhân viên chuyên trách logistics kho vận",
+          en: "Warehouse logistics specialist",
+          rel_vi: "die Logistik (dt: ngành logistics & chuỗi cung ứng)",
+          rel_en: "die Logistik (n: logistics)",
+          ex_de:
+            "Als Fachkraft für Lagerlogistik plane und prüfe ich Warenflüsse.",
+          ex_vi:
+            "Là nhân viên chuyên trách logistics kho, tôi lập kế hoạch và kiểm tra luồng hàng.",
+          ex_en:
+            "As a warehouse logistics specialist, I plan and check goods flows.",
+        },
+        {
+          id: 55,
+          cat: "1.4",
+          de: "der Lagerhelfer (-)",
+          ipa: "/deːɐ̯ ˈlaːɡɐˌhɛlfɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Nhân viên phụ kho / hỗ trợ kho vận",
+          en: "Warehouse helper / assistant",
+          rel_vi: "anpacken (đt: xắn tay hỗ trợ làm việc)",
+          rel_en: "anpacken (v: to pitch in / lend a hand)",
+          ex_de:
+            "Die Lagerhelfer unterstützen beim Auspacken, Sortieren und Verladen.",
+          ex_vi:
+            "Nhân viên phụ kho hỗ trợ mở thùng, phân loại và bốc xếp hàng.",
+          ex_en:
+            "The warehouse helpers assist with unpacking, sorting, and loading.",
+        },
+        {
+          id: 56,
+          cat: "1.4",
+          de: "der LKW-Fahrer (-) / der Berufskraftfahrer (-)",
+          ipa: "/deːɐ̯ ˈɛlkaːveːˌfaːɐ̯ɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Tài xế xe tải / Tài xế vận tải chuyên nghiệp",
+          en: "Truck driver / professional driver",
+          rel_vi: "abholen (đt: đến lấy hàng), anliefern (đt: giao hàng tới)",
+          rel_en: "abholen (v: to pick up), anliefern (v: to deliver)",
+          ex_de:
+            "Der LKW-Fahrer wartet im Fahrerbereich, bis die Ware verladen ist.",
+          ex_vi:
+            "Tài xế xe tải đợi ở khu vực tài xế cho tới khi hàng được bốc lên xe xong.",
+          ex_en:
+            "The truck driver waits in the driver area until the goods are loaded.",
+        },
+        {
+          id: 57,
+          cat: "1.4",
+          de: "die Schicht (-en) / die Frühschicht / die Spätschicht",
+          ipa: "/diː ʃɪçt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Ca làm việc / Ca sáng / Ca chiều",
+          en: "Shift / early shift / late shift",
+          rel_vi:
+            "die Nachtschicht (dt: ca đêm), der Schichtplan (dt: lịch làm việc theo ca)",
+          rel_en:
+            "die Nachtschicht (n: night shift), der Schichtplan (n: shift schedule)",
+          ex_de:
+            "In der Logistik arbeiten wir oft in Früh-, Spät- oder Nachtschicht.",
+          ex_vi:
+            "Trong ngành logistics chúng tôi thường làm ca sáng, ca chiều hoặc ca đêm.",
+          ex_en: "In logistics, we often work early, late, or night shifts.",
+        },
+        {
+          id: 58,
+          cat: "1.4",
+          de: "die Schichtübergabe (-n)",
+          ipa: "/diː ˈʃɪçtʔyːbɐˌɡaːbə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bàn giao ca giữa các kíp làm việc",
+          en: "Shift handover",
+          rel_vi: "übergeben (đt: bàn giao công việc)",
+          rel_en: "übergeben (v: to hand over)",
+          ex_de:
+            "Bei der Schichtübergabe melden wir offene Aufträge und Störungen.",
+          ex_vi:
+            "Khi bàn giao ca chúng tôi báo cáo các đơn hàng còn dang dở và sự cố.",
+          ex_en: "At shift handover, we report open orders and malfunctions.",
+        },
+        {
+          id: 59,
+          cat: "1.4",
+          de: "die Pause (-n) / die Frühstückspause",
+          ipa: "/diː ˈpaʊzə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Giờ nghỉ giải lao / Nghỉ ăn sáng",
+          en: "Break / breakfast break",
+          rel_vi: "pausieren (đt: tạm nghỉ giải lao)",
+          rel_en: "pausieren (v: to take a break)",
+          ex_de:
+            "Wir machen unsere Pause pünktlich und stellen den Stapler sicher ab.",
+          ex_vi:
+            "Chúng tôi nghỉ giải lao đúng giờ và đỗ xe nâng ở vị trí an toàn.",
+          ex_en: "We take our break on time and park the forklift safely.",
+        },
+        {
+          id: 60,
+          cat: "1.4",
+          de: "der Auftragseingang / die Priorität (-en)",
+          ipa: "/deːɐ̯ ˈaʊftʁaːksʔaɪnˌɡaŋ/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Đơn hàng mới tiếp nhận / Mức độ ưu tiên",
+          en: "Incoming orders / priority",
+          rel_vi: "dringend (tt: khẩn cấp/ưu tiên gấp)",
+          rel_en: "dringend (adj: urgent)",
+          ex_de: "Eilaufträge haben im Versand immer höchste Priorität.",
+          ex_vi:
+            "Các đơn hàng gấp trong bộ phận xuất hàng luôn có mức ưu tiên cao nhất.",
+          ex_en: "Rush orders always have highest priority in shipping.",
+        },
+        {
+          id: 61,
+          cat: "1.4",
+          de: "die Stückzahl (-en) / die Menge (-n)",
+          ipa: "/diː ˈʃtʏkˌtsaːl/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Số lượng chiếc/kiện / Khối lượng hàng",
+          en: "Piece count / quantity",
+          rel_vi: "zählen (đt: đếm)",
+          rel_en: "zählen (v: to count)",
+          ex_de:
+            "Bitte prüfe noch einmal die genaue Stückzahl auf der Palette.",
+          ex_vi:
+            "Vui lòng kiểm tra lại một lần nữa số lượng chính xác trên pallet nhé.",
+          ex_en: "Please check the exact piece count on the pallet once more.",
+        },
+        {
+          id: 62,
+          cat: "1.4",
+          de: "die Artikelnummer (-n) / die Charge (-n)",
+          ipa: "/diː aʁˈtiːkl̩ˌnʊmɐ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Mã mặt hàng / Lô sản xuất",
+          en: "Article number / batch",
+          rel_vi: "verwechseln (đt: nhầm lẫn giữa hai mã/loại)",
+          rel_en: "verwechseln (v: to mix up / confuse)",
+          ex_de:
+            "Achte genau auf die Artikelnummer, damit wir nichts verwechseln!",
+          ex_vi: "Hãy chú ý kỹ mã sản phẩm để chúng ta không bị nhầm lẫn!",
+          ex_en:
+            "Pay close attention to the article number so we don't mix anything up!",
+        },
+        {
+          id: 63,
+          cat: "1.4",
+          de: 'das Regal (-e) / das Fach ("-er)',
+          ipa: "/das ʁeˈɡaːl/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Giá kệ chứa hàng / Ngăn kệ",
+          en: "Rack / shelf compartment",
+          rel_vi: "das Palettenregal (dt: kệ chứa pallet)",
+          rel_en: "das Palettenregal (n: pallet rack)",
+          ex_de:
+            "Im oberen Fach liegen leichtere Kartons und unten die schweren.",
+          ex_vi:
+            "Ở ngăn trên đặt các thùng nhẹ hơn và phía dưới đặt thùng nặng.",
+          ex_en:
+            "Lighter cartons are in the upper compartment and heavy ones below.",
+        },
+        {
+          id: 64,
+          cat: "1.4",
+          de: 'die Ladezone / der Bereitstellplatz ("-e)',
+          ipa: "/diː ˈlaːdəˌtsoːnə/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Khu vực chất xếp hàng / Khu vực tập kết hàng chờ xuất",
+          en: "Loading zone / staging area",
+          rel_vi: "bereitstellen (đt: tập kết hàng sẵn sàng)",
+          rel_en: "bereitstellen (v: to stage/ready goods)",
+          ex_de:
+            "Stelle die kommissionierten Aufträge auf den Bereitstellplatz 2.",
+          ex_vi: "Đặt các đơn hàng đã soạn vào khu tập kết số 2.",
+          ex_en: "Place the picked orders in staging area 2.",
+        },
+        {
+          id: 65,
+          cat: "1.4",
+          de: "die Störung (-en) / der Defekt (-e)",
+          ipa: "/diː ˈʃtøːʁʊŋ/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Sự cố vận hành / Hư hỏng thiết bị",
+          en: "Malfunction / defect",
+          rel_vi: "melden (đt: báo cáo sự cố)",
+          rel_en: "melden (v: to report)",
+          ex_de:
+            "Wenn der Scanner oder Stapler eine Störung hat, melden wir das sofort.",
+          ex_vi:
+            "Khi máy quét hoặc xe nâng gặp sự cố chúng tôi báo ngay lập tức.",
+          ex_en:
+            "If the scanner or forklift has a malfunction, we report it immediately.",
+        },
+        {
+          id: 66,
+          cat: "1.4",
+          de: "die Rückfrage (-n)",
+          ipa: "/diː ˈʁʏkˌfʁaːɡə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Câu hỏi xác nhận lại thông tin",
+          en: "Follow-up question / clarification",
+          rel_vi: "nachfragen (đt: hỏi lại cho rõ)",
+          rel_en: "nachfragen (v: to ask/verify)",
+          ex_de:
+            "Bei Unklarheiten halte ich lieber kurz Rückfrage beim Teamleiter.",
+          ex_vi:
+            "Khi có điểm chưa rõ tôi thường hỏi lại trưởng nhóm cho chắc chắn.",
+          ex_en:
+            "When things are unclear, I prefer to check back briefly with the team leader.",
+        },
+        {
+          id: 67,
+          cat: "1.4",
+          de: "die Pünktlichkeit / die Zuverlässigkeit",
+          ipa: "/diː ˈpʏŋktlɪçkaɪt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tính đúng giờ / Sự đáng tin cậy",
+          en: "Punctuality / reliability",
+          rel_vi: "pünktlich (tt: đúng giờ), zuverlässig (tt: đáng tin cậy)",
+          rel_en: "pünktlich (adj: punctual), zuverlässig (adj: reliable)",
+          ex_de:
+            "Pünktlichkeit und Zuverlässigkeit sind in der Logistik sehr wichtig.",
+          ex_vi:
+            "Đúng giờ và đáng tin cậy rất quan trọng trong ngành logistics.",
+          ex_en: "Punctuality and reliability are very important in logistics.",
+        },
+        {
+          id: 68,
+          cat: "1.4",
+          de: "der Feierabend",
+          ipa: "/deːɐ̯ ˈfaɪɐ̯ʔaːbn̩t/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Giờ tan ca / Hết giờ làm việc",
+          en: "End of shift / quitting time",
+          rel_vi: "einen schönen Feierabend wünschen (chúc tan ca vui vẻ)",
+          rel_en:
+            "einen schönen Feierabend wünschen (to wish a nice evening after work)",
+          ex_de:
+            "Nach dem Aufräumen haben wir alle einen verdienten Feierabend.",
+          ex_vi:
+            "Sau khi dọn dẹp xong tất cả chúng ta đều có giờ tan ca xứng đáng.",
+          ex_en: "After tidying up, we all have a well-earned end of shift.",
+        },
+        {
+          id: 69,
+          cat: "1.5",
+          de: "einlagern / auslagern",
+          ipa: "/ˈaɪnˌlaːɡɐn/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Nhập đưa hàng vào kho / Xuất lấy hàng ra khỏi kho",
+          en: "To put away into stock / to pick out from stock",
+          rel_vi:
+            "die Einlagerung (dt: việc nhập kho), die Auslagerung (dt: việc xuất kho)",
+          rel_en:
+            "die Einlagerung (n: put-away), die Auslagerung (n: retrieval/picking)",
+          ex_de:
+            "Wir lagern die neue Ware heute Nachmittag ins Hochregallager ein.",
+          ex_vi: "Chiều nay chúng tôi nhập hàng mới vào kho kệ cao tầng.",
+          ex_en:
+            "This afternoon we're putting the new goods into the high-bay warehouse.",
+        },
+        {
+          id: 70,
+          cat: "1.5",
+          de: "kommissionieren",
+          ipa: "/kɔmis̯oˈniːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Soạn hàng / gom hàng theo đơn",
+          en: "To pick orders",
+          rel_vi: "der Pickvorgang (dt: thao tác soạn hàng)",
+          rel_en: "der Pickvorgang (n: picking process)",
+          ex_de:
+            "Heute kommissioniere ich Aufträge für den regionalen Versand.",
+          ex_vi: "Hôm nay tôi soạn các đơn hàng cho tuyến giao nội vùng.",
+          ex_en: "Today I'm picking orders for regional shipping.",
+        },
+        {
+          id: 71,
+          cat: "1.5",
+          de: "scannen / erfassen",
+          ipa: "/ˈskanən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Quét mã vạch / Ghi nhận dữ liệu vào hệ thống",
+          en: "To scan / to record in system",
+          rel_vi: "der Barcode (dt: mã vạch)",
+          rel_en: "der Barcode (n: barcode)",
+          ex_de: "Scanne bitte jeden Karton vor dem Einpacken.",
+          ex_vi: "Vui lòng quét mã từng thùng hàng trước khi đóng gói nhé.",
+          ex_en: "Please scan every carton before packing.",
+        },
+        {
+          id: 72,
+          cat: "1.5",
+          de: "stapeln",
+          ipa: "/ˈʃtaːpl̩n/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Xếp chồng hàng hóa gọn gàng lên nhau",
+          en: "To stack",
+          rel_vi: "der Stapel (dt: chồng hàng)",
+          rel_en: "der Stapel (n: stack)",
+          ex_de: "Trage die Kartons nicht zu hoch auf dem Stapel ab.",
+          ex_vi: "Không xếp chồng thùng hàng quá cao.",
+          ex_en: "Don't stack the cartons too high.",
+        },
+        {
+          id: 73,
+          cat: "1.5",
+          de: "verladen / entladen / beladen",
+          ipa: "/fɛɐ̯ˈlaːdn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Bốc xếp hàng lên xe / Dỡ hàng xuống xe / Chất hàng lên phương tiện",
+          en: "To load / to unload / to load up",
+          rel_vi: "die Verladung (dt: việc bốc xếp hàng lên xe)",
+          rel_en: "die Verladung (n: loading)",
+          ex_de: "Wir entladen zuerst den LKW und prüfen die Lieferscheine.",
+          ex_vi:
+            "Trước tiên chúng tôi dỡ hàng khỏi xe tải và kiểm tra phiếu giao hàng.",
+          ex_en: "First we unload the truck and check the delivery notes.",
+        },
+        {
+          id: 74,
+          cat: "1.5",
+          de: "wiegen / prüfen / kontrollieren",
+          ipa: "/ˈviːɡn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Cân trọng lượng / Kiểm tra / Kiểm soát chất lượng & số lượng",
+          en: "To weigh / to check / to inspect",
+          rel_vi: "die Kontrolle (dt: sự kiểm tra)",
+          rel_en: "die Kontrolle (n: inspection/check)",
+          ex_de:
+            "Wir prüfen jede Sendung auf Vollständigkeit und Beschädigungen.",
+          ex_vi:
+            "Chúng tôi kiểm tra từng chuyến hàng xem có đủ số lượng và bị hư hỏng không.",
+          ex_en: "We check every shipment for completeness and damage.",
+        },
+        {
+          id: 75,
+          cat: "1.5",
+          de: "verpacken / einpacken / auspacken",
+          ipa: "/fɛɐ̯ˈpakn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Đóng gói hàng / Gói vào thùng / Mở thùng lấy hàng ra",
+          en: "To pack / to box up / to unpack",
+          rel_vi: "die Verpackung (dt: bao bì đóng gói)",
+          rel_en: "die Verpackung (n: packaging)",
+          ex_de: "Bitte packe die Muster vorsichtig aus und lege sie bereit.",
+          ex_vi: "Vui lòng mở thùng lấy mẫu hàng cẩn thận và xếp sẵn nhé.",
+          ex_en: "Please unpack the samples carefully and have them ready.",
+        },
+        {
+          id: 76,
+          cat: "1.5",
+          de: "sichern / befestigen / verzurren",
+          ipa: "/ˈzɪçɐn/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Chằng buộc cố định an toàn / Gắn chặt / Ràng buộc dây chằng",
+          en: "To secure / to fasten / to lash down",
+          rel_vi: "sicher (tt: an toàn)",
+          rel_en: "sicher (adj: safe/secure)",
+          ex_de: "Sichere die Palette gut, bevor sie transportiert wird.",
+          ex_vi: "Hãy chằng buộc pallet thật chắc trước khi vận chuyển.",
+          ex_en: "Secure the pallet well before it is transported.",
+        },
+        {
+          id: 77,
+          cat: "1.5",
+          de: "heben / senken / absetzen",
+          ipa: "/ˈheːbn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Nâng lên / Hạ xuống / Đặt xuống vị trí",
+          en: "To lift / to lower / to set down",
+          rel_vi: "der Hub (dt: hành trình nâng)",
+          rel_en: "der Hub (n: lift/stroke)",
+          ex_de: "Setze die Palette langsam und vorsichtig auf dem Boden ab.",
+          ex_vi: "Đặt pallet từ từ và nhẹ nhàng xuống sàn nhé.",
+          ex_en: "Set the pallet down slowly and carefully on the floor.",
+        },
+        {
+          id: 78,
+          cat: "1.5",
+          de: "schieben / ziehen / fahren",
+          ipa: "/ˈʃiːbn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Đẩy tới / Kéo tới / Lái điều khiển xe nâng hoặc xe đẩy",
+          en: "To push / to pull / to drive",
+          rel_vi: "die Fahrt (dt: chuyến đi/di chuyển)",
+          rel_en: "die Fahrt (n: drive/trip)",
+          ex_de: "Fahre vorsichtig durch die Gänge und achte auf Fußgänger.",
+          ex_vi: "Lái xe cẩn thận qua các lối đi và chú ý người đi bộ.",
+          ex_en:
+            "Drive carefully through the aisles and watch out for pedestrians.",
+        },
+        {
+          id: 79,
+          cat: "1.5",
+          de: "freihalten / aufräumen",
+          ipa: "/ˈfʁaɪˌhaltn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Giữ lối đi luôn trống thoáng / Dọn dẹp gọn gàng",
+          en: "To keep clear / to tidy up",
+          rel_vi: "ordentlich (tt: gọn gàng)",
+          rel_en: "ordentlich (adj: orderly/tidy)",
+          ex_de: "Halte den Bereich vor dem Notausgang immer frei.",
+          ex_vi: "Luôn giữ khu vực trước cửa thoát hiểm trống thoáng.",
+          ex_en: "Always keep the area in front of the emergency exit clear.",
+        },
+        {
+          id: 80,
+          cat: "1.5",
+          de: "abgleichen / vergleichen",
+          ipa: "/ˈapˌɡlaɪçn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Đối chiếu khớp số liệu / So sánh kiểm tra",
+          en: "To reconcile / to compare",
+          rel_vi: "stimmen (đt: khớp/đúng)",
+          rel_en: "stimmen (v: to match/be right)",
+          ex_de: "Gleiche den Wareneingang mit dem Lieferschein ab.",
+          ex_vi: "Đối chiếu hàng nhập kho với phiếu giao hàng.",
+          ex_en: "Reconcile incoming goods with the delivery note.",
+        },
+        {
+          id: 81,
+          cat: "1.5",
+          de: "schwer / leicht / sperrig",
+          ipa: "/ʃveːɐ̯/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Nặng / Nhẹ / Cồng kềnh khó bưng bê",
+          en: "Heavy / light / bulky",
+          rel_vi: "das Gewicht (dt: trọng lượng)",
+          rel_en: "das Gewicht (n: weight)",
+          ex_de:
+            "Dieser Karton ist sehr schwer und sperrig — nimm lieber den Stapler.",
+          ex_vi: "Thùng này rất nặng và cồng kềnh — tốt nhất nên dùng xe nâng.",
+          ex_en: "This carton is very heavy and bulky—better use the forklift.",
+        },
+        {
+          id: 82,
+          cat: "1.5",
+          de: "beschädigt / unbeschädigt",
+          ipa: "/bəˈʃɛːdɪçt/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Bị hư hỏng / Nguyên vẹn không trầy xước hư hỏng",
+          en: "Damaged / undamaged",
+          rel_vi: "intakt (tt: nguyên vẹn)",
+          rel_en: "intakt (adj: intact)",
+          ex_de:
+            "Die Ware ist unbeschädigt und vollständig bei uns angekommen.",
+          ex_vi: "Hàng hóa đã tới chỗ chúng tôi nguyên vẹn và đủ số lượng.",
+          ex_en: "The goods arrived with us undamaged and complete.",
+        },
+        {
+          id: 83,
+          cat: "1.5",
+          de: "vollständig / unvollständig",
+          ipa: "/ˈfɔlʃtɛndɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Đầy đủ trọn vẹn / Thiếu sót chưa đủ",
+          en: "Complete / incomplete",
+          rel_vi: "fehlen (đt: bị thiếu)",
+          rel_en: "fehlen (v: to be missing)",
+          ex_de:
+            "Die Lieferung ist leider unvollständig, es fehlen zwei Kartons.",
+          ex_vi: "Lô hàng này tiếc là chưa đủ, bị thiếu mất hai thùng.",
+          ex_en:
+            "The delivery is unfortunately incomplete; two cartons are missing.",
+        },
+        {
+          id: 84,
+          cat: "1.5",
+          de: "zerbrechlich / empfindlich",
+          ipa: "/tsɛɐ̯ˈbʁɛçlɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Dễ vỡ / Dễ bị ảnh hưởng bởi va đập hoặc nhiệt độ",
+          en: "Fragile / delicate or sensitive",
+          rel_vi: "vorsichtig behandeln (thao tác nhẹ nhàng)",
+          rel_en: "vorsichtig behandeln (to handle with care)",
+          ex_de:
+            "Auf dem Karton steht 'Zerbrechlich' — bitte vorsichtig behandeln!",
+          ex_vi: "Trên thùng có ghi 'Dễ vỡ' — vui lòng thao tác nhẹ nhàng nhé!",
+          ex_en: "The carton says 'Fragile'—please handle with care!",
+        },
+        {
+          id: 85,
+          cat: "1.5",
+          de: "pünktlich / zuverlässig",
+          ipa: "/ˈpʏŋktlɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Đúng giờ / Đáng tin cậy",
+          en: "Punctual / reliable",
+          rel_vi: "pünktlich ankommen (tới đúng giờ)",
+          rel_en: "pünktlich ankommen (to arrive on time)",
+          ex_de: "Der LKW ist heute pünktlich um acht Uhr eingetroffen.",
+          ex_vi: "Xe tải hôm nay đã tới đúng giờ lúc 8 giờ sáng.",
+          ex_en: "The truck arrived on time today at 8 AM.",
+        },
+        {
+          id: 86,
+          cat: "1.5",
+          de: "ordentlich / sauber",
+          ipa: "/ˈɔʁdn̩tlɪç/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Ngăn nắp gọn gàng / Sạch sẽ",
+          en: "Orderly / clean",
+          rel_vi: "die Ordnung (dt: sự ngăn nắp)",
+          rel_en: "die Ordnung (n: order)",
+          ex_de: "Ein ordentliches Lager erleichtert die Arbeit für alle.",
+          ex_vi:
+            "Một nhà kho ngăn nắp giúp công việc của mọi người dễ dàng hơn.",
+          ex_en: "An orderly warehouse makes work easier for everyone.",
+        },
+      ];
+
+      const PHRASES_DATA = [
+        {
+          id: 1,
+          cat: "2.1",
+          de: "Guten Morgen! Der LKW ist an Rampe 2 angekommen, ich beginne jetzt mit dem Wareneingang.",
+          vi: "Chào buổi sáng! Xe tải đã đỗ ở cửa bốc hàng số 2, bây giờ tôi bắt đầu nhận hàng nhập kho đây.",
+          en: "Good morning! The truck has arrived at Ramp 2; I'm starting goods receipt now.",
+        },
+        {
+          id: 2,
+          cat: "2.1",
+          de: "Stimmt die Stückzahl auf dem Lieferschein mit den gelieferten Paletten überein?",
+          vi: "Số lượng trên phiếu giao hàng có khớp với các pallet hàng được giao tới không?",
+          en: "Does the piece count on the delivery note match the delivered pallets?",
+        },
+        {
+          id: 3,
+          cat: "2.1",
+          de: "Achtung, dieser Karton ist beschädigt — ich mache ein Foto und vermerke den Schaden.",
+          vi: "Chú ý, thùng hàng này bị hư hỏng — tôi chụp ảnh lại và ghi chú lỗi hư hỏng ngay đây.",
+          en: "Heads up, this carton is damaged—I'm taking a photo and noting the damage.",
+        },
+        {
+          id: 4,
+          cat: "2.1",
+          de: "Wir lagern diese Paletten nach dem FIFO-Prinzip in das Hochregallager ein.",
+          vi: "Chúng tôi đưa các pallet này vào kho giá kệ cao tầng theo nguyên tắc nhập trước xuất trước.",
+          en: "We're putting these pallets away into the high-bay warehouse using the FIFO principle.",
+        },
+        {
+          id: 5,
+          cat: "2.1",
+          de: "Scanne bitte zuerst den Lagerplatz und dann den Barcode am Karton.",
+          vi: "Vui lòng quét mã vị trí kệ trước rồi mới quét mã vạch trên thùng hàng nhé.",
+          en: "Please scan the storage location first and then the barcode on the carton.",
+        },
+        {
+          id: 6,
+          cat: "2.1",
+          de: "Die Lieferung ist vollständig und unbeschädigt, ich gebe sie im System frei.",
+          vi: "Lô hàng đã đầy đủ và nguyên vẹn, tôi xác nhận nhập trên hệ thống đây.",
+          en: "The delivery is complete and undamaged; I'm releasing it in the system.",
+        },
+        {
+          id: 7,
+          cat: "2.1",
+          de: "Wo soll ich diese Gitterbox abstellen — in Zone A oder in Zone B?",
+          vi: "Tôi nên đặt thùng lưới sắt này ở khu nào — khu A hay khu B ạ?",
+          en: "Where should I set down this mesh pallet box—in Zone A or Zone B?",
+        },
+        {
+          id: 8,
+          cat: "2.1",
+          de: "Bei den Gefahrstoffen im Lager beachten wir genau das Sicherheitsdatenblatt.",
+          vi: "Với các chất nguy hiểm trong kho chúng tôi tuân thủ đúng bảng dữ liệu an toàn.",
+          en: "For hazardous substances in the warehouse, we follow the safety data sheet carefully.",
+        },
+        {
+          id: 9,
+          cat: "2.1",
+          de: "Der Wareneingang für die Frühschicht ist fast abgeschlossen.",
+          vi: "Công việc nhận hàng nhập kho cho ca sáng sắp hoàn tất rồi.",
+          en: "Goods receipt for the early shift is almost finished.",
+        },
+        {
+          id: 10,
+          cat: "2.2",
+          de: "Ich hole mir jetzt den Pickschein und das MDE-Gerät für die nächste Kommissionierung.",
+          vi: "Bây giờ tôi lấy phiếu soạn hàng và thiết bị quét mã cho lượt soạn đơn tiếp theo đây.",
+          en: "I'm getting the picking list and MDE device now for the next order picking run.",
+        },
+        {
+          id: 11,
+          cat: "2.2",
+          de: "Auf dem Auftrag stehen zwölf Stück von Artikel 408 aus Regalplatz C-02-05.",
+          vi: "Trên đơn hàng ghi 12 chiếc của mã hàng 408 tại vị trí kệ C-02-05.",
+          en: "The order lists twelve pieces of article 408 from rack location C-02-05.",
+        },
+        {
+          id: 12,
+          cat: "2.2",
+          de: "Bitte prüfe genau die Artikelnummer und das MHD, bevor du die Ware einpackst.",
+          vi: "Vui lòng kiểm tra kỹ mã sản phẩm và hạn sử dụng trước khi đóng gói hàng nhé.",
+          en: "Please check the article number and best-before date carefully before packing the goods.",
+        },
+        {
+          id: 13,
+          cat: "2.2",
+          de: "Dieser Karton ist zerbrechlich — wir legen noch Luftpolster und Füllmaterial hinein.",
+          vi: "Thùng hàng này dễ vỡ — chúng tôi chèn thêm đệm khí và vật liệu lót vào bên trong.",
+          en: "This carton is fragile—we're putting bubble wrap and void fill inside.",
+        },
+        {
+          id: 14,
+          cat: "2.2",
+          de: "Wickle die Palette bitte fest mit Stretchfolie ein und sichere sie mit Spanngurten.",
+          vi: "Vui lòng quấn chặt pallet bằng màng co và chằng buộc cố định bằng dây tăng đơ nhé.",
+          en: "Please wrap the pallet tightly with stretch film and secure it with lashing straps.",
+        },
+        {
+          id: 15,
+          cat: "2.2",
+          de: "Wir wiegen die fertige Palette auf der Bodenwaage und kleben das Versandetikett auf.",
+          vi: "Chúng tôi cân pallet thành phẩm trên cân sàn và dán tem xuất hàng lên.",
+          en: "We weigh the finished pallet on the floor scale and stick on the shipping label.",
+        },
+        {
+          id: 16,
+          cat: "2.2",
+          de: "Bitte stelle den fertigen Auftrag auf den Bereitstellplatz für den Versand.",
+          vi: "Vui lòng đặt đơn hàng đã soạn xong vào khu tập kết chờ xuất hàng nhé.",
+          en: "Please place the completed order in the staging area for shipping.",
+        },
+        {
+          id: 17,
+          cat: "2.2",
+          de: "Wir verladen jetzt die Paletten mit dem Stapler in den LKW.",
+          vi: "Bây giờ chúng tôi bốc xếp các pallet lên xe tải bằng xe nâng đây.",
+          en: "We're loading the pallets into the truck with the forklift now.",
+        },
+        {
+          id: 18,
+          cat: "2.2",
+          de: "Alle Versandaufträge für heute sind pünktlich rausgegangen!",
+          vi: "Toàn bộ lệnh xuất hàng cho hôm nay đã đi đúng giờ rồi!",
+          en: "All shipping orders for today went out on time!",
+        },
+        {
+          id: 19,
+          cat: "2.3",
+          de: "Hast du deinen Staplerschein dabei und hast du die Sichtprüfung vor Fahrtantritt gemacht?",
+          vi: "Bạn có mang chứng chỉ lái xe nâng theo không và đã kiểm tra bằng mắt trước khi chạy xe chưa?",
+          en: "Do you have your forklift license with you and did you do the visual check before driving?",
+        },
+        {
+          id: 20,
+          cat: "2.3",
+          de: "Fahre mit dem Stapler bitte langsam und lasse die Gabeln tief über dem Boden.",
+          vi: "Vui lòng lái xe nâng chậm thôi và giữ càng nâng ở sát mặt sàn nhé.",
+          en: "Please drive the forklift slowly and keep the forks low above the floor.",
+        },
+        {
+          id: 21,
+          cat: "2.3",
+          de: "Achtung, an der Regalecke ist es unübersichtlich — bitte kurz hupen und vorsichtig fahren!",
+          vi: "Chú ý, ở góc kệ bị khuất tầm nhìn — bấm còi ngắn một chút và lái cẩn thận nhé!",
+          en: "Heads up, visibility is limited at the rack corner—please honk briefly and drive carefully!",
+        },
+        {
+          id: 22,
+          cat: "2.3",
+          de: "Bitte trage im Lager immer Sicherheitsschuhe und deine Warnweste.",
+          vi: "Trong kho vui lòng luôn đeo giày bảo hộ và mặc áo phản quang nhé.",
+          en: "Please always wear safety shoes and your high-vis vest in the warehouse.",
+        },
+        {
+          id: 23,
+          cat: "2.3",
+          de: "Halte die Fahrwege und Fluchtwege immer frei — stelle dort keine Kartons oder Paletten ab!",
+          vi: "Luôn giữ lối đi xe nâng và lối thoát hiểm thông thoáng — không đặt thùng hay pallet ở đó!",
+          en: "Keep vehicle lanes and escape routes clear at all times—don't set cartons or pallets there!",
+        },
+        {
+          id: 24,
+          cat: "2.3",
+          de: "Vorsicht, auf dem Boden liegt Folie — da besteht Rutsch- und Stolpergefahr!",
+          vi: "Cẩn thận, trên sàn có màng bọc rơi — ở đó có nguy cơ trơn trượt và vấp ngã đấy!",
+          en: "Careful, there's film on the floor—there's a slip and trip hazard there!",
+        },
+        {
+          id: 25,
+          cat: "2.3",
+          de: "Greife niemals zwischen die Paletten — es besteht Quetschgefahr!",
+          vi: "Tuyệt đối không thò tay vào giữa các pallet — có nguy cơ bị kẹp đấy!",
+          en: "Never reach between pallets—there is a crush hazard!",
+        },
+        {
+          id: 26,
+          cat: "2.3",
+          de: "Die Batterie vom Stapler ist fast leer, ich tausche sie gleich oder lade sie auf.",
+          vi: "Pin xe nâng sắp hết rồi, tôi đổi pin ngay hoặc sạc lại đây.",
+          en: "The forklift battery is almost empty; I'll swap it right away or charge it.",
+        },
+        {
+          id: 27,
+          cat: "2.3",
+          de: "Falls jemand eine Verletzung hat, melden wir das sofort und holen den Ersthelfer.",
+          vi: "Nếu ai bị thương tích, chúng tôi báo ngay lập tức và gọi nhân viên sơ cứu.",
+          en: "If someone has an injury, we report it immediately and call the first aider.",
+        },
+        {
+          id: 28,
+          cat: "2.4",
+          de: "Heute Nachmittag machen wir eine Teilinventur in Gang 4.",
+          vi: "Chiều nay chúng ta kiểm kê từng phần ở dãy kệ số 4.",
+          en: "This afternoon we're doing a partial stocktake in Aisle 4.",
+        },
+        {
+          id: 29,
+          cat: "2.4",
+          de: "Zähle bitte die Kartons genau nach und trage die Menge im System ein.",
+          vi: "Vui lòng đếm lại số thùng thật chính xác và nhập số lượng vào hệ thống nhé.",
+          en: "Please count the cartons accurately and enter the quantity in the system.",
+        },
+        {
+          id: 30,
+          cat: "2.4",
+          de: "Hier gibt es eine kleine Bestandsabweichung — ich prüfe das noch einmal nach.",
+          vi: "Ở đây có sự chênh lệch tồn kho nhỏ — tôi kiểm tra lại một lần nữa đây.",
+          en: "There is a small stock discrepancy here—I'm checking it once more.",
+        },
+        {
+          id: 31,
+          cat: "2.4",
+          de: "Kannst du mir bitte kurz helfen, diese schwere Palette umzustapeln?",
+          vi: "Bạn giúp mình một tay xếp lại chồng pallet nặng này được không?",
+          en: "Could you briefly help me restack this heavy pallet?",
+        },
+        {
+          id: 32,
+          cat: "2.4",
+          de: "Ich habe die Retouren schon sortiert und auf den Prüfplatz gestellt.",
+          vi: "Tôi đã phân loại xong hàng trả lại và đặt lên khu vực kiểm tra rồi.",
+          en: "I've already sorted the returns and placed them in the inspection area.",
+        },
+        {
+          id: 33,
+          cat: "2.4",
+          de: "Wir machen jetzt zehn Minuten Pause und treffen uns danach wieder am Packtisch.",
+          vi: "Bây giờ chúng ta nghỉ giải lao 10 phút rồi gặp lại nhau ở bàn đóng gói nhé.",
+          en: "We're taking a ten-minute break now and meeting back at the packing table afterward.",
+        },
+        {
+          id: 34,
+          cat: "2.4",
+          de: "Bei der Schichtübergabe gebe ich dir alle offenen Aufträge und Hinweise weiter.",
+          vi: "Khi bàn giao ca tôi chuyển lại cho bạn toàn bộ đơn hàng đang mở và các lưu ý.",
+          en: "At shift handover, I'll pass on all open orders and notes to you.",
+        },
+        {
+          id: 35,
+          cat: "2.4",
+          de: "Alles klar, ich übernehme den Bereich jetzt. Danke und schönen Feierabend!",
+          vi: "Rõ rồi, bây giờ tôi nhận bàn giao khu vực này. Cảm ơn và chúc tan ca vui vẻ!",
+          en: "All clear, I'm taking over the area now. Thanks and have a nice evening!",
+        },
+        {
+          id: 36,
+          cat: "2.4",
+          de: "Super Zusammenarbeit heute — bis morgen zur nächsten Schicht!",
+          vi: "Phối hợp rất tuyệt hôm nay — hẹn gặp lại vào ca tiếp theo ngày mai nhé!",
+          en: "Great teamwork today—see you tomorrow for the next shift!",
+        },
+      ];
+
+      const DIALOGUES_DATA = [
+        {
+          id: 1,
+          tab_vi: "Hội thoại 1: Nhập kho & Phiếu giao",
+          tab_en: "Dialogue 1: Goods Receipt",
+          title_vi:
+            "Hội thoại 1: Tiếp nhận hàng nhập kho & Đối chiếu phiếu giao hàng (Wareneingang & Lieferschein)",
+          title_en:
+            "Dialogue 1: Receiving Goods & Checking Delivery Note (Wareneingang & Lieferschein)",
+          context_vi:
+            "Buổi sáng tại khu vực nhập kho (Wareneingang), nhân viên kho (Đức) đón lô hàng mới giao tới và kiểm tra cùng đồng nghiệp.",
+          context_en:
+            "Morning at goods receipt (Wareneingang): warehouse worker Đức receives an incoming delivery and checks it with a colleague.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Guten Morgen, Thomas! Der LKW von der Spedition ist gerade an Rampe 1 angekommen. Ich nehme die Ware an.",
+              vi: "Chào buổi sáng Thomas! Xe tải của đơn vị vận tải vừa tới cửa bốc hàng số 1 rồi. Mình nhận lô hàng này đây.",
+              en: "Good morning, Thomas! The freight truck just arrived at Ramp 1. I'm receiving the goods.",
+            },
+            {
+              role: "partner",
+              name_vi: "Thomas (Đồng nghiệp kho)",
+              name_en: "Thomas (Colleague)",
+              de: "Guten Morgen, Đức! Vergleiche bitte zuerst die Stückzahl auf dem Lieferschein mit den gelieferten Paletten.",
+              vi: "Chào buổi sáng Đức! Trước tiên cậu đối chiếu giúp số lượng trên phiếu giao hàng với số pallet hàng giao tới nhé.",
+              en: "Good morning, Đức! Please compare the piece count on the delivery note with the delivered pallets first.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Ich habe gezählt: Es sind acht Europaletten, alles stimmt mit dem Lieferschein überein. Nur ein Karton oben hat eine kleine Delle.",
+              vi: "Mình đếm xong rồi: Có 8 pallet châu Âu, tất cả đều khớp với phiếu giao hàng. Chỉ có một thùng ở trên cùng bị móp nhẹ một chút.",
+              en: "I counted: there are eight Euro pallets; everything matches the delivery note. Only one carton on top has a small dent.",
+            },
+            {
+              role: "partner",
+              name_vi: "Thomas (Đồng nghiệp kho)",
+              name_en: "Thomas (Colleague)",
+              de: "Gut, mache ein Foto davon für das Protokoll und lagere die Ware dann nach dem FIFO-Prinzip im Hochregallager ein.",
+              vi: "Tốt, cậu chụp ảnh lại để làm biên bản rồi nhập hàng lên kho kệ cao theo nguyên tắc nhập trước xuất trước nhé.",
+              en: "Good, take a photo of it for the log and then put the goods away in the high-bay warehouse using the FIFO principle.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Alles klar, mache ich sofort!",
+              vi: "Rõ rồi, mình làm ngay đây!",
+              en: "All clear, I'll do that right away!",
+            },
+          ],
+        },
+        {
+          id: 2,
+          tab_vi: "Hội thoại 2: Soạn đơn & Đóng gói",
+          tab_en: "Dialogue 2: Picking & Packing",
+          title_vi:
+            "Hội thoại 2: Soạn đơn hàng theo phiếu & Đóng gói xuất đi (Kommissionierung & Versand)",
+          title_en:
+            "Dialogue 2: Order Picking & Packing for Dispatch (Kommissionierung & Versand)",
+          context_vi:
+            "Trong ca làm việc, Đức nhận lệnh soạn đơn hàng, quét mã vạch và đóng gói kiện hàng chắc chắn để xuất đi.",
+          context_en:
+            "During the shift, Đức takes an order picking list, scans barcodes, and packs the shipment securely for dispatch.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Hallo! Ich habe jetzt den Pickschein für Auftrag 509 und das MDE-Gerät übernommen. Ich gehe in Gang C.",
+              vi: "Chào bạn! Bây giờ mình nhận phiếu soạn hàng cho đơn 509 và thiết bị quét mã rồi đây. Mình vào dãy kệ C nhé.",
+              en: "Hello! I've taken the picking list for Order 509 and the MDE device now. I'm heading into Aisle C.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Denk dran, auf dem Auftrag stehen auch vier zerbrechliche Artikel — gut polstern!",
+              vi: "Nhớ nhé, trên đơn hàng cũng có 4 mặt hàng dễ vỡ đấy — chèn lót thật kỹ nhé!",
+              en: "Keep in mind, the order also includes four fragile items—pad them well!",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Danke für den Hinweis! Ich scanne jeden Artikel mit dem MDE-Gerät, packe alles mit Luftpolster in den Karton und wickle die Palette mit Stretchfolie ein.",
+              vi: "Cảm ơn đã nhắc! Mình quét từng mã hàng bằng máy quét, đóng gói tất cả vào thùng có đệm khí và quấn màng co quanh pallet.",
+              en: "Thanks for the heads-up! I'm scanning each item with the MDE device, packing everything in the carton with bubble wrap, and wrapping the pallet with stretch film.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Und danach auf die Bodenwaage und auf den Bereitstellplatz 3, damit der LKW sie gleich verladen kann.",
+              vi: "Và sau đó cho lên cân sàn rồi đưa ra khu tập kết số 3 để xe tải có thể bốc lên xe ngay.",
+              en: "And after that onto the floor scale and to staging area 3 so the truck can load them right away.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Wird erledigt!",
+              vi: "Làm ngay đây!",
+              en: "Will do!",
+            },
+          ],
+        },
+        {
+          id: 3,
+          tab_vi: "Hội thoại 3: Lái xe nâng & An toàn",
+          tab_en: "Dialogue 3: Forklift & Safety",
+          title_vi:
+            "Hội thoại 3: An toàn lái xe nâng & Di chuyển trong kho (Stapler & Sicherheit)",
+          title_en: "Dialogue 3: Forklift Driving Safety & Warehouse Movement",
+          context_vi:
+            "Trưởng nhóm kho (Teamleiter) nhắc nhở Đức về an toàn vận hành xe nâng trong khu vực kho đang hoạt động.",
+          context_en:
+            "The team leader reminds Đức about safe forklift operation in an active warehouse area.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Teamleiter (Trưởng nhóm kho)",
+              name_en: "Teamleiter (Team Lead)",
+              de: "Đức, hast du deinen Staplerschein dabei und die Sichtprüfung am Stapler gemacht?",
+              vi: "Đức ơi, cậu có mang chứng chỉ lái xe nâng theo không và đã kiểm tra bằng mắt xe nâng chưa?",
+              en: "Đức, do you have your forklift license with you and did you do the visual check on the forklift?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Ja, der Staplerschein ist dabei, und ich habe Bremsen, Hupe, Beleuchtung und Gabeln geprüft — alles in Ordnung.",
+              vi: "Dạ có, em có mang theo chứng chỉ, và em đã kiểm tra phanh, còi, đèn cùng càng nâng — tất cả đều ổn ạ.",
+              en: "Yes, the forklift license is with me, and I checked brakes, horn, lights, and forks—everything is in order.",
+            },
+            {
+              role: "partner",
+              name_vi: "Teamleiter (Trưởng nhóm kho)",
+              name_en: "Teamleiter (Team Lead)",
+              de: "Sehr gut. Fahre in den Gängen bitte langsam, halte die Gabeln tief und achte an unübersichtlichen Ecken auf Fußgänger.",
+              vi: "Rất tốt. Trong các lối đi nhớ chạy xe chậm nhé, giữ càng nâng thấp và chú ý người đi bộ ở các góc khuất tầm nhìn.",
+              en: "Very good. Please drive slowly in the aisles, keep the forks low, and watch out for pedestrians at blind corners.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Verstanden! Und die Fahrwege sowie Fluchtwege halte ich natürlich immer komplett frei.",
+              vi: "Em hiểu rồi ạ! Và lối đi xe nâng cùng lối thoát hiểm thì tất nhiên em luôn giữ thông thoáng hoàn toàn.",
+              en: "Understood! And of course I always keep vehicle lanes and escape routes completely clear.",
+            },
+          ],
+        },
+        {
+          id: 4,
+          tab_vi: "Hội thoại 4: Hàng trả & Kiểm kê",
+          tab_en: "Dialogue 4: Returns & Stocktake",
+          title_vi:
+            "Hội thoại 4: Xử lý hàng trả lại & Kiểm kê tồn kho (Retoure & Inventur)",
+          title_en:
+            "Dialogue 4: Handling Returns & Inventory Count (Retoure & Inventur)",
+          context_vi:
+            "Đầu giờ chiều, Đức phân loại hàng hoàn trả (Retouren) và hỗ trợ kiểm kê định kỳ.",
+          context_en:
+            "Early afternoon: Đức sorts returned goods (Retouren) and helps with the periodic stock count.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Wir haben hier sechs Pakete als Retoure bekommen. Ich prüfe zuerst, ob die Ware unbeschädigt und vollständig ist.",
+              vi: "Chúng ta vừa nhận 6 kiện hàng trả lại ở đây. Trước tiên mình kiểm tra xem hàng có nguyên vẹn và đủ số lượng không.",
+              en: "We received six packages as returns here. First I'm checking whether the goods are undamaged and complete.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Super. Wenn alles in Ordnung ist, buchen wir die Stückzahl wieder in den Lagerbestand ein.",
+              vi: "Tuyệt. Nếu mọi thứ đều ổn, chúng ta nhập lại số lượng vào tồn kho.",
+              en: "Great. If everything is in order, we'll book the piece count back into stock.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Und am Ende der Schicht machen wir noch die Zählung für die Inventur in Regalreihe 2.",
+              vi: "Và cuối ca chúng ta làm thêm phần đếm kiểm kê ở dãy kệ số 2 nữa nhé.",
+              en: "And at the end of the shift, we'll also do the stocktake count in Rack Row 2.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollege (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Genau, dann stimmen die Zahlen im System wieder exakt.",
+              vi: "Đúng rồi, như vậy số liệu trên hệ thống sẽ khớp chính xác trở lại.",
+              en: "Exactly—then the numbers in the system will match accurately again.",
+            },
+          ],
+        },
+        {
+          id: 5,
+          tab_vi: "Hội thoại 5: Bốc xếp lên xe tải",
+          tab_en: "Dialogue 5: Truck Loading",
+          title_vi:
+            "Hội thoại 5: Bốc xếp hàng lên xe tải & Trao đổi với tài xế (Verladung & LKW-Fahrer)",
+          title_en:
+            "Dialogue 5: Loading Goods onto Truck & Coordinating with Driver",
+          context_vi:
+            "Tại khu vực bốc xếp xuất hàng, Đức phối hợp với tài xế xe tải (LKW-Fahrer) để cố định hàng hóa an toàn trước khi xe lăn bánh.",
+          context_en:
+            "At shipping loading: Đức coordinates with the truck driver (LKW-Fahrer) to secure cargo safely before departure.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Guten Tag! Die drei Paletten für Ihre Tour stehen bereit. Wir verladen sie jetzt mit dem Stapler.",
+              vi: "Xin chào! Ba pallet cho chuyến giao của anh đã sẵn sàng rồi. Bây giờ chúng tôi bốc lên xe bằng xe nâng đây.",
+              en: "Good day! The three pallets for your route are ready. We're loading them now with the forklift.",
+            },
+            {
+              role: "partner",
+              name_vi: "LKW-Fahrer (Tài xế xe tải)",
+              name_en: "LKW-Fahrer (Truck Driver)",
+              de: "Guten Tag! Danke schön. Ich sichere die Paletten danach sofort mit meinen Spanngurten, damit auf der Autobahn nichts rutscht.",
+              vi: "Xin chào! Cảm ơn anh nhiều. Sau đó tôi cố định ngay các pallet bằng dây tăng đơ của tôi để chạy trên cao tốc không bị xô lệch.",
+              en: "Good day! Thank you very much. I'll secure the pallets right away with my lashing straps afterward so nothing shifts on the highway.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Das ist wichtig für die Ladungssicherung. Hier ist auch Ihr Lieferschein zur Gegenzeichnung.",
+              vi: "Điều đó rất quan trọng cho việc chằng buộc an toàn hàng hóa. Đây cũng là phiếu giao hàng để anh ký xác nhận ạ.",
+              en: "That's important for load securing. Here is your delivery note to countersign as well.",
+            },
+            {
+              role: "partner",
+              name_vi: "LKW-Fahrer (Tài xế xe tải)",
+              name_en: "LKW-Fahrer (Truck Driver)",
+              de: "Alles klar, ich unterschreibe kurz. Gute Fahrt und bis zum nächsten Mal!",
+              vi: "Rõ rồi, tôi ký ngay đây. Chúc anh làm việc tốt và hẹn gặp lại lần sau!",
+              en: "All clear, I'm signing briefly. Have a good trip and until next time!",
+            },
+          ],
+        },
+        {
+          id: 6,
+          tab_vi: "Hội thoại 6: Bàn giao ca cuối ngày",
+          tab_en: "Dialogue 6: Shift Handover",
+          title_vi:
+            "Hội thoại 6: Bàn giao ca cuối ngày tại kho (Schichtübergabe & Feierabend)",
+          title_en: "Dialogue 6: End-of-Day Shift Handover at the Warehouse",
+          context_vi:
+            "Cuối ca chiều, Đức bàn giao ca cho đồng nghiệp ca tiếp theo và dọn dẹp khu vực làm việc.",
+          context_en:
+            "End of afternoon shift: Đức hands over to the next shift colleague and tidies the work area.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Hallo! Zeit für die Schichtübergabe. Die Aufträge bis Nummer 515 sind komplett kommissioniert und verpackt.",
+              vi: "Chào bạn! Đến giờ bàn giao ca rồi. Các đơn hàng tới mã 515 đã được soạn đủ và đóng gói xong hoàn toàn.",
+              en: "Hello! Time for shift handover. Orders up to number 515 are completely picked and packed.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Danke dir, Đức! Gibt es noch offene Retouren oder Störungen am Stapler oder Scanner?",
+              vi: "Cảm ơn cậu nhé Đức! Có hàng trả lại nào chưa xử lý xong hay sự cố nào ở xe nâng hoặc máy quét không?",
+              en: "Thanks, Đức! Are there any open returns or malfunctions with the forklift or scanner?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Nhân viên kho)",
+              name_en: "Đức (Warehouse Worker)",
+              de: "Nein, der Stapler läuft einwandfrei, die Folienreste sind entsorgt und die Fahrwege sind frei.",
+              vi: "Không có, xe nâng chạy hoàn hảo, phần màng bọc thừa đã bỏ đi và lối đi đều thông thoáng.",
+              en: "No, the forklift is running smoothly, film scraps are disposed of, and the lanes are clear.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Perfekt, dann übernehme ich jetzt. Vielen Dank und einen schönen Feierabend!",
+              vi: "Hoàn hảo, vậy bây giờ mình nhận ca nhé. Cảm ơn cậu nhiều và chúc tan ca vui vẻ!",
+              en: "Perfect, then I'll take over now. Many thanks and have a nice evening!",
+            },
+          ],
+        },
+      ];
+
+      // =========================================================================
+      // 3. APPLICATION STATE & PERSISTENCE (localStorage)
+      // =========================================================================
+      const state = {
+        lang: localStorage.getItem("fd_lang") || "vi",
+        activeTab: "vocab",
+        globalVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_globalVoice"),
+          "piper_hochdeutsch",
+        ),
+        workerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_workerVoice"),
+          "piper_hochdeutsch",
+        ),
+        partnerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_partnerVoice"),
+          "piper_rostock",
+        ),
+        speed: parseFloat(localStorage.getItem("fd_speed")) || 1.0,
+        vocabCategory: "all",
+        vocabQuery: "",
+        phraseCategory: "all",
+        activeDialogueId: 1,
+        fcCategory: "all",
+        fcDeck: [...VOCAB_DATA],
+        fcIndex: 0,
+        fcFlipped: false,
+        masteredIds: JSON.parse(
+          localStorage.getItem("fd_mastered_khovan") || "[]",
+        ),
+        voiceDrawerOpen: false,
+      };
+
+      const audioCtrl = {
+        element: null,
+        activeBtnId: null,
+        isFullDialoguePlaying: false,
+        dialogueStopFlag: false,
+        toastTimer: null,
+      };
+
+      function t(key) {
+        return (
+          (I18N[state.lang] && I18N[state.lang][key]) || I18N.vi[key] || key
+        );
+      }
+
+      function getVoiceObj(voiceId) {
+        return VOICE_CATALOG.find((v) => v.id === voiceId) || VOICE_CATALOG[0];
+      }
+
+      function showToast(msg) {
+        const box = document.getElementById("statusToast");
+        const txt = document.getElementById("statusToastText");
+        if (!box || !txt) return;
+        txt.textContent = msg;
+        box.classList.remove("hidden");
+        clearTimeout(audioCtrl.toastTimer);
+        audioCtrl.toastTimer = setTimeout(() => {
+          box.classList.add("hidden");
+        }, 3000);
+      }
+
+      // =========================================================================
+      // 4. AUDIO ENGINE WITH FALLBACK (audio/khovan/<voice>/<file>)
+      // =========================================================================
+      function syncPlayingButtonUI() {
+        document.querySelectorAll("[data-audio-btn]").forEach((btn) => {
+          const id = btn.getAttribute("data-audio-btn");
+          const isCurrent = audioCtrl.activeBtnId === id;
+          const iconPlay = btn.querySelector(".icon-play");
+          const iconStop = btn.querySelector(".icon-stop");
+          if (isCurrent) {
+            btn.classList.add("btn-playing");
+            if (iconPlay) iconPlay.classList.add("hidden");
+            if (iconStop) iconStop.classList.remove("hidden");
+          } else {
+            btn.classList.remove("btn-playing");
+            if (iconPlay) iconPlay.classList.remove("hidden");
+            if (iconStop) iconStop.classList.add("hidden");
+          }
+        });
+
+        const fullBtn = document.getElementById("playFullDialogueBtn");
+        if (fullBtn) {
+          if (audioCtrl.isFullDialoguePlaying) {
+            fullBtn.classList.add("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>■</span> <span>${t("stopFullDialogue")}</span>`;
+          } else {
+            fullBtn.classList.remove("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.add("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>▶</span> <span>${t("playFullDialogue")}</span>`;
+          }
+        }
+
+        document.querySelectorAll("[data-preview-btn]").forEach((btn) => {
+          const isPrev = audioCtrl.activeBtnId === "preview_sample";
+          if (isPrev) {
+            btn.classList.add("bg-red-600", "text-white");
+            btn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            btn.innerHTML = `<span>■</span> <span>${t("stopPreviewBtn")}</span>`;
+          } else {
+            btn.classList.remove("bg-red-600");
+            btn.classList.add("bg-blue-600", "hover:bg-blue-700", "text-white");
+            btn.innerHTML = `<span>🔊</span> <span>${t("previewVoiceBtn")}</span>`;
+          }
+        });
+      }
+
+      function stopAllAudio(resetDialogue = true) {
+        if (resetDialogue) {
+          audioCtrl.dialogueStopFlag = true;
+          audioCtrl.isFullDialoguePlaying = false;
+        }
+        if (audioCtrl.element) {
+          audioCtrl.element.pause();
+          audioCtrl.element.src = "";
+          audioCtrl.element = null;
+        }
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+        }
+        audioCtrl.activeBtnId = null;
+        document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+          el.classList.remove(
+            "dialogue-line-active",
+            "ring-2",
+            "ring-blue-500",
+            "bg-blue-50/70",
+          );
+        });
+        syncPlayingButtonUI();
+      }
+
+      function playAudioWithFallback(
+        fileName,
+        fallbackText,
+        voiceId,
+        btnId,
+        onEndedCallback = null,
+      ) {
+        if (audioCtrl.activeBtnId === btnId) {
+          stopAllAudio(true);
+          return;
+        }
+
+        stopAllAudio(false);
+        audioCtrl.activeBtnId = btnId;
+        syncPlayingButtonUI();
+
+        const chain = [voiceId, "piper_hochdeutsch", "edge_hochdeutsch"].filter(
+          (v, idx, arr) => v && arr.indexOf(v) === idx,
+        );
+        let attemptIdx = 0;
+
+        const finishPlayback = () => {
+          audioCtrl.activeBtnId = null;
+          audioCtrl.element = null;
+          syncPlayingButtonUI();
+          if (onEndedCallback) onEndedCallback();
+        };
+
+        const tryNextSource = () => {
+          if (attemptIdx >= chain.length) {
+            if ("speechSynthesis" in window && fallbackText) {
+              const utter = new SpeechSynthesisUtterance(fallbackText);
+              utter.lang = "de-DE";
+              utter.rate = state.speed;
+              utter.onend = finishPlayback;
+              utter.onerror = finishPlayback;
+              window.speechSynthesis.speak(utter);
+            } else {
+              finishPlayback();
+            }
+            return;
+          }
+
+          const currentVoice = chain[attemptIdx];
+          const src = `${AUDIO_BASE_PATH}/${currentVoice}/${fileName}`;
+          const audio = new Audio(src);
+          audio.playbackRate = state.speed;
+          audioCtrl.element = audio;
+
+          audio.onended = finishPlayback;
+          audio.onerror = () => {
+            if (attemptIdx === 0 && currentVoice !== "piper_hochdeutsch") {
+              showToast(t("fallbackNotice"));
+            }
+            attemptIdx++;
+            tryNextSource();
+          };
+
+          audio.play().catch(() => {
+            attemptIdx++;
+            tryNextSource();
+          });
+        };
+
+        tryNextSource();
+      }
+
+      async function toggleFullDialogue() {
+        if (audioCtrl.isFullDialoguePlaying) {
+          stopAllAudio(true);
+          return;
+        }
+        const dlg = DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId);
+        if (!dlg) return;
+
+        stopAllAudio(true);
+        audioCtrl.isFullDialoguePlaying = true;
+        audioCtrl.dialogueStopFlag = false;
+        syncPlayingButtonUI();
+
+        for (let i = 0; i < dlg.lines.length; i++) {
+          if (audioCtrl.dialogueStopFlag) break;
+          const line = dlg.lines[i];
+          const lineNum = i + 1;
+          const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+          const voice =
+            line.role === "worker" ? state.workerVoice : state.partnerVoice;
+
+          document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+            el.classList.remove(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+          });
+          const rowEl = document.getElementById(`row_${btnId}`);
+          if (rowEl) {
+            rowEl.classList.add(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+            rowEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+
+          await new Promise((resolve) => {
+            playAudioWithFallback(
+              `dialog_${dlg.id}_line_${lineNum}.mp3`,
+              line.de,
+              voice,
+              btnId,
+              resolve,
+            );
+          });
+
+          if (!audioCtrl.dialogueStopFlag && i < dlg.lines.length - 1) {
+            await new Promise((r) => setTimeout(r, 350));
+          }
+        }
+
+        stopAllAudio(true);
+      }
+
+      // =========================================================================
+      // 5. VOICE DRAWER / POPOVER CONTROLS
+      // =========================================================================
+      function buildVoiceOptionsHTML(selectedId) {
+        const groups = {};
+        VOICE_CATALOG.forEach((v) => {
+          const g = state.lang === "en" ? v.group_en : v.group_vi;
+          if (!groups[g]) groups[g] = [];
+          groups[g].push(v);
+        });
+        return Object.entries(groups)
+          .map(
+            ([groupLabel, items]) => `
+        <optgroup label="${groupLabel}">
+          ${items
+            .map(
+              (v) => `
+            <option value="${v.id}" ${v.id === selectedId ? "selected" : ""}>
+              ${state.lang === "en" ? v.label_en : v.label_vi}
+            </option>
+          `,
+            )
+            .join("")}
+        </optgroup>
+      `,
+          )
+          .join("");
+      }
+
+      function renderVoiceForms() {
+        const formHTML = `
+        <div class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("selectVoiceLabel")}</label>
+            <select onchange="setGlobalVoice(this.value)"
+              class="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              ${buildVoiceOptionsHTML(state.globalVoice)}
+            </select>
+          </div>
+
+          <button type="button" data-preview-btn onclick="playAudioWithFallback('sample.mp3', 'Guten Morgen! Der LKW ist an Rampe 2 angekommen.', state.globalVoice, 'preview_sample')"
+            class="w-full h-10 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer">
+            <span>🔊</span> <span>${t("previewVoiceBtn")}</span>
+          </button>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("speedLabel")}</label>
+            <div class="grid grid-cols-3 gap-1.5 bg-slate-100 p-1 rounded-xl">
+              ${[
+                { val: 0.75, label: t("speedSlow") },
+                { val: 1.0, label: t("speedNormal") },
+                { val: 1.25, label: t("speedFast") },
+              ]
+                .map(
+                  (sp) => `
+                <button type="button" onclick="setPlaybackSpeed(${sp.val})"
+                  class="h-9 rounded-lg text-xs font-bold transition cursor-pointer ${state.speed === sp.val ? "bg-amber-500 text-slate-950 shadow-xs" : "text-slate-600 hover:text-slate-900"}">
+                  ${sp.label}
+                </button>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+        </div>
+      `;
+
+        const dForm = document.getElementById("desktopVoiceForm");
+        const mForm = document.getElementById("mobileVoiceForm");
+        if (dForm) dForm.innerHTML = formHTML;
+        if (mForm) mForm.innerHTML = formHTML;
+
+        const vObj = getVoiceObj(state.globalVoice);
+        const shortName = state.lang === "en" ? vObj.short_en : vObj.short_vi;
+        const pill = document.getElementById("voicePillLabel");
+        if (pill) pill.textContent = `${shortName} • ${state.speed}x`;
+
+        const wSel = document.getElementById("workerVoiceSelect");
+        const pSel = document.getElementById("partnerVoiceSelect");
+        if (wSel) wSel.innerHTML = buildVoiceOptionsHTML(state.workerVoice);
+        if (pSel) pSel.innerHTML = buildVoiceOptionsHTML(state.partnerVoice);
+
+        syncPlayingButtonUI();
+      }
+
+      function toggleVoiceDrawer() {
+        state.voiceDrawerOpen = !state.voiceDrawerOpen;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+
+        if (state.voiceDrawerOpen) {
+          renderVoiceForms();
+          popover.classList.remove("md:hidden");
+          popover.classList.add("md:block");
+          sheet.classList.remove("hidden");
+          backdrop.classList.remove("hidden");
+        } else {
+          closeVoiceDrawer();
+        }
+      }
+
+      function closeVoiceDrawer() {
+        state.voiceDrawerOpen = false;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+        popover.classList.add("md:hidden");
+        popover.classList.remove("md:block");
+        sheet.classList.add("hidden");
+        backdrop.classList.add("hidden");
+      }
+
+      document.addEventListener("click", (e) => {
+        if (!state.voiceDrawerOpen) return;
+        const popover = document.getElementById("desktopVoicePopover");
+        const trigger = document.getElementById("voiceTriggerBtn");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        if (
+          !popover.contains(e.target) &&
+          !trigger.contains(e.target) &&
+          !sheet.contains(e.target)
+        ) {
+          closeVoiceDrawer();
+        }
+      });
+
+      function setGlobalVoice(voiceId) {
+        state.globalVoice = voiceId;
+        localStorage.setItem("fd_globalVoice", voiceId);
+        renderVoiceForms();
+      }
+
+      function updateDialogueVoice(role, voiceId) {
+        if (role === "worker") {
+          state.workerVoice = voiceId;
+          localStorage.setItem("fd_workerVoice", voiceId);
+        } else {
+          state.partnerVoice = voiceId;
+          localStorage.setItem("fd_partnerVoice", voiceId);
+        }
+      }
+
+      function setPlaybackSpeed(newSpeed) {
+        state.speed = newSpeed;
+        localStorage.setItem("fd_speed", String(newSpeed));
+        if (audioCtrl.element) {
+          audioCtrl.element.playbackRate = newSpeed;
+        }
+        renderVoiceForms();
+      }
+
+      // =========================================================================
+      // 6. SMART NORMALIZATION & RENDERERS (100% VI <-> EN)
+      // =========================================================================
+      function normalizeSearch(str) {
+        return (str || "")
+          .toLowerCase()
+          .replace(/ä/g, "a")
+          .replace(/ö/g, "o")
+          .replace(/ü/g, "u")
+          .replace(/ß/g, "ss")
+          .normalize("NFD")
+          .replace(/[̀-ͯ]/g, "")
+          .replace(/đ/g, "d");
+      }
+
+      function renderNavigation() {
+        const tabs = [
+          {
+            id: "vocab",
+            dLabel: `${t("nav_vocab_desktop")} (${VOCAB_DATA.length})`,
+            mLabel: t("nav_vocab_mobile"),
+            icon: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25",
+          },
+          {
+            id: "phrases",
+            dLabel: `${t("nav_phrases_desktop")} (${PHRASES_DATA.length})`,
+            mLabel: t("nav_phrases_mobile"),
+            icon: "M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z",
+          },
+          {
+            id: "dialogues",
+            dLabel: `${t("nav_dialogues_desktop")} (${DIALOGUES_DATA.length})`,
+            mLabel: t("nav_dialogues_mobile"),
+            icon: "M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155",
+          },
+          {
+            id: "flashcards",
+            dLabel: t("nav_flashcards_desktop"),
+            mLabel: t("nav_flashcards_mobile"),
+            icon: "M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3",
+          },
+        ];
+
+        document.getElementById("desktopNav").innerHTML = tabs
+          .map(
+            (tab) => `
+        <button type="button" onclick="switchTab('${tab.id}')"
+          class="px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${state.activeTab === tab.id ? "bg-white text-slate-900 shadow-xs" : "text-slate-300 hover:text-white hover:bg-slate-700/60"}">
+          ${tab.dLabel}
+        </button>
+      `,
+          )
+          .join("");
+
+        document.getElementById("mobileNavGrid").innerHTML = tabs
+          .map((tab) => {
+            const active = state.activeTab === tab.id;
+            return `
+          <button type="button" onclick="switchTab('${tab.id}')"
+            class="flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition cursor-pointer ${active ? "text-blue-600" : "text-slate-500 hover:text-slate-800"}">
+            <svg class="w-5 h-5 ${active ? "stroke-[2.3]" : "stroke-[1.8]"}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="${tab.icon}" />
+            </svg>
+            <span>${tab.mLabel}</span>
+          </button>
+        `;
+          })
+          .join("");
+      }
+
+      function switchTab(tabId) {
+        state.activeTab = tabId;
+        ["vocab", "phrases", "dialogues", "flashcards"].forEach((id) => {
+          const el = document.getElementById(`section-${id}`);
+          if (el) el.classList.toggle("hidden", id !== tabId);
+        });
+        renderNavigation();
+        if (tabId === "flashcards") renderFlashcard();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function speakBtnHTML(btnId, sizeClass = "w-11 h-11") {
+        return `
+        <button type="button" data-audio-btn="${btnId}"
+          class="${sizeClass} shrink-0 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200/80 flex items-center justify-center transition cursor-pointer active:scale-95"
+          aria-label="Play audio">
+          <svg class="icon-play w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+          </svg>
+          <span class="icon-stop hidden text-xs font-extrabold">■</span>
+        </button>
+      `;
+      }
+
+      function renderVocab() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("cat_all")} (${VOCAB_DATA.length})` },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+
+        document.getElementById("vocabCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setVocabCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.vocabCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const q = normalizeSearch(state.vocabQuery);
+        const filtered = VOCAB_DATA.filter((item) => {
+          const matchCat =
+            state.vocabCategory === "all" || item.cat === state.vocabCategory;
+          if (!matchCat) return false;
+          if (!q) return true;
+          const haystack = normalizeSearch(
+            `${item.de} ${item.vi} ${item.en} ${item.rel_vi} ${item.rel_en} ${item.ex_de} ${item.ex_vi} ${item.ex_en}`,
+          );
+          return haystack.includes(q);
+        });
+
+        const grid = document.getElementById("vocabGrid");
+        if (filtered.length === 0) {
+          grid.innerHTML = `<div class="col-span-full bg-white rounded-2xl p-8 text-center text-sm text-slate-500 border border-slate-200">${t("noResults")}</div>`;
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map((item) => {
+            const typeStr = state.lang === "en" ? item.type_en : item.type_vi;
+            const meaningStr = state.lang === "en" ? item.en : item.vi;
+            const relStr = state.lang === "en" ? item.rel_en : item.rel_vi;
+            const exTrans = state.lang === "en" ? item.ex_en : item.ex_vi;
+            const wordBtnId = `vocab_${item.id}_word`;
+            const exBtnId = `vocab_${item.id}_ex`;
+
+            return `
+          <article class="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex flex-col justify-between gap-3.5">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">${item.de}</h2>
+                    <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-100">${typeStr}</span>
+                  </div>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">${item.ipa}</p>
+                  <p class="text-sm sm:text-base font-bold text-emerald-700 mt-1.5">${meaningStr}</p>
+                </div>
+                <div onclick="playAudioWithFallback('vocab_${item.id}_word.mp3', '${item.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="mt-2.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                <span class="font-semibold text-slate-700">${t("relatedPrefix")}</span> ${relStr}
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-sky-50/70 border border-sky-200/60 flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <p class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">${item.ex_de}</p>
+                <p class="text-xs text-slate-600 italic mt-0.5 leading-snug">${exTrans}</p>
+              </div>
+              <div onclick="playAudioWithFallback('vocab_${item.id}_ex.mp3', '${item.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')">
+                ${speakBtnHTML(exBtnId, "w-11 h-11 bg-sky-100/80 hover:bg-sky-200/80 text-sky-900 border-sky-200")}
+              </div>
+            </div>
+          </article>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setVocabCategory(cat) {
+        state.vocabCategory = cat;
+        renderVocab();
+      }
+
+      function handleVocabSearch(val) {
+        state.vocabQuery = val;
+        const clearBtn = document.getElementById("clearSearchBtn");
+        if (clearBtn) {
+          clearBtn.classList.toggle("hidden", !val);
+          clearBtn.classList.toggle("flex", Boolean(val));
+        }
+        renderVocab();
+      }
+
+      function clearVocabSearch() {
+        const input = document.getElementById("vocabSearchInput");
+        if (input) input.value = "";
+        handleVocabSearch("");
+      }
+
+      function renderPhrases() {
+        const countPCat = (cat) =>
+          PHRASES_DATA.filter((p) => p.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("pcat_all")} (${PHRASES_DATA.length})` },
+          { id: "2.1", label: `${t("pcat_2_1")} (${countPCat("2.1")})` },
+          { id: "2.2", label: `${t("pcat_2_2")} (${countPCat("2.2")})` },
+          { id: "2.3", label: `${t("pcat_2_3")} (${countPCat("2.3")})` },
+          { id: "2.4", label: `${t("pcat_2_4")} (${countPCat("2.4")})` },
+        ];
+
+        document.getElementById("phraseCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+        <button type="button" onclick="setPhraseCategory('${c.id}')"
+          class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.phraseCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+          ${c.label}
+        </button>
+      `,
+          )
+          .join("");
+
+        const filtered = PHRASES_DATA.filter(
+          (p) =>
+            state.phraseCategory === "all" || p.cat === state.phraseCategory,
+        );
+        document.getElementById("phrasesList").innerHTML = filtered
+          .map((p) => {
+            const trans = state.lang === "en" ? p.en : p.vi;
+            const btnId = `phrase_${p.id}`;
+            return `
+          <div class="bg-white rounded-2xl p-4 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex items-center justify-between gap-3.5">
+            <div class="min-w-0">
+              <span class="inline-block text-[11px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md mb-1">${p.cat}</span>
+              <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${p.de}</p>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">${trans}</p>
+            </div>
+            <div onclick="playAudioWithFallback('phrase_${p.id}.mp3', '${p.de.replace(/'/g, "\'")}', state.globalVoice, '${btnId}')">
+              ${speakBtnHTML(btnId, "w-11 h-11")}
+            </div>
+          </div>
+        `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setPhraseCategory(cat) {
+        state.phraseCategory = cat;
+        renderPhrases();
+      }
+
+      function renderDialogues() {
+        document.getElementById("dialogueTabs").innerHTML = DIALOGUES_DATA.map(
+          (d) => {
+            const label = state.lang === "en" ? d.tab_en : d.tab_vi;
+            const active = d.id === state.activeDialogueId;
+            return `
+          <button type="button" onclick="selectDialogue(${d.id})"
+            class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition cursor-pointer ${active ? "bg-slate-900 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+            ${label}
+          </button>
+        `;
+          },
+        ).join("");
+
+        const dlg =
+          DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId) ||
+          DIALOGUES_DATA[0];
+        const title = state.lang === "en" ? dlg.title_en : dlg.title_vi;
+        const context = state.lang === "en" ? dlg.context_en : dlg.context_vi;
+
+        document.getElementById("dialogueContainer").innerHTML = `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-slate-900">${title}</h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">${context}</p>
+          </div>
+          <button id="playFullDialogueBtn" type="button" onclick="toggleFullDialogue()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 shadow-xs transition cursor-pointer">
+            <span>▶</span> <span>${t("playFullDialogue")}</span>
+          </button>
+        </div>
+
+        <div class="space-y-3">
+          ${dlg.lines
+            .map((line, idx) => {
+              const lineNum = idx + 1;
+              const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+              const speakerName =
+                state.lang === "en" ? line.name_en : line.name_vi;
+              const lineTrans = state.lang === "en" ? line.en : line.vi;
+              const isWorker = line.role === "worker";
+              const voiceForLine = isWorker
+                ? state.workerVoice
+                : state.partnerVoice;
+
+              return `
+              <div id="row_${btnId}" class="p-3.5 sm:p-4 rounded-2xl border transition flex items-start justify-between gap-3 ${isWorker ? "bg-slate-50/90 border-slate-200/80" : "bg-sky-50/50 border-sky-200/60"}">
+                <div class="min-w-0">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold mb-1 ${isWorker ? "bg-blue-100 text-blue-800" : "bg-sky-100 text-sky-900"}">
+                    ${speakerName}
+                  </span>
+                  <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${line.de}</p>
+                  <p class="text-xs sm:text-sm text-slate-600 mt-1">${lineTrans}</p>
+                </div>
+                <div onclick="playAudioWithFallback('dialog_${dlg.id}_line_${lineNum}.mp3', '${line.de.replace(/'/g, "\'")}', '${voiceForLine}', '${btnId}')">
+                  ${speakBtnHTML(btnId, "w-11 h-11")}
+                </div>
+              </div>
+            `;
+            })
+            .join("")}
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function selectDialogue(id) {
+        stopAllAudio(true);
+        state.activeDialogueId = id;
+        renderDialogues();
+      }
+
+      function renderFlashcardControls() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cardUnit = state.lang === "en" ? "cards" : "thẻ";
+        const opts = [
+          {
+            id: "all",
+            label: `${t("fcAllCategories")} (${VOCAB_DATA.length} ${cardUnit})`,
+          },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+        document.getElementById("fcCategorySelect").innerHTML = opts
+          .map(
+            (o) => `
+        <option value="${o.id}" ${o.id === state.fcCategory ? "selected" : ""}>${o.label}</option>
+      `,
+          )
+          .join("");
+      }
+
+      function renderFlashcard() {
+        renderFlashcardControls();
+        if (state.fcDeck.length === 0) state.fcDeck = [...VOCAB_DATA];
+        if (state.fcIndex >= state.fcDeck.length) state.fcIndex = 0;
+
+        const card = state.fcDeck[state.fcIndex];
+        const typeStr = state.lang === "en" ? card.type_en : card.type_vi;
+        const meaningStr = state.lang === "en" ? card.en : card.vi;
+        const relStr = state.lang === "en" ? card.rel_en : card.rel_vi;
+        const exTrans = state.lang === "en" ? card.ex_en : card.ex_vi;
+        const isMastered = state.masteredIds.includes(card.id);
+
+        document.getElementById("fcCounter").textContent =
+          `${state.fcIndex + 1} / ${state.fcDeck.length}`;
+
+        const masterBtn = document.getElementById("fcMasterBtn");
+        if (isMastered) {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-bold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>✓</span> <span>${t("fcMastered")}</span>`;
+        } else {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-semibold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>○</span> <span>${t("fcMarkMastered")}</span>`;
+        }
+
+        const wordBtnId = `fc_word_${card.id}`;
+        const exBtnId = `fc_ex_${card.id}`;
+
+        document.getElementById("flashcardStage").innerHTML = `
+        <div onclick="flipFlashcard()" class="relative w-full min-h-[310px] sm:min-h-[340px] cursor-pointer select-none">
+          <div class="w-full min-h-[310px] sm:min-h-[340px] transform-style-3d ${state.fcFlipped ? "rotate-y-180" : ""}">
+            
+            <!-- FRONT -->
+            <div class="absolute inset-0 backface-hidden bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 flex flex-col items-center justify-between text-center">
+              <div class="w-full flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-50 text-sky-900">${typeStr}</span>
+                <div onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                  ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                </div>
+              </div>
+
+              <div class="my-auto py-4">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${card.de}</h2>
+                <p class="text-sm font-mono text-slate-400 mt-2">${card.ipa}</p>
+              </div>
+
+              <p class="text-xs font-medium text-slate-400">${t("fcFrontHint")}</p>
+            </div>
+
+            <!-- BACK -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-800 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <p class="text-xs font-semibold text-amber-400 uppercase tracking-wider">${card.de}</p>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-1">${meaningStr}</h3>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')"
+                    class="h-10 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shrink-0 cursor-pointer">
+                    <span>🔊</span> <span>${t("fcWordBtn")}</span>
+                  </button>
+                </div>
+
+                <p class="text-xs text-slate-300 bg-slate-800/80 p-3 rounded-xl mt-3 leading-relaxed">
+                  <span class="font-semibold text-amber-300">${t("relatedPrefix")}</span> ${relStr}
+                </p>
+
+                <div class="mt-3 p-3.5 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="text-xs sm:text-sm font-semibold text-white leading-snug">${card.ex_de}</p>
+                    <p class="text-xs text-slate-300 italic mt-1">${exTrans}</p>
+                  </div>
+                  <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_ex.mp3', '${card.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')"
+                    class="w-11 h-11 shrink-0 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center justify-center font-bold cursor-pointer">
+                    🔊
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-center text-xs text-slate-400 mt-3">${t("fcBackHint")}</p>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+        syncPlayingButtonUI();
+      }
+
+      function flipFlashcard() {
+        state.fcFlipped = !state.fcFlipped;
+        renderFlashcard();
+      }
+
+      function nextFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex = (state.fcIndex + 1) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function prevFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex =
+          (state.fcIndex - 1 + state.fcDeck.length) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function setFlashcardCategory(cat) {
+        state.fcCategory = cat;
+        state.fcFlipped = false;
+        state.fcIndex = 0;
+        state.fcDeck =
+          cat === "all"
+            ? [...VOCAB_DATA]
+            : VOCAB_DATA.filter((v) => v.cat === cat);
+        renderFlashcard();
+      }
+
+      function shuffleFlashcards() {
+        for (let i = state.fcDeck.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [state.fcDeck[i], state.fcDeck[j]] = [
+            state.fcDeck[j],
+            state.fcDeck[i],
+          ];
+        }
+        state.fcIndex = 0;
+        state.fcFlipped = false;
+        renderFlashcard();
+      }
+
+      function toggleFlashcardMastered() {
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+        const idx = state.masteredIds.indexOf(card.id);
+        if (idx >= 0) {
+          state.masteredIds.splice(idx, 1);
+        } else {
+          state.masteredIds.push(card.id);
+        }
+        localStorage.setItem(
+          "fd_mastered_khovan",
+          JSON.stringify(state.masteredIds),
+        );
+        renderFlashcard();
+      }
+
+      function renderWarehouseNotes() {
+        document.getElementById("notesHeading").textContent = t("notesHeading");
+        const items = t("notes") || [];
+        document.getElementById("notesList").innerHTML = items
+          .map(
+            (n) => `
+        <li class="p-3 rounded-xl bg-slate-50 border border-slate-100">${n}</li>
+      `,
+          )
+          .join("");
+      }
+
+      // =========================================================================
+      // 7. LANGUAGE SWITCHER (100% UI + CONTENT LOCALIZATION)
+      // =========================================================================
+      function setLanguage(lang) {
+        state.lang = lang;
+        localStorage.setItem("fd_lang", lang);
+        document.documentElement.lang = lang;
+        document.title = t("pageTitle");
+
+        const viBtn = document.getElementById("langBtnVi");
+        const enBtn = document.getElementById("langBtnEn");
+        if (lang === "vi") {
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        } else {
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        }
+
+        document.getElementById("backHomeText").textContent = t("backHomeText");
+        document.getElementById("brandTitle").textContent = t("brandTitle");
+        document.getElementById("popoverTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("sheetTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("vocabSearchInput").placeholder =
+          t("searchPlaceholder");
+        document.getElementById("workerVoiceLabel").textContent =
+          t("workerVoiceLabel");
+        document.getElementById("partnerVoiceLabel").textContent =
+          t("partnerVoiceLabel");
+        document.getElementById("fcShuffleText").textContent = t("fcShuffle");
+        document.getElementById("fcPrevText").textContent = t("fcPrev");
+        document.getElementById("fcNextText").textContent = t("fcNext");
+        document.getElementById("fcShortcutHint").textContent =
+          t("fcShortcutHint");
+
+        renderNavigation();
+        renderVoiceForms();
+        renderVocab();
+        renderPhrases();
+        renderDialogues();
+        renderFlashcard();
+        renderWarehouseNotes();
+      }
+
+      // =========================================================================
+      // 8. KEYBOARD SHORTCUTS
+      // =========================================================================
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && state.voiceDrawerOpen) {
+          closeVoiceDrawer();
+          return;
+        }
+        if (
+          ["INPUT", "SELECT", "TEXTAREA"].includes(
+            document.activeElement.tagName,
+          )
+        )
+          return;
+        if (state.activeTab !== "flashcards") return;
+
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+
+        if (e.code === "Space") {
+          e.preventDefault();
+          flipFlashcard();
+        } else if (e.key === "ArrowRight") {
+          nextFlashcard();
+        } else if (e.key === "ArrowLeft") {
+          prevFlashcard();
+        } else if (e.key.toLowerCase() === "s") {
+          playAudioWithFallback(
+            `vocab_${card.id}_word.mp3`,
+            card.de,
+            state.globalVoice,
+            `fc_word_${card.id}`,
+          );
+        } else if (e.key.toLowerCase() === "e") {
+          playAudioWithFallback(
+            `vocab_${card.id}_ex.mp3`,
+            card.ex_de,
+            state.globalVoice,
+            `fc_ex_${card.id}`,
+          );
+        }
+      });
+
+      // =========================================================================
+      // 9. INITIALIZE APP
+      // =========================================================================
+      setLanguage(state.lang);
+    </script>
+  </body>
+</html>

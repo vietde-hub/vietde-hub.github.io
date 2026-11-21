@@ -142,7 +142,7 @@
               <span
                 id="statTradesVal"
                 class="text-sm sm:text-base font-extrabold text-emerald-400 leading-none"
-                >9/11</span
+                >11/11</span
               >
               <span
                 id="statTradesLabel"
@@ -157,7 +157,7 @@
               <span
                 id="statTermsVal"
                 class="text-sm sm:text-base font-extrabold text-amber-400 leading-none"
-                >742</span
+                >910</span
               >
               <span
                 id="statTermsLabel"
@@ -172,7 +172,7 @@
               <span
                 id="statDialoguesVal"
                 class="text-sm sm:text-base font-extrabold text-sky-400 leading-none"
-                >52</span
+                >64</span
               >
               <span
                 id="statDialoguesLabel"
@@ -208,7 +208,7 @@
             id="courseSearchInput"
             type="search"
             oninput="handleSearch(this.value)"
-            placeholder="Tìm chuyên mục (VD: Đời sống, Điều dưỡng, Nha khoa, Thợ hàn, Bếp...)"
+            placeholder="Tìm chuyên mục (VD: Đời sống, Điều dưỡng, Nha khoa, Thợ hàn, Bếp, Kho vận...)"
             class="w-full h-9 sm:h-10 pl-10 pr-8 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
           />
           <button
@@ -258,7 +258,7 @@
           statTermsLabel: "Thuật ngữ lõi",
           statDialoguesLabel: "Hội thoại thực tế",
           searchPlaceholder:
-            "Tìm chuyên mục (VD: Đời sống, Điều dưỡng, Nha khoa, Thợ hàn, Bếp...)",
+            "Tìm chuyên mục (VD: Đời sống, Điều dưỡng, Nha khoa, Thợ hàn, Bếp, Kho vận...)",
           filterAll: "Tất cả",
           filterReady: "Sẵn sàng học",
           filterSoon: "Sắp ra mắt",
@@ -273,8 +273,7 @@
           plannedStats: "Đang lên khung xây dựng từng phần",
         },
         en: {
-          pageTitle:
-            "VietDe Hub — Everyday German & Trade German in Germany",
+          pageTitle: "VietDe Hub — Everyday German & Trade German in Germany",
           heroBadge: "Everyday German & Multi-Trade Training Hub",
           heroTitle: "Everyday Integration & Trade German in Germany",
           heroSubtitle:
@@ -283,7 +282,7 @@
           statTermsLabel: "Core Terms",
           statDialoguesLabel: "Real Dialogues",
           searchPlaceholder:
-            "Search modules (e.g., Everyday, Nursing, Dental, Welding, Kitchen...)",
+            "Search modules (e.g., Everyday, Nursing, Dental, Welding, Kitchen, Logistics...)",
           filterAll: "All Modules",
           filterReady: "Available Now",
           filterSoon: "Coming Soon",
@@ -299,7 +298,7 @@
         },
       };
 
-      // 9 chuyên mục đầu tiên đã sẵn sàng học:
+      // 11 chuyên mục đã sẵn sàng học trọn bộ:
       // 1. Tiếng Đức Đời Sống & Hòa Nhập (hoinhapduc.html)
       // 2. Ngành Sơn Công Nghiệp (thoson.html)
       // 3. Kỹ Thuật Viên Cốt Thép / Thợ buộc sắt (thobuocsat.html)
@@ -309,6 +308,8 @@
       // 7. Ngành Chế Biến Thực Phẩm (chebienthucpham.html)
       // 8. Ngành Bếp & Phụ Bếp (bep.html)
       // 9. Ngành Nhà Hàng & Khách Sạn (nhahangkhachsan.html)
+      // 10. Ngành Nail & Chăm Sóc Móng (nail.html)
+      // 11. Ngành Kho Vận & Logistics (khovan.html)
       const COURSES_DATA = [
         {
           id: "doisong",
@@ -483,8 +484,8 @@
         },
         {
           id: "nail",
-          href: "#",
-          ready: false,
+          href: "nail.html",
+          ready: true,
           accent: "pink",
           icon: "💅",
           germanTitle: "Nagelstudio & Kosmetik / Maniküre",
@@ -493,17 +494,17 @@
           tag_vi: "Chăm sóc móng tay/chân, Gel/Acryl & Vệ sinh tiệm",
           tag_en: "Manicure/Pedicure, Gel/Acrylic & Salon Hygiene",
           desc_vi:
-            "Từ vựng làm móng tay/chân (Maniküre, Pediküre), đắp gel/bột, tư vấn kiểu dáng/màu sắc cho khách và khử khuẩn dụng cụ tại tiệm.",
+            "82 từ vựng tiệm nail độc lập (giải phẫu móng, dáng móng, đắp Gel/Refill, hút bụi Staubabsaugung & khử khuẩn BGW/TRGS), 36 mẫu câu và 6 hội thoại thực tế.",
           desc_en:
-            "Manicure & pedicure terms, gel/acrylic extensions, consulting clients on styles/shades, and salon hygiene.",
-          vocabCount: 0,
-          phraseCount: 0,
-          dialogueCount: 0,
+            "82 standalone nail studio terms (nail anatomy, shapes, gel/refill, dust extraction & BGW/TRGS hygiene), 36 salon phrases, and 6 real-world dialogues.",
+          vocabCount: 82,
+          phraseCount: 36,
+          dialogueCount: 6,
         },
         {
-          id: "khovanj",
-          href: "#",
-          ready: false,
+          id: "khovan",
+          href: "khovan.html",
+          ready: true,
           accent: "sky",
           icon: "📦",
           germanTitle: "Lagerlogistik & Fachkraft für Lagerlogistik",
@@ -512,12 +513,12 @@
           tag_vi: "Xuất nhập kho, Xe nâng (Stapler), Quét mã & Đóng gói",
           tag_en: "Warehousing, Forklift (Stapler), Scanning & Dispatch",
           desc_vi:
-            "Thuật ngữ nhận hàng (Warenannahme), soạn đơn (Kommissionierung), xe nâng hàng (Gabelstapler / Stapler), kiểm kê, đóng gói và an toàn kho bãi.",
+            "86 từ vựng kho vận độc lập (Wareneingang, Kommissionierung, MDE-Gerät, Stapler & Staplerschein, Ladungssicherung, Inventur & PSA), 36 mẫu câu và 6 hội thoại.",
           desc_en:
-            "Goods receipt (Warenannahme), order picking (Kommissionierung), forklifts (Stapler), inventory, packing, and warehouse safety.",
-          vocabCount: 0,
-          phraseCount: 0,
-          dialogueCount: 0,
+            "86 standalone warehouse & logistics terms (goods receipt, order picking, MDE scanner, forklift & license, load securing, stocktake & PPE), 36 phrases, and 6 dialogues.",
+          vocabCount: 86,
+          phraseCount: 36,
+          dialogueCount: 6,
         },
       ];
 

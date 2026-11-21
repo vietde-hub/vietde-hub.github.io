@@ -1,0 +1,3684 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>
+      Fachdeutsch — Tiếng Đức Ngành Nail & Chăm Sóc Móng (Nagelstudio &
+      Maniküre) | VietDe Hub
+    </title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='14'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Crect width='64' height='21.34' y='0' fill='%23111827'/%3E%3Crect width='64' height='21.34' y='21.33' fill='%23DC2626'/%3E%3Crect width='64' height='21.34' y='42.66' fill='%23FACC15'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: #f1f5f9;
+        color: #0f172a;
+        min-height: 100dvh;
+        padding-bottom: calc(76px + var(--safe-bottom));
+      }
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 40px;
+        }
+      }
+      .bottom-nav-safe {
+        padding-bottom: calc(6px + var(--safe-bottom));
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+      @keyframes pulseRing {
+        0% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45);
+        }
+        70% {
+          box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        }
+      }
+      .btn-playing {
+        background-color: #ef4444 !important;
+        color: #ffffff !important;
+        border-color: #ef4444 !important;
+        animation: pulseRing 1.4s infinite;
+      }
+      @keyframes sheetSlideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .animate-sheet-up {
+        animation: sheetSlideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes popoverFade {
+        from {
+          opacity: 0;
+          transform: translateY(-6px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-popover {
+        animation: popoverFade 0.18s ease-out;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-pink-200 selection:text-slate-900">
+    <!-- =====================================================================
+       ADAPTIVE STICKY TOP BAR (Back to Hub + Compact Mobile + 1-Row Desktop)
+       ===================================================================== -->
+    <header
+      class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-3 sm:px-6 h-14 flex items-center justify-between gap-2"
+      >
+        <!-- Left: Back to Hub + Brand + Desktop Navigation Tabs -->
+        <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
+          <a
+            href="index.html"
+            id="backHomeBtn"
+            title="Trang chủ / Home"
+            class="h-9 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white text-xs font-semibold flex items-center gap-1 shrink-0 transition"
+          >
+            <span>←</span>
+            <span id="backHomeText" class="hidden sm:inline">Trang chủ</span>
+          </a>
+
+          <div class="flex items-center gap-2 min-w-0">
+            <div
+              class="w-8 h-8 rounded-lg bg-pink-500 text-white flex items-center justify-center font-extrabold shadow-inner shrink-0"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"
+                />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span
+                  id="brandTitle"
+                  class="font-bold text-sm sm:text-base tracking-tight truncate"
+                  >Nail & Chăm Sóc Móng</span
+                >
+                <span
+                  class="hidden xl:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-pink-500/20 text-pink-300 border border-pink-500/30"
+                  >Nagelstudio & Maniküre</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Single-Row Navigation Tabs (Hidden on Mobile) -->
+          <nav
+            id="desktopNav"
+            class="hidden md:flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-slate-700/70"
+            aria-label="Primary Navigation"
+          ></nav>
+        </div>
+
+        <!-- Right: Voice Settings Trigger Pill + VI/EN Switch -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0 relative">
+          <button
+            id="voiceTriggerBtn"
+            type="button"
+            onclick="toggleVoiceDrawer()"
+            class="h-9 px-2.5 sm:px-3 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 border border-slate-700 text-xs font-medium text-slate-100 flex items-center gap-1.5 transition cursor-pointer"
+          >
+            <span class="text-amber-400">🎙</span>
+            <span
+              id="voicePillLabel"
+              class="max-w-[105px] sm:max-w-[160px] lg:max-w-[210px] truncate"
+              >Piper Chuẩn Đức • 1.0x</span
+            >
+            <svg
+              class="w-3.5 h-3.5 text-slate-400 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <!-- Language Switcher VI | EN -->
+          <div
+            class="h-9 bg-slate-800 p-0.5 rounded-xl border border-slate-700 flex items-center"
+            role="group"
+            aria-label="Language Switch"
+          >
+            <button
+              id="langBtnVi"
+              type="button"
+              onclick="setLanguage('vi')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              VI
+            </button>
+            <button
+              id="langBtnEn"
+              type="button"
+              onclick="setLanguage('en')"
+              class="h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              EN
+            </button>
+          </div>
+
+          <!-- DESKTOP POPOVER: Voice & Speed Controls -->
+          <div
+            id="desktopVoicePopover"
+            class="hidden md:hidden absolute right-0 top-12 w-80 bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200 p-4 z-50 animate-popover"
+          >
+            <div
+              class="flex items-center justify-between pb-2.5 mb-3 border-b border-slate-100"
+            >
+              <span
+                id="popoverTitle"
+                class="text-xs font-bold uppercase tracking-wider text-slate-500"
+                >Cài đặt Giọng đọc & Tốc độ</span
+              >
+              <button
+                type="button"
+                onclick="closeVoiceDrawer()"
+                class="w-7 h-7 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+            <div id="desktopVoiceForm"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subtle Non-Blocking Audio Fallback / Status Banner -->
+    <div
+      id="statusToast"
+      class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-50 max-w-[92vw] sm:max-w-md bg-slate-900/95 text-white text-xs px-3.5 py-2 rounded-full shadow-lg border border-slate-700 flex items-center gap-2"
+    >
+      <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+      <span id="statusToastText" class="truncate"></span>
+    </div>
+
+    <!-- =====================================================================
+       MAIN CONTENT AREA
+       ===================================================================== -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6">
+      <!-- TAB 1: VOCABULARY -->
+      <section id="section-vocab" class="space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 space-y-3"
+        >
+          <div class="relative">
+            <svg
+              class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z"
+              />
+            </svg>
+            <input
+              id="vocabSearchInput"
+              type="search"
+              oninput="handleVocabSearch(this.value)"
+              placeholder="Tìm từ tiếng Đức, nghĩa tiếng Việt..."
+              class="w-full h-11 pl-10 pr-9 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
+            />
+            <button
+              id="clearSearchBtn"
+              type="button"
+              onclick="clearVocabSearch()"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-xs items-center justify-center hover:bg-slate-300 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div
+            id="vocabCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5"
+          ></div>
+        </div>
+
+        <div
+          id="vocabGrid"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"
+        ></div>
+      </section>
+
+      <!-- TAB 2: NAIL PHRASES -->
+      <section id="section-phrases" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80"
+        >
+          <div
+            id="phraseCategoryPills"
+            class="flex items-center gap-1.5 overflow-x-auto no-scrollbar"
+          ></div>
+        </div>
+        <div
+          id="phrasesList"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3"
+        ></div>
+      </section>
+
+      <!-- TAB 3: DIALOGUES -->
+      <section id="section-dialogues" class="hidden space-y-4">
+        <div
+          class="bg-white rounded-2xl p-3.5 sm:p-5 shadow-sm border border-slate-200/80 space-y-4"
+        >
+          <div
+            id="dialogueTabs"
+            class="flex items-center gap-2 overflow-x-auto no-scrollbar"
+          ></div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100"
+          >
+            <div>
+              <label
+                id="workerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Kỹ thuật viên Nail (Đức)</label
+              >
+              <select
+                id="workerVoiceSelect"
+                onchange="updateDialogueVoice('worker', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+            <div>
+              <label
+                id="partnerVoiceLabel"
+                class="block text-xs font-semibold text-slate-600 mb-1"
+                >Giọng Khách hàng / Đồng nghiệp</label
+              >
+              <select
+                id="partnerVoiceSelect"
+                onchange="updateDialogueVoice('partner', this.value)"
+                class="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></select>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="dialogueContainer"
+          class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200/80"
+        ></div>
+      </section>
+
+      <!-- TAB 4: FLASHCARDS -->
+      <section
+        id="section-flashcards"
+        class="hidden space-y-4 max-w-2xl mx-auto"
+      >
+        <div
+          class="bg-white rounded-2xl p-3 sm:p-4 shadow-sm border border-slate-200/80 flex flex-wrap items-center justify-between gap-2"
+        >
+          <select
+            id="fcCategorySelect"
+            onchange="setFlashcardCategory(this.value)"
+            class="h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></select>
+          <div class="flex items-center gap-2">
+            <span
+              id="fcCounter"
+              class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-2 rounded-xl"
+              >1 / 82</span
+            >
+            <button
+              id="fcShuffleBtn"
+              type="button"
+              onclick="shuffleFlashcards()"
+              class="h-10 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <span>🔀</span>
+              <span id="fcShuffleText">Trộn thẻ</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="flashcardStage" class="perspective-1000"></div>
+
+        <div class="flex items-center justify-between gap-2">
+          <button
+            type="button"
+            onclick="prevFlashcard()"
+            class="h-11 px-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>←</span>
+            <span id="fcPrevText">Trước</span>
+          </button>
+
+          <button
+            id="fcMasterBtn"
+            type="button"
+            onclick="toggleFlashcardMastered()"
+            class="h-11 px-4 rounded-xl border text-xs sm:text-sm font-semibold shadow-sm flex items-center gap-1.5 transition cursor-pointer"
+          ></button>
+
+          <button
+            type="button"
+            onclick="nextFlashcard()"
+            class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-sm font-semibold text-white shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <span id="fcNextText">Tiếp</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <p
+          id="fcShortcutHint"
+          class="hidden md:block text-center text-xs text-slate-400"
+        >
+          Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe
+          ví dụ)
+        </p>
+      </section>
+
+      <!-- PRACTICAL NAIL NOTES CARD (FROM GOOGLE DOC) -->
+      <section
+        id="section-nail-notes"
+        class="mt-6 bg-white rounded-2xl p-4 sm:p-6 shadow-xs border border-slate-200/80"
+      >
+        <h2
+          id="notesHeading"
+          class="text-base sm:text-lg font-extrabold text-slate-900 mb-3"
+        ></h2>
+        <ul
+          id="notesList"
+          class="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed"
+        ></ul>
+      </section>
+    </main>
+
+    <!-- MOBILE BOTTOM NAVIGATION BAR -->
+    <nav
+      id="mobileBottomNav"
+      class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-[0_-4px_16px_rgba(15,23,42,0.06)] bottom-nav-safe"
+      aria-label="Mobile Navigation"
+    >
+      <div id="mobileNavGrid" class="grid grid-cols-4 h-14"></div>
+    </nav>
+
+    <!-- MOBILE BOTTOM SHEET: VOICE & SPEED SETTINGS -->
+    <div
+      id="mobileVoiceBackdrop"
+      onclick="closeVoiceDrawer()"
+      class="hidden md:hidden fixed inset-0 z-50 bg-slate-950/50 backdrop-blur-xs transition-opacity"
+    ></div>
+    <div
+      id="mobileVoiceSheet"
+      class="hidden md:hidden fixed inset-x-0 bottom-0 z-50 bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 p-5 pb-[calc(20px+var(--safe-bottom))] animate-sheet-up"
+    >
+      <div class="w-10 h-1.5 rounded-full bg-slate-300 mx-auto mb-4"></div>
+      <div class="flex items-center justify-between mb-3">
+        <h3 id="sheetTitle" class="text-base font-bold text-slate-900">
+          Cài đặt Giọng đọc & Tốc độ
+        </h3>
+        <button
+          type="button"
+          onclick="closeVoiceDrawer()"
+          class="w-9 h-9 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold"
+        >
+          ✕
+        </button>
+      </div>
+      <div id="mobileVoiceForm"></div>
+    </div>
+
+    <script>
+      // =========================================================================
+      // 0. AUDIO FOLDER PREFIX FOR NAIL CARE & MANICURE MODULE
+      // =========================================================================
+      const AUDIO_BASE_PATH = "audio/nail";
+
+      // =========================================================================
+      // 1. VOICE CATALOG (4 VOICES: PIPER OFFLINE + EDGE NEURAL) & I18N
+      // =========================================================================
+      const VOICE_CATALOG = [
+        {
+          id: "piper_hochdeutsch",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Chuẩn Đức (High)",
+          label_en: "Piper Thorsten — Standard German (High)",
+          short_vi: "Piper Chuẩn Đức",
+          short_en: "Piper Standard",
+        },
+        {
+          id: "piper_rostock",
+          group_vi: "1. Piper Thorsten Offline (Bản xứ Đức — Mặc định)",
+          group_en: "1. Piper Thorsten Offline (Native German — Default)",
+          label_vi: "Piper Thorsten — Miền Bắc / Rostock",
+          label_en: "Piper Thorsten — Northern / Rostock",
+          short_vi: "Piper Rostock",
+          short_en: "Piper Rostock",
+        },
+        {
+          id: "edge_hochdeutsch",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Chuẩn Đức (Nữ Katja)",
+          label_en: "Edge Neural — Standard German (Female Katja)",
+          short_vi: "Edge Katja",
+          short_en: "Edge Katja",
+        },
+        {
+          id: "edge_rostock",
+          group_vi: "2. Microsoft Edge Neural TTS (Tự nhiên)",
+          group_en: "2. Microsoft Edge Neural TTS (Natural)",
+          label_vi: "Edge Neural — Miền Bắc (Nam Conrad)",
+          label_en: "Edge Neural — Northern German (Male Conrad)",
+          short_vi: "Edge Conrad",
+          short_en: "Edge Conrad",
+        },
+      ];
+
+      function sanitizeVoiceId(savedId, fallbackId) {
+        return VOICE_CATALOG.some((v) => v.id === savedId)
+          ? savedId
+          : fallbackId;
+      }
+
+      const I18N = {
+        vi: {
+          pageTitle:
+            "Fachdeutsch — Tiếng Đức Ngành Nail & Chăm Sóc Móng (Nagelstudio & Maniküre) | VietDe Hub",
+          backHomeText: "Trang chủ",
+          brandTitle: "Nail & Chăm Sóc Móng",
+          nav_vocab_desktop: "1. Từ vựng",
+          nav_phrases_desktop: "2. Mẫu câu tiệm nail",
+          nav_dialogues_desktop: "3. Hội thoại",
+          nav_flashcards_desktop: "4. Thẻ Flashcard",
+          nav_vocab_mobile: "Từ vựng",
+          nav_phrases_mobile: "Mẫu câu",
+          nav_dialogues_mobile: "Hội thoại",
+          nav_flashcards_mobile: "Thẻ nhớ",
+          voiceSettingsTitle: "Cài đặt Giọng đọc & Tốc độ",
+          selectVoiceLabel: "Chọn giọng đọc mặc định (4 giọng)",
+          previewVoiceBtn: "Nghe thử giọng",
+          stopPreviewBtn: "Dừng nghe thử",
+          speedLabel: "Tốc độ phát âm",
+          speedSlow: "Chậm 0.75x",
+          speedNormal: "Chuẩn 1.0x",
+          speedFast: "Nhanh 1.25x",
+          searchPlaceholder: "Tìm từ tiếng Đức, nghĩa tiếng Việt...",
+          cat_all: "Tất cả",
+          cat_1_1: "1.1 Giải phẫu, Dịch vụ & Dáng móng",
+          cat_1_2: "1.2 Dụng cụ, Máy mài & Vật tư",
+          cat_1_3: "1.3 Quy trình, Vệ sinh & An toàn",
+          cat_1_4: "1.4 Tư vấn khách & Lịch hẹn",
+          cat_1_5: "1.5 Động từ & Tính từ tiệm Nail",
+          relatedPrefix: "Từ liên quan:",
+          noResults: "Không tìm thấy từ vựng phù hợp.",
+          pcat_all: "Tất cả mẫu câu",
+          pcat_2_1: "2.1 Đón tiếp & Tư vấn dịch vụ",
+          pcat_2_2: "2.2 Thao tác trên bàn làm móng",
+          pcat_2_3: "2.3 Vệ sinh tiệm & An toàn",
+          pcat_2_4: "2.4 Lịch hẹn, Thanh toán & Chào khách",
+          workerVoiceLabel: "Giọng Kỹ thuật viên Nail (Đức)",
+          partnerVoiceLabel: "Giọng Khách hàng / Đồng nghiệp",
+          playFullDialogue: "Nghe cả hội thoại",
+          stopFullDialogue: "Dừng hội thoại",
+          fcAllCategories: "Tất cả chủ đề",
+          fcShuffle: "Trộn thẻ",
+          fcPrev: "Trước",
+          fcNext: "Tiếp",
+          fcFrontHint: "Chạm thẻ để xem nghĩa & ví dụ",
+          fcBackHint: "Chạm thẻ để quay lại mặt trước",
+          fcWordBtn: "Nghe từ",
+          fcExBtn: "Nghe ví dụ",
+          fcMastered: "Đã thuộc",
+          fcMarkMastered: "Đánh dấu đã thuộc",
+          fcShortcutHint:
+            "Phím tắt: Space (Lật thẻ) • ← / → (Chuyển thẻ) • S (Nghe từ) • E (Nghe ví dụ)",
+          fallbackNotice: "Đang dùng giọng dự phòng Piper Offline cho câu này.",
+          notesHeading: "Ghi chú Thực tế Ngành Nail & Chăm Sóc Móng tại Đức",
+          notes: [
+            "<strong>Bảo hộ lao động & Hút bụi mài móng (Staubabsaugung & BGW/TRGS):</strong> Tại Đức, bụi mịn từ việc giũa/mài móng (<em>Schleifstaub</em>) và hơi hóa chất làm móng tiềm ẩn rủi ro hô hấp và dị ứng; các tiệm nail chuyên nghiệp chú trọng hệ thống hút bụi (<em>Staubabsaugung</em>), thông gió tốt (<em>lüften</em>) và sử dụng giũa dùng một lần (<em>Einwegfeile</em>) / khử khuẩn dụng cụ kim loại nghiêm ngặt theo chuẩn của Hiệp hội Bảo hiểm Tiệm và Chăm sóc Y tế (BGW) cũng như Quy định Kỹ thuật về Chất nguy hiểm (TRGS).",
+            '<strong>Phân biệt phom & kỹ thuật phổ biến tại Đức:</strong> Khách hàng tại Đức thường gọi tên phom bằng tiếng Đức/quốc tế như <em>"eckig"</em> (vuông), <em>"oval"</em> (bầu dục), <em>"mandel"</em> (hạnh nhân), <em>"Ballerina / Coffin"</em>, và dịch vụ <em>"Auffüllen / Refill"</em> (dặm chân móng mọc dài sau 3–4 tuần) phổ biến hơn hẳn việc tháo bỏ làm lại từ đầu mỗi lần để bảo vệ tối đa lớp móng tự nhiên.',
+            "<strong>Lưu ý vệ sinh chống nhiễm nấm móng (Nagelpilz):</strong> Nếu móng khách có dấu hiệu đổi màu, dày sừng bất thường hoặc nghi ngờ nấm móng (<em>Nagelpilz</em>), kỹ thuật viên tại Đức không được tự ý đắp móng đè lên (<em>aus Hygienegründen nicht modellieren</em>), mà cần trao đổi khéo léo, lịch sự và khuyên khách thăm khám bác sĩ da liễu để đảm bảo an toàn vệ sinh cho cả khách hàng lẫn tiệm.",
+          ],
+        },
+        en: {
+          pageTitle:
+            "Fachdeutsch — Nail Care & Manicure (Nagelstudio & Maniküre) | VietDe Hub",
+          backHomeText: "Home",
+          brandTitle: "Nail & Manicure",
+          nav_vocab_desktop: "1. Vocabulary",
+          nav_phrases_desktop: "2. Salon Phrases",
+          nav_dialogues_desktop: "3. Dialogues",
+          nav_flashcards_desktop: "4. Flashcards",
+          nav_vocab_mobile: "Vocab",
+          nav_phrases_mobile: "Phrases",
+          nav_dialogues_mobile: "Dialogues",
+          nav_flashcards_mobile: "Cards",
+          voiceSettingsTitle: "Voice & Playback Speed",
+          selectVoiceLabel: "Default AI Voice (4 Voices)",
+          previewVoiceBtn: "Preview Voice",
+          stopPreviewBtn: "Stop Preview",
+          speedLabel: "Playback Speed",
+          speedSlow: "Slow 0.75x",
+          speedNormal: "Normal 1.0x",
+          speedFast: "Fast 1.25x",
+          searchPlaceholder: "Search German words, English meanings...",
+          cat_all: "All",
+          cat_1_1: "1.1 Anatomy, Services & Shapes",
+          cat_1_2: "1.2 Tools, Drill & Supplies",
+          cat_1_3: "1.3 Process, Hygiene & Safety",
+          cat_1_4: "1.4 Client Consult & Bookings",
+          cat_1_5: "1.5 Nail Verbs & Adjectives",
+          relatedPrefix: "Related words:",
+          noResults: "No matching vocabulary found.",
+          pcat_all: "All Phrases",
+          pcat_2_1: "2.1 Greeting & Service Consult",
+          pcat_2_2: "2.2 At the Nail Table",
+          pcat_2_3: "2.3 Salon Hygiene & Safety",
+          pcat_2_4: "2.4 Bookings, Checkout & Farewell",
+          workerVoiceLabel: "Nail Technician Voice (Duc)",
+          partnerVoiceLabel: "Client / Colleague Voice",
+          playFullDialogue: "Play Full Dialogue",
+          stopFullDialogue: "Stop Dialogue",
+          fcAllCategories: "All Categories",
+          fcShuffle: "Shuffle",
+          fcPrev: "Previous",
+          fcNext: "Next",
+          fcFrontHint: "Tap card to reveal meaning & example",
+          fcBackHint: "Tap card to flip back",
+          fcWordBtn: "Speak Word",
+          fcExBtn: "Speak Example",
+          fcMastered: "Mastered",
+          fcMarkMastered: "Mark as Mastered",
+          fcShortcutHint:
+            "Shortcuts: Space (Flip) • ← / → (Navigate) • S (Word) • E (Example)",
+          fallbackNotice: "Using offline Piper fallback voice for this line.",
+          notesHeading:
+            "Practical Nail Studio Notes in Germany (Nagelstudio & Maniküre)",
+          notes: [
+            "<strong>Occupational Safety & Dust Extraction (Staubabsaugung & BGW/TRGS):</strong> In Germany, fine filing dust (<em>Schleifstaub</em>) and nail product vapors pose respiratory and allergy risks; professional nail studios prioritize dust extraction (<em>Staubabsaugung</em>), proper ventilation (<em>lüften</em>), and disposable files (<em>Einwegfeile</em>) / strict metal instrument disinfection under BGW and TRGS standards.",
+            '<strong>Common Nail Shapes & Refills in Germany:</strong> Clients in Germany commonly refer to shapes like <em>"eckig"</em> (square), <em>"oval"</em>, <em>"mandel"</em> (almond), and <em>"Ballerina / Coffin"</em>, and <em>"Auffüllen / Refill"</em> (infills every 3–4 weeks) is widely preferred over full removal and reapplication to protect natural nails.',
+            "<strong>Hygiene Precautions for Nail Fungus (Nagelpilz):</strong> If a client's nail shows discoloration, abnormal thickening, or suspected nail fungus (<em>Nagelpilz</em>), technicians in Germany do not sculpt over it (<em>aus Hygienegründen nicht modellieren</em>), instead advising the client politely to consult a dermatologist.",
+          ],
+        },
+      };
+
+      // =========================================================================
+      // 2. COMPLETE BILINGUAL DATASET (82 VOCAB, 36 PHRASES, 6 DIALOGUES)
+      // =========================================================================
+      const VOCAB_DATA = [
+        {
+          id: 1,
+          cat: "1.1",
+          de: 'der Nagel ("-e) / die Nägel (Pl.)',
+          ipa: "/deːɐ̯ ˈnaːɡl̩/",
+          type_vi: "Danh từ (m./Pl.)",
+          type_en: "Noun (m./Pl.)",
+          vi: "Móng tay / Móng chân",
+          en: "Fingernail / toenail (nails)",
+          rel_vi:
+            "der Fingernagel (dt: móng tay), der Fußnagel (dt: móng chân)",
+          rel_en: "der Fingernagel (n: fingernail), der Fußnagel (n: toenail)",
+          ex_de:
+            "Wie lang sollen Ihre Nägel heute werden, kurz, mittellang oder lang?",
+          ex_vi:
+            "Hôm nay móng của chị muốn để độ dài như thế nào ạ — ngắn, vừa hay dài?",
+          ex_en: "How long should your nails be today—short, medium, or long?",
+        },
+        {
+          id: 2,
+          cat: "1.1",
+          de: "die Nagelplatte (-n)",
+          ipa: "/diː ˈnaːɡl̩ˌplatə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bản móng (bề mặt móng tự nhiên)",
+          en: "Nail plate (natural nail surface)",
+          rel_vi: "anrauen (đt: nhám nhẹ bề mặt móng tự nhiên)",
+          rel_en: "anrauen (v: to lightly buff/roughen natural nail surface)",
+          ex_de:
+            "Wir rauen die Nagelplatte nur ganz sanft an, damit der Nagel dünn und gesund bleibt.",
+          ex_vi:
+            "Chúng tôi chỉ nhám nhẹ bề mặt bản móng để móng giữ được độ mỏng và khỏe.",
+          ex_en:
+            "We lightly buff the nail plate only very gently so the nail stays thin and healthy.",
+        },
+        {
+          id: 3,
+          cat: "1.1",
+          de: "die Nagelhaut / die Schuppenschicht",
+          ipa: "/diː ˈnaːɡl̩ˌhaʊt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Da quanh móng / Biểu bì chân móng",
+          en: "Cuticle / skin around the nail",
+          rel_vi:
+            "zurückschieben (đt: đẩy da quanh móng), entfernen (đt: loại bỏ da chết)",
+          rel_en:
+            "zurückschieben (v: to push back cuticle), entfernen (v: to remove dead skin)",
+          ex_de:
+            "Ich schiebe zuerst vorsichtig die Nagelhaut zurück und entferne abgestorbene Haut.",
+          ex_vi:
+            "Trước tiên em đẩy nhẹ da quanh móng và loại bỏ phần da chết ạ.",
+          ex_en: "First I gently push back the cuticle and remove dead skin.",
+        },
+        {
+          id: 4,
+          cat: "1.1",
+          de: "das Nagelbett (-en)",
+          ipa: "/das ˈnaːɡl̩ˌbɛt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Phần thịt nền móng bên dưới bản móng",
+          en: "Nail bed",
+          rel_vi: "verletzen (đt: làm tổn thương)",
+          rel_en: "verletzen (v: to injure/damage)",
+          ex_de:
+            "Beim Feilen achten wir darauf, das Nagelbett nicht zu verletzen.",
+          ex_vi: "Khi giũa chúng tôi chú ý không làm tổn thương nền móng.",
+          ex_en: "When filing, we make sure not to injure the nail bed.",
+        },
+        {
+          id: 5,
+          cat: "1.1",
+          de: "die Maniküre (-n)",
+          ipa: "/diː maniˈkyːʁə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dịch vụ chăm sóc & làm đẹp móng tay",
+          en: "Manicure / hand & nail care",
+          rel_vi: "die Handpflege (dt: chăm sóc da tay)",
+          rel_en: "die Handpflege (n: hand care)",
+          ex_de:
+            "Möchten Sie heute eine klassische Maniküre oder eine Maniküre mit Gel?",
+          ex_vi: "Hôm nay chị muốn làm Maniküre cơ bản hay Maniküre phủ Gel ạ?",
+          ex_en: "Would you like a classic manicure or a gel manicure today?",
+        },
+        {
+          id: 6,
+          cat: "1.1",
+          de: "die Pediküre (-n) / die Fußpflege",
+          ipa: "/diː pediˈkyːʁə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dịch vụ chăm sóc móng chân & bàn chân",
+          en: "Pedicure / foot care",
+          rel_vi:
+            "die Hornhaut (dt: vết chai gót/bàn chân), das Fußbad (dt: ngâm chân)",
+          rel_en: "die Hornhaut (n: callus), das Fußbad (n: foot soak/bath)",
+          ex_de:
+            "Bei der Pediküre entfernen wir auch schonend die Hornhaut an den Füßen.",
+          ex_vi:
+            "Khi làm Pediküre chúng tôi cũng loại bỏ nhẹ nhàng phần da chai ở chân.",
+          ex_en:
+            "During the pedicure, we also gently remove calluses on the feet.",
+        },
+        {
+          id: 7,
+          cat: "1.1",
+          de: "die Nagelmodellage (-n)",
+          ipa: "/diː ˈnaːɡl̩modəˌlaːʒə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kỹ thuật đắp/tạo phom móng bằng gel hoặc bột Acryl",
+          en: "Nail sculpting / gel or acrylic nail modeling",
+          rel_vi: "das Auffüllen / der Refill (dt: dặm lại phần móng mọc dài)",
+          rel_en: "das Auffüllen / der Refill (n/m: nail refill/infills)",
+          ex_de:
+            "Nach drei bis vier Wochen kommen Sie zum Auffüllen wieder ins Studio.",
+          ex_vi:
+            "Sau 3 đến 4 tuần chị quay lại tiệm để dặm phần móng mọc dài nhé.",
+          ex_en:
+            "After three to four weeks, come back to the studio for a refill.",
+        },
+        {
+          id: 8,
+          cat: "1.1",
+          de: "das Auffüllen / der Refill (-s)",
+          ipa: "/das ˈaʊfˌfʏlən/",
+          type_vi: "Danh từ (n./m.)",
+          type_en: "Noun (n./m.)",
+          vi: "Dặm móng / Làm lại phần chân móng mọc dài (thường sau 3–4 tuần)",
+          en: "Nail refill / infill (rebalancing grown-out base)",
+          rel_vi:
+            "auffüllen (đt: dặm móng), der Ansatz (dt: phần chân móng mới mọc)",
+          rel_en:
+            "auffüllen (v: to refill/infill), der Ansatz (n: regrown base/root area)",
+          ex_de:
+            "Heute machen wir einen Refill und gleichen den herausgewachsenen Ansatz aus.",
+          ex_vi:
+            "Hôm nay chúng ta làm Refill và cân chỉnh lại phần chân móng đã mọc dài.",
+          ex_en:
+            "Today we're doing a refill and evening out the grown-out base.",
+        },
+        {
+          id: 9,
+          cat: "1.1",
+          de: "die Nagelverlängerung (-en)",
+          ipa: "/diː ˈnaːɡl̩fɛɐ̯ˌlɛŋəʁʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Nối dài móng (bằng phom giấy Schablone hoặc móng giả Tip)",
+          en: "Nail extension (with nail form or tip)",
+          rel_vi:
+            "die Schablone (dt: phom giấy nối móng), der Tip (dt: móng giả nhựa nối đầu móng)",
+          rel_en:
+            "die Schablone (n: nail sculpting form), der Tip (n: nail tip)",
+          ex_de:
+            "Mit einer Schablone verlängern wir die Nägel genau auf Ihre Wunschform.",
+          ex_vi:
+            "Bằng phom giấy nối móng, chúng tôi kéo dài móng đúng theo phom chị mong muốn.",
+          ex_en:
+            "With a form, we extend the nails to your exact desired shape.",
+        },
+        {
+          id: 10,
+          cat: "1.1",
+          de: "das Gel / das Aufbaugel / das Farbgel",
+          ipa: "/das ɡeːl/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Gel làm móng / Gel đắp tạo độ dày & vòm móng / Gel màu",
+          en: "Nail gel / builder gel / color gel",
+          rel_vi:
+            "das Versiegelungsgel (dt: gel phủ bóng khóa móng), das Grundiergel (dt: gel nền liên kết)",
+          rel_en:
+            "das Versiegelungsgel (n: top/sealing gel), das Grundiergel (n: base gel)",
+          ex_de:
+            "Zum Schluss tragen wir das Versiegelungsgel auf, damit die Nägel schön glänzen.",
+          ex_vi:
+            "Cuối cùng chúng tôi phủ lớp gel bóng để móng sáng bóng đẹp mắt.",
+          ex_en:
+            "At the end, we apply the sealing gel so the nails shine nicely.",
+        },
+        {
+          id: 11,
+          cat: "1.1",
+          de: "das Acryl / das Acryl-Pulver",
+          ipa: "/das aˈkʁyːl/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Bột đắp móng Acryl",
+          en: "Acrylic / acrylic powder",
+          rel_vi: "das Liquid (dt: dung dịch lưu huỳnh pha bột Acryl)",
+          rel_en: "das Liquid (n: acrylic monomer liquid)",
+          ex_de:
+            "Acryl härtet an der Luft aus, während Gel unter der Lampe aushärtet.",
+          ex_vi:
+            "Bột Acryl khô cứng trong không khí, còn Gel thì khô cứng dưới đèn.",
+          ex_en: "Acrylic cures in the air, while gel cures under the lamp.",
+        },
+        {
+          id: 12,
+          cat: "1.1",
+          de: "der Shellac / der UV-Lack",
+          ipa: "/deːɐ̯ ʃɛˈlak/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Sơn gel / Sơn UV bền màu (thường giữ được 2–3 tuần)",
+          en: "Shellac / UV gel polish",
+          rel_vi:
+            "der Nagellack (dt: sơn móng thường), der Unterlack (dt: sơn lót Base), der Überlack (dt: sơn bóng Top)",
+          rel_en:
+            "der Nagellack (n: regular nail polish), der Unterlack (n: base coat), der Überlack (n: top coat)",
+          ex_de:
+            "Shellac hält auf natürlichen Nägeln meist zwei bis drei Wochen ohne Absplittern.",
+          ex_vi:
+            "Sơn Shellac trên móng thật thường giữ được 2 đến 3 tuần mà không bị bong tróc.",
+          ex_en:
+            "Shellac on natural nails usually lasts two to three weeks without chipping.",
+        },
+        {
+          id: 13,
+          cat: "1.1",
+          de: "die Nagelform (-en) / die Form",
+          ipa: "/diː ˈnaːɡl̩ˌfɔʁm/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dáng móng / Phom móng",
+          en: "Nail shape",
+          rel_vi:
+            "mandelförmig (tt: dáng hạnh nhân), eckig / quadratisch (tt: dáng vuông), oval (tt: dáng bầu dục)",
+          rel_en:
+            "mandelförmig (adj: almond-shaped), eckig / quadratisch (adj: square), oval (adj: oval)",
+          ex_de:
+            "Welche Nagelform gefällt Ihnen am besten — eckig, oval oder mandelförmig?",
+          ex_vi:
+            "Chị thích dáng móng nào nhất ạ — vuông, bầu dục hay hạnh nhân?",
+          ex_en: "Which nail shape do you like best—square, oval, or almond?",
+        },
+        {
+          id: 14,
+          cat: "1.1",
+          de: "die Ballerina-Form / die Coffin-Form",
+          ipa: "/diː baleˈʁiːnaˌfɔʁm/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Dáng móng Ballerina / Coffin (hai cạnh thon vào, đầu móng cắt vuông bằng)",
+          en: "Ballerina / coffin nail shape",
+          rel_vi: "die Stiletto-Form (dt: dáng móng nhọn)",
+          rel_en: "die Stiletto-Form (n: stiletto nail shape)",
+          ex_de: "Die Ballerina-Form ist aktuell sehr beliebt bei Kundinnen.",
+          ex_vi:
+            "Dáng móng Ballerina hiện đang rất được nhiều khách hàng ưa chuộng.",
+          ex_en: "The ballerina shape is currently very popular with clients.",
+        },
+        {
+          id: 15,
+          cat: "1.1",
+          de: "das French-Design / der Babyboomer",
+          ipa: "/das fʁɛntʃ diˈzaɪn/",
+          type_vi: "Danh từ (n./m.)",
+          type_en: "Noun (n./m.)",
+          vi: "Kiểu móng French đầu móng trắng / Kiểu chuyển màu loang nhẹ nhàng Babyboomer",
+          en: "French manicure design / babyboomer ombre",
+          rel_vi:
+            "das Nailart (dt: vẽ trang trí móng), der Glitzer (dt: nhũ kim tuyến)",
+          rel_en: "das Nailart (n: nail art), der Glitzer (n: glitter)",
+          ex_de: "Der Babyboomer sieht sehr natürlich und gepflegt aus.",
+          ex_vi: "Kiểu Babyboomer trông rất tự nhiên và chỉn chu.",
+          ex_en: "The babyboomer looks very natural and well-groomed.",
+        },
+        {
+          id: 16,
+          cat: "1.1",
+          de: "der Nagelpilz / die Nagelverfärbung",
+          ipa: "/deːɐ̯ ˈnaːɡl̩ˌpɪlts/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Nấm móng / Tình trạng đổi màu móng",
+          en: "Nail fungus / nail discoloration",
+          rel_vi: "gesund (tt: khỏe mạnh)",
+          rel_en: "gesund (adj: healthy)",
+          ex_de:
+            "Bei Verdacht auf Nagelpilz dürfen wir aus Hygienegründen nicht modellieren.",
+          ex_vi:
+            "Khi nghi ngờ bị nấm móng, vì lý do vệ sinh chúng tôi không thể đắp móng.",
+          ex_en:
+            "If nail fungus is suspected, we cannot sculpt/apply nails for hygiene reasons.",
+        },
+        {
+          id: 17,
+          cat: "1.1",
+          de: "der eingewachsene Nagel",
+          ipa: "/deːɐ̯ ˈaɪnɡəˌvaksn̩ə ˈnaːɡl̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Móng mọc ngược / Móng đâm vào thịt (thường gặp ở ngón chân cái)",
+          en: "Ingrown nail",
+          rel_vi: "schmerzhaft (tt: gây đau nhức)",
+          rel_en: "schmerzhaft (adj: painful)",
+          ex_de:
+            "Ein eingewachsener Fußnagel kann sehr schmerzhaft sein und drückt am Rand.",
+          ex_vi: "Móng chân mọc ngược có thể gây đau nhức và cấn ở mép móng.",
+          ex_en:
+            "An ingrown toenail can be very painful and presses along the edge.",
+        },
+        {
+          id: 18,
+          cat: "1.1",
+          de: "der Termin / die Stammkundin (-nen)",
+          ipa: "/deːɐ̯ tɛʁˈmiːn/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Lịch hẹn làm móng / Khách hàng nữ quen thuộc",
+          en: "Appointment / regular female client",
+          rel_vi:
+            "der Stammkunde (dt: khách hàng nam quen thuộc), vereinbaren (đt: đặt lịch hẹn)",
+          rel_en:
+            "der Stammkunde (n: regular male client), vereinbaren (v: to schedule/arrange)",
+          ex_de:
+            "Unsere Stammkundinnen buchen ihren Termin meist schon drei Wochen im Voraus.",
+          ex_vi: "Các khách quen của tiệm thường đặt lịch trước tới ba tuần.",
+          ex_en:
+            "Our regular clients usually book their appointment three weeks in advance.",
+        },
+        {
+          id: 19,
+          cat: "1.2",
+          de: "die Nagelfeile (-n) / der Buffer (-)",
+          ipa: "/diː ˈnaːɡl̩ˌfaɪlə/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Giũa móng tay / Khối giũa mài mịn bề mặt móng",
+          en: "Nail file / nail buffer block",
+          rel_vi:
+            "die Körnung / der Grit (dt: độ nhám của giũa, ví dụ 100/180)",
+          rel_en: "die Körnung / der Grit (n: grit/abrasiveness)",
+          ex_de:
+            "Wir nehmen eine feine Feile mit 180er Grit für den Naturnagel.",
+          ex_vi: "Chúng tôi dùng giũa mịn độ nhám 180 cho móng thật.",
+          ex_en: "We use a fine file with 180 grit for the natural nail.",
+        },
+        {
+          id: 20,
+          cat: "1.2",
+          de: "der Nagelfräser (-) / der Bit (-s)",
+          ipa: "/deːɐ̯ ˈnaːɡl̩ˌfʁeːzɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Máy mài móng điện / Đầu mũi mài gắn trên máy mài",
+          en: "Electric nail drill / drill bit",
+          rel_vi: "die Drehzahl (dt: tốc độ vòng quay của máy mài)",
+          rel_en: "die Drehzahl (n: rotation speed / RPM)",
+          ex_de:
+            "Stelle die Drehzahl am Fräser nicht zu hoch ein, damit keine Hitze entsteht.",
+          ex_vi:
+            "Không chỉnh tốc độ vòng quay trên máy mài quá cao để không sinh nhiệt nóng.",
+          ex_en:
+            "Don't set the speed on the nail drill too high so heat doesn't build up.",
+        },
+        {
+          id: 21,
+          cat: "1.2",
+          de: "der Nagelhautschieber / der Rosenholzstab",
+          ipa: "/deːɐ̯ ˈnaːɡl̩haʊtˌʃiːbɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Cây đẩy da quanh móng / Que gỗ đẩy da chết & vệ sinh dưới móng",
+          en: "Cuticle pusher / orangewood stick",
+          rel_vi: "zurückschieben (đt: đẩy ngược da)",
+          rel_en: "zurückschieben (v: to push back)",
+          ex_de:
+            "Mit dem Rosenholzstab schiebe ich die Nagelhaut sanft zurück.",
+          ex_vi: "Bằng que gỗ em đẩy nhẹ phần da quanh móng lùi lại.",
+          ex_en: "With the orangewood stick, I gently push back the cuticle.",
+        },
+        {
+          id: 22,
+          cat: "1.2",
+          de: "die Nagelhautzange (-n) / die Nagelschere (-n)",
+          ipa: "/diː ˈnaːɡl̩haʊtˌtsaŋə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kìm cắt da quanh móng / Kéo cắt móng",
+          en: "Cuticle nippers / nail scissors",
+          rel_vi: "schneiden (đt: cắt)",
+          rel_en: "schneiden (v: to cut/trim)",
+          ex_de:
+            "Mit der scharfen Nagelhautzange schneiden wir nur die abstehenden Hautreste ab.",
+          ex_vi:
+            "Bằng kìm cắt da sắc bén chúng tôi chỉ cắt phần da thừa bong tróc.",
+          ex_en:
+            "With sharp cuticle nippers, we trim only loose skin remnants.",
+        },
+        {
+          id: 23,
+          cat: "1.2",
+          de: "der Nagelknipser (-)",
+          ipa: "/deːɐ̯ ˈnaːɡl̩ˌknɪpsɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bấm móng tay / bấm móng chân",
+          en: "Nail clipper",
+          rel_vi: "kürzen (đt: cắt ngắn)",
+          rel_en: "kürzen (v: to shorten/trim)",
+          ex_de: "Zuerst kürzen wir die Nägel auf die gewünschte Länge.",
+          ex_vi: "Đầu tiên chúng tôi cắt ngắn móng tới độ dài mong muốn.",
+          ex_en: "First we trim the nails to the desired length.",
+        },
+        {
+          id: 24,
+          cat: "1.2",
+          de: "die UV/LED-Lampe (-n)",
+          ipa: "/diː uːfaʊ lɛt ˈlampə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Đèn chiếu tia UV/LED làm đông cứng gel hoặc sơn gel",
+          en: "UV/LED curing lamp",
+          rel_vi:
+            "aushärten (đt: chiếu đèn làm khô cứng), der Timer (dt: bộ đếm thời gian 60s/90s)",
+          rel_en: "aushärten (v: to cure), der Timer (n: timer)",
+          ex_de:
+            "Bitte legen Sie die Hand für sechzig Sekunden in die UV/LED-Lampe.",
+          ex_vi: "Chị vui lòng đặt tay vào đèn UV/LED trong 60 giây nhé.",
+          ex_en: "Please place your hand in the UV/LED lamp for sixty seconds.",
+        },
+        {
+          id: 25,
+          cat: "1.2",
+          de: "die Staubabsaugung / der Nagelstaub",
+          ipa: "/diː ˈʃtaʊpʔapˌzaʊɡʊŋ/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Hệ thống hút bụi móng trên bàn làm việc / Bụi mài móng",
+          en: "Dust extraction system / nail dust",
+          rel_vi: "der Staubfilter (dt: bộ lọc bụi)",
+          rel_en: "der Staubfilter (n: dust filter)",
+          ex_de:
+            "Die Staubabsaugung saugt den Feinstaub beim Feilen direkt ab.",
+          ex_vi: "Hệ thống hút bụi hút sạch bụi mịn ngay khi giũa móng.",
+          ex_en:
+            "The dust extraction system draws away fine dust right while filing.",
+        },
+        {
+          id: 26,
+          cat: "1.2",
+          de: "der Pinsel (-) / der Nailart-Pinsel (-)",
+          ipa: "/deːɐ̯ ˈpɪnzl̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Cọ đắp gel/bột / Cọ vẽ trang trí móng nét mảnh",
+          en: "Nail brush / fine nail art brush",
+          rel_vi:
+            "der Gelpinsel (dt: cọ đắp gel), auswaschen (đt: rửa sạch cọ)",
+          rel_en:
+            "der Gelpinsel (n: gel brush), auswaschen (v: to wash out brush)",
+          ex_de:
+            "Reinige den Pinsel nach dem Arbeiten immer gründlich mit Pinselreiniger.",
+          ex_vi: "Sau khi làm xong luôn rửa sạch cọ kỹ bằng dung dịch rửa cọ.",
+          ex_en:
+            "Always clean the brush thoroughly with brush cleaner after working.",
+        },
+        {
+          id: 27,
+          cat: "1.2",
+          de: "der Cleaner / das Nagelöl",
+          ipa: "/deːɐ̯ ˈkliːnɐ/",
+          type_vi: "Danh từ (m./n.)",
+          type_en: "Noun (m./n.)",
+          vi: "Dung dịch lau lớp dính (Schwitzschicht) & vệ sinh bề mặt móng / Dầu dưỡng móng",
+          en: "Nail cleanser (inhibition-layer wipe) / cuticle & nail oil",
+          rel_vi:
+            "die Schwitzschicht (dt: lớp màng dính sau khi hơ đèn gel), das Nagelhautöl (dt: dầu dưỡng da quanh móng)",
+          rel_en:
+            "die Schwitzschicht (n: sticky inhibition layer), das Nagelhautöl (n: cuticle oil)",
+          ex_de:
+            "Zum Schluss massieren wir noch ein paar Tropfen pflegendes Nagelöl ein.",
+          ex_vi: "Cuối cùng chúng tôi massage thêm vài giọt dầu dưỡng móng.",
+          ex_en:
+            "At the end, we massage in a few drops of nourishing nail oil.",
+        },
+        {
+          id: 28,
+          cat: "1.2",
+          de: "der Primer / der Dehydrator",
+          ipa: "/deːɐ̯ ˈpʁaɪmɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Nước liên kết / Nước khử dầu & làm khô tạm thời bề mặt móng",
+          en: "Nail primer / nail dehydrator",
+          rel_vi: "die Haftung (dt: độ bám dính)",
+          rel_en: "die Haftung (n: adhesion)",
+          ex_de: "Dehydrator und Primer sorgen für eine gute Haftung des Gels.",
+          ex_vi: "Dehydrator và Primer giúp lớp gel bám dính chắc chắn.",
+          ex_en: "Dehydrator and primer ensure good adhesion of the gel.",
+        },
+        {
+          id: 29,
+          cat: "1.2",
+          de: "die Zellette (-n) / das Pad (-s)",
+          ipa: "/diː tsɛˈlɛtə/",
+          type_vi: "Danh từ (f./n.)",
+          type_en: "Noun (f./n.)",
+          vi: "Miếng gạc không xơ lau móng (dùng với Cleaner hoặc Acetone)",
+          en: "Lint-free nail wipe / pad",
+          rel_vi: "fusselfrei (tt: không xơ bông)",
+          rel_en: "fusselfrei (adj: lint-free)",
+          ex_de:
+            "Wische die Schwitzschicht mit einer fusselfreien Zellette und Cleaner ab.",
+          ex_vi:
+            "Lau lớp màng dính bằng miếng gạc không xơ và dung dịch Cleaner.",
+          ex_en:
+            "Wipe off the sticky layer with a lint-free wipe and cleanser.",
+        },
+        {
+          id: 30,
+          cat: "1.2",
+          de: "das Aceton / der Nagellackentferner",
+          ipa: "/das aˈtseːtoːn/",
+          type_vi: "Danh từ (n./m.)",
+          type_en: "Noun (n./m.)",
+          vi: "Dung dịch Aceton tẩy móng / Nước tẩy sơn móng",
+          en: "Acetone / nail polish remover",
+          rel_vi: "ablösen (đt: làm bong/tẩy sạch)",
+          rel_en: "ablösen (v: to soak off / dissolve)",
+          ex_de: "Mit Aceton lösen wir Gel oder Shellac schonend ab.",
+          ex_vi:
+            "Bằng Aceton chúng tôi tẩy lớp gel hoặc Shellac một cách nhẹ nhàng.",
+          ex_en: "With acetone, we soak off gel or shellac gently.",
+        },
+        {
+          id: 31,
+          cat: "1.2",
+          de: "die Schablone (-n) / der Tip (-s)",
+          ipa: "/diː ʃaˈbloːnə/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Phom giấy nối dài móng / Móng giả Tip",
+          en: "Nail form / nail tip",
+          rel_vi: "ankleben (đt: dán Tip), anlegen (đt: đặt phom)",
+          rel_en:
+            "ankleben (v: to glue on tip), anlegen (v: to fit/apply form)",
+          ex_de:
+            "Wir setzen die Schablone passgenau unter den freien Nagelrand an.",
+          ex_vi: "Chúng tôi đặt phom nối vừa khít bên dưới mép đầu móng.",
+          ex_en: "We fit the nail form snugly under the free nail edge.",
+        },
+        {
+          id: 32,
+          cat: "1.2",
+          de: "der Nagelkleber (-)",
+          ipa: "/deːɐ̯ ˈnaːɡl̩ˌkleːbɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Keo dán móng / Keo gắn đá trang trí",
+          en: "Nail glue / gem adhesive",
+          rel_vi: "der Strassstein (dt: đá trang trí móng)",
+          rel_en: "der Strassstein (n: rhinestone / nail gem)",
+          ex_de:
+            "Mit einem Tropfen Nagelkleber befestigen wir die kleinen Steinchen.",
+          ex_vi: "Bằng một giọt keo dán móng chúng tôi gắn các hạt đá nhỏ.",
+          ex_en: "With a drop of nail glue, we attach the small stones.",
+        },
+        {
+          id: 33,
+          cat: "1.2",
+          de: "die Armlehne (-n) / der Arbeitstisch (-e)",
+          ipa: "/diː ˈaʁmˌleːnə/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Gối kê tay cho khách / Bàn làm nail",
+          en: "Armrest cushion / nail workstation table",
+          rel_vi: "die Tischauflage (dt: tấm lót bàn làm việc)",
+          rel_en: "die Tischauflage (n: table mat/pad)",
+          ex_de: "Bitte legen Sie Ihre Hände bequem auf die Armlehne.",
+          ex_vi: "Chị vui lòng đặt tay thoải mái lên gối kê tay nhé.",
+          ex_en: "Please rest your hands comfortably on the armrest.",
+        },
+        {
+          id: 34,
+          cat: "1.2",
+          de: "der Einmalhandschuh (-e) / der Mundschutz",
+          ipa: "/deːɐ̯ ˈaɪnmaːlˌhantʃuː/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Găng tay dùng một lần / Khẩu trang bảo vệ khi mài bụi",
+          en: "Disposable glove / face mask",
+          rel_vi: "die Hygiene (dt: vệ sinh an toàn)",
+          rel_en: "die Hygiene (n: hygiene)",
+          ex_de: "Beim Feilen tragen wir Mundschutz und Einmalhandschuhe.",
+          ex_vi:
+            "Khi giũa mài chúng tôi đeo khẩu trang và găng tay dùng một lần.",
+          ex_en: "When filing, we wear a face mask and disposable gloves.",
+        },
+        {
+          id: 35,
+          cat: "1.2",
+          de: "der Desinfektionsspender (-)",
+          ipa: "/deːɐ̯ desɪnfɛkˈtsi̯oːnsˌʃpɛndɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bình nhấn dung dịch sát khuẩn tay / khử khuẩn dụng cụ",
+          en: "Disinfectant dispenser",
+          rel_vi: "desinfizieren (đt: khử khuẩn/sát khuẩn)",
+          rel_en: "desinfizieren (v: to disinfect/sanitize)",
+          ex_de: "Vor jeder Kundin desinfizieren wir Hände und Werkzeuge.",
+          ex_vi:
+            "Trước mỗi khách hàng chúng tôi sát khuẩn tay và khử khuẩn dụng cụ.",
+          ex_en: "Before every client, we sanitize hands and disinfect tools.",
+        },
+        {
+          id: 36,
+          cat: "1.2",
+          de: "die Feilenablage / der Sterilisationsbehälter",
+          ipa: "/diː ˈfaɪln̩ʔapˌlaːɡə/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Khay để giũa & dụng cụ / Hộp ngâm khử khuẩn hoặc hấp tiệt trùng dụng cụ",
+          en: "File holder / sterilization container",
+          rel_vi: "aufbereiten (đt: xử lý vệ sinh dụng cụ)",
+          rel_en: "aufbereiten (v: to reprocess/sanitize instruments)",
+          ex_de:
+            "Nach jeder Kundin kommen die Metallinstrumente in die Desinfektion.",
+          ex_vi:
+            "Sau mỗi khách hàng, các dụng cụ kim loại được đưa vào ngâm khử khuẩn.",
+          ex_en:
+            "After each client, the metal instruments go into disinfection.",
+        },
+        {
+          id: 37,
+          cat: "1.3",
+          de: "die Nagelvorbereitung",
+          ipa: "/diː ˈnaːɡl̩foːɐ̯bəˌʁaɪtʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bước chuẩn bị bề mặt móng (đẩy da, giũa phom, nhám nhẹ)",
+          en: "Nail prep (cuticle work, shaping, light buffing)",
+          rel_vi: "vorbereiten (đt: chuẩn bị)",
+          rel_en: "vorbereiten (v: to prepare)",
+          ex_de:
+            "Eine saubere Nagelvorbereitung ist entscheidend für die Haltbarkeit.",
+          ex_vi: "Khâu chuẩn bị móng sạch sẽ quyết định độ bền của bộ móng.",
+          ex_en: "Clean nail prep is crucial for durability.",
+        },
+        {
+          id: 38,
+          cat: "1.3",
+          de: "die Schwitzschicht (-en)",
+          ipa: "/diː ˈʃvɪtsˌʃɪçt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Lớp màng dính ướt trên bề mặt gel/Shellac sau khi chiếu đèn",
+          en: "Inhibition layer (tacky layer after curing gel/shellac)",
+          rel_vi: "abwischen (đt: lau sạch)",
+          rel_en: "abwischen (v: to wipe off)",
+          ex_de:
+            "Die Schwitzschicht entfernen wir nach dem Aushärten mit Cleaner.",
+          ex_vi:
+            "Lớp màng dính sau khi hơ đèn được chúng tôi lau sạch bằng dung dịch Cleaner.",
+          ex_en:
+            "We remove the tacky inhibition layer with cleanser after curing.",
+        },
+        {
+          id: 39,
+          cat: "1.3",
+          de: "aushärten",
+          ipa: "/ˈaʊsˌhɛʁtn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Chiếu đèn làm đông cứng lớp gel / sơn gel",
+          en: "To cure / harden (under UV/LED lamp)",
+          rel_vi: "die Aushärtezeit (dt: thời gian chiếu đèn 60–90 giây)",
+          rel_en: "die Aushärtezeit (n: curing time)",
+          ex_de: "Das Aufbaugel muss sechzig Sekunden in der Lampe aushärten.",
+          ex_vi: "Gel đắp phải được chiếu đèn 60 giây để cứng hoàn toàn.",
+          ex_en: "The builder gel must cure in the lamp for sixty seconds.",
+        },
+        {
+          id: 40,
+          cat: "1.3",
+          de: "abfeilen / ablösen",
+          ipa: "/ˈapˌfaɪlən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Mài mỏng/tháo lớp gel cũ / Tẩy sạch lớp sơn hoặc gel",
+          en: "To file off old gel / to soak off / remove",
+          rel_vi: "abtragen (đt: mài bớt lớp phủ cũ)",
+          rel_en: "abtragen (v: to file down old coating)",
+          ex_de:
+            "Wir feilen das alte Gel vorsichtig dünn ab, ohne den Naturnagel zu beschädigen.",
+          ex_vi:
+            "Chúng tôi mài mỏng lớp gel cũ một cách cẩn thận mà không làm hư hại móng thật.",
+          ex_en:
+            "We carefully file down the old gel thin without damaging the natural nail.",
+        },
+        {
+          id: 41,
+          cat: "1.3",
+          de: "in Form feilen",
+          ipa: "/ɪn fɔʁm ˈfaɪlən/",
+          type_vi: "Cụm động từ",
+          type_en: "Verb phrase",
+          vi: "Giũa tạo dáng móng đều và cân đối",
+          en: "To file into shape",
+          rel_vi: "feilen (đt: giũa móng)",
+          rel_en: "feilen (v: to file)",
+          ex_de: "Ich feile die Nägel jetzt in eine gleichmäßige Mandelform.",
+          ex_vi: "Bây giờ em giũa móng thành dáng hạnh nhân đều nhau ạ.",
+          ex_en: "I'm filing the nails into a uniform almond shape now.",
+        },
+        {
+          id: 42,
+          cat: "1.3",
+          de: "lackieren",
+          ipa: "/laˈkiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Sơn móng / Phủ màu hoặc phủ bóng",
+          en: "To polish / paint nails",
+          rel_vi: "der Lack (dt: nước sơn)",
+          rel_en: "der Lack (n: polish/lacquer)",
+          ex_de: "Soll ich die Nägel zweimal mit diesem Farbton lackieren?",
+          ex_vi: "Em sơn hai lớp với tông màu này chị nhé?",
+          ex_en: "Should I apply two coats with this shade?",
+        },
+        {
+          id: 43,
+          cat: "1.3",
+          de: "pflegen / massieren",
+          ipa: "/ˈpfleːɡn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Chăm sóc dưỡng móng & da / Massage tay hoặc chân cho khách",
+          en: "To care/nourish / to massage hands or feet",
+          rel_vi:
+            "die Handmassage (dt: massage tay), die Fußmassage (dt: massage chân)",
+          rel_en:
+            "die Handmassage (n: hand massage), die Fußmassage (n: foot massage)",
+          ex_de:
+            "Zum Abschluss gibt es noch eine entspannende Handmassage mit Nagelöl.",
+          ex_vi:
+            "Cuối cùng sẽ là một bài massage tay thư giãn kèm dầu dưỡng móng.",
+          ex_en: "To finish, there's a relaxing hand massage with nail oil.",
+        },
+        {
+          id: 44,
+          cat: "1.3",
+          de: "die Flächendesinfektion",
+          ipa: "/diː ˈflɛçn̩desɪnfɛkˌtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Lau khử khuẩn mặt bàn, gối kê tay và ghế ngồi giữa các ca khách",
+          en: "Surface disinfection",
+          rel_vi: "abwischen (đt: lau sạch)",
+          rel_en: "abwischen (v: to wipe off)",
+          ex_de:
+            "Nach jeder Kundin machen wir eine Flächendesinfektion am Arbeitstisch.",
+          ex_vi: "Sau mỗi khách hàng chúng tôi lau khử khuẩn mặt bàn làm việc.",
+          ex_en:
+            "After each client, we perform surface disinfection on the worktable.",
+        },
+        {
+          id: 45,
+          cat: "1.3",
+          de: "die Instrumentendesinfektion",
+          ipa: "/diː ɪnstʁuˈmɛntn̩desɪnfɛkˌtsi̯oːn/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Ngâm & khử khuẩn dụng cụ kim loại (kìm cắt da, đầu mài)",
+          en: "Instrument disinfection",
+          rel_vi: "das Desinfektionsbad (dt: bể dung dịch khử khuẩn)",
+          rel_en: "das Desinfektionsbad (n: disinfection bath)",
+          ex_de:
+            "Alle wiederverwendbaren Metallteile kommen in die Instrumentendesinfektion.",
+          ex_vi: "Tất cả dụng cụ kim loại dùng lại đều được đưa vào khử khuẩn.",
+          ex_en: "All reusable metal parts go into instrument disinfection.",
+        },
+        {
+          id: 46,
+          cat: "1.3",
+          de: "der Einwegartikel (-) / die Einwegfeile (-n)",
+          ipa: "/deːɐ̯ ˈaɪnveːkʔaʁˌtiːkl̩/",
+          type_vi: "Danh từ (m./f.)",
+          type_en: "Noun (m./f.)",
+          vi: "Vật tư dùng một lần / Giũa móng dùng một lần",
+          en: "Disposable item / disposable nail file",
+          rel_vi: "entsorgen (đt: vứt bỏ sau khi dùng)",
+          rel_en: "entsorgen (v: to dispose of)",
+          ex_de:
+            "Nach der Kundin entsorgen wir die Einwegfeile und ziehen frische Handschuhe an.",
+          ex_vi:
+            "Sau khách hàng chúng ta bỏ giũa dùng một lần và đeo găng tay mới.",
+          ex_en:
+            "After the client, we dispose of the disposable file and put on fresh gloves.",
+        },
+        {
+          id: 47,
+          cat: "1.3",
+          de: "die Arbeitsschutzvorschriften (Pl.)",
+          ipa: "/diː ˈaʁbaɪtsʃʊtsˌfoːɐ̯ʃʁɪftn̩/",
+          type_vi: "Danh từ (Pl.)",
+          type_en: "Noun (Pl.)",
+          vi: "Các quy định bảo hộ lao động tại Đức (BGW / TRGS)",
+          en: "Occupational safety regulations in Germany (BGW / TRGS)",
+          rel_vi: "der Arbeitsschutz (dt: bảo hộ lao động)",
+          rel_en: "der Arbeitsschutz (n: occupational safety)",
+          ex_de:
+            "Im Nagelstudio gelten klare Arbeitsschutzvorschriften für Staub und Chemie.",
+          ex_vi:
+            "Trong tiệm nail áp dụng rõ ràng các quy định bảo hộ về bụi mịn và hóa chất.",
+          ex_en:
+            "Clear occupational safety rules apply in the nail studio regarding dust and chemicals.",
+        },
+        {
+          id: 48,
+          cat: "1.3",
+          de: "die Gefahrstoffverordnung (GefStoffV)",
+          ipa: "/diː ɡəˈfaːɐ̯ʃtɔffɛɐ̯ˌʔɔʁdnʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Quy định về chất nguy hiểm / hóa chất tại Đức",
+          en: "Hazardous Substances Ordinance (GefStoffV)",
+          rel_vi:
+            "das Sicherheitsdatenblatt (dt: bảng dữ liệu an toàn hóa chất SDB)",
+          rel_en: "das Sicherheitsdatenblatt (n: safety data sheet SDS)",
+          ex_de:
+            "Für alle Reiniger und Gele halten wir die Sicherheitsdatenblätter bereit.",
+          ex_vi:
+            "Đối với mọi dung dịch vệ sinh và gel chúng tôi luôn lưu sẵn bảng an toàn hóa chất.",
+          ex_en:
+            "We keep the safety data sheets on hand for all cleaners and gels.",
+        },
+        {
+          id: 49,
+          cat: "1.3",
+          de: "der Feinstaub / der Schleifstaub",
+          ipa: "/deːɐ̯ ˈfaɪnˌʃtaʊp/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Bụi siêu mịn / Bụi mài móng",
+          en: "Fine dust / filing & sanding dust",
+          rel_vi: "einatmen (đt: hít phải)",
+          rel_en: "einatmen (v: to inhale)",
+          ex_de:
+            "Schleifstaub sollte man möglichst nicht einatmen, deshalb läuft die Absaugung.",
+          ex_vi:
+            "Bụi mài móng không nên hít phải, vì vậy hệ thống hút bụi luôn bật.",
+          ex_en:
+            "Filing dust shouldn't be inhaled if possible, so the extractor runs.",
+        },
+        {
+          id: 50,
+          cat: "1.3",
+          de: "die Hautreizung / die Allergie (-n)",
+          ipa: "/diː ˈhaʊtˌʁaɪtsʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kích ứng da / Dị ứng (ví dụ dị ứng methacrylate/gel)",
+          en: "Skin irritation / allergy",
+          rel_vi: "empfindlich (tt: nhạy cảm)",
+          rel_en: "empfindlich (adj: sensitive)",
+          ex_de:
+            "Manchmal entsteht durch Kontakt mit Gel eine Hautreizung oder Allergie.",
+          ex_vi: "Đôi khi tiếp xúc với gel có thể gây kích ứng da hoặc dị ứng.",
+          ex_en:
+            "Sometimes contact with gel causes skin irritation or an allergy.",
+        },
+        {
+          id: 51,
+          cat: "1.3",
+          de: "die Kasse / der Barverkauf",
+          ipa: "/diː ˈkasə/",
+          type_vi: "Danh từ (f./m.)",
+          type_en: "Noun (f./m.)",
+          vi: "Quầy tính tiền / Thanh toán trực tiếp tại tiệm",
+          en: "Cash register / checkout counter",
+          rel_vi: "bezahlen (đt: thanh toán)",
+          rel_en: "bezahlen (v: to pay)",
+          ex_de: "Sie können an der Kasse bar oder mit Karte bezahlen.",
+          ex_vi:
+            "Chị có thể thanh toán tại quầy bằng tiền mặt hoặc bằng thẻ ạ.",
+          ex_en: "You can pay at the register in cash or by card.",
+        },
+        {
+          id: 52,
+          cat: "1.3",
+          de: "der Gutschein (-e)",
+          ipa: "/deːɐ̯ ˈɡuːtˌʃaɪn/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Phiếu quà tặng dịch vụ làm móng",
+          en: "Gift voucher / gift certificate",
+          rel_vi: "einlösen (đt: sử dụng phiếu quà tặng)",
+          rel_en: "einlösen (v: to redeem a voucher)",
+          ex_de: "Möchten Sie einen Gutschein zum Verschenken mitnehmen?",
+          ex_vi:
+            "Chị có muốn mua một phiếu quà tặng để tặng người thân không ạ?",
+          ex_en: "Would you like to take a gift voucher to give as a present?",
+        },
+        {
+          id: 53,
+          cat: "1.4",
+          de: "das Nagelstudio (-s)",
+          ipa: "/das ˈnaːɡl̩ˌʃtuːdi̯o/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Tiệm làm móng / Nail studio",
+          en: "Nail studio / nail salon",
+          rel_vi: "das Kosmetikstudio (dt: viện chăm sóc da & thẩm mỹ)",
+          rel_en: "das Kosmetikstudio (n: beauty/cosmetics studio)",
+          ex_de: "Herzlich willkommen in unserem Nagelstudio!",
+          ex_vi: "Chào mừng chị đến với tiệm làm móng của chúng tôi ạ!",
+          ex_en: "Welcome to our nail studio!",
+        },
+        {
+          id: 54,
+          cat: "1.4",
+          de: "die Kundenberatung",
+          ipa: "/diː ˈkʊndn̩bəˌʁaːtʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Tư vấn kiểu dáng, độ dài và phương pháp làm móng cho khách",
+          en: "Client consultation",
+          rel_vi: "beraten (đt: tư vấn)",
+          rel_en: "beraten (v: to advise/consult)",
+          ex_de:
+            "Eine gute Kundenberatung hilft, den passenden Look für die Kundin zu finden.",
+          ex_vi: "Tư vấn tốt giúp khách hàng tìm được kiểu dáng phù hợp nhất.",
+          ex_en:
+            "Good client consultation helps find the right look for the client.",
+        },
+        {
+          id: 55,
+          cat: "1.4",
+          de: "die Farbkarte (-n) / die Farbpalette (-n)",
+          ipa: "/diː ˈfaʁpˌkaʁtə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Bảng màu mẫu / Bảng tông màu sơn gel",
+          en: "Shade chart / color palette",
+          rel_vi:
+            "der Farbton (dt: sắc độ màu), das Nude (dt: tông màu da Nude)",
+          rel_en: "der Farbton (n: shade/tone), das Nude (n: nude tone)",
+          ex_de: "Suchen Sie sich gerne eine Farbe von unserer Farbkarte aus.",
+          ex_vi: "Chị cứ thoải mái chọn màu từ bảng màu mẫu của tiệm nhé.",
+          ex_en: "Feel free to pick a color from our shade chart.",
+        },
+        {
+          id: 56,
+          cat: "1.4",
+          de: 'der Naturnagel ("-er)',
+          ipa: "/deːɐ̯ ˈnaːtuːɐ̯ˌnaːɡl̩/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Móng tự nhiên / Móng thật",
+          en: "Natural nail",
+          rel_vi: "schonend (tt: giữ gìn nhẹ nhàng)",
+          rel_en: "schonend (adj: gentle)",
+          ex_de:
+            "Wir arbeiten sehr schonend, damit Ihr Naturnagel gesund bleibt.",
+          ex_vi: "Chúng tôi làm nhẹ nhàng để móng thật của chị luôn khỏe đẹp.",
+          ex_en: "We work very gently so your natural nail stays healthy.",
+        },
+        {
+          id: 57,
+          cat: "1.4",
+          de: "die Nagellänge (-n)",
+          ipa: "/diː ˈnaːɡl̩ˌlɛŋə/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Độ dài của móng",
+          en: "Nail length",
+          rel_vi: "kürzen (đt: cắt ngắn), feilen (đt: giũa)",
+          rel_en: "kürzen (v: to shorten), feilen (v: to file)",
+          ex_de: "Soll ich die Nägel etwas kürzen oder nur in Form feilen?",
+          ex_vi: "Em cắt ngắn móng một chút hay chỉ giũa tạo phom thôi ạ?",
+          ex_en:
+            "Should I shorten the nails a bit or just file them into shape?",
+        },
+        {
+          id: 58,
+          cat: "1.4",
+          de: "die Terminvereinbarung (-en)",
+          ipa: "/diː tɛʁˈmiːnfɛɐ̯ʔaɪnˌbaːʁʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Việc đặt lịch hẹn làm móng",
+          en: "Appointment booking / scheduling",
+          rel_vi: "der Wunschtermin (dt: khung giờ khách mong muốn)",
+          rel_en: "der Wunschtermin (n: preferred appointment time)",
+          ex_de: "Wann passt Ihnen Ihr nächster Termin am besten?",
+          ex_vi:
+            "Lịch hẹn tiếp theo thì khung giờ nào thuận tiện cho chị nhất ạ?",
+          ex_en: "When is your next appointment most convenient for you?",
+        },
+        {
+          id: 59,
+          cat: "1.4",
+          de: "die Absage (-n) / verschieben",
+          ipa: "/diː ˈapˌzaːɡə/",
+          type_vi: "Danh từ (f.) / Động từ",
+          type_en: "Noun (f.) / Verb",
+          vi: "Việc báo hủy lịch hẹn / Dời lịch hẹn sang ngày/giờ khác",
+          en: "Appointment cancellation / to reschedule",
+          rel_vi: "rechtzeitig (tt/trạng từ: báo sớm đúng hạn)",
+          rel_en: "rechtzeitig (adv/adj: in good time / promptly)",
+          ex_de:
+            "Bitte sagen Sie den Termin rechtzeitig ab, falls etwas dazwischenkommt.",
+          ex_vi:
+            "Nếu có việc đột xuất chị vui lòng báo hủy lịch sớm giúp tiệm nhé.",
+          ex_en:
+            "Please cancel the appointment in good time if something comes up.",
+        },
+        {
+          id: 60,
+          cat: "1.4",
+          de: 'der Wunsch ("-e) / der Sonderwunsch',
+          ipa: "/deːɐ̯ vʊnʃ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Mong muốn / Yêu cầu riêng của khách hàng",
+          en: "Wish / special request",
+          rel_vi: "erfüllen (đt: đáp ứng yêu cầu)",
+          rel_en: "erfüllen (v: to fulfill/grant)",
+          ex_de: "Wir gehen gerne auf Ihre persönlichen Wünsche ein.",
+          ex_vi: "Chúng tôi rất sẵn lòng đáp ứng các mong muốn riêng của chị.",
+          ex_en: "We are happy to accommodate your personal wishes.",
+        },
+        {
+          id: 61,
+          cat: "1.4",
+          de: "das Design (-s) / schlicht",
+          ipa: "/diˈzaɪn/",
+          type_vi: "Danh từ (n.) / Tính từ",
+          type_en: "Noun (n.) / Adjective",
+          vi: "Kiểu thiết kế móng / Đơn giản, tinh tế",
+          en: "Design / simple & understated",
+          rel_vi: "auffällig (tt: nổi bật, cầu kỳ)",
+          rel_en: "auffällig (adj: eye-catching / bold)",
+          ex_de:
+            "Mögen Sie es lieber schlicht und dezent oder etwas auffälliger?",
+          ex_vi:
+            "Chị thích kiểu đơn giản nhẹ nhàng hay nổi bật hơn một chút ạ?",
+          ex_en:
+            "Do you prefer it simple and understated or a bit more eye-catching?",
+        },
+        {
+          id: 62,
+          cat: "1.4",
+          de: "die Haltbarkeit",
+          ipa: "/diː ˈhaltbaːɐ̯kaɪt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Độ bền giữ màu & giữ phom của bộ móng",
+          en: "Durability / longevity",
+          rel_vi: "halten (đt: giữ được bền)",
+          rel_en: "halten (v: to hold/last)",
+          ex_de: "Die Haltbarkeit hängt auch von der Pflege zu Hause ab.",
+          ex_vi: "Độ bền của móng cũng phụ thuộc vào cách chăm sóc tại nhà.",
+          ex_en: "Durability also depends on care at home.",
+        },
+        {
+          id: 63,
+          cat: "1.4",
+          de: "die Handcreme (-s)",
+          ipa: "/diː ˈhantˌkʁeːm/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Kem dưỡng da tay",
+          en: "Hand cream",
+          rel_vi: "eincremen (đt: thoa kem dưỡng)",
+          rel_en: "eincremen (v: to apply cream/lotion)",
+          ex_de: "Nach dem Händewaschen creme ich meine Hände immer gut ein.",
+          ex_vi: "Sau khi rửa tay em luôn thoa kem dưỡng kỹ cho đôi tay.",
+          ex_en: "After washing my hands, I always apply hand cream well.",
+        },
+        {
+          id: 64,
+          cat: "1.4",
+          de: "der Terminkalender (-)",
+          ipa: "/deːɐ̯ tɛʁˈmiːnkaˌlɛndɐ/",
+          type_vi: "Danh từ (m.)",
+          type_en: "Noun (m.)",
+          vi: "Sổ / lịch quản lý hẹn của tiệm",
+          en: "Appointment book / calendar",
+          rel_vi: "eintragen (đt: ghi vào lịch hẹn)",
+          rel_en: "eintragen (v: to enter/book in calendar)",
+          ex_de:
+            "Ich trage Sie gleich für nächsten Dienstag um 14 Uhr in den Kalender ein.",
+          ex_vi: "Em ghi lịch cho chị vào 14 giờ thứ Ba tuần tới ngay đây ạ.",
+          ex_en:
+            "I'll enter you in the calendar for next Tuesday at 2 PM right away.",
+        },
+        {
+          id: 65,
+          cat: "1.4",
+          de: "die Wartezeit (-en)",
+          ipa: "/diː ˈvaʁtəˌtsaɪt/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Thời gian chờ đợi",
+          en: "Waiting time",
+          rel_vi: "warten (đt: chờ đợi)",
+          rel_en: "warten (v: to wait)",
+          ex_de: "Es tut mir leid, heute haben wir zehn Minuten Wartezeit.",
+          ex_vi: "Em xin lỗi chị, hôm nay tiệm đang trễ khoảng 10 phút ạ.",
+          ex_en: "I'm sorry, today we have a ten-minute wait.",
+        },
+        {
+          id: 66,
+          cat: "1.4",
+          de: "die Begrüßung (-en)",
+          ipa: "/diː bəˈɡʁyːsʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Lời chào đón khách đến tiệm",
+          en: "Greeting / welcome",
+          rel_vi: "begrüßen (đt: chào đón)",
+          rel_en: "begrüßen (v: to greet/welcome)",
+          ex_de: "Ein freundlicher Empfang gehört bei uns immer dazu.",
+          ex_vi: "Đón tiếp thân thiện luôn là điều có ở tiệm chúng tôi.",
+          ex_en: "A friendly welcome is always part of what we do.",
+        },
+        {
+          id: 67,
+          cat: "1.4",
+          de: "das Trinkgeld",
+          ipa: "/das ˈtʁɪŋkˌɡɛlt/",
+          type_vi: "Danh từ (n.)",
+          type_en: "Noun (n.)",
+          vi: "Tiền boa cảm ơn của khách",
+          en: "Tip / gratuity",
+          rel_vi: "bedanken (đt: cảm ơn)",
+          rel_en: "bedanken (v: to thank)",
+          ex_de: "Vielen Dank für das Trinkgeld, das freut uns sehr!",
+          ex_vi: "Cảm ơn chị rất nhiều vì tiền boa, chúng em rất vui ạ!",
+          ex_en: "Many thanks for the tip; we're really pleased!",
+        },
+        {
+          id: 68,
+          cat: "1.4",
+          de: "die Weiterempfehlung (-en)",
+          ipa: "/diː ˈvaɪtɐʔɛmpfeːˌlʊŋ/",
+          type_vi: "Danh từ (f.)",
+          type_en: "Noun (f.)",
+          vi: "Sự giới thiệu khách mới từ khách cũ",
+          en: "Word-of-mouth referral",
+          rel_vi: "weiterempehlen (đt: giới thiệu cho bạn bè)",
+          rel_en: "weiterempehlen (v: to recommend to others)",
+          ex_de: "Viele neue Kundinnen kommen durch Weiterempfehlung zu uns.",
+          ex_vi: "Nhiều khách mới tìm đến tiệm nhờ được người quen giới thiệu.",
+          ex_en: "Many new clients come to us through referrals.",
+        },
+        {
+          id: 69,
+          cat: "1.5",
+          de: "feilen",
+          ipa: "/ˈfaɪlən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Giũa móng / giũa tạo phom & mài bề mặt",
+          en: "To file nails",
+          rel_vi: "abfeilen (đt: giũa bớt lớp cũ)",
+          rel_en: "abfeilen (v: to file off)",
+          ex_de:
+            "Ich feile die Kanten noch ganz weich, damit nichts hängen bleibt.",
+          ex_vi: "Em giũa các cạnh cho thật mượt để không bị vướng mắc.",
+          ex_en: "I'm filing the edges nice and soft so nothing catches.",
+        },
+        {
+          id: 70,
+          cat: "1.5",
+          de: "kürzen / verlängern",
+          ipa: "/ˈkʏʁtsn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Cắt ngắn móng / Nối dài móng",
+          en: "To shorten / to lengthen/extend",
+          rel_vi: "die Länge (dt: độ dài)",
+          rel_en: "die Länge (n: length)",
+          ex_de: "Sollen wir die Nägel ein Stück kürzen?",
+          ex_vi: "Chúng ta cắt ngắn móng đi một đoạn chị nhé?",
+          ex_en: "Should we shorten the nails a bit?",
+        },
+        {
+          id: 71,
+          cat: "1.5",
+          de: "aushärten",
+          ipa: "/ˈaʊsˌhɛʁtn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Chiếu đèn làm cứng lớp gel / sơn gel",
+          en: "To cure / harden",
+          rel_vi: "die Lampe (dt: đèn hơ)",
+          rel_en: "die Lampe (n: lamp)",
+          ex_de: "Bitte lassen Sie die Finger kurz in der Lampe aushärten.",
+          ex_vi:
+            "Chị vui lòng để ngón tay trong đèn hơ một lát để gel cứng nhé.",
+          ex_en: "Please let your fingers cure in the lamp for a moment.",
+        },
+        {
+          id: 72,
+          cat: "1.5",
+          de: "auffüllen",
+          ipa: "/ˈaʊfˌfʏlən/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Dặm lại phần chân móng mọc ra",
+          en: "To refill / infill",
+          rel_vi: "der Refill (dt: lần dặm móng)",
+          rel_en: "der Refill (n: refill)",
+          ex_de: "Nach drei Wochen ist es Zeit zum Auffüllen.",
+          ex_vi: "Sau ba tuần là đến lúc dặm lại móng rồi ạ.",
+          ex_en: "After three weeks, it's time for a refill.",
+        },
+        {
+          id: 73,
+          cat: "1.5",
+          de: "ablösen",
+          ipa: "/ˈapˌløːzn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Tẩy / tháo lớp gel hoặc sơn móng cũ",
+          en: "To remove / soak off",
+          rel_vi: "entfernen (đt: loại bỏ)",
+          rel_en: "entfernen (v: to remove)",
+          ex_de: "Wir lösen die alte Modellage schonend mit Aceton ab.",
+          ex_vi: "Chúng tôi tháo lớp móng cũ nhẹ nhàng bằng Aceton.",
+          ex_en: "We gently remove the old sculpting with acetone.",
+        },
+        {
+          id: 74,
+          cat: "1.5",
+          de: "zurückschieben",
+          ipa: "/tsuˈʁʏkˌʃiːbn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Đẩy da quanh móng về phía chân móng",
+          en: "To push back (cuticle)",
+          rel_vi: "die Nagelhaut (dt: da quanh móng)",
+          rel_en: "die Nagelhaut (n: cuticle)",
+          ex_de: "Ich schiebe die Nagelhaut vorsichtig zurück.",
+          ex_vi: "Em đẩy nhẹ phần da quanh móng lùi lại ạ.",
+          ex_en: "I'm gently pushing back the cuticle.",
+        },
+        {
+          id: 75,
+          cat: "1.5",
+          de: "desinfizieren",
+          ipa: "/desɪnfɛkˈtsiːʁən/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Khử khuẩn dụng cụ & sát khuẩn tay",
+          en: "To disinfect / sanitize",
+          rel_vi: "die Desinfektion (dt: việc khử khuẩn)",
+          rel_en: "die Desinfektion (n: disinfection)",
+          ex_de: "Zuerst desinfiziere ich meine Hände und Ihre Hände.",
+          ex_vi: "Đầu tiên em sát khuẩn tay của em và tay của chị ạ.",
+          ex_en: "First I sanitize my hands and your hands.",
+        },
+        {
+          id: 76,
+          cat: "1.5",
+          de: "auftragen",
+          ipa: "/ˈaʊfˌtʁaːɡn̩/",
+          type_vi: "Động từ (tách)",
+          type_en: "Verb (separable)",
+          vi: "Quét / đắp lớp gel, sơn hoặc dầu dưỡng lên móng",
+          en: "To apply (gel, polish, or oil)",
+          rel_vi: "dünn auftragen (quét lớp mỏng)",
+          rel_en: "dünn auftragen (to apply thinly)",
+          ex_de: "Ich trage das Farbgel in zwei dünnen Schichten auf.",
+          ex_vi: "Em quét gel màu thành hai lớp mỏng ạ.",
+          ex_en: "I'm applying the color gel in two thin coats.",
+        },
+        {
+          id: 77,
+          cat: "1.5",
+          de: "glänzen / mattieren",
+          ipa: "/ˈɡlɛntsn̩/",
+          type_vi: "Động từ",
+          type_en: "Verb",
+          vi: "Bóng sáng / Làm lì mờ bề mặt",
+          en: "To shine / to matte finish",
+          rel_vi: "glänzend (tt: bóng), matt (tt: lì mờ)",
+          rel_en: "glänzend (adj: glossy/shiny), matt (adj: matte)",
+          ex_de: "Möchten Sie ein glänzendes Finish oder lieber matt?",
+          ex_vi: "Chị muốn lớp phủ bóng hay thích dạng lì mờ ạ?",
+          ex_en: "Would you like a glossy finish or rather matte?",
+        },
+        {
+          id: 78,
+          cat: "1.5",
+          de: "schonend",
+          ipa: "/ˈʃoːnənt/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Nhẹ nhàng, bảo vệ không làm hại móng & da",
+          en: "Gentle / non-damaging",
+          rel_vi: "schonen (đt: giữ gìn nhẹ nhàng)",
+          rel_en: "schonen (v: to treat gently / spare)",
+          ex_de: "Wir arbeiten besonders schonend für den Naturnagel.",
+          ex_vi: "Chúng tôi thao tác thật nhẹ nhàng để giữ gìn cho móng thật.",
+          ex_en: "We work especially gently on the natural nail.",
+        },
+        {
+          id: 79,
+          cat: "1.5",
+          de: "gepflegt",
+          ipa: "/ɡəˈpfleːkt/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Chỉn chu, được chăm sóc gọn gàng đẹp mắt",
+          en: "Well-groomed / cared-for",
+          rel_vi: "pflegen (đt: chăm sóc)",
+          rel_en: "pflegen (v: to care for)",
+          ex_de: "Gepflegte Nägel machen immer einen guten Eindruck.",
+          ex_vi: "Bộ móng được chăm sóc chỉn chu luôn tạo ấn tượng tốt.",
+          ex_en: "Well-groomed nails always make a good impression.",
+        },
+        {
+          id: 80,
+          cat: "1.5",
+          de: "dezent / natürlich",
+          ipa: "/deˈtsɛnt/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Nhã nhặn, nhẹ nhàng / Tự nhiên",
+          en: "Subtle / natural",
+          rel_vi: "natürlich (tt: tự nhiên)",
+          rel_en: "natürlich (adj: natural)",
+          ex_de: "Ein dezentes Nude passt zu jedem Anlass.",
+          ex_vi: "Tông màu Nude nhã nhặn hợp với mọi dịp.",
+          ex_en: "A subtle nude suits any occasion.",
+        },
+        {
+          id: 81,
+          cat: "1.5",
+          de: "splitterfest / stabil",
+          ipa: "/ˈʃplɪtɐˌfɛst/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Chắc chắn, khó nứt gãy / Vững chắc",
+          en: "Chip-resistant / sturdy and stable",
+          rel_vi: "halten (đt: bền chắc)",
+          rel_en: "halten (v: to hold/last)",
+          ex_de: "Mit dem Aufbaugel sind die Nägel schön stabil.",
+          ex_vi: "Với lớp gel đắp thì móng chắc chắn và giữ phom đẹp.",
+          ex_en: "With the builder gel, the nails are nice and sturdy.",
+        },
+        {
+          id: 82,
+          cat: "1.5",
+          de: "hygienisch",
+          ipa: "/hyˈɡi̯eːnɪʃ/",
+          type_vi: "Tính từ",
+          type_en: "Adjective",
+          vi: "Đảm bảo vệ sinh an toàn",
+          en: "Hygienic",
+          rel_vi: "die Hygiene (dt: vệ sinh)",
+          rel_en: "die Hygiene (n: hygiene)",
+          ex_de:
+            "Hygienisches Arbeiten ist in unserem Studio selbstverständlich.",
+          ex_vi:
+            "Làm việc hợp vệ sinh là điều hiển nhiên tại tiệm của chúng tôi.",
+          ex_en: "Hygienic work is standard in our studio.",
+        },
+      ];
+
+      const PHRASES_DATA = [
+        {
+          id: 1,
+          cat: "2.1",
+          de: "Herzlich willkommen in unserem Nagelstudio! Haben Sie einen Termin oder möchten Sie anfragen?",
+          vi: "Chào mừng chị đến với tiệm làm móng của chúng tôi ạ! Chị đã đặt lịch hẹn trước hay muốn hỏi lịch ạ?",
+          en: "Welcome to our nail studio! Do you have an appointment or would you like to inquire?",
+        },
+        {
+          id: 2,
+          cat: "2.1",
+          de: "Was darf es heute für Sie sein — Maniküre, Pediküre oder eine Gel-Modellage?",
+          vi: "Hôm nay chị muốn làm dịch vụ gì ạ — chăm sóc móng tay, móng chân hay đắp Gel ạ?",
+          en: "What can I do for you today—a manicure, pedicure, or gel sculpting?",
+        },
+        {
+          id: 3,
+          cat: "2.1",
+          de: "Darf ich kurz Ihre Hände anschauen? Haben Sie heute einen Wunsch für die Form und Länge?",
+          vi: "Cho em xem qua tay của chị một chút nhé? Hôm nay chị có mong muốn về dáng móng và độ dài thế nào ạ?",
+          en: "May I look at your hands briefly? Do you have a preference for shape and length today?",
+        },
+        {
+          id: 4,
+          cat: "2.1",
+          de: "Welche Form gefällt Ihnen — eckig, oval, mandelförmig oder Ballerina?",
+          vi: "Chị thích dáng móng nào ạ — dáng vuông, bầu dục, hạnh nhân hay Ballerina?",
+          en: "Which shape do you like—square, oval, almond, or ballerina?",
+        },
+        {
+          id: 5,
+          cat: "2.1",
+          de: "Hier ist unsere Farbkarte. Mögen Sie es lieber schlicht in Nude oder mit Farbe?",
+          vi: "Đây là bảng màu mẫu của tiệm. Chị thích tông màu da nhã nhặn hay có màu nổi bật ạ?",
+          en: "Here is our shade chart. Do you prefer simple nude or with color?",
+        },
+        {
+          id: 6,
+          cat: "2.1",
+          de: "Sollen die Nägel glänzend versiegelt werden oder lieber matt?",
+          vi: "Chị muốn phủ bóng sáng hay phủ dạng lì mờ ạ?",
+          en: "Should the nails be sealed glossy or rather matte?",
+        },
+        {
+          id: 7,
+          cat: "2.1",
+          de: "Haben Sie an den Händen oder Füßen empfindliche Haut oder Allergien?",
+          vi: "Tay hoặc chân chị có vùng da nhạy cảm hay dị ứng gì không ạ?",
+          en: "Do you have sensitive skin or allergies on your hands or feet?",
+        },
+        {
+          id: 8,
+          cat: "2.1",
+          de: "Das dauert ungefähr eine Stunde. Möchten Sie zwischendurch einen Kaffee oder ein Wasser?",
+          vi: "Dịch vụ này mất khoảng một tiếng ạ. Trong lúc làm chị có muốn uống cà phê hay nước lọc không ạ?",
+          en: "That takes about an hour. Would you like a coffee or water in between?",
+        },
+        {
+          id: 9,
+          cat: "2.1",
+          de: "Wie gefällt Ihnen das Ergebnis bis jetzt?",
+          vi: "Chị thấy kết quả đến lúc này thế nào ạ?",
+          en: "How do you like the result so far?",
+        },
+        {
+          id: 10,
+          cat: "2.2",
+          de: "Zuerst desinfiziere ich kurz meine Hände und Ihre Hände.",
+          vi: "Đầu tiên em sát khuẩn tay của em và tay của chị một chút ạ.",
+          en: "First I'll briefly sanitize my hands and your hands.",
+        },
+        {
+          id: 11,
+          cat: "2.2",
+          de: "Ich schiebe jetzt vorsichtig die Nagelhaut zurück und entferne überschüssige Haut.",
+          vi: "Bây giờ em đẩy nhẹ phần da quanh móng và loại bỏ phần da thừa ạ.",
+          en: "Now I'm gently pushing back the cuticle and removing excess skin.",
+        },
+        {
+          id: 12,
+          cat: "2.2",
+          de: "Bitte legen Sie die Hand kurz in die Lampe, damit das Gel aushärtet.",
+          vi: "Chị vui lòng đặt tay vào đèn hơ một lát để lớp gel cứng lại nhé.",
+          en: "Please put your hand in the lamp briefly so the gel cures.",
+        },
+        {
+          id: 13,
+          cat: "2.2",
+          de: "Es kann jetzt für zwei Sekunden etwas warm werden — sagen Sie einfach Bescheid, falls es zu heiß wird.",
+          vi: "Lúc này có thể hơi ấm trong hai giây — chị cứ báo em nếu thấy nóng quá nhé.",
+          en: "It may feel a bit warm for two seconds now—just let me know if it gets too hot.",
+        },
+        {
+          id: 14,
+          cat: "2.2",
+          de: "Ich feile die Nägel jetzt in Form und glätte die Oberfläche.",
+          vi: "Bây giờ em giũa tạo dáng móng và làm mịn bề mặt ạ.",
+          en: "I'm filing the nails into shape now and smoothing the surface.",
+        },
+        {
+          id: 15,
+          cat: "2.2",
+          de: "Ich trage jetzt das Farbgel in dünnen Schichten auf.",
+          vi: "Bây giờ em quét lớp gel màu từng lớp mỏng ạ.",
+          en: "I'm applying the color gel in thin coats now.",
+        },
+        {
+          id: 16,
+          cat: "2.2",
+          de: "Zum Schluss massiere ich noch etwas Nagelöl und Handcreme ein.",
+          vi: "Cuối cùng em massage thêm một ít dầu dưỡng móng và kem dưỡng tay cho chị nhé.",
+          en: "At the end, I'll massage in a little nail oil and hand cream.",
+        },
+        {
+          id: 17,
+          cat: "2.2",
+          de: "Bitte passen Sie die ersten Minuten nach dem Lackieren noch etwas auf, bis alles gut durchgetrocknet ist.",
+          vi: "Vui lòng chú ý nhẹ trong vài phút đầu sau khi làm xong cho tới khi mọi thứ khô hẳn nhé.",
+          en: "Please be a bit careful for the first few minutes after polishing until everything is cured/dry.",
+        },
+        {
+          id: 18,
+          cat: "2.2",
+          de: "Wir machen heute einen Refill und gleichen den herausgewachsenen Nagelansatz aus.",
+          vi: "Hôm nay chúng ta làm dặm lại phần chân móng đã mọc dài nhé.",
+          en: "Today we're doing a refill and evening out the grown-out nail base.",
+        },
+        {
+          id: 19,
+          cat: "2.3",
+          de: "Ich benutze für jede Kundin eine frische Einwegfeile und desinfiziere die Metallteile.",
+          vi: "Với mỗi khách hàng em đều dùng một giũa dùng một lần mới và khử khuẩn các dụng cụ kim loại.",
+          en: "I use a fresh disposable file for each client and disinfect the metal parts.",
+        },
+        {
+          id: 20,
+          cat: "2.3",
+          de: "Bitte schalte die Staubabsaugung ein, bevor wir mit dem Fräser arbeiten.",
+          vi: "Vui lòng bật hệ thống hút bụi trước khi chúng ta dùng máy mài móng nhé.",
+          en: "Please switch on the dust extraction before we work with the nail drill.",
+        },
+        {
+          id: 21,
+          cat: "2.3",
+          de: "Nach jeder Kundin machen wir eine Flächendesinfektion am Tisch und an der Armlehne.",
+          vi: "Sau mỗi khách hàng chúng tôi lau khử khuẩn mặt bàn và gối kê tay.",
+          en: "After each client, we perform surface disinfection on the table and armrest.",
+        },
+        {
+          id: 22,
+          cat: "2.3",
+          de: "Die benutzten Metallinstrumente kommen sofort in die Desinfektion.",
+          vi: "Các dụng cụ kim loại đã dùng được cho ngay vào dung dịch khử khuẩn.",
+          en: "Used metal instruments go straight into disinfection.",
+        },
+        {
+          id: 23,
+          cat: "2.3",
+          de: "Achtung, bei diesem Nagel sehe ich eine Verfärbung — wir sollten das vorsichtig prüfen.",
+          vi: "Chú ý, ở chiếc móng này em thấy có hiện tượng đổi màu — chúng ta nên kiểm tra cẩn thận.",
+          en: "Heads up, I see discoloration on this nail—we should check that carefully.",
+        },
+        {
+          id: 24,
+          cat: "2.3",
+          de: "Bitte trage beim Feilen Mundschutz und Einmalhandschuhe zum Schutz vor Staub.",
+          vi: "Khi giũa mài vui lòng đeo khẩu trang và găng tay dùng một lần để tránh bụi nhé.",
+          en: "Please wear a face mask and disposable gloves when filing for protection against dust.",
+        },
+        {
+          id: 25,
+          cat: "2.3",
+          de: "Wir lüften zwischendurch kurz das Studio, damit immer frische Luft reinkommt.",
+          vi: "Thỉnh thoảng chúng ta mở cửa thông gió tiệm một chút để luôn có không khí trong lành.",
+          en: "We air out the studio briefly in between so fresh air always comes in.",
+        },
+        {
+          id: 26,
+          cat: "2.3",
+          de: "Alle Produkte haben ihr Sicherheitsdatenblatt im Ordner.",
+          vi: "Tất cả sản phẩm đều có bảng dữ liệu an toàn lưu trong tập hồ sơ.",
+          en: "All products have their safety data sheet in the binder.",
+        },
+        {
+          id: 27,
+          cat: "2.3",
+          de: "Nach Feierabend reinigen wir die Arbeitsplätze und leeren die Abfalleimer.",
+          vi: "Cuối ngày làm việc chúng ta vệ sinh các bàn làm việc và đổ thùng rác.",
+          en: "After work, we clean the workstations and empty the trash bins.",
+        },
+        {
+          id: 28,
+          cat: "2.4",
+          de: "Wann passt Ihnen der nächste Termin in drei Wochen — vormittags oder nachmittags?",
+          vi: "Lịch hẹn tiếp theo sau ba tuần thì khung giờ nào thuận tiện cho chị nhất — buổi sáng hay buổi chiều ạ?",
+          en: "When does your next appointment in three weeks suit you—morning or afternoon?",
+        },
+        {
+          id: 29,
+          cat: "2.4",
+          de: "Ich trage Sie gerne für Donnerstag um 15 Uhr ein. Passt das für Sie?",
+          vi: "Em ghi lịch cho chị vào 15 giờ thứ Năm nhé. Giờ đó có hợp với chị không ạ?",
+          en: "I'll gladly book you for Thursday at 3 PM. Does that suit you?",
+        },
+        {
+          id: 30,
+          cat: "2.4",
+          de: "Falls Sie den Termin verschieben müssen, sagen Sie bitte einen Tag vorher Bescheid.",
+          vi: "Nếu chị cần dời lịch hẹn, vui lòng báo trước giúp tiệm một ngày nhé.",
+          en: "If you need to reschedule the appointment, please let us know a day ahead.",
+        },
+        {
+          id: 31,
+          cat: "2.4",
+          de: "Das macht zusammen fünfundvierzig Euro. Möchten Sie bar oder mit Karte zahlen?",
+          vi: "Tổng cộng của chị hết 45 Euro ạ. Chị muốn trả tiền mặt hay bằng thẻ ạ?",
+          en: "That comes to forty-five euros in total. Would you like to pay cash or by card?",
+        },
+        {
+          id: 32,
+          cat: "2.4",
+          de: "Hier ist Ihre Quittung. Vielen Dank für Ihr Trinkgeld!",
+          vi: "Đây là biên lai của chị ạ. Cảm ơn chị rất nhiều vì tiền boa!",
+          en: "Here is your receipt. Many thanks for your tip!",
+        },
+        {
+          id: 33,
+          cat: "2.4",
+          de: "Möchten Sie vielleicht einen Gutschein für eine Freundin mitnehmen?",
+          vi: "Chị có muốn mua thêm phiếu quà tặng cho bạn bè không ạ?",
+          en: "Would you perhaps like to take a gift voucher for a friend?",
+        },
+        {
+          id: 34,
+          cat: "2.4",
+          de: "Vielen Dank für Ihren Besuch und einen schönen Tag noch!",
+          vi: "Cảm ơn chị đã đến tiệm và chúc chị một ngày tốt lành!",
+          en: "Thank you very much for your visit and have a nice day!",
+        },
+        {
+          id: 35,
+          cat: "2.4",
+          de: "Bis zum nächsten Mal — kommen Sie gut nach Hause!",
+          vi: "Hẹn gặp lại chị lần sau — chúc chị về nhà an toàn!",
+          en: "Until next time—get home safely!",
+        },
+        {
+          id: 36,
+          cat: "2.4",
+          de: "Schönen Feierabend, Kollegen! Bis morgen!",
+          vi: "Chúc mọi người tan ca vui vẻ! Hẹn gặp lại ngày mai!",
+          en: "Have a nice evening, colleagues! See you tomorrow!",
+        },
+      ];
+
+      const DIALOGUES_DATA = [
+        {
+          id: 1,
+          tab_vi: "Hội thoại 1: Đón khách & Tư vấn",
+          tab_en: "Dialogue 1: Greeting & Consult",
+          title_vi:
+            "Hội thoại 1: Đón khách mới đến tiệm & Tư vấn kiểu làm móng (Begrüßung & Beratung)",
+          title_en:
+            "Dialogue 1: Greeting a Client & Nail Styling Consultation (Begrüßung & Beratung)",
+          context_vi:
+            "Buổi chiều tại tiệm làm móng ở Đức, khách hàng (Frau Weber) bước vào và nhân viên làm móng (Đức) chào đón, tư vấn kiểu dáng và màu sắc.",
+          context_en:
+            "Afternoon in a German nail studio: client Mrs. Weber walks in and nail technician Đức greets her and consults on shape and color.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Guten Tag und herzlich willkommen in unserem Nagelstudio! Wie kann ich Ihnen helfen?",
+              vi: "Xin chào và chào mừng chị đến với tiệm làm móng của chúng tôi ạ! Em có thể giúp gì cho chị ạ?",
+              en: "Good day and welcome to our nail studio! How can I help you?",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Weber (Khách hàng)",
+              name_en: "Mrs. Weber (Client)",
+              de: "Guten Tag! Ich habe einen Termin für eine Gel-Modellage mit Verlängerung.",
+              vi: "Xin chào! Tôi có đặt lịch đắp Gel kèm nối dài móng.",
+              en: "Good day! I have an appointment for gel sculpting with extensions.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Sehr gerne, Frau Weber! Darf ich kurz Ihre Hände anschauen? Welche Nagelform und Länge stellen Sie sich vor?",
+              vi: "Vâng ạ, chị Weber! Cho em xem qua tay của chị một chút nhé? Chị hình dung dáng móng và độ dài như thế nào ạ?",
+              en: "With pleasure, Mrs. Weber! May I look at your hands briefly? What nail shape and length do you have in mind?",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Weber (Khách hàng)",
+              name_en: "Mrs. Weber (Client)",
+              de: "Ich hätte gerne eine natürliche Mandelform, nicht zu lang, und einen dezenten Nude-Ton.",
+              vi: "Tôi muốn làm dáng hạnh nhân tự nhiên, không quá dài, và tông màu Nude nhã nhặn.",
+              en: "I'd like a natural almond shape, not too long, and a subtle nude shade.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Das passt wunderbar! Ich zeige Ihnen gleich unsere Nude-Töne auf der Farbkarte und starte dann mit der Vorbereitung.",
+              vi: "Rất hợp luôn ạ! Em cho chị xem ngay các tông màu Nude trên bảng màu rồi bắt đầu bước chuẩn bị móng nhé.",
+              en: "That fits wonderfully! I'll show you our nude shades on the color chart right away and then start with prep.",
+            },
+          ],
+        },
+        {
+          id: 2,
+          tab_vi: "Hội thoại 2: Đắp Gel & Hơ đèn",
+          tab_en: "Dialogue 2: Gel & Curing",
+          title_vi:
+            "Hội thoại 2: Quy trình làm móng Gel & Hỏi cảm giác của khách (Gel-Modellage & Aushärten)",
+          title_en:
+            "Dialogue 2: Gel Nail Process & Checking Client Comfort (Gel-Modellage & Aushärten)",
+          context_vi:
+            "Trong lúc thao tác làm móng cho khách, Đức giải thích từng bước và hỏi thăm để khách cảm thấy thoải mái.",
+          context_en:
+            "While working on the client's nails, Đức explains each step and checks in so the client feels comfortable.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Ich schalte jetzt die Staubabsaugung ein, schiebe sanft die Nagelhaut zurück und feile die Naturnägel in Form.",
+              vi: "Bây giờ em bật hệ thống hút bụi, đẩy nhẹ da quanh móng và giũa tạo phom móng thật nhé.",
+              en: "I'm switching on the dust extractor now, gently pushing back the cuticle, and filing the natural nails into shape.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Weber (Khách hàng)",
+              name_en: "Mrs. Weber (Client)",
+              de: "Danke, das fühlt sich sehr angenehm an.",
+              vi: "Cảm ơn anh, cảm giác rất dễ chịu.",
+              en: "Thanks, that feels very pleasant.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Freut mich! Jetzt lege ich die Schablone an und trage das Aufbaugel auf. Bitte legen Sie die Hand für sechzig Sekunden in die UV/LED-Lampe.",
+              vi: "Em rất vui ạ! Bây giờ em đặt phom nối và đắp gel tạo phom. Chị vui lòng đặt tay vào đèn UV/LED trong 60 giây nhé.",
+              en: "Glad to hear! Now I'm fitting the form and applying the builder gel. Please place your hand in the UV/LED lamp for sixty seconds.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Weber (Khách hàng)",
+              name_en: "Mrs. Weber (Client)",
+              de: "Okay, die Hand ist drin.",
+              vi: "Được rồi, tay tôi đang ở trong đèn.",
+              en: "Okay, the hand is in.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Super. Falls es zwischendurch leicht warm wird, ziehen Sie die Hand kurz einen Zentimeter zurück und sagen Bescheid.",
+              vi: "Tuyệt ạ. Nếu giữa chừng thấy hơi ấm lên, chị rút tay ra một chút và báo em nhé.",
+              en: "Great. If it gets slightly warm in between, pull your hand back a centimeter briefly and let me know.",
+            },
+          ],
+        },
+        {
+          id: 3,
+          tab_vi: "Hội thoại 3: Dưỡng tay & Hẹn Refill",
+          tab_en: "Dialogue 3: Care & Refill",
+          title_vi:
+            "Hội thoại 3: Hoàn thiện móng, Dưỡng da & Hẹn lịch dặm móng lần sau (Abschluss & Refill-Termin)",
+          title_en:
+            "Dialogue 3: Finishing Nails, Skin Care & Booking Next Refill (Abschluss & Refill-Termin)",
+          context_vi:
+            "Sau khi hoàn thiện bộ móng, Đức thoa dầu dưỡng, massage tay cho khách và đặt lịch hẹn Refill sau 3 tuần.",
+          context_en:
+            "After finishing the nails, Đức applies oil, massages the client's hands, and books a refill appointment in three weeks.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "So, die Schichten sind ausgehärtet und ich habe die Schwitzschicht mit Cleaner abgewischt. Zum Schluss massiere ich noch Nagelöl und Handcreme ein.",
+              vi: "Xong rồi ạ, các lớp gel đã khô cứng và em đã lau sạch lớp màng dính bằng Cleaner. Cuối cùng em massage thêm dầu dưỡng móng và kem dưỡng tay cho chị nhé.",
+              en: "So, the layers are cured and I wiped off the sticky layer with cleanser. To finish, I'll massage in nail oil and hand cream.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Weber (Khách hàng)",
+              name_en: "Mrs. Weber (Client)",
+              de: "Die Nägel sehen toll aus! Wie lange halten sie ungefähr?",
+              vi: "Bộ móng trông đẹp quá! Giữ được khoảng bao lâu vậy anh?",
+              en: "The nails look great! How long do they last roughly?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Bei guter Pflege halten sie etwa drei bis vier Wochen. Danach kommen Sie am besten zum Auffüllen, also zum Refill.",
+              vi: "Nếu chăm sóc tốt thì giữ được khoảng 3 đến 4 tuần ạ. Sau đó chị nên quay lại dặm chân móng, tức là làm Refill.",
+              en: "With good care, they last about three to four weeks. After that, it's best to come back for a refill.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Weber (Khách hàng)",
+              name_en: "Mrs. Weber (Client)",
+              de: "Alles klar, wollen wir gleich einen neuen Termin in drei Wochen vereinbaren?",
+              vi: "Rõ rồi, chúng ta đặt luôn lịch hẹn mới sau 3 tuần nhé?",
+              en: "All clear, shall we book a new appointment in three weeks right now?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Gerne! Passt Ihnen nächster Monat am Mittwoch um 14 Uhr?",
+              vi: "Vâng ạ! Thứ Tư tháng sau lúc 14 giờ có thuận tiện cho chị không ạ?",
+              en: "Gladly! Does next month on Wednesday at 2 PM suit you?",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Weber (Khách hàng)",
+              name_en: "Mrs. Weber (Client)",
+              de: "Ja, das passt super!",
+              vi: "Có, giờ đó rất hợp!",
+              en: "Yes, that works great!",
+            },
+          ],
+        },
+        {
+          id: 4,
+          tab_vi: "Hội thoại 4: Móng yếu & Vệ sinh",
+          tab_en: "Dialogue 4: Weak Nails & Hygiene",
+          title_vi:
+            "Hội thoại 4: Tư vấn khách hàng có móng yếu / nhạy cảm (Beratung bei empfindlichen Nägeln)",
+          title_en:
+            "Dialogue 4: Consulting a Client with Fragile / Sensitive Nails",
+          context_vi:
+            "Một khách hàng mới (Frau Klein) có móng tay mỏng, dễ gãy và hỏi Đức về lựa chọn an toàn cho móng thật.",
+          context_en:
+            "A new client (Mrs. Klein) has thin, brittle nails and asks Đức about safe options for natural nails.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Frau Klein (Khách hàng)",
+              name_en: "Mrs. Klein (Client)",
+              de: "Hallo! Meine Naturnägel sind ziemlich dünn und splittern schnell. Was empfehlen Sie mir?",
+              vi: "Xin chào! Móng thật của tôi khá mỏng và dễ bị tách lớp. Anh khuyên tôi nên làm gì?",
+              en: "Hello! My natural nails are quite thin and split easily. What do you recommend?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Guten Tag, Frau Klein! Wenn die Naturnägel dünn sind, arbeiten wir besonders schonend und vermeiden aggressives Abfeilen. Ein dünner Gel-Aufbau oder Shellac kann das Nagelbett schützen.",
+              vi: "Xin chào chị Klein! Khi móng thật mỏng, chúng tôi sẽ thao tác thật nhẹ nhàng và tránh mài quá sâu. Một lớp gel mỏng hoặc sơn Shellac có thể giúp bảo vệ móng.",
+              en: "Good day, Mrs. Klein! When natural nails are thin, we work extra gently and avoid aggressive filing. A thin gel overlay or shellac can protect the nail bed.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Klein (Khách hàng)",
+              name_en: "Mrs. Klein (Client)",
+              de: "Und wie sieht es mit der Hygiene aus? Ich achte da sehr drauf.",
+              vi: "Còn vấn đề vệ sinh thì sao? Tôi rất chú ý chuyện này.",
+              en: "And how is the hygiene? I pay close attention to that.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Bei uns hat jede Kundin eine eigene Einwegfeile, und alle Metallinstrumente werden nach jedem Einsatz desinfiziert.",
+              vi: "Ở tiệm chúng tôi mỗi khách hàng dùng một giũa dùng một lần riêng, và toàn bộ dụng cụ kim loại đều được khử khuẩn sau mỗi lần dùng ạ.",
+              en: "With us, every client gets their own disposable file, and all metal instruments are disinfected after each use.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Klein (Khách hàng)",
+              name_en: "Mrs. Klein (Client)",
+              de: "Das klingt sehr vertrauenswürdig. Dann probiere ich das gerne aus!",
+              vi: "Nghe rất đáng tin cậy. Vậy tôi muốn thử làm!",
+              en: "That sounds very trustworthy. Then I'd love to try it!",
+            },
+          ],
+        },
+        {
+          id: 5,
+          tab_vi: "Hội thoại 5: Thanh toán & Voucher",
+          tab_en: "Dialogue 5: Payment & Voucher",
+          title_vi:
+            "Hội thoại 5: Thanh toán tại quầy & Phiếu quà tặng (Kasse & Gutschein)",
+          title_en:
+            "Dialogue 5: Checkout Payment & Gift Voucher (Kasse & Gutschein)",
+          context_vi:
+            "Khách hàng thanh toán sau khi làm móng xong và hỏi mua thêm phiếu quà tặng cho bạn.",
+          context_en:
+            "The client pays after her nail service and asks to buy a gift voucher for her sister.",
+          lines: [
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Möchten Sie zusammen mit der Pediküre bezahlen? Das macht zusammen achtundsiebzig Euro.",
+              vi: "Chị có muốn thanh toán gộp cùng dịch vụ làm móng chân không ạ? Tổng cộng của chị là 78 Euro ạ.",
+              en: "Would you like to pay together with the pedicure? That makes seventy-eight euros in total.",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Weber (Khách hàng)",
+              name_en: "Mrs. Weber (Client)",
+              de: "Ja, gerne. Ich zahle mit Karte. Bekomme ich dazu auch einen Gutschein für meine Schwester?",
+              vi: "Vâng được ạ. Tôi trả bằng thẻ. Tôi có thể mua thêm phiếu quà tặng cho em gái mình nữa không?",
+              en: "Yes, gladly. I'm paying by card. Can I also get a gift voucher for my sister?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Selbstverständlich! Über welchen Betrag soll der Gutschein ausgestellt werden?",
+              vi: "Tất nhiên rồi ạ! Chị muốn xuất phiếu quà tặng với giá trị bao nhiêu ạ?",
+              en: "Of course! For what amount should the voucher be issued?",
+            },
+            {
+              role: "partner",
+              name_vi: "Frau Weber (Khách hàng)",
+              name_en: "Mrs. Weber (Client)",
+              de: "Machen Sie bitte einen Gutschein über dreißig Euro.",
+              vi: "Làm giúp tôi phiếu quà tặng trị giá 30 Euro nhé.",
+              en: "Please make a voucher for thirty euros.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Sehr gerne, hier ist der Gutschein im Umschlag und die Quittung für Ihre Zahlung. Vielen Dank und einen schönen Tag!",
+              vi: "Vâng ạ, đây là phiếu quà tặng trong phong bì cùng biên lai thanh toán của chị. Cảm ơn chị và chúc chị một ngày tốt lành!",
+              en: "With pleasure, here is the voucher in the envelope and the receipt for your payment. Thank you and have a nice day!",
+            },
+          ],
+        },
+        {
+          id: 6,
+          tab_vi: "Hội thoại 6: Đồng nghiệp trong tiệm",
+          tab_en: "Dialogue 6: Salon Team",
+          title_vi:
+            "Hội thoại 6: Trao đổi giữa hai kỹ thuật viên trong tiệm (Team im Nagelstudio)",
+          title_en:
+            "Dialogue 6: Coordination Between Two Technicians in the Studio",
+          context_vi:
+            "Trong giờ làm việc, Đức và đồng nghiệp trao đổi về lịch hẹn, vật tư và vệ sinh bàn làm việc.",
+          context_en:
+            "During work, Đức and a colleague coordinate on appointments, supplies, and workstation hygiene.",
+          lines: [
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Đức, Kundin in Zimmer 1 kommt in zehn Minuten, und auf deinem Tisch liegt noch Schleifstaub.",
+              vi: "Đức ơi, khách ở phòng 1 sẽ tới trong 10 phút nữa, mà trên bàn của cậu vẫn còn bụi mài móng đấy.",
+              en: "Đức, the client in Room 1 is coming in ten minutes, and there's still filing dust on your table.",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Danke für den Hinweis! Ich mache sofort die Flächendesinfektion und wechsle den Staubfilter.",
+              vi: "Cảm ơn cậu đã nhắc! Mình lau khử khuẩn mặt bàn ngay và thay bộ lọc bụi luôn.",
+              en: "Thanks for the heads-up! I'll do surface disinfection right away and change the dust filter.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Hast du noch genug Einwegfeilen und Nagelhautöl auf dem Wagen?",
+              vi: "Cậu còn đủ giũa dùng một lần và dầu dưỡng da quanh móng trên xe không?",
+              en: "Do you still have enough disposable files and cuticle oil on the cart?",
+            },
+            {
+              role: "worker",
+              name_vi: "Đức (Kỹ thuật viên Nail)",
+              name_en: "Đức (Nail Tech)",
+              de: "Ja, ich habe gerade frische Feilen und zwei Flaschen Nagelöl nachgelegt.",
+              vi: "Còn nhé, mình vừa châm thêm giũa mới và hai chai dầu dưỡng móng rồi.",
+              en: "Yes, I just restocked fresh files and two bottles of nail oil.",
+            },
+            {
+              role: "partner",
+              name_vi: "Kollegin (Đồng nghiệp)",
+              name_en: "Colleague",
+              de: "Super, dann sind wir bestens vorbereitet für den Nachmittag!",
+              vi: "Tuyệt quá, vậy là chúng ta đã chuẩn bị sẵn sàng nhất cho buổi chiều rồi!",
+              en: "Great, then we're super well prepared for the afternoon!",
+            },
+          ],
+        },
+      ];
+
+      // =========================================================================
+      // 3. APPLICATION STATE & PERSISTENCE (localStorage)
+      // =========================================================================
+      const state = {
+        lang: localStorage.getItem("fd_lang") || "vi",
+        activeTab: "vocab",
+        globalVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_globalVoice"),
+          "piper_hochdeutsch",
+        ),
+        workerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_workerVoice"),
+          "piper_hochdeutsch",
+        ),
+        partnerVoice: sanitizeVoiceId(
+          localStorage.getItem("fd_partnerVoice"),
+          "piper_rostock",
+        ),
+        speed: parseFloat(localStorage.getItem("fd_speed")) || 1.0,
+        vocabCategory: "all",
+        vocabQuery: "",
+        phraseCategory: "all",
+        activeDialogueId: 1,
+        fcCategory: "all",
+        fcDeck: [...VOCAB_DATA],
+        fcIndex: 0,
+        fcFlipped: false,
+        masteredIds: JSON.parse(
+          localStorage.getItem("fd_mastered_nail") || "[]",
+        ),
+        voiceDrawerOpen: false,
+      };
+
+      const audioCtrl = {
+        element: null,
+        activeBtnId: null,
+        isFullDialoguePlaying: false,
+        dialogueStopFlag: false,
+        toastTimer: null,
+      };
+
+      function t(key) {
+        return (
+          (I18N[state.lang] && I18N[state.lang][key]) || I18N.vi[key] || key
+        );
+      }
+
+      function getVoiceObj(voiceId) {
+        return VOICE_CATALOG.find((v) => v.id === voiceId) || VOICE_CATALOG[0];
+      }
+
+      function showToast(msg) {
+        const box = document.getElementById("statusToast");
+        const txt = document.getElementById("statusToastText");
+        if (!box || !txt) return;
+        txt.textContent = msg;
+        box.classList.remove("hidden");
+        clearTimeout(audioCtrl.toastTimer);
+        audioCtrl.toastTimer = setTimeout(() => {
+          box.classList.add("hidden");
+        }, 3000);
+      }
+
+      // =========================================================================
+      // 4. AUDIO ENGINE WITH FALLBACK (audio/nail/<voice>/<file>)
+      // =========================================================================
+      function syncPlayingButtonUI() {
+        document.querySelectorAll("[data-audio-btn]").forEach((btn) => {
+          const id = btn.getAttribute("data-audio-btn");
+          const isCurrent = audioCtrl.activeBtnId === id;
+          const iconPlay = btn.querySelector(".icon-play");
+          const iconStop = btn.querySelector(".icon-stop");
+          if (isCurrent) {
+            btn.classList.add("btn-playing");
+            if (iconPlay) iconPlay.classList.add("hidden");
+            if (iconStop) iconStop.classList.remove("hidden");
+          } else {
+            btn.classList.remove("btn-playing");
+            if (iconPlay) iconPlay.classList.remove("hidden");
+            if (iconStop) iconStop.classList.add("hidden");
+          }
+        });
+
+        const fullBtn = document.getElementById("playFullDialogueBtn");
+        if (fullBtn) {
+          if (audioCtrl.isFullDialoguePlaying) {
+            fullBtn.classList.add("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>■</span> <span>${t("stopFullDialogue")}</span>`;
+          } else {
+            fullBtn.classList.remove("bg-red-600", "hover:bg-red-700");
+            fullBtn.classList.add("bg-blue-600", "hover:bg-blue-700");
+            fullBtn.innerHTML = `<span>▶</span> <span>${t("playFullDialogue")}</span>`;
+          }
+        }
+
+        document.querySelectorAll("[data-preview-btn]").forEach((btn) => {
+          const isPrev = audioCtrl.activeBtnId === "preview_sample";
+          if (isPrev) {
+            btn.classList.add("bg-red-600", "text-white");
+            btn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            btn.innerHTML = `<span>■</span> <span>${t("stopPreviewBtn")}</span>`;
+          } else {
+            btn.classList.remove("bg-red-600");
+            btn.classList.add("bg-blue-600", "hover:bg-blue-700", "text-white");
+            btn.innerHTML = `<span>🔊</span> <span>${t("previewVoiceBtn")}</span>`;
+          }
+        });
+      }
+
+      function stopAllAudio(resetDialogue = true) {
+        if (resetDialogue) {
+          audioCtrl.dialogueStopFlag = true;
+          audioCtrl.isFullDialoguePlaying = false;
+        }
+        if (audioCtrl.element) {
+          audioCtrl.element.pause();
+          audioCtrl.element.src = "";
+          audioCtrl.element = null;
+        }
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+        }
+        audioCtrl.activeBtnId = null;
+        document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+          el.classList.remove(
+            "dialogue-line-active",
+            "ring-2",
+            "ring-blue-500",
+            "bg-blue-50/70",
+          );
+        });
+        syncPlayingButtonUI();
+      }
+
+      function playAudioWithFallback(
+        fileName,
+        fallbackText,
+        voiceId,
+        btnId,
+        onEndedCallback = null,
+      ) {
+        if (audioCtrl.activeBtnId === btnId) {
+          stopAllAudio(true);
+          return;
+        }
+
+        stopAllAudio(false);
+        audioCtrl.activeBtnId = btnId;
+        syncPlayingButtonUI();
+
+        const chain = [voiceId, "piper_hochdeutsch", "edge_hochdeutsch"].filter(
+          (v, idx, arr) => v && arr.indexOf(v) === idx,
+        );
+        let attemptIdx = 0;
+
+        const finishPlayback = () => {
+          audioCtrl.activeBtnId = null;
+          audioCtrl.element = null;
+          syncPlayingButtonUI();
+          if (onEndedCallback) onEndedCallback();
+        };
+
+        const tryNextSource = () => {
+          if (attemptIdx >= chain.length) {
+            if ("speechSynthesis" in window && fallbackText) {
+              const utter = new SpeechSynthesisUtterance(fallbackText);
+              utter.lang = "de-DE";
+              utter.rate = state.speed;
+              utter.onend = finishPlayback;
+              utter.onerror = finishPlayback;
+              window.speechSynthesis.speak(utter);
+            } else {
+              finishPlayback();
+            }
+            return;
+          }
+
+          const currentVoice = chain[attemptIdx];
+          const src = `${AUDIO_BASE_PATH}/${currentVoice}/${fileName}`;
+          const audio = new Audio(src);
+          audio.playbackRate = state.speed;
+          audioCtrl.element = audio;
+
+          audio.onended = finishPlayback;
+          audio.onerror = () => {
+            if (attemptIdx === 0 && currentVoice !== "piper_hochdeutsch") {
+              showToast(t("fallbackNotice"));
+            }
+            attemptIdx++;
+            tryNextSource();
+          };
+
+          audio.play().catch(() => {
+            attemptIdx++;
+            tryNextSource();
+          });
+        };
+
+        tryNextSource();
+      }
+
+      async function toggleFullDialogue() {
+        if (audioCtrl.isFullDialoguePlaying) {
+          stopAllAudio(true);
+          return;
+        }
+        const dlg = DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId);
+        if (!dlg) return;
+
+        stopAllAudio(true);
+        audioCtrl.isFullDialoguePlaying = true;
+        audioCtrl.dialogueStopFlag = false;
+        syncPlayingButtonUI();
+
+        for (let i = 0; i < dlg.lines.length; i++) {
+          if (audioCtrl.dialogueStopFlag) break;
+          const line = dlg.lines[i];
+          const lineNum = i + 1;
+          const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+          const voice =
+            line.role === "worker" ? state.workerVoice : state.partnerVoice;
+
+          document.querySelectorAll(".dialogue-line-active").forEach((el) => {
+            el.classList.remove(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+          });
+          const rowEl = document.getElementById(`row_${btnId}`);
+          if (rowEl) {
+            rowEl.classList.add(
+              "dialogue-line-active",
+              "ring-2",
+              "ring-blue-500",
+              "bg-blue-50/70",
+            );
+            rowEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+
+          await new Promise((resolve) => {
+            playAudioWithFallback(
+              `dialog_${dlg.id}_line_${lineNum}.mp3`,
+              line.de,
+              voice,
+              btnId,
+              resolve,
+            );
+          });
+
+          if (!audioCtrl.dialogueStopFlag && i < dlg.lines.length - 1) {
+            await new Promise((r) => setTimeout(r, 350));
+          }
+        }
+
+        stopAllAudio(true);
+      }
+
+      // =========================================================================
+      // 5. VOICE DRAWER / POPOVER CONTROLS
+      // =========================================================================
+      function buildVoiceOptionsHTML(selectedId) {
+        const groups = {};
+        VOICE_CATALOG.forEach((v) => {
+          const g = state.lang === "en" ? v.group_en : v.group_vi;
+          if (!groups[g]) groups[g] = [];
+          groups[g].push(v);
+        });
+        return Object.entries(groups)
+          .map(
+            ([groupLabel, items]) => `
+              <optgroup label="${groupLabel}">
+                ${items
+                  .map(
+                    (v) => `
+                  <option value="${v.id}" ${v.id === selectedId ? "selected" : ""}>
+                    ${state.lang === "en" ? v.label_en : v.label_vi}
+                  </option>
+                `,
+                  )
+                  .join("")}
+              </optgroup>
+            `,
+          )
+          .join("");
+      }
+
+      function renderVoiceForms() {
+        const formHTML = `
+              <div class="space-y-3.5">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("selectVoiceLabel")}</label>
+                  <select onchange="setGlobalVoice(this.value)"
+                    class="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    ${buildVoiceOptionsHTML(state.globalVoice)}
+                  </select>
+                </div>
+
+                <button type="button" data-preview-btn onclick="playAudioWithFallback('sample.mp3', 'Guten Tag und herzlich willkommen in unserem Nagelstudio!', state.globalVoice, 'preview_sample')"
+                  class="w-full h-10 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold flex items-center justify-center gap-2 transition cursor-pointer">
+                  <span>🔊</span> <span>${t("previewVoiceBtn")}</span>
+                </button>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-600 mb-1.5">${t("speedLabel")}</label>
+                  <div class="grid grid-cols-3 gap-1.5 bg-slate-100 p-1 rounded-xl">
+                    ${[
+                      { val: 0.75, label: t("speedSlow") },
+                      { val: 1.0, label: t("speedNormal") },
+                      { val: 1.25, label: t("speedFast") },
+                    ]
+                      .map(
+                        (sp) => `
+                      <button type="button" onclick="setPlaybackSpeed(${sp.val})"
+                        class="h-9 rounded-lg text-xs font-bold transition cursor-pointer ${state.speed === sp.val ? "bg-amber-500 text-slate-950 shadow-xs" : "text-slate-600 hover:text-slate-900"}">
+                        ${sp.label}
+                      </button>
+                    `,
+                      )
+                      .join("")}
+                  </div>
+                </div>
+              </div>
+            `;
+
+        const dForm = document.getElementById("desktopVoiceForm");
+        const mForm = document.getElementById("mobileVoiceForm");
+        if (dForm) dForm.innerHTML = formHTML;
+        if (mForm) mForm.innerHTML = formHTML;
+
+        const vObj = getVoiceObj(state.globalVoice);
+        const shortName = state.lang === "en" ? vObj.short_en : vObj.short_vi;
+        const pill = document.getElementById("voicePillLabel");
+        if (pill) pill.textContent = `${shortName} • ${state.speed}x`;
+
+        const wSel = document.getElementById("workerVoiceSelect");
+        const pSel = document.getElementById("partnerVoiceSelect");
+        if (wSel) wSel.innerHTML = buildVoiceOptionsHTML(state.workerVoice);
+        if (pSel) pSel.innerHTML = buildVoiceOptionsHTML(state.partnerVoice);
+
+        syncPlayingButtonUI();
+      }
+
+      function toggleVoiceDrawer() {
+        state.voiceDrawerOpen = !state.voiceDrawerOpen;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+
+        if (state.voiceDrawerOpen) {
+          renderVoiceForms();
+          popover.classList.remove("md:hidden");
+          popover.classList.add("md:block");
+          sheet.classList.remove("hidden");
+          backdrop.classList.remove("hidden");
+        } else {
+          closeVoiceDrawer();
+        }
+      }
+
+      function closeVoiceDrawer() {
+        state.voiceDrawerOpen = false;
+        const popover = document.getElementById("desktopVoicePopover");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        const backdrop = document.getElementById("mobileVoiceBackdrop");
+        popover.classList.add("md:hidden");
+        popover.classList.remove("md:block");
+        sheet.classList.add("hidden");
+        backdrop.classList.add("hidden");
+      }
+
+      document.addEventListener("click", (e) => {
+        if (!state.voiceDrawerOpen) return;
+        const popover = document.getElementById("desktopVoicePopover");
+        const trigger = document.getElementById("voiceTriggerBtn");
+        const sheet = document.getElementById("mobileVoiceSheet");
+        if (
+          !popover.contains(e.target) &&
+          !trigger.contains(e.target) &&
+          !sheet.contains(e.target)
+        ) {
+          closeVoiceDrawer();
+        }
+      });
+
+      function setGlobalVoice(voiceId) {
+        state.globalVoice = voiceId;
+        localStorage.setItem("fd_globalVoice", voiceId);
+        renderVoiceForms();
+      }
+
+      function updateDialogueVoice(role, voiceId) {
+        if (role === "worker") {
+          state.workerVoice = voiceId;
+          localStorage.setItem("fd_workerVoice", voiceId);
+        } else {
+          state.partnerVoice = voiceId;
+          localStorage.setItem("fd_partnerVoice", voiceId);
+        }
+      }
+
+      function setPlaybackSpeed(newSpeed) {
+        state.speed = newSpeed;
+        localStorage.setItem("fd_speed", String(newSpeed));
+        if (audioCtrl.element) {
+          audioCtrl.element.playbackRate = newSpeed;
+        }
+        renderVoiceForms();
+      }
+
+      // =========================================================================
+      // 6. SMART NORMALIZATION & RENDERERS (100% VI <-> EN)
+      // =========================================================================
+      function normalizeSearch(str) {
+        return (str || "")
+          .toLowerCase()
+          .replace(/ä/g, "a")
+          .replace(/ö/g, "o")
+          .replace(/ü/g, "u")
+          .replace(/ß/g, "ss")
+          .normalize("NFD")
+          .replace(/[̀-ͯ]/g, "")
+          .replace(/đ/g, "d");
+      }
+
+      function renderNavigation() {
+        const tabs = [
+          {
+            id: "vocab",
+            dLabel: `${t("nav_vocab_desktop")} (${VOCAB_DATA.length})`,
+            mLabel: t("nav_vocab_mobile"),
+            icon: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25",
+          },
+          {
+            id: "phrases",
+            dLabel: `${t("nav_phrases_desktop")} (${PHRASES_DATA.length})`,
+            mLabel: t("nav_phrases_mobile"),
+            icon: "M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z",
+          },
+          {
+            id: "dialogues",
+            dLabel: `${t("nav_dialogues_desktop")} (${DIALOGUES_DATA.length})`,
+            mLabel: t("nav_dialogues_mobile"),
+            icon: "M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155",
+          },
+          {
+            id: "flashcards",
+            dLabel: t("nav_flashcards_desktop"),
+            mLabel: t("nav_flashcards_mobile"),
+            icon: "M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3",
+          },
+        ];
+
+        document.getElementById("desktopNav").innerHTML = tabs
+          .map(
+            (tab) => `
+              <button type="button" onclick="switchTab('${tab.id}')"
+                class="px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${state.activeTab === tab.id ? "bg-white text-slate-900 shadow-xs" : "text-slate-300 hover:text-white hover:bg-slate-700/60"}">
+                ${tab.dLabel}
+              </button>
+            `,
+          )
+          .join("");
+
+        document.getElementById("mobileNavGrid").innerHTML = tabs
+          .map((tab) => {
+            const active = state.activeTab === tab.id;
+            return `
+                <button type="button" onclick="switchTab('${tab.id}')"
+                  class="flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition cursor-pointer ${active ? "text-blue-600" : "text-slate-500 hover:text-slate-800"}">
+                  <svg class="w-5 h-5 ${active ? "stroke-[2.3]" : "stroke-[1.8]"}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="${tab.icon}" />
+                  </svg>
+                  <span>${tab.mLabel}</span>
+                </button>
+              `;
+          })
+          .join("");
+      }
+
+      function switchTab(tabId) {
+        state.activeTab = tabId;
+        ["vocab", "phrases", "dialogues", "flashcards"].forEach((id) => {
+          const el = document.getElementById(`section-${id}`);
+          if (el) el.classList.toggle("hidden", id !== tabId);
+        });
+        renderNavigation();
+        if (tabId === "flashcards") renderFlashcard();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function speakBtnHTML(btnId, sizeClass = "w-11 h-11") {
+        return `
+              <button type="button" data-audio-btn="${btnId}"
+                class="${sizeClass} shrink-0 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200/80 flex items-center justify-center transition cursor-pointer active:scale-95"
+                aria-label="Play audio">
+                <svg class="icon-play w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                </svg>
+                <span class="icon-stop hidden text-xs font-extrabold">■</span>
+              </button>
+            `;
+      }
+
+      function renderVocab() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("cat_all")} (${VOCAB_DATA.length})` },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+
+        document.getElementById("vocabCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+              <button type="button" onclick="setVocabCategory('${c.id}')"
+                class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.vocabCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+                ${c.label}
+              </button>
+            `,
+          )
+          .join("");
+
+        const q = normalizeSearch(state.vocabQuery);
+        const filtered = VOCAB_DATA.filter((item) => {
+          const matchCat =
+            state.vocabCategory === "all" || item.cat === state.vocabCategory;
+          if (!matchCat) return false;
+          if (!q) return true;
+          const haystack = normalizeSearch(
+            `${item.de} ${item.vi} ${item.en} ${item.rel_vi} ${item.rel_en} ${item.ex_de} ${item.ex_vi} ${item.ex_en}`,
+          );
+          return haystack.includes(q);
+        });
+
+        const grid = document.getElementById("vocabGrid");
+        if (filtered.length === 0) {
+          grid.innerHTML = `<div class="col-span-full bg-white rounded-2xl p-8 text-center text-sm text-slate-500 border border-slate-200">${t("noResults")}</div>`;
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map((item) => {
+            const typeStr = state.lang === "en" ? item.type_en : item.type_vi;
+            const meaningStr = state.lang === "en" ? item.en : item.vi;
+            const relStr = state.lang === "en" ? item.rel_en : item.rel_vi;
+            const exTrans = state.lang === "en" ? item.ex_en : item.ex_vi;
+            const wordBtnId = `vocab_${item.id}_word`;
+            const exBtnId = `vocab_${item.id}_ex`;
+
+            return `
+                <article class="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex flex-col justify-between gap-3.5">
+                  <div>
+                    <div class="flex items-start justify-between gap-3">
+                      <div class="min-w-0">
+                        <div class="flex flex-wrap items-center gap-2">
+                          <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">${item.de}</h2>
+                          <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-100">${typeStr}</span>
+                        </div>
+                        <p class="text-xs font-mono text-slate-400 mt-0.5">${item.ipa}</p>
+                        <p class="text-sm sm:text-base font-bold text-emerald-700 mt-1.5">${meaningStr}</p>
+                      </div>
+                      <div onclick="playAudioWithFallback('vocab_${item.id}_word.mp3', '${item.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                        ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                      </div>
+                    </div>
+
+                    <div class="mt-2.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                      <span class="font-semibold text-slate-700">${t("relatedPrefix")}</span> ${relStr}
+                    </div>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-pink-50/70 border border-pink-200/60 flex items-center justify-between gap-3">
+                    <div class="min-w-0">
+                      <p class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">${item.ex_de}</p>
+                      <p class="text-xs text-slate-600 italic mt-0.5 leading-snug">${exTrans}</p>
+                    </div>
+                    <div onclick="playAudioWithFallback('vocab_${item.id}_ex.mp3', '${item.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')">
+                      ${speakBtnHTML(exBtnId, "w-11 h-11 bg-pink-100/80 hover:bg-pink-200/80 text-pink-900 border-pink-200")}
+                    </div>
+                  </div>
+                </article>
+              `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setVocabCategory(cat) {
+        state.vocabCategory = cat;
+        renderVocab();
+      }
+
+      function handleVocabSearch(val) {
+        state.vocabQuery = val;
+        const clearBtn = document.getElementById("clearSearchBtn");
+        if (clearBtn) {
+          clearBtn.classList.toggle("hidden", !val);
+          clearBtn.classList.toggle("flex", Boolean(val));
+        }
+        renderVocab();
+      }
+
+      function clearVocabSearch() {
+        const input = document.getElementById("vocabSearchInput");
+        if (input) input.value = "";
+        handleVocabSearch("");
+      }
+
+      function renderPhrases() {
+        const countPCat = (cat) =>
+          PHRASES_DATA.filter((p) => p.cat === cat).length;
+        const cats = [
+          { id: "all", label: `${t("pcat_all")} (${PHRASES_DATA.length})` },
+          { id: "2.1", label: `${t("pcat_2_1")} (${countPCat("2.1")})` },
+          { id: "2.2", label: `${t("pcat_2_2")} (${countPCat("2.2")})` },
+          { id: "2.3", label: `${t("pcat_2_3")} (${countPCat("2.3")})` },
+          { id: "2.4", label: `${t("pcat_2_4")} (${countPCat("2.4")})` },
+        ];
+
+        document.getElementById("phraseCategoryPills").innerHTML = cats
+          .map(
+            (c) => `
+              <button type="button" onclick="setPhraseCategory('${c.id}')"
+                class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer ${state.phraseCategory === c.id ? "bg-blue-600 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+                ${c.label}
+              </button>
+            `,
+          )
+          .join("");
+
+        const filtered = PHRASES_DATA.filter(
+          (p) =>
+            state.phraseCategory === "all" || p.cat === state.phraseCategory,
+        );
+        document.getElementById("phrasesList").innerHTML = filtered
+          .map((p) => {
+            const trans = state.lang === "en" ? p.en : p.vi;
+            const btnId = `phrase_${p.id}`;
+            return `
+                <div class="bg-white rounded-2xl p-4 shadow-xs border border-slate-200/80 hover:border-blue-300 transition flex items-center justify-between gap-3.5">
+                  <div class="min-w-0">
+                    <span class="inline-block text-[11px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md mb-1">${p.cat}</span>
+                    <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${p.de}</p>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-1">${trans}</p>
+                  </div>
+                  <div onclick="playAudioWithFallback('phrase_${p.id}.mp3', '${p.de.replace(/'/g, "\'")}', state.globalVoice, '${btnId}')">
+                    ${speakBtnHTML(btnId, "w-11 h-11")}
+                  </div>
+                </div>
+              `;
+          })
+          .join("");
+
+        syncPlayingButtonUI();
+      }
+
+      function setPhraseCategory(cat) {
+        state.phraseCategory = cat;
+        renderPhrases();
+      }
+
+      function renderDialogues() {
+        document.getElementById("dialogueTabs").innerHTML = DIALOGUES_DATA.map(
+          (d) => {
+            const label = state.lang === "en" ? d.tab_en : d.tab_vi;
+            const active = d.id === state.activeDialogueId;
+            return `
+                <button type="button" onclick="selectDialogue(${d.id})"
+                  class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition cursor-pointer ${active ? "bg-slate-900 text-white shadow-xs" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">
+                  ${label}
+                </button>
+              `;
+          },
+        ).join("");
+
+        const dlg =
+          DIALOGUES_DATA.find((d) => d.id === state.activeDialogueId) ||
+          DIALOGUES_DATA[0];
+        const title = state.lang === "en" ? dlg.title_en : dlg.title_vi;
+        const context = state.lang === "en" ? dlg.context_en : dlg.context_vi;
+
+        document.getElementById("dialogueContainer").innerHTML = `
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
+                <div>
+                  <h2 class="text-base sm:text-lg font-bold text-slate-900">${title}</h2>
+                  <p class="text-xs sm:text-sm text-slate-500 mt-0.5">${context}</p>
+                </div>
+                <button id="playFullDialogueBtn" type="button" onclick="toggleFullDialogue()"
+                  class="h-11 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 shadow-xs transition cursor-pointer">
+                  <span>▶</span> <span>${t("playFullDialogue")}</span>
+                </button>
+              </div>
+
+              <div class="space-y-3">
+                ${dlg.lines
+                  .map((line, idx) => {
+                    const lineNum = idx + 1;
+                    const btnId = `dlg_${dlg.id}_line_${lineNum}`;
+                    const speakerName =
+                      state.lang === "en" ? line.name_en : line.name_vi;
+                    const lineTrans = state.lang === "en" ? line.en : line.vi;
+                    const isWorker = line.role === "worker";
+                    const voiceForLine = isWorker
+                      ? state.workerVoice
+                      : state.partnerVoice;
+
+                    return `
+                    <div id="row_${btnId}" class="p-3.5 sm:p-4 rounded-2xl border transition flex items-start justify-between gap-3 ${isWorker ? "bg-slate-50/90 border-slate-200/80" : "bg-pink-50/50 border-pink-200/60"}">
+                      <div class="min-w-0">
+                        <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold mb-1 ${isWorker ? "bg-blue-100 text-blue-800" : "bg-pink-100 text-pink-900"}">
+                          ${speakerName}
+                        </span>
+                        <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">${line.de}</p>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-1">${lineTrans}</p>
+                      </div>
+                      <div onclick="playAudioWithFallback('dialog_${dlg.id}_line_${lineNum}.mp3', '${line.de.replace(/'/g, "\'")}', '${voiceForLine}', '${btnId}')">
+                        ${speakBtnHTML(btnId, "w-11 h-11")}
+                      </div>
+                    </div>
+                  `;
+                  })
+                  .join("")}
+              </div>
+            `;
+
+        syncPlayingButtonUI();
+      }
+
+      function selectDialogue(id) {
+        stopAllAudio(true);
+        state.activeDialogueId = id;
+        renderDialogues();
+      }
+
+      function renderFlashcardControls() {
+        const countCat = (cat) =>
+          VOCAB_DATA.filter((v) => v.cat === cat).length;
+        const cardUnit = state.lang === "en" ? "cards" : "thẻ";
+        const opts = [
+          {
+            id: "all",
+            label: `${t("fcAllCategories")} (${VOCAB_DATA.length} ${cardUnit})`,
+          },
+          { id: "1.1", label: `${t("cat_1_1")} (${countCat("1.1")})` },
+          { id: "1.2", label: `${t("cat_1_2")} (${countCat("1.2")})` },
+          { id: "1.3", label: `${t("cat_1_3")} (${countCat("1.3")})` },
+          { id: "1.4", label: `${t("cat_1_4")} (${countCat("1.4")})` },
+          { id: "1.5", label: `${t("cat_1_5")} (${countCat("1.5")})` },
+        ];
+        document.getElementById("fcCategorySelect").innerHTML = opts
+          .map(
+            (o) => `
+              <option value="${o.id}" ${o.id === state.fcCategory ? "selected" : ""}>${o.label}</option>
+            `,
+          )
+          .join("");
+      }
+
+      function renderFlashcard() {
+        renderFlashcardControls();
+        if (state.fcDeck.length === 0) state.fcDeck = [...VOCAB_DATA];
+        if (state.fcIndex >= state.fcDeck.length) state.fcIndex = 0;
+
+        const card = state.fcDeck[state.fcIndex];
+        const typeStr = state.lang === "en" ? card.type_en : card.type_vi;
+        const meaningStr = state.lang === "en" ? card.en : card.vi;
+        const relStr = state.lang === "en" ? card.rel_en : card.rel_vi;
+        const exTrans = state.lang === "en" ? card.ex_en : card.ex_vi;
+        const isMastered = state.masteredIds.includes(card.id);
+
+        document.getElementById("fcCounter").textContent =
+          `${state.fcIndex + 1} / ${state.fcDeck.length}`;
+
+        const masterBtn = document.getElementById("fcMasterBtn");
+        if (isMastered) {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-bold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>✓</span> <span>${t("fcMastered")}</span>`;
+        } else {
+          masterBtn.className =
+            "h-11 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-semibold shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+          masterBtn.innerHTML = `<span>○</span> <span>${t("fcMarkMastered")}</span>`;
+        }
+
+        const wordBtnId = `fc_word_${card.id}`;
+        const exBtnId = `fc_ex_${card.id}`;
+
+        document.getElementById("flashcardStage").innerHTML = `
+              <div onclick="flipFlashcard()" class="relative w-full min-h-[310px] sm:min-h-[340px] cursor-pointer select-none">
+                <div class="w-full min-h-[310px] sm:min-h-[340px] transform-style-3d ${state.fcFlipped ? "rotate-y-180" : ""}">
+
+                  <!-- FRONT -->
+                  <div class="absolute inset-0 backface-hidden bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 flex flex-col items-center justify-between text-center">
+                    <div class="w-full flex items-center justify-between">
+                      <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-pink-50 text-pink-900">${typeStr}</span>
+                      <div onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')">
+                        ${speakBtnHTML(wordBtnId, "w-11 h-11")}
+                      </div>
+                    </div>
+
+                    <div class="my-auto py-4">
+                      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${card.de}</h2>
+                      <p class="text-sm font-mono text-slate-400 mt-2">${card.ipa}</p>
+                    </div>
+
+                    <p class="text-xs font-medium text-slate-400">${t("fcFrontHint")}</p>
+                  </div>
+
+                  <!-- BACK -->
+                  <div class="absolute inset-0 backface-hidden rotate-y-180 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-800 flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-start justify-between gap-2">
+                        <div>
+                          <p class="text-xs font-semibold text-amber-400 uppercase tracking-wider">${card.de}</p>
+                          <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-1">${meaningStr}</h3>
+                        </div>
+                        <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_word.mp3', '${card.de.replace(/'/g, "\'")}', state.globalVoice, '${wordBtnId}')"
+                          class="h-10 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shrink-0 cursor-pointer">
+                          <span>🔊</span> <span>${t("fcWordBtn")}</span>
+                        </button>
+                      </div>
+
+                      <p class="text-xs text-slate-300 bg-slate-800/80 p-3 rounded-xl mt-3 leading-relaxed">
+                        <span class="font-semibold text-amber-300">${t("relatedPrefix")}</span> ${relStr}
+                      </p>
+
+                      <div class="mt-3 p-3.5 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-between gap-3">
+                        <div class="min-w-0">
+                          <p class="text-xs sm:text-sm font-semibold text-white leading-snug">${card.ex_de}</p>
+                          <p class="text-xs text-slate-300 italic mt-1">${exTrans}</p>
+                        </div>
+                        <button type="button" onclick="event.stopPropagation(); playAudioWithFallback('vocab_${card.id}_ex.mp3', '${card.ex_de.replace(/'/g, "\'")}', state.globalVoice, '${exBtnId}')"
+                          class="w-11 h-11 shrink-0 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center justify-center font-bold cursor-pointer">
+                          🔊
+                        </button>
+                      </div>
+                    </div>
+
+                    <p class="text-center text-xs text-slate-400 mt-3">${t("fcBackHint")}</p>
+                  </div>
+
+                </div>
+              </div>
+            `;
+
+        syncPlayingButtonUI();
+      }
+
+      function flipFlashcard() {
+        state.fcFlipped = !state.fcFlipped;
+        renderFlashcard();
+      }
+
+      function nextFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex = (state.fcIndex + 1) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function prevFlashcard() {
+        state.fcFlipped = false;
+        state.fcIndex =
+          (state.fcIndex - 1 + state.fcDeck.length) % state.fcDeck.length;
+        renderFlashcard();
+      }
+
+      function setFlashcardCategory(cat) {
+        state.fcCategory = cat;
+        state.fcFlipped = false;
+        state.fcIndex = 0;
+        state.fcDeck =
+          cat === "all"
+            ? [...VOCAB_DATA]
+            : VOCAB_DATA.filter((v) => v.cat === cat);
+        renderFlashcard();
+      }
+
+      function shuffleFlashcards() {
+        for (let i = state.fcDeck.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [state.fcDeck[i], state.fcDeck[j]] = [
+            state.fcDeck[j],
+            state.fcDeck[i],
+          ];
+        }
+        state.fcIndex = 0;
+        state.fcFlipped = false;
+        renderFlashcard();
+      }
+
+      function toggleFlashcardMastered() {
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+        const idx = state.masteredIds.indexOf(card.id);
+        if (idx >= 0) {
+          state.masteredIds.splice(idx, 1);
+        } else {
+          state.masteredIds.push(card.id);
+        }
+        localStorage.setItem(
+          "fd_mastered_nail",
+          JSON.stringify(state.masteredIds),
+        );
+        renderFlashcard();
+      }
+
+      function renderNailNotes() {
+        document.getElementById("notesHeading").textContent = t("notesHeading");
+        const items = t("notes") || [];
+        document.getElementById("notesList").innerHTML = items
+          .map(
+            (n) => `
+              <li class="p-3 rounded-xl bg-slate-50 border border-slate-100">${n}</li>
+            `,
+          )
+          .join("");
+      }
+
+      // =========================================================================
+      // 7. LANGUAGE SWITCHER (100% UI + CONTENT LOCALIZATION)
+      // =========================================================================
+      function setLanguage(lang) {
+        state.lang = lang;
+        localStorage.setItem("fd_lang", lang);
+        document.documentElement.lang = lang;
+        document.title = t("pageTitle");
+
+        const viBtn = document.getElementById("langBtnVi");
+        const enBtn = document.getElementById("langBtnEn");
+        if (lang === "vi") {
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        } else {
+          enBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow-xs";
+          viBtn.className =
+            "h-full px-2.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        }
+
+        document.getElementById("backHomeText").textContent = t("backHomeText");
+        document.getElementById("brandTitle").textContent = t("brandTitle");
+        document.getElementById("popoverTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("sheetTitle").textContent =
+          t("voiceSettingsTitle");
+        document.getElementById("vocabSearchInput").placeholder =
+          t("searchPlaceholder");
+        document.getElementById("workerVoiceLabel").textContent =
+          t("workerVoiceLabel");
+        document.getElementById("partnerVoiceLabel").textContent =
+          t("partnerVoiceLabel");
+        document.getElementById("fcShuffleText").textContent = t("fcShuffle");
+        document.getElementById("fcPrevText").textContent = t("fcPrev");
+        document.getElementById("fcNextText").textContent = t("fcNext");
+        document.getElementById("fcShortcutHint").textContent =
+          t("fcShortcutHint");
+
+        renderNavigation();
+        renderVoiceForms();
+        renderVocab();
+        renderPhrases();
+        renderDialogues();
+        renderFlashcard();
+        renderNailNotes();
+      }
+
+      // =========================================================================
+      // 8. KEYBOARD SHORTCUTS
+      // =========================================================================
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && state.voiceDrawerOpen) {
+          closeVoiceDrawer();
+          return;
+        }
+        if (
+          ["INPUT", "SELECT", "TEXTAREA"].includes(
+            document.activeElement.tagName,
+          )
+        )
+          return;
+        if (state.activeTab !== "flashcards") return;
+
+        const card = state.fcDeck[state.fcIndex];
+        if (!card) return;
+
+        if (e.code === "Space") {
+          e.preventDefault();
+          flipFlashcard();
+        } else if (e.key === "ArrowRight") {
+          nextFlashcard();
+        } else if (e.key === "ArrowLeft") {
+          prevFlashcard();
+        } else if (e.key.toLowerCase() === "s") {
+          playAudioWithFallback(
+            `vocab_${card.id}_word.mp3`,
+            card.de,
+            state.globalVoice,
+            `fc_word_${card.id}`,
+          );
+        } else if (e.key.toLowerCase() === "e") {
+          playAudioWithFallback(
+            `vocab_${card.id}_ex.mp3`,
+            card.ex_de,
+            state.globalVoice,
+            `fc_ex_${card.id}`,
+          );
+        }
+      });
+
+      // =========================================================================
+      // 9. INITIALIZE APP
+      // =========================================================================
+      setLanguage(state.lang);
+    </script>
+  </body>
+</html>
