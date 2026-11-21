@@ -1,3 +1,6 @@
+@"
 .vscode/
 piper_models/
+piper_modules/
 *.py
+"@ | Out-File -FilePath .gitignore -Encoding utf8
